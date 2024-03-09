@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     ReferrableRefConditional,
     Sdg,
 )

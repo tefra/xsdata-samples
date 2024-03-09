@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .bsw_mgr_needs import BswMgrNeeds
 from .bsw_service_dependency_ident import BswServiceDependencyIdent
 from .com_mgr_user_needs import ComMgrUserNeeds

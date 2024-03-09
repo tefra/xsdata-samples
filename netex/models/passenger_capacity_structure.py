@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .fare_class_enumeration import FareClassEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

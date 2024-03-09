@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .alive_supervision import AliveSupervision
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
+from .alive_supervision import AliveSupervision
 from .category_string import CategoryString
 from .checkpoint_transition import CheckpointTransition
 from .deadline_supervision import DeadlineSupervision

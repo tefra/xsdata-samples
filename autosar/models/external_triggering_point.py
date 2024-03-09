@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .external_triggering_point_ident import ExternalTriggeringPointIdent
 from .p_trigger_in_atomic_swc_type_instance_ref import (
     PTriggerInAtomicSwcTypeInstanceRef,

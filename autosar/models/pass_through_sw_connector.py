@@ -6,7 +6,7 @@ from .abstract_provided_port_prototype_subtypes_enum import (
 from .abstract_required_port_prototype_subtypes_enum import (
     AbstractRequiredPortPrototypeSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,

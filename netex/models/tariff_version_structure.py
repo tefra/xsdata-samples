@@ -1,16 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service_ref import AssistanceServiceRef
 from .authority_ref import AuthorityRef
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .catering_service_ref import CateringServiceRef
-from .cell_versioned_child_structure import (
-    FareTablesRelStructure,
-    PriceGroupsRelStructure,
-)
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
 from .communication_service_ref import CommunicationServiceRef
 from .complaints_service_ref import ComplaintsServiceRef
@@ -18,6 +13,7 @@ from .customer_service_ref import CustomerServiceRef
 from .distance_matrix_elements_rel_structure import (
     DistanceMatrixElementsRelStructure,
 )
+from .entity_in_version_structure import DataManagedObjectStructure
 from .fare_structure_elements_rel_structure import (
     FareStructureElementsRelStructure,
 )
@@ -54,6 +50,10 @@ from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
 from .price_unit_ref import PriceUnitRef
+from .priceable_object_version_structure import (
+    FareTablesRelStructure,
+    PriceGroupsRelStructure,
+)
 from .private_code import PrivateCode
 from .quality_structure_factors_rel_structure import (
     QualityStructureFactorsRelStructure,

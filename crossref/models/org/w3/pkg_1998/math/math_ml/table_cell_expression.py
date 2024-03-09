@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Union
+from crossref.models.org.w3.pkg_1998.math.math_ml.cerror import ImpliedMrow
 from crossref.models.org.w3.pkg_1998.math.math_ml.columnalignstyle import (
     Columnalignstyle,
 )
-from crossref.models.org.w3.pkg_1998.math.math_ml.condition import ImpliedMrow
 from crossref.models.org.w3.pkg_1998.math.math_ml.group_alignment import (
     GroupAlignment,
 )

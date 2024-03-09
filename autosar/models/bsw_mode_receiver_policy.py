@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .mode_declaration_group_prototype_subtypes_enum import (
     ModeDeclarationGroupPrototypeSubtypesEnum,

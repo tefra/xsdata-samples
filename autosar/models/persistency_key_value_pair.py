@@ -3,10 +3,16 @@ from typing import List, Optional
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
+)
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
 )
 from .application_rule_based_value_specification import (
     ApplicationRuleBasedValueSpecification,
@@ -24,12 +30,6 @@ from .numerical_rule_based_value_specification import (
 from .numerical_value_specification import NumericalValueSpecification
 from .persistency_element_level_update_strategy_enum import (
     PersistencyElementLevelUpdateStrategyEnum,
-)
-from .record_value_specification import (
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
 )
 from .ref import Ref
 from .reference_value_specification import ReferenceValueSpecification

@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .condition_summary import ConditionSummary
 from .distribution_assignments_rel_structure import (
     DistributionAssignmentsRelStructure,
 )
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignmentsRelStructure,
 )
 from .group_of_sales_offer_package_refs_rel_structure import (
     GroupOfSalesOfferPackageRefsRelStructure,
 )
 from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .private_code import PrivateCode
 from .rounding_ref import RoundingRef
 from .sales_offer_package_elements_rel_structure import (

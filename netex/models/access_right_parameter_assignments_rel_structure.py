@@ -7,11 +7,11 @@ from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_purchase_parameter_assignment import (
     CustomerPurchaseParameterAssignment,
 )
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
 )
-from .specific_parameter_assignment_version_structure import (
+from .specific_parameter_assignments_rel_structure import (
     SpecificParameterAssignment,
 )
 from .validity_parameter_assignment import ValidityParameterAssignment

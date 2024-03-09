@@ -11,9 +11,9 @@ from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.data_role_type_enumeration import DataRoleTypeEnumeration
 from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
 from netex.models.general_organisation import GeneralOrganisation
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.infrastructure_elements_in_frame_rel_structure import InfrastructureElementsInFrameRelStructure
 from netex.models.infrastructure_frame import InfrastructureFrame
 from netex.models.infrastructure_frame_ref import InfrastructureFrameRef
@@ -85,7 +85,7 @@ from netex.models.scheduled_stop_point import ScheduledStopPoint
 from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
 from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledStopPointsInFrameRelStructure
-from netex.models.section_in_sequence_versioned_child_structure import CommonSection
+from netex.models.sections_in_sequence_rel_structure import CommonSection
 from netex.models.service_frame import ServiceFrame
 from netex.models.service_frame_ref import ServiceFrameRef
 from netex.models.service_journey_pattern import ServiceJourneyPattern

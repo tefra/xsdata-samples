@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .can_physical_channel import CanPhysicalChannel
 from .coupling_port_connection import CouplingPortConnection
 from .ethernet_physical_channel import EthernetPhysicalChannel

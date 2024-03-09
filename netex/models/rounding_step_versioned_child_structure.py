@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .alternative_texts_rel_structure import VersionedChildStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .rounding_step_ref import RoundingStepRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

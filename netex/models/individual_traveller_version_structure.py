@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .customer_ref import CustomerRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .gender_enumeration import GenderEnumeration
 from .individual_passenger_infos_rel_structure import (
     IndividualPassengerInfosRelStructure,

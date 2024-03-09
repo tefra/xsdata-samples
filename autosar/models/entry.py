@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .align_enum_simple import AlignEnumSimple
-from .annotation import (
+from .admin_data import (
     DefList,
     LabeledList,
     ListType,
@@ -14,6 +13,7 @@ from .annotation import (
     StructuredReq,
     TraceableText,
 )
+from .align_enum_simple import AlignEnumSimple
 from .string import String
 from .valign_enum_simple import ValignEnumSimple
 

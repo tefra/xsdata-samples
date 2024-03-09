@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .concrete_class_tailoring import (
+from .abstract_class_tailoring import (
     AbstractClassTailoring,
     ConcreteClassTailoring,
 )

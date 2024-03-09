@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import Annotation
+from .admin_data import Annotation
 from .numerical_value_variation_point import NumericalValueVariationPoint
 from .ref import Ref
 from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum

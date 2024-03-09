@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import DocumentationBlock
+from .admin_data import DocumentationBlock
 from .positive_integer_value_variation_point import (
     PositiveIntegerValueVariationPoint,
 )

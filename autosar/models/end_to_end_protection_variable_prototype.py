@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .identifier import Identifier
 from .variable_data_prototype_in_system_instance_ref import (
     VariableDataPrototypeInSystemInstanceRef,

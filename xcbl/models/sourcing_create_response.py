@@ -71,17 +71,6 @@ class SourcingCreateResponseNote:
 
 
 @dataclass(kw_only=True)
-class SourcingItemComponentResponse:
-    sourcing_create_response_detail: "SourcingCreateResponseDetail" = field(
-        metadata={
-            "name": "SourcingCreateResponseDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class SourcingItemId:
     class Meta:
         name = "SourcingItemID"
@@ -178,58 +167,6 @@ class TrackingIdnumber:
 
 
 @dataclass(kw_only=True)
-class ListOfSourcingItemComponentResponse:
-    sourcing_item_component_response: List[
-        SourcingItemComponentResponse
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "SourcingItemComponentResponse",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class SourcingCreateResponsePurpose:
-    purpose: Purpose = field(
-        metadata={
-            "name": "Purpose",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class SourcingCreateSummary:
-    total_number_of_sourcing_items: Optional[
-        TotalNumberOfSourcingItems
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TotalNumberOfSourcingItems",
-            "type": "Element",
-        },
-    )
-    total_number_of_participants: Optional[TotalNumberOfParticipants] = field(
-        default=None,
-        metadata={
-            "name": "TotalNumberOfParticipants",
-            "type": "Element",
-        },
-    )
-    estimated_total_value: EstimatedTotalValue = field(
-        metadata={
-            "name": "EstimatedTotalValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class SourcingCreateResponseDetail:
     sourcing_item_id: SourcingItemId = field(
         metadata={
@@ -276,12 +213,64 @@ class SourcingCreateResponseDetail:
         },
     )
     list_of_sourcing_item_component_response: Optional[
-        ListOfSourcingItemComponentResponse
+        "ListOfSourcingItemComponentResponse"
     ] = field(
         default=None,
         metadata={
             "name": "ListOfSourcingItemComponentResponse",
             "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateResponsePurpose:
+    purpose: Purpose = field(
+        metadata={
+            "name": "Purpose",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateSummary:
+    total_number_of_sourcing_items: Optional[
+        TotalNumberOfSourcingItems
+    ] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfSourcingItems",
+            "type": "Element",
+        },
+    )
+    total_number_of_participants: Optional[TotalNumberOfParticipants] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfParticipants",
+            "type": "Element",
+        },
+    )
+    estimated_total_value: EstimatedTotalValue = field(
+        metadata={
+            "name": "EstimatedTotalValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfSourcingCreateResponseDetail:
+    sourcing_create_response_detail: List[
+        SourcingCreateResponseDetail
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "SourcingCreateResponseDetail",
+            "type": "Element",
+            "min_occurs": 1,
         },
     )
 
@@ -371,13 +360,24 @@ class SourcingCreateResponseSummary:
 
 
 @dataclass(kw_only=True)
-class ListOfSourcingCreateResponseDetail:
-    sourcing_create_response_detail: List[
-        SourcingCreateResponseDetail
+class SourcingItemComponentResponse:
+    sourcing_create_response_detail: SourcingCreateResponseDetail = field(
+        metadata={
+            "name": "SourcingCreateResponseDetail",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfSourcingItemComponentResponse:
+    sourcing_item_component_response: List[
+        SourcingItemComponentResponse
     ] = field(
         default_factory=list,
         metadata={
-            "name": "SourcingCreateResponseDetail",
+            "name": "SourcingItemComponentResponse",
             "type": "Element",
             "min_occurs": 1,
         },

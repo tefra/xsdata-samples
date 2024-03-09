@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .customer_account_ref import CustomerAccountRef
 from .emv_card_ref import EmvCardRef
+from .entity_in_version_structure import VersionedChildStructure
 from .mobile_device_ref import MobileDeviceRef
 from .multilingual_string import MultilingualString
 from .payment_method_enumeration import PaymentMethodEnumeration

@@ -3,7 +3,7 @@ from typing import Optional, Union
 from .accessibility_assessment_versioned_child_structure import (
     AccessibilityAssessmentVersionedChildStructure,
 )
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .parking_ref import ParkingRef
 from .point_of_interest_ref import PointOfInterestRef

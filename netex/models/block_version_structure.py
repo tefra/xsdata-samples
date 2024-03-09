@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_parts_rel_structure import BlockPartsRelStructure
 from .compound_train_ref import CompoundTrainRef
 from .courses_of_journeys_rel_structure import CoursesOfJourneysRelStructure
 from .day_type_refs_rel_structure import DayTypeRefsRelStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .journey_refs_rel_structure import JourneyRefsRelStructure
 from .multilingual_string import MultilingualString
 from .point_ref_structure import PointRefStructure

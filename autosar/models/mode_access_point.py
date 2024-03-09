@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .mode_access_point_ident import ModeAccessPointIdent
 from .p_mode_group_in_atomic_swc_instance_ref import (
     PModeGroupInAtomicSwcInstanceRef,

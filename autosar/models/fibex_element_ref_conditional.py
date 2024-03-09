@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .fibex_element_subtypes_enum import FibexElementSubtypesEnum
 from .ref import Ref
 

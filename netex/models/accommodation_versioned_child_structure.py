@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .accommodation_facility import AccommodationFacility
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .berth_facility import BerthFacility
 from .class_of_use_ref import ClassOfUseRef
 from .couchette_facility import CouchetteFacility
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_class import FareClass
 from .gender_limitation import GenderLimitation
 from .multilingual_string import MultilingualString

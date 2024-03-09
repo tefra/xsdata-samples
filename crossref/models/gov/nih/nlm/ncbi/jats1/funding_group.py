@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import OpenAccess
+from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import OpenAccess
 from crossref.models.gov.nih.nlm.ncbi.jats1.award_group import AwardGroup
 from crossref.models.gov.nih.nlm.ncbi.jats1.funding_statement import (
     FundingStatement,

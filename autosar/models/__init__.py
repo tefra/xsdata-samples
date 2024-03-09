@@ -2,6 +2,13 @@ from .absolute_tolerance import AbsoluteTolerance
 from .abstract_access_point_subtypes_enum import (
     AbstractAccessPointSubtypesEnum,
 )
+from .abstract_class_tailoring import (
+    AbstractClassTailoring,
+    AggregationTailoring,
+    ClassContentConditional,
+    ConcreteClassTailoring,
+    ReferenceTailoring,
+)
 from .abstract_event_subtypes_enum import AbstractEventSubtypesEnum
 from .abstract_iam_remote_subject_subtypes_enum import (
     AbstractIamRemoteSubjectSubtypesEnum,
@@ -52,21 +59,7 @@ from .additional_binding_time_enum_simple import (
     AdditionalBindingTimeEnumSimple,
 )
 from .address import Address
-from .age_constraint import AgeConstraint
-from .aggregation_condition import AggregationCondition
-from .aggregation_tailoring_subtypes_enum import (
-    AggregationTailoringSubtypesEnum,
-)
-from .alias_name_assignment import AliasNameAssignment
-from .alias_name_set import AliasNameSet
-from .align_enum import AlignEnum
-from .align_enum_simple import AlignEnumSimple
-from .alignment_type import AlignmentType
-from .alive_supervision import AliveSupervision
-from .allocator import Allocator
-from .allocator_subtypes_enum import AllocatorSubtypesEnum
-from .analyzed_execution_time import AnalyzedExecutionTime
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     BlueprintFormula,
@@ -90,6 +83,20 @@ from .annotation import (
     TraceableText,
     VariationPoint,
 )
+from .age_constraint import AgeConstraint
+from .aggregation_condition import AggregationCondition
+from .aggregation_tailoring_subtypes_enum import (
+    AggregationTailoringSubtypesEnum,
+)
+from .alias_name_assignment import AliasNameAssignment
+from .alias_name_set import AliasNameSet
+from .align_enum import AlignEnum
+from .align_enum_simple import AlignEnumSimple
+from .alignment_type import AlignmentType
+from .alive_supervision import AliveSupervision
+from .allocator import Allocator
+from .allocator_subtypes_enum import AllocatorSubtypesEnum
+from .analyzed_execution_time import AnalyzedExecutionTime
 from .any_instance_ref import AnyInstanceRef
 from .any_service_instance_id import AnyServiceInstanceId
 from .any_version_string import AnyVersionString
@@ -116,6 +123,13 @@ from .application_array_element_subtypes_enum import (
 )
 from .application_assoc_map_data_type import ApplicationAssocMapDataType
 from .application_assoc_map_element import ApplicationAssocMapElement
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapElementValueSpecification,
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
+)
 from .application_composite_data_type_sub_element_ref import (
     ApplicationCompositeDataTypeSubElementRef,
 )
@@ -461,6 +475,11 @@ from .can_tp_node import CanTpNode
 from .can_tp_node_subtypes_enum import CanTpNodeSubtypesEnum
 from .caption import Caption
 from .category_string import CategoryString
+from .chapter import (
+    Chapter,
+    MsrQueryChapter,
+    MsrQueryResultChapter,
+)
 from .chapter_content import ChapterContent
 from .chapter_enum_break import ChapterEnumBreak
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
@@ -484,6 +503,12 @@ from .client_server_annotation import ClientServerAnnotation
 from .client_server_application_error_mapping import (
     ClientServerApplicationErrorMapping,
 )
+from .client_server_array_element_mapping import (
+    ClientServerArrayElementMapping,
+    ClientServerArrayTypeMapping,
+    ClientServerRecordElementMapping,
+    ClientServerRecordTypeMapping,
+)
 from .client_server_interface import ClientServerInterface
 from .client_server_interface_mapping import ClientServerInterfaceMapping
 from .client_server_interface_subtypes_enum import (
@@ -502,12 +527,6 @@ from .client_server_operation_subtypes_enum import (
 )
 from .client_server_primitive_type_mapping import (
     ClientServerPrimitiveTypeMapping,
-)
-from .client_server_record_element_mapping import (
-    ClientServerArrayElementMapping,
-    ClientServerArrayTypeMapping,
-    ClientServerRecordElementMapping,
-    ClientServerRecordTypeMapping,
 )
 from .client_server_to_signal_group_mapping import (
     ClientServerToSignalGroupMapping,
@@ -610,13 +629,6 @@ from .compu_scale import CompuScale
 from .compu_scale_constant_contents import CompuScaleConstantContents
 from .compu_scale_rational_formula import CompuScaleRationalFormula
 from .compu_scales import CompuScales
-from .concrete_class_tailoring import (
-    AbstractClassTailoring,
-    AggregationTailoring,
-    ClassContentConditional,
-    ConcreteClassTailoring,
-    ReferenceTailoring,
-)
 from .concrete_pattern_event_triggering import ConcretePatternEventTriggering
 from .condition_by_formula import ConditionByFormula
 from .conditional_change_nad import ConditionalChangeNad
@@ -1911,6 +1923,10 @@ from .ecuc_add_info_param_value import EcucAddInfoParamValue
 from .ecuc_affection_enum import EcucAffectionEnum
 from .ecuc_affection_enum_simple import EcucAffectionEnumSimple
 from .ecuc_boolean_param_def import EcucBooleanParamDef
+from .ecuc_choice_container_def import (
+    EcucChoiceContainerDef,
+    EcucParamConfContainerDef,
+)
 from .ecuc_choice_reference_def import EcucChoiceReferenceDef
 from .ecuc_common_attributes_subtypes_enum import (
     EcucCommonAttributesSubtypesEnum,
@@ -1977,10 +1993,6 @@ from .ecuc_multiplicity_configuration_class import (
     EcucMultiplicityConfigurationClass,
 )
 from .ecuc_numerical_param_value import EcucNumericalParamValue
-from .ecuc_param_conf_container_def import (
-    EcucChoiceContainerDef,
-    EcucParamConfContainerDef,
-)
 from .ecuc_param_conf_container_def_subtypes_enum import (
     EcucParamConfContainerDefSubtypesEnum,
 )
@@ -2391,11 +2403,11 @@ from .hw_element_ref_conditional import HwElementRefConditional
 from .hw_element_subtypes_enum import HwElementSubtypesEnum
 from .hw_pin import HwPin
 from .hw_pin_connector import HwPinConnector
-from .hw_pin_group_connector import HwPinGroupConnector
-from .hw_pin_group_content import (
+from .hw_pin_group import (
     HwPinGroup,
     HwPinGroupContent,
 )
+from .hw_pin_group_connector import HwPinGroupConnector
 from .hw_pin_group_subtypes_enum import HwPinGroupSubtypesEnum
 from .hw_pin_subtypes_enum import HwPinSubtypesEnum
 from .hw_port_mapping import HwPortMapping
@@ -2811,11 +2823,6 @@ from .monotony_enum_simple import MonotonyEnumSimple
 from .msr_query_arg import MsrQueryArg
 from .msr_query_p_1 import MsrQueryP1
 from .msr_query_props import MsrQueryProps
-from .msr_query_result_chapter import (
-    Chapter,
-    MsrQueryChapter,
-    MsrQueryResultChapter,
-)
 from .msr_query_result_topic_1 import MsrQueryResultTopic1
 from .msr_query_topic_1 import MsrQueryTopic1
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -3244,13 +3251,6 @@ from .receiver_intent_enum import ReceiverIntentEnum
 from .receiver_intent_enum_simple import ReceiverIntentEnumSimple
 from .reception_com_spec_props import ReceptionComSpecProps
 from .record_layout_iterator_point import RecordLayoutIteratorPoint
-from .record_value_specification import (
-    ApplicationAssocMapElementValueSpecification,
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
-)
 from .recovery_notification import RecoveryNotification
 from .recovery_notification_subtypes_enum import (
     RecoveryNotificationSubtypesEnum,
@@ -3532,7 +3532,7 @@ from .send_indication_enum_simple import SendIndicationEnumSimple
 from .sender_annotation import SenderAnnotation
 from .sender_intent_enum import SenderIntentEnum
 from .sender_intent_enum_simple import SenderIntentEnumSimple
-from .sender_rec_record_element_mapping import (
+from .sender_rec_array_element_mapping import (
     SenderRecArrayElementMapping,
     SenderRecArrayTypeMapping,
     SenderRecRecordElementMapping,
@@ -3893,6 +3893,11 @@ from .sw_component_prototype_subtypes_enum import (
     SwComponentPrototypeSubtypesEnum,
 )
 from .sw_component_type_subtypes_enum import SwComponentTypeSubtypesEnum
+from .sw_data_def_props import (
+    SwDataDefProps,
+    SwDataDefPropsConditional,
+    SwPointerTargetProps,
+)
 from .sw_data_dependency import SwDataDependency
 from .sw_data_dependency_args import SwDataDependencyArgs
 from .sw_generic_axis_param import SwGenericAxisParam
@@ -3902,11 +3907,6 @@ from .sw_generic_axis_param_type_subtypes_enum import (
 )
 from .sw_impl_policy_enum import SwImplPolicyEnum
 from .sw_impl_policy_enum_simple import SwImplPolicyEnumSimple
-from .sw_pointer_target_props import (
-    SwDataDefProps,
-    SwDataDefPropsConditional,
-    SwPointerTargetProps,
-)
 from .sw_record_layout import SwRecordLayout
 from .sw_record_layout_group import SwRecordLayoutGroup
 from .sw_record_layout_group_content import SwRecordLayoutGroupContent
@@ -4426,6 +4426,11 @@ from .xref_target import XrefTarget
 __all__ = [
     "AbsoluteTolerance",
     "AbstractAccessPointSubtypesEnum",
+    "AbstractClassTailoring",
+    "AggregationTailoring",
+    "ClassContentConditional",
+    "ConcreteClassTailoring",
+    "ReferenceTailoring",
     "AbstractEventSubtypesEnum",
     "AbstractIamRemoteSubjectSubtypesEnum",
     "AbstractImplementationDataTypeSubtypesEnum",
@@ -4454,18 +4459,6 @@ __all__ = [
     "AdditionalBindingTimeEnum",
     "AdditionalBindingTimeEnumSimple",
     "Address",
-    "AgeConstraint",
-    "AggregationCondition",
-    "AggregationTailoringSubtypesEnum",
-    "AliasNameAssignment",
-    "AliasNameSet",
-    "AlignEnum",
-    "AlignEnumSimple",
-    "AlignmentType",
-    "AliveSupervision",
-    "Allocator",
-    "AllocatorSubtypesEnum",
-    "AnalyzedExecutionTime",
     "AdminData",
     "Annotation",
     "BlueprintFormula",
@@ -4488,6 +4481,18 @@ __all__ = [
     "StructuredReq",
     "TraceableText",
     "VariationPoint",
+    "AgeConstraint",
+    "AggregationCondition",
+    "AggregationTailoringSubtypesEnum",
+    "AliasNameAssignment",
+    "AliasNameSet",
+    "AlignEnum",
+    "AlignEnumSimple",
+    "AlignmentType",
+    "AliveSupervision",
+    "Allocator",
+    "AllocatorSubtypesEnum",
+    "AnalyzedExecutionTime",
     "AnyInstanceRef",
     "AnyServiceInstanceId",
     "AnyVersionString",
@@ -4506,6 +4511,11 @@ __all__ = [
     "ApplicationArrayElementSubtypesEnum",
     "ApplicationAssocMapDataType",
     "ApplicationAssocMapElement",
+    "ApplicationAssocMapElementValueSpecification",
+    "ApplicationAssocMapValueSpecification",
+    "ArrayValueSpecification",
+    "CompositeRuleBasedValueSpecification",
+    "RecordValueSpecification",
     "ApplicationCompositeDataTypeSubElementRef",
     "ApplicationCompositeElementDataPrototypeSubtypesEnum",
     "ApplicationCompositeElementInPortInterfaceInstanceRef",
@@ -4751,6 +4761,9 @@ __all__ = [
     "CanTpNodeSubtypesEnum",
     "Caption",
     "CategoryString",
+    "Chapter",
+    "MsrQueryChapter",
+    "MsrQueryResultChapter",
     "ChapterContent",
     "ChapterEnumBreak",
     "ChapterEnumBreakSimple",
@@ -4768,6 +4781,10 @@ __all__ = [
     "ClientIntentEnumSimple",
     "ClientServerAnnotation",
     "ClientServerApplicationErrorMapping",
+    "ClientServerArrayElementMapping",
+    "ClientServerArrayTypeMapping",
+    "ClientServerRecordElementMapping",
+    "ClientServerRecordTypeMapping",
     "ClientServerInterface",
     "ClientServerInterfaceMapping",
     "ClientServerInterfaceSubtypesEnum",
@@ -4777,10 +4794,6 @@ __all__ = [
     "ClientServerOperationMapping",
     "ClientServerOperationSubtypesEnum",
     "ClientServerPrimitiveTypeMapping",
-    "ClientServerArrayElementMapping",
-    "ClientServerArrayTypeMapping",
-    "ClientServerRecordElementMapping",
-    "ClientServerRecordTypeMapping",
     "ClientServerToSignalGroupMapping",
     "ClientServerToSignalMapping",
     "Code",
@@ -4844,11 +4857,6 @@ __all__ = [
     "CompuScaleConstantContents",
     "CompuScaleRationalFormula",
     "CompuScales",
-    "AbstractClassTailoring",
-    "AggregationTailoring",
-    "ClassContentConditional",
-    "ConcreteClassTailoring",
-    "ReferenceTailoring",
     "ConcretePatternEventTriggering",
     "ConditionByFormula",
     "ConditionalChangeNad",
@@ -5531,6 +5539,8 @@ __all__ = [
     "EcucAffectionEnum",
     "EcucAffectionEnumSimple",
     "EcucBooleanParamDef",
+    "EcucChoiceContainerDef",
+    "EcucParamConfContainerDef",
     "EcucChoiceReferenceDef",
     "EcucCommonAttributesSubtypesEnum",
     "EcucConditionFormula",
@@ -5573,8 +5583,6 @@ __all__ = [
     "EcucMultilineStringParamDefConditional",
     "EcucMultiplicityConfigurationClass",
     "EcucNumericalParamValue",
-    "EcucChoiceContainerDef",
-    "EcucParamConfContainerDef",
     "EcucParamConfContainerDefSubtypesEnum",
     "EcucParameterDefSubtypesEnum",
     "EcucParameterDerivationFormula",
@@ -5871,9 +5879,9 @@ __all__ = [
     "HwElementSubtypesEnum",
     "HwPin",
     "HwPinConnector",
-    "HwPinGroupConnector",
     "HwPinGroup",
     "HwPinGroupContent",
+    "HwPinGroupConnector",
     "HwPinGroupSubtypesEnum",
     "HwPinSubtypesEnum",
     "HwPortMapping",
@@ -6201,9 +6209,6 @@ __all__ = [
     "MsrQueryArg",
     "MsrQueryP1",
     "MsrQueryProps",
-    "Chapter",
-    "MsrQueryChapter",
-    "MsrQueryResultChapter",
     "MsrQueryResultTopic1",
     "MsrQueryTopic1",
     "MultiLanguageOverviewParagraph",
@@ -6480,11 +6485,6 @@ __all__ = [
     "ReceiverIntentEnumSimple",
     "ReceptionComSpecProps",
     "RecordLayoutIteratorPoint",
-    "ApplicationAssocMapElementValueSpecification",
-    "ApplicationAssocMapValueSpecification",
-    "ArrayValueSpecification",
-    "CompositeRuleBasedValueSpecification",
-    "RecordValueSpecification",
     "RecoveryNotification",
     "RecoveryNotificationSubtypesEnum",
     "RecoveryNotificationToPPortPrototypeMapping",
@@ -6901,6 +6901,9 @@ __all__ = [
     "SwComponentPrototypeAssignment",
     "SwComponentPrototypeSubtypesEnum",
     "SwComponentTypeSubtypesEnum",
+    "SwDataDefProps",
+    "SwDataDefPropsConditional",
+    "SwPointerTargetProps",
     "SwDataDependency",
     "SwDataDependencyArgs",
     "SwGenericAxisParam",
@@ -6908,9 +6911,6 @@ __all__ = [
     "SwGenericAxisParamTypeSubtypesEnum",
     "SwImplPolicyEnum",
     "SwImplPolicyEnumSimple",
-    "SwDataDefProps",
-    "SwDataDefPropsConditional",
-    "SwPointerTargetProps",
     "SwRecordLayout",
     "SwRecordLayoutGroup",
     "SwRecordLayoutGroupContent",

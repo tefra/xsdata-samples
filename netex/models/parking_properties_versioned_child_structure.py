@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .bay_geometry_enumeration import BayGeometryEnumeration
+from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .parking_area_refs_rel_structure import ParkingAreaRefsRelStructure
 from .parking_capacities_rel_structure import ParkingCapacitiesRelStructure

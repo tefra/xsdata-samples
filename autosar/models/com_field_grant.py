@@ -6,7 +6,7 @@ from .abstract_iam_remote_subject_subtypes_enum import (
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,

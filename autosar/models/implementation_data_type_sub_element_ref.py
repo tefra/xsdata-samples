@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .ar_parameter_in_implementation_data_instance_ref import (
     ArParameterInImplementationDataInstanceRef,
 )

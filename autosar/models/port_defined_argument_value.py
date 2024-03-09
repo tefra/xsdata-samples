@@ -1,5 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
+)
 from .application_rule_based_value_specification import (
     ApplicationRuleBasedValueSpecification,
 )
@@ -13,12 +19,6 @@ from .numerical_rule_based_value_specification import (
     NumericalRuleBasedValueSpecification,
 )
 from .numerical_value_specification import NumericalValueSpecification
-from .record_value_specification import (
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
-)
 from .ref import Ref
 from .reference_value_specification import ReferenceValueSpecification
 from .text_value_specification import TextValueSpecification

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .integer import Integer
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

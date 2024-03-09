@@ -22,13 +22,23 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.cartesianproduct import (
 )
 from crossref.models.org.w3.pkg_1998.math.math_ml.cbytes import Cbytes
 from crossref.models.org.w3.pkg_1998.math.math_ml.ceiling import Ceiling
+from crossref.models.org.w3.pkg_1998.math.math_ml.cerror import (
+    Apply,
+    Bind,
+    Cerror,
+    Ci,
+    Cn,
+    Csymbol,
+    Declare,
+    Fn,
+    ListType,
+    Piecewise,
+    Reln,
+    Set,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.codomain import Codomain
 from crossref.models.org.w3.pkg_1998.math.math_ml.complexes import Complexes
 from crossref.models.org.w3.pkg_1998.math.math_ml.compose import Compose
-from crossref.models.org.w3.pkg_1998.math.math_ml.condition import (
-    ListType,
-    Set,
-)
 from crossref.models.org.w3.pkg_1998.math.math_ml.conjugate import Conjugate
 from crossref.models.org.w3.pkg_1998.math.math_ml.cos import Cos
 from crossref.models.org.w3.pkg_1998.math.math_ml.cosh import Cosh
@@ -158,7 +168,7 @@ class IntervalType:
         name = "interval.class"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: List["Apply"] = field(
+    apply: List[Apply] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -167,7 +177,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    bind: List["Bind"] = field(
+    bind: List[Bind] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -176,7 +186,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    ci: List["Ci"] = field(
+    ci: List[Ci] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -185,7 +195,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cn: List["Cn"] = field(
+    cn: List[Cn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -194,7 +204,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    csymbol: List["Csymbol"] = field(
+    csymbol: List[Csymbol] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -212,7 +222,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cerror: List["Cerror"] = field(
+    cerror: List[Cerror] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -239,7 +249,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    piecewise: List["Piecewise"] = field(
+    piecewise: List[Piecewise] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -248,7 +258,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    declare: List["Declare"] = field(
+    declare: List[Declare] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -256,7 +266,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    fn: List["Fn"] = field(
+    fn: List[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -264,7 +274,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    reln: List["Reln"] = field(
+    reln: List[Reln] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -3,7 +3,7 @@ from typing import List, Union
 from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace
-from .administrative_zone_version_structure import (
+from .administrative_zones_rel_structure import (
     AdministrativeZone1,
     TransportAdministrativeZone,
 )

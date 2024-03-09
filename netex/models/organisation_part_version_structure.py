@@ -1,11 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .administrative_zone_version_structure import (
-    AdministrativeZonesRelStructure,
-)
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .administrative_zones_rel_structure import AdministrativeZonesRelStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .general_organisation_ref import GeneralOrganisationRef
 from .location_structure_2 import LocationStructure2
 from .management_agent_ref import ManagementAgentRef

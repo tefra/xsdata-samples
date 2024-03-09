@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     DefList,
     LabeledList,
     ListType,
@@ -13,11 +13,11 @@ from .annotation import (
     StructuredReq,
     TraceableText,
 )
-from .msr_query_p_1 import MsrQueryP1
-from .msr_query_result_chapter import (
+from .chapter import (
     Chapter,
     MsrQueryChapter,
 )
+from .msr_query_p_1 import MsrQueryP1
 from .msr_query_topic_1 import MsrQueryTopic1
 from .prms import Prms
 from .table import Table

@@ -4,7 +4,7 @@ from typing import Optional, Type, Union
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
 )
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .fuel_type_enumeration import FuelTypeEnumeration
 from .multilingual_string import MultilingualString
 from .passenger_capacity_structure import PassengerCapacityStructure

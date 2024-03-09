@@ -7,12 +7,6 @@ from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
 from netex.models.accessibility_tool_list import AccessibilityToolList
 from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType1
-from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
-from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
-from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
-from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -22,6 +16,12 @@ from netex.models.covered_enumeration import CoveredEnumeration
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
 from netex.models.day_type_ref import DayTypeRef
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayTypesRelStructure
+from netex.models.entity_in_version_structure import TimebandVersionedChildStructure
+from netex.models.entity_in_version_structure import TimebandsRelStructure
+from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.entrance_enumeration import EntranceEnumeration
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.iana_country_tld_enumeration import IanaCountryTldEnumeration

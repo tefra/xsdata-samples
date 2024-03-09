@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
@@ -11,7 +11,7 @@ from .hw_attribute_value import HwAttributeValue
 from .hw_category_subtypes_enum import HwCategorySubtypesEnum
 from .hw_element_connector import HwElementConnector
 from .hw_element_ref_conditional import HwElementRefConditional
-from .hw_pin_group_content import HwPinGroup
+from .hw_pin_group import HwPinGroup
 from .hw_type_subtypes_enum import HwTypeSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph

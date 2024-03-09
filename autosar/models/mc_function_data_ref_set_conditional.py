@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .flat_instance_descriptor_subtypes_enum import (
     FlatInstanceDescriptorSubtypesEnum,
 )

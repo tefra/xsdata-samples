@@ -14,12 +14,6 @@ from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType1
-from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
-from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
-from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
-from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.audible_signals_available import AudibleSignalsAvailable
 from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.check_constraint import CheckConstraint
@@ -47,8 +41,12 @@ from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStru
 from netex.models.destination_display_view import DestinationDisplayView
 from netex.models.destination_display_views_rel_structure import DestinationDisplayViewsRelStructure
 from netex.models.direction_of_use_enumeration import DirectionOfUseEnumeration
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayTypesRelStructure
+from netex.models.entity_in_version_structure import TimebandVersionedChildStructure
+from netex.models.entity_in_version_structure import TimebandsRelStructure
+from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.entrance_enumeration import EntranceEnumeration
 from netex.models.entrance_equipment import EntranceEquipment
 from netex.models.entrance_ref import EntranceRef
@@ -62,6 +60,8 @@ from netex.models.equipments_rel_structure import EquipmentsRelStructure
 from netex.models.escalator_free_access import EscalatorFreeAccess
 from netex.models.gated_enumeration import GatedEnumeration
 from netex.models.general_sign import GeneralSign
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.gradient_enumeration import GradientEnumeration
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.iana_country_tld_enumeration import IanaCountryTldEnumeration

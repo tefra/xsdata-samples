@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from voko.models.bld_tip import BldTip
-from voko.models.fnt import Fnt
-from voko.models.mll import (
+from voko.models.ekz import (
     Ind,
     Klr,
     Trd,
     Trdgrp,
 )
+from voko.models.fnt import Fnt
 from voko.models.tld import Tld
 
 

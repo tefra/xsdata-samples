@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .access_count_set import AccessCountSet
-from .analyzed_execution_time import AnalyzedExecutionTime
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
+from .analyzed_execution_time import AnalyzedExecutionTime
 from .category_string import CategoryString
 from .identifier import Identifier
 from .measured_execution_time import MeasuredExecutionTime

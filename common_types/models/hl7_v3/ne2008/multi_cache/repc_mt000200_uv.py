@@ -388,9 +388,9 @@ class RepcMt000200UvComponent2:
 
 
 @dataclass
-class RepcMt000200UvComponent7:
+class RepcMt000200UvCriterion:
     class Meta:
-        name = "REPC_MT000200UV.Component7"
+        name = "REPC_MT000200UV.Criterion"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -416,18 +416,40 @@ class RepcMt000200UvComponent7:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    sequence_number: Optional[Int] = field(
+    code: Optional[Cd] = field(
         default=None,
         metadata={
-            "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    care_plan: Optional["RepcMt000200UvCarePlan"] = field(
+    text: Optional[EdExplicit] = field(
         default=None,
         metadata={
-            "name": "carePlan",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    value: Optional[AnyType] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    interpretation_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "interpretationCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    precondition: List["RepcMt000200UvPrecondition2"] = field(
+        default_factory=list,
+        metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
@@ -440,27 +462,28 @@ class RepcMt000200UvComponent7:
             "type": "Attribute",
         },
     )
-    type_code: Optional[ActRelationshipHasComponent] = field(
+    class_code: Optional[ActClassObservation] = field(
         default=None,
         metadata={
-            "name": "typeCode",
+            "name": "classCode",
             "type": "Attribute",
             "required": True,
         },
     )
-    context_control_code: Optional[ContextControl] = field(
-        default=None,
+    mood_code: ActMood = field(
+        init=False,
+        default=ActMood.EVN_CRT,
         metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "contextConductionInd",
+            "name": "moodCode",
             "type": "Attribute",
             "required": True,
+        },
+    )
+    negation_ind: str = field(
+        default="false",
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
             "pattern": r"true|false",
         },
     )
@@ -1125,113 +1148,6 @@ class RepcMt000200UvPerformer2:
 
 
 @dataclass
-class RepcMt000200UvPrecondition2:
-    class Meta:
-        name = "REPC_MT000200UV.Precondition2"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    conjunction_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "conjunctionCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    seperatable_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "seperatableInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    criterion: Optional["RepcMt000200UvCriterion"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
-        init=False,
-        default=ActRelationshipConditional.PRCN,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.ON,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="false",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
 class RepcMt000200UvReason2:
     class Meta:
         name = "REPC_MT000200UV.Reason2"
@@ -1482,9 +1398,9 @@ class RepcMt000200UvAnnotation:
 
 
 @dataclass
-class RepcMt000200UvCriterion:
+class RepcMt000200UvConditions:
     class Meta:
-        name = "REPC_MT000200UV.Criterion"
+        name = "REPC_MT000200UV.Conditions"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -1510,40 +1426,34 @@ class RepcMt000200UvCriterion:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    conjunction_code: Optional[Cs] = field(
         default=None,
         metadata={
+            "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    seperatable_ind: Optional[Bl] = field(
         default=None,
         metadata={
+            "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[AnyType] = field(
+    criterion: Optional[RepcMt000200UvCriterion] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
+            "nillable": True,
         },
     )
-    interpretation_code: Optional[Ce] = field(
+    criterion_group: Optional[RepcMt000200UvCriterionGroup] = field(
         default=None,
         metadata={
-            "name": "interpretationCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    precondition: List[RepcMt000200UvPrecondition2] = field(
-        default_factory=list,
-        metadata={
+            "name": "criterionGroup",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
@@ -1556,27 +1466,25 @@ class RepcMt000200UvCriterion:
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassObservation] = field(
+    type_code: Optional[ActRelationshipConditional] = field(
         default=None,
         metadata={
-            "name": "classCode",
+            "name": "typeCode",
             "type": "Attribute",
             "required": True,
         },
     )
-    mood_code: ActMood = field(
-        init=False,
-        default=ActMood.EVN_CRT,
+    context_control_code: ContextControl = field(
+        default=ContextControl.ON,
         metadata={
-            "name": "moodCode",
+            "name": "contextControlCode",
             "type": "Attribute",
-            "required": True,
         },
     )
-    negation_ind: str = field(
+    context_conduction_ind: str = field(
         default="false",
         metadata={
-            "name": "negationInd",
+            "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
         },
@@ -1986,6 +1894,113 @@ class RepcMt000200UvPlannedReview:
 
 
 @dataclass
+class RepcMt000200UvPrecondition2:
+    class Meta:
+        name = "REPC_MT000200UV.Precondition2"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    conjunction_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "conjunctionCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    seperatable_ind: Optional[Bl] = field(
+        default=None,
+        metadata={
+            "name": "seperatableInd",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    criterion: Optional[RepcMt000200UvCriterion] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
+        init=False,
+        default=ActRelationshipConditional.PRCN,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+    context_control_code: ContextControl = field(
+        default=ContextControl.ON,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: str = field(
+        default="false",
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
 class RepcMt000200UvComponent:
     class Meta:
         name = "REPC_MT000200UV.Component"
@@ -2047,100 +2062,6 @@ class RepcMt000200UvComponent:
     )
     context_conduction_ind: str = field(
         default="true",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
-class RepcMt000200UvConditions:
-    class Meta:
-        name = "REPC_MT000200UV.Conditions"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    conjunction_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "conjunctionCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    seperatable_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "seperatableInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    criterion: Optional[RepcMt000200UvCriterion] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    criterion_group: Optional[RepcMt000200UvCriterionGroup] = field(
-        default=None,
-        metadata={
-            "name": "criterionGroup",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Optional[ActRelationshipConditional] = field(
-        default=None,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.ON,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="false",
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
@@ -3918,6 +3839,231 @@ class RepcMt000200UvInFulfillmentOf2:
 
 
 @dataclass
+class RepcMt000200UvActIntent:
+    class Meta:
+        name = "REPC_MT000200UV.ActIntent"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    effective_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    availability_time: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "availabilityTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    priority_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "priorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    confidentiality_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "confidentialityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    uncertainty_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "uncertaintyCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    language_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "languageCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    performer: List[RepcMt000200UvPerformer2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    goal: List[RepcMt000200UvGoal] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
+        default=None,
+        metadata={
+            "name": "inFulfillmentOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    reason: List[RepcMt000200UvReason2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    conditions: List[RepcMt000200UvConditions] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    component: List["RepcMt000200UvComponent4"] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of1: List[RepcMt000200UvSubject2] = field(
+        default_factory=list,
+        metadata={
+            "name": "subjectOf1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of2: List[RepcMt000200UvSubject] = field(
+        default_factory=list,
+        metadata={
+            "name": "subjectOf2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    component_of: List["RepcMt000200UvComponent3"] = field(
+        default_factory=list,
+        metadata={
+            "name": "componentOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[ActClassRoot] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: Optional[ActMoodIntent] = field(
+        default=None,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    negation_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
 class RepcMt000200UvGuideline:
     class Meta:
         name = "REPC_MT000200UV.Guideline"
@@ -4085,783 +4231,6 @@ class RepcMt000200UvGuideline:
 
 
 @dataclass
-class RepcMt000200UvObservationIntent:
-    class Meta:
-        name = "REPC_MT000200UV.ObservationIntent"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "min_occurs": 1,
-        },
-    )
-    code: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    derivation_expr: Optional[St] = field(
-        default=None,
-        metadata={
-            "name": "derivationExpr",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    status_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "statusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    effective_time: List[SxcmTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "name": "effectiveTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    availability_time: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "availabilityTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    priority_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "priorityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    confidentiality_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "confidentialityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    repeat_number: Optional[IvlInt] = field(
-        default=None,
-        metadata={
-            "name": "repeatNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    uncertainty_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "uncertaintyCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    language_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "languageCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    value: Optional[AnyType] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    method_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "methodCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    target_site_code: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "name": "targetSiteCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    performer: List[RepcMt000200UvPerformer2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    goal: List[RepcMt000200UvGoal] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
-        default=None,
-        metadata={
-            "name": "inFulfillmentOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    reason: List[RepcMt000200UvReason2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    conditions: List[RepcMt000200UvConditions] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    component: List["RepcMt000200UvComponent4"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
-        default_factory=list,
-        metadata={
-            "name": "subjectOf1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of2: List[RepcMt000200UvSubject] = field(
-        default_factory=list,
-        metadata={
-            "name": "subjectOf2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    component_of: List["RepcMt000200UvComponent3"] = field(
-        default_factory=list,
-        metadata={
-            "name": "componentOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[ActClassObservation] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: Optional[ActMoodIntent] = field(
-        default=None,
-        metadata={
-            "name": "moodCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class RepcMt000200UvProcedureIntent:
-    class Meta:
-        name = "REPC_MT000200UV.ProcedureIntent"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "min_occurs": 1,
-        },
-    )
-    code: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    status_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "statusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    effective_time: Optional[IvlTsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "effectiveTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    availability_time: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "availabilityTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    priority_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "priorityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    confidentiality_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "confidentialityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    uncertainty_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "uncertaintyCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    language_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "languageCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    method_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "methodCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    approach_site_code: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "name": "approachSiteCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    target_site_code: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "name": "targetSiteCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    performer: List[RepcMt000200UvPerformer2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    goal: List[RepcMt000200UvGoal] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
-        default=None,
-        metadata={
-            "name": "inFulfillmentOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    reason: List[RepcMt000200UvReason2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    conditions: List[RepcMt000200UvConditions] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    component: List["RepcMt000200UvComponent4"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
-        default_factory=list,
-        metadata={
-            "name": "subjectOf1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of2: List[RepcMt000200UvSubject] = field(
-        default_factory=list,
-        metadata={
-            "name": "subjectOf2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    component_of: List["RepcMt000200UvComponent3"] = field(
-        default_factory=list,
-        metadata={
-            "name": "componentOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[ActClassProcedure] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: Optional[ActMoodIntent] = field(
-        default=None,
-        metadata={
-            "name": "moodCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    negation_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "negationInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
-class RepcMt000200UvSubstanceAdministrationIntent:
-    class Meta:
-        name = "REPC_MT000200UV.SubstanceAdministrationIntent"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "min_occurs": 1,
-        },
-    )
-    code: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    status_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "statusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    effective_time: List[SxcmTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "name": "effectiveTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    availability_time: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "availabilityTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    priority_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "priorityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    confidentiality_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "confidentialityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    repeat_number: Optional[IvlInt] = field(
-        default=None,
-        metadata={
-            "name": "repeatNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    route_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "routeCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    approach_site_code: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "name": "approachSiteCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    dose_quantity: Optional[IvlPq] = field(
-        default=None,
-        metadata={
-            "name": "doseQuantity",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    rate_quantity: Optional[IvlPq] = field(
-        default=None,
-        metadata={
-            "name": "rateQuantity",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    max_dose_quantity: Optional[RtoPqPq] = field(
-        default=None,
-        metadata={
-            "name": "maxDoseQuantity",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    administration_unit_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "administrationUnitCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    consumable: Optional[RepcMt000200UvConsumable] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    performer: List[RepcMt000200UvPerformer2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    goal: List[RepcMt000200UvGoal] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
-        default=None,
-        metadata={
-            "name": "inFulfillmentOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    reason: List[RepcMt000200UvReason2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    conditions: List[RepcMt000200UvConditions] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    component: List["RepcMt000200UvComponent4"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
-        default_factory=list,
-        metadata={
-            "name": "subjectOf1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of2: List[RepcMt000200UvSubject] = field(
-        default_factory=list,
-        metadata={
-            "name": "subjectOf2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    component_of: List["RepcMt000200UvComponent3"] = field(
-        default_factory=list,
-        metadata={
-            "name": "componentOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: ActClass = field(
-        init=False,
-        default=ActClass.SBADM,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: Optional[ActMoodIntent] = field(
-        default=None,
-        metadata={
-            "name": "moodCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    negation_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "negationInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
 class RepcMt000200UvComponent3:
     class Meta:
         name = "REPC_MT000200UV.Component3"
@@ -4898,7 +4267,7 @@ class RepcMt000200UvComponent3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    act_intent: Optional["RepcMt000200UvActIntent"] = field(
+    act_intent: Optional[RepcMt000200UvActIntent] = field(
         default=None,
         metadata={
             "name": "actIntent",
@@ -4916,7 +4285,7 @@ class RepcMt000200UvComponent3:
             "nillable": True,
         },
     )
-    observation_intent: Optional[RepcMt000200UvObservationIntent] = field(
+    observation_intent: Optional["RepcMt000200UvObservationIntent"] = field(
         default=None,
         metadata={
             "name": "observationIntent",
@@ -4925,7 +4294,7 @@ class RepcMt000200UvComponent3:
             "nillable": True,
         },
     )
-    procedure_intent: Optional[RepcMt000200UvProcedureIntent] = field(
+    procedure_intent: Optional["RepcMt000200UvProcedureIntent"] = field(
         default=None,
         metadata={
             "name": "procedureIntent",
@@ -4935,7 +4304,131 @@ class RepcMt000200UvComponent3:
         },
     )
     substance_administration_intent: Optional[
-        RepcMt000200UvSubstanceAdministrationIntent
+        "RepcMt000200UvSubstanceAdministrationIntent"
+    ] = field(
+        default=None,
+        metadata={
+            "name": "substanceAdministrationIntent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Optional[ActRelationshipHasComponent] = field(
+        default=None,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    context_control_code: ContextControl = field(
+        default=ContextControl.AN,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: str = field(
+        default="true",
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+    negation_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
+class RepcMt000200UvComponent4:
+    class Meta:
+        name = "REPC_MT000200UV.Component4"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    sequence_number: Optional[Int] = field(
+        default=None,
+        metadata={
+            "name": "sequenceNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    act_intent: Optional[RepcMt000200UvActIntent] = field(
+        default=None,
+        metadata={
+            "name": "actIntent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    encounter_intent: Optional["RepcMt000200UvEncounterIntent"] = field(
+        default=None,
+        metadata={
+            "name": "encounterIntent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    observation_intent: Optional["RepcMt000200UvObservationIntent"] = field(
+        default=None,
+        metadata={
+            "name": "observationIntent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    procedure_intent: Optional["RepcMt000200UvProcedureIntent"] = field(
+        default=None,
+        metadata={
+            "name": "procedureIntent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    substance_administration_intent: Optional[
+        "RepcMt000200UvSubstanceAdministrationIntent"
     ] = field(
         default=None,
         metadata={
@@ -5208,7 +4701,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    component: List["RepcMt000200UvComponent4"] = field(
+    component: List[RepcMt000200UvComponent4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5278,133 +4771,9 @@ class RepcMt000200UvEncounterIntent:
 
 
 @dataclass
-class RepcMt000200UvComponent4:
+class RepcMt000200UvObservationIntent:
     class Meta:
-        name = "REPC_MT000200UV.Component4"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    sequence_number: Optional[Int] = field(
-        default=None,
-        metadata={
-            "name": "sequenceNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    act_intent: Optional["RepcMt000200UvActIntent"] = field(
-        default=None,
-        metadata={
-            "name": "actIntent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    encounter_intent: Optional[RepcMt000200UvEncounterIntent] = field(
-        default=None,
-        metadata={
-            "name": "encounterIntent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    observation_intent: Optional[RepcMt000200UvObservationIntent] = field(
-        default=None,
-        metadata={
-            "name": "observationIntent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    procedure_intent: Optional[RepcMt000200UvProcedureIntent] = field(
-        default=None,
-        metadata={
-            "name": "procedureIntent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    substance_administration_intent: Optional[
-        RepcMt000200UvSubstanceAdministrationIntent
-    ] = field(
-        default=None,
-        metadata={
-            "name": "substanceAdministrationIntent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Optional[ActRelationshipHasComponent] = field(
-        default=None,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.AN,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="true",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-    negation_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "negationInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
-class RepcMt000200UvActIntent:
-    class Meta:
-        name = "REPC_MT000200UV.ActIntent"
+        name = "REPC_MT000200UV.ObservationIntent"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -5446,6 +4815,14 @@ class RepcMt000200UvActIntent:
             "required": True,
         },
     )
+    derivation_expr: Optional[St] = field(
+        default=None,
+        metadata={
+            "name": "derivationExpr",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
@@ -5461,8 +4838,8 @@ class RepcMt000200UvActIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
-        default=None,
+    effective_time: List[SxcmTsExplicit] = field(
+        default_factory=list,
         metadata={
             "name": "effectiveTime",
             "type": "Element",
@@ -5493,6 +4870,14 @@ class RepcMt000200UvActIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
+    repeat_number: Optional[IvlInt] = field(
+        default=None,
+        metadata={
+            "name": "repeatNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
     uncertainty_code: Optional[Ce] = field(
         default=None,
         metadata={
@@ -5505,6 +4890,29 @@ class RepcMt000200UvActIntent:
         default=None,
         metadata={
             "name": "languageCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    value: Optional[AnyType] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    method_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "methodCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    target_site_code: List[Cd] = field(
+        default_factory=list,
+        metadata={
+            "name": "targetSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
@@ -5600,8 +5008,521 @@ class RepcMt000200UvActIntent:
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassRoot] = field(
+    class_code: Optional[ActClassObservation] = field(
         default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: Optional[ActMoodIntent] = field(
+        default=None,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class RepcMt000200UvProcedureIntent:
+    class Meta:
+        name = "REPC_MT000200UV.ProcedureIntent"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    effective_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    availability_time: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "availabilityTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    priority_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "priorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    confidentiality_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "confidentialityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    uncertainty_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "uncertaintyCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    language_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "languageCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    method_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "methodCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    approach_site_code: List[Cd] = field(
+        default_factory=list,
+        metadata={
+            "name": "approachSiteCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    target_site_code: List[Cd] = field(
+        default_factory=list,
+        metadata={
+            "name": "targetSiteCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    performer: List[RepcMt000200UvPerformer2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    goal: List[RepcMt000200UvGoal] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
+        default=None,
+        metadata={
+            "name": "inFulfillmentOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    reason: List[RepcMt000200UvReason2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    conditions: List[RepcMt000200UvConditions] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    component: List[RepcMt000200UvComponent4] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of1: List[RepcMt000200UvSubject2] = field(
+        default_factory=list,
+        metadata={
+            "name": "subjectOf1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of2: List[RepcMt000200UvSubject] = field(
+        default_factory=list,
+        metadata={
+            "name": "subjectOf2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    component_of: List[RepcMt000200UvComponent3] = field(
+        default_factory=list,
+        metadata={
+            "name": "componentOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[ActClassProcedure] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: Optional[ActMoodIntent] = field(
+        default=None,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    negation_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
+class RepcMt000200UvSubstanceAdministrationIntent:
+    class Meta:
+        name = "REPC_MT000200UV.SubstanceAdministrationIntent"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    effective_time: List[SxcmTsExplicit] = field(
+        default_factory=list,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    availability_time: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "availabilityTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    priority_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "priorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    confidentiality_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "confidentialityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    repeat_number: Optional[IvlInt] = field(
+        default=None,
+        metadata={
+            "name": "repeatNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    route_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "routeCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    approach_site_code: List[Cd] = field(
+        default_factory=list,
+        metadata={
+            "name": "approachSiteCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    dose_quantity: Optional[IvlPq] = field(
+        default=None,
+        metadata={
+            "name": "doseQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    rate_quantity: Optional[IvlPq] = field(
+        default=None,
+        metadata={
+            "name": "rateQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    max_dose_quantity: Optional[RtoPqPq] = field(
+        default=None,
+        metadata={
+            "name": "maxDoseQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    administration_unit_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "administrationUnitCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    consumable: Optional[RepcMt000200UvConsumable] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    performer: List[RepcMt000200UvPerformer2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    goal: List[RepcMt000200UvGoal] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
+        default=None,
+        metadata={
+            "name": "inFulfillmentOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    reason: List[RepcMt000200UvReason2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    conditions: List[RepcMt000200UvConditions] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    component: List[RepcMt000200UvComponent4] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of1: List[RepcMt000200UvSubject2] = field(
+        default_factory=list,
+        metadata={
+            "name": "subjectOf1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of2: List[RepcMt000200UvSubject] = field(
+        default_factory=list,
+        metadata={
+            "name": "subjectOf2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    component_of: List[RepcMt000200UvComponent3] = field(
+        default_factory=list,
+        metadata={
+            "name": "componentOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: ActClass = field(
+        init=False,
+        default=ActClass.SBADM,
         metadata={
             "name": "classCode",
             "type": "Attribute",
@@ -5906,7 +5827,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    component3: List[RepcMt000200UvComponent7] = field(
+    component3: List["RepcMt000200UvComponent7"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5953,5 +5874,84 @@ class RepcMt000200UvCarePlan:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
+        },
+    )
+
+
+@dataclass
+class RepcMt000200UvComponent7:
+    class Meta:
+        name = "REPC_MT000200UV.Component7"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    sequence_number: Optional[Int] = field(
+        default=None,
+        metadata={
+            "name": "sequenceNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    care_plan: Optional[RepcMt000200UvCarePlan] = field(
+        default=None,
+        metadata={
+            "name": "carePlan",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Optional[ActRelationshipHasComponent] = field(
+        default=None,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    context_control_code: Optional[ContextControl] = field(
+        default=None,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"true|false",
         },
     )

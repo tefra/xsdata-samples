@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .cell_versioned_child_structure import FareStructureFactorVersionStructure
+from .priceable_object_version_structure import (
+    FareStructureFactorVersionStructure,
+)
 from .quality_structure_factor_prices_rel_structure import (
     QualityStructureFactorPricesRelStructure,
 )

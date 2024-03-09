@@ -3,7 +3,7 @@ from typing import List, Optional
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     AdminData,
     DocumentationBlock,
     VariationPoint,

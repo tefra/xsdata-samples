@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .data_role_type_enumeration import DataRoleTypeEnumeration
+from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .organisation_part_ref_structure import OrganisationPartRefStructure
 from .organisation_ref_structure import OrganisationRefStructure

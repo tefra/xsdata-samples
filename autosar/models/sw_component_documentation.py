@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
-from .msr_query_result_chapter import Chapter
+from .admin_data import VariationPoint
+from .chapter import Chapter
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

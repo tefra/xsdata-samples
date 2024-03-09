@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .age_constraint import AgeConstraint
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
+from .age_constraint import AgeConstraint
 from .arbitrary_event_triggering import ArbitraryEventTriggering
 from .bsw_implementation_subtypes_enum import BswImplementationSubtypesEnum
 from .burst_pattern_event_triggering import BurstPatternEventTriggering

@@ -7,8 +7,6 @@ from netex.models.accessibility_limitations_rel_structure import AccessibilityLi
 from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
 from netex.models.accessibility_tool_list import AccessibilityToolList
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.authority import Authority
 from netex.models.bounding_box_structure_2 import BoundingBoxStructure2
 from netex.models.codespace import Codespace
@@ -18,8 +16,10 @@ from netex.models.compass_bearing8_enumeration import CompassBearing8Enumeration
 from netex.models.covered_enumeration import CoveredEnumeration
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.data_role_type_enumeration import DataRoleTypeEnumeration
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.key_list import KeyList
 from netex.models.key_value_structure import KeyValueStructure
 from netex.models.level import Level

@@ -2,6 +2,10 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .ecuc_add_info_param_def import EcucAddInfoParamDef
 from .ecuc_boolean_param_def import EcucBooleanParamDef
+from .ecuc_choice_container_def import (
+    EcucChoiceContainerDef,
+    EcucParamConfContainerDef,
+)
 from .ecuc_choice_reference_def import EcucChoiceReferenceDef
 from .ecuc_destination_uri_nesting_contract_enum import (
     EcucDestinationUriNestingContractEnum,
@@ -14,10 +18,6 @@ from .ecuc_instance_reference_def import EcucInstanceReferenceDef
 from .ecuc_integer_param_def import EcucIntegerParamDef
 from .ecuc_linker_symbol_def import EcucLinkerSymbolDef
 from .ecuc_multiline_string_param_def import EcucMultilineStringParamDef
-from .ecuc_param_conf_container_def import (
-    EcucChoiceContainerDef,
-    EcucParamConfContainerDef,
-)
 from .ecuc_reference_def import EcucReferenceDef
 from .ecuc_string_param_def import EcucStringParamDef
 from .ecuc_symbolic_name_reference_def import EcucSymbolicNameReferenceDef

@@ -3,7 +3,7 @@ from typing import List, Optional
 from .adaptive_module_instantiation_subtypes_enum import (
     AdaptiveModuleInstantiationSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,

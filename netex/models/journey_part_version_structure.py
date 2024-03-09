@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from xsdata.models.datatype import XmlTime
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_part_ref import BlockPartRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .journey_part_couple_ref import JourneyPartCoupleRef
 from .journey_part_positions_rel_structure import (
     JourneyPartPositionsRelStructure,

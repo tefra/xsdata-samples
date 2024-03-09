@@ -238,7 +238,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition_reasons_reason_code import (
     StatusHistoryTypeStateTransitionReasonsReasonCode,
 )
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sub_division_type import (
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.subdivisions_type import (
     SubDivisionType,
     SubdivisionsType,
 )

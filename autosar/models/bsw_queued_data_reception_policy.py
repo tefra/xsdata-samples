@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .positive_integer import PositiveInteger
 from .ref import Ref

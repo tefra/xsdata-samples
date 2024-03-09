@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlPeriod
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

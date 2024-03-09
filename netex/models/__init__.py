@@ -268,7 +268,7 @@ from .administrative_zone_ref_structure import AdministrativeZoneRefStructure
 from .administrative_zone_refs_rel_structure import (
     AdministrativeZoneRefsRelStructure,
 )
-from .administrative_zone_version_structure import (
+from .administrative_zones_rel_structure import (
     AdministrativeZone1,
     AdministrativeZoneVersionStructure,
     TransportAdministrativeZone,
@@ -348,40 +348,6 @@ from .alternative_quay_descriptor_versioned_child_structure import (
 )
 from .alternative_text_ref import AlternativeTextRef
 from .alternative_text_ref_structure import AlternativeTextRefStructure
-from .alternative_texts_rel_structure import (
-    AlternativeText,
-    AlternativeTextVersionedChildStructure,
-    AvailabilityCondition,
-    AvailabilityConditionVersionStructure,
-    DataManagedObjectStructure,
-    DayType1,
-    DayTypeVersionStructure,
-    EntityInVersionStructure,
-    FareDayType,
-    FareDayTypeVersionedStructure,
-    OperatingDay,
-    OperatingDayVersionStructure,
-    OrganisationDayType,
-    OrganisationDayTypeVersionStructure,
-    SimpleAvailabilityCondition,
-    TimebandVersionedChildStructure,
-    ValidBetween,
-    ValidBetweenVersionStructure,
-    ValidDuring,
-    ValidDuringVersionStructure,
-    ValidityCondition1,
-    ValidityConditionVersionStructure,
-    ValidityRuleParameter,
-    ValidityRuleParameterVersionStructure,
-    ValidityTrigger,
-    ValidityTriggerVersionStructure,
-    VersionedChildStructure,
-    AlternativeTextsRelStructure,
-    DayTypesRelStructure,
-    OperatingDaysRelStructure,
-    TimebandsRelStructure,
-    ValidityConditionsRelStructure,
-)
 from .amount_of_price_unit_enumeration import AmountOfPriceUnitEnumeration
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
@@ -604,26 +570,6 @@ from .cell_ref_1 import CellRef1
 from .cell_ref_2 import CellRef2
 from .cell_ref_structure import CellRefStructure
 from .cell_refs_rel_structure import CellRefsRelStructure
-from .cell_versioned_child_structure import (
-    Cell1,
-    CellVersionedChildStructure,
-    FareStructureFactorVersionStructure,
-    FareTableInContext,
-    FareTable1,
-    FareTableVersionStructure,
-    ParkingChargeBand,
-    ParkingChargeBandVersionStructure,
-    ParkingPrice,
-    ParkingPriceVersionedChildStructure,
-    PriceGroup1,
-    PriceGroupVersionStructure,
-    PriceableObjectVersionStructure,
-    TimeStructureFactorVersionStructure,
-    CellsRelStructure,
-    FarePricesRelStructure,
-    FareTablesRelStructure,
-    PriceGroupsRelStructure,
-)
 from .charging_basis_enumeration import ChargingBasisEnumeration
 from .charging_equipmen_profiles_in_frame_rel_structure import (
     ChargingEquipmenProfilesInFrameRelStructure,
@@ -1571,17 +1517,6 @@ from .endpoint_not_available_access_error import (
 from .endpoint_not_available_access_structure import (
     EndpointNotAvailableAccessStructure,
 )
-from .entities_in_version_rel_structure import (
-    CompositeFrame,
-    CompositeVersionFrameStructure,
-    EntityEntity,
-    EntityEntityStructure,
-    GeneralFrame,
-    GeneralVersionFrameStructure,
-    EntitiesInVersionRelStructure,
-    FramesRelStructure,
-    GeneralFrameMembersRelStructure,
-)
 from .entitlement_constraint_structure import EntitlementConstraintStructure
 from .entitlement_given import EntitlementGiven
 from .entitlement_given_ref import EntitlementGivenRef
@@ -1615,6 +1550,40 @@ from .entity_in_version_in_frame_ref_structure import (
 )
 from .entity_in_version_in_frame_rel_structure import (
     EntityInVersionInFrameRelStructure,
+)
+from .entity_in_version_structure import (
+    AlternativeText,
+    AlternativeTextVersionedChildStructure,
+    AvailabilityCondition,
+    AvailabilityConditionVersionStructure,
+    DataManagedObjectStructure,
+    DayType1,
+    DayTypeVersionStructure,
+    EntityInVersionStructure,
+    FareDayType,
+    FareDayTypeVersionedStructure,
+    OperatingDay,
+    OperatingDayVersionStructure,
+    OrganisationDayType,
+    OrganisationDayTypeVersionStructure,
+    SimpleAvailabilityCondition,
+    TimebandVersionedChildStructure,
+    ValidBetween,
+    ValidBetweenVersionStructure,
+    ValidDuring,
+    ValidDuringVersionStructure,
+    ValidityCondition1,
+    ValidityConditionVersionStructure,
+    ValidityRuleParameter,
+    ValidityRuleParameterVersionStructure,
+    ValidityTrigger,
+    ValidityTriggerVersionStructure,
+    VersionedChildStructure,
+    AlternativeTextsRelStructure,
+    DayTypesRelStructure,
+    OperatingDaysRelStructure,
+    TimebandsRelStructure,
+    ValidityConditionsRelStructure,
 )
 from .entity_structure import EntityStructure
 from .entrance import Entrance
@@ -1893,7 +1862,7 @@ from .fare_structure_type_enumeration import FareStructureTypeEnumeration
 from .fare_table_2 import FareTable2
 from .fare_table_column_ref import FareTableColumnRef
 from .fare_table_column_ref_structure import FareTableColumnRefStructure
-from .fare_table_column_versioned_child_structure import (
+from .fare_table_columns_rel_structure import (
     FareTableColumn,
     FareTableColumnVersionedChildStructure,
     FareTableColumnsRelStructure,
@@ -1903,7 +1872,7 @@ from .fare_table_ref_structure import FareTableRefStructure
 from .fare_table_refs_rel_structure import FareTableRefsRelStructure
 from .fare_table_row_ref import FareTableRowRef
 from .fare_table_row_ref_structure import FareTableRowRefStructure
-from .fare_table_row_versioned_child_structure import (
+from .fare_table_rows_rel_structure import (
     FareTableRow,
     FareTableRowVersionedChildStructure,
     FareTableRowsRelStructure,
@@ -2107,12 +2076,23 @@ from .general_sign import GeneralSign
 from .general_sign_ref import GeneralSignRef
 from .general_sign_ref_structure import GeneralSignRefStructure
 from .general_sign_structure import GeneralSignStructure
+from .general_version_frame_structure import (
+    CompositeFrame,
+    CompositeVersionFrameStructure,
+    EntityEntity,
+    EntityEntityStructure,
+    GeneralFrame,
+    GeneralVersionFrameStructure,
+    EntitiesInVersionRelStructure,
+    FramesRelStructure,
+    GeneralFrameMembersRelStructure,
+)
 from .general_zone import GeneralZone
 from .general_zone_version_structure import GeneralZoneVersionStructure
 from .generic_parameter_assignment_ref_structure import (
     GenericParameterAssignmentRefStructure,
 )
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
     GenericParameterAssignmentVersionStructure,
@@ -3847,6 +3827,26 @@ from .priceable_object_ref_structure import PriceableObjectRefStructure
 from .priceable_object_refs_rel_structure import (
     PriceableObjectRefsRelStructure,
 )
+from .priceable_object_version_structure import (
+    Cell1,
+    CellVersionedChildStructure,
+    FareStructureFactorVersionStructure,
+    FareTableInContext,
+    FareTable1,
+    FareTableVersionStructure,
+    ParkingChargeBand,
+    ParkingChargeBandVersionStructure,
+    ParkingPrice,
+    ParkingPriceVersionedChildStructure,
+    PriceGroup1,
+    PriceGroupVersionStructure,
+    PriceableObjectVersionStructure,
+    TimeStructureFactorVersionStructure,
+    CellsRelStructure,
+    FarePricesRelStructure,
+    FareTablesRelStructure,
+    PriceGroupsRelStructure,
+)
 from .pricing_parameter_set import PricingParameterSet
 from .pricing_parameter_set_ref import PricingParameterSetRef
 from .pricing_parameter_set_ref_structure import (
@@ -4500,7 +4500,10 @@ from .seating_equipment_version_structure import (
 )
 from .section_1 import Section1
 from .section_2 import Section2
-from .section_in_sequence_versioned_child_structure import (
+from .section_ref import SectionRef
+from .section_ref_structure import SectionRefStructure
+from .section_type_enumeration import SectionTypeEnumeration
+from .sections_in_sequence_rel_structure import (
     CommonSection,
     CommonSectionVersionStructure,
     FareSection,
@@ -4517,9 +4520,6 @@ from .section_in_sequence_versioned_child_structure import (
     SectionVersionStructure,
     SectionsInSequenceRelStructure,
 )
-from .section_ref import SectionRef
-from .section_ref_structure import SectionRefStructure
-from .section_type_enumeration import SectionTypeEnumeration
 from .security_list import SecurityList
 from .security_list_ref import SecurityListRef
 from .security_list_ref_structure import SecurityListRefStructure
@@ -4845,7 +4845,7 @@ from .special_services_rel_structure import SpecialServicesRelStructure
 from .specific_parameter_assignment_ref_structure import (
     SpecificParameterAssignmentRefStructure,
 )
-from .specific_parameter_assignment_version_structure import (
+from .specific_parameter_assignments_rel_structure import (
     SpecificParameterAssignment,
     SpecificParameterAssignmentVersionStructure,
     SpecificParameterAssignmentsRelStructure,
@@ -6985,38 +6985,6 @@ __all__ = [
     "AlternativeQuayDescriptorVersionedChildStructure",
     "AlternativeTextRef",
     "AlternativeTextRefStructure",
-    "AlternativeText",
-    "AlternativeTextVersionedChildStructure",
-    "AvailabilityCondition",
-    "AvailabilityConditionVersionStructure",
-    "DataManagedObjectStructure",
-    "DayType1",
-    "DayTypeVersionStructure",
-    "EntityInVersionStructure",
-    "FareDayType",
-    "FareDayTypeVersionedStructure",
-    "OperatingDay",
-    "OperatingDayVersionStructure",
-    "OrganisationDayType",
-    "OrganisationDayTypeVersionStructure",
-    "SimpleAvailabilityCondition",
-    "TimebandVersionedChildStructure",
-    "ValidBetween",
-    "ValidBetweenVersionStructure",
-    "ValidDuring",
-    "ValidDuringVersionStructure",
-    "ValidityCondition1",
-    "ValidityConditionVersionStructure",
-    "ValidityRuleParameter",
-    "ValidityRuleParameterVersionStructure",
-    "ValidityTrigger",
-    "ValidityTriggerVersionStructure",
-    "VersionedChildStructure",
-    "AlternativeTextsRelStructure",
-    "DayTypesRelStructure",
-    "OperatingDaysRelStructure",
-    "TimebandsRelStructure",
-    "ValidityConditionsRelStructure",
     "AmountOfPriceUnitEnumeration",
     "AmountOfPriceUnitProduct",
     "AmountOfPriceUnitProductRef",
@@ -7185,24 +7153,6 @@ __all__ = [
     "CellRef2",
     "CellRefStructure",
     "CellRefsRelStructure",
-    "Cell1",
-    "CellVersionedChildStructure",
-    "FareStructureFactorVersionStructure",
-    "FareTableInContext",
-    "FareTable1",
-    "FareTableVersionStructure",
-    "ParkingChargeBand",
-    "ParkingChargeBandVersionStructure",
-    "ParkingPrice",
-    "ParkingPriceVersionedChildStructure",
-    "PriceGroup1",
-    "PriceGroupVersionStructure",
-    "PriceableObjectVersionStructure",
-    "TimeStructureFactorVersionStructure",
-    "CellsRelStructure",
-    "FarePricesRelStructure",
-    "FareTablesRelStructure",
-    "PriceGroupsRelStructure",
     "ChargingBasisEnumeration",
     "ChargingEquipmenProfilesInFrameRelStructure",
     "ChargingEquipmentProfile",
@@ -7786,15 +7736,6 @@ __all__ = [
     "EndpointDeniedAccessStructure",
     "EndpointNotAvailableAccessError",
     "EndpointNotAvailableAccessStructure",
-    "CompositeFrame",
-    "CompositeVersionFrameStructure",
-    "EntityEntity",
-    "EntityEntityStructure",
-    "GeneralFrame",
-    "GeneralVersionFrameStructure",
-    "EntitiesInVersionRelStructure",
-    "FramesRelStructure",
-    "GeneralFrameMembersRelStructure",
     "EntitlementConstraintStructure",
     "EntitlementGiven",
     "EntitlementGivenRef",
@@ -7815,6 +7756,38 @@ __all__ = [
     "EntityInVersion",
     "EntityInVersionInFrameRefStructure",
     "EntityInVersionInFrameRelStructure",
+    "AlternativeText",
+    "AlternativeTextVersionedChildStructure",
+    "AvailabilityCondition",
+    "AvailabilityConditionVersionStructure",
+    "DataManagedObjectStructure",
+    "DayType1",
+    "DayTypeVersionStructure",
+    "EntityInVersionStructure",
+    "FareDayType",
+    "FareDayTypeVersionedStructure",
+    "OperatingDay",
+    "OperatingDayVersionStructure",
+    "OrganisationDayType",
+    "OrganisationDayTypeVersionStructure",
+    "SimpleAvailabilityCondition",
+    "TimebandVersionedChildStructure",
+    "ValidBetween",
+    "ValidBetweenVersionStructure",
+    "ValidDuring",
+    "ValidDuringVersionStructure",
+    "ValidityCondition1",
+    "ValidityConditionVersionStructure",
+    "ValidityRuleParameter",
+    "ValidityRuleParameterVersionStructure",
+    "ValidityTrigger",
+    "ValidityTriggerVersionStructure",
+    "VersionedChildStructure",
+    "AlternativeTextsRelStructure",
+    "DayTypesRelStructure",
+    "OperatingDaysRelStructure",
+    "TimebandsRelStructure",
+    "ValidityConditionsRelStructure",
     "EntityStructure",
     "Entrance",
     "EntranceAttentionEnumeration",
@@ -8150,6 +8123,15 @@ __all__ = [
     "GeneralSignRef",
     "GeneralSignRefStructure",
     "GeneralSignStructure",
+    "CompositeFrame",
+    "CompositeVersionFrameStructure",
+    "EntityEntity",
+    "EntityEntityStructure",
+    "GeneralFrame",
+    "GeneralVersionFrameStructure",
+    "EntitiesInVersionRelStructure",
+    "FramesRelStructure",
+    "GeneralFrameMembersRelStructure",
     "GeneralZone",
     "GeneralZoneVersionStructure",
     "GenericParameterAssignmentRefStructure",
@@ -9276,6 +9258,24 @@ __all__ = [
     "PriceableObjectRef",
     "PriceableObjectRefStructure",
     "PriceableObjectRefsRelStructure",
+    "Cell1",
+    "CellVersionedChildStructure",
+    "FareStructureFactorVersionStructure",
+    "FareTableInContext",
+    "FareTable1",
+    "FareTableVersionStructure",
+    "ParkingChargeBand",
+    "ParkingChargeBandVersionStructure",
+    "ParkingPrice",
+    "ParkingPriceVersionedChildStructure",
+    "PriceGroup1",
+    "PriceGroupVersionStructure",
+    "PriceableObjectVersionStructure",
+    "TimeStructureFactorVersionStructure",
+    "CellsRelStructure",
+    "FarePricesRelStructure",
+    "FareTablesRelStructure",
+    "PriceGroupsRelStructure",
     "PricingParameterSet",
     "PricingParameterSetRef",
     "PricingParameterSetRefStructure",
@@ -9707,6 +9707,9 @@ __all__ = [
     "SeatingEquipmentVersionStructure",
     "Section1",
     "Section2",
+    "SectionRef",
+    "SectionRefStructure",
+    "SectionTypeEnumeration",
     "CommonSection",
     "CommonSectionVersionStructure",
     "FareSection",
@@ -9722,9 +9725,6 @@ __all__ = [
     "SectionInSequenceVersionedChildStructure",
     "SectionVersionStructure",
     "SectionsInSequenceRelStructure",
-    "SectionRef",
-    "SectionRefStructure",
-    "SectionTypeEnumeration",
     "SecurityList",
     "SecurityListRef",
     "SecurityListRefStructure",

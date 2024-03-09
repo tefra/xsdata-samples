@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Any
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
-from .alternative_texts_rel_structure import (
+from .contact_structure import ContactStructure
+from .entity_in_version_structure import (
     DataManagedObjectStructure,
     ValidBetweenVersionStructure,
 )
-from .contact_structure import ContactStructure
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .locale import Locale
 from .multilingual_string import MultilingualString

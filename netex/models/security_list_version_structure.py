@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .general_organisation_ref import GeneralOrganisationRef
 from .management_agent_ref import ManagementAgentRef
 from .multilingual_string import MultilingualString

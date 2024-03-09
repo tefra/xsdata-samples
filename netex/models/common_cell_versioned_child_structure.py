@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_table_column_ref_structure import FareTableColumnRefStructure
 from .fare_table_ref import FareTableRef
 from .fare_table_row_ref_structure import FareTableRowRefStructure

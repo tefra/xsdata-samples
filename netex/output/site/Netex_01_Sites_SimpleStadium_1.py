@@ -10,8 +10,6 @@ from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
 from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.assistance_service import AssistanceService
 from netex.models.check_constraint import CheckConstraint
 from netex.models.check_constraint_delay import CheckConstraintDelay
@@ -26,6 +24,8 @@ from netex.models.congestion_enumeration import CongestionEnumeration
 from netex.models.covered_enumeration import CoveredEnumeration
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.direction_of_use_enumeration import DirectionOfUseEnumeration
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.entrance_enumeration import EntranceEnumeration
 from netex.models.entrance_equipment import EntranceEquipment
 from netex.models.entrance_ref_structure import EntranceRefStructure

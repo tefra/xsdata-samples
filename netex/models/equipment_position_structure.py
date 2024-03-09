@@ -3,7 +3,6 @@ from decimal import Decimal
 from typing import Optional, Union
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service_ref import AssistanceServiceRef
 from .battery_equipment_ref import BatteryEquipmentRef
@@ -15,6 +14,7 @@ from .complaints_service_ref import ComplaintsServiceRef
 from .crossing_equipment_ref import CrossingEquipmentRef
 from .customer_service_ref import CustomerServiceRef
 from .cycle_storage_equipment_ref import CycleStorageEquipmentRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .entrance_equipment_ref import EntranceEquipmentRef
 from .equipment_ref import EquipmentRef
 from .escalator_equipment_ref import EscalatorEquipmentRef

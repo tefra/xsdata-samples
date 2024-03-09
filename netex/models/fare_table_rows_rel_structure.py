@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union, Any
-from .alternative_texts_rel_structure import VersionedChildStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_table_ref import FareTableRef
 from .multilingual_string import MultilingualString
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
@@ -14,9 +14,25 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class FareTableColumnVersionedChildStructure(VersionedChildStructure):
+class FareTableRowsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
-        name = "FareTableColumn_VersionedChildStructure"
+        name = "fareTableRows_RelStructure"
+
+    fare_table_row: List["FareTableRow"] = field(
+        default_factory=list,
+        metadata={
+            "name": "FareTableRow",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass
+class FareTableRowVersionedChildStructure(VersionedChildStructure):
+    class Meta:
+        name = "FareTableRow_VersionedChildStructure"
 
     name: Optional[MultilingualString] = field(
         default=None,
@@ -26,10 +42,10 @@ class FareTableColumnVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    label: Optional[MultilingualString] = field(
         default=None,
         metadata={
-            "name": "Description",
+            "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -69,7 +85,7 @@ class FareTableColumnVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    columns: Optional["FareTableColumnsRelStructure"] = field(
+    rows: Optional[FareTableRowsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -85,7 +101,7 @@ class FareTableColumnVersionedChildStructure(VersionedChildStructure):
 
 
 @dataclass
-class FareTableColumn(FareTableColumnVersionedChildStructure):
+class FareTableRow(FareTableRowVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
@@ -99,21 +115,5 @@ class FareTableColumn(FareTableColumnVersionedChildStructure):
         init=False,
         metadata={
             "type": "Ignore",
-        },
-    )
-
-
-@dataclass
-class FareTableColumnsRelStructure(StrictContainmentAggregationStructure):
-    class Meta:
-        name = "fareTableColumns_RelStructure"
-
-    fare_table_column: List[FareTableColumn] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareTableColumn",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         },
     )

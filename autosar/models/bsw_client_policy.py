@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .bsw_module_client_server_entry_subtypes_enum import (
     BswModuleClientServerEntrySubtypesEnum,

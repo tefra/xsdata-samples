@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .compound_train_ref import CompoundTrainRef
+from .entity_in_version_structure import VersionedChildStructure
 from .parking_properties_ref import ParkingPropertiesRef
 from .parking_properties_ref_structure import ParkingPropertiesRefStructure
 from .parking_ref import ParkingRef

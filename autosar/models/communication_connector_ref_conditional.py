@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .communication_connector_subtypes_enum import (
     CommunicationConnectorSubtypesEnum,
 )

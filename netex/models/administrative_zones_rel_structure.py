@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import List, Optional, Type, Union
 from .administrative_zone_ref import AdministrativeZoneRef
 from .all_modes_enumeration import AllModesEnumeration
 from .authority_ref import AuthorityRef
@@ -21,6 +21,42 @@ from .travel_agent_ref import TravelAgentRef
 from .zone_version_structure import ZoneVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
+    class Meta:
+        name = "administrativeZones_RelStructure"
+
+    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[
+        Union[
+            AdministrativeZoneRef,
+            "TransportAdministrativeZone",
+            "AdministrativeZone1",
+        ]
+    ] = field(
+        default_factory=list,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AdministrativeZoneRef",
+                    "type": AdministrativeZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportAdministrativeZone",
+                    "type": Type["TransportAdministrativeZone"],
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdministrativeZone",
+                    "type": Type["AdministrativeZone1"],
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
+    )
 
 
 @dataclass
@@ -122,7 +158,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    subzones: Optional["AdministrativeZonesRelStructure"] = field(
+    subzones: Optional[AdministrativeZonesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -160,39 +196,3 @@ class TransportAdministrativeZoneVersionStructure(
 class TransportAdministrativeZone(TransportAdministrativeZoneVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
-
-
-@dataclass
-class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
-    class Meta:
-        name = "administrativeZones_RelStructure"
-
-    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[
-        Union[
-            AdministrativeZoneRef,
-            TransportAdministrativeZone,
-            AdministrativeZone1,
-        ]
-    ] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AdministrativeZoneRef",
-                    "type": AdministrativeZoneRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportAdministrativeZone",
-                    "type": TransportAdministrativeZone,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "AdministrativeZone",
-                    "type": AdministrativeZone1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
-    )

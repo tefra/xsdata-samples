@@ -2,12 +2,6 @@ from decimal import Decimal
 from netex.models.access_right_in_product import AccessRightInProduct
 from netex.models.access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import ValidBetween
-from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
-from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import PriceGroup1
-from netex.models.cell_versioned_child_structure import PriceGroupsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
@@ -18,8 +12,9 @@ from netex.models.distance_matrix_element_price_ref import DistanceMatrixElement
 from netex.models.distance_matrix_element_prices_rel_structure import DistanceMatrixElementPricesRelStructure
 from netex.models.distance_matrix_element_ref import DistanceMatrixElementRef
 from netex.models.distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.entity_in_version_structure import ValidBetween
+from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.fare_frame import FareFrame
 from netex.models.fare_frame_ref import FareFrameRef
 from netex.models.fare_prices_in_frame_rel_structure import FarePricesInFrameRelStructure
@@ -31,7 +26,9 @@ from netex.models.fare_structure_element_refs_rel_structure import FareStructure
 from netex.models.fare_structure_elements_rel_structure import FareStructureElementsRelStructure
 from netex.models.frequency_of_use import FrequencyOfUse
 from netex.models.frequency_of_use_type_enumeration import FrequencyOfUseTypeEnumeration
-from netex.models.generic_parameter_assignment_version_structure import GenericParameterAssignment
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
+from netex.models.generic_parameter_assignments_rel_structure import GenericParameterAssignment
 from netex.models.interchanging import Interchanging
 from netex.models.line_1 import Line1
 from netex.models.line_ref import LineRef
@@ -46,6 +43,9 @@ from netex.models.organisations_in_frame_rel_structure import OrganisationsInFra
 from netex.models.participant_ref import ParticipantRef
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.price_group_ref import PriceGroupRef
+from netex.models.priceable_object_version_structure import FarePricesRelStructure
+from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroupsRelStructure
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .identifier import Identifier
 from .instance_event_in_composition_instance_ref import (
     InstanceEventInCompositionInstanceRef,

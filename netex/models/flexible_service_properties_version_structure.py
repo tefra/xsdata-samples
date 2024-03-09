@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .booking_access_enumeration import BookingAccessEnumeration
 from .booking_method_enumeration import BookingMethodEnumeration
 from .contact_structure import ContactStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_ref import DeadRunRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .flexible_service_enumeration import FlexibleServiceEnumeration
 from .multilingual_string import MultilingualString
 from .purchase_moment_enumeration import PurchaseMomentEnumeration

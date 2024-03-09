@@ -3,7 +3,7 @@ from typing import List, Optional
 from .abstract_iam_remote_subject_subtypes_enum import (
     AbstractIamRemoteSubjectSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,

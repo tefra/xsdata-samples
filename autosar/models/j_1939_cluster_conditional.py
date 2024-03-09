@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .can_cluster_bus_off_recovery import CanClusterBusOffRecovery
 from .can_physical_channel import CanPhysicalChannel

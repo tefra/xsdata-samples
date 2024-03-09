@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import DocumentationBlock
+from .admin_data import DocumentationBlock
 from .integer import Integer
 from .lin_slave_config_ident_subtypes_enum import (
     LinSlaveConfigIdentSubtypesEnum,

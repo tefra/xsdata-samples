@@ -3,7 +3,6 @@ from typing import Optional
 from .amount_of_price_unit_refs_rel_structure import (
     AmountOfPriceUnitRefsRelStructure,
 )
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .discount_right_refs_rel_structure import DiscountRightRefsRelStructure
 from .fare_element_in_sequence_refs_rel_structure import (
     FareElementInSequenceRefsRelStructure,
@@ -11,6 +10,7 @@ from .fare_element_in_sequence_refs_rel_structure import (
 from .fare_structure_element_refs_rel_structure import (
     FareStructureElementRefsRelStructure,
 )
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .third_party_product_refs_rel_structure import (
     ThirdPartyProductRefsRelStructure,
 )

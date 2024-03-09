@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from xsdata.models.datatype import XmlTime
-from .alternative_texts_rel_structure import VersionedChildStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .scheduled_stop_point_ref import ScheduledStopPointRef

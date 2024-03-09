@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import Abstract
+from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
 from crossref.models.org.crossref.relations.program import Program
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.approval_date import (
     ApprovalDate,

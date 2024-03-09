@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import Sdg
+from .admin_data import Sdg
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -2,22 +2,22 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from voko.models.adm import Adm
 from voko.models.bld import Bld
-from voko.models.dif import (
-    Dif,
-    Snc,
-)
-from voko.models.fnt import Fnt
-from voko.models.gra import Gra
-from voko.models.lstref import Lstref
-from voko.models.mlg import Mlg
-from voko.models.mll import (
+from voko.models.ekz import (
     Ekz,
     Ref,
     Refgrp,
     Trd,
     Trdgrp,
 )
+from voko.models.fnt import Fnt
+from voko.models.gra import Gra
+from voko.models.lstref import Lstref
+from voko.models.mlg import Mlg
 from voko.models.rim import Rim
+from voko.models.snc import (
+    Dif,
+    Snc,
+)
 from voko.models.tezrad import Tezrad
 from voko.models.url import Url
 from voko.models.uzo import Uzo

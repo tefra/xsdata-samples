@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from .activation_point_ref import ActivationPointRef
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .beacon_point_ref import BeaconPointRef
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .border_point_ref import BorderPointRef
@@ -9,6 +8,7 @@ from .dead_run_call_part_structure import DeadRunCallPartStructure
 from .destination_display_ref import DestinationDisplayRef
 from .destination_display_view import DestinationDisplayView
 from .dynamic_advertisement_enumeration import DynamicAdvertisementEnumeration
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .flexible_point_properties import FlexiblePointProperties
 from .garage_point_ref import GaragePointRef

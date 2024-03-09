@@ -13,7 +13,7 @@ from .implementation_data_type_element_in_system_ref import (
     ImplementationDataTypeElementInSystemRef,
 )
 from .ref import Ref
-from .sw_pointer_target_props import SwDataDefProps
+from .sw_data_def_props import SwDataDefProps
 from .transformation_props_subtypes_enum import TransformationPropsSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

@@ -8,7 +8,7 @@ from .composite_network_representation import CompositeNetworkRepresentation
 from .handle_out_of_range_enum import HandleOutOfRangeEnum
 from .ref import Ref
 from .sender_intent_enum import SenderIntentEnum
-from .sw_pointer_target_props import SwDataDefProps
+from .sw_data_def_props import SwDataDefProps
 from .time_value import TimeValue
 from .transmission_acknowledgement_request import (
     TransmissionAcknowledgementRequest,

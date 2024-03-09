@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .compound_train_ref import CompoundTrainRef
+from .entity_in_version_structure import VersionedChildStructure
 from .simple_vehicle_type_ref import SimpleVehicleTypeRef
 from .train_ref import TrainRef
 from .transport_type_ref import TransportTypeRef

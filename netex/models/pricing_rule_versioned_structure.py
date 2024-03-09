@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .discounting_rule_ref import DiscountingRuleRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .limiting_rule_ref import LimitingRuleRef
 from .multilingual_string import MultilingualString
 from .price_unit_ref import PriceUnitRef

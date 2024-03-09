@@ -2,9 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional, Union
 from .direction_type import DirectionType
 from .route_ref_structure import RouteRefStructure
-from .section_in_sequence_versioned_child_structure import (
-    LinkSequenceVersionStructure,
-)
+from .sections_in_sequence_rel_structure import LinkSequenceVersionStructure
 from .time_demand_type_ref import TimeDemandTypeRef
 from .timeband_ref import TimebandRef
 from .timing_links_rel_structure import TimingLinksRelStructure

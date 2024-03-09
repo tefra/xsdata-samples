@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
@@ -8,6 +8,7 @@ from .annotation import (
 )
 from .byte_order_enum import ByteOrderEnum
 from .category_string import CategoryString
+from .chapter import Chapter
 from .client_id_definition_set_subtypes_enum import (
     ClientIdDefinitionSetSubtypesEnum,
 )
@@ -20,7 +21,6 @@ from .interpolation_routine_mapping_set_subtypes_enum import (
     InterpolationRoutineMappingSetSubtypesEnum,
 )
 from .j_1939_shared_address_cluster import J1939SharedAddressCluster
-from .msr_query_result_chapter import Chapter
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger

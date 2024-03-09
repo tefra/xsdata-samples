@@ -11,10 +11,6 @@ from netex.models.activation_point_ref import ActivationPointRef
 from netex.models.activation_point_ref_structure import ActivationPointRefStructure
 from netex.models.activation_points_in_frame_rel_structure import ActivationPointsInFrameRelStructure
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType1
-from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
-from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.arrival_structure import ArrivalStructure
 from netex.models.beacon_point import BeaconPoint
 from netex.models.call_1 import Call1
@@ -38,8 +34,12 @@ from netex.models.direction_ref import DirectionRef
 from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayTypesRelStructure
+from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.infrastructure_frame import InfrastructureFrame
 from netex.models.journey_pattern_refs_rel_structure import JourneyPatternRefsRelStructure

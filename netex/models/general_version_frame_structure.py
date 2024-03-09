@@ -17,26 +17,13 @@ from .activation_link import ActivationLink
 from .activation_point_1 import ActivationPoint1
 from .additional_driver_option import AdditionalDriverOption
 from .addressable_place import AddressablePlace
-from .administrative_zone_version_structure import (
+from .administrative_zones_rel_structure import (
     AdministrativeZone1,
     TransportAdministrativeZone,
 )
 from .allowed_line_direction import AllowedLineDirection
 from .alternative_mode_of_operation_1 import AlternativeModeOfOperation1
 from .alternative_name import AlternativeName
-from .alternative_texts_rel_structure import (
-    AlternativeText,
-    AvailabilityCondition,
-    DayType1,
-    FareDayType,
-    OperatingDay,
-    OrganisationDayType,
-    SimpleAvailabilityCondition,
-    ValidDuring,
-    ValidityCondition1,
-    ValidityRuleParameter,
-    ValidityTrigger,
-)
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_service import AssistanceService
@@ -56,14 +43,6 @@ from .capping_rule_price import CappingRulePrice
 from .car_model_profile import CarModelProfile
 from .car_pooling_service import CarPoolingService
 from .catering_service import CateringService
-from .cell_versioned_child_structure import (
-    Cell1,
-    FareTableInContext,
-    FareTable1,
-    ParkingChargeBand,
-    ParkingPrice,
-    PriceGroup1,
-)
 from .charging_equipment_profile import ChargingEquipmentProfile
 from .charging_moment import ChargingMoment
 from .charging_policy import ChargingPolicy
@@ -147,6 +126,19 @@ from .emv_card import EmvCard
 from .entitlement_given import EntitlementGiven
 from .entitlement_product import EntitlementProduct
 from .entitlement_required import EntitlementRequired
+from .entity_in_version_structure import (
+    AlternativeText,
+    AvailabilityCondition,
+    DayType1,
+    FareDayType,
+    OperatingDay,
+    OrganisationDayType,
+    SimpleAvailabilityCondition,
+    ValidDuring,
+    ValidityCondition1,
+    ValidityRuleParameter,
+    ValidityTrigger,
+)
 from .entity_structure import EntityStructure
 from .entrance import Entrance
 from .entrance_equipment import EntranceEquipment
@@ -194,7 +186,7 @@ from .general_group_of_entities import GeneralGroupOfEntities
 from .general_organisation import GeneralOrganisation
 from .general_sign import GeneralSign
 from .general_zone import GeneralZone
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
 )
@@ -346,6 +338,14 @@ from .pool_of_vehicles import PoolOfVehicles
 from .postal_address import PostalAddress
 from .preassigned_fare_product import PreassignedFareProduct
 from .price_unit import PriceUnit
+from .priceable_object_version_structure import (
+    Cell1,
+    FareTableInContext,
+    FareTable1,
+    ParkingChargeBand,
+    ParkingPrice,
+    PriceGroup1,
+)
 from .pricing_parameter_set import PricingParameterSet
 from .pricing_rule_1 import PricingRule1
 from .pricing_service import PricingService
@@ -416,7 +416,7 @@ from .scheduled_operation import ScheduledOperation
 from .scheduled_stop_point import ScheduledStopPoint
 from .schematic_map import SchematicMap
 from .seating_equipment import SeatingEquipment
-from .section_in_sequence_versioned_child_structure import (
+from .sections_in_sequence_rel_structure import (
     JourneyPattern1,
     SectionInSequence,
 )
@@ -452,7 +452,7 @@ from .site_path_link import SitePathLink
 from .smartcard import Smartcard
 from .spatial_feature import SpatialFeature
 from .special_service import SpecialService
-from .specific_parameter_assignment_version_structure import (
+from .specific_parameter_assignments_rel_structure import (
     SpecificParameterAssignment,
 )
 from .stair_flight import StairFlight
@@ -652,6 +652,20 @@ from .zone import Zone
 from .zone_projection import ZoneProjection
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class GeneralVersionFrameStructure(CommonVersionFrameStructure):
+    class Meta:
+        name = "General_VersionFrameStructure"
+
+    members: Optional["GeneralFrameMembersRelStructure"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
 
 
 @dataclass
@@ -4327,6 +4341,116 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
 
 
 @dataclass
+class FramesRelStructure(ContainmentAggregationStructure):
+    class Meta:
+        name = "frames_RelStructure"
+
+    common_frame: List[
+        Union[
+            MobilityJourneyFrame,
+            MobilityServiceFrame,
+            SalesTransactionFrame,
+            FareFrame,
+            DriverScheduleFrame,
+            VehicleScheduleFrame,
+            ServiceFrame,
+            TimetableFrame,
+            SiteFrame,
+            InfrastructureFrame,
+            "GeneralFrame",
+            ResourceFrame,
+            ServiceCalendarFrame,
+        ]
+    ] = field(
+        default_factory=list,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "MobilityJourneyFrame",
+                    "type": MobilityJourneyFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MobilityServiceFrame",
+                    "type": MobilityServiceFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesTransactionFrame",
+                    "type": SalesTransactionFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareFrame",
+                    "type": FareFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DriverScheduleFrame",
+                    "type": DriverScheduleFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleScheduleFrame",
+                    "type": VehicleScheduleFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceFrame",
+                    "type": ServiceFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimetableFrame",
+                    "type": TimetableFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteFrame",
+                    "type": SiteFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "InfrastructureFrame",
+                    "type": InfrastructureFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralFrame",
+                    "type": Type["GeneralFrame"],
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ResourceFrame",
+                    "type": ResourceFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceCalendarFrame",
+                    "type": ServiceCalendarFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
+    )
+
+
+@dataclass
+class CompositeVersionFrameStructure(CommonVersionFrameStructure):
+    class Meta:
+        name = "Composite_VersionFrameStructure"
+
+    frames: Optional[FramesRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+
+
+@dataclass
 class EntityEntityStructure(EntityStructure):
     class Meta:
         name = "Entity_EntityStructure"
@@ -4351,6 +4475,18 @@ class EntityEntityStructure(EntityStructure):
             "type": "Attribute",
         },
     )
+
+
+@dataclass
+class GeneralFrame(GeneralVersionFrameStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class CompositeFrame(CompositeVersionFrameStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"
 
 
 @dataclass
@@ -4673,7 +4809,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             LinkSequenceProjection,
             LinkProjection,
             PointProjection,
-            "CompositeFrame",
+            CompositeFrame,
             MobilityJourneyFrame,
             MobilityServiceFrame,
             SalesTransactionFrame,
@@ -4684,7 +4820,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             TimetableFrame,
             SiteFrame,
             InfrastructureFrame,
-            "GeneralFrame",
+            GeneralFrame,
             ResourceFrame,
             ServiceCalendarFrame,
             UicOperatingPeriod,
@@ -6424,7 +6560,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "CompositeFrame",
-                    "type": Type["CompositeFrame"],
+                    "type": CompositeFrame,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6479,7 +6615,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "GeneralFrame",
-                    "type": Type["GeneralFrame"],
+                    "type": GeneralFrame,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7490,139 +7626,3 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             ),
         },
     )
-
-
-@dataclass
-class GeneralVersionFrameStructure(CommonVersionFrameStructure):
-    class Meta:
-        name = "General_VersionFrameStructure"
-
-    members: Optional[GeneralFrameMembersRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-
-
-@dataclass
-class GeneralFrame(GeneralVersionFrameStructure):
-    class Meta:
-        namespace = "http://www.netex.org.uk/netex"
-
-
-@dataclass
-class FramesRelStructure(ContainmentAggregationStructure):
-    class Meta:
-        name = "frames_RelStructure"
-
-    common_frame: List[
-        Union[
-            MobilityJourneyFrame,
-            MobilityServiceFrame,
-            SalesTransactionFrame,
-            FareFrame,
-            DriverScheduleFrame,
-            VehicleScheduleFrame,
-            ServiceFrame,
-            TimetableFrame,
-            SiteFrame,
-            InfrastructureFrame,
-            GeneralFrame,
-            ResourceFrame,
-            ServiceCalendarFrame,
-        ]
-    ] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "MobilityJourneyFrame",
-                    "type": MobilityJourneyFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "MobilityServiceFrame",
-                    "type": MobilityServiceFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SalesTransactionFrame",
-                    "type": SalesTransactionFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareFrame",
-                    "type": FareFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DriverScheduleFrame",
-                    "type": DriverScheduleFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleScheduleFrame",
-                    "type": VehicleScheduleFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServiceFrame",
-                    "type": ServiceFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TimetableFrame",
-                    "type": TimetableFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SiteFrame",
-                    "type": SiteFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "InfrastructureFrame",
-                    "type": InfrastructureFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeneralFrame",
-                    "type": GeneralFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ResourceFrame",
-                    "type": ResourceFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServiceCalendarFrame",
-                    "type": ServiceCalendarFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
-    )
-
-
-@dataclass
-class CompositeVersionFrameStructure(CommonVersionFrameStructure):
-    class Meta:
-        name = "Composite_VersionFrameStructure"
-
-    frames: Optional[FramesRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-
-
-@dataclass
-class CompositeFrame(CompositeVersionFrameStructure):
-    class Meta:
-        namespace = "http://www.netex.org.uk/netex"

@@ -3,16 +3,11 @@ from typing import List, Union
 from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace
-from .administrative_zone_version_structure import (
+from .administrative_zones_rel_structure import (
     AdministrativeZone1,
     TransportAdministrativeZone,
 )
 from .boarding_position import BoardingPosition
-from .cell_versioned_child_structure import (
-    FareTableInContext,
-    FareTable1,
-    PriceGroup1,
-)
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .country import Country
 from .crew_base import CrewBase
@@ -56,6 +51,11 @@ from .point_of_interest_space import PointOfInterestSpace
 from .point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
 from .pool_of_vehicles import PoolOfVehicles
 from .postal_address import PostalAddress
+from .priceable_object_version_structure import (
+    FareTableInContext,
+    FareTable1,
+    PriceGroup1,
+)
 from .quay_1 import Quay1
 from .rhythmical_journey_group import RhythmicalJourneyGroup
 from .road_address import RoadAddress

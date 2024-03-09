@@ -1,5 +1,3 @@
-from netex.models.alternative_texts_rel_structure import DayType1
-from netex.models.alternative_texts_rel_structure import OperatingDay
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
@@ -9,6 +7,8 @@ from netex.models.day_type_assignment import DayTypeAssignment
 from netex.models.day_type_assignments_in_frame_rel_structure import DayTypeAssignmentsInFrameRelStructure
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
+from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import OperatingDay
 from netex.models.multilingual_string import MultilingualString
 from netex.models.operating_day_ref import OperatingDayRef
 from netex.models.operating_days_in_frame_rel_structure import OperatingDaysInFrameRelStructure

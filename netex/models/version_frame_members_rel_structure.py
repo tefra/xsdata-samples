@@ -13,24 +13,12 @@ from .activation_link import ActivationLink
 from .activation_point_1 import ActivationPoint1
 from .additional_driver_option import AdditionalDriverOption
 from .addressable_place import AddressablePlace
-from .administrative_zone_version_structure import (
+from .administrative_zones_rel_structure import (
     AdministrativeZone1,
     TransportAdministrativeZone,
 )
 from .allowed_line_direction import AllowedLineDirection
 from .alternative_mode_of_operation_1 import AlternativeModeOfOperation1
-from .alternative_texts_rel_structure import (
-    AvailabilityCondition,
-    DayType1,
-    FareDayType,
-    OperatingDay,
-    OrganisationDayType,
-    SimpleAvailabilityCondition,
-    ValidDuring,
-    ValidityCondition1,
-    ValidityRuleParameter,
-    ValidityTrigger,
-)
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_service import AssistanceService
@@ -49,12 +37,6 @@ from .capping_rule import CappingRule
 from .car_model_profile import CarModelProfile
 from .car_pooling_service import CarPoolingService
 from .catering_service import CateringService
-from .cell_versioned_child_structure import (
-    FareTableInContext,
-    FareTable1,
-    ParkingChargeBand,
-    PriceGroup1,
-)
 from .charging_equipment_profile import ChargingEquipmentProfile
 from .charging_moment import ChargingMoment
 from .charging_policy import ChargingPolicy
@@ -122,15 +104,23 @@ from .dynamic_vehicle_meeting_point_assignment import (
 )
 from .eligibility_change_policy import EligibilityChangePolicy
 from .emv_card import EmvCard
-from .entities_in_version_rel_structure import (
-    CompositeFrame,
-    GeneralFrame,
-)
 from .entitlement_given import EntitlementGiven
 from .entitlement_product import EntitlementProduct
 from .entitlement_required import EntitlementRequired
 from .entity_in_version_in_frame_ref_structure import (
     EntityInVersionInFrameRefStructure,
+)
+from .entity_in_version_structure import (
+    AvailabilityCondition,
+    DayType1,
+    FareDayType,
+    OperatingDay,
+    OrganisationDayType,
+    SimpleAvailabilityCondition,
+    ValidDuring,
+    ValidityCondition1,
+    ValidityRuleParameter,
+    ValidityTrigger,
 )
 from .entrance import Entrance
 from .entrance_equipment import EntranceEquipment
@@ -166,8 +156,12 @@ from .garage_point import GaragePoint
 from .general_group_of_entities import GeneralGroupOfEntities
 from .general_organisation import GeneralOrganisation
 from .general_sign import GeneralSign
+from .general_version_frame_structure import (
+    CompositeFrame,
+    GeneralFrame,
+)
 from .general_zone import GeneralZone
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
 )
@@ -288,6 +282,12 @@ from .pool_of_vehicles import PoolOfVehicles
 from .postal_address import PostalAddress
 from .preassigned_fare_product import PreassignedFareProduct
 from .price_unit import PriceUnit
+from .priceable_object_version_structure import (
+    FareTableInContext,
+    FareTable1,
+    ParkingChargeBand,
+    PriceGroup1,
+)
 from .pricing_parameter_set import PricingParameterSet
 from .pricing_rule_1 import PricingRule1
 from .pricing_service import PricingService
@@ -350,7 +350,7 @@ from .scheduled_operation import ScheduledOperation
 from .scheduled_stop_point import ScheduledStopPoint
 from .schematic_map import SchematicMap
 from .seating_equipment import SeatingEquipment
-from .section_in_sequence_versioned_child_structure import JourneyPattern1
+from .sections_in_sequence_rel_structure import JourneyPattern1
 from .series_constraint import SeriesConstraint
 from .service_access_code import ServiceAccessCode
 from .service_access_right_1 import ServiceAccessRight1
@@ -381,7 +381,7 @@ from .site_path_link import SitePathLink
 from .smartcard import Smartcard
 from .spatial_feature import SpatialFeature
 from .special_service import SpecialService
-from .specific_parameter_assignment_version_structure import (
+from .specific_parameter_assignments_rel_structure import (
     SpecificParameterAssignment,
 )
 from .staircase_equipment import StaircaseEquipment

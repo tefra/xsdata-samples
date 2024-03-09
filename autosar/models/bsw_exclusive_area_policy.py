@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .api_principle_enum import ApiPrincipleEnum
 from .boolean import Boolean
 from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum

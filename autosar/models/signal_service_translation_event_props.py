@@ -3,7 +3,7 @@ from typing import List, Optional
 from .abstract_signal_based_to_i_signal_triggering_mapping_subtypes_enum import (
     AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,

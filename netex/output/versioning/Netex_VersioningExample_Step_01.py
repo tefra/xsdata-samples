@@ -2,8 +2,8 @@ from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.participant_ref import ParticipantRef

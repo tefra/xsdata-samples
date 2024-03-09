@@ -5,7 +5,6 @@ from netex.models.access_space_type_enumeration import AccessSpaceTypeEnumeratio
 from netex.models.access_spaces_rel_structure import AccessSpacesRelStructure
 from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
@@ -24,8 +23,9 @@ from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelS
 from netex.models.display_assignment import DisplayAssignment
 from netex.models.display_assignment_type_enumeration import DisplayAssignmentTypeEnumeration
 from netex.models.display_assignments_rel_structure import DisplayAssignmentsRelStructure
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
 from netex.models.line_1 import Line1
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure

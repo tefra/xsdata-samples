@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .cell_versioned_child_structure import (
+from .frame_containment_structure import FrameContainmentStructure
+from .priceable_object_version_structure import (
     FareTableInContext,
     FareTable1,
 )
-from .frame_containment_structure import FrameContainmentStructure
 from .standard_fare_table import StandardFareTable
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

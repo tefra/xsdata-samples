@@ -1359,9 +1359,9 @@ class PocdMt000040Order:
 
 
 @dataclass
-class PocdMt000040OrganizationPartOf:
+class PocdMt000040Organization:
     class Meta:
-        name = "POCD_MT000040.OrganizationPartOf"
+        name = "POCD_MT000040.Organization"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -1394,33 +1394,41 @@ class PocdMt000040OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
-        default=None,
+    name: List[OnExplicit] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
-        default=None,
+    telecom: List[TelExplicit] = field(
+        default_factory=list,
         metadata={
-            "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
-        default=None,
+    addr: List[AdExplicit] = field(
+        default_factory=list,
         metadata={
-            "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    whole_organization: Optional["PocdMt000040Organization"] = field(
+    standard_industry_class_code: Optional[Ce] = field(
         default=None,
         metadata={
-            "name": "wholeOrganization",
+            "name": "standardIndustryClassCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    as_organization_part_of: Optional[
+        "PocdMt000040OrganizationPartOf"
+    ] = field(
+        default=None,
+        metadata={
+            "name": "asOrganizationPartOf",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
@@ -1432,29 +1440,20 @@ class PocdMt000040OrganizationPartOf:
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: EntityClassOrganization = field(
         init=False,
-        default=RoleClassPartitive.PART,
+        default=EntityClassOrganization.ORG,
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "pattern": r"[^\s]+",
+        },
+    )
+    determiner_code: EntityDeterminer = field(
+        init=False,
+        default=EntityDeterminer.INSTANCE,
+        metadata={
+            "name": "determinerCode",
+            "type": "Attribute",
         },
     )
 
@@ -1927,6 +1926,190 @@ class PocdMt000040AssignedCustodian:
 
 
 @dataclass
+class PocdMt000040AssignedEntity:
+    class Meta:
+        name = "POCD_MT000040.AssignedEntity"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        },
+    )
+    code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    addr: List[AdExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    telecom: List[TelExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    assigned_person: Optional[PocdMt000040Person] = field(
+        default=None,
+        metadata={
+            "name": "assignedPerson",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    represented_organization: Optional[PocdMt000040Organization] = field(
+        default=None,
+        metadata={
+            "name": "representedOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: RoleClassAssignedEntity = field(
+        init=False,
+        default=RoleClassAssignedEntity.ASSIGNED,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040AssociatedEntity:
+    class Meta:
+        name = "POCD_MT000040.AssociatedEntity"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    addr: List[AdExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    telecom: List[TelExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    associated_person: Optional[PocdMt000040Person] = field(
+        default=None,
+        metadata={
+            "name": "associatedPerson",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    scoping_organization: Optional[PocdMt000040Organization] = field(
+        default=None,
+        metadata={
+            "name": "scopingOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[
+        Union[RoleClassMutualRelationship, RoleClassPassive, str]
+    ] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+
+
+@dataclass
 class PocdMt000040Authorization:
     class Meta:
         name = "POCD_MT000040.Authorization"
@@ -2073,6 +2256,187 @@ class PocdMt000040Birthplace:
 
 
 @dataclass
+class PocdMt000040Guardian:
+    class Meta:
+        name = "POCD_MT000040.Guardian"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    addr: List[AdExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    telecom: List[TelExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    guardian_person: Optional[PocdMt000040Person] = field(
+        default=None,
+        metadata={
+            "name": "guardianPerson",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    guardian_organization: Optional[PocdMt000040Organization] = field(
+        default=None,
+        metadata={
+            "name": "guardianOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
+        init=False,
+        default=RoleClassMutualRelationship.GUARD,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040HealthCareFacility:
+    class Meta:
+        name = "POCD_MT000040.HealthCareFacility"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    location: Optional[PocdMt000040Place] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    service_provider_organization: Optional[PocdMt000040Organization] = field(
+        default=None,
+        metadata={
+            "name": "serviceProviderOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: RoleClassServiceDeliveryLocation = field(
+        default=RoleClassServiceDeliveryLocation.SDLOC,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
 class PocdMt000040InFulfillmentOf:
     class Meta:
         name = "POCD_MT000040.InFulfillmentOf"
@@ -2121,6 +2485,88 @@ class PocdMt000040InFulfillmentOf:
         default=ActRelationshipFulfills.FLFS,
         metadata={
             "name": "typeCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040IntendedRecipient:
+    class Meta:
+        name = "POCD_MT000040.IntendedRecipient"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    addr: List[AdExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    telecom: List[TelExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    information_recipient: Optional[PocdMt000040Person] = field(
+        default=None,
+        metadata={
+            "name": "informationRecipient",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    received_organization: Optional[PocdMt000040Organization] = field(
+        default=None,
+        metadata={
+            "name": "receivedOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: XInformationRecipientRole = field(
+        default=XInformationRecipientRole.ASSIGNED,
+        metadata={
+            "name": "classCode",
             "type": "Attribute",
         },
     )
@@ -2207,9 +2653,9 @@ class PocdMt000040MaintainedEntity:
 
 
 @dataclass
-class PocdMt000040Organization:
+class PocdMt000040ManufacturedProduct:
     class Meta:
-        name = "POCD_MT000040.Organization"
+        name = "POCD_MT000040.ManufacturedProduct"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -2242,39 +2688,26 @@ class PocdMt000040Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[OnExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    telecom: List[TelExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    addr: List[AdExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    standard_industry_class_code: Optional[Ce] = field(
+    manufactured_labeled_drug: Optional[PocdMt000040LabeledDrug] = field(
         default=None,
         metadata={
-            "name": "standardIndustryClassCode",
+            "name": "manufacturedLabeledDrug",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_organization_part_of: Optional[PocdMt000040OrganizationPartOf] = field(
+    manufactured_material: Optional[PocdMt000040Material] = field(
         default=None,
         metadata={
-            "name": "asOrganizationPartOf",
+            "name": "manufacturedMaterial",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    manufacturer_organization: Optional[PocdMt000040Organization] = field(
+        default=None,
+        metadata={
+            "name": "manufacturerOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
@@ -2286,20 +2719,113 @@ class PocdMt000040Organization:
             "type": "Attribute",
         },
     )
-    class_code: EntityClassOrganization = field(
+    class_code: RoleClassManufacturedProduct = field(
         init=False,
-        default=EntityClassOrganization.ORG,
+        default=RoleClassManufacturedProduct.MANU,
         metadata={
             "name": "classCode",
             "type": "Attribute",
         },
     )
-    determiner_code: EntityDeterminer = field(
-        init=False,
-        default=EntityDeterminer.INSTANCE,
+
+
+@dataclass
+class PocdMt000040OrganizationPartOf:
+    class Meta:
+        name = "POCD_MT000040.OrganizationPartOf"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
         metadata={
-            "name": "determinerCode",
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    effective_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    whole_organization: Optional[PocdMt000040Organization] = field(
+        default=None,
+        metadata={
+            "name": "wholeOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
             "type": "Attribute",
+        },
+    )
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
+        init=False,
+        default=RoleClassPartitive.PART,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
         },
     )
 
@@ -2919,9 +3445,9 @@ class PocdMt000040SpecimenRole:
 
 
 @dataclass
-class PocdMt000040AssignedEntity:
+class PocdMt000040Authenticator:
     class Meta:
-        name = "POCD_MT000040.AssignedEntity"
+        name = "POCD_MT000040.Authenticator"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -2947,157 +3473,45 @@ class PocdMt000040AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "min_occurs": 1,
-        },
-    )
-    code: Optional[Ce] = field(
+    time: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        },
-    )
-    addr: List[AdExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    telecom: List[TelExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    assigned_person: Optional[PocdMt000040Person] = field(
-        default=None,
-        metadata={
-            "name": "assignedPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    represented_organization: Optional[PocdMt000040Organization] = field(
-        default=None,
-        metadata={
-            "name": "representedOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: RoleClassAssignedEntity = field(
-        init=False,
-        default=RoleClassAssignedEntity.ASSIGNED,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040AssociatedEntity:
-    class Meta:
-        name = "POCD_MT000040.AssociatedEntity"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    addr: List[AdExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    telecom: List[TelExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    associated_person: Optional[PocdMt000040Person] = field(
-        default=None,
-        metadata={
-            "name": "associatedPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    scoping_organization: Optional[PocdMt000040Organization] = field(
-        default=None,
-        metadata={
-            "name": "scopingOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[
-        Union[RoleClassMutualRelationship, RoleClassPassive, str]
-    ] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
             "required": True,
-            "pattern": r"[^\s]+",
+        },
+    )
+    signature_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "signatureCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+        default=None,
+        metadata={
+            "name": "assignedEntity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: ParticipationType = field(
+        init=False,
+        default=ParticipationType.AUTHEN,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
         },
     )
 
@@ -3188,776 +3602,6 @@ class PocdMt000040AuthoringDevice:
 
 
 @dataclass
-class PocdMt000040Custodian:
-    class Meta:
-        name = "POCD_MT000040.Custodian"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    assigned_custodian: Optional[PocdMt000040AssignedCustodian] = field(
-        default=None,
-        metadata={
-            "name": "assignedCustodian",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: ParticipationType = field(
-        init=False,
-        default=ParticipationType.CST,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040Guardian:
-    class Meta:
-        name = "POCD_MT000040.Guardian"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    addr: List[AdExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    telecom: List[TelExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    guardian_person: Optional[PocdMt000040Person] = field(
-        default=None,
-        metadata={
-            "name": "guardianPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    guardian_organization: Optional[PocdMt000040Organization] = field(
-        default=None,
-        metadata={
-            "name": "guardianOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
-        init=False,
-        default=RoleClassMutualRelationship.GUARD,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040HealthCareFacility:
-    class Meta:
-        name = "POCD_MT000040.HealthCareFacility"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    location: Optional[PocdMt000040Place] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    service_provider_organization: Optional[PocdMt000040Organization] = field(
-        default=None,
-        metadata={
-            "name": "serviceProviderOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: RoleClassServiceDeliveryLocation = field(
-        default=RoleClassServiceDeliveryLocation.SDLOC,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040IntendedRecipient:
-    class Meta:
-        name = "POCD_MT000040.IntendedRecipient"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    addr: List[AdExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    telecom: List[TelExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    information_recipient: Optional[PocdMt000040Person] = field(
-        default=None,
-        metadata={
-            "name": "informationRecipient",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    received_organization: Optional[PocdMt000040Organization] = field(
-        default=None,
-        metadata={
-            "name": "receivedOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: XInformationRecipientRole = field(
-        default=XInformationRecipientRole.ASSIGNED,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040ManufacturedProduct:
-    class Meta:
-        name = "POCD_MT000040.ManufacturedProduct"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    manufactured_labeled_drug: Optional[PocdMt000040LabeledDrug] = field(
-        default=None,
-        metadata={
-            "name": "manufacturedLabeledDrug",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    manufactured_material: Optional[PocdMt000040Material] = field(
-        default=None,
-        metadata={
-            "name": "manufacturedMaterial",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    manufacturer_organization: Optional[PocdMt000040Organization] = field(
-        default=None,
-        metadata={
-            "name": "manufacturerOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: RoleClassManufacturedProduct = field(
-        init=False,
-        default=RoleClassManufacturedProduct.MANU,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040Participant2:
-    class Meta:
-        name = "POCD_MT000040.Participant2"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    time: Optional[IvlTsExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    awareness_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "awarenessCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    participant_role: Optional[PocdMt000040ParticipantRole] = field(
-        default=None,
-        metadata={
-            "name": "participantRole",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Optional[ParticipationType] = field(
-        default=None,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    context_control_code: ContextControl = field(
-        init=False,
-        default=ContextControl.OP,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040Specimen:
-    class Meta:
-        name = "POCD_MT000040.Specimen"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    specimen_role: Optional[PocdMt000040SpecimenRole] = field(
-        default=None,
-        metadata={
-            "name": "specimenRole",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: ParticipationType = field(
-        init=False,
-        default=ParticipationType.SPC,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040Subject:
-    class Meta:
-        name = "POCD_MT000040.Subject"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    awareness_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "awarenessCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    related_subject: Optional[PocdMt000040RelatedSubject] = field(
-        default=None,
-        metadata={
-            "name": "relatedSubject",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: ParticipationTargetSubject = field(
-        init=False,
-        default=ParticipationTargetSubject.SBJ,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-        },
-    )
-    context_control_code: ContextControl = field(
-        init=False,
-        default=ContextControl.OP,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040AssignedAuthor:
-    class Meta:
-        name = "POCD_MT000040.AssignedAuthor"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "min_occurs": 1,
-        },
-    )
-    code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    addr: List[AdExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    telecom: List[TelExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    assigned_person: Optional[PocdMt000040Person] = field(
-        default=None,
-        metadata={
-            "name": "assignedPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    assigned_authoring_device: Optional[PocdMt000040AuthoringDevice] = field(
-        default=None,
-        metadata={
-            "name": "assignedAuthoringDevice",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    represented_organization: Optional[PocdMt000040Organization] = field(
-        default=None,
-        metadata={
-            "name": "representedOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: RoleClassAssignedEntity = field(
-        init=False,
-        default=RoleClassAssignedEntity.ASSIGNED,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040Authenticator:
-    class Meta:
-        name = "POCD_MT000040.Authenticator"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    time: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    signature_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "signatureCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
-        default=None,
-        metadata={
-            "name": "assignedEntity",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: ParticipationType = field(
-        init=False,
-        default=ParticipationType.AUTHEN,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
 class PocdMt000040Consumable:
     class Meta:
         name = "POCD_MT000040.Consumable"
@@ -4005,6 +3649,61 @@ class PocdMt000040Consumable:
     type_code: ParticipationType = field(
         init=False,
         default=ParticipationType.CSM,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040Custodian:
+    class Meta:
+        name = "POCD_MT000040.Custodian"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    assigned_custodian: Optional[PocdMt000040AssignedCustodian] = field(
+        default=None,
+        metadata={
+            "name": "assignedCustodian",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: ParticipationType = field(
+        init=False,
+        default=ParticipationType.CST,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -4482,6 +4181,84 @@ class PocdMt000040Participant1:
 
 
 @dataclass
+class PocdMt000040Participant2:
+    class Meta:
+        name = "POCD_MT000040.Participant2"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    awareness_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "awarenessCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    participant_role: Optional[PocdMt000040ParticipantRole] = field(
+        default=None,
+        metadata={
+            "name": "participantRole",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Optional[ParticipationType] = field(
+        default=None,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    context_control_code: ContextControl = field(
+        init=False,
+        default=ContextControl.OP,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
 class PocdMt000040Patient:
     class Meta:
         name = "POCD_MT000040.Patient"
@@ -4870,9 +4647,9 @@ class PocdMt000040ResponsibleParty:
 
 
 @dataclass
-class PocdMt000040Author:
+class PocdMt000040Specimen:
     class Meta:
-        name = "POCD_MT000040.Author"
+        name = "POCD_MT000040.Specimen"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -4898,26 +4675,10 @@ class PocdMt000040Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    function_code: Optional[Ce] = field(
+    specimen_role: Optional[PocdMt000040SpecimenRole] = field(
         default=None,
         metadata={
-            "name": "functionCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    time: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    assigned_author: Optional[PocdMt000040AssignedAuthor] = field(
-        default=None,
-        metadata={
-            "name": "assignedAuthor",
+            "name": "specimenRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
@@ -4932,7 +4693,70 @@ class PocdMt000040Author:
     )
     type_code: ParticipationType = field(
         init=False,
-        default=ParticipationType.AUT,
+        default=ParticipationType.SPC,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040Subject:
+    class Meta:
+        name = "POCD_MT000040.Subject"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    awareness_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "awarenessCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    related_subject: Optional[PocdMt000040RelatedSubject] = field(
+        default=None,
+        metadata={
+            "name": "relatedSubject",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: ParticipationTargetSubject = field(
+        init=False,
+        default=ParticipationTargetSubject.SBJ,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -4943,6 +4767,105 @@ class PocdMt000040Author:
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040AssignedAuthor:
+    class Meta:
+        name = "POCD_MT000040.AssignedAuthor"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        },
+    )
+    code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    addr: List[AdExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    telecom: List[TelExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    assigned_person: Optional[PocdMt000040Person] = field(
+        default=None,
+        metadata={
+            "name": "assignedPerson",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    assigned_authoring_device: Optional[PocdMt000040AuthoringDevice] = field(
+        default=None,
+        metadata={
+            "name": "assignedAuthoringDevice",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    represented_organization: Optional[PocdMt000040Organization] = field(
+        default=None,
+        metadata={
+            "name": "representedOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: RoleClassAssignedEntity = field(
+        init=False,
+        default=RoleClassAssignedEntity.ASSIGNED,
+        metadata={
+            "name": "classCode",
             "type": "Attribute",
         },
     )
@@ -5239,6 +5162,85 @@ class PocdMt000040ServiceEvent:
 
 
 @dataclass
+class PocdMt000040Author:
+    class Meta:
+        name = "POCD_MT000040.Author"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    function_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "functionCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    time: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    assigned_author: Optional[PocdMt000040AssignedAuthor] = field(
+        default=None,
+        metadata={
+            "name": "assignedAuthor",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: ParticipationType = field(
+        init=False,
+        default=ParticipationType.AUT,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+        },
+    )
+    context_control_code: ContextControl = field(
+        init=False,
+        default=ContextControl.OP,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
 class PocdMt000040Component1:
     class Meta:
         name = "POCD_MT000040.Component1"
@@ -5367,6 +5369,249 @@ class PocdMt000040DocumentationOf:
             "name": "typeCode",
             "type": "Attribute",
             "pattern": r"[^\s]+",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040RecordTarget:
+    class Meta:
+        name = "POCD_MT000040.RecordTarget"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    patient_role: Optional[PocdMt000040PatientRole] = field(
+        default=None,
+        metadata={
+            "name": "patientRole",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: ParticipationType = field(
+        init=False,
+        default=ParticipationType.RCT,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+        },
+    )
+    context_control_code: ContextControl = field(
+        init=False,
+        default=ContextControl.OP,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040Act:
+    class Meta:
+        name = "POCD_MT000040.Act"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    effective_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    priority_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "priorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    language_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "languageCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    subject: Optional[PocdMt000040Subject] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    specimen: List[PocdMt000040Specimen] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    performer: List[PocdMt000040Performer2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    author: List[PocdMt000040Author] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    informant: List[PocdMt000040Informant12] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    participant: List[PocdMt000040Participant2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+        default_factory=list,
+        metadata={
+            "name": "entryRelationship",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    reference: List[PocdMt000040Reference] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    precondition: List[PocdMt000040Precondition] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[XActClassDocumentEntryAct] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: Optional[XDocumentActMood] = field(
+        default=None,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    negation_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
         },
     )
 
@@ -5543,6 +5788,447 @@ class PocdMt000040Encounter:
 
 
 @dataclass
+class PocdMt000040Component4:
+    class Meta:
+        name = "POCD_MT000040.Component4"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    sequence_number: Optional[Int] = field(
+        default=None,
+        metadata={
+            "name": "sequenceNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    seperatable_ind: Optional[Bl] = field(
+        default=None,
+        metadata={
+            "name": "seperatableInd",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    act: Optional[PocdMt000040Act] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    encounter: Optional["PocdMt000040Encounter"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    observation: Optional["PocdMt000040Observation"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    observation_media: Optional["PocdMt000040ObservationMedia"] = field(
+        default=None,
+        metadata={
+            "name": "observationMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    organizer: Optional["PocdMt000040Organizer"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    procedure: Optional["PocdMt000040Procedure"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    region_of_interest: Optional["PocdMt000040RegionOfInterest"] = field(
+        default=None,
+        metadata={
+            "name": "regionOfInterest",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    substance_administration: Optional[
+        "PocdMt000040SubstanceAdministration"
+    ] = field(
+        default=None,
+        metadata={
+            "name": "substanceAdministration",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    supply: Optional["PocdMt000040Supply"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: ActRelationshipHasComponent = field(
+        init=False,
+        default=ActRelationshipHasComponent.COMP,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: str = field(
+        init=False,
+        default="true",
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
+class PocdMt000040Organizer:
+    class Meta:
+        name = "POCD_MT000040.Organizer"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    effective_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    subject: Optional[PocdMt000040Subject] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    specimen: List[PocdMt000040Specimen] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    performer: List[PocdMt000040Performer2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    author: List[PocdMt000040Author] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    informant: List[PocdMt000040Informant12] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    participant: List[PocdMt000040Participant2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    reference: List[PocdMt000040Reference] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    precondition: List[PocdMt000040Precondition] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    component: List[PocdMt000040Component4] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[XActClassDocumentEntryOrganizer] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: Optional[ActMood] = field(
+        default=None,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class PocdMt000040EntryRelationship:
+    class Meta:
+        name = "POCD_MT000040.EntryRelationship"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    sequence_number: Optional[Int] = field(
+        default=None,
+        metadata={
+            "name": "sequenceNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    seperatable_ind: Optional[Bl] = field(
+        default=None,
+        metadata={
+            "name": "seperatableInd",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    act: Optional[PocdMt000040Act] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    encounter: Optional[PocdMt000040Encounter] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    observation: Optional["PocdMt000040Observation"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    observation_media: Optional["PocdMt000040ObservationMedia"] = field(
+        default=None,
+        metadata={
+            "name": "observationMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    organizer: Optional[PocdMt000040Organizer] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    procedure: Optional["PocdMt000040Procedure"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    region_of_interest: Optional["PocdMt000040RegionOfInterest"] = field(
+        default=None,
+        metadata={
+            "name": "regionOfInterest",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    substance_administration: Optional[
+        "PocdMt000040SubstanceAdministration"
+    ] = field(
+        default=None,
+        metadata={
+            "name": "substanceAdministration",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    supply: Optional["PocdMt000040Supply"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Optional[XActRelationshipEntryRelationship] = field(
+        default=None,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    inversion_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "inversionInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+    context_conduction_ind: str = field(
+        default="true",
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+    negation_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
 class PocdMt000040Observation:
     class Meta:
         name = "POCD_MT000040.Observation"
@@ -5714,7 +6400,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: List[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -5871,7 +6557,7 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: List[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6073,7 +6759,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: List[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6124,69 +6810,6 @@ class PocdMt000040Procedure:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040RecordTarget:
-    class Meta:
-        name = "POCD_MT000040.RecordTarget"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    patient_role: Optional[PocdMt000040PatientRole] = field(
-        default=None,
-        metadata={
-            "name": "patientRole",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: ParticipationType = field(
-        init=False,
-        default=ParticipationType.RCT,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-        },
-    )
-    context_control_code: ContextControl = field(
-        init=False,
-        default=ContextControl.OP,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
         },
     )
 
@@ -6286,7 +6909,7 @@ class PocdMt000040RegionOfInterest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: List[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6522,7 +7145,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: List[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6732,7 +7355,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: List[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6776,627 +7399,6 @@ class PocdMt000040Supply:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
-    )
-
-
-@dataclass
-class PocdMt000040Component4:
-    class Meta:
-        name = "POCD_MT000040.Component4"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    sequence_number: Optional[Int] = field(
-        default=None,
-        metadata={
-            "name": "sequenceNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    seperatable_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "seperatableInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    act: Optional["PocdMt000040Act"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    encounter: Optional[PocdMt000040Encounter] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    observation: Optional[PocdMt000040Observation] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    observation_media: Optional[PocdMt000040ObservationMedia] = field(
-        default=None,
-        metadata={
-            "name": "observationMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    organizer: Optional["PocdMt000040Organizer"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    procedure: Optional[PocdMt000040Procedure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    region_of_interest: Optional[PocdMt000040RegionOfInterest] = field(
-        default=None,
-        metadata={
-            "name": "regionOfInterest",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    substance_administration: Optional[
-        PocdMt000040SubstanceAdministration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "substanceAdministration",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    supply: Optional[PocdMt000040Supply] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: ActRelationshipHasComponent = field(
-        init=False,
-        default=ActRelationshipHasComponent.COMP,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        init=False,
-        default="true",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040Organizer:
-    class Meta:
-        name = "POCD_MT000040.Organizer"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    status_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "statusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    effective_time: Optional[IvlTsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "effectiveTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    subject: Optional[PocdMt000040Subject] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    specimen: List[PocdMt000040Specimen] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    performer: List[PocdMt000040Performer2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    author: List[PocdMt000040Author] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    informant: List[PocdMt000040Informant12] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    participant: List[PocdMt000040Participant2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    reference: List[PocdMt000040Reference] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    precondition: List[PocdMt000040Precondition] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    component: List[PocdMt000040Component4] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[XActClassDocumentEntryOrganizer] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: Optional[ActMood] = field(
-        default=None,
-        metadata={
-            "name": "moodCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class PocdMt000040EntryRelationship:
-    class Meta:
-        name = "POCD_MT000040.EntryRelationship"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    sequence_number: Optional[Int] = field(
-        default=None,
-        metadata={
-            "name": "sequenceNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    seperatable_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "seperatableInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    act: Optional["PocdMt000040Act"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    encounter: Optional[PocdMt000040Encounter] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    observation: Optional[PocdMt000040Observation] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    observation_media: Optional[PocdMt000040ObservationMedia] = field(
-        default=None,
-        metadata={
-            "name": "observationMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    organizer: Optional[PocdMt000040Organizer] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    procedure: Optional[PocdMt000040Procedure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    region_of_interest: Optional[PocdMt000040RegionOfInterest] = field(
-        default=None,
-        metadata={
-            "name": "regionOfInterest",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    substance_administration: Optional[
-        PocdMt000040SubstanceAdministration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "substanceAdministration",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    supply: Optional[PocdMt000040Supply] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Optional[XActRelationshipEntryRelationship] = field(
-        default=None,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    inversion_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "inversionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="true",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-    negation_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "negationInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
-class PocdMt000040Act:
-    class Meta:
-        name = "POCD_MT000040.Act"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    status_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "statusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    effective_time: Optional[IvlTsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "effectiveTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    priority_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "priorityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    language_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "languageCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    subject: Optional[PocdMt000040Subject] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    specimen: List[PocdMt000040Specimen] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    performer: List[PocdMt000040Performer2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    author: List[PocdMt000040Author] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    informant: List[PocdMt000040Informant12] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    participant: List[PocdMt000040Participant2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    entry_relationship: List[PocdMt000040EntryRelationship] = field(
-        default_factory=list,
-        metadata={
-            "name": "entryRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    reference: List[PocdMt000040Reference] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    precondition: List[PocdMt000040Precondition] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[XActClassDocumentEntryAct] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: Optional[XDocumentActMood] = field(
-        default=None,
-        metadata={
-            "name": "moodCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    negation_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "negationInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
         },
     )
 

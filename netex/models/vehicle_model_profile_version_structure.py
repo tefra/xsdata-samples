@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .child_seat_enumeration import ChildSeatEnumeration
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

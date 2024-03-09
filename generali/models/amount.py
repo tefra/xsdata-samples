@@ -73,57 +73,6 @@ class Amount:
 
 
 @dataclass
-class Categories:
-    class Meta:
-        name = "categories"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class CategoryCode:
-    class Meta:
-        name = "category-code"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-
-
-@dataclass
 class Code:
     class Meta:
         name = "code"
@@ -177,65 +126,27 @@ class Code:
 
 
 @dataclass
-class CreatedById:
+class DataRef:
     class Meta:
-        name = "created-by-id"
+        name = "data-ref"
 
     type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         },
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
-        },
-    )
-    required: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass
-class Criteria:
-    class Meta:
-        name = "criteria"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    description: Optional[object] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
         },
     )
 
@@ -268,39 +179,6 @@ class ErrorCode:
 
 
 @dataclass
-class Failure:
-    class Meta:
-        name = "failure"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-        },
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        },
-    )
-    data_ref: Optional["DataRef"] = field(
-        default=None,
-        metadata={
-            "name": "data-ref",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass
 class FaultCause:
     class Meta:
         name = "fault-cause"
@@ -322,129 +200,6 @@ class FaultCause:
         default=None,
         metadata={
             "type": "Element",
-        },
-    )
-
-
-@dataclass
-class Id:
-    class Meta:
-        name = "id"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    required: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass
-class Identification:
-    class Meta:
-        name = "identification"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class Ids:
-    class Meta:
-        name = "ids"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class LastModifiedById:
-    class Meta:
-        name = "last-modified-by-id"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    required: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "min_occurs": 1,
         },
     )
 
@@ -516,28 +271,6 @@ class Quantity:
 
 
 @dataclass
-class QueryExpression:
-    class Meta:
-        name = "query-expression"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-
-
-@dataclass
 class ReferenceParameters:
     class Meta:
         name = "reference-parameters"
@@ -553,42 +286,6 @@ class ReferenceParameters:
         default=None,
         metadata={
             "type": "Element",
-        },
-    )
-
-
-@dataclass
-class StatusCode:
-    class Meta:
-        name = "status-code"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    required: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "min_occurs": 1,
         },
     )
 
@@ -647,102 +344,21 @@ class TypeCode:
 
 
 @dataclass
-class ValidityPeriod:
+class Failure:
     class Meta:
-        name = "validity-period"
+        name = "failure"
 
     type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         },
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class ValueExpression:
-    class Meta:
-        name = "value-expression"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class VersionId:
-    class Meta:
-        name = "version-id"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
-            "required": True,
-        },
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    required: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass
-class Failures:
-    class Meta:
-        name = "failures"
-
-    type_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "type",
-            "type": "Element",
         },
     )
     properties: Optional["Properties"] = field(
@@ -751,9 +367,10 @@ class Failures:
             "type": "Element",
         },
     )
-    failure: Optional[Failure] = field(
+    data_ref: Optional[DataRef] = field(
         default=None,
         metadata={
+            "name": "data-ref",
             "type": "Element",
         },
     )
@@ -892,6 +509,32 @@ class Value:
 
 
 @dataclass
+class Failures:
+    class Meta:
+        name = "failures"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+        },
+    )
+    properties: Optional["Properties"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        },
+    )
+    failure: Optional[Failure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        },
+    )
+
+
+@dataclass
 class Values:
     class Meta:
         name = "values"
@@ -1001,7 +644,7 @@ class Properties:
     class Meta:
         name = "properties"
 
-    ids: Optional[Ids] = field(
+    ids: Optional["Ids"] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1028,20 +671,20 @@ class Properties:
             "type": "Element",
         },
     )
-    categories: Optional[Categories] = field(
+    categories: Optional["Categories"] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    status_code: Optional[StatusCode] = field(
+    status_code: Optional["StatusCode"] = field(
         default=None,
         metadata={
             "name": "status-code",
             "type": "Element",
         },
     )
-    version_id: Optional[VersionId] = field(
+    version_id: Optional["VersionId"] = field(
         default=None,
         metadata={
             "name": "version-id",
@@ -1055,7 +698,7 @@ class Properties:
             "type": "Element",
         },
     )
-    created_by_id: Optional[CreatedById] = field(
+    created_by_id: Optional["CreatedById"] = field(
         default=None,
         metadata={
             "name": "created-by-id",
@@ -1069,14 +712,14 @@ class Properties:
             "type": "Element",
         },
     )
-    last_modified_by_id: Optional[LastModifiedById] = field(
+    last_modified_by_id: Optional["LastModifiedById"] = field(
         default=None,
         metadata={
             "name": "last-modified-by-id",
             "type": "Element",
         },
     )
-    validity_period: Optional[ValidityPeriod] = field(
+    validity_period: Optional["ValidityPeriod"] = field(
         default=None,
         metadata={
             "name": "validity-period",
@@ -1276,33 +919,33 @@ class Properties:
             "type": "Element",
         },
     )
-    value_expression: Optional[ValueExpression] = field(
+    value_expression: Optional["ValueExpression"] = field(
         default=None,
         metadata={
             "name": "value-expression",
             "type": "Element",
         },
     )
-    query_expression: Optional[QueryExpression] = field(
+    query_expression: Optional["QueryExpression"] = field(
         default=None,
         metadata={
             "name": "query-expression",
             "type": "Element",
         },
     )
-    identification: Optional[Identification] = field(
+    identification: Optional["Identification"] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    criteria: Optional[Criteria] = field(
+    criteria: Optional["Criteria"] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    data_ref: Optional["DataRef"] = field(
+    data_ref: Optional[DataRef] = field(
         default=None,
         metadata={
             "name": "data-ref",
@@ -1327,14 +970,14 @@ class Properties:
             "type": "Element",
         },
     )
-    category_code: Optional[CategoryCode] = field(
+    category_code: Optional["CategoryCode"] = field(
         default=None,
         metadata={
             "name": "category-code",
             "type": "Element",
         },
     )
-    id: Optional[Id] = field(
+    id: Optional["Id"] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1343,18 +986,106 @@ class Properties:
 
 
 @dataclass
-class DataRef:
+class Categories:
     class Meta:
-        name = "data-ref"
+        name = "categories"
 
     type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class CategoryCode:
+    class Meta:
+        name = "category-code"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
         },
     )
     description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class CreatedById:
+    class Meta:
+        name = "created-by-id"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    required: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass
+class Criteria:
+    class Meta:
+        name = "criteria"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    description: Optional[object] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1364,5 +1095,274 @@ class DataRef:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class Id:
+    class Meta:
+        name = "id"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    required: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass
+class Identification:
+    class Meta:
+        name = "identification"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class Ids:
+    class Meta:
+        name = "ids"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class LastModifiedById:
+    class Meta:
+        name = "last-modified-by-id"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    required: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass
+class QueryExpression:
+    class Meta:
+        name = "query-expression"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class StatusCode:
+    class Meta:
+        name = "status-code"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    required: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass
+class ValidityPeriod:
+    class Meta:
+        name = "validity-period"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class ValueExpression:
+    class Meta:
+        name = "value-expression"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class VersionId:
+    class Meta:
+        name = "version-id"
+
+    type_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "required": True,
+        },
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    properties: Optional[Properties] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    required: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "min_occurs": 1,
         },
     )

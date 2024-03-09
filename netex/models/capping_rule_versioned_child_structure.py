@@ -4,13 +4,13 @@ from typing import List, Optional, Union
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_period_enumeration import CappingPeriodEnumeration
 from .capping_rule_prices_rel_structure import CappingRulePricesRelStructure
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
     GenericParameterAssignmentsRelStructure,
 )
 from .preassigned_fare_product_ref import PreassignedFareProductRef
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .supplement_product_ref import SupplementProductRef
 from .validable_element_ref import ValidableElementRef
 

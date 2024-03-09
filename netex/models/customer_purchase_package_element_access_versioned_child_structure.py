@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .customer_purchase_package_element_ref import (
     CustomerPurchasePackageElementRef,
 )
 from .customer_purchase_parameter_assignments_rel_structure import (
     CustomerPurchaseParameterAssignmentsRelStructure,
 )
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_structure_element_in_sequence_ref import (
     FareStructureElementInSequenceRef,
 )

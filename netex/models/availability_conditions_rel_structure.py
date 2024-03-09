@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .alternative_texts_rel_structure import (
+from .availability_condition_ref import AvailabilityConditionRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .entity_in_version_structure import (
     AvailabilityCondition,
     ValidBetween,
     ValidDuring,
 )
-from .availability_condition_ref import AvailabilityConditionRef
-from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

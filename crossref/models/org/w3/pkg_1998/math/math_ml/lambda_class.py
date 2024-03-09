@@ -22,18 +22,28 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.cartesianproduct import (
 )
 from crossref.models.org.w3.pkg_1998.math.math_ml.cbytes import Cbytes
 from crossref.models.org.w3.pkg_1998.math.math_ml.ceiling import Ceiling
-from crossref.models.org.w3.pkg_1998.math.math_ml.codomain import Codomain
-from crossref.models.org.w3.pkg_1998.math.math_ml.complexes import Complexes
-from crossref.models.org.w3.pkg_1998.math.math_ml.compose import Compose
-from crossref.models.org.w3.pkg_1998.math.math_ml.condition import (
+from crossref.models.org.w3.pkg_1998.math.math_ml.cerror import (
+    Apply,
+    Bind,
     Bvar,
+    Cerror,
+    Ci,
+    Cn,
     Condition,
+    Csymbol,
+    Declare,
     Domainofapplication,
+    Fn,
     ListType,
     Lowlimit,
+    Piecewise,
+    Reln,
     Set,
     Uplimit,
 )
+from crossref.models.org.w3.pkg_1998.math.math_ml.codomain import Codomain
+from crossref.models.org.w3.pkg_1998.math.math_ml.complexes import Complexes
+from crossref.models.org.w3.pkg_1998.math.math_ml.compose import Compose
 from crossref.models.org.w3.pkg_1998.math.math_ml.conjugate import Conjugate
 from crossref.models.org.w3.pkg_1998.math.math_ml.cos import Cos
 from crossref.models.org.w3.pkg_1998.math.math_ml.cosh import Cosh
@@ -193,31 +203,31 @@ class LambdaType:
             "type": "Element",
         },
     )
-    apply: Optional["Apply"] = field(
+    apply: Optional[Apply] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Optional["Bind"] = field(
+    bind: Optional[Bind] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Optional["Ci"] = field(
+    ci: Optional[Ci] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Optional["Cn"] = field(
+    cn: Optional[Cn] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Optional["Csymbol"] = field(
+    csymbol: Optional[Csymbol] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -229,7 +239,7 @@ class LambdaType:
             "type": "Element",
         },
     )
-    cerror: Optional["Cerror"] = field(
+    cerror: Optional[Cerror] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -247,25 +257,25 @@ class LambdaType:
             "type": "Element",
         },
     )
-    piecewise: Optional["Piecewise"] = field(
+    piecewise: Optional[Piecewise] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Optional["Declare"] = field(
+    declare: Optional[Declare] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Optional["Fn"] = field(
+    fn: Optional[Fn] = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Optional["Reln"] = field(
+    reln: Optional[Reln] = field(
         default=None,
         metadata={
             "type": "Element",

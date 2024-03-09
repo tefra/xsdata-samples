@@ -2,9 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
 from .access_mode_enumeration import AccessModeEnumeration
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .connection_certainty_enumeration import ConnectionCertaintyEnumeration
 from .connection_ref_structure import ConnectionRefStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .multilingual_string import MultilingualString
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure

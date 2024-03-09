@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .ref import Ref
 from .runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
 from .sw_component_prototype_subtypes_enum import (

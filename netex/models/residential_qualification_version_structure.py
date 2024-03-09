@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from .alternative_texts_rel_structure import VersionedChildStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .residence_type_enumeration import ResidenceTypeEnumeration
 from .topographic_place_ref import TopographicPlaceRef

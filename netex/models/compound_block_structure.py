@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_parts_rel_structure import BlockPartsRelStructure
 from .compound_train_ref import CompoundTrainRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .timing_point_in_journey_pattern_ref_structure import (
     TimingPointInJourneyPatternRefStructure,

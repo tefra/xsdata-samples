@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
 from .identifier import Identifier
 from .ref import Ref

@@ -225,6 +225,77 @@ class RepcMt000301UvAuthor:
 
 
 @dataclass
+class RepcMt000301UvComponent:
+    class Meta:
+        name = "REPC_MT000301UV.Component"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    condition_event: Optional["RepcMt000301UvConditionEvent"] = field(
+        default=None,
+        metadata={
+            "name": "conditionEvent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Optional[ActRelationshipHasComponent] = field(
+        default=None,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    context_control_code: ContextControl = field(
+        default=ContextControl.AN,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
 class RepcMt000301UvDataEnterer:
     class Meta:
         name = "REPC_MT000301UV.DataEnterer"
@@ -443,83 +514,6 @@ class RepcMt000301UvInformant:
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class RepcMt000301UvLinks:
-    class Meta:
-        name = "REPC_MT000301UV.Links"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    condition_node_event: Optional["RepcMt000301UvConditionNodeEvent"] = field(
-        default=None,
-        metadata={
-            "name": "conditionNodeEvent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
-        init=False,
-        default=ActRelationshipPertainsValue.ELNK,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
         },
     )
 
@@ -878,97 +872,6 @@ class RepcMt000301UvRecordTarget:
 
 
 @dataclass
-class RepcMt000301UvReplacementOf:
-    class Meta:
-        name = "REPC_MT000301UV.ReplacementOf"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    condition_event: Optional["RepcMt000301UvConditionEvent"] = field(
-        default=None,
-        metadata={
-            "name": "conditionEvent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
-        init=False,
-        default=ActRelationshipSequel.RPLC,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.AN,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="true",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
 class RepcMt000301UvResponsibleParty:
     class Meta:
         name = "REPC_MT000301UV.ResponsibleParty"
@@ -1083,76 +986,6 @@ class RepcMt000301UvResponsibleParty2:
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class RepcMt000301UvSequelTo:
-    class Meta:
-        name = "REPC_MT000301UV.SequelTo"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    condition_event: Optional["RepcMt000301UvConditionEvent"] = field(
-        default=None,
-        metadata={
-            "name": "conditionEvent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Optional[ActRelationshipSequel] = field(
-        default=None,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.ON,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="false",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
         },
     )
 
@@ -1697,7 +1530,7 @@ class RepcMt000301UvConditionNodeEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    links: List[RepcMt000301UvLinks] = field(
+    links: List["RepcMt000301UvLinks"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2118,6 +1951,83 @@ class RepcMt000301UvConditionNamed:
 
 
 @dataclass
+class RepcMt000301UvLinks:
+    class Meta:
+        name = "REPC_MT000301UV.Links"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    condition_node_event: Optional[RepcMt000301UvConditionNodeEvent] = field(
+        default=None,
+        metadata={
+            "name": "conditionNodeEvent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
+        init=False,
+        default=ActRelationshipPertainsValue.ELNK,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+
+
+@dataclass
 class RepcMt000301UvLocation:
     class Meta:
         name = "REPC_MT000301UV.Location"
@@ -2530,7 +2440,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    replacement_of: Optional[RepcMt000301UvReplacementOf] = field(
+    replacement_of: Optional["RepcMt000301UvReplacementOf"] = field(
         default=None,
         metadata={
             "name": "replacementOf",
@@ -2539,7 +2449,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    sequel_to: List[RepcMt000301UvSequelTo] = field(
+    sequel_to: List["RepcMt000301UvSequelTo"] = field(
         default_factory=list,
         metadata={
             "name": "sequelTo",
@@ -2548,7 +2458,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    component: List["RepcMt000301UvComponent"] = field(
+    component: List[RepcMt000301UvComponent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2626,9 +2536,9 @@ class RepcMt000301UvConditionEvent:
 
 
 @dataclass
-class RepcMt000301UvComponent:
+class RepcMt000301UvReplacementOf:
     class Meta:
-        name = "REPC_MT000301UV.Component"
+        name = "REPC_MT000301UV.ReplacementOf"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -2670,12 +2580,33 @@ class RepcMt000301UvComponent:
             "type": "Attribute",
         },
     )
-    type_code: Optional[ActRelationshipHasComponent] = field(
-        default=None,
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
+        init=False,
+        default=ActRelationshipSequel.RPLC,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
+            "pattern": r"[^\s]+",
         },
     )
     context_control_code: ContextControl = field(
@@ -2685,12 +2616,81 @@ class RepcMt000301UvComponent:
             "type": "Attribute",
         },
     )
-    context_conduction_ind: Optional[str] = field(
-        default=None,
+    context_conduction_ind: str = field(
+        default="true",
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
+class RepcMt000301UvSequelTo:
+    class Meta:
+        name = "REPC_MT000301UV.SequelTo"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    condition_event: Optional[RepcMt000301UvConditionEvent] = field(
+        default=None,
+        metadata={
+            "name": "conditionEvent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Optional[ActRelationshipSequel] = field(
+        default=None,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
             "required": True,
+        },
+    )
+    context_control_code: ContextControl = field(
+        default=ContextControl.ON,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: str = field(
+        default="false",
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
             "pattern": r"true|false",
         },
     )

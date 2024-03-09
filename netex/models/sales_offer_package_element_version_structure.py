@@ -2,13 +2,13 @@ from dataclasses import dataclass, field
 from typing import Optional, Union
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .condition_summary import ConditionSummary
 from .fare_product_ref import FareProductRef
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignmentsRelStructure,
 )
 from .preassigned_fare_product_ref import PreassignedFareProductRef
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .sale_discount_right_ref import SaleDiscountRightRef
 from .sales_offer_package_prices_rel_structure import (
     SalesOfferPackagePricesRelStructure,

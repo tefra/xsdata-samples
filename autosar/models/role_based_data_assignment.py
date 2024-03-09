@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .autosar_parameter_ref import AutosarParameterRef
 from .autosar_variable_ref import AutosarVariableRef
 from .identifier import Identifier

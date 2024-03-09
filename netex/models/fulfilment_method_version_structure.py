@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .fulfilment_method_prices_rel_structure import (
     FulfilmentMethodPricesRelStructure,
 )
 from .fulfilment_method_type_enumeration import FulfilmentMethodTypeEnumeration
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .type_of_travel_document_refs_rel_structure import (
     TypeOfTravelDocumentRefsRelStructure,
 )

@@ -3,18 +3,18 @@ from typing import List, Optional
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     DocumentationBlock,
     VariationPoint,
 )
 from .application_error_mapping import ApplicationErrorMapping
 from .client_id_mapping import ClientIdMapping
-from .client_server_primitive_type_mapping import (
-    ClientServerPrimitiveTypeMapping,
-)
-from .client_server_record_element_mapping import (
+from .client_server_array_element_mapping import (
     ClientServerArrayTypeMapping,
     ClientServerRecordTypeMapping,
+)
+from .client_server_primitive_type_mapping import (
+    ClientServerPrimitiveTypeMapping,
 )
 from .communication_direction_type import CommunicationDirectionType
 from .consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum

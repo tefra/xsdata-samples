@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import VersionedChildStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .topographic_place_ref import TopographicPlaceRef
 

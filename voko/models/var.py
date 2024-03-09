@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from voko.models.fnt import Fnt
-from voko.models.mll import (
+from voko.models.ekz import (
     Ekz,
     Klr,
 )
+from voko.models.fnt import Fnt
 from voko.models.ofc import Ofc
 from voko.models.rad import Rad
 from voko.models.rim import Rim

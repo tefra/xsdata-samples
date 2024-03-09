@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .customer_purchase_package_element_accesses_rel_structure import (
     CustomerPurchasePackageElementAccessesRelStructure,
 )
@@ -12,6 +11,7 @@ from .customer_purchase_parameter_assignments_rel_structure import (
     CustomerPurchaseParameterAssignmentsRelStructure,
 )
 from .marked_as_enumeration import MarkedAsEnumeration
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .sales_offer_package_element_ref import SalesOfferPackageElementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

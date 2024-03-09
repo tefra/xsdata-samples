@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .alignment_type import AlignmentType
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
+from .alignment_type import AlignmentType
 from .c_identifier import CIdentifier
 from .category_string import CategoryString
 from .executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum

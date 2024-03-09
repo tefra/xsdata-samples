@@ -3,7 +3,7 @@ from typing import List, Optional
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     DocumentationBlock,
     VariationPoint,
 )
@@ -11,7 +11,7 @@ from .communication_direction_type import CommunicationDirectionType
 from .consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
 from .event_handler_subtypes_enum import EventHandlerSubtypesEnum
 from .ref import Ref
-from .sender_rec_record_element_mapping import (
+from .sender_rec_array_element_mapping import (
     SenderRecArrayTypeMapping,
     SenderRecRecordTypeMapping,
 )

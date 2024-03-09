@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .equipments_rel_structure import EquipmentsRelStructure
 from .fare_classes import FareClasses
 from .multilingual_string import MultilingualString

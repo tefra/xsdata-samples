@@ -1,5 +1,3 @@
-from netex.models.alternative_texts_rel_structure import DayType1
-from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
@@ -7,6 +5,8 @@ from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.day_type_assignment import DayTypeAssignment
 from netex.models.day_type_assignments_rel_structure import DayTypeAssignmentsRelStructure
 from netex.models.day_type_ref import DayTypeRef
+from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.participant_ref import ParticipantRef

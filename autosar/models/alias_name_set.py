@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .alias_name_assignment import AliasNameAssignment
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
+from .alias_name_assignment import AliasNameAssignment
 from .blueprint_policy_list import BlueprintPolicyList
 from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
 from .blueprint_policy_single import BlueprintPolicySingle

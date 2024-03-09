@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .flexray_nm_cluster_subtypes_enum import FlexrayNmClusterSubtypesEnum
 from .flexray_nm_schedule_variant import FlexrayNmScheduleVariant

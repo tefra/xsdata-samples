@@ -23,11 +23,38 @@ from voko.models.uzo import Uzo
 
 
 @dataclass(kw_only=True)
-class Mll:
+class Trdgrp:
     class Meta:
-        name = "mll"
+        name = "trdgrp"
 
-    tip: Optional[MllTip] = field(
+    lng: str = field(
+        metadata={
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "trd",
+                    "type": Type["Trd"],
+                },
+            ),
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Ekz:
+    class Meta:
+        name = "ekz"
+
+    mrk: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41,16 +68,84 @@ class Mll:
             "mixed": True,
             "choices": (
                 {
+                    "name": "fnt",
+                    "type": Fnt,
+                },
+                {
+                    "name": "uzo",
+                    "type": Uzo,
+                },
+                {
+                    "name": "ref",
+                    "type": Type["Ref"],
+                },
+                {
+                    "name": "refgrp",
+                    "type": Type["Refgrp"],
+                },
+                {
+                    "name": "ind",
+                    "type": Type["Ind"],
+                },
+                {
+                    "name": "trd",
+                    "type": Type["Trd"],
+                },
+                {
+                    "name": "trdgrp",
+                    "type": Type["Trdgrp"],
+                },
+                {
                     "name": "tld",
                     "type": Tld,
+                },
+                {
+                    "name": "sncref",
+                    "type": Sncref,
                 },
                 {
                     "name": "klr",
                     "type": Type["Klr"],
                 },
                 {
-                    "name": "ind",
-                    "type": Type["Ind"],
+                    "name": "em",
+                    "type": Em,
+                },
+                {
+                    "name": "ts",
+                    "type": Ts,
+                },
+                {
+                    "name": "sup",
+                    "type": Sup,
+                },
+                {
+                    "name": "sub",
+                    "type": Sub,
+                },
+                {
+                    "name": "ctl",
+                    "type": Ctl,
+                },
+                {
+                    "name": "mis",
+                    "type": Mis,
+                },
+                {
+                    "name": "frm",
+                    "type": Frm,
+                },
+                {
+                    "name": "nom",
+                    "type": Nom,
+                },
+                {
+                    "name": "nac",
+                    "type": Nac,
+                },
+                {
+                    "name": "esc",
+                    "type": Esc,
                 },
             ),
         },
@@ -111,35 +206,6 @@ class Ref:
 
 
 @dataclass(kw_only=True)
-class Ind:
-    class Meta:
-        name = "ind"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "tld",
-                    "type": Tld,
-                },
-                {
-                    "name": "klr",
-                    "type": Type["Klr"],
-                },
-                {
-                    "name": "mll",
-                    "type": Mll,
-                },
-            ),
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class Refgrp:
     class Meta:
         name = "refgrp"
@@ -160,7 +226,7 @@ class Refgrp:
             "choices": (
                 {
                     "name": "ref",
-                    "type": Ref,
+                    "type": Type["Ref"],
                 },
             ),
         },
@@ -197,11 +263,11 @@ class Trd:
                 },
                 {
                     "name": "ind",
-                    "type": Ind,
+                    "type": Type["Ind"],
                 },
                 {
                     "name": "mll",
-                    "type": Mll,
+                    "type": Type["Mll"],
                 },
                 {
                     "name": "ofc",
@@ -210,136 +276,6 @@ class Trd:
                 {
                     "name": "baz",
                     "type": Baz,
-                },
-            ),
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class Trdgrp:
-    class Meta:
-        name = "trdgrp"
-
-    lng: str = field(
-        metadata={
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "trd",
-                    "type": Trd,
-                },
-            ),
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class Ekz:
-    class Meta:
-        name = "ekz"
-
-    mrk: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "fnt",
-                    "type": Fnt,
-                },
-                {
-                    "name": "uzo",
-                    "type": Uzo,
-                },
-                {
-                    "name": "ref",
-                    "type": Ref,
-                },
-                {
-                    "name": "refgrp",
-                    "type": Refgrp,
-                },
-                {
-                    "name": "ind",
-                    "type": Ind,
-                },
-                {
-                    "name": "trd",
-                    "type": Trd,
-                },
-                {
-                    "name": "trdgrp",
-                    "type": Trdgrp,
-                },
-                {
-                    "name": "tld",
-                    "type": Tld,
-                },
-                {
-                    "name": "sncref",
-                    "type": Sncref,
-                },
-                {
-                    "name": "klr",
-                    "type": Type["Klr"],
-                },
-                {
-                    "name": "em",
-                    "type": Em,
-                },
-                {
-                    "name": "ts",
-                    "type": Ts,
-                },
-                {
-                    "name": "sup",
-                    "type": Sup,
-                },
-                {
-                    "name": "sub",
-                    "type": Sub,
-                },
-                {
-                    "name": "ctl",
-                    "type": Ctl,
-                },
-                {
-                    "name": "mis",
-                    "type": Mis,
-                },
-                {
-                    "name": "frm",
-                    "type": Frm,
-                },
-                {
-                    "name": "nom",
-                    "type": Nom,
-                },
-                {
-                    "name": "nac",
-                    "type": Nac,
-                },
-                {
-                    "name": "esc",
-                    "type": Esc,
                 },
             ),
         },
@@ -435,6 +371,70 @@ class Klr:
                 {
                     "name": "esc",
                     "type": Esc,
+                },
+            ),
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Ind:
+    class Meta:
+        name = "ind"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "tld",
+                    "type": Tld,
+                },
+                {
+                    "name": "klr",
+                    "type": Klr,
+                },
+                {
+                    "name": "mll",
+                    "type": Type["Mll"],
+                },
+            ),
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Mll:
+    class Meta:
+        name = "mll"
+
+    tip: Optional[MllTip] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "tld",
+                    "type": Tld,
+                },
+                {
+                    "name": "klr",
+                    "type": Klr,
+                },
+                {
+                    "name": "ind",
+                    "type": Ind,
                 },
             ),
         },

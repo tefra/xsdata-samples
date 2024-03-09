@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .identifier import Identifier
 from .mc_parameter_element_group import McParameterElementGroup
 from .ref import Ref

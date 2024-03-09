@@ -2,9 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlDate
 from .administrative_zone_ref import AdministrativeZoneRef
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .codespace import Codespace
 from .codespace_ref import CodespaceRef
+from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .type_of_codespace_assignment_ref import TypeOfCodespaceAssignmentRef
 

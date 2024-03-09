@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .compound_train_ref import CompoundTrainRef
+from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .train import Train
 from .train_ref import TrainRef

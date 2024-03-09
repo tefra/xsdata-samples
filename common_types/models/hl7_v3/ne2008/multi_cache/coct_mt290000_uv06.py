@@ -455,106 +455,6 @@ class CoctMt290000Uv06Device2:
 
 
 @dataclass
-class CoctMt290000Uv06InjuryPlace:
-    class Meta:
-        name = "COCT_MT290000UV06.InjuryPlace"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    name: List[EnExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    desc: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    position_text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "name": "positionText",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    injury_location: List["CoctMt290000Uv06InjuryLocation"] = field(
-        default_factory=list,
-        metadata={
-            "name": "injuryLocation",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[EntityClassPlace] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    determiner_code: EntityDeterminer = field(
-        init=False,
-        default=EntityDeterminer.INSTANCE,
-        metadata={
-            "name": "determinerCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-
-
-@dataclass
 class CoctMt290000Uv06Location:
     class Meta:
         name = "COCT_MT290000UV06.Location"
@@ -1430,7 +1330,7 @@ class CoctMt290000Uv06InjuryLocation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    located_injury_place: Optional[CoctMt290000Uv06InjuryPlace] = field(
+    located_injury_place: Optional["CoctMt290000Uv06InjuryPlace"] = field(
         default=None,
         metadata={
             "name": "locatedInjuryPlace",
@@ -2047,6 +1947,106 @@ class CoctMt290000Uv06IndirectAuthorithyOver:
         default=RoleLinkType.INDAUTH,
         metadata={
             "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class CoctMt290000Uv06InjuryPlace:
+    class Meta:
+        name = "COCT_MT290000UV06.InjuryPlace"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    name: List[EnExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    desc: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    position_text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "name": "positionText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    injury_location: List[CoctMt290000Uv06InjuryLocation] = field(
+        default_factory=list,
+        metadata={
+            "name": "injuryLocation",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[EntityClassPlace] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    determiner_code: EntityDeterminer = field(
+        init=False,
+        default=EntityDeterminer.INSTANCE,
+        metadata={
+            "name": "determinerCode",
             "type": "Attribute",
             "required": True,
         },

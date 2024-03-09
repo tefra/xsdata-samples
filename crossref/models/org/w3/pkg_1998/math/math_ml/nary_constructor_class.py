@@ -22,13 +22,28 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.cartesianproduct import (
 )
 from crossref.models.org.w3.pkg_1998.math.math_ml.cbytes import Cbytes
 from crossref.models.org.w3.pkg_1998.math.math_ml.ceiling import Ceiling
+from crossref.models.org.w3.pkg_1998.math.math_ml.cerror import (
+    Apply,
+    Bind,
+    Bvar,
+    Cerror,
+    Ci,
+    Cn,
+    Condition,
+    Csymbol,
+    Declare,
+    Domainofapplication,
+    Fn,
+    ListType,
+    Lowlimit,
+    Piecewise,
+    Reln,
+    Set,
+    Uplimit,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.codomain import Codomain
 from crossref.models.org.w3.pkg_1998.math.math_ml.complexes import Complexes
 from crossref.models.org.w3.pkg_1998.math.math_ml.compose import Compose
-from crossref.models.org.w3.pkg_1998.math.math_ml.condition import (
-    Lowlimit,
-    Uplimit,
-)
 from crossref.models.org.w3.pkg_1998.math.math_ml.conjugate import Conjugate
 from crossref.models.org.w3.pkg_1998.math.math_ml.cos import Cos
 from crossref.models.org.w3.pkg_1998.math.math_ml.cosh import Cosh
@@ -158,19 +173,19 @@ class NaryConstructorType:
         name = "nary-constructor.class"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    bvar: List["Bvar"] = field(
+    bvar: List[Bvar] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    domainofapplication: List["Domainofapplication"] = field(
+    domainofapplication: List[Domainofapplication] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    condition: List["Condition"] = field(
+    condition: List[Condition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -188,31 +203,31 @@ class NaryConstructorType:
             "type": "Element",
         },
     )
-    apply: List["Apply"] = field(
+    apply: List[Apply] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    bind: List["Bind"] = field(
+    bind: List[Bind] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ci: List["Ci"] = field(
+    ci: List[Ci] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cn: List["Cn"] = field(
+    cn: List[Cn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: List["Csymbol"] = field(
+    csymbol: List[Csymbol] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -224,7 +239,7 @@ class NaryConstructorType:
             "type": "Element",
         },
     )
-    cerror: List["Cerror"] = field(
+    cerror: List[Cerror] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -242,25 +257,25 @@ class NaryConstructorType:
             "type": "Element",
         },
     )
-    piecewise: List["Piecewise"] = field(
+    piecewise: List[Piecewise] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    declare: List["Declare"] = field(
+    declare: List[Declare] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn: List["Fn"] = field(
+    fn: List[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    reln: List["Reln"] = field(
+    reln: List[Reln] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -607,14 +622,14 @@ class NaryConstructorType:
             "type": "Element",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: List[ListType] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: List["Set"] = field(
+    set: List[Set] = field(
         default_factory=list,
         metadata={
             "type": "Element",

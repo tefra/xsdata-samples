@@ -3,7 +3,7 @@ from typing import List, Optional
 from .abstract_raw_data_stream_interface_subtypes_enum import (
     AbstractRawDataStreamInterfaceSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,

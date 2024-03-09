@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
 from .version_of_object_ref_structure import VersionOfObjectRefStructure

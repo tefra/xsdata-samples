@@ -4,7 +4,7 @@ from .acl_object_set_subtypes_enum import AclObjectSetSubtypesEnum
 from .acl_operation_subtypes_enum import AclOperationSubtypesEnum
 from .acl_role_subtypes_enum import AclRoleSubtypesEnum
 from .acl_scope_enum import AclScopeEnum
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,

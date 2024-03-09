@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
-from .alternative_texts_rel_structure import TimebandVersionedChildStructure
+from .entity_in_version_structure import TimebandVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

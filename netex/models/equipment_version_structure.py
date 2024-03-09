@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .info_links_rel_structure import InfoLinksRelStructure
 from .multilingual_string import MultilingualString
 from .private_code import PrivateCode

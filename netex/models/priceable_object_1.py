@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

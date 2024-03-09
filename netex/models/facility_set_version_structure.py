@@ -2,10 +2,10 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .accessibility_info_facility_list import AccessibilityInfoFacilityList
 from .accessibility_tool_list import AccessibilityToolList
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .assistance_facility_list import AssistanceFacilityList
 from .car_service_facility_list import CarServiceFacilityList
 from .catering_facility_list import CateringFacilityList
+from .entity_in_version_structure import DataManagedObjectStructure
 from .family_facility_list import FamilyFacilityList
 from .fare_classes import FareClasses
 from .gender_limitation import GenderLimitation

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .border_point_ref import BorderPointRef
 from .destination_display_ref import DestinationDisplayRef
 from .destination_display_view import DestinationDisplayView
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
 from .multilingual_string import MultilingualString

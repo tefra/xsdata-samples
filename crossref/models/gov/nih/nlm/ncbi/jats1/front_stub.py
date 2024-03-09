@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
+from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Abstract,
     Aff,
     AffAlternatives,

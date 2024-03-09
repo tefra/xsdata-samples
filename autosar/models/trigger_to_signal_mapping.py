@@ -3,7 +3,7 @@ from typing import List, Optional
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
 )
-from .annotation import (
+from .admin_data import (
     DocumentationBlock,
     VariationPoint,
 )

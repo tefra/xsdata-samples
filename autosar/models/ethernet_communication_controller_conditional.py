@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .coupling_port import CouplingPort
 from .ethernet_mac_layer_type_enum import EthernetMacLayerTypeEnum

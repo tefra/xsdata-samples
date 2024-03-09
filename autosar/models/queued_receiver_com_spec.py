@@ -17,7 +17,7 @@ from .positive_integer_value_variation_point import (
 from .receiver_intent_enum import ReceiverIntentEnum
 from .reception_com_spec_props import ReceptionComSpecProps
 from .ref import Ref
-from .sw_pointer_target_props import SwDataDefProps
+from .sw_data_def_props import SwDataDefProps
 from .time_value import TimeValue
 from .user_defined_transformation_com_spec_props import (
     UserDefinedTransformationComSpecProps,

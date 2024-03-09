@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
@@ -18,67 +18,6 @@ from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
-
-
-@dataclass
-class HwPinGroupContent:
-    """
-    This meta-class specifies a mixture of hwPins and hwPinGroups.
-
-    :ivar hw_pin: This aggregation represents a hardware pin in a
-        hardware pin group. The upper multiplicity of this role has been
-        increased to * due to resolving an atpVariation stereotype. The
-        previous value was 1.
-    :ivar hw_pin_group: This aggregation represents a nested hardware
-        pin group. The upper multiplicity of this role has been
-        increased to * due to resolving an atpVariation stereotype. The
-        previous value was 1.
-    :ivar s: Checksum calculated by the user's tool environment for an
-        ArObject. May be used in an own tool environment to determine if
-        an ArObject has changed. The checksum has no semantic meaning
-        for an AUTOSAR model and there is no requirement for AUTOSAR
-        tools to manage the checksum.
-    :ivar t: Timestamp calculated by the user's tool environment for an
-        ArObject. May be used in an own tool environment to determine
-        the last change of an ArObject. The timestamp has no semantic
-        meaning for an AUTOSAR model and there is no requirement for
-        AUTOSAR tools to manage the timestamp.
-    """
-
-    class Meta:
-        name = "HW-PIN-GROUP-CONTENT"
-
-    hw_pin: List[HwPin] = field(
-        default_factory=list,
-        metadata={
-            "name": "HW-PIN",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    hw_pin_group: List["HwPinGroup"] = field(
-        default_factory=list,
-        metadata={
-            "name": "HW-PIN-GROUP",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    s: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "S",
-            "type": "Attribute",
-        },
-    )
-    t: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "T",
-            "type": "Attribute",
-            "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        },
-    )
 
 
 @dataclass
@@ -250,7 +189,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_group_content: Optional[HwPinGroupContent] = field(
+    hw_pin_group_content: Optional["HwPinGroupContent"] = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUP-CONTENT",
@@ -356,3 +295,64 @@ class HwPinGroup:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+
+
+@dataclass
+class HwPinGroupContent:
+    """
+    This meta-class specifies a mixture of hwPins and hwPinGroups.
+
+    :ivar hw_pin: This aggregation represents a hardware pin in a
+        hardware pin group. The upper multiplicity of this role has been
+        increased to * due to resolving an atpVariation stereotype. The
+        previous value was 1.
+    :ivar hw_pin_group: This aggregation represents a nested hardware
+        pin group. The upper multiplicity of this role has been
+        increased to * due to resolving an atpVariation stereotype. The
+        previous value was 1.
+    :ivar s: Checksum calculated by the user's tool environment for an
+        ArObject. May be used in an own tool environment to determine if
+        an ArObject has changed. The checksum has no semantic meaning
+        for an AUTOSAR model and there is no requirement for AUTOSAR
+        tools to manage the checksum.
+    :ivar t: Timestamp calculated by the user's tool environment for an
+        ArObject. May be used in an own tool environment to determine
+        the last change of an ArObject. The timestamp has no semantic
+        meaning for an AUTOSAR model and there is no requirement for
+        AUTOSAR tools to manage the timestamp.
+    """
+
+    class Meta:
+        name = "HW-PIN-GROUP-CONTENT"
+
+    hw_pin: List[HwPin] = field(
+        default_factory=list,
+        metadata={
+            "name": "HW-PIN",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    hw_pin_group: List[HwPinGroup] = field(
+        default_factory=list,
+        metadata={
+            "name": "HW-PIN-GROUP",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    s: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "S",
+            "type": "Attribute",
+        },
+    )
+    t: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "T",
+            "type": "Attribute",
+            "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
+        },
+    )

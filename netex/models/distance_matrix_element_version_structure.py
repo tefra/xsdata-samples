@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_prices_rel_structure import (
     DistanceMatrixElementPricesRelStructure,
 )
@@ -12,6 +11,7 @@ from .geographical_structure_factors_rel_structure import (
     GeographicalStructureFactorsRelStructure,
 )
 from .point_ref_structure import PointRefStructure
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .scheduled_stop_point_derived_view_structure import (
     ScheduledStopPointDerivedViewStructure,
 )

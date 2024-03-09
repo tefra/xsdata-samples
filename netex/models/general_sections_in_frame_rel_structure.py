@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .section_in_sequence_versioned_child_structure import GeneralSection
+from .sections_in_sequence_rel_structure import GeneralSection
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

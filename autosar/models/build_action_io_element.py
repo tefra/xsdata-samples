@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import Sdg
+from .admin_data import Sdg
 from .build_engineering_object import BuildEngineeringObject
 from .ecuc_definition_element_subtypes_enum import (
     EcucDefinitionElementSubtypesEnum,

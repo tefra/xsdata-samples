@@ -22,9 +22,7 @@ from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .operational_context_ref import OperationalContextRef
 from .route_ref import RouteRef
 from .route_view import RouteView
-from .section_in_sequence_versioned_child_structure import (
-    LinkSequenceVersionStructure,
-)
+from .sections_in_sequence_rel_structure import LinkSequenceVersionStructure
 from .service_links_in_journey_pattern_rel_structure import (
     ServiceLinksInJourneyPatternRelStructure,
 )

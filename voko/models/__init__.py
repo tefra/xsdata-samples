@@ -8,12 +8,17 @@ from voko.models.bib import Bib
 from voko.models.bld import Bld
 from voko.models.bld_tip import BldTip
 from voko.models.ctl import Ctl
-from voko.models.dif import (
-    Dif,
-    Snc,
-    Subsnc,
-)
 from voko.models.drv import Drv
+from voko.models.ekz import (
+    Ekz,
+    Ind,
+    Klr,
+    Mll,
+    Ref,
+    Refgrp,
+    Trd,
+    Trdgrp,
+)
 from voko.models.em import Em
 from voko.models.epilogo import Epilogo
 from voko.models.esc import Esc
@@ -27,16 +32,6 @@ from voko.models.lok import Lok
 from voko.models.lstref import Lstref
 from voko.models.mis import Mis
 from voko.models.mlg import Mlg
-from voko.models.mll import (
-    Ekz,
-    Ind,
-    Klr,
-    Mll,
-    Ref,
-    Refgrp,
-    Trd,
-    Trdgrp,
-)
 from voko.models.mll_tip import MllTip
 from voko.models.nac import Nac
 from voko.models.nom import Nom
@@ -49,6 +44,11 @@ from voko.models.ref_tip import RefTip
 from voko.models.refgrp_tip import RefgrpTip
 from voko.models.rim import Rim
 from voko.models.sekcio import Sekcio
+from voko.models.snc import (
+    Dif,
+    Snc,
+    Subsnc,
+)
 from voko.models.sncref import Sncref
 from voko.models.sub import Sub
 from voko.models.subart import Subart
@@ -80,10 +80,15 @@ __all__ = [
     "Bld",
     "BldTip",
     "Ctl",
-    "Dif",
-    "Snc",
-    "Subsnc",
     "Drv",
+    "Ekz",
+    "Ind",
+    "Klr",
+    "Mll",
+    "Ref",
+    "Refgrp",
+    "Trd",
+    "Trdgrp",
     "Em",
     "Epilogo",
     "Esc",
@@ -97,14 +102,6 @@ __all__ = [
     "Lstref",
     "Mis",
     "Mlg",
-    "Ekz",
-    "Ind",
-    "Klr",
-    "Mll",
-    "Ref",
-    "Refgrp",
-    "Trd",
-    "Trdgrp",
     "MllTip",
     "Nac",
     "Nom",
@@ -117,6 +114,9 @@ __all__ = [
     "RefgrpTip",
     "Rim",
     "Sekcio",
+    "Dif",
+    "Snc",
+    "Subsnc",
     "Sncref",
     "Sub",
     "Subart",

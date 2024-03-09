@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import DocumentationBlock
+from .admin_data import DocumentationBlock
 from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

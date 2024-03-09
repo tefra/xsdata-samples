@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import (
+from .admin_data import (
     DocumentationBlock,
     VariationPoint,
 )

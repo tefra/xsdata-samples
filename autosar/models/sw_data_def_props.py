@@ -3,10 +3,16 @@ from typing import List, Optional
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
 )
-from .alignment_type import AlignmentType
-from .annotation import (
+from .admin_data import (
     Annotation,
     VariationPoint,
+)
+from .alignment_type import AlignmentType
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
 )
 from .application_primitive_data_type_subtypes_enum import (
     ApplicationPrimitiveDataTypeSubtypesEnum,
@@ -35,12 +41,6 @@ from .numerical_rule_based_value_specification import (
 from .numerical_value import NumericalValue
 from .numerical_value_specification import NumericalValueSpecification
 from .numerical_value_variation_point import NumericalValueVariationPoint
-from .record_value_specification import (
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
-)
 from .ref import Ref
 from .reference_value_specification import ReferenceValueSpecification
 from .sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
@@ -57,6 +57,76 @@ from .text_value_specification import TextValueSpecification
 from .unit_subtypes_enum import UnitSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
+
+
+@dataclass
+class SwDataDefProps:
+    """This class is a collection of properties relevant for data objects under various aspects. One could consider this class as a "pattern of inheritance by aggregation". The properties can be applied to all objects of all classes in which SwDataDefProps is aggregated.
+    @RESTRICT_TO_STANDARD:CP:AP!
+    Note that not all of the attributes or associated elements are useful all of the time. Hence, the process definition (e.g. expressed with an OCL or a Document Control Instance MSR-DCI) has the task of implementing limitations.
+    SwDataDefProps covers various aspects:
+    * Structure of the data element for calibration use cases: is it a single value, a curve, or a map, but also the recordLayouts which specify how such elements are mapped/converted to the DataTypes in the programming language (or in AUTOSAR). This is mainly expressed by properties like swRecordLayout and swCalprmAxisSet
+    * Implementation aspects, mainly expressed by swImplPolicy, swVariableAccessImplPolicy, swAddrMethod, swPointerTagetProps, baseType, implementationDataType and additionalNativeTypeQualifier
+    * Access policy for the MCD system, mainly expressed by swCalibrationAccess
+    * Semantics of the data element, mainly expressed by compuMethod and/or unit, dataConstr, invalidValue
+    * Code generation policy provided by swRecordLayout
+    @END_RESTRICT_TO_STANDARD!
+
+    :ivar sw_data_def_props_variants: This element was
+        generated/modified due to an atpVariation stereotype.
+    :ivar s: Checksum calculated by the user's tool environment for an
+        ArObject. May be used in an own tool environment to determine if
+        an ArObject has changed. The checksum has no semantic meaning
+        for an AUTOSAR model and there is no requirement for AUTOSAR
+        tools to manage the checksum.
+    :ivar t: Timestamp calculated by the user's tool environment for an
+        ArObject. May be used in an own tool environment to determine
+        the last change of an ArObject. The timestamp has no semantic
+        meaning for an AUTOSAR model and there is no requirement for
+        AUTOSAR tools to manage the timestamp.
+    """
+
+    class Meta:
+        name = "SW-DATA-DEF-PROPS"
+
+    sw_data_def_props_variants: Optional[
+        "SwDataDefProps.SwDataDefPropsVariants"
+    ] = field(
+        default=None,
+        metadata={
+            "name": "SW-DATA-DEF-PROPS-VARIANTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    s: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "S",
+            "type": "Attribute",
+        },
+    )
+    t: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "T",
+            "type": "Attribute",
+            "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
+        },
+    )
+
+    @dataclass
+    class SwDataDefPropsVariants:
+        sw_data_def_props_conditional: List[
+            "SwDataDefPropsConditional"
+        ] = field(
+            default_factory=list,
+            metadata={
+                "name": "SW-DATA-DEF-PROPS-CONDITIONAL",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
 
 
 @dataclass
@@ -104,7 +174,7 @@ class SwPointerTargetProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional["SwDataDefProps"] = field(
+    sw_data_def_props: Optional[SwDataDefProps] = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -851,73 +921,5 @@ class SwDataDefPropsConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
-        )
-
-
-@dataclass
-class SwDataDefProps:
-    """This class is a collection of properties relevant for data objects under various aspects. One could consider this class as a "pattern of inheritance by aggregation". The properties can be applied to all objects of all classes in which SwDataDefProps is aggregated.
-    @RESTRICT_TO_STANDARD:CP:AP!
-    Note that not all of the attributes or associated elements are useful all of the time. Hence, the process definition (e.g. expressed with an OCL or a Document Control Instance MSR-DCI) has the task of implementing limitations.
-    SwDataDefProps covers various aspects:
-    * Structure of the data element for calibration use cases: is it a single value, a curve, or a map, but also the recordLayouts which specify how such elements are mapped/converted to the DataTypes in the programming language (or in AUTOSAR). This is mainly expressed by properties like swRecordLayout and swCalprmAxisSet
-    * Implementation aspects, mainly expressed by swImplPolicy, swVariableAccessImplPolicy, swAddrMethod, swPointerTagetProps, baseType, implementationDataType and additionalNativeTypeQualifier
-    * Access policy for the MCD system, mainly expressed by swCalibrationAccess
-    * Semantics of the data element, mainly expressed by compuMethod and/or unit, dataConstr, invalidValue
-    * Code generation policy provided by swRecordLayout
-    @END_RESTRICT_TO_STANDARD!
-
-    :ivar sw_data_def_props_variants: This element was
-        generated/modified due to an atpVariation stereotype.
-    :ivar s: Checksum calculated by the user's tool environment for an
-        ArObject. May be used in an own tool environment to determine if
-        an ArObject has changed. The checksum has no semantic meaning
-        for an AUTOSAR model and there is no requirement for AUTOSAR
-        tools to manage the checksum.
-    :ivar t: Timestamp calculated by the user's tool environment for an
-        ArObject. May be used in an own tool environment to determine
-        the last change of an ArObject. The timestamp has no semantic
-        meaning for an AUTOSAR model and there is no requirement for
-        AUTOSAR tools to manage the timestamp.
-    """
-
-    class Meta:
-        name = "SW-DATA-DEF-PROPS"
-
-    sw_data_def_props_variants: Optional[
-        "SwDataDefProps.SwDataDefPropsVariants"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SW-DATA-DEF-PROPS-VARIANTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    s: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "S",
-            "type": "Attribute",
-        },
-    )
-    t: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "T",
-            "type": "Attribute",
-            "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        },
-    )
-
-    @dataclass
-    class SwDataDefPropsVariants:
-        sw_data_def_props_conditional: List[SwDataDefPropsConditional] = field(
-            default_factory=list,
-            metadata={
-                "name": "SW-DATA-DEF-PROPS-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
             },
         )

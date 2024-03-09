@@ -1264,101 +1264,6 @@ class RepcMt004000Uv01Reference:
 
 
 @dataclass
-class RepcMt004000Uv01ReplacementOf:
-    class Meta:
-        name = "REPC_MT004000UV01.ReplacementOf"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    care_provision_event: Optional[
-        "RepcMt004000Uv01CareProvisionEvent"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "careProvisionEvent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
-        init=False,
-        default=ActRelationshipSequel.RPLC,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
-        },
-    )
-    context_control_code: Optional[ContextControl] = field(
-        default=None,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
 class RepcMt004000Uv01Subject3:
     class Meta:
         name = "REPC_MT004000UV01.Subject3"
@@ -1763,7 +1668,7 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    replacement_of: List[RepcMt004000Uv01ReplacementOf] = field(
+    replacement_of: List["RepcMt004000Uv01ReplacementOf"] = field(
         default_factory=list,
         metadata={
             "name": "replacementOf",
@@ -1856,6 +1761,99 @@ class RepcMt004000Uv01CareProvisionEvent:
         metadata={
             "name": "negationInd",
             "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
+class RepcMt004000Uv01ReplacementOf:
+    class Meta:
+        name = "REPC_MT004000UV01.ReplacementOf"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    care_provision_event: Optional[RepcMt004000Uv01CareProvisionEvent] = field(
+        default=None,
+        metadata={
+            "name": "careProvisionEvent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
+        init=False,
+        default=ActRelationshipSequel.RPLC,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+    context_control_code: Optional[ContextControl] = field(
+        default=None,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "required": True,
             "pattern": r"true|false",
         },
     )

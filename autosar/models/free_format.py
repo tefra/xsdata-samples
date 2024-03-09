@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import DocumentationBlock
+from .admin_data import DocumentationBlock
 from .integer import Integer
 from .time_value import TimeValue
 

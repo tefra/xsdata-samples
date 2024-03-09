@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .c_identifier import CIdentifier
 from .compu_const import CompuConst
 from .compu_rational_coeffs import CompuRationalCoeffs

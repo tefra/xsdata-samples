@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .class_ref_structure import ClassRefStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .purpose_of_grouping_ref_structure import PurposeOfGroupingRefStructure
 from .type_of_value_ref_structure import TypeOfValueRefStructure
 

@@ -4,9 +4,6 @@ from netex.models.access_rights_in_product_rel_structure import AccessRightsInPr
 from netex.models.account_status_type_enumeration import AccountStatusTypeEnumeration
 from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import OperatingDay
-from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.baggage_type_enumeration import BaggageTypeEnumeration
 from netex.models.bay_geometry_enumeration import BayGeometryEnumeration
 from netex.models.blacklist import Blacklist
@@ -20,8 +17,6 @@ from netex.models.car_model_profile import CarModelProfile
 from netex.models.car_model_profile_ref import CarModelProfileRef
 from netex.models.car_pooling_service import CarPoolingService
 from netex.models.car_pooling_service_ref import CarPoolingServiceRef
-from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.charging_moment_enumeration import ChargingMomentEnumeration
 from netex.models.child_seat_enumeration import ChildSeatEnumeration
 from netex.models.codespace import Codespace
@@ -75,10 +70,11 @@ from netex.models.distribution_rights_enumeration import DistributionRightsEnume
 from netex.models.driving_style_enumeration import DrivingStyleEnumeration
 from netex.models.emv_card import EmvCard
 from netex.models.emv_card_ref import EmvCardRef
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
 from netex.models.entitlement_constraint_structure import EntitlementConstraintStructure
 from netex.models.entitlement_required import EntitlementRequired
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.entity_in_version_structure import OperatingDay
+from netex.models.entity_in_version_structure import ValidBetween
 from netex.models.equipment_place import EquipmentPlace
 from netex.models.equipment_places_rel_structure import EquipmentPlacesRelStructure
 from netex.models.external_object_ref_structure import ExternalObjectRefStructure
@@ -103,8 +99,10 @@ from netex.models.fulfilment_method_ref import FulfilmentMethodRef
 from netex.models.fulfilment_method_type_enumeration import FulfilmentMethodTypeEnumeration
 from netex.models.fulfilment_methods_in_frame_rel_structure import FulfilmentMethodsInFrameRelStructure
 from netex.models.gender_enumeration import GenderEnumeration
-from netex.models.generic_parameter_assignment_version_structure import GenericParameterAssignment
-from netex.models.generic_parameter_assignment_version_structure import GenericParameterAssignmentsRelStructure
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
+from netex.models.generic_parameter_assignments_rel_structure import GenericParameterAssignment
+from netex.models.generic_parameter_assignments_rel_structure import GenericParameterAssignmentsRelStructure
 from netex.models.individual_passenger_info import IndividualPassengerInfo
 from netex.models.individual_passenger_infos_rel_structure import IndividualPassengerInfosRelStructure
 from netex.models.individual_traveller import IndividualTraveller
@@ -191,6 +189,8 @@ from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
 from netex.models.price_rule_step_result_structure import PriceRuleStepResultStructure
 from netex.models.price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
+from netex.models.priceable_object_version_structure import FarePricesRelStructure
+from netex.models.priceable_object_version_structure import FareTable1
 from netex.models.pricing_parameter_set import PricingParameterSet
 from netex.models.pricing_rule_ref import PricingRuleRef
 from netex.models.pricing_service import PricingService
@@ -255,8 +255,8 @@ from netex.models.site_frame import SiteFrame
 from netex.models.site_frame_ref import SiteFrameRef
 from netex.models.site_refs_rel_structure import SiteRefsRelStructure
 from netex.models.site_type_enumeration import SiteTypeEnumeration
-from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignment
-from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignmentsRelStructure
+from netex.models.specific_parameter_assignments_rel_structure import SpecificParameterAssignment
+from netex.models.specific_parameter_assignments_rel_structure import SpecificParameterAssignmentsRelStructure
 from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
 from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure

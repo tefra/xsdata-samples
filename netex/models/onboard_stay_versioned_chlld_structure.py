@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .boarding_permission import BoardingPermission
 from .class_of_use_ref import ClassOfUseRef
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_class import FareClass
 from .multilingual_string import MultilingualString
 from .service_facility_set_ref import ServiceFacilitySetRef

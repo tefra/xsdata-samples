@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
+)
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
 )
 from .application_rule_based_value_specification import (
     ApplicationRuleBasedValueSpecification,
@@ -22,12 +28,6 @@ from .numerical_rule_based_value_specification import (
 )
 from .numerical_value_specification import NumericalValueSpecification
 from .positive_integer import PositiveInteger
-from .record_value_specification import (
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
-)
 from .reference_value_specification import ReferenceValueSpecification
 from .short_name_fragment import ShortNameFragment
 from .string import String

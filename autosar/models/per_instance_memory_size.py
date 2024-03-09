@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .per_instance_memory_subtypes_enum import PerInstanceMemorySubtypesEnum
 from .positive_integer import PositiveInteger
 from .positive_integer_value_variation_point import (

@@ -33,7 +33,7 @@ from .sales_transaction_ref import SalesTransactionRef
 from .schedule_request_ref import ScheduleRequestRef
 from .series_constraint_price_ref import SeriesConstraintPriceRef
 from .single_trip_fare_request_ref import SingleTripFareRequestRef
-from .specific_parameter_assignment_version_structure import (
+from .specific_parameter_assignments_rel_structure import (
     SpecificParameterAssignmentsRelStructure,
 )
 from .stop_event_request_ref import StopEventRequestRef

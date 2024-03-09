@@ -5,6 +5,18 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
 @dataclass
+class SubdivisionsType:
+    subdivision: List["SubDivisionType"] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass
 class SubDivisionType:
     subdivision_code: Optional[str] = field(
         default=None,
@@ -29,22 +41,10 @@ class SubDivisionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    subdivisions: Optional["SubdivisionsType"] = field(
+    subdivisions: Optional[SubdivisionsType] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        },
-    )
-
-
-@dataclass
-class SubdivisionsType:
-    subdivision: List[SubDivisionType] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "min_occurs": 1,
         },
     )

@@ -200,17 +200,6 @@ class AuctionCreateResponseNote:
 
 
 @dataclass(kw_only=True)
-class AuctionItemComponentResponse:
-    auction_create_response_detail: "AuctionCreateResponseDetail" = field(
-        metadata={
-            "name": "AuctionCreateResponseDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class AuctionItemDescription:
     value: str = field(
         default="",
@@ -832,20 +821,6 @@ class BidCurrency:
 
 
 @dataclass(kw_only=True)
-class ListOfAuctionItemComponentResponse:
-    auction_item_component_response: List[
-        AuctionItemComponentResponse
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AuctionItemComponentResponse",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class Rule:
     rule_name: RuleName = field(
         metadata={
@@ -1375,7 +1350,7 @@ class AuctionCreateResponseDetail:
         },
     )
     list_of_auction_item_component_response: Optional[
-        ListOfAuctionItemComponentResponse
+        "ListOfAuctionItemComponentResponse"
     ] = field(
         default=None,
         metadata={
@@ -1466,6 +1441,17 @@ class AuctionCreateResponseHeader:
 
 
 @dataclass(kw_only=True)
+class AuctionItemComponentResponse:
+    auction_create_response_detail: AuctionCreateResponseDetail = field(
+        metadata={
+            "name": "AuctionCreateResponseDetail",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class ListOfAuctionCreateResponseDetail:
     auction_create_response_detail: List[AuctionCreateResponseDetail] = field(
         default_factory=list,
@@ -1501,4 +1487,18 @@ class AuctionCreateResponse:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfAuctionItemComponentResponse:
+    auction_item_component_response: List[
+        AuctionItemComponentResponse
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "AuctionItemComponentResponse",
+            "type": "Element",
+            "min_occurs": 1,
+        },
     )

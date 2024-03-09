@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .group_membership_refs_rel_structure import (
     GroupMembershipRefsRelStructure,
 )

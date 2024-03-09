@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .duty_parts_rel_structure import DutyPartsRelStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .timetable_frame_ref import TimetableFrameRef
 

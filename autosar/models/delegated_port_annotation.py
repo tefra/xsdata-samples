@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import DocumentationBlock
+from .admin_data import DocumentationBlock
 from .multilanguage_long_name import MultilanguageLongName
 from .signal_fan_enum import SignalFanEnum
 from .string import String

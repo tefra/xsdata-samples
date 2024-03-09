@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .dynamic_part_alternative import DynamicPartAlternative
 from .segment_position import SegmentPosition
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .application_endpoint_ref_conditional import (
     ApplicationEndpointRefConditional,
 )

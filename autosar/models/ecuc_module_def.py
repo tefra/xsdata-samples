@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
@@ -13,13 +13,13 @@ from .boolean import Boolean
 from .boolean_value_variation_point import BooleanValueVariationPoint
 from .c_identifier import CIdentifier
 from .category_string import CategoryString
-from .ecuc_condition_specification import EcucConditionSpecification
-from .ecuc_configuration_variant_enum import EcucConfigurationVariantEnum
-from .ecuc_module_def_subtypes_enum import EcucModuleDefSubtypesEnum
-from .ecuc_param_conf_container_def import (
+from .ecuc_choice_container_def import (
     EcucChoiceContainerDef,
     EcucParamConfContainerDef,
 )
+from .ecuc_condition_specification import EcucConditionSpecification
+from .ecuc_configuration_variant_enum import EcucConfigurationVariantEnum
+from .ecuc_module_def_subtypes_enum import EcucModuleDefSubtypesEnum
 from .ecuc_scope_enum import EcucScopeEnum
 from .ecuc_validation_condition import EcucValidationCondition
 from .identifier import Identifier

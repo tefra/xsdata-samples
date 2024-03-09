@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .distance_matrix_elements_rel_structure import (
     DistanceMatrixElementsRelStructure,
@@ -13,7 +12,7 @@ from .fare_structure_element_prices_rel_structure import (
 from .fare_structure_elements_in_sequence_rel_structure import (
     FareStructureElementsInSequenceRelStructure,
 )
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
     GenericParameterAssignmentsRelStructure,
@@ -29,6 +28,7 @@ from .group_of_distance_matrix_elements import GroupOfDistanceMatrixElements
 from .group_of_distance_matrix_elements_ref import (
     GroupOfDistanceMatrixElementsRef,
 )
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .quality_structure_factor_ref import QualityStructureFactorRef
 from .quality_structure_factors_rel_structure import (
     QualityStructureFactorsRelStructure,

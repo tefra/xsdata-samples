@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from voko.models.mll import Klr
+from voko.models.ekz import Klr
 from voko.models.tld import Tld
 
 

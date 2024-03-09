@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import VersionedChildStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .name_type_enumeration import NameTypeEnumeration
 from .version_of_object_ref_structure import VersionOfObjectRefStructure

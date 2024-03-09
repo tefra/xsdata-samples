@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
+)
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
 )
 from .application_rule_based_value_specification import (
     ApplicationRuleBasedValueSpecification,
@@ -30,19 +36,13 @@ from .numerical_rule_based_value_specification import (
     NumericalRuleBasedValueSpecification,
 )
 from .numerical_value_specification import NumericalValueSpecification
-from .record_value_specification import (
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
-)
 from .ref import Ref
 from .reference_value_specification import ReferenceValueSpecification
 from .short_name_fragment import ShortNameFragment
 from .someip_transformation_i_signal_props import (
     SomeipTransformationISignalProps,
 )
-from .sw_pointer_target_props import SwDataDefProps
+from .sw_data_def_props import SwDataDefProps
 from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 from .text_value_specification import TextValueSpecification
 from .user_defined_transformation_i_signal_props import (

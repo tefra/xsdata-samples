@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from xsdata.models.datatype import XmlTime
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .connecting_journey_view import ConnectingJourneyView
 from .connection_ref_structure import ConnectionRefStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_ref import DeadRunRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .flexible_line_ref import FlexibleLineRef
 from .line_derived_view_structure import LineDerivedViewStructure
 from .line_ref import LineRef

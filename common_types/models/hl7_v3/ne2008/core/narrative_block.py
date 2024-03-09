@@ -369,9 +369,9 @@ class StrucDocCol:
 
 
 @dataclass
-class StrucDocTitleFootnote:
+class StrucDocTitleContent:
     class Meta:
-        name = "StrucDoc.TitleFootnote"
+        name = "StrucDoc.TitleContent"
 
     id: Optional[str] = field(
         default=None,
@@ -419,6 +419,16 @@ class StrucDocTitleFootnote:
                 {
                     "name": "br",
                     "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": Type["StrucDocTitleFootnote"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
@@ -542,9 +552,9 @@ class StrucDocRenderMultiMedia:
 
 
 @dataclass
-class StrucDocTitleContent:
+class StrucDocTitleFootnote:
     class Meta:
-        name = "StrucDoc.TitleContent"
+        name = "StrucDoc.TitleFootnote"
 
     id: Optional[str] = field(
         default=None,
@@ -576,7 +586,7 @@ class StrucDocTitleContent:
             "choices": (
                 {
                     "name": "content",
-                    "type": Type["StrucDocTitleContent"],
+                    "type": StrucDocTitleContent,
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -594,25 +604,15 @@ class StrucDocTitleContent:
                     "type": StrucDocBr,
                     "namespace": "urn:hl7-org:v3",
                 },
-                {
-                    "name": "footnote",
-                    "type": StrucDocTitleFootnote,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "footnoteRef",
-                    "type": StrucDocFootnoteRef,
-                    "namespace": "urn:hl7-org:v3",
-                },
             ),
         },
     )
 
 
 @dataclass
-class StrucDocParagraph:
+class StrucDocContent:
     class Meta:
-        name = "StrucDoc.Paragraph"
+        name = "StrucDoc.Content"
 
     id: Optional[str] = field(
         default=None,
@@ -635,145 +635,7 @@ class StrucDocParagraph:
             "tokens": True,
         },
     )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "caption",
-                    "type": StrucDocCaption,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "content",
-                    "type": Type["StrucDocContent"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "linkHtml",
-                    "type": Type["StrucDocLinkHtml"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "sub",
-                    "type": StrucDocSub,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "sup",
-                    "type": StrucDocSup,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "br",
-                    "type": StrucDocBr,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "footnote",
-                    "type": Type["StrucDocFootnote"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "footnoteRef",
-                    "type": StrucDocFootnoteRef,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "renderMultiMedia",
-                    "type": StrucDocRenderMultiMedia,
-                    "namespace": "urn:hl7-org:v3",
-                },
-            ),
-        },
-    )
-
-
-@dataclass
-class StrucDocTh:
-    class Meta:
-        name = "StrucDoc.Th"
-
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ID",
-            "type": "Attribute",
-        },
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    style_code: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "styleCode",
-            "type": "Attribute",
-            "tokens": True,
-        },
-    )
-    abbr: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    axis: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    headers: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        },
-    )
-    scope: Optional[StrucDocThScope] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    rowspan: str = field(
-        default="1",
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    colspan: str = field(
-        default="1",
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    align: Optional[StrucDocThAlign] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    char: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    charoff: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    valign: Optional[StrucDocThValign] = field(
+    revised: Optional[StrucDocContentRevised] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -908,6 +770,537 @@ class StrucDocTitle:
 
 
 @dataclass
+class StrucDocFootnote:
+    class Meta:
+        name = "StrucDoc.Footnote"
+
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        },
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    style_code: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        },
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": StrucDocContent,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": Type["StrucDocLinkHtml"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "paragraph",
+                    "type": Type["StrucDocParagraph"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "list",
+                    "type": Type["StrucDocList"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "table",
+                    "type": Type["StrucDocTable"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        },
+    )
+
+
+@dataclass
+class StrucDocLinkHtml:
+    class Meta:
+        name = "StrucDoc.LinkHtml"
+
+    name: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    href: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    rel: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    rev: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        },
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    style_code: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        },
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "footnote",
+                    "type": StrucDocFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        },
+    )
+
+
+@dataclass
+class StrucDocParagraph:
+    class Meta:
+        name = "StrucDoc.Paragraph"
+
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        },
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    style_code: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        },
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "caption",
+                    "type": StrucDocCaption,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "content",
+                    "type": StrucDocContent,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": StrucDocLinkHtml,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": StrucDocFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        },
+    )
+
+
+@dataclass
+class StrucDocTh:
+    class Meta:
+        name = "StrucDoc.Th"
+
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        },
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    style_code: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        },
+    )
+    abbr: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    axis: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    headers: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        },
+    )
+    scope: Optional[StrucDocThScope] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    rowspan: str = field(
+        default="1",
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    colspan: str = field(
+        default="1",
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    align: Optional[StrucDocThAlign] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    char: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    charoff: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    valign: Optional[StrucDocThValign] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": StrucDocContent,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": StrucDocLinkHtml,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": StrucDocFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        },
+    )
+
+
+@dataclass
+class StrucDocItem:
+    class Meta:
+        name = "StrucDoc.Item"
+
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        },
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    style_code: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        },
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "caption",
+                    "type": StrucDocCaption,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "content",
+                    "type": StrucDocContent,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": StrucDocLinkHtml,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": StrucDocFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "paragraph",
+                    "type": StrucDocParagraph,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "list",
+                    "type": Type["StrucDocList"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "table",
+                    "type": Type["StrucDocTable"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        },
+    )
+
+
+@dataclass
+class StrucDocList:
+    class Meta:
+        name = "StrucDoc.List"
+
+    caption: Optional[StrucDocCaption] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    item: List[StrucDocItem] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        },
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        },
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    style_code: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        },
+    )
+    list_type: StrucDocListListType = field(
+        default=StrucDocListListType.UNORDERED,
+        metadata={
+            "name": "listType",
+            "type": "Attribute",
+        },
+    )
+
+
+@dataclass
 class StrucDocTd:
     class Meta:
         name = "StrucDoc.Td"
@@ -1003,12 +1396,12 @@ class StrucDocTd:
             "choices": (
                 {
                     "name": "content",
-                    "type": Type["StrucDocContent"],
+                    "type": StrucDocContent,
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
                     "name": "linkHtml",
-                    "type": Type["StrucDocLinkHtml"],
+                    "type": StrucDocLinkHtml,
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -1028,7 +1421,7 @@ class StrucDocTd:
                 },
                 {
                     "name": "footnote",
-                    "type": Type["StrucDocFootnote"],
+                    "type": StrucDocFootnote,
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -1048,7 +1441,7 @@ class StrucDocTd:
                 },
                 {
                     "name": "list",
-                    "type": Type["StrucDocList"],
+                    "type": StrucDocList,
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
@@ -1411,399 +1804,6 @@ class StrucDocTable:
         default=None,
         metadata={
             "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class StrucDocItem:
-    class Meta:
-        name = "StrucDoc.Item"
-
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ID",
-            "type": "Attribute",
-        },
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    style_code: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "styleCode",
-            "type": "Attribute",
-            "tokens": True,
-        },
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "caption",
-                    "type": StrucDocCaption,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "content",
-                    "type": Type["StrucDocContent"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "linkHtml",
-                    "type": Type["StrucDocLinkHtml"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "sub",
-                    "type": StrucDocSub,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "sup",
-                    "type": StrucDocSup,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "br",
-                    "type": StrucDocBr,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "footnote",
-                    "type": Type["StrucDocFootnote"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "footnoteRef",
-                    "type": StrucDocFootnoteRef,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "renderMultiMedia",
-                    "type": StrucDocRenderMultiMedia,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "paragraph",
-                    "type": StrucDocParagraph,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "list",
-                    "type": Type["StrucDocList"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "table",
-                    "type": StrucDocTable,
-                    "namespace": "urn:hl7-org:v3",
-                },
-            ),
-        },
-    )
-
-
-@dataclass
-class StrucDocList:
-    class Meta:
-        name = "StrucDoc.List"
-
-    caption: Optional[StrucDocCaption] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    item: List[StrucDocItem] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "min_occurs": 1,
-        },
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ID",
-            "type": "Attribute",
-        },
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    style_code: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "styleCode",
-            "type": "Attribute",
-            "tokens": True,
-        },
-    )
-    list_type: StrucDocListListType = field(
-        default=StrucDocListListType.UNORDERED,
-        metadata={
-            "name": "listType",
-            "type": "Attribute",
-        },
-    )
-
-
-@dataclass
-class StrucDocFootnote:
-    class Meta:
-        name = "StrucDoc.Footnote"
-
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ID",
-            "type": "Attribute",
-        },
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    style_code: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "styleCode",
-            "type": "Attribute",
-            "tokens": True,
-        },
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "content",
-                    "type": Type["StrucDocContent"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "linkHtml",
-                    "type": Type["StrucDocLinkHtml"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "sub",
-                    "type": StrucDocSub,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "sup",
-                    "type": StrucDocSup,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "br",
-                    "type": StrucDocBr,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "renderMultiMedia",
-                    "type": StrucDocRenderMultiMedia,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "paragraph",
-                    "type": StrucDocParagraph,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "list",
-                    "type": StrucDocList,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "table",
-                    "type": StrucDocTable,
-                    "namespace": "urn:hl7-org:v3",
-                },
-            ),
-        },
-    )
-
-
-@dataclass
-class StrucDocLinkHtml:
-    class Meta:
-        name = "StrucDoc.LinkHtml"
-
-    name: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    href: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    rel: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    rev: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ID",
-            "type": "Attribute",
-        },
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    style_code: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "styleCode",
-            "type": "Attribute",
-            "tokens": True,
-        },
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "footnote",
-                    "type": StrucDocFootnote,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "footnoteRef",
-                    "type": StrucDocFootnoteRef,
-                    "namespace": "urn:hl7-org:v3",
-                },
-            ),
-        },
-    )
-
-
-@dataclass
-class StrucDocContent:
-    class Meta:
-        name = "StrucDoc.Content"
-
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ID",
-            "type": "Attribute",
-        },
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    style_code: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "styleCode",
-            "type": "Attribute",
-            "tokens": True,
-        },
-    )
-    revised: Optional[StrucDocContentRevised] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "content",
-                    "type": Type["StrucDocContent"],
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "linkHtml",
-                    "type": StrucDocLinkHtml,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "sub",
-                    "type": StrucDocSub,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "sup",
-                    "type": StrucDocSup,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "br",
-                    "type": StrucDocBr,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "footnote",
-                    "type": StrucDocFootnote,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "footnoteRef",
-                    "type": StrucDocFootnoteRef,
-                    "namespace": "urn:hl7-org:v3",
-                },
-                {
-                    "name": "renderMultiMedia",
-                    "type": StrucDocRenderMultiMedia,
-                    "namespace": "urn:hl7-org:v3",
-                },
-            ),
         },
     )
 

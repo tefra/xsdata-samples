@@ -235,6 +235,108 @@ class CoctMt530000UvActReference:
 
 
 @dataclass
+class CoctMt530000UvCriterion:
+    class Meta:
+        name = "COCT_MT530000UV.Criterion"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    value: Optional[AnyType] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    interpretation_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "interpretationCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    precondition: List["CoctMt530000UvPrecondition2"] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[ActClassObservation] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: ActMood = field(
+        init=False,
+        default=ActMood.EVN_CRT,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    negation_ind: str = field(
+        default="false",
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
 class CoctMt530000UvDataEnterer:
     class Meta:
         name = "COCT_MT530000UV.DataEnterer"
@@ -709,113 +811,6 @@ class CoctMt530000UvPlace:
 
 
 @dataclass
-class CoctMt530000UvPrecondition2:
-    class Meta:
-        name = "COCT_MT530000UV.Precondition2"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    conjunction_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "conjunctionCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    seperatable_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "seperatableInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    criterion: Optional["CoctMt530000UvCriterion"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
-        init=False,
-        default=ActRelationshipConditional.PRCN,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.ON,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="false",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
 class CoctMt530000UvProduct2:
     class Meta:
         name = "COCT_MT530000UV.Product2"
@@ -1240,9 +1235,9 @@ class CoctMt530000UvBirthplace:
 
 
 @dataclass
-class CoctMt530000UvCriterion:
+class CoctMt530000UvConditions:
     class Meta:
-        name = "COCT_MT530000UV.Criterion"
+        name = "COCT_MT530000UV.Conditions"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -1268,39 +1263,24 @@ class CoctMt530000UvCriterion:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    conjunction_code: Optional[Cs] = field(
         default=None,
         metadata={
+            "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    seperatable_ind: Optional[Bl] = field(
         default=None,
         metadata={
+            "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[AnyType] = field(
+    criterion: Optional[CoctMt530000UvCriterion] = field(
         default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    interpretation_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "interpretationCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    precondition: List[CoctMt530000UvPrecondition2] = field(
-        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
@@ -1314,27 +1294,25 @@ class CoctMt530000UvCriterion:
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassObservation] = field(
+    type_code: Optional[ActRelationshipConditional] = field(
         default=None,
         metadata={
-            "name": "classCode",
+            "name": "typeCode",
             "type": "Attribute",
             "required": True,
         },
     )
-    mood_code: ActMood = field(
-        init=False,
-        default=ActMood.EVN_CRT,
+    context_control_code: ContextControl = field(
+        default=ContextControl.ON,
         metadata={
-            "name": "moodCode",
+            "name": "contextControlCode",
             "type": "Attribute",
-            "required": True,
         },
     )
-    negation_ind: str = field(
+    context_conduction_ind: str = field(
         default="false",
         metadata={
-            "name": "negationInd",
+            "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
         },
@@ -1643,6 +1621,220 @@ class CoctMt530000UvMaterialPart:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
+        },
+    )
+
+
+@dataclass
+class CoctMt530000UvPrecondition1:
+    class Meta:
+        name = "COCT_MT530000UV.Precondition1"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    conjunction_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "conjunctionCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    seperatable_ind: Optional[Bl] = field(
+        default=None,
+        metadata={
+            "name": "seperatableInd",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    criterion: Optional[CoctMt530000UvCriterion] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
+        init=False,
+        default=ActRelationshipConditional.PRCN,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+    context_control_code: ContextControl = field(
+        default=ContextControl.OP,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: str = field(
+        default="true",
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
+class CoctMt530000UvPrecondition2:
+    class Meta:
+        name = "COCT_MT530000UV.Precondition2"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    conjunction_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "conjunctionCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    seperatable_ind: Optional[Bl] = field(
+        default=None,
+        metadata={
+            "name": "seperatableInd",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    criterion: Optional[CoctMt530000UvCriterion] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
+        init=False,
+        default=ActRelationshipConditional.PRCN,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+    context_control_code: ContextControl = field(
+        default=ContextControl.ON,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: str = field(
+        default="false",
+        metadata={
+            "name": "contextConductionInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
         },
     )
 
@@ -2003,91 +2195,6 @@ class CoctMt530000UvAnimal:
 
 
 @dataclass
-class CoctMt530000UvConditions:
-    class Meta:
-        name = "COCT_MT530000UV.Conditions"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    conjunction_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "conjunctionCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    seperatable_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "seperatableInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    criterion: Optional[CoctMt530000UvCriterion] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Optional[ActRelationshipConditional] = field(
-        default=None,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.ON,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="false",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
 class CoctMt530000UvDevice:
     class Meta:
         name = "COCT_MT530000UV.Device"
@@ -2412,6 +2519,101 @@ class CoctMt530000UvMaterialKind:
 
 
 @dataclass
+class CoctMt530000UvObservationRange:
+    class Meta:
+        name = "COCT_MT530000UV.ObservationRange"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    value: Optional[AnyType] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    interpretation_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "interpretationCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    precondition: List[CoctMt530000UvPrecondition1] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[ActClassObservation] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: ActMood = field(
+        init=False,
+        default=ActMood.EVN_CRT,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    negation_ind: str = field(
+        default="false",
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
 class CoctMt530000UvPerson:
     class Meta:
         name = "COCT_MT530000UV.Person"
@@ -2563,113 +2765,6 @@ class CoctMt530000UvPerson:
 
 
 @dataclass
-class CoctMt530000UvPrecondition1:
-    class Meta:
-        name = "COCT_MT530000UV.Precondition1"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    conjunction_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "conjunctionCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    seperatable_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "seperatableInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    criterion: Optional[CoctMt530000UvCriterion] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
-        init=False,
-        default=ActRelationshipConditional.PRCN,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.OP,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="true",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
 class CoctMt530000UvProduct1:
     class Meta:
         name = "COCT_MT530000UV.Product1"
@@ -2806,9 +2901,9 @@ class CoctMt530000UvAdministerableMaterial:
 
 
 @dataclass
-class CoctMt530000UvObservationRange:
+class CoctMt530000UvReferenceRange:
     class Meta:
-        name = "COCT_MT530000UV.ObservationRange"
+        name = "COCT_MT530000UV.ReferenceRange"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -2834,33 +2929,18 @@ class CoctMt530000UvObservationRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    seperatable_ind: Optional[Bl] = field(
         default=None,
         metadata={
+            "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[AnyType] = field(
+    observation_range: Optional[CoctMt530000UvObservationRange] = field(
         default=None,
         metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    interpretation_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "interpretationCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    precondition: List[CoctMt530000UvPrecondition1] = field(
-        default_factory=list,
-        metadata={
+            "name": "observationRange",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
@@ -2873,27 +2953,47 @@ class CoctMt530000UvObservationRange:
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassObservation] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: ActMood = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
-        default=ActMood.EVN_CRT,
+        default=ActRelationshipPertainsValue.REFV,
         metadata={
-            "name": "moodCode",
+            "name": "typeCode",
             "type": "Attribute",
             "required": True,
+            "pattern": r"[^\s]+",
         },
     )
-    negation_ind: str = field(
+    context_control_code: ContextControl = field(
+        default=ContextControl.ON,
+        metadata={
+            "name": "contextControlCode",
+            "type": "Attribute",
+        },
+    )
+    context_conduction_ind: str = field(
         default="false",
         metadata={
-            "name": "negationInd",
+            "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
         },
@@ -3426,106 +3526,6 @@ class CoctMt530000UvPerformer:
 
 
 @dataclass
-class CoctMt530000UvReferenceRange:
-    class Meta:
-        name = "COCT_MT530000UV.ReferenceRange"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    seperatable_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "seperatableInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    observation_range: Optional[CoctMt530000UvObservationRange] = field(
-        default=None,
-        metadata={
-            "name": "observationRange",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
-        init=False,
-        default=ActRelationshipPertainsValue.REFV,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
-        },
-    )
-    context_control_code: ContextControl = field(
-        default=ContextControl.ON,
-        metadata={
-            "name": "contextControlCode",
-            "type": "Attribute",
-        },
-    )
-    context_conduction_ind: str = field(
-        default="false",
-        metadata={
-            "name": "contextConductionInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
 class CoctMt530000UvSubject2:
     class Meta:
         name = "COCT_MT530000UV.Subject2"
@@ -3823,6 +3823,273 @@ class CoctMt530000UvSubject1:
 
 
 @dataclass
+class CoctMt530000UvAct:
+    class Meta:
+        name = "COCT_MT530000UV.Act"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    effective_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    availability_time: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "availabilityTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    priority_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "priorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    confidentiality_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "confidentialityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    uncertainty_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "uncertaintyCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    language_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "languageCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    subject: List[CoctMt530000UvSubject2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    record_target: Optional[CoctMt530000UvRecordTarget] = field(
+        default=None,
+        metadata={
+            "name": "recordTarget",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
+        default_factory=list,
+        metadata={
+            "name": "responsibleParty",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    performer: List[CoctMt530000UvPerformer] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    author: List[CoctMt530000UvAuthor] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
+        default=None,
+        metadata={
+            "name": "dataEnterer",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    informant: List[CoctMt530000UvInformant] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    verifier: List[CoctMt530000UvVerifier] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    location: List[CoctMt530000UvLocation] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    definition: Optional[CoctMt530000UvDefinition] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    conditions: List[CoctMt530000UvConditions] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    source_of1: List[CoctMt530000UvSourceOf1] = field(
+        default_factory=list,
+        metadata={
+            "name": "sourceOf1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    source_of2: List["CoctMt530000UvSourceOf3"] = field(
+        default_factory=list,
+        metadata={
+            "name": "sourceOf2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of: Optional[CoctMt530000UvSubject1] = field(
+        default=None,
+        metadata={
+            "name": "subjectOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    target_of: List["CoctMt530000UvSourceOf2"] = field(
+        default_factory=list,
+        metadata={
+            "name": "targetOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[ActClassRoot] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: Optional[XClinicalStatementActMood] = field(
+        default=None,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    negation_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
 class CoctMt530000UvEncounter:
     class Meta:
         name = "COCT_MT530000UV.Encounter"
@@ -4109,6 +4376,329 @@ class CoctMt530000UvEncounter:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
+        },
+    )
+
+
+@dataclass
+class CoctMt530000UvObservation:
+    class Meta:
+        name = "COCT_MT530000UV.Observation"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    derivation_expr: Optional[St] = field(
+        default=None,
+        metadata={
+            "name": "derivationExpr",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    effective_time: List[SxcmTsExplicit] = field(
+        default_factory=list,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    availability_time: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "availabilityTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    priority_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "priorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    confidentiality_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "confidentialityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    repeat_number: Optional[IvlInt] = field(
+        default=None,
+        metadata={
+            "name": "repeatNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    uncertainty_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "uncertaintyCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    language_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "languageCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    value: Optional[AnyType] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    interpretation_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "interpretationCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    method_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "methodCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    target_site_code: List[Cd] = field(
+        default_factory=list,
+        metadata={
+            "name": "targetSiteCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    subject: List[CoctMt530000UvSubject2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    record_target: Optional[CoctMt530000UvRecordTarget] = field(
+        default=None,
+        metadata={
+            "name": "recordTarget",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
+        default_factory=list,
+        metadata={
+            "name": "responsibleParty",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    performer: List[CoctMt530000UvPerformer] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    author: List[CoctMt530000UvAuthor] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
+        default=None,
+        metadata={
+            "name": "dataEnterer",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    informant: List[CoctMt530000UvInformant] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    verifier: List[CoctMt530000UvVerifier] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    location: List[CoctMt530000UvLocation] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    definition: Optional[CoctMt530000UvDefinition] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    conditions: List[CoctMt530000UvConditions] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    reference_range: List[CoctMt530000UvReferenceRange] = field(
+        default_factory=list,
+        metadata={
+            "name": "referenceRange",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    source_of1: List[CoctMt530000UvSourceOf1] = field(
+        default_factory=list,
+        metadata={
+            "name": "sourceOf1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    source_of2: List["CoctMt530000UvSourceOf3"] = field(
+        default_factory=list,
+        metadata={
+            "name": "sourceOf2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of: Optional[CoctMt530000UvSubject1] = field(
+        default=None,
+        metadata={
+            "name": "subjectOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    target_of: List["CoctMt530000UvSourceOf2"] = field(
+        default_factory=list,
+        metadata={
+            "name": "targetOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[ActClassObservation] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: Optional[XClinicalStatementObservationMood] = field(
+        default=None,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    negation_ind: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "negationInd",
+            "type": "Attribute",
+            "pattern": r"true|false",
         },
     )
 
@@ -4428,626 +5018,6 @@ class CoctMt530000UvProcedure:
 
 
 @dataclass
-class CoctMt530000UvSubstanceAdministration:
-    class Meta:
-        name = "COCT_MT530000UV.SubstanceAdministration"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    status_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "statusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    effective_time: List[SxcmTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "name": "effectiveTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    availability_time: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "availabilityTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    priority_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "priorityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    confidentiality_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "confidentialityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    repeat_number: Optional[IvlInt] = field(
-        default=None,
-        metadata={
-            "name": "repeatNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    language_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "languageCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    route_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "routeCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    approach_site_code: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "name": "approachSiteCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    dose_quantity: Optional[IvlPq] = field(
-        default=None,
-        metadata={
-            "name": "doseQuantity",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    rate_quantity: Optional[IvlPq] = field(
-        default=None,
-        metadata={
-            "name": "rateQuantity",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    dose_check_quantity: List[RtoQtyQty] = field(
-        default_factory=list,
-        metadata={
-            "name": "doseCheckQuantity",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    max_dose_quantity: Optional[RtoPqPq] = field(
-        default=None,
-        metadata={
-            "name": "maxDoseQuantity",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    administration_unit_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "administrationUnitCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    subject: List[CoctMt530000UvSubject2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    consumable: Optional[CoctMt530000UvConsumable] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    record_target: Optional[CoctMt530000UvRecordTarget] = field(
-        default=None,
-        metadata={
-            "name": "recordTarget",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
-        default_factory=list,
-        metadata={
-            "name": "responsibleParty",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    performer: List[CoctMt530000UvPerformer] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    author: List[CoctMt530000UvAuthor] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
-        default=None,
-        metadata={
-            "name": "dataEnterer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    informant: List[CoctMt530000UvInformant] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    verifier: List[CoctMt530000UvVerifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    location: List[CoctMt530000UvLocation] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    definition: Optional[CoctMt530000UvDefinition] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    conditions: List[CoctMt530000UvConditions] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    source_of1: List[CoctMt530000UvSourceOf1] = field(
-        default_factory=list,
-        metadata={
-            "name": "sourceOf1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    source_of2: List["CoctMt530000UvSourceOf3"] = field(
-        default_factory=list,
-        metadata={
-            "name": "sourceOf2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of: Optional[CoctMt530000UvSubject1] = field(
-        default=None,
-        metadata={
-            "name": "subjectOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    target_of: List["CoctMt530000UvSourceOf2"] = field(
-        default_factory=list,
-        metadata={
-            "name": "targetOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: ActClass = field(
-        init=False,
-        default=ActClass.SBADM,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: Optional[XClinicalStatementSubstanceMood] = field(
-        default=None,
-        metadata={
-            "name": "moodCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    negation_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "negationInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
-class CoctMt530000UvSupply:
-    class Meta:
-        name = "COCT_MT530000UV.Supply"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    status_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "statusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    effective_time: List[SxcmTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "name": "effectiveTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    availability_time: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "availabilityTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    priority_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "priorityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    confidentiality_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "confidentialityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    repeat_number: Optional[IvlInt] = field(
-        default=None,
-        metadata={
-            "name": "repeatNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    independent_ind: Optional[Bl] = field(
-        default=None,
-        metadata={
-            "name": "independentInd",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    language_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "languageCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    quantity: Optional[PqExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    expected_use_time: Optional[IvlTsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "expectedUseTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    subject: List[CoctMt530000UvSubject2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    product: List[CoctMt530000UvProduct1] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "min_occurs": 1,
-        },
-    )
-    record_target: Optional[CoctMt530000UvRecordTarget] = field(
-        default=None,
-        metadata={
-            "name": "recordTarget",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
-        default_factory=list,
-        metadata={
-            "name": "responsibleParty",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    performer: List[CoctMt530000UvPerformer] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    author: List[CoctMt530000UvAuthor] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
-        default=None,
-        metadata={
-            "name": "dataEnterer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    informant: List[CoctMt530000UvInformant] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    verifier: List[CoctMt530000UvVerifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    location: List[CoctMt530000UvLocation] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    definition: Optional[CoctMt530000UvDefinition] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    conditions: List[CoctMt530000UvConditions] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    source_of1: List[CoctMt530000UvSourceOf1] = field(
-        default_factory=list,
-        metadata={
-            "name": "sourceOf1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    source_of2: List["CoctMt530000UvSourceOf3"] = field(
-        default_factory=list,
-        metadata={
-            "name": "sourceOf2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of: Optional[CoctMt530000UvSubject1] = field(
-        default=None,
-        metadata={
-            "name": "subjectOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    target_of: List["CoctMt530000UvSourceOf2"] = field(
-        default_factory=list,
-        metadata={
-            "name": "targetOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[ActClassSupply] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: Optional[XClinicalStatementSupplyMood] = field(
-        default=None,
-        metadata={
-            "name": "moodCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-
-
-@dataclass
 class CoctMt530000UvComponent:
     class Meta:
         name = "COCT_MT530000UV.Component"
@@ -5101,7 +5071,7 @@ class CoctMt530000UvComponent:
         },
     )
     substance_administration: Optional[
-        CoctMt530000UvSubstanceAdministration
+        "CoctMt530000UvSubstanceAdministration"
     ] = field(
         default=None,
         metadata={
@@ -5111,7 +5081,7 @@ class CoctMt530000UvComponent:
             "nillable": True,
         },
     )
-    supply: Optional[CoctMt530000UvSupply] = field(
+    supply: Optional["CoctMt530000UvSupply"] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5119,7 +5089,7 @@ class CoctMt530000UvComponent:
             "nillable": True,
         },
     )
-    procedure: Optional[CoctMt530000UvProcedure] = field(
+    procedure: Optional["CoctMt530000UvProcedure"] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5127,7 +5097,7 @@ class CoctMt530000UvComponent:
             "nillable": True,
         },
     )
-    encounter: Optional[CoctMt530000UvEncounter] = field(
+    encounter: Optional["CoctMt530000UvEncounter"] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5135,7 +5105,7 @@ class CoctMt530000UvComponent:
             "nillable": True,
         },
     )
-    act: Optional["CoctMt530000UvAct"] = field(
+    act: Optional[CoctMt530000UvAct] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5504,7 +5474,7 @@ class CoctMt530000UvSourceOf2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation: Optional["CoctMt530000UvObservation"] = field(
+    observation: Optional[CoctMt530000UvObservation] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5513,7 +5483,7 @@ class CoctMt530000UvSourceOf2:
         },
     )
     substance_administration: Optional[
-        CoctMt530000UvSubstanceAdministration
+        "CoctMt530000UvSubstanceAdministration"
     ] = field(
         default=None,
         metadata={
@@ -5523,7 +5493,7 @@ class CoctMt530000UvSourceOf2:
             "nillable": True,
         },
     )
-    supply: Optional[CoctMt530000UvSupply] = field(
+    supply: Optional["CoctMt530000UvSupply"] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5547,7 +5517,7 @@ class CoctMt530000UvSourceOf2:
             "nillable": True,
         },
     )
-    act: Optional["CoctMt530000UvAct"] = field(
+    act: Optional[CoctMt530000UvAct] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5614,329 +5584,6 @@ class CoctMt530000UvSourceOf2:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        },
-    )
-    negation_ind: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "negationInd",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        },
-    )
-
-
-@dataclass
-class CoctMt530000UvObservation:
-    class Meta:
-        name = "COCT_MT530000UV.Observation"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    code: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    derivation_expr: Optional[St] = field(
-        default=None,
-        metadata={
-            "name": "derivationExpr",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    status_code: Optional[Cs] = field(
-        default=None,
-        metadata={
-            "name": "statusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    effective_time: List[SxcmTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "name": "effectiveTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    availability_time: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "availabilityTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    priority_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "priorityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    confidentiality_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "confidentialityCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    repeat_number: Optional[IvlInt] = field(
-        default=None,
-        metadata={
-            "name": "repeatNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    uncertainty_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "uncertaintyCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    language_code: Optional[Ce] = field(
-        default=None,
-        metadata={
-            "name": "languageCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    value: Optional[AnyType] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    interpretation_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "interpretationCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    method_code: List[Ce] = field(
-        default_factory=list,
-        metadata={
-            "name": "methodCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    target_site_code: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "name": "targetSiteCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    subject: List[CoctMt530000UvSubject2] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    record_target: Optional[CoctMt530000UvRecordTarget] = field(
-        default=None,
-        metadata={
-            "name": "recordTarget",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
-        default_factory=list,
-        metadata={
-            "name": "responsibleParty",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    performer: List[CoctMt530000UvPerformer] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    author: List[CoctMt530000UvAuthor] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
-        default=None,
-        metadata={
-            "name": "dataEnterer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    informant: List[CoctMt530000UvInformant] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    verifier: List[CoctMt530000UvVerifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    location: List[CoctMt530000UvLocation] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    definition: Optional[CoctMt530000UvDefinition] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    conditions: List[CoctMt530000UvConditions] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    reference_range: List[CoctMt530000UvReferenceRange] = field(
-        default_factory=list,
-        metadata={
-            "name": "referenceRange",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    source_of1: List[CoctMt530000UvSourceOf1] = field(
-        default_factory=list,
-        metadata={
-            "name": "sourceOf1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    source_of2: List["CoctMt530000UvSourceOf3"] = field(
-        default_factory=list,
-        metadata={
-            "name": "sourceOf2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    subject_of: Optional[CoctMt530000UvSubject1] = field(
-        default=None,
-        metadata={
-            "name": "subjectOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    target_of: List[CoctMt530000UvSourceOf2] = field(
-        default_factory=list,
-        metadata={
-            "name": "targetOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[ActClassObservation] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    mood_code: Optional[XClinicalStatementObservationMood] = field(
-        default=None,
-        metadata={
-            "name": "moodCode",
-            "type": "Attribute",
-            "required": True,
         },
     )
     negation_ind: Optional[str] = field(
@@ -6019,7 +5666,7 @@ class CoctMt530000UvSourceOf3:
         },
     )
     substance_administration: Optional[
-        CoctMt530000UvSubstanceAdministration
+        "CoctMt530000UvSubstanceAdministration"
     ] = field(
         default=None,
         metadata={
@@ -6029,7 +5676,7 @@ class CoctMt530000UvSourceOf3:
             "nillable": True,
         },
     )
-    supply: Optional[CoctMt530000UvSupply] = field(
+    supply: Optional["CoctMt530000UvSupply"] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6053,7 +5700,7 @@ class CoctMt530000UvSourceOf3:
             "nillable": True,
         },
     )
-    act: Optional["CoctMt530000UvAct"] = field(
+    act: Optional[CoctMt530000UvAct] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6133,9 +5780,9 @@ class CoctMt530000UvSourceOf3:
 
 
 @dataclass
-class CoctMt530000UvAct:
+class CoctMt530000UvSubstanceAdministration:
     class Meta:
-        name = "COCT_MT530000UV.Act"
+        name = "COCT_MT530000UV.SubstanceAdministration"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -6173,7 +5820,6 @@ class CoctMt530000UvAct:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         },
     )
     text: Optional[EdExplicit] = field(
@@ -6191,8 +5837,8 @@ class CoctMt530000UvAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
-        default=None,
+    effective_time: List[SxcmTsExplicit] = field(
+        default_factory=list,
         metadata={
             "name": "effectiveTime",
             "type": "Element",
@@ -6223,10 +5869,10 @@ class CoctMt530000UvAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    uncertainty_code: Optional[Ce] = field(
+    repeat_number: Optional[IvlInt] = field(
         default=None,
         metadata={
-            "name": "uncertaintyCode",
+            "name": "repeatNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
@@ -6239,8 +5885,72 @@ class CoctMt530000UvAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
+    route_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "routeCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    approach_site_code: List[Cd] = field(
+        default_factory=list,
+        metadata={
+            "name": "approachSiteCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    dose_quantity: Optional[IvlPq] = field(
+        default=None,
+        metadata={
+            "name": "doseQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    rate_quantity: Optional[IvlPq] = field(
+        default=None,
+        metadata={
+            "name": "rateQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    dose_check_quantity: List[RtoQtyQty] = field(
+        default_factory=list,
+        metadata={
+            "name": "doseCheckQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    max_dose_quantity: Optional[RtoPqPq] = field(
+        default=None,
+        metadata={
+            "name": "maxDoseQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    administration_unit_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "administrationUnitCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
     subject: List[CoctMt530000UvSubject2] = field(
         default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    consumable: Optional[CoctMt530000UvConsumable] = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
@@ -6373,15 +6083,16 @@ class CoctMt530000UvAct:
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassRoot] = field(
-        default=None,
+    class_code: ActClass = field(
+        init=False,
+        default=ActClass.SBADM,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
         },
     )
-    mood_code: Optional[XClinicalStatementActMood] = field(
+    mood_code: Optional[XClinicalStatementSubstanceMood] = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -6395,5 +6106,294 @@ class CoctMt530000UvAct:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
+        },
+    )
+
+
+@dataclass
+class CoctMt530000UvSupply:
+    class Meta:
+        name = "COCT_MT530000UV.Supply"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    code: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    text: Optional[EdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    status_code: Optional[Cs] = field(
+        default=None,
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    effective_time: List[SxcmTsExplicit] = field(
+        default_factory=list,
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    availability_time: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "availabilityTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    priority_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "priorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    confidentiality_code: List[Ce] = field(
+        default_factory=list,
+        metadata={
+            "name": "confidentialityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    repeat_number: Optional[IvlInt] = field(
+        default=None,
+        metadata={
+            "name": "repeatNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    independent_ind: Optional[Bl] = field(
+        default=None,
+        metadata={
+            "name": "independentInd",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    language_code: Optional[Ce] = field(
+        default=None,
+        metadata={
+            "name": "languageCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    quantity: Optional[PqExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    expected_use_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "expectedUseTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    subject: List[CoctMt530000UvSubject2] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    product: List[CoctMt530000UvProduct1] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        },
+    )
+    record_target: Optional[CoctMt530000UvRecordTarget] = field(
+        default=None,
+        metadata={
+            "name": "recordTarget",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
+        default_factory=list,
+        metadata={
+            "name": "responsibleParty",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    performer: List[CoctMt530000UvPerformer] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    author: List[CoctMt530000UvAuthor] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
+        default=None,
+        metadata={
+            "name": "dataEnterer",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    informant: List[CoctMt530000UvInformant] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    verifier: List[CoctMt530000UvVerifier] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    location: List[CoctMt530000UvLocation] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    definition: Optional[CoctMt530000UvDefinition] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    conditions: List[CoctMt530000UvConditions] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    source_of1: List[CoctMt530000UvSourceOf1] = field(
+        default_factory=list,
+        metadata={
+            "name": "sourceOf1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    source_of2: List[CoctMt530000UvSourceOf3] = field(
+        default_factory=list,
+        metadata={
+            "name": "sourceOf2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    subject_of: Optional[CoctMt530000UvSubject1] = field(
+        default=None,
+        metadata={
+            "name": "subjectOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    target_of: List[CoctMt530000UvSourceOf2] = field(
+        default_factory=list,
+        metadata={
+            "name": "targetOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[ActClassSupply] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    mood_code: Optional[XClinicalStatementSupplyMood] = field(
+        default=None,
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
         },
     )

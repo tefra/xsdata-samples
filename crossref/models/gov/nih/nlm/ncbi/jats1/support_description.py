@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import P
+from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import P
 from crossref.models.xml.lang_value import LangValue
 
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"

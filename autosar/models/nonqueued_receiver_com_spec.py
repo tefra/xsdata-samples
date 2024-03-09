@@ -1,5 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
+)
 from .application_rule_based_value_specification import (
     ApplicationRuleBasedValueSpecification,
 )
@@ -29,15 +35,9 @@ from .positive_integer_value_variation_point import (
 )
 from .receiver_intent_enum import ReceiverIntentEnum
 from .reception_com_spec_props import ReceptionComSpecProps
-from .record_value_specification import (
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
-)
 from .ref import Ref
 from .reference_value_specification import ReferenceValueSpecification
-from .sw_pointer_target_props import SwDataDefProps
+from .sw_data_def_props import SwDataDefProps
 from .text_value_specification import TextValueSpecification
 from .time_value import TimeValue
 from .user_defined_transformation_com_spec_props import (

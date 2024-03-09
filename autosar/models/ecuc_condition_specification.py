@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import MlFormula
+from .admin_data import MlFormula
 from .ecuc_condition_formula import EcucConditionFormula
 from .ecuc_query import EcucQuery
 

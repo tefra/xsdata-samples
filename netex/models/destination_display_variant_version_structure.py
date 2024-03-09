@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
 from .destination_display_context_enumeration import (
     DestinationDisplayContextEnumeration,
 )
 from .destination_display_ref import DestinationDisplayRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .presentation_structure import PresentationStructure
 from .vias_rel_structure import ViasRelStructure

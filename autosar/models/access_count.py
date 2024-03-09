@@ -3,7 +3,7 @@ from typing import Optional
 from .abstract_access_point_subtypes_enum import (
     AbstractAccessPointSubtypesEnum,
 )
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .positive_integer_value_variation_point import (
     PositiveIntegerValueVariationPoint,
 )

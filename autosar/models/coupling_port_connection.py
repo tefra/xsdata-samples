@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .coupling_port_ref_conditional import CouplingPortRefConditional
 from .coupling_port_subtypes_enum import CouplingPortSubtypesEnum
 from .positive_integer import PositiveInteger

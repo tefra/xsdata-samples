@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .diagnostic_event_subtypes_enum import DiagnosticEventSubtypesEnum
 from .ref import Ref
 

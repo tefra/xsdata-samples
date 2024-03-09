@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .ref import Ref
 from .udp_nm_cluster_subtypes_enum import UdpNmClusterSubtypesEnum

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .customer_ref import CustomerRef
+from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

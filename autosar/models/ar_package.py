@@ -7,14 +7,14 @@ from .acl_role import AclRole
 from .adaptive_application_sw_component_type import (
     AdaptiveApplicationSwComponentType,
 )
-from .alias_name_set import AliasNameSet
-from .allocator import Allocator
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
+from .alias_name_set import AliasNameSet
+from .allocator import Allocator
 from .ap_application_error import ApApplicationError
 from .ap_application_error_domain import ApApplicationErrorDomain
 from .ap_application_error_set import ApApplicationErrorSet

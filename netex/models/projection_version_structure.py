@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .complex_feature_ref import ComplexFeatureRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .simple_feature_ref import SimpleFeatureRef
 from .spatial_feature_ref import SpatialFeatureRef

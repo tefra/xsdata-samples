@@ -4,8 +4,8 @@ from xsdata.models.datatype import XmlDuration
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
 )
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .driver_trip_ref import DriverTripRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

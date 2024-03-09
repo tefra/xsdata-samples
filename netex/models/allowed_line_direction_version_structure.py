@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .direction_ref import DirectionRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .flexible_line_ref import FlexibleLineRef
 from .line_ref import LineRef
 from .presentation_structure import PresentationStructure

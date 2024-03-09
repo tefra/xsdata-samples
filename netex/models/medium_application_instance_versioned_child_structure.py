@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .customer_account_ref import CustomerAccountRef
 from .emv_card_ref import EmvCardRef
+from .entity_in_version_structure import VersionedChildStructure
 from .mobile_device_ref import MobileDeviceRef
 from .multilingual_string import MultilingualString
 from .service_access_code_ref import ServiceAccessCodeRef

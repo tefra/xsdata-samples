@@ -375,6 +375,82 @@ class CoctMt010000Uv01Authorization:
 
 
 @dataclass
+class CoctMt010000Uv01CauseOf:
+    class Meta:
+        name = "COCT_MT010000UV01.CauseOf"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    encounter: Optional["CoctMt010000Uv01Encounter"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
+        init=False,
+        default=ActRelationshipPertainsValue.CAUS,
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+
+
+@dataclass
 class CoctMt010000Uv01Component:
     class Meta:
         name = "COCT_MT010000UV01.Component"
@@ -1068,60 +1144,6 @@ class CoctMt010000Uv01ResponsibleParty1:
 
 
 @dataclass
-class CoctMt010000Uv01SequelTo:
-    class Meta:
-        name = "COCT_MT010000UV01.SequelTo"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    encounter: Optional["CoctMt010000Uv01Encounter"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    type_code: Optional[ActRelationshipSequel] = field(
-        default=None,
-        metadata={
-            "name": "typeCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-
-
-@dataclass
 class CoctMt010000Uv01Subject1:
     class Meta:
         name = "COCT_MT010000UV01.Subject1"
@@ -1771,7 +1793,7 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    sequel_to: Optional[CoctMt010000Uv01SequelTo] = field(
+    sequel_to: Optional["CoctMt010000Uv01SequelTo"] = field(
         default=None,
         metadata={
             "name": "sequelTo",
@@ -1780,7 +1802,7 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    cause_of: List["CoctMt010000Uv01CauseOf"] = field(
+    cause_of: List[CoctMt010000Uv01CauseOf] = field(
         default_factory=list,
         metadata={
             "name": "causeOf",
@@ -1873,9 +1895,9 @@ class CoctMt010000Uv01Encounter:
 
 
 @dataclass
-class CoctMt010000Uv01CauseOf:
+class CoctMt010000Uv01SequelTo:
     class Meta:
-        name = "COCT_MT010000UV01.CauseOf"
+        name = "COCT_MT010000UV01.SequelTo"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -1916,33 +1938,11 @@ class CoctMt010000Uv01CauseOf:
             "type": "Attribute",
         },
     )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
-        init=False,
-        default=ActRelationshipPertainsValue.CAUS,
+    type_code: Optional[ActRelationshipSequel] = field(
+        default=None,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-            "pattern": r"[^\s]+",
         },
     )

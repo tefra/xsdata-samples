@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .aggregation_condition import AggregationCondition
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
+from .aggregation_condition import AggregationCondition
 from .boolean import Boolean
 from .category_string import CategoryString
 from .constraint_tailoring import ConstraintTailoring
@@ -34,9 +34,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
 @dataclass
-class ConcreteClassTailoring:
+class AbstractClassTailoring:
     """
-    Tailoring of concrete meta classes.
+    Tailoring of abststract classes in the AUTOSAR meta-model.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -66,9 +66,6 @@ class ConcreteClassTailoring:
     :ivar alternative_name: Alternative name of a specification element
         if its name doesn't fit into the shortName. E.g. because the
         name contains spaces.
-    :ivar in_scope: indicates, if a specification element is relevant
-        for this data exchange point. It is relevant if inScope==true.
-        It is not relevant or don't care if inScope=false.
     :ivar multiplicity_restriction: Specifies the multiplicity of the
         class in the current context.
     :ivar variation_restriction: Specifies restrictions on the usage of
@@ -76,11 +73,6 @@ class ConcreteClassTailoring:
     :ivar class_contents: Specifies the accepted / not accepted content
         of the class. All rules apply that fullfill the condition of the
         ClassContentConditional
-    :ivar validation_root: Specification if this concrete Meta-Class is
-        a root element for validation. I.e.: The validation starts at an
-        object of this concrete Meta-Class and continues by following
-        all aggregations and references that are in scope of this Data
-        Exchange Point.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -111,7 +103,7 @@ class ConcreteClassTailoring:
     """
 
     class Meta:
-        name = "CONCRETE-CLASS-TAILORING"
+        name = "ABSTRACT-CLASS-TAILORING"
 
     short_name: Optional[Identifier] = field(
         default=None,
@@ -123,7 +115,7 @@ class ConcreteClassTailoring:
         },
     )
     short_name_fragments: Optional[
-        "ConcreteClassTailoring.ShortNameFragments"
+        "AbstractClassTailoring.ShortNameFragments"
     ] = field(
         default=None,
         metadata={
@@ -172,7 +164,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ConcreteClassTailoring.Annotations"] = field(
+    annotations: Optional["AbstractClassTailoring.Annotations"] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,14 +176,6 @@ class ConcreteClassTailoring:
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    in_scope: Optional[Boolean] = field(
-        default=None,
-        metadata={
-            "name": "IN-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
         },
@@ -214,18 +198,10 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    class_contents: Optional["ConcreteClassTailoring.ClassContents"] = field(
+    class_contents: Optional["AbstractClassTailoring.ClassContents"] = field(
         default=None,
         metadata={
             "name": "CLASS-CONTENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    validation_root: Optional[Boolean] = field(
-        default=None,
-        metadata={
-            "name": "VALIDATION-ROOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
         },
@@ -517,7 +493,7 @@ class AggregationTailoring:
 
     @dataclass
     class TypeTailorings:
-        abstract_class_tailoring: List["AbstractClassTailoring"] = field(
+        abstract_class_tailoring: List[AbstractClassTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "ABSTRACT-CLASS-TAILORING",
@@ -525,267 +501,7 @@ class AggregationTailoring:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        concrete_class_tailoring: List[ConcreteClassTailoring] = field(
-            default_factory=list,
-            metadata={
-                "name": "CONCRETE-CLASS-TAILORING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
-
-
-@dataclass
-class ReferenceTailoring:
-    """
-    Tailoring of Non-Containment References.
-
-    :ivar short_name: This specifies an identifying shortName for the
-        object. It needs to be unique within its context and is intended
-        for humans but even more for technical reference.
-    :ivar short_name_fragments: This specifies how the
-        Referrable.shortName is composed of several shortNameFragments.
-    :ivar long_name: This specifies the long name of the object. Long
-        name is targeted to human readers and acts like a headline.
-    :ivar desc: This represents a general but brief (one paragraph)
-        description what the object in question is about. It is only one
-        paragraph! Desc is intended to be collected into overview
-        tables. This property helps a human reader to identify the
-        object in question. More elaborate documentation, (in particular
-        how the object is built or used) should go to "introduction".
-    :ivar category: The category is a keyword that specializes the
-        semantics of the Identifiable. It affects the expected existence
-        of attributes and the applicability of constraints.
-    :ivar admin_data: This represents the administrative data for the
-        identifiable object.
-    :ivar introduction: This represents more information about how the
-        object in question is built or is used. Therefore it is a
-        DocumentationBlock.
-    :ivar annotations: Possibility to provide additional notes while
-        defining a model element (e.g. the ECU Configuration Parameter
-        Values). These are not intended as documentation but are mere
-        design notes.
-    :ivar alternative_name: Alternative name of a specification element
-        if its name doesn't fit into the shortName. E.g. because the
-        name contains spaces.
-    :ivar in_scope: indicates, if a specification element is relevant
-        for this data exchange point. It is relevant if inScope==true.
-        It is not relevant or don't care if inScope=false.
-    :ivar multiplicity_restriction: Multiplicity restriction of the
-        attribute
-    :ivar variation_restriction: Restrictions on the usage of variant
-        handling.
-    :ivar type_tailorings: Local class tailoring for content that is
-        referenced by this reference.
-    :ivar unresolved_reference_restriction: Specifies the severity of
-        unresolved references.
-    :ivar s: Checksum calculated by the user's tool environment for an
-        ArObject. May be used in an own tool environment to determine if
-        an ArObject has changed. The checksum has no semantic meaning
-        for an AUTOSAR model and there is no requirement for AUTOSAR
-        tools to manage the checksum.
-    :ivar t: Timestamp calculated by the user's tool environment for an
-        ArObject. May be used in an own tool environment to determine
-        the last change of an ArObject. The timestamp has no semantic
-        meaning for an AUTOSAR model and there is no requirement for
-        AUTOSAR tools to manage the timestamp.
-    :ivar uuid: The purpose of this attribute is to provide a globally
-        unique identifier for an instance of a meta-class. The values of
-        this attribute should be globally unique strings prefixed by the
-        type of identifier.  For example, to include a DCE UUID as
-        defined by The Open Group, the UUID would be preceded by "DCE:".
-        The values of this attribute may be used to support merging of
-        different AUTOSAR models. The form of the UUID (Universally
-        Unique Identifier) is taken from a standard defined by the Open
-        Group (was Open Software Foundation). This standard is widely
-        used, including by Microsoft for COM (GUIDs) and by many
-        companies for DCE, which is based on CORBA. The method for
-        generating these 128-bit IDs is published in the standard and
-        the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed. An
-        example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
-        attribute has no semantic meaning for an AUTOSAR model and there
-        is no requirement for AUTOSAR tools to manage the timestamp.
-    """
-
-    class Meta:
-        name = "REFERENCE-TAILORING"
-
-    short_name: Optional[Identifier] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
-        },
-    )
-    short_name_fragments: Optional[
-        "ReferenceTailoring.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    long_name: Optional[MultilanguageLongName] = field(
-        default=None,
-        metadata={
-            "name": "LONG-NAME",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
-        default=None,
-        metadata={
-            "name": "DESC",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    category: Optional[CategoryString] = field(
-        default=None,
-        metadata={
-            "name": "CATEGORY",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    admin_data: Optional[AdminData] = field(
-        default=None,
-        metadata={
-            "name": "ADMIN-DATA",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    introduction: Optional[DocumentationBlock] = field(
-        default=None,
-        metadata={
-            "name": "INTRODUCTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    annotations: Optional["ReferenceTailoring.Annotations"] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    alternative_name: Optional[String] = field(
-        default=None,
-        metadata={
-            "name": "ALTERNATIVE-NAME",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    in_scope: Optional[Boolean] = field(
-        default=None,
-        metadata={
-            "name": "IN-SCOPE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    multiplicity_restriction: Optional[
-        MultiplicityRestrictionWithSeverity
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MULTIPLICITY-RESTRICTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
-        default=None,
-        metadata={
-            "name": "VARIATION-RESTRICTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    type_tailorings: Optional["ReferenceTailoring.TypeTailorings"] = field(
-        default=None,
-        metadata={
-            "name": "TYPE-TAILORINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    unresolved_reference_restriction: Optional[
-        UnresolvedReferenceRestrictionWithSeverity
-    ] = field(
-        default=None,
-        metadata={
-            "name": "UNRESOLVED-REFERENCE-RESTRICTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    s: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "S",
-            "type": "Attribute",
-        },
-    )
-    t: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "T",
-            "type": "Attribute",
-            "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        },
-    )
-    uuid: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "UUID",
-            "type": "Attribute",
-        },
-    )
-
-    @dataclass
-    class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
-            default_factory=list,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
-
-    @dataclass
-    class Annotations:
-        annotation: List[Annotation] = field(
-            default_factory=list,
-            metadata={
-                "name": "ANNOTATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
-
-    @dataclass
-    class TypeTailorings:
-        abstract_class_tailoring: List["AbstractClassTailoring"] = field(
-            default_factory=list,
-            metadata={
-                "name": "ABSTRACT-CLASS-TAILORING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
-        concrete_class_tailoring: List[ConcreteClassTailoring] = field(
+        concrete_class_tailoring: List["ConcreteClassTailoring"] = field(
             default_factory=list,
             metadata={
                 "name": "CONCRETE-CLASS-TAILORING",
@@ -1080,7 +796,7 @@ class ClassContentConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_tailoring: List[ReferenceTailoring] = field(
+        reference_tailoring: List["ReferenceTailoring"] = field(
             default_factory=list,
             metadata={
                 "name": "REFERENCE-TAILORING",
@@ -1113,9 +829,9 @@ class ClassContentConditional:
 
 
 @dataclass
-class AbstractClassTailoring:
+class ConcreteClassTailoring:
     """
-    Tailoring of abststract classes in the AUTOSAR meta-model.
+    Tailoring of concrete meta classes.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -1145,6 +861,9 @@ class AbstractClassTailoring:
     :ivar alternative_name: Alternative name of a specification element
         if its name doesn't fit into the shortName. E.g. because the
         name contains spaces.
+    :ivar in_scope: indicates, if a specification element is relevant
+        for this data exchange point. It is relevant if inScope==true.
+        It is not relevant or don't care if inScope=false.
     :ivar multiplicity_restriction: Specifies the multiplicity of the
         class in the current context.
     :ivar variation_restriction: Specifies restrictions on the usage of
@@ -1152,6 +871,11 @@ class AbstractClassTailoring:
     :ivar class_contents: Specifies the accepted / not accepted content
         of the class. All rules apply that fullfill the condition of the
         ClassContentConditional
+    :ivar validation_root: Specification if this concrete Meta-Class is
+        a root element for validation. I.e.: The validation starts at an
+        object of this concrete Meta-Class and continues by following
+        all aggregations and references that are in scope of this Data
+        Exchange Point.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -1182,7 +906,7 @@ class AbstractClassTailoring:
     """
 
     class Meta:
-        name = "ABSTRACT-CLASS-TAILORING"
+        name = "CONCRETE-CLASS-TAILORING"
 
     short_name: Optional[Identifier] = field(
         default=None,
@@ -1194,7 +918,7 @@ class AbstractClassTailoring:
         },
     )
     short_name_fragments: Optional[
-        "AbstractClassTailoring.ShortNameFragments"
+        "ConcreteClassTailoring.ShortNameFragments"
     ] = field(
         default=None,
         metadata={
@@ -1243,7 +967,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["AbstractClassTailoring.Annotations"] = field(
+    annotations: Optional["ConcreteClassTailoring.Annotations"] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -1255,6 +979,14 @@ class AbstractClassTailoring:
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    in_scope: Optional[Boolean] = field(
+        default=None,
+        metadata={
+            "name": "IN-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
         },
@@ -1277,10 +1009,18 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    class_contents: Optional["AbstractClassTailoring.ClassContents"] = field(
+    class_contents: Optional["ConcreteClassTailoring.ClassContents"] = field(
         default=None,
         metadata={
             "name": "CLASS-CONTENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    validation_root: Optional[Boolean] = field(
+        default=None,
+        metadata={
+            "name": "VALIDATION-ROOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
         },
@@ -1336,6 +1076,266 @@ class AbstractClassTailoring:
             default_factory=list,
             metadata={
                 "name": "CLASS-CONTENT-CONDITIONAL",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
+
+
+@dataclass
+class ReferenceTailoring:
+    """
+    Tailoring of Non-Containment References.
+
+    :ivar short_name: This specifies an identifying shortName for the
+        object. It needs to be unique within its context and is intended
+        for humans but even more for technical reference.
+    :ivar short_name_fragments: This specifies how the
+        Referrable.shortName is composed of several shortNameFragments.
+    :ivar long_name: This specifies the long name of the object. Long
+        name is targeted to human readers and acts like a headline.
+    :ivar desc: This represents a general but brief (one paragraph)
+        description what the object in question is about. It is only one
+        paragraph! Desc is intended to be collected into overview
+        tables. This property helps a human reader to identify the
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
+    :ivar category: The category is a keyword that specializes the
+        semantics of the Identifiable. It affects the expected existence
+        of attributes and the applicability of constraints.
+    :ivar admin_data: This represents the administrative data for the
+        identifiable object.
+    :ivar introduction: This represents more information about how the
+        object in question is built or is used. Therefore it is a
+        DocumentationBlock.
+    :ivar annotations: Possibility to provide additional notes while
+        defining a model element (e.g. the ECU Configuration Parameter
+        Values). These are not intended as documentation but are mere
+        design notes.
+    :ivar alternative_name: Alternative name of a specification element
+        if its name doesn't fit into the shortName. E.g. because the
+        name contains spaces.
+    :ivar in_scope: indicates, if a specification element is relevant
+        for this data exchange point. It is relevant if inScope==true.
+        It is not relevant or don't care if inScope=false.
+    :ivar multiplicity_restriction: Multiplicity restriction of the
+        attribute
+    :ivar variation_restriction: Restrictions on the usage of variant
+        handling.
+    :ivar type_tailorings: Local class tailoring for content that is
+        referenced by this reference.
+    :ivar unresolved_reference_restriction: Specifies the severity of
+        unresolved references.
+    :ivar s: Checksum calculated by the user's tool environment for an
+        ArObject. May be used in an own tool environment to determine if
+        an ArObject has changed. The checksum has no semantic meaning
+        for an AUTOSAR model and there is no requirement for AUTOSAR
+        tools to manage the checksum.
+    :ivar t: Timestamp calculated by the user's tool environment for an
+        ArObject. May be used in an own tool environment to determine
+        the last change of an ArObject. The timestamp has no semantic
+        meaning for an AUTOSAR model and there is no requirement for
+        AUTOSAR tools to manage the timestamp.
+    :ivar uuid: The purpose of this attribute is to provide a globally
+        unique identifier for an instance of a meta-class. The values of
+        this attribute should be globally unique strings prefixed by the
+        type of identifier.  For example, to include a DCE UUID as
+        defined by The Open Group, the UUID would be preceded by "DCE:".
+        The values of this attribute may be used to support merging of
+        different AUTOSAR models. The form of the UUID (Universally
+        Unique Identifier) is taken from a standard defined by the Open
+        Group (was Open Software Foundation). This standard is widely
+        used, including by Microsoft for COM (GUIDs) and by many
+        companies for DCE, which is based on CORBA. The method for
+        generating these 128-bit IDs is published in the standard and
+        the effectiveness and uniqueness of the IDs is not in practice
+        disputed. If the id namespace is omitted, DCE is assumed. An
+        example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
+        attribute has no semantic meaning for an AUTOSAR model and there
+        is no requirement for AUTOSAR tools to manage the timestamp.
+    """
+
+    class Meta:
+        name = "REFERENCE-TAILORING"
+
+    short_name: Optional[Identifier] = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+            "required": True,
+        },
+    )
+    short_name_fragments: Optional[
+        "ReferenceTailoring.ShortNameFragments"
+    ] = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    long_name: Optional[MultilanguageLongName] = field(
+        default=None,
+        metadata={
+            "name": "LONG-NAME",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    desc: Optional[MultiLanguageOverviewParagraph] = field(
+        default=None,
+        metadata={
+            "name": "DESC",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    category: Optional[CategoryString] = field(
+        default=None,
+        metadata={
+            "name": "CATEGORY",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    admin_data: Optional[AdminData] = field(
+        default=None,
+        metadata={
+            "name": "ADMIN-DATA",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    introduction: Optional[DocumentationBlock] = field(
+        default=None,
+        metadata={
+            "name": "INTRODUCTION",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    annotations: Optional["ReferenceTailoring.Annotations"] = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    alternative_name: Optional[String] = field(
+        default=None,
+        metadata={
+            "name": "ALTERNATIVE-NAME",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    in_scope: Optional[Boolean] = field(
+        default=None,
+        metadata={
+            "name": "IN-SCOPE",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    multiplicity_restriction: Optional[
+        MultiplicityRestrictionWithSeverity
+    ] = field(
+        default=None,
+        metadata={
+            "name": "MULTIPLICITY-RESTRICTION",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
+        default=None,
+        metadata={
+            "name": "VARIATION-RESTRICTION",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    type_tailorings: Optional["ReferenceTailoring.TypeTailorings"] = field(
+        default=None,
+        metadata={
+            "name": "TYPE-TAILORINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    unresolved_reference_restriction: Optional[
+        UnresolvedReferenceRestrictionWithSeverity
+    ] = field(
+        default=None,
+        metadata={
+            "name": "UNRESOLVED-REFERENCE-RESTRICTION",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    s: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "S",
+            "type": "Attribute",
+        },
+    )
+    t: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "T",
+            "type": "Attribute",
+            "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
+        },
+    )
+    uuid: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "UUID",
+            "type": "Attribute",
+        },
+    )
+
+    @dataclass
+    class ShortNameFragments:
+        short_name_fragment: List[ShortNameFragment] = field(
+            default_factory=list,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENT",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
+
+    @dataclass
+    class Annotations:
+        annotation: List[Annotation] = field(
+            default_factory=list,
+            metadata={
+                "name": "ANNOTATION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
+
+    @dataclass
+    class TypeTailorings:
+        abstract_class_tailoring: List[AbstractClassTailoring] = field(
+            default_factory=list,
+            metadata={
+                "name": "ABSTRACT-CLASS-TAILORING",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
+        concrete_class_tailoring: List[ConcreteClassTailoring] = field(
+            default_factory=list,
+            metadata={
+                "name": "CONCRETE-CLASS-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },

@@ -13,6 +13,24 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
+class SpecificParameterAssignmentsRelStructure(
+    ContainmentAggregationStructure
+):
+    class Meta:
+        name = "specificParameterAssignments_RelStructure"
+
+    specific_parameter_assignment: List["SpecificParameterAssignment"] = field(
+        default_factory=list,
+        metadata={
+            "name": "SpecificParameterAssignment",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass
 class SpecificParameterAssignmentVersionStructure(
     ValidityParameterAssignmentVersionStructure
 ):
@@ -35,7 +53,7 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: Optional["SpecificParameterAssignmentsRelStructure"] = field(
+    includes: Optional[SpecificParameterAssignmentsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -72,21 +90,3 @@ class SpecificParameterAssignmentVersionStructure(
 class SpecificParameterAssignment(SpecificParameterAssignmentVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
-
-
-@dataclass
-class SpecificParameterAssignmentsRelStructure(
-    ContainmentAggregationStructure
-):
-    class Meta:
-        name = "specificParameterAssignments_RelStructure"
-
-    specific_parameter_assignment: List[SpecificParameterAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "SpecificParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-        },
-    )

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
 from .can_tp_addressing_format_type import CanTpAddressingFormatType

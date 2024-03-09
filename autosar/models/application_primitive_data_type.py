@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
@@ -15,7 +15,7 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .short_name_fragment import ShortNameFragment
 from .string import String
-from .sw_pointer_target_props import SwDataDefProps
+from .sw_data_def_props import SwDataDefProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

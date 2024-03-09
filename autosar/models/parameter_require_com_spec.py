@@ -1,5 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
+)
 from .application_rule_based_value_specification import (
     ApplicationRuleBasedValueSpecification,
 )
@@ -12,12 +18,6 @@ from .numerical_rule_based_value_specification import (
 from .numerical_value_specification import NumericalValueSpecification
 from .parameter_data_prototype_subtypes_enum import (
     ParameterDataPrototypeSubtypesEnum,
-)
-from .record_value_specification import (
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
 )
 from .ref import Ref
 from .reference_value_specification import ReferenceValueSpecification

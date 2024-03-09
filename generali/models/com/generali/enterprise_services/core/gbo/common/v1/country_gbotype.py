@@ -3,7 +3,7 @@ from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
 )
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sub_division_type import (
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.subdivisions_type import (
     SubdivisionsType,
 )
 

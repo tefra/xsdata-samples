@@ -275,6 +275,98 @@ class CoctMt220300UvCountry:
 
 
 @dataclass
+class CoctMt220300UvManufacturer:
+    class Meta:
+        name = "COCT_MT220300UV.Manufacturer"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    name: Optional[EnExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    telecom: Optional[TelExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    addr: Optional[AdExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    as_related_manufacturer: List["CoctMt220300UvRelatedManufacturer"] = field(
+        default_factory=list,
+        metadata={
+            "name": "asRelatedManufacturer",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[EntityClassOrganization] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+    determiner_code: EntityDeterminer = field(
+        init=False,
+        default=EntityDeterminer.INSTANCE,
+        metadata={
+            "name": "determinerCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+
+
+@dataclass
 class CoctMt220300UvMedicineClass:
     class Meta:
         name = "COCT_MT220300UV.MedicineClass"
@@ -428,6 +520,115 @@ class CoctMt220300UvPolicy:
 
 
 @dataclass
+class CoctMt220300UvDistributedProduct:
+    class Meta:
+        name = "COCT_MT220300UV.DistributedProduct"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    distributing_manufacturer: Optional[CoctMt220300UvManufacturer] = field(
+        default=None,
+        metadata={
+            "name": "distributingManufacturer",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[RoleClassDistributedMaterial] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class CoctMt220300UvMedicineManufacturer:
+    class Meta:
+        name = "COCT_MT220300UV.MedicineManufacturer"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    manufacturer: Optional[CoctMt220300UvManufacturer] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[RoleClassManufacturedProduct] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+
+
+@dataclass
 class CoctMt220300UvRelatedManufacturer:
     class Meta:
         name = "COCT_MT220300UV.RelatedManufacturer"
@@ -463,7 +664,7 @@ class CoctMt220300UvRelatedManufacturer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    represented_manufacturer: Optional["CoctMt220300UvManufacturer"] = field(
+    represented_manufacturer: Optional[CoctMt220300UvManufacturer] = field(
         default=None,
         metadata={
             "name": "representedManufacturer",
@@ -490,9 +691,9 @@ class CoctMt220300UvRelatedManufacturer:
 
 
 @dataclass
-class CoctMt220300UvSubContent:
+class CoctMt220300UvRole:
     class Meta:
-        name = "COCT_MT220300UV.SubContent"
+        name = "COCT_MT220300UV.Role"
 
     realm_code: List[Cs] = field(
         default_factory=list,
@@ -518,22 +719,13 @@ class CoctMt220300UvSubContent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    quantity: Optional[RtoQtyQty] = field(
+    playing_manufacturer: Optional[CoctMt220300UvManufacturer] = field(
         default=None,
         metadata={
+            "name": "playingManufacturer",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        },
-    )
-    contained_packaged_medicine: Optional[
-        "CoctMt220300UvPackagedMedicine"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "containedPackagedMedicine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
+            "required": True,
         },
     )
     null_flavor: Optional[NullFlavor] = field(
@@ -543,204 +735,22 @@ class CoctMt220300UvSubContent:
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
+    class_code: Optional[
+        Union[
+            RoleClassMutualRelationship,
+            RoleClassPassive,
+            str,
+            RoleClassOntological,
+            RoleClassPartitive,
+            RoleClassRootValue,
+        ]
     ] = field(
-        init=False,
-        default=RoleClassPartitive.CONT,
+        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
-    )
-
-
-@dataclass
-class CoctMt220300UvSuperContent:
-    class Meta:
-        name = "COCT_MT220300UV.SuperContent"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    quantity: Optional[RtoQtyQty] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    container_packaged_medicine: Optional[
-        "CoctMt220300UvPackagedMedicine"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "containerPackagedMedicine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
-        init=False,
-        default=RoleClassPartitive.CONT,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
-        },
-    )
-
-
-@dataclass
-class CoctMt220300UvManufacturer:
-    class Meta:
-        name = "COCT_MT220300UV.Manufacturer"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    name: Optional[EnExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    telecom: Optional[TelExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    addr: Optional[AdExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    as_related_manufacturer: List[CoctMt220300UvRelatedManufacturer] = field(
-        default_factory=list,
-        metadata={
-            "name": "asRelatedManufacturer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[EntityClassOrganization] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-    determiner_code: EntityDeterminer = field(
-        init=False,
-        default=EntityDeterminer.INSTANCE,
-        metadata={
-            "name": "determinerCode",
-            "type": "Attribute",
-            "required": True,
         },
     )
 
@@ -1170,251 +1180,6 @@ class CoctMt220300UvAuthor:
 
 
 @dataclass
-class CoctMt220300UvDistributedProduct:
-    class Meta:
-        name = "COCT_MT220300UV.DistributedProduct"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    distributing_manufacturer: Optional[CoctMt220300UvManufacturer] = field(
-        default=None,
-        metadata={
-            "name": "distributingManufacturer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[RoleClassDistributedMaterial] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class CoctMt220300UvMedicineManufacturer:
-    class Meta:
-        name = "COCT_MT220300UV.MedicineManufacturer"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    manufacturer: Optional[CoctMt220300UvManufacturer] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[RoleClassManufacturedProduct] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class CoctMt220300UvPart:
-    class Meta:
-        name = "COCT_MT220300UV.Part"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    quantity: Optional[RtoQtyQty] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    part_medicine: Optional["CoctMt220300UvMedicine"] = field(
-        default=None,
-        metadata={
-            "name": "partMedicine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    subject_of: List[CoctMt220300UvSubject4] = field(
-        default_factory=list,
-        metadata={
-            "name": "subjectOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[RoleClassPartitivePartByBot] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-        },
-    )
-
-
-@dataclass
-class CoctMt220300UvRole:
-    class Meta:
-        name = "COCT_MT220300UV.Role"
-
-    realm_code: List[Cs] = field(
-        default_factory=list,
-        metadata={
-            "name": "realmCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    type_id: Optional[Ii] = field(
-        default=None,
-        metadata={
-            "name": "typeId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    template_id: List[Ii] = field(
-        default_factory=list,
-        metadata={
-            "name": "templateId",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
-    )
-    playing_manufacturer: Optional[CoctMt220300UvManufacturer] = field(
-        default=None,
-        metadata={
-            "name": "playingManufacturer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        },
-    )
-    class_code: Optional[
-        Union[
-            RoleClassMutualRelationship,
-            RoleClassPassive,
-            str,
-            RoleClassOntological,
-            RoleClassPartitive,
-            RoleClassRootValue,
-        ]
-    ] = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
-        },
-    )
-
-
-@dataclass
 class CoctMt220300UvHolder:
     class Meta:
         name = "COCT_MT220300UV.Holder"
@@ -1601,7 +1366,7 @@ class CoctMt220300UvMedicine:
             "nillable": True,
         },
     )
-    part: List[CoctMt220300UvPart] = field(
+    part: List["CoctMt220300UvPart"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1722,6 +1487,77 @@ class CoctMt220300UvApproval:
         default=ActMood.EVN,
         metadata={
             "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        },
+    )
+
+
+@dataclass
+class CoctMt220300UvPart:
+    class Meta:
+        name = "COCT_MT220300UV.Part"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    quantity: Optional[RtoQtyQty] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    part_medicine: Optional[CoctMt220300UvMedicine] = field(
+        default=None,
+        metadata={
+            "name": "partMedicine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
+    )
+    subject_of: List[CoctMt220300UvSubject4] = field(
+        default_factory=list,
+        metadata={
+            "name": "subjectOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Optional[RoleClassPartitivePartByBot] = field(
+        default=None,
+        metadata={
+            "name": "classCode",
             "type": "Attribute",
             "required": True,
         },
@@ -2008,7 +1844,7 @@ class CoctMt220300UvPackagedMedicine:
             "nillable": True,
         },
     )
-    as_super_content: Optional[CoctMt220300UvSuperContent] = field(
+    as_super_content: Optional["CoctMt220300UvSuperContent"] = field(
         default=None,
         metadata={
             "name": "asSuperContent",
@@ -2017,7 +1853,7 @@ class CoctMt220300UvPackagedMedicine:
             "nillable": True,
         },
     )
-    sub_content: Optional[CoctMt220300UvSubContent] = field(
+    sub_content: Optional["CoctMt220300UvSubContent"] = field(
         default=None,
         metadata={
             "name": "subContent",
@@ -2123,6 +1959,170 @@ class CoctMt220300UvContent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
+        init=False,
+        default=RoleClassPartitive.CONT,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+
+
+@dataclass
+class CoctMt220300UvSubContent:
+    class Meta:
+        name = "COCT_MT220300UV.SubContent"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    quantity: Optional[RtoQtyQty] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    contained_packaged_medicine: Optional[
+        CoctMt220300UvPackagedMedicine
+    ] = field(
+        default=None,
+        metadata={
+            "name": "containedPackagedMedicine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        },
+    )
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
+        init=False,
+        default=RoleClassPartitive.CONT,
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        },
+    )
+
+
+@dataclass
+class CoctMt220300UvSuperContent:
+    class Meta:
+        name = "COCT_MT220300UV.SuperContent"
+
+    realm_code: List[Cs] = field(
+        default_factory=list,
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    type_id: Optional[Ii] = field(
+        default=None,
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    template_id: List[Ii] = field(
+        default_factory=list,
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    quantity: Optional[RtoQtyQty] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
+    )
+    container_packaged_medicine: Optional[
+        CoctMt220300UvPackagedMedicine
+    ] = field(
+        default=None,
+        metadata={
+            "name": "containerPackagedMedicine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
         },
     )
     null_flavor: Optional[NullFlavor] = field(

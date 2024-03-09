@@ -3,9 +3,9 @@ from typing import Optional, Union
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
 )
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .control_centre_ref import ControlCentreRef
 from .department_ref import DepartmentRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .organisation_part_ref import OrganisationPartRef
 from .organisational_unit_ref import OrganisationalUnitRef

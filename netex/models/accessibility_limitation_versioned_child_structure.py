@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .audible_signals_available import AudibleSignalsAvailable
+from .entity_in_version_structure import VersionedChildStructure
 from .escalator_free_access import EscalatorFreeAccess
 from .lift_free_access import LiftFreeAccess
 from .step_free_access import StepFreeAccess

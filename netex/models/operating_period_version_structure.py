@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDateTime
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .holiday_type_enumeration import HolidayTypeEnumeration
 from .multilingual_string import MultilingualString
 from .operating_day_ref_structure import OperatingDayRefStructure

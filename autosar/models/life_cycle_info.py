@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import DocumentationBlock
+from .admin_data import DocumentationBlock
 from .life_cycle_period import LifeCyclePeriod
 from .life_cycle_state_subtypes_enum import LifeCycleStateSubtypesEnum
 from .ref import Ref

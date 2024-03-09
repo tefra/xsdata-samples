@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dead_run_ref import DeadRunRef
+from .entity_in_version_structure import VersionedChildStructure
 from .journey_pattern_ref import JourneyPatternRef
 from .link_sequence_ref import LinkSequenceRef
 from .multilingual_string import MultilingualString

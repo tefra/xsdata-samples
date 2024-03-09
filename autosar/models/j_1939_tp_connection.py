@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .boolean import Boolean
 from .i_pdu_subtypes_enum import IPduSubtypesEnum
 from .j_1939_tp_node_subtypes_enum import J1939TpNodeSubtypesEnum

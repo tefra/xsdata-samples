@@ -2,17 +2,17 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from voko.models.aut import Aut
 from voko.models.ctl import Ctl
-from voko.models.em import Em
-from voko.models.esc import Esc
-from voko.models.fnt import Fnt
-from voko.models.frm import Frm
-from voko.models.mis import Mis
-from voko.models.mll import (
+from voko.models.ekz import (
     Ekz,
     Klr,
     Ref,
     Refgrp,
 )
+from voko.models.em import Em
+from voko.models.esc import Esc
+from voko.models.fnt import Fnt
+from voko.models.frm import Frm
+from voko.models.mis import Mis
 from voko.models.nac import Nac
 from voko.models.nom import Nom
 from voko.models.sncref import Sncref

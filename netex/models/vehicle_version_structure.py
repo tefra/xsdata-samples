@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from xsdata.models.datatype import XmlDate
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
 from .car_model_profile_ref import CarModelProfileRef
 from .compound_train_ref import CompoundTrainRef
 from .cycle_model_profile_ref import CycleModelProfileRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .equipments_rel_structure import EquipmentsRelStructure
 from .multilingual_string import MultilingualString
 from .operator_ref import OperatorRef

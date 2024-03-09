@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .connection_ref_structure import ConnectionRefStructure
 from .fare_basis_enumeration import FareBasisEnumeration
 from .fare_points_in_pattern_rel_structure import (
@@ -9,6 +8,7 @@ from .fare_points_in_pattern_rel_structure import (
 )
 from .journey_pattern_refs_rel_structure import JourneyPatternRefsRelStructure
 from .multilingual_string import MultilingualString
+from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .private_code import PrivateCode
 from .routing_type_enumeration import RoutingTypeEnumeration
 from .series_constraint_prices_rel_structure import (

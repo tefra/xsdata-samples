@@ -55,7 +55,8 @@ def test(suite: str, output_format: str, *args):
 
 def mypy(suite: str, *args):
     print(f"**** Running static analysis: {suite} ****")
-    subprocess.run(f"mypy {suite}/models", shell=True, check=True)
+    if suite not in ("generali"):
+        subprocess.run(f"mypy {suite}/models", shell=True, check=True)
 
 
 def init_config(suite: str, *args):

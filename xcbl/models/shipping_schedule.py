@@ -1461,6 +1461,31 @@ class PackageDescription:
 
 
 @dataclass(kw_only=True)
+class PackageDetail:
+    package_type: PackageType = field(
+        metadata={
+            "name": "PackageType",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    number_of_packages: NumberOfPackages = field(
+        metadata={
+            "name": "NumberOfPackages",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    list_of_package: Optional["ListOfPackage"] = field(
+        default=None,
+        metadata={
+            "name": "ListOfPackage",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class AssociatedDocuments:
     list_of_document_loose: Optional[ListOfDocumentLoose] = field(
         default=None,
@@ -1495,6 +1520,18 @@ class ListOfPackageDescription:
         default_factory=list,
         metadata={
             "name": "PackageDescription",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfPackageDetail:
+    package_detail: List[PackageDetail] = field(
+        default_factory=list,
+        metadata={
+            "name": "PackageDetail",
             "type": "Element",
             "min_occurs": 1,
         },
@@ -1589,60 +1626,11 @@ class Package:
             "type": "Element",
         },
     )
-    package_detail: List["PackageDetail"] = field(
-        default_factory=list,
-        metadata={
-            "name": "PackageDetail",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfPackage:
-    package: List[Package] = field(
-        default_factory=list,
-        metadata={
-            "name": "Package",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class PackageDetail:
-    package_type: PackageType = field(
-        metadata={
-            "name": "PackageType",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    number_of_packages: NumberOfPackages = field(
-        metadata={
-            "name": "NumberOfPackages",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    list_of_package: Optional[ListOfPackage] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPackage",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfPackageDetail:
     package_detail: List[PackageDetail] = field(
         default_factory=list,
         metadata={
             "name": "PackageDetail",
             "type": "Element",
-            "min_occurs": 1,
         },
     )
 
@@ -1686,5 +1674,17 @@ class ShippingSchedule:
         metadata={
             "name": "ShippingScheduleSummary",
             "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfPackage:
+    package: List[Package] = field(
+        default_factory=list,
+        metadata={
+            "name": "Package",
+            "type": "Element",
+            "min_occurs": 1,
         },
     )

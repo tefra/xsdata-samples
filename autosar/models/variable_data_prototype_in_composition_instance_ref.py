@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
 from .ref import Ref
 from .sw_component_prototype_subtypes_enum import (

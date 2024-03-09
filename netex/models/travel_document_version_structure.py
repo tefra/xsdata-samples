@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
+from .entity_in_version_structure import DataManagedObjectStructure
 from .marked_as_enumeration import MarkedAsEnumeration
 from .multilingual_string import MultilingualString
 from .private_code import PrivateCode

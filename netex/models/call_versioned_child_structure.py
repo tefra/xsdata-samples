@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .arrival_structure import ArrivalStructure
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .departure_structure import DepartureStructure
 from .destination_display_ref import DestinationDisplayRef
 from .destination_display_view import DestinationDisplayView
 from .dynamic_advertisement_enumeration import DynamicAdvertisementEnumeration
+from .entity_in_version_structure import VersionedChildStructure
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .flexible_point_properties import FlexiblePointProperties
 from .frequency_structure import FrequencyStructure

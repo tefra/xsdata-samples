@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import (
+from .admin_data import (
     AdminData,
     Annotation,
     DocumentationBlock,
@@ -15,7 +15,7 @@ from .persistency_element_level_update_strategy_enum import (
 )
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .sw_pointer_target_props import SwDataDefProps
+from .sw_data_def_props import SwDataDefProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

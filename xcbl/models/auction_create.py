@@ -14,29 +14,6 @@ from xcbl.models.sourcing_result import ListOfAttachment
 
 
 @dataclass(kw_only=True)
-class AuctionItemComponent:
-    auction_create_detail: "AuctionCreateDetail" = field(
-        metadata={
-            "name": "AuctionCreateDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfAuctionItemComponents:
-    auction_item_component: List[AuctionItemComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "AuctionItemComponent",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class AuctionCreateDetail:
     auction_item: AuctionItem = field(
         metadata={
@@ -88,13 +65,24 @@ class AuctionCreateDetail:
         }
     )
     list_of_auction_item_components: Optional[
-        ListOfAuctionItemComponents
+        "ListOfAuctionItemComponents"
     ] = field(
         default=None,
         metadata={
             "name": "ListOfAuctionItemComponents",
             "type": "Element",
         },
+    )
+
+
+@dataclass(kw_only=True)
+class AuctionItemComponent:
+    auction_create_detail: AuctionCreateDetail = field(
+        metadata={
+            "name": "AuctionCreateDetail",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -132,4 +120,16 @@ class AuctionCreate:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfAuctionItemComponents:
+    auction_item_component: List[AuctionItemComponent] = field(
+        default_factory=list,
+        metadata={
+            "name": "AuctionItemComponent",
+            "type": "Element",
+            "min_occurs": 1,
+        },
     )

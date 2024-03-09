@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from .access_mode_enumeration import AccessModeEnumeration
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .transfer_duration_structure import TransferDurationStructure
 from .type_of_transfer_ref import TypeOfTransferRef

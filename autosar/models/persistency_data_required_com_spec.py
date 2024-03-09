@@ -1,5 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from .application_assoc_map_element_value_specification import (
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
+)
 from .application_rule_based_value_specification import (
     ApplicationRuleBasedValueSpecification,
 )
@@ -12,12 +18,6 @@ from .numerical_rule_based_value_specification import (
 from .numerical_value_specification import NumericalValueSpecification
 from .persistency_data_element_subtypes_enum import (
     PersistencyDataElementSubtypesEnum,
-)
-from .record_value_specification import (
-    ApplicationAssocMapValueSpecification,
-    ArrayValueSpecification,
-    CompositeRuleBasedValueSpecification,
-    RecordValueSpecification,
 )
 from .ref import Ref
 from .reference_value_specification import ReferenceValueSpecification

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .compass_bearing16_enumeration import CompassBearing16Enumeration
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .path_heading_enumeration import PathHeadingEnumeration
 from .point_on_route_ref import PointOnRouteRef

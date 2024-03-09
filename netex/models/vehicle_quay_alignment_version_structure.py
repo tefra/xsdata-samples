@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .alternative_texts_rel_structure import VersionedChildStructure
+from .entity_in_version_structure import VersionedChildStructure
 from .quay_ref import QuayRef
 from .taxi_stand_ref import TaxiStandRef
 from .vehicle_stopping_place_ref import VehicleStoppingPlaceRef

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .delivery_variants_rel_structure import DeliveryVariantsRelStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .private_code import PrivateCode
 from .type_of_notice_ref import TypeOfNoticeRef

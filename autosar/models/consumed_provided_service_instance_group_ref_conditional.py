@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .consumed_provided_service_instance_group_subtypes_enum import (
     ConsumedProvidedServiceInstanceGroupSubtypesEnum,
 )

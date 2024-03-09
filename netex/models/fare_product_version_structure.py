@@ -12,7 +12,7 @@ from .condition_summary import ConditionSummary
 from .fare_product_prices_rel_structure import FareProductPricesRelStructure
 from .fare_product_ref import FareProductRef
 from .general_organisation_ref import GeneralOrganisationRef
-from .generic_parameter_assignment_version_structure import (
+from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
     GenericParameterAssignmentsRelStructure,

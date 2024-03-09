@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .c_identifier import CIdentifier
 from .identifier import Identifier
 from .short_name_fragment import ShortNameFragment

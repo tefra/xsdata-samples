@@ -1015,17 +1015,6 @@ class NameAddressAddressTypeCoded(Enum):
 
 
 @dataclass(kw_only=True)
-class OtherCharacteristicAttribute:
-    characteristic_attribute: "CharacteristicAttribute" = field(
-        metadata={
-            "name": "CharacteristicAttribute",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class PartyRoleCoded:
     value: str = field(
         default="",
@@ -2401,7 +2390,9 @@ class CharacteristicAttribute:
             "type": "Element",
         },
     )
-    other_characteristic_attribute: List[OtherCharacteristicAttribute] = field(
+    other_characteristic_attribute: List[
+        "OtherCharacteristicAttribute"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "OtherCharacteristicAttribute",
@@ -2578,6 +2569,17 @@ class ListOfPartyCoded:
             "type": "Element",
             "min_occurs": 1,
         },
+    )
+
+
+@dataclass(kw_only=True)
+class OtherCharacteristicAttribute:
+    characteristic_attribute: CharacteristicAttribute = field(
+        metadata={
+            "name": "CharacteristicAttribute",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 

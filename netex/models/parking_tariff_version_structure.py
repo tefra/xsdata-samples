@@ -1,12 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
-from .cell_versioned_child_structure import (
-    FareTablesRelStructure,
-    PriceGroupsRelStructure,
-)
+from .entity_in_version_structure import DataManagedObjectStructure
 from .general_organisation_ref import GeneralOrganisationRef
 from .group_of_operators_ref import GroupOfOperatorsRef
 from .info_links_rel_structure import InfoLinksRelStructure
@@ -23,6 +19,10 @@ from .parking_stay_enumeration import ParkingStayEnumeration
 from .parking_user_enumeration import ParkingUserEnumeration
 from .parking_vehicle_enumeration import ParkingVehicleEnumeration
 from .price_unit_ref import PriceUnitRef
+from .priceable_object_version_structure import (
+    FareTablesRelStructure,
+    PriceGroupsRelStructure,
+)
 from .quality_structure_factors_rel_structure import (
     QualityStructureFactorsRelStructure,
 )

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .composition_sw_component_type_subtypes_enum import (
     CompositionSwComponentTypeSubtypesEnum,
 )

@@ -12,11 +12,6 @@ from netex.models.accommodation_facility_list import AccommodationFacilityList
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType1
-from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
-from netex.models.alternative_texts_rel_structure import OperatingDay
-from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.arrival_structure import ArrivalStructure
 from netex.models.assistance_facility_enumeration import AssistanceFacilityEnumeration
 from netex.models.assistance_facility_list import AssistanceFacilityList
@@ -71,8 +66,11 @@ from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.direction_view import DirectionView
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
-from netex.models.entities_in_version_rel_structure import CompositeFrame
-from netex.models.entities_in_version_rel_structure import FramesRelStructure
+from netex.models.entity_in_version_structure import AvailabilityCondition
+from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayTypesRelStructure
+from netex.models.entity_in_version_structure import OperatingDay
+from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.entrance_enumeration import EntranceEnumeration
 from netex.models.equipments_rel_structure import EquipmentsRelStructure
 from netex.models.escalator_free_access import EscalatorFreeAccess
@@ -81,6 +79,8 @@ from netex.models.fare_classes import FareClasses
 from netex.models.fuel_type_enumeration import FuelTypeEnumeration
 from netex.models.gender_limitation_enumeration import GenderLimitationEnumeration
 from netex.models.general_organisation import GeneralOrganisation
+from netex.models.general_version_frame_structure import CompositeFrame
+from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.group_of_services import GroupOfServices
 from netex.models.group_of_services_member_structure import GroupOfServicesMemberStructure
 from netex.models.group_of_services_members_rel_structure import GroupOfServicesMembersRelStructure
@@ -197,8 +197,8 @@ from netex.models.scheduled_stop_point import ScheduledStopPoint
 from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
 from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledStopPointsInFrameRelStructure
-from netex.models.section_in_sequence_versioned_child_structure import LineSection
 from netex.models.section_type_enumeration import SectionTypeEnumeration
+from netex.models.sections_in_sequence_rel_structure import LineSection
 from netex.models.service_calendar import ServiceCalendar
 from netex.models.service_calendar_frame import ServiceCalendarFrame
 from netex.models.service_calendar_frame_ref import ServiceCalendarFrameRef

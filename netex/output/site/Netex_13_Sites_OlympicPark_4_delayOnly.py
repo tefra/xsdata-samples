@@ -1,4 +1,3 @@
-from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.check_constraint import CheckConstraint
 from netex.models.check_constraint_delay import CheckConstraintDelay
@@ -8,6 +7,7 @@ from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
+from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.multilingual_string import MultilingualString
 from netex.models.participant_ref import ParticipantRef
 from netex.models.publication_delivery import PublicationDelivery

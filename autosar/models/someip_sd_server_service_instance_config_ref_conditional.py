@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .ref import Ref
 from .someip_sd_server_service_instance_config_subtypes_enum import (
     SomeipSdServerServiceInstanceConfigSubtypesEnum,

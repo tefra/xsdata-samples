@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
 from .ref import Ref
 

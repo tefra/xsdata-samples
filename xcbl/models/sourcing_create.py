@@ -498,17 +498,6 @@ class SourcingCreateName:
 
 
 @dataclass(kw_only=True)
-class SourcingItemComponent:
-    sourcing_create_detail: "SourcingCreateDetail" = field(
-        metadata={
-            "name": "SourcingCreateDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class SourcingItemDescription:
     value: str = field(
         default="",
@@ -723,18 +712,6 @@ class ListOfParty:
         default_factory=list,
         metadata={
             "name": "Party",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfSourcingItemComponent:
-    sourcing_item_component: List[SourcingItemComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "SourcingItemComponent",
             "type": "Element",
             "min_occurs": 1,
         },
@@ -1527,7 +1504,7 @@ class SourcingCreateDetail:
         }
     )
     list_of_sourcing_item_component: Optional[
-        ListOfSourcingItemComponent
+        "ListOfSourcingItemComponent"
     ] = field(
         default=None,
         metadata={
@@ -1697,6 +1674,29 @@ class SourcingCreateHeader:
         metadata={
             "name": "SourcingSpecifications",
             "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingItemComponent:
+    sourcing_create_detail: SourcingCreateDetail = field(
+        metadata={
+            "name": "SourcingCreateDetail",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfSourcingItemComponent:
+    sourcing_item_component: List[SourcingItemComponent] = field(
+        default_factory=list,
+        metadata={
+            "name": "SourcingItemComponent",
+            "type": "Element",
+            "min_occurs": 1,
         },
     )
 

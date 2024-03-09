@@ -7,9 +7,9 @@ from .all_vehicle_modes_of_transport_enumeration import (
 from .allowed_line_directions_rel_structure import (
     AllowedLineDirectionsRelStructure,
 )
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
+from .entity_in_version_structure import DataManagedObjectStructure
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .group_of_lines_ref_structure import GroupOfLinesRefStructure
 from .info_links_rel_structure import InfoLinksRelStructure

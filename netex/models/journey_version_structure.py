@@ -9,9 +9,7 @@ from .journey_accountings_rel_structure import JourneyAccountingsRelStructure
 from .link_sequence_projection import LinkSequenceProjection
 from .link_sequence_projection_ref import LinkSequenceProjectionRef
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from .section_in_sequence_versioned_child_structure import (
-    LinkSequenceVersionStructure,
-)
+from .sections_in_sequence_rel_structure import LinkSequenceVersionStructure
 from .transport_submode import TransportSubmode
 from .type_of_product_category_ref import TypeOfProductCategoryRef
 from .type_of_service_ref import TypeOfServiceRef

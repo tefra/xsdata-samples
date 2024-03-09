@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlDateTime
-from .alternative_texts_rel_structure import (
+from .closed_timestamp_range_structure import ClosedTimestampRangeStructure
+from .composite_frame_ref import CompositeFrameRef
+from .driver_schedule_frame_ref import DriverScheduleFrameRef
+from .empty_type_2 import EmptyType2
+from .entity_in_version_structure import (
     AvailabilityCondition,
     SimpleAvailabilityCondition,
     ValidDuring,
@@ -9,10 +13,6 @@ from .alternative_texts_rel_structure import (
     ValidityRuleParameter,
     ValidityTrigger,
 )
-from .closed_timestamp_range_structure import ClosedTimestampRangeStructure
-from .composite_frame_ref import CompositeFrameRef
-from .driver_schedule_frame_ref import DriverScheduleFrameRef
-from .empty_type_2 import EmptyType2
 from .fare_frame_ref import FareFrameRef
 from .general_frame_ref import GeneralFrameRef
 from .infrastructure_frame_ref import InfrastructureFrameRef

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .boarding_position_ref import BoardingPositionRef
+from .entity_in_version_structure import VersionedChildStructure
 from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
 

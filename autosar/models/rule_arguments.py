@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .numerical_or_text import NumericalOrText
 from .numerical_value import NumericalValue
 from .numerical_value_variation_point import NumericalValueVariationPoint

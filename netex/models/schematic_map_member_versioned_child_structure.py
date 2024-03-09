@@ -23,7 +23,6 @@ from .all_transport_organisations_ref import AllTransportOrganisationsRef
 from .allowed_line_direction_ref import AllowedLineDirectionRef
 from .alternative_name_ref import AlternativeNameRef
 from .alternative_text_ref import AlternativeTextRef
-from .alternative_texts_rel_structure import VersionedChildStructure
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .authority_ref import AuthorityRef
 from .availability_condition_ref import AvailabilityConditionRef
@@ -114,6 +113,7 @@ from .emv_card_ref import EmvCardRef
 from .entitlement_given_ref import EntitlementGivenRef
 from .entitlement_product_ref import EntitlementProductRef
 from .entitlement_required_ref import EntitlementRequiredRef
+from .entity_in_version_structure import VersionedChildStructure
 from .entrance_ref import EntranceRef
 from .equipment_place_ref import EquipmentPlaceRef
 from .equipment_position_ref import EquipmentPositionRef

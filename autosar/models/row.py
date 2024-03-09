@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .annotation import VariationPoint
+from .admin_data import VariationPoint
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
 from .entry import Entry
 from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple

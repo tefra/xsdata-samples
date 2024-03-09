@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional, Type, Union
-from .alternative_texts_rel_structure import DataManagedObjectStructure
+from typing import List, Optional, Union
 from .authority_ref import AuthorityRef
 from .common_section_point_members_rel_structure import (
     CommonSectionPointMembersRelStructure,
@@ -13,6 +12,7 @@ from .destination_display_view import DestinationDisplayView
 from .direction_ref import DirectionRef
 from .direction_type_enumeration import DirectionTypeEnumeration
 from .direction_view import DirectionView
+from .entity_in_version_structure import DataManagedObjectStructure
 from .fare_point_in_pattern_ref_structure import FarePointInPatternRefStructure
 from .fare_section_ref import FareSectionRef
 from .flexible_line_ref import FlexibleLineRef
@@ -72,97 +72,11 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class SectionInSequenceVersionedChildStructure(
-    LinkInLinkSequenceVersionedChildStructure
-):
-    class Meta:
-        name = "SectionInSequence_VersionedChildStructure"
-
-    section_ref_or_general_section_ref_or_section: Optional[
-        Union[
-            ParentCommonSectionRef,
-            CommonSectionRef,
-            LineSectionRef,
-            FareSectionRef,
-            GeneralSectionRef,
-            SectionRef,
-            "FareSection",
-            "CommonSection",
-            "LineSection",
-            "GeneralSection",
-        ]
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ParentCommonSectionRef",
-                    "type": ParentCommonSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CommonSectionRef",
-                    "type": CommonSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineSectionRef",
-                    "type": LineSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareSectionRef",
-                    "type": FareSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeneralSectionRef",
-                    "type": GeneralSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SectionRef",
-                    "type": SectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareSection",
-                    "type": Type["FareSection"],
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CommonSection",
-                    "type": Type["CommonSection"],
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineSection",
-                    "type": Type["LineSection"],
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeneralSection",
-                    "type": Type["GeneralSection"],
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
-    )
-
-
-@dataclass
-class SectionInSequence(SectionInSequenceVersionedChildStructure):
-    class Meta:
-        namespace = "http://www.netex.org.uk/netex"
-
-
-@dataclass
 class SectionsInSequenceRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "sectionsInSequence_RelStructure"
 
-    section_in_sequence: List[SectionInSequence] = field(
+    section_in_sequence: List["SectionInSequence"] = field(
         default_factory=list,
         metadata={
             "name": "SectionInSequence",
@@ -599,7 +513,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             ServicePatternRef,
             DeadRunJourneyPatternRef,
             JourneyPatternRef,
-            "JourneyPattern1",
+            JourneyPattern1,
         ]
     ] = field(
         default=None,
@@ -628,7 +542,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
                 },
                 {
                     "name": "JourneyPattern",
-                    "type": Type["JourneyPattern1"],
+                    "type": JourneyPattern1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -668,5 +582,91 @@ class LineSection(LineSectionVersionStructure):
 
 @dataclass
 class FareSection(FareSectionVersionStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class SectionInSequenceVersionedChildStructure(
+    LinkInLinkSequenceVersionedChildStructure
+):
+    class Meta:
+        name = "SectionInSequence_VersionedChildStructure"
+
+    section_ref_or_general_section_ref_or_section: Optional[
+        Union[
+            ParentCommonSectionRef,
+            CommonSectionRef,
+            LineSectionRef,
+            FareSectionRef,
+            GeneralSectionRef,
+            SectionRef,
+            FareSection,
+            CommonSection,
+            LineSection,
+            GeneralSection,
+        ]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParentCommonSectionRef",
+                    "type": ParentCommonSectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommonSectionRef",
+                    "type": CommonSectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineSectionRef",
+                    "type": LineSectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareSectionRef",
+                    "type": FareSectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralSectionRef",
+                    "type": GeneralSectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SectionRef",
+                    "type": SectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareSection",
+                    "type": FareSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommonSection",
+                    "type": CommonSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineSection",
+                    "type": LineSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralSection",
+                    "type": GeneralSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
+    )
+
+
+@dataclass
+class SectionInSequence(SectionInSequenceVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
