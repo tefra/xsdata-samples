@@ -17,9 +17,9 @@ dtd = etree.DTD(schemas.joinpath("vokoxml.dtd"))
 @pytest.mark.parametrize("sample", samples)
 def test_bindings(sample, xml_parser, xml_serializer):
     xml_parser.config.load_dtd = True
-    obj = xml_parser.parse(sample, Vortaro)
-    result = xml_serializer.render(obj, ns_map=xml_parser.ns_map)
-    xml_parser.ns_map.clear()
+    ns_map = {}
+    obj = xml_parser.parse(sample, Vortaro, ns_map)
+    result = xml_serializer.render(obj, ns_map=ns_map)
 
     sample_path = Path(sample).relative_to(samples_dir)
     expected = output_dir.joinpath(sample_path)

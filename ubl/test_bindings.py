@@ -25,10 +25,10 @@ def get_validator(xsd: str):
 
 @pytest.mark.parametrize("schema,sample", cases, ids=ids)
 def test_serialize(schema, sample, xml_parser, xml_serializer, code_serializer):
-    obj = xml_parser.parse(sample)
-    result = xml_serializer.render(obj, ns_map=xml_parser.ns_map)
+    ns_map = {}
+    obj = xml_parser.parse(sample, ns_map=ns_map)
+    result = xml_serializer.render(obj, ns_map=ns_map)
     code = code_serializer.render(obj)
-    xml_parser.ns_map.clear()
     output = Path(sample)
 
     output.with_suffix(".py").write_text(code)

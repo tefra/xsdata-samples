@@ -16,10 +16,10 @@ validator = etree.XMLSchema(etree.parse(str(schema)))
 
 @pytest.mark.parametrize("sample", samples)
 def test_bindings(sample, xml_parser, xml_serializer, code_serializer):
-    obj = xml_parser.from_path(functions.joinpath(sample), PublicationDelivery)
-    result = xml_serializer.render(obj, ns_map=xml_parser.ns_map)
+    ns_map = {}
+    obj = xml_parser.from_path(functions.joinpath(sample), PublicationDelivery, ns_map)
+    result = xml_serializer.render(obj, ns_map=ns_map)
     code = code_serializer.render(obj)
-    xml_parser.ns_map.clear()
 
     expected = output.joinpath(sample)
     expected.parent.mkdir(parents=True, exist_ok=True)
