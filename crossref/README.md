@@ -5,10 +5,10 @@
 - Complicated MathML schemas
 - Namespace-clusters
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build crossref
-$ ./run.py test crossref
-$ ./run.py mypy crossref
+$ inv crossref.build
+$ inv crossref.test
+$ inv crossref.mypy
 ```

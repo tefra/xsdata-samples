@@ -1,8 +1,9 @@
 # Erasmus Without Paper (EWP) [project](https://developers.erasmuswithoutpaper.eu/)
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build ewp
-$ ./run.py test ewp
+$ inv ewp.build
+$ inv ewp.test
+$ inv ewp.mypy
 ```

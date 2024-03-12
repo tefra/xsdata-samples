@@ -2,15 +2,16 @@
 
 ## CodeGen
 
-This suite is testing the dtd code generator and the xml parser that loads external dtds.
+This suite is testing the dtd code generator and the xml parser that loads external
+dtds.
 
- - kwonly dataclasses
- - restrictions accuracy
+- kwonly dataclasses
+- restrictions accuracy
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run build voko
-$ ./run test voko
-$ ./run mypy voko
+$ inv voko.build
+$ inv voko.test
+$ inv voko.mypy
 ```

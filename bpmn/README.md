@@ -2,18 +2,16 @@
 
 ## Notes
 
-
-This suite demonstrates really rare aspects of xsd like subclasses with 
-different namespaces and conflicting global elements with substitution groups.
+This suite demonstrates really rare aspects of xsd like subclasses with different
+namespaces and conflicting global elements with substitution groups.
 
 - Auto generated models
 - Verify parsing from sample
 
-
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build bpmn
-$ ./run.py test bpmn
-$ ./run.py mypy bpmn
+$ inv bpmn.build
+$ inv bpmn.test
+$ inv bpmn.mypy
 ```

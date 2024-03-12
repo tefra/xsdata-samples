@@ -1,13 +1,14 @@
 # Generali Enterprise [services](http://generali.com)
 
 ## Highlights
+
 - Move inner types to upper level
 - Enumeration restrictions
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build generali
-$ ./run.py test generali
-$ ./run.py mypy generali
+$ inv generali.build
+$ inv generali.test
+$ inv generali.mypy
 ```

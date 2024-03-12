@@ -7,10 +7,10 @@
 - Serialization test for request sample from json -> python -> xml
 - Module and class names aliases in configuration file.
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build amadeus
-$ ./run.py test amadeus
-$ ./run.py mypy amadeus
+$ inv amadeus.build
+$ inv amadeus.test
+$ inv amadeus.mypy
 ```

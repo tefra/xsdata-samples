@@ -5,10 +5,10 @@
 - Generate models from the launches endpoint response
 - Verify bindings
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build spacex
-$ ./run.py test spacex
-$ ./run.py mypy spacex
+$ inv spacex.build
+$ inv spacex.test
+$ inv spacex.mypy
 ```

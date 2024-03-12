@@ -1,5 +1,6 @@
 import functools
 from pathlib import Path
+from typing import Dict
 
 import pytest
 from lxml import etree
@@ -25,7 +26,7 @@ def get_validator(xsd: str):
 
 @pytest.mark.parametrize("schema,sample", cases, ids=ids)
 def test_serialize(schema, sample, xml_parser, xml_serializer, code_serializer):
-    ns_map = {}
+    ns_map: Dict = {}
     obj = xml_parser.parse(sample, ns_map=ns_map)
     result = xml_serializer.render(obj, ns_map=ns_map)
     code = code_serializer.render(obj)

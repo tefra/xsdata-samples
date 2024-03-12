@@ -3,10 +3,10 @@
 The schemas are auto generated from UML and contain some very interesting
 characteristics with multi-level extensible elements.
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build datexii
-$ ./run.py mypy datexii
-$ ./run.py test datexii
+$ inv datexii.build
+$ inv datexii.test
+$ inv datexii.mypy
 ```
