@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Dict
 
 import pytest
 from lxml import etree
@@ -14,7 +15,7 @@ samples = list(map(str, samples_dir.rglob("*.xml")))
 
 @pytest.mark.parametrize("sample", samples)
 def test_bindings(sample, xml_parser, xml_serializer):
-    ns_map = {}
+    ns_map: Dict = {}
     obj = xml_parser.parse(sample, ns_map=ns_map)
     result = xml_serializer.render(obj, ns_map=ns_map)
 

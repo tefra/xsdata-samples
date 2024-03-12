@@ -7,9 +7,10 @@
 
 This suite is an exceptional sample for complex definitions with edge cases.
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build common
-$ ./run.py mypy common
+$ inv common-types.build
+$ inv common-types.test
+$ inv common-types.mypy
 ```

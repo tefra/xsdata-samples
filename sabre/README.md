@@ -8,9 +8,10 @@
 
 The given definitions have a good balance between reusability and readability.
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build sabre
-$ ./run.py test sabre
+$ inv sabre.build
+$ inv sabre.test
+$ inv sabre.mypy
 ```

@@ -2,18 +2,17 @@
 
 ## Notes
 
-This suite is following some unique patterns with a lot of naming conflicts
-and inner types. Also demonstrates most likely a bug in mypy that doesn't allow
-an outer class sharing the same name with an inner class.
+This suite is following some unique patterns with a lot of naming conflicts and inner
+types. Also demonstrates most likely a bug in mypy that doesn't allow an outer class
+sharing the same name with an inner class.
 
 - Auto generated models
 - Verify parsing from sample
 
-
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build autosar
-$ ./run.py test autosar
-$ ./run.py mypy autosar
+$ inv autosar.build
+$ inv autosar.test
+$ inv autosar.mypy
 ```

@@ -13,10 +13,10 @@ by target namespace.
 
 Test with pypy against output validate serializer output.
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build reqif
-$ ./run.py test reqif
-$ ./run.py mypy reqif
+$ inv reqif.build
+$ inv reqif.test
+$ inv reqif.mypy
 ```

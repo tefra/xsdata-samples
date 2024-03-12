@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Dict
 
 from generali.models.com.generali.enterprise_services.core.gbm.enterprise.agreement.v1 import (  # noqa
     NotifyProgramGbmrequest,
@@ -11,7 +12,7 @@ def test_parser(xml_parser, xml_serializer):
     fixture = "example"
     xml_fixture = cwd.joinpath(f"{fixture}.xml")
     xsdata_fixture = cwd.joinpath(f"{fixture}.xsdata.xml")
-    ns_map = {}
+    ns_map: Dict = {}
     obj = xml_parser.from_path(xml_fixture, NotifyProgramGbmrequest, ns_map)
     result = xml_serializer.render(obj, ns_map)
 

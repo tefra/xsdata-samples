@@ -16,7 +16,7 @@ class FetchTest(TestCase):
         response.status_code = 200
 
         sample_xml = Path(__file__).with_name("sample.xml").read_text()
-        type(response).text = mock.PropertyMock(return_value=sample_xml)
+        type(response).text = mock.PropertyMock(return_value=sample_xml)  # type: ignore
         mock_requests_get.return_value = response
         currencies = fetch()
 

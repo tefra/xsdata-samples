@@ -6,9 +6,10 @@
 - Verify bindings from samples
 - Showcase class filter strategy `referredGlobals`
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build ubl
-$ ./run.py test ubl
+$ inv ubl.build
+$ inv ubl.test
+$ inv ubl.mypy
 ```

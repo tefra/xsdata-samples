@@ -5,13 +5,13 @@
 - Auto generated models and services from the `air_v48_0/Air.wsdl`
 - Serialization test for `LowFareSearchReq` sample from json -> python -> xml
 
-The given schema is an excellent example for grouping together multiple root models,
-and mixing namespaces.
+The given schema is an excellent example for grouping together multiple root models, and
+mixing namespaces.
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build travelport
-$ ./run.py test travelport
-$ ./run.py mypy travelport
+$ inv travelport.build
+$ inv travelport.test
+$ inv travelport.mypy
 ```

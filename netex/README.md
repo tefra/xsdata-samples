@@ -5,10 +5,10 @@
 - Auto generated models with clusters style and relative imports
 - Verify bindings from samples
 
-## Makefile commands
+## Invoke Commands
 
 ```console
-$ ./run.py build netex
-$ ./run.py test netex
-$ ./run.py mypy netex
+$ inv netex.build
+$ inv netex.test
+$ inv netex.mypy
 ```
