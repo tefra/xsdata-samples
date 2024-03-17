@@ -5168,7 +5168,6 @@ class Answer:
         metadata={
             "name": "pointer-to-question",
             "type": "Attribute",
-            "required": True,
             "tokens": True,
         },
     )
@@ -10131,7 +10130,6 @@ class Explanation:
         metadata={
             "name": "pointer-to-explained",
             "type": "Attribute",
-            "required": True,
             "tokens": True,
         },
     )

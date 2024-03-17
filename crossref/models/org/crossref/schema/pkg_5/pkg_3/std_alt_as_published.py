@@ -23,7 +23,6 @@ class StdAltAsPublished(StdDesignatorT):
         default_factory=list,
         metadata={
             "type": "Attribute",
-            "required": True,
             "tokens": True,
         },
     )
