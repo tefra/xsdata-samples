@@ -68,7 +68,7 @@ from netex.models.destination_display_views_rel_structure import DestinationDisp
 from netex.models.direction_of_use_enumeration import DirectionOfUseEnumeration
 from netex.models.encumbrance_enumeration import EncumbranceEnumeration
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import TimebandVersionedChildStructure
 from netex.models.entity_in_version_structure import TimebandsRelStructure
@@ -121,14 +121,14 @@ from netex.models.network_filter_by_value_structure import NetworkFilterByValueS
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.operator import Operator
 from netex.models.organisation_derived_view_structure import OrganisationDerivedViewStructure
-from netex.models.organisation_part_1 import OrganisationPart1
+from netex.models.organisation_part import OrganisationPart
 from netex.models.organisation_parts_rel_structure import OrganisationPartsRelStructure
 from netex.models.organisation_ref import OrganisationRef
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.parking import Parking
-from netex.models.parking_area_1 import ParkingArea1
+from netex.models.parking_area import ParkingArea
 from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
 from netex.models.parking_capacities_rel_structure import ParkingCapacitiesRelStructure
 from netex.models.parking_capacity import ParkingCapacity
@@ -168,7 +168,7 @@ from netex.models.public_use_enumeration import PublicUseEnumeration
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.pyschosensory_need_enumeration import PyschosensoryNeedEnumeration
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_ref_structure import QuayRefStructure
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
@@ -223,7 +223,7 @@ from netex.models.stop_area import StopArea
 from netex.models.stop_area_ref_structure import StopAreaRefStructure
 from netex.models.stop_areas_in_frame_rel_structure import StopAreasInFrameRelStructure
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_entrance import StopPlaceEntrance
 from netex.models.stop_place_entrance_ref import StopPlaceEntranceRef
 from netex.models.stop_place_entrance_ref_structure import StopPlaceEntranceRefStructure
@@ -235,8 +235,8 @@ from netex.models.suitabilities_rel_structure import SuitabilitiesRelStructure
 from netex.models.suitability import Suitability
 from netex.models.suitable_enumeration import SuitableEnumeration
 from netex.models.surface_type_enumeration import SurfaceTypeEnumeration
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.ticket_type_enumeration import TicketTypeEnumeration
@@ -378,7 +378,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='tbd:DT001Open_MF',
                                         version='any',
                                         name=MultilingualString(
@@ -413,7 +413,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tbd:DT002Open_Sat',
                                         version='any',
                                         name=MultilingualString(
@@ -444,7 +444,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tbd:DT003Open_Sun',
                                         version='any',
                                         name=MultilingualString(
@@ -472,7 +472,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tbd:DT004Open_MFS',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -505,7 +505,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tbd:DT006Rush_MF',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -537,7 +537,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tbd:DT005Open_Sun',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -655,7 +655,7 @@ obj = PublicationDelivery(
                                         ),
                                         parts=OrganisationPartsRelStructure(
                                             organisation_part_ref_or_organisation_part=[
-                                                OrganisationPart1(
+                                                OrganisationPart(
                                                     id='tfl:GL',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1429,7 +1429,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:910GWIMBLDN',
                                         data_source_ref_attribute='nptg:NaPTAN',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
@@ -2334,7 +2334,7 @@ obj = PublicationDelivery(
                                         weighting=InterchangeWeightingEnumeration.PREFERRED_INTERCHANGE,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN@5n6',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2441,7 +2441,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN5',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2470,7 +2470,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:9100WIMBLDN@5n6'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN6',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2499,7 +2499,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:9100WIMBLDN@5n6'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN@7n8',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2606,7 +2606,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN7',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2635,7 +2635,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:9100WIMBLDN@7n8'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN8',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2656,7 +2656,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:9100WIMBLDN@7n8'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN@9n10',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2749,7 +2749,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN9',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2787,7 +2787,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:9100WIMBLDN@9n10'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN10',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2833,7 +2833,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:9100WIMBLDN@9n10'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLD_Tx1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -2874,7 +2874,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.TAXI_STAND
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:9100WIMBLDN@sd1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='001',
@@ -9712,7 +9712,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:940GZZLUWIM',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         changed=XmlDateTime(2009, 2, 26, 15, 47, 0),
@@ -9915,7 +9915,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='001',
                                                     ref='tfl:tf_03'
                                                 ),
@@ -9968,7 +9968,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:4900ZZLUWIM1n2',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -10103,7 +10103,7 @@ obj = PublicationDelivery(
                                                     compass_bearing=3.14159,
                                                     quay_type=QuayTypeEnumeration.METRO_PLATFORM
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:4900ZZLUWIM1',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -10133,7 +10133,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:4900ZZLUWIM1n2'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:4900ZZLUWIM2',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -10163,7 +10163,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:4900ZZLUWIM1n2'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:4900ZZLUWIM3n4',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -10305,7 +10305,7 @@ obj = PublicationDelivery(
                                                     compass_bearing=3.14159,
                                                     quay_type=QuayTypeEnumeration.METRO_PLATFORM
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:4900ZZLUWIM3',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -10327,7 +10327,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:4900ZZLUWIM3n4'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:4900ZZLUWIM4',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -12046,7 +12046,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:940GZZCRWIM',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         changed=XmlDateTime(2009, 2, 26, 15, 47, 0),
@@ -12126,7 +12126,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:490G00272P',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='001',
@@ -12194,7 +12194,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:490000272P',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -12269,7 +12269,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.W,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:490000272C',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -12367,7 +12367,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.E,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:490015472D',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -12465,7 +12465,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:490015472L',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -13710,7 +13710,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:490G0019043',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='001',
@@ -13781,7 +13781,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:490014734AnB',
                                                     version='any',
                                                     description=[
@@ -13790,7 +13790,7 @@ obj = PublicationDelivery(
                                                         ),
                                                     ]
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:490014734A',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -13860,7 +13860,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.N,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:490014734B',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -13996,7 +13996,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:490G00272L',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='001',
@@ -14067,7 +14067,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:490G00272L@quay',
                                                     data_source_ref_attribute='nptg:NaPTAN',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -14250,7 +14250,7 @@ obj = PublicationDelivery(
                                         ),
                                         parking_areas=ParkingAreasRelStructure(
                                             parking_area_ref_or_parking_area=[
-                                                ParkingArea1(
+                                                ParkingArea(
                                                     id='tbd:9100WIMBLDN@A2b_P1@PA4',
                                                     version='any',
                                                     description=[
@@ -17716,7 +17716,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:tf_03',
                                         version='001',
                                         name=MultilingualString(
@@ -19110,7 +19110,7 @@ obj = PublicationDelivery(
                                         ),
                                         parts=OrganisationPartsRelStructure(
                                             organisation_part_ref_or_organisation_part=[
-                                                OrganisationPart1(
+                                                OrganisationPart(
                                                     id='nptg:DfT',
                                                     version='any',
                                                     name=MultilingualString(

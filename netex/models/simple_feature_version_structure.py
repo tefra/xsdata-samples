@@ -9,7 +9,7 @@ from .mobility_service_constraint_zone_ref import (
     MobilityServiceConstraintZoneRef,
 )
 from .stop_area_ref import StopAreaRef
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
 from .zone_ref import ZoneRef
 
@@ -29,7 +29,7 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
             AccessZoneRef,
             AdministrativeZoneRef,
             FareZoneRef,
-            TariffZoneRef1,
+            TariffZoneRef,
             ZoneRef,
         ]
     ] = field(
@@ -69,7 +69,7 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
                 },
                 {
                     "name": "TariffZoneRef",
-                    "type": TariffZoneRef1,
+                    "type": TariffZoneRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -3,7 +3,7 @@ from typing import List, Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .entity_in_version_structure import (
-    DayType1,
+    DayType,
     FareDayType,
     OrganisationDayType,
 )
@@ -16,7 +16,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypesInFrame_RelStructure"
 
-    day_type: List[Union[FareDayType, OrganisationDayType, DayType1]] = field(
+    day_type: List[Union[FareDayType, OrganisationDayType, DayType]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -33,7 +33,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "DayType",
-                    "type": DayType1,
+                    "type": DayType,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

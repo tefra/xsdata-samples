@@ -33,7 +33,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
         Union[
             AdministrativeZoneRef,
             "TransportAdministrativeZone",
-            "AdministrativeZone1",
+            "AdministrativeZone",
         ]
     ] = field(
         default_factory=list,
@@ -52,7 +52,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "AdministrativeZone",
-                    "type": Type["AdministrativeZone1"],
+                    "type": Type["AdministrativeZone"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -169,9 +169,8 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
 
 
 @dataclass
-class AdministrativeZone1(AdministrativeZoneVersionStructure):
+class AdministrativeZone(AdministrativeZoneVersionStructure):
     class Meta:
-        name = "AdministrativeZone"
         namespace = "http://www.netex.org.uk/netex"
 
 

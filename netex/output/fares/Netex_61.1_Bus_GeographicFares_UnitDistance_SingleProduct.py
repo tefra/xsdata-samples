@@ -36,7 +36,7 @@ from netex.models.geographical_unit_ref import GeographicalUnitRef
 from netex.models.geographical_units_rel_structure import GeographicalUnitsRelStructure
 from netex.models.interchanging import Interchanging
 from netex.models.interval_type_enumeration import IntervalTypeEnumeration
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -53,7 +53,7 @@ from netex.models.participant_ref import ParticipantRef
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.priceable_object_version_structure import PriceGroupsRelStructure
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.publication_delivery import PublicationDelivery
@@ -199,7 +199,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:Line_24',
                                         version='any',
                                         name=MultilingualString(
@@ -658,7 +658,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='myfares:Line24_Unit_Distance',
                                         version='1.0',
                                         name=MultilingualString(

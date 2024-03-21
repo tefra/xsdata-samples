@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .parking_price_ref import ParkingPriceRef
 from .priceable_object_version_structure import (
     ParkingPriceVersionedChildStructure,
@@ -19,7 +19,7 @@ class ParkingPricesRelStructure(StrictContainmentAggregationStructure):
         name = "parkingPrices_RelStructure"
 
     parking_price_ref_or_cell_ref_or_parking_price: List[
-        Union[ParkingPriceRef, CellRef1, ParkingPriceVersionedChildStructure]
+        Union[ParkingPriceRef, CellRef, ParkingPriceVersionedChildStructure]
     ] = field(
         default_factory=list,
         metadata={
@@ -32,7 +32,7 @@ class ParkingPricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

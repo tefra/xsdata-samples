@@ -33,7 +33,7 @@ from netex.models.geographical_unit_ref import GeographicalUnitRef
 from netex.models.geographical_units_rel_structure import GeographicalUnitsRelStructure
 from netex.models.interchanging import Interchanging
 from netex.models.interval_type_enumeration import IntervalTypeEnumeration
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
@@ -46,7 +46,7 @@ from netex.models.organisations_in_frame_rel_structure import OrganisationsInFra
 from netex.models.participant_ref import ParticipantRef
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
@@ -179,7 +179,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:line_5',
                                         version='1.0',
                                         name=MultilingualString(
@@ -718,7 +718,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='myfares:Unit DIstance',
                                         version='1.0',
                                         name=MultilingualString(

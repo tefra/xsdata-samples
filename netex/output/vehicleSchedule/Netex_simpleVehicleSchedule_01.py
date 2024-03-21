@@ -6,7 +6,7 @@ from netex.models.block_part import BlockPart
 from netex.models.block_parts_rel_structure import BlockPartsRelStructure
 from netex.models.block_ref import BlockRef
 from netex.models.blocks_in_frame_rel_structure import BlocksInFrameRelStructure
-from netex.models.call_1 import Call1
+from netex.models.call import Call
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -37,7 +37,7 @@ from netex.models.duty_parts_rel_structure import DutyPartsRelStructure
 from netex.models.entity_in_version_structure import AlternativeText
 from netex.models.entity_in_version_structure import AlternativeTextsRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.garage import Garage
@@ -62,13 +62,13 @@ from netex.models.journey_refs_rel_structure import JourneyRefsRelStructure
 from netex.models.journey_run_time import JourneyRunTime
 from netex.models.journey_run_times_rel_structure import JourneyRunTimesRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
-from netex.models.parking_point_1 import ParkingPoint1
+from netex.models.parking_point import ParkingPoint
 from netex.models.parking_point_ref import ParkingPointRef
 from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_capacity_structure import PassengerCapacityStructure
@@ -84,7 +84,7 @@ from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.relief_points_in_frame_rel_structure import ReliefPointsInFrameRelStructure
-from netex.models.route_1 import Route1
+from netex.models.route import Route
 from netex.models.route_link import RouteLink
 from netex.models.route_link_ref_structure import RouteLinkRefStructure
 from netex.models.route_links_in_frame_rel_structure import RouteLinksInFrameRelStructure
@@ -99,7 +99,7 @@ from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledS
 from netex.models.service_calendar import ServiceCalendar
 from netex.models.service_calendar_frame import ServiceCalendarFrame
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey import ServiceJourney
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.service_journey_pattern_type_enumeration import ServiceJourneyPatternTypeEnumeration
@@ -258,7 +258,7 @@ obj = PublicationDelivery(
                                 to_date=XmlDate(2011, 3, 31),
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType1(
+                                        DayType(
                                             id='xj:DT_01',
                                             alternative_texts=AlternativeTextsRelStructure(
                                                 alternative_text=[
@@ -504,7 +504,7 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route1(
+                                    Route(
                                         id='kx:rt_24o',
                                         version='any',
                                         name=MultilingualString(
@@ -583,7 +583,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='kx:rt_24i',
                                         version='any',
                                         name=MultilingualString(
@@ -666,7 +666,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -674,7 +674,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_24N',
                                         version='any',
                                         name=MultilingualString(
@@ -1870,7 +1870,7 @@ obj = PublicationDelivery(
                                         ),
                                         dead_run_type=DeadRunTypeEnumeration.GARAGE_RUN_OUT
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_01o',
                                         version='any',
                                         departure_time=XmlTime(11, 10, 0, 0, 0),
@@ -1926,7 +1926,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_01o_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1945,7 +1945,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_01o_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1957,7 +1957,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_01o_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1975,7 +1975,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_02i',
                                         version='any',
                                         departure_time=XmlTime(11, 45, 0, 0, 0),
@@ -2031,7 +2031,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_02i_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2046,7 +2046,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_02i_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2058,7 +2058,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_02i_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2076,7 +2076,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_03o',
                                         version='any',
                                         departure_time=XmlTime(12, 20, 0, 0, 0),
@@ -2132,7 +2132,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_03o_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2147,7 +2147,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_03o_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2159,7 +2159,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_03o_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2313,7 +2313,7 @@ obj = PublicationDelivery(
                                         ),
                                         dead_run_type=DeadRunTypeEnumeration.OTHER
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_04i',
                                         version='any',
                                         departure_time=XmlTime(13, 10, 0, 0, 0),
@@ -2369,7 +2369,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_04i_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2384,7 +2384,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_04i_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2396,7 +2396,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_04i_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2414,7 +2414,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_05o',
                                         version='any',
                                         departure_time=XmlTime(13, 45, 0, 0, 0),
@@ -2470,7 +2470,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_05o_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2485,7 +2485,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_05o_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2497,7 +2497,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_05o_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2515,7 +2515,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_06i',
                                         version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
@@ -2571,7 +2571,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_06i_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2586,7 +2586,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_06i_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2598,7 +2598,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_06i_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2616,7 +2616,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_07o',
                                         version='any',
                                         departure_time=XmlTime(15, 55, 0, 0, 0),
@@ -2672,7 +2672,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_07o_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2687,7 +2687,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_07o_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2699,7 +2699,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_07o_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2853,7 +2853,7 @@ obj = PublicationDelivery(
                                         ),
                                         dead_run_type=DeadRunTypeEnumeration.OTHER
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_08i',
                                         version='any',
                                         departure_time=XmlTime(16, 55, 0, 0, 0),
@@ -2909,7 +2909,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_08i_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2932,7 +2932,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_08i_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2944,7 +2944,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_08i_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2962,7 +2962,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_09o',
                                         version='any',
                                         departure_time=XmlTime(17, 30, 0, 0, 0),
@@ -3018,7 +3018,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_09o_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3033,7 +3033,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_09o_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3045,7 +3045,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_09o_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3063,7 +3063,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24_10i',
                                         version='any',
                                         departure_time=XmlTime(18, 5, 0, 0, 0),
@@ -3119,7 +3119,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_10i_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3134,7 +3134,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_10i_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3146,7 +3146,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24_10i_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3300,7 +3300,7 @@ obj = PublicationDelivery(
                                         ),
                                         dead_run_type=DeadRunTypeEnumeration.OTHER
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24N_11o',
                                         version='any',
                                         departure_time=XmlTime(20, 10, 0, 0, 0),
@@ -3356,7 +3356,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24N_11o_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3375,7 +3375,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24N_11o_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3387,7 +3387,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24N_11o_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3405,7 +3405,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='xj:vj_L24N_12i',
                                         version='any',
                                         departure_time=XmlTime(20, 50, 0, 0, 0),
@@ -3461,7 +3461,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24N_L24i_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3476,7 +3476,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24N_L24i_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3488,7 +3488,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='xj:vj_L24N_L24i_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -4024,7 +4024,7 @@ obj = PublicationDelivery(
                                             value='Garage Point in G1 (also a parking and relief point)'
                                         )
                                     ),
-                                    ParkingPoint1(
+                                    ParkingPoint(
                                         id='mybus:pkgpt1',
                                         version='any',
                                         name=MultilingualString(

@@ -12,7 +12,7 @@ from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import TimebandVersionedChildStructure
 from netex.models.entity_in_version_structure import TimebandsRelStructure
@@ -517,7 +517,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_01-MF-NotHoliday',
                                         version='any',
                                         name=MultilingualString(

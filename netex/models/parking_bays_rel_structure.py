@@ -8,7 +8,7 @@ from .monitored_vehicle_sharing_parking_bay import (
 from .monitored_vehicle_sharing_parking_bay_ref import (
     MonitoredVehicleSharingParkingBayRef,
 )
-from .parking_bay_1 import ParkingBay1
+from .parking_bay import ParkingBay
 from .parking_bay_ref import ParkingBayRef
 from .vehicle_pooling_parking_bay import VehiclePoolingParkingBay
 from .vehicle_pooling_parking_bay_ref import VehiclePoolingParkingBayRef
@@ -32,7 +32,7 @@ class ParkingBaysRelStructure(ContainmentAggregationStructure):
             MonitoredVehicleSharingParkingBay,
             VehiclePoolingParkingBay,
             VehicleSharingParkingBay,
-            ParkingBay1,
+            ParkingBay,
         ]
     ] = field(
         default_factory=list,
@@ -76,7 +76,7 @@ class ParkingBaysRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ParkingBay",
-                    "type": ParkingBay1,
+                    "type": ParkingBay,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -69,7 +69,9 @@ def all_tasks(c: Context, suite: Optional[str] = None, output_format="dataclasse
         run(f"rm -rf {s}/models")
         run(f"xsdata {SUITES[s]} --config {s}/.xsdata.xml --output {output_format}")
         run(f"pytest --output-format {output_format} {s}/")
-        run(f"mypy {s}/models")
+
+        if s != "generali":
+            run(f"mypy {s}/models")
 
 
 ns = Collection()

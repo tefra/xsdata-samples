@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .controllable_element_price import ControllableElementPrice
 from .controllable_element_price_ref import ControllableElementPriceRef
 from .strict_containment_aggregation_structure import (
@@ -19,7 +19,7 @@ class ControllableElementPricesRelStructure(
         name = "controllableElementPrices_RelStructure"
 
     controllable_element_price_ref_or_cell_ref_or_controllable_element_price: List[
-        Union[ControllableElementPriceRef, CellRef1, ControllableElementPrice]
+        Union[ControllableElementPriceRef, CellRef, ControllableElementPrice]
     ] = field(
         default_factory=list,
         metadata={
@@ -32,7 +32,7 @@ class ControllableElementPricesRelStructure(
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

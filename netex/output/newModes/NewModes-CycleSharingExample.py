@@ -76,7 +76,7 @@ from netex.models.entitlement_constraint_structure import EntitlementConstraintS
 from netex.models.entitlement_required import EntitlementRequired
 from netex.models.entitlement_required_ref import EntitlementRequiredRef
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import TimebandVersionedChildStructure
 from netex.models.entity_in_version_structure import TimebandsRelStructure
@@ -198,10 +198,10 @@ from netex.models.price_rule_step_result_structure import PriceRuleStepResultStr
 from netex.models.price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import FareTable1
+from netex.models.priceable_object_version_structure import FareTable
 from netex.models.priceable_object_version_structure import FareTablesRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
-from netex.models.pricing_rule_1 import PricingRule1
+from netex.models.pricing_rule import PricingRule
 from netex.models.pricing_rule_ref import PricingRuleRef
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
 from netex.models.private_code_structure import PrivateCodeStructure
@@ -262,8 +262,8 @@ from netex.models.submodes_rel_structure import SubmodesRelStructure
 from netex.models.tariff import Tariff
 from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
 from netex.models.tariff_ref import TariffRef
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
 from netex.models.telephone_contact_structure import TelephoneContactStructure
@@ -1407,7 +1407,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='all_metropolis',
                                         version='any',
                                         name=MultilingualString(
@@ -1430,7 +1430,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType1(
+                                        DayType(
                                             id='working_day',
                                             version='any',
                                             name=MultilingualString(
@@ -2251,7 +2251,7 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef1(
+                                                                TariffZoneRef(
                                                                     version='any',
                                                                     ref='all_metropolis'
                                                                 ),
@@ -3034,7 +3034,7 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef1(
+                                                                TariffZoneRef(
                                                                     version='any',
                                                                     ref='all_metropolis'
                                                                 ),
@@ -3346,14 +3346,14 @@ obj = PublicationDelivery(
                                 version='any',
                                 pricing_rules=PricingRulesRelStructure(
                                     pricing_rule=[
-                                        PricingRule1(
+                                        PricingRule(
                                             id='cumulative_total',
                                             version='any',
                                             name=MultilingualString(
                                                 value='Excess charge is sum of additional '
                                             )
                                         ),
-                                        PricingRule1(
+                                        PricingRule(
                                             id='per_hour',
                                             version='any',
                                             name=MultilingualString(
@@ -3365,7 +3365,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable1(
+                                    FareTable(
                                         id='metrobike',
                                         version='any',
                                         name=MultilingualString(
@@ -3384,7 +3384,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         specifics=FareTableSpecificsStructure(
-                                            tariff_zone_ref=TariffZoneRef1(
+                                            tariff_zone_ref=TariffZoneRef(
                                                 version='any',
                                                 ref='all_metropolis'
                                             ),
@@ -3395,7 +3395,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='metrobike@single_session',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3423,7 +3423,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='metrobike@single_session@rental',
                                                                 version='any',
                                                                 prices=FarePricesRelStructure(
@@ -3507,7 +3507,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='metrobike@hire_penalty',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -3553,7 +3553,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='metrobike@day_pass',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3577,7 +3577,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='metrobike@day_pass@rental',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -4345,7 +4345,7 @@ obj = PublicationDelivery(
                                                                                     ),
                                                                                 ],
                                                                                 tariff_zone_ref=[
-                                                                                    TariffZoneRef1(
+                                                                                    TariffZoneRef(
                                                                                         version='any',
                                                                                         ref='all_metropolis'
                                                                                     ),
@@ -4578,7 +4578,7 @@ obj = PublicationDelivery(
                                                                                     ),
                                                                                 ],
                                                                                 tariff_zone_ref=[
-                                                                                    TariffZoneRef1(
+                                                                                    TariffZoneRef(
                                                                                         version='any',
                                                                                         ref='all_metropolis'
                                                                                     ),

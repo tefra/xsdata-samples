@@ -42,7 +42,7 @@ from netex.models.destination_display_view import DestinationDisplayView
 from netex.models.destination_display_views_rel_structure import DestinationDisplayViewsRelStructure
 from netex.models.direction_of_use_enumeration import DirectionOfUseEnumeration
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import TimebandVersionedChildStructure
 from netex.models.entity_in_version_structure import TimebandsRelStructure
@@ -103,7 +103,7 @@ from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStruc
 from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_ref_structure import QuayRefStructure
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
@@ -130,7 +130,7 @@ from netex.models.site_path_link import SitePathLink
 from netex.models.site_path_links_rel_structure import SitePathLinksRelStructure
 from netex.models.step_free_access import StepFreeAccess
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_entrance import StopPlaceEntrance
 from netex.models.stop_place_entrance_ref_structure import StopPlaceEntranceRefStructure
 from netex.models.stop_place_ref import StopPlaceRef
@@ -252,7 +252,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='zbt:DT001Open_MF',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -284,7 +284,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='zbt:DT002Open_Sat',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -312,7 +312,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='zbt:DT003Open_Sun',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -337,7 +337,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='zbt:DT004Open_MFS',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -370,7 +370,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='zbt:DT005Open_Sun',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -515,7 +515,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='ztb:bh0023',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         modification=ModificationEnumeration.REVISE,
@@ -850,7 +850,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='ztb:bh0023@Rail@Q1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',
@@ -953,7 +953,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='ztb:bh0023@Rail@Q2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',
@@ -2089,7 +2089,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='ztb:bh0024',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='01',
@@ -2133,7 +2133,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='ztb:bh0024_Rail@Q1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',

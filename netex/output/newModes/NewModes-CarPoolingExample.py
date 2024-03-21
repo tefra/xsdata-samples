@@ -190,7 +190,7 @@ from netex.models.price_rule_step_result_structure import PriceRuleStepResultStr
 from netex.models.price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import FareTable1
+from netex.models.priceable_object_version_structure import FareTable
 from netex.models.pricing_parameter_set import PricingParameterSet
 from netex.models.pricing_rule_ref import PricingRuleRef
 from netex.models.pricing_service import PricingService
@@ -202,7 +202,7 @@ from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
 from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
 from netex.models.refund_policy_enumeration import RefundPolicyEnumeration
@@ -258,7 +258,7 @@ from netex.models.site_type_enumeration import SiteTypeEnumeration
 from netex.models.specific_parameter_assignments_rel_structure import SpecificParameterAssignment
 from netex.models.specific_parameter_assignments_rel_structure import SpecificParameterAssignmentsRelStructure
 from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.submode import Submode
@@ -765,7 +765,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='alphaville_gare@taxi',
                                         version='any',
                                         name=MultilingualString(
@@ -779,7 +779,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='alphaville_gare@taxi_set_down',
                                                     version='any',
                                                     name=MultilingualString(
@@ -790,7 +790,7 @@ obj = PublicationDelivery(
                                                     boarding_use=False,
                                                     alighting_use=True
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='alphaville_gare@taxi_pick_up',
                                                     version='any',
                                                     name=MultilingualString(
@@ -2120,7 +2120,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable1(
+                                    FareTable(
                                         id='ryde@single_trip',
                                         version='any',
                                         name=MultilingualString(

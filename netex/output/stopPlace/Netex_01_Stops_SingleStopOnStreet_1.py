@@ -47,7 +47,7 @@ from netex.models.point_refs_rel_structure import PointRefsRelStructure
 from netex.models.private_code import PrivateCode
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -68,11 +68,11 @@ from netex.models.site_facility_sets_rel_structure import SiteFacilitySetsRelStr
 from netex.models.site_frame import SiteFrame
 from netex.models.step_free_access import StepFreeAccess
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
-from netex.models.tariff_zone_1 import TariffZone1
+from netex.models.tariff_zone import TariffZone
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.topographic_place import TopographicPlace
 from netex.models.topographic_place_descriptor_versioned_child_structure import TopographicPlaceDescriptorVersionedChildStructure
@@ -250,7 +250,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SSP_02456A',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -337,7 +337,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SSP_02456A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -435,7 +435,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='frtop:TZ_0010',
                                         version='001',
                                         name=MultilingualString(

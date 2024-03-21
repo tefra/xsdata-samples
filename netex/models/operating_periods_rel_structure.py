@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .operating_period_1 import OperatingPeriod1
+from .operating_period import OperatingPeriod
 from .operating_period_ref import OperatingPeriodRef
 from .uic_operating_period import UicOperatingPeriod
 from .uic_operating_period_ref import UicOperatingPeriodRef
@@ -19,7 +19,7 @@ class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
         Union[
             UicOperatingPeriodRef,
             OperatingPeriodRef,
-            OperatingPeriod1,
+            OperatingPeriod,
             UicOperatingPeriod,
         ]
     ] = field(
@@ -39,7 +39,7 @@ class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "OperatingPeriod",
-                    "type": OperatingPeriod1,
+                    "type": OperatingPeriod,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

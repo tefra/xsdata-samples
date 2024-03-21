@@ -111,7 +111,7 @@ from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .stop_place_ref import StopPlaceRef
 from .stop_place_space_ref import StopPlaceSpaceRef
 from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .taxi_parking_area_ref import TaxiParkingAreaRef
 from .taxi_rank_ref import TaxiRankRef
 from .taxi_service_ref import TaxiServiceRef
@@ -406,7 +406,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    tariff_zone_ref: List[TariffZoneRef1] = field(
+    tariff_zone_ref: List[TariffZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
 )
@@ -17,7 +17,7 @@ class UsageParameterPricesRelStructure(StrictContainmentAggregationStructure):
         name = "usageParameterPrices_RelStructure"
 
     usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref: List[
-        Union[UsageParameterPriceRef, UsageParameterPrice, CellRef1]
+        Union[UsageParameterPriceRef, UsageParameterPrice, CellRef]
     ] = field(
         default_factory=list,
         metadata={
@@ -35,7 +35,7 @@ class UsageParameterPricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -5,7 +5,7 @@ from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace
 from .administrative_zones_rel_structure import (
-    AdministrativeZone1,
+    AdministrativeZone,
     TransportAdministrativeZone,
 )
 from .boarding_position import BoardingPosition
@@ -25,8 +25,8 @@ from .monitored_vehicle_sharing_parking_bay import (
     MonitoredVehicleSharingParkingBay,
 )
 from .parking import Parking
-from .parking_area_1 import ParkingArea1
-from .parking_bay_1 import ParkingBay1
+from .parking_area import ParkingArea
+from .parking_bay import ParkingBay
 from .parking_component import ParkingComponent
 from .parking_entrance_for_vehicles import ParkingEntranceForVehicles
 from .parking_passenger_entrance import ParkingPassengerEntrance
@@ -35,15 +35,15 @@ from .point_of_interest_entrance import PointOfInterestEntrance
 from .point_of_interest_space import PointOfInterestSpace
 from .point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
 from .postal_address import PostalAddress
-from .quay_1 import Quay1
+from .quay import Quay
 from .road_address import RoadAddress
 from .routing_constraint_zone import RoutingConstraintZone
 from .service_site import ServiceSite
 from .stop_area import StopArea
-from .stop_place_1 import StopPlace1
+from .stop_place import StopPlace
 from .stop_place_entrance import StopPlaceEntrance
 from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
-from .tariff_zone_1 import TariffZone1
+from .tariff_zone import TariffZone
 from .taxi_parking_area import TaxiParkingArea
 from .taxi_rank import TaxiRank
 from .taxi_stand import TaxiStand
@@ -86,18 +86,18 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             VehicleStoppingPlace,
             BoardingPosition,
             AccessSpace,
-            Quay1,
+            Quay,
             PointOfInterestSpace,
             ParkingComponent,
             VehicleStoppingPosition,
             VehiclePoolingParkingArea,
             VehicleSharingParkingArea,
             TaxiParkingArea,
-            ParkingArea1,
+            ParkingArea,
             MonitoredVehicleSharingParkingBay,
             VehiclePoolingParkingBay,
             VehicleSharingParkingBay,
-            ParkingBay1,
+            ParkingBay,
             PointOfInterestVehicleEntrance,
             PointOfInterestEntrance,
             ParkingPassengerEntrance,
@@ -108,7 +108,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             PointOfInterest,
             Parking,
             TaxiRank,
-            StopPlace1,
+            StopPlace,
             ServiceSite,
             TopographicPlace,
             Country,
@@ -116,9 +116,9 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             PostalAddress,
             RoadAddress,
             TransportAdministrativeZone,
-            AdministrativeZone1,
+            AdministrativeZone,
             FareZone,
-            TariffZone1,
+            TariffZone,
             GeneralZone,
             Zone,
         ]
@@ -214,7 +214,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "Quay",
-                    "type": Quay1,
+                    "type": Quay,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -249,7 +249,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ParkingArea",
-                    "type": ParkingArea1,
+                    "type": ParkingArea,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -269,7 +269,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ParkingBay",
-                    "type": ParkingBay1,
+                    "type": ParkingBay,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -324,7 +324,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "StopPlace",
-                    "type": StopPlace1,
+                    "type": StopPlace,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -364,7 +364,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "AdministrativeZone",
-                    "type": AdministrativeZone1,
+                    "type": AdministrativeZone,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -374,7 +374,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "TariffZone",
-                    "type": TariffZone1,
+                    "type": TariffZone,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

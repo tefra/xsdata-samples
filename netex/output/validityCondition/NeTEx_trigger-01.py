@@ -3,7 +3,7 @@ from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.entity_in_version_structure import ValidityRuleParameter
 from netex.models.entity_in_version_structure import ValidityRuleParameterVersionStructure
@@ -160,7 +160,7 @@ obj = PublicationDelivery(
                 ),
                 day_types=DayTypesInFrameRelStructure(
                     day_type=[
-                        DayType1(
+                        DayType(
                             id='Myobj:DT001',
                             version='any',
                             name=MultilingualString(

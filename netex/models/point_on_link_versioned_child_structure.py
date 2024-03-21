@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
 
-from .activation_point_1 import ActivationPoint1
+from .activation_point import ActivationPoint
 from .activation_point_ref import ActivationPointRef
 from .beacon_point import BeaconPoint
 from .beacon_point_ref import BeaconPointRef
@@ -15,14 +15,14 @@ from .garage_point import GaragePoint
 from .garage_point_ref import GaragePointRef
 from .link_ref_structure import LinkRefStructure
 from .multilingual_string import MultilingualString
-from .parking_point_1 import ParkingPoint1
+from .parking_point import ParkingPoint
 from .parking_point_ref import ParkingPointRef
 from .path_junction import PathJunction
 from .point_2 import Point2
 from .point_ref import PointRef
 from .railway_junction import RailwayJunction
 from .railway_point_ref import RailwayPointRef
-from .relief_point_1 import ReliefPoint1
+from .relief_point import ReliefPoint
 from .relief_point_ref import ReliefPointRef
 from .road_junction import RoadJunction
 from .road_point_ref import RoadPointRef
@@ -30,7 +30,7 @@ from .route_point import RoutePoint
 from .route_point_ref import RoutePointRef
 from .scheduled_stop_point import ScheduledStopPoint
 from .scheduled_stop_point_ref import ScheduledStopPointRef
-from .timing_point_1 import TimingPoint1
+from .timing_point import TimingPoint
 from .timing_point_ref import TimingPointRef
 from .traffic_control_point import TrafficControlPoint
 from .traffic_control_point_ref import TrafficControlPointRef
@@ -95,16 +95,16 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             ScheduledStopPoint,
             PathJunction,
             RoutePoint,
-            ParkingPoint1,
+            ParkingPoint,
             GaragePoint,
-            ReliefPoint1,
-            TimingPoint1,
+            ReliefPoint,
+            TimingPoint,
             WireJunction,
             RoadJunction,
             RailwayJunction,
             TrafficControlPoint,
             BeaconPoint,
-            ActivationPoint1,
+            ActivationPoint,
             Point2,
         ]
     ] = field(
@@ -224,7 +224,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "ParkingPoint",
-                    "type": ParkingPoint1,
+                    "type": ParkingPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -234,12 +234,12 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "ReliefPoint",
-                    "type": ReliefPoint1,
+                    "type": ReliefPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "TimingPoint",
-                    "type": TimingPoint1,
+                    "type": TimingPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -269,7 +269,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "ActivationPoint",
-                    "type": ActivationPoint1,
+                    "type": ActivationPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

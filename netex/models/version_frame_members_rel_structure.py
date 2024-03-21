@@ -2,24 +2,22 @@ from dataclasses import dataclass, field
 from typing import List, Union
 
 from .access import Access
-from .access_right_parameter_assignment_1 import (
-    AccessRightParameterAssignment1,
-)
+from .access_right_parameter_assignment import AccessRightParameterAssignment
 from .access_space import AccessSpace
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_zone import AccessZone
 from .accountable_element import AccountableElement
 from .activation_assignment import ActivationAssignment
 from .activation_link import ActivationLink
-from .activation_point_1 import ActivationPoint1
+from .activation_point import ActivationPoint
 from .additional_driver_option import AdditionalDriverOption
 from .addressable_place import AddressablePlace
 from .administrative_zones_rel_structure import (
-    AdministrativeZone1,
+    AdministrativeZone,
     TransportAdministrativeZone,
 )
 from .allowed_line_direction import AllowedLineDirection
-from .alternative_mode_of_operation_1 import AlternativeModeOfOperation1
+from .alternative_mode_of_operation import AlternativeModeOfOperation
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_service import AssistanceService
@@ -113,13 +111,13 @@ from .entity_in_version_in_frame_ref_structure import (
 )
 from .entity_in_version_structure import (
     AvailabilityCondition,
-    DayType1,
+    DayType,
     FareDayType,
     OperatingDay,
     OrganisationDayType,
     SimpleAvailabilityCondition,
     ValidDuring,
-    ValidityCondition1,
+    ValidityCondition,
     ValidityRuleParameter,
     ValidityTrigger,
 )
@@ -131,7 +129,7 @@ from .escalator_equipment import EscalatorEquipment
 from .exchanging import Exchanging
 from .facility_requirement import FacilityRequirement
 from .fare_contract import FareContract
-from .fare_contract_entry_2 import FareContractEntry2
+from .fare_contract_entry import FareContractEntry
 from .fare_demand_factor import FareDemandFactor
 from .fare_frame import FareFrame
 from .fare_interval import FareInterval
@@ -203,7 +201,7 @@ from .level import Level
 from .lift_equipment import LiftEquipment
 from .limiting_rule import LimitingRule
 from .limiting_rule_in_context import LimitingRuleInContext
-from .line_1 import Line1
+from .line import Line
 from .line_network import LineNetwork
 from .line_shape import LineShape
 from .link_projection import LinkProjection
@@ -213,7 +211,7 @@ from .lost_property_service import LostPropertyService
 from .luggage_allowance import LuggageAllowance
 from .luggage_service import LuggageService
 from .management_agent import ManagementAgent
-from .medium_access_device_1 import MediumAccessDevice1
+from .medium_access_device import MediumAccessDevice
 from .meeting_point_service import MeetingPointService
 from .meeting_restriction import MeetingRestriction
 from .minimum_stay import MinimumStay
@@ -232,28 +230,28 @@ from .navigation_path_assignment import NavigationPathAssignment
 from .network import Network
 from .normal_dated_vehicle_journey import NormalDatedVehicleJourney
 from .notice import Notice
-from .notice_assignment_1 import NoticeAssignment1
+from .notice_assignment import NoticeAssignment
 from .offered_travel_specification import OfferedTravelSpecification
 from .online_service import OnlineService
 from .online_service_operator import OnlineServiceOperator
 from .open_transport_mode import OpenTransportMode
 from .operating_department import OperatingDepartment
-from .operating_period_1 import OperatingPeriod1
+from .operating_period import OperatingPeriod
 from .operational_context import OperationalContext
 from .operator import Operator
-from .organisation_part_1 import OrganisationPart1
+from .organisation_part import OrganisationPart
 from .organisational_unit import OrganisationalUnit
 from .other_organisation import OtherOrganisation
 from .overtaking_possibility import OvertakingPossibility
 from .parking import Parking
-from .parking_area_1 import ParkingArea1
-from .parking_bay_1 import ParkingBay1
+from .parking_area import ParkingArea
+from .parking_bay import ParkingBay
 from .parking_bay_condition import ParkingBayCondition
 from .parking_bay_status import ParkingBayStatus
 from .parking_component import ParkingComponent
 from .parking_entrance_for_vehicles import ParkingEntranceForVehicles
 from .parking_passenger_entrance import ParkingPassengerEntrance
-from .parking_point_1 import ParkingPoint1
+from .parking_point import ParkingPoint
 from .parking_tariff import ParkingTariff
 from .passenger_carrying_requirement import PassengerCarryingRequirement
 from .passenger_carrying_requirements_view import (
@@ -284,20 +282,20 @@ from .postal_address import PostalAddress
 from .preassigned_fare_product import PreassignedFareProduct
 from .price_unit import PriceUnit
 from .priceable_object_version_structure import (
-    FareTable1,
+    FareTable,
     FareTableInContext,
     ParkingChargeBand,
-    PriceGroup1,
+    PriceGroup,
 )
 from .pricing_parameter_set import PricingParameterSet
-from .pricing_rule_1 import PricingRule1
+from .pricing_rule import PricingRule
 from .pricing_service import PricingService
 from .purchase_window import PurchaseWindow
 from .purpose_of_equipment_profile import PurposeOfEquipmentProfile
 from .purpose_of_grouping import PurposeOfGrouping
 from .purpose_of_journey_partition import PurposeOfJourneyPartition
-from .quality_structure_factor_1 import QualityStructureFactor1
-from .quay_1 import Quay1
+from .quality_structure_factor import QualityStructureFactor
+from .quay import Quay
 from .queueing_equipment import QueueingEquipment
 from .railway_element import RailwayElement
 from .railway_junction import RailwayJunction
@@ -305,7 +303,7 @@ from .ramp_equipment import RampEquipment
 from .refuelling_equipment import RefuellingEquipment
 from .refunding import Refunding
 from .relief_opportunity import ReliefOpportunity
-from .relief_point_1 import ReliefPoint1
+from .relief_point import ReliefPoint
 from .rental_availability import RentalAvailability
 from .rental_option import RentalOption
 from .rental_penalty_policy import RentalPenaltyPolicy
@@ -326,7 +324,7 @@ from .road_junction import RoadJunction
 from .rough_surface import RoughSurface
 from .round_trip import RoundTrip
 from .rounding import Rounding
-from .route_1 import Route1
+from .route import Route
 from .route_instruction import RouteInstruction
 from .route_link import RouteLink
 from .route_point import RoutePoint
@@ -351,7 +349,7 @@ from .scheduled_operation import ScheduledOperation
 from .scheduled_stop_point import ScheduledStopPoint
 from .schematic_map import SchematicMap
 from .seating_equipment import SeatingEquipment
-from .sections_in_sequence_rel_structure import JourneyPattern1
+from .sections_in_sequence_rel_structure import JourneyPattern
 from .series_constraint import SeriesConstraint
 from .service_access_code import ServiceAccessCode
 from .service_access_right_1 import ServiceAccessRight1
@@ -360,7 +358,7 @@ from .service_calendar import ServiceCalendar
 from .service_calendar_frame import ServiceCalendarFrame
 from .service_exclusion import ServiceExclusion
 from .service_frame import ServiceFrame
-from .service_journey_1 import ServiceJourney1
+from .service_journey import ServiceJourney
 from .service_journey_interchange import ServiceJourneyInterchange
 from .service_journey_pattern import ServiceJourneyPattern
 from .service_journey_pattern_interchange import (
@@ -389,7 +387,7 @@ from .staircase_equipment import StaircaseEquipment
 from .standard_fare_table import StandardFareTable
 from .step_limit import StepLimit
 from .stop_area import StopArea
-from .stop_place_1 import StopPlace1
+from .stop_place import StopPlace
 from .stop_place_entrance import StopPlaceEntrance
 from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
 from .submode import Submode
@@ -397,7 +395,7 @@ from .subscribing import Subscribing
 from .supplement_product import SupplementProduct
 from .suspending import Suspending
 from .tariff import Tariff
-from .tariff_zone_1 import TariffZone1
+from .tariff_zone import TariffZone
 from .taxi_parking_area import TaxiParkingArea
 from .taxi_rank import TaxiRank
 from .taxi_service import TaxiService
@@ -420,7 +418,7 @@ from .timetable_frame import TimetableFrame
 from .timing_algorithm_type import TimingAlgorithmType
 from .timing_link import TimingLink
 from .timing_pattern import TimingPattern
-from .timing_point_1 import TimingPoint1
+from .timing_point import TimingPoint
 from .topographic_place import TopographicPlace
 from .topographic_projection import TopographicProjection
 from .traffic_control_point import TrafficControlPoint
@@ -434,7 +432,7 @@ from .train_number import TrainNumber
 from .train_stop_assignment import TrainStopAssignment
 from .transfer_restriction import TransferRestriction
 from .transferability import Transferability
-from .transport_type_1 import TransportType1
+from .transport_type import TransportType
 from .travel_agent import TravelAgent
 from .travel_document import TravelDocument
 from .travel_specification_1 import TravelSpecification1
@@ -513,7 +511,7 @@ from .vehicle_access_credentials_assignment import (
 )
 from .vehicle_charging_equipment import VehicleChargingEquipment
 from .vehicle_equipment_profile import VehicleEquipmentProfile
-from .vehicle_journey_1 import VehicleJourney1
+from .vehicle_journey import VehicleJourney
 from .vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
 from .vehicle_manoeuvring_requirement import VehicleManoeuvringRequirement
 from .vehicle_meeting_link import VehicleMeetingLink
@@ -577,7 +575,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             Smartcard,
             EmvCard,
             MobileDevice,
-            MediumAccessDevice1,
+            MediumAccessDevice,
             ServiceAccessCode,
             TravelDocument,
             CustomerAccount,
@@ -586,7 +584,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             RequestedTravelSpecification,
             TravelSpecification1,
             TravelSpecification2,
-            FareContractEntry2,
+            FareContractEntry,
             FareContract,
             Customer,
             ParkingTariff,
@@ -610,7 +608,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             TimeInterval,
             FareQuotaFactor,
             FareDemandFactor,
-            QualityStructureFactor1,
+            QualityStructureFactor,
             ControllableElement,
             ValidableElement,
             AdditionalDriverOption,
@@ -664,7 +662,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             LimitingRuleInContext,
             LimitingRule,
             DiscountingRule,
-            PricingRule1,
+            PricingRule,
             MonthValidityOffset,
             Rounding,
             PricingParameterSet,
@@ -701,11 +699,11 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             DatedVehicleJourney,
             SpecialService,
             DeadRun,
-            ServiceJourney1,
+            ServiceJourney,
             DatedServiceJourney,
             TemplateServiceJourney,
             TemplateVehicleJourney,
-            VehicleJourney1,
+            VehicleJourney,
             PointOfInterestClassificationHierarchy,
             TimeDemandType,
             VehicleJourneyStopAssignment,
@@ -728,7 +726,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             Blacklist,
             SchematicMap,
             PersonalModeOfOperation,
-            AlternativeModeOfOperation1,
+            AlternativeModeOfOperation,
             VehiclePooling,
             VehicleSharing,
             VehicleRental,
@@ -744,14 +742,14 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             PassengerCarryingRequirement,
             SimpleVehicleType,
             VehicleType,
-            TransportType1,
+            TransportType,
             EquipmentPosition,
             Level,
             AllowedLineDirection,
             DestinationDisplayVariant,
             DestinationDisplay,
             FlexibleLine,
-            Line1,
+            Line,
             DeliveryVariant,
             Notice,
             OperationalContext,
@@ -816,9 +814,9 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             NavigationPath,
             ServiceJourneyPattern,
             DeadRunJourneyPattern,
-            JourneyPattern1,
+            JourneyPattern,
             FlexibleRoute,
-            Route1,
+            Route,
             TimingPattern,
             Connection,
             DefaultConnection,
@@ -829,7 +827,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             OperatingDepartment,
             OrganisationalUnit,
             Department,
-            OrganisationPart1,
+            OrganisationPart,
             RetailConsortium,
             ServicedOrganisation,
             GeneralOrganisation,
@@ -855,16 +853,16 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             ScheduledStopPoint,
             PathJunction,
             RoutePoint,
-            ParkingPoint1,
+            ParkingPoint,
             GaragePoint,
-            ReliefPoint1,
-            TimingPoint1,
+            ReliefPoint,
+            TimingPoint,
             WireJunction,
             RoadJunction,
             RailwayJunction,
             TrafficControlPoint,
             BeaconPoint,
-            ActivationPoint1,
+            ActivationPoint,
             Point2,
             LineShape,
             TopographicProjection,
@@ -888,7 +886,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             ResourceFrame,
             ServiceCalendarFrame,
             UicOperatingPeriod,
-            OperatingPeriod1,
+            OperatingPeriod,
             OperatingDay,
             ServiceCalendar,
             VehicleSharingPlaceAssignment,
@@ -907,7 +905,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             GenericParameterAssignmentInContext,
             GenericParameterAssignment,
             ValidityParameterAssignment,
-            AccessRightParameterAssignment1,
+            AccessRightParameterAssignment,
             JourneyAccounting,
             TimeDemandTypeAssignment,
             TransferRestriction,
@@ -919,7 +917,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             VehicleTypeAtPoint,
             ActivationAssignment,
             SalesNoticeAssignment,
-            NoticeAssignment1,
+            NoticeAssignment,
             CheckConstraintThroughput,
             CheckConstraintDelay,
             CheckConstraint,
@@ -928,15 +926,15 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             Timeband,
             FareDayType,
             OrganisationDayType,
-            DayType1,
+            DayType,
             PoolOfVehicles,
             GroupOfSingleJourneys,
             GroupOfDistributionChannels,
             GroupOfDistanceMatrixElements,
-            PriceGroup1,
+            PriceGroup,
             StandardFareTable,
             FareTableInContext,
-            FareTable1,
+            FareTable,
             GroupOfServices,
             RhythmicalJourneyGroup,
             HeadwayJourneyGroup,
@@ -964,18 +962,18 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             VehicleStoppingPlace,
             BoardingPosition,
             AccessSpace,
-            Quay1,
+            Quay,
             PointOfInterestSpace,
             ParkingComponent,
             VehicleStoppingPosition,
             VehiclePoolingParkingArea,
             VehicleSharingParkingArea,
             TaxiParkingArea,
-            ParkingArea1,
+            ParkingArea,
             MonitoredVehicleSharingParkingBay,
             VehiclePoolingParkingBay,
             VehicleSharingParkingBay,
-            ParkingBay1,
+            ParkingBay,
             PointOfInterestVehicleEntrance,
             PointOfInterestEntrance,
             ParkingPassengerEntrance,
@@ -986,7 +984,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             PointOfInterest,
             Parking,
             TaxiRank,
-            StopPlace1,
+            StopPlace,
             ServiceSite,
             TopographicPlace,
             Country,
@@ -994,9 +992,9 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             PostalAddress,
             RoadAddress,
             TransportAdministrativeZone,
-            AdministrativeZone1,
+            AdministrativeZone,
             FareZone,
-            TariffZone1,
+            TariffZone,
             GeneralZone,
             Zone,
             GroupOfLinks,
@@ -1083,7 +1081,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
             AvailabilityCondition,
             ValidityRuleParameter,
             ValidityTrigger,
-            ValidityCondition1,
+            ValidityCondition,
             Version,
         ]
     ] = field(
@@ -1143,7 +1141,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "MediumAccessDevice",
-                    "type": MediumAccessDevice1,
+                    "type": MediumAccessDevice,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1188,7 +1186,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "FareContractEntry_",
-                    "type": FareContractEntry2,
+                    "type": FareContractEntry,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1308,7 +1306,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "QualityStructureFactor",
-                    "type": QualityStructureFactor1,
+                    "type": QualityStructureFactor,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1578,7 +1576,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "PricingRule",
-                    "type": PricingRule1,
+                    "type": PricingRule,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1763,7 +1761,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ServiceJourney",
-                    "type": ServiceJourney1,
+                    "type": ServiceJourney,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1783,7 +1781,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "VehicleJourney",
-                    "type": VehicleJourney1,
+                    "type": VehicleJourney,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1898,7 +1896,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "AlternativeModeOfOperation",
-                    "type": AlternativeModeOfOperation1,
+                    "type": AlternativeModeOfOperation,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1978,7 +1976,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "TransportType",
-                    "type": TransportType1,
+                    "type": TransportType,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2013,7 +2011,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "Line",
-                    "type": Line1,
+                    "type": Line,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2338,7 +2336,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "JourneyPattern",
-                    "type": JourneyPattern1,
+                    "type": JourneyPattern,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2348,7 +2346,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "Route",
-                    "type": Route1,
+                    "type": Route,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2403,7 +2401,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "OrganisationPart",
-                    "type": OrganisationPart1,
+                    "type": OrganisationPart,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2533,7 +2531,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ParkingPoint",
-                    "type": ParkingPoint1,
+                    "type": ParkingPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2543,12 +2541,12 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ReliefPoint",
-                    "type": ReliefPoint1,
+                    "type": ReliefPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "TimingPoint",
-                    "type": TimingPoint1,
+                    "type": TimingPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2578,7 +2576,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ActivationPoint",
-                    "type": ActivationPoint1,
+                    "type": ActivationPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2698,7 +2696,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "OperatingPeriod",
-                    "type": OperatingPeriod1,
+                    "type": OperatingPeriod,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2793,7 +2791,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "AccessRightParameterAssignment",
-                    "type": AccessRightParameterAssignment1,
+                    "type": AccessRightParameterAssignment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2853,7 +2851,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "NoticeAssignment",
-                    "type": NoticeAssignment1,
+                    "type": NoticeAssignment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2898,7 +2896,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "DayType",
-                    "type": DayType1,
+                    "type": DayType,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2923,7 +2921,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "PriceGroup",
-                    "type": PriceGroup1,
+                    "type": PriceGroup,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2938,7 +2936,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "FareTable",
-                    "type": FareTable1,
+                    "type": FareTable,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3078,7 +3076,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "Quay",
-                    "type": Quay1,
+                    "type": Quay,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3113,7 +3111,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ParkingArea",
-                    "type": ParkingArea1,
+                    "type": ParkingArea,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3133,7 +3131,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ParkingBay",
-                    "type": ParkingBay1,
+                    "type": ParkingBay,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3188,7 +3186,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "StopPlace",
-                    "type": StopPlace1,
+                    "type": StopPlace,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3228,7 +3226,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "AdministrativeZone",
-                    "type": AdministrativeZone1,
+                    "type": AdministrativeZone,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3238,7 +3236,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "TariffZone",
-                    "type": TariffZone1,
+                    "type": TariffZone,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3673,7 +3671,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ValidityCondition",
-                    "type": ValidityCondition1,
+                    "type": ValidityCondition,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -67,7 +67,7 @@ from netex.models.publication_delivery import PublicationDelivery
 from netex.models.purchase_action_enumeration import PurchaseActionEnumeration
 from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
 from netex.models.purchase_window import PurchaseWindow
-from netex.models.quality_structure_factor_1 import QualityStructureFactor1
+from netex.models.quality_structure_factor import QualityStructureFactor
 from netex.models.quality_structure_factor_ref import QualityStructureFactorRef
 from netex.models.quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
 from netex.models.refund_policy_enumeration import RefundPolicyEnumeration
@@ -152,7 +152,7 @@ obj = PublicationDelivery(
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
                                             quality_structure_factor_ref_or_quality_structure_factor=[
-                                                QualityStructureFactor1(
+                                                QualityStructureFactor(
                                                     id='ENT:school_carnet@380',
                                                     version='1',
                                                     name=MultilingualString(

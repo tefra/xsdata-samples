@@ -36,7 +36,7 @@ from netex.models.day_type_assignments_in_frame_rel_structure import DayTypeAssi
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import TimebandsRelStructure
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
@@ -105,7 +105,7 @@ from netex.models.site_path_link import SitePathLink
 from netex.models.site_path_links_rel_structure import SitePathLinksRelStructure
 from netex.models.site_ref_structure import SiteRefStructure
 from netex.models.step_free_access import StepFreeAccess
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_ref_structure import StopPlaceRefStructure
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
@@ -249,7 +249,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='oda:DT01_Very_Busy',
                                         version='any',
                                         name=MultilingualString(
@@ -279,7 +279,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='oda:DT02_Busy',
                                         version='any',
                                         name=MultilingualString(
@@ -309,7 +309,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='oda:DT03_Normal',
                                         version='any',
                                         name=MultilingualString(
@@ -339,7 +339,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='oda:DT04_QUIET',
                                         version='any',
                                         name=MultilingualString(
@@ -878,7 +878,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:910GSTRFD',
                                         data_source_ref_attribute='NaPTAN',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
@@ -1091,7 +1091,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:940GZZLUSTD',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         changed=XmlDateTime(2009, 2, 26, 15, 47, 0),
@@ -1285,7 +1285,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:940GZZCRSTD',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         changed=XmlDateTime(2009, 2, 26, 15, 47, 0),
@@ -1479,7 +1479,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:940GZZLUWHM',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         changed=XmlDateTime(2009, 2, 26, 15, 47, 0),

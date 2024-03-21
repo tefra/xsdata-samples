@@ -11,7 +11,7 @@ from .entity_in_version_structure import (
     AvailabilityCondition,
     SimpleAvailabilityCondition,
     ValidDuring,
-    ValidityCondition1,
+    ValidityCondition,
     ValidityRuleParameter,
     ValidityTrigger,
 )
@@ -198,7 +198,7 @@ class NetworkFrameTopicStructure(TopicStructure):
                 AvailabilityCondition,
                 ValidityRuleParameter,
                 ValidityTrigger,
-                ValidityCondition1,
+                ValidityCondition,
             ]
         ] = field(
             default_factory=list,
@@ -232,7 +232,7 @@ class NetworkFrameTopicStructure(TopicStructure):
                     },
                     {
                         "name": "ValidityCondition",
-                        "type": ValidityCondition1,
+                        "type": ValidityCondition,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                 ),

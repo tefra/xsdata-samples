@@ -4,7 +4,7 @@ from netex.models.arrival_structure import ArrivalStructure
 from netex.models.assistance_facility_enumeration import AssistanceFacilityEnumeration
 from netex.models.assistance_facility_list import AssistanceFacilityList
 from netex.models.block_ref import BlockRef
-from netex.models.call_1 import Call1
+from netex.models.call import Call
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -26,7 +26,7 @@ from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import OperatingDay
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.fare_class_enumeration import FareClassEnumeration
@@ -47,7 +47,7 @@ from netex.models.journey_run_times_rel_structure import JourneyRunTimesRelStruc
 from netex.models.journey_wait_time import JourneyWaitTime
 from netex.models.journey_wait_times_rel_structure import JourneyWaitTimesRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.link_refs_rel_structure import LinkRefsRelStructure
 from netex.models.links_in_journey_pattern_rel_structure import LinksInJourneyPatternRelStructure
@@ -64,7 +64,7 @@ from netex.models.onward_timing_link_view import OnwardTimingLinkView
 from netex.models.operating_day_ref import OperatingDayRef
 from netex.models.operating_day_ref_structure import OperatingDayRefStructure
 from netex.models.operating_days_in_frame_rel_structure import OperatingDaysInFrameRelStructure
-from netex.models.operating_period_1 import OperatingPeriod1
+from netex.models.operating_period import OperatingPeriod
 from netex.models.operating_periods_in_frame_rel_structure import OperatingPeriodsInFrameRelStructure
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.participant_ref import ParticipantRef
@@ -76,7 +76,7 @@ from netex.models.property_of_day import PropertyOfDay
 from netex.models.property_of_day_structure import PropertyOfDayStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.route_1 import Route1
+from netex.models.route import Route
 from netex.models.route_ref import RouteRef
 from netex.models.route_ref_structure import RouteRefStructure
 from netex.models.route_refs_rel_structure import RouteRefsRelStructure
@@ -93,7 +93,7 @@ from netex.models.service_facility_set_ref import ServiceFacilitySetRef
 from netex.models.service_facility_sets_in_frame_rel_structure import ServiceFacilitySetsInFrameRelStructure
 from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey import ServiceJourney
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.service_link import ServiceLink
@@ -123,7 +123,7 @@ from netex.models.timing_link_ref_structure import TimingLinkRefStructure
 from netex.models.timing_links_in_frame_rel_structure import TimingLinksInFrameRelStructure
 from netex.models.timing_pattern import TimingPattern
 from netex.models.timing_patterns_in_frame_rel_structure import TimingPatternsInFrameRelStructure
-from netex.models.timing_point_1 import TimingPoint1
+from netex.models.timing_point import TimingPoint
 from netex.models.timing_point_in_journey_pattern import TimingPointInJourneyPattern
 from netex.models.timing_point_ref import TimingPointRef
 from netex.models.timing_point_ref_structure import TimingPointRefStructure
@@ -234,7 +234,7 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route1(
+                                    Route(
                                         id='ao:RT_24o',
                                         version='any',
                                         name=MultilingualString(
@@ -252,7 +252,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='ao:K66',
                                         version='any',
                                         name=MultilingualString(
@@ -494,7 +494,7 @@ obj = PublicationDelivery(
                             ),
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='ao:Briga-p_t1',
                                         version='any',
                                         location=LocationStructure2(
@@ -503,7 +503,7 @@ obj = PublicationDelivery(
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='ao:Briga-p_t2',
                                         version='any',
                                         location=LocationStructure2(
@@ -512,7 +512,7 @@ obj = PublicationDelivery(
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='ao:Banjaloka-p_t3',
                                         version='any',
                                         location=LocationStructure2(
@@ -976,7 +976,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='ao:K66_outbound_01',
                                         version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
@@ -1068,7 +1068,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='ao:K66_outbound_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1097,7 +1097,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='ao:K66_outbound_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1130,7 +1130,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='ao:K66_outbound_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1148,7 +1148,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='ao:K66_inbound_02',
                                         version='any',
                                         departure_time=XmlTime(15, 20, 0, 0, 0),
@@ -1200,7 +1200,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='ao:K66_inbound_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1240,7 +1240,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=False,
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='ao:K66_inbound_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1270,7 +1270,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='ao:K66_inbound_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1365,7 +1365,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_01-MF-NotHoliday',
                                         version='any',
                                         name=MultilingualString(
@@ -1388,7 +1388,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_02-Everyday-NotHoliday',
                                         version='any',
                                         name=MultilingualString(
@@ -1407,7 +1407,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_03-WE-NotHoliday',
                                         version='any',
                                         name=MultilingualString(
@@ -1427,7 +1427,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_04-AA-NotHoliday',
                                         version='any',
                                         name=MultilingualString(
@@ -1446,7 +1446,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_ChristmasEve',
                                         version='any',
                                         name=MultilingualString(
@@ -1465,7 +1465,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_ChristmasDay',
                                         version='any',
                                         name=MultilingualString(
@@ -1484,7 +1484,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_ChristmasDayDisplacement',
                                         version='any',
                                         name=MultilingualString(
@@ -1507,7 +1507,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_NewYearsEve',
                                         version='any',
                                         name=MultilingualString(
@@ -1526,7 +1526,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_NewYearsDay',
                                         version='any',
                                         name=MultilingualString(
@@ -1545,7 +1545,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_2ndJanuary',
                                         version='any',
                                         name=MultilingualString(
@@ -1564,7 +1564,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_NewYearsDayDisplacement',
                                         version='any',
                                         name=MultilingualString(
@@ -1587,7 +1587,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_GoodFriday',
                                         version='any',
                                         name=MultilingualString(
@@ -1606,7 +1606,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_EasterSunday',
                                         version='any',
                                         name=MultilingualString(
@@ -1625,7 +1625,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='ao:DT_EasterMonday',
                                         version='any',
                                         name=MultilingualString(
@@ -1672,7 +1672,7 @@ obj = PublicationDelivery(
                             ),
                             operating_periods=OperatingPeriodsInFrameRelStructure(
                                 operating_period_or_uic_operating_period=[
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='ao:op_010',
                                         version='any',
                                         name=MultilingualString(

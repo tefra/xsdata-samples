@@ -449,9 +449,8 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
 
 
 @dataclass
-class ValidityCondition1(ValidityConditionVersionStructure):
+class ValidityCondition(ValidityConditionVersionStructure):
     class Meta:
-        name = "ValidityCondition"
         namespace = "http://www.netex.org.uk/netex"
 
     validity_conditions_or_valid_between: Any = field(
@@ -862,9 +861,8 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
 
 
 @dataclass
-class DayType1(DayTypeVersionStructure):
+class DayType(DayTypeVersionStructure):
     class Meta:
-        name = "DayType"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -963,7 +961,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
             DayTypeRef,
             FareDayType,
             OrganisationDayType,
-            DayType1,
+            DayType,
         ]
     ] = field(
         default_factory=list,
@@ -992,7 +990,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "DayType",
-                    "type": DayType1,
+                    "type": DayType,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -1082,7 +1080,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
             AvailabilityCondition,
             ValidityRuleParameter,
             ValidityTrigger,
-            ValidityCondition1,
+            ValidityCondition,
         ]
     ] = field(
         default_factory=list,
@@ -1141,7 +1139,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ValidityCondition",
-                    "type": ValidityCondition1,
+                    "type": ValidityCondition,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

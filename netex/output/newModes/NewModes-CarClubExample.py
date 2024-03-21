@@ -70,7 +70,7 @@ from netex.models.entitlement_given import EntitlementGiven
 from netex.models.entitlement_required import EntitlementRequired
 from netex.models.entitlement_type_enumeration import EntitlementTypeEnumeration
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import ValidBetween
 from netex.models.equipments_rel_structure import EquipmentsRelStructure
@@ -171,7 +171,7 @@ from netex.models.price_rule_step_result_structure import PriceRuleStepResultStr
 from netex.models.price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import FareTable1
+from netex.models.priceable_object_version_structure import FareTable
 from netex.models.priceable_object_version_structure import FareTablesRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
@@ -231,8 +231,8 @@ from netex.models.submodes_rel_structure import SubmodesRelStructure
 from netex.models.tariff import Tariff
 from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
 from netex.models.tariff_ref import TariffRef
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
 from netex.models.telephone_contact_structure import TelephoneContactStructure
@@ -942,7 +942,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='AllMetropolis',
                                         version='any',
                                         name=MultilingualString(
@@ -965,7 +965,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType1(
+                                        DayType(
                                             id='working_day',
                                             version='any',
                                             name=MultilingualString(
@@ -984,7 +984,7 @@ obj = PublicationDelivery(
                                                 ]
                                             )
                                         ),
-                                        DayType1(
+                                        DayType(
                                             id='non_working_day',
                                             version='any',
                                             name=MultilingualString(
@@ -1554,7 +1554,7 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef1(
+                                                                TariffZoneRef(
                                                                     version='any',
                                                                     ref='AllMetropolis'
                                                                 ),
@@ -2125,7 +2125,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable1(
+                                    FareTable(
                                         id='my_car_club',
                                         version='any',
                                         name=MultilingualString(
@@ -2144,7 +2144,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         specifics=FareTableSpecificsStructure(
-                                            tariff_zone_ref=TariffZoneRef1(
+                                            tariff_zone_ref=TariffZoneRef(
                                                 version='any',
                                                 ref='AllMetropolis'
                                             ),
@@ -2155,7 +2155,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='my_car@single_session',
                                                     version='any',
                                                     name=MultilingualString(
@@ -2179,7 +2179,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='my_car@single_session@rental',
                                                                 version='any',
                                                                 prices=FarePricesRelStructure(
@@ -2250,7 +2250,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='my_car@hire_penalty',
                                                                 version='any',
                                                                 name=MultilingualString(

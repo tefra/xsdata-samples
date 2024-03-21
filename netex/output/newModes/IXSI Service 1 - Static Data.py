@@ -24,7 +24,7 @@ from netex.models.operator_ref import OperatorRef
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.parking import Parking
-from netex.models.parking_area_1 import ParkingArea1
+from netex.models.parking_area import ParkingArea
 from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
 from netex.models.parking_layout_enumeration import ParkingLayoutEnumeration
 from netex.models.parking_properties import ParkingProperties
@@ -105,7 +105,7 @@ obj = PublicationDelivery(
                                         parking_reservation=ParkingReservationEnumeration.NO_RESERVATIONS,
                                         parking_areas=ParkingAreasRelStructure(
                                             parking_area_ref_or_parking_area=[
-                                                ParkingArea1(
+                                                ParkingArea(
                                                     id='GE:ParkingArea:633-1:Stadtmobil',
                                                     version='any',
                                                     public_use=PublicUseEnumeration.AUTHORISED_PUBLIC_ONLY,

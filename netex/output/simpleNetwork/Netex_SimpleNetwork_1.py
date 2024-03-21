@@ -22,7 +22,7 @@ from netex.models.journey_pattern_ref_structure import JourneyPatternRefStructur
 from netex.models.journey_pattern_wait_time import JourneyPatternWaitTime
 from netex.models.journey_pattern_wait_times_rel_structure import JourneyPatternWaitTimesRelStructure
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.link_ref_structure import LinkRefStructure
@@ -42,7 +42,7 @@ from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_capacity_structure import PassengerCapacityStructure
 from netex.models.passenger_stop_assignment import PassengerStopAssignment
 from netex.models.point_on_route import PointOnRoute
-from netex.models.point_on_section_1 import PointOnSection1
+from netex.models.point_on_section import PointOnSection
 from netex.models.point_projection import PointProjection
 from netex.models.point_ref_structure import PointRefStructure
 from netex.models.points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
@@ -53,7 +53,7 @@ from netex.models.presentation_structure import PresentationStructure
 from netex.models.projections_rel_structure import ProjectionsRelStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -69,7 +69,7 @@ from netex.models.road_address import RoadAddress
 from netex.models.road_element import RoadElement
 from netex.models.road_junction import RoadJunction
 from netex.models.road_point_ref_structure import RoadPointRefStructure
-from netex.models.route_1 import Route1
+from netex.models.route import Route
 from netex.models.route_link import RouteLink
 from netex.models.route_link_ref import RouteLinkRef
 from netex.models.route_link_ref_structure import RouteLinkRefStructure
@@ -99,7 +99,7 @@ from netex.models.service_patterns_in_frame_rel_structure import ServicePatterns
 from netex.models.simple_point_version_structure import SimplePointVersionStructure
 from netex.models.site_frame import SiteFrame
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -113,7 +113,7 @@ from netex.models.timing_links_rel_structure import TimingLinksRelStructure
 from netex.models.timing_pattern import TimingPattern
 from netex.models.timing_pattern_ref import TimingPatternRef
 from netex.models.timing_patterns_in_frame_rel_structure import TimingPatternsInFrameRelStructure
-from netex.models.timing_point_1 import TimingPoint1
+from netex.models.timing_point import TimingPoint
 from netex.models.timing_point_in_journey_pattern import TimingPointInJourneyPattern
 from netex.models.timing_point_ref import TimingPointRef
 from netex.models.timing_point_ref_structure import TimingPointRefStructure
@@ -219,7 +219,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP001A',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -251,7 +251,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP001A@1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -280,7 +280,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP002B',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -311,7 +311,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP002B@1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -336,7 +336,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP002B@2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -365,7 +365,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP003C',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -397,7 +397,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP002C@1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -423,7 +423,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.NE,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP002C@2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -452,7 +452,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP004D',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -484,7 +484,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP004D_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -513,7 +513,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP005E',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -545,7 +545,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP005E_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1161,7 +1161,7 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route1(
+                                    Route(
                                         id='hde:RT001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
@@ -1269,7 +1269,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='hde:RT001i',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
@@ -1377,7 +1377,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='hde:RT002o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
@@ -1485,7 +1485,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='hde:RT002i',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
@@ -1617,7 +1617,7 @@ obj = PublicationDelivery(
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
                                             point_on_section=[
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_JP',
                                                     version='1',
                                                     order=1,
@@ -1630,7 +1630,7 @@ obj = PublicationDelivery(
                                                         ref='hde:SL_SSP0001A-SSP0002B_a'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_JP',
                                                     version='1',
                                                     order=2,
@@ -1643,7 +1643,7 @@ obj = PublicationDelivery(
                                                         ref='hde:SL_SSP0002B_a-SSP0003C_a'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_JP',
                                                     version='1',
                                                     order=3,
@@ -1683,7 +1683,7 @@ obj = PublicationDelivery(
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
                                             point_on_section=[
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_JP',
                                                     version='1',
                                                     order=1,
@@ -1696,7 +1696,7 @@ obj = PublicationDelivery(
                                                         ref='hde:SL_SSP0003C_b-SSP0002B_b'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_JP',
                                                     version='1',
                                                     order=2,
@@ -1709,7 +1709,7 @@ obj = PublicationDelivery(
                                                         ref='hde:SL_SSP0002B_b-SSP0001A'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_JP',
                                                     version='1',
                                                     order=3,
@@ -1742,7 +1742,7 @@ obj = PublicationDelivery(
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
                                             point_on_section=[
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_Rt',
                                                     version='1',
                                                     order=1,
@@ -1755,7 +1755,7 @@ obj = PublicationDelivery(
                                                         ref='hde:hde:RL_001o@SSP0001A+RteP021'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_Rt',
                                                     version='1',
                                                     order=2,
@@ -1768,7 +1768,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001o@RteP021+SSP0002B_a'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_Rt',
                                                     version='1',
                                                     order=3,
@@ -1781,7 +1781,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001o@SSP0001B_a+RteP022'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_Rt',
                                                     version='1',
                                                     order=4,
@@ -1794,7 +1794,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001o@RteP022+RteP025'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_Rt',
                                                     version='1',
                                                     order=5,
@@ -1807,7 +1807,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001o@RteP025+SSP0003C_a'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001o_Rt',
                                                     version='1',
                                                     order=6,
@@ -1840,7 +1840,7 @@ obj = PublicationDelivery(
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
                                             point_on_section=[
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_Rt',
                                                     version='1',
                                                     order=1,
@@ -1853,7 +1853,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001i_02'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_Rt',
                                                     version='1',
                                                     order=2,
@@ -1866,7 +1866,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001i_03'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_Rt',
                                                     version='1',
                                                     order=3,
@@ -1879,7 +1879,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001i_04'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_Rt',
                                                     version='1',
                                                     order=4,
@@ -1892,7 +1892,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001i_05'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_Rt',
                                                     version='1',
                                                     order=5,
@@ -1905,7 +1905,7 @@ obj = PublicationDelivery(
                                                         ref='hde:RL_001i_06'
                                                     )
                                                 ),
-                                                PointOnSection1(
+                                                PointOnSection(
                                                     id='hde:CSc001i_Rt',
                                                     version='1',
                                                     order=6,
@@ -1921,7 +1921,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:0066',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
@@ -2719,7 +2719,7 @@ obj = PublicationDelivery(
                             ),
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='hde:TPT0051',
                                         version='015'
                                     ),

@@ -1,6 +1,6 @@
-from netex.models.activation_point_1 import ActivationPoint1
+from netex.models.activation_point import ActivationPoint
 from netex.models.activation_points_in_frame_rel_structure import ActivationPointsInFrameRelStructure
-from netex.models.administrative_zones_rel_structure import AdministrativeZone1
+from netex.models.administrative_zones_rel_structure import AdministrativeZone
 from netex.models.administrative_zones_rel_structure import AdministrativeZonesRelStructure
 from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
@@ -25,7 +25,7 @@ from netex.models.entity_in_version_structure import TimebandVersionedChildStruc
 from netex.models.entity_in_version_structure import TimebandsRelStructure
 from netex.models.entity_in_version_structure import ValidBetween
 from netex.models.entity_in_version_structure import ValidDuring
-from netex.models.entity_in_version_structure import ValidityCondition1
+from netex.models.entity_in_version_structure import ValidityCondition
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.entity_in_version_structure import ValidityTrigger
 from netex.models.entrance import Entrance
@@ -57,7 +57,7 @@ from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatterns
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
 from netex.models.key_list import KeyList
 from netex.models.key_value_structure import KeyValueStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.management_agent import ManagementAgent
 from netex.models.multilingual_string import MultilingualString
@@ -66,14 +66,14 @@ from netex.models.operational_context import OperationalContext
 from netex.models.operational_contexts_in_frame_rel_structure import OperationalContextsInFrameRelStructure
 from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_part_1 import OrganisationPart1
+from netex.models.organisation_part import OrganisationPart
 from netex.models.organisation_parts_rel_structure import OrganisationPartsRelStructure
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.other_organisation import OtherOrganisation
 from netex.models.parking import Parking
-from netex.models.parking_area_1 import ParkingArea1
+from netex.models.parking_area import ParkingArea
 from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
-from netex.models.parking_bay_1 import ParkingBay1
+from netex.models.parking_bay import ParkingBay
 from netex.models.parking_bays_rel_structure import ParkingBaysRelStructure
 from netex.models.parking_capacities_rel_structure import ParkingCapacitiesRelStructure
 from netex.models.parking_capacity import ParkingCapacity
@@ -97,7 +97,7 @@ from netex.models.points_in_journey_pattern_rel_structure import PointsInJourney
 from netex.models.points_of_interest_in_frame_rel_structure import PointsOfInterestInFrameRelStructure
 from netex.models.projections_rel_structure import ProjectionsRelStructure
 from netex.models.publication_delivery import PublicationDelivery
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quays_rel_structure import QuaysRelStructure
 from netex.models.railway_element import RailwayElement
 from netex.models.railway_junction import RailwayJunction
@@ -118,12 +118,12 @@ from netex.models.schematic_map import SchematicMap
 from netex.models.schematic_map_member_versioned_child_structure import SchematicMapMemberVersionedChildStructure
 from netex.models.schematic_map_members_rel_structure import SchematicMapMembersRelStructure
 from netex.models.schematic_maps_in_frame_rel_structure import SchematicMapsInFrameRelStructure
-from netex.models.sections_in_sequence_rel_structure import JourneyPattern1
+from netex.models.sections_in_sequence_rel_structure import JourneyPattern
 from netex.models.service_facility_set import ServiceFacilitySet
 from netex.models.service_facility_sets_in_frame_rel_structure import ServiceFacilitySetsInFrameRelStructure
 from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey import ServiceJourney
 from netex.models.service_link import ServiceLink
 from netex.models.service_links_in_frame_rel_structure import ServiceLinksInFrameRelStructure
 from netex.models.service_pattern import ServicePattern
@@ -136,11 +136,11 @@ from netex.models.site_frame import SiteFrame
 from netex.models.special_service import SpecialService
 from netex.models.stop_area import StopArea
 from netex.models.stop_areas_in_frame_rel_structure import StopAreasInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
 from netex.models.stop_points_in_journey_pattern_rel_structure import StopPointsInJourneyPatternRelStructure
-from netex.models.tariff_zone_1 import TariffZone1
+from netex.models.tariff_zone import TariffZone
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.template_service_journey import TemplateServiceJourney
 from netex.models.timetable_frame import TimetableFrame
@@ -158,7 +158,7 @@ from netex.models.type_of_equipment import TypeOfEquipment
 from netex.models.types_of_equipment_rel_structure import TypesOfEquipmentRelStructure
 from netex.models.vehicle_equipmen_profiles_in_frame_rel_structure import VehicleEquipmenProfilesInFrameRelStructure
 from netex.models.vehicle_equipment_profile import VehicleEquipmentProfile
-from netex.models.vehicle_journey_1 import VehicleJourney1
+from netex.models.vehicle_journey import VehicleJourney
 from netex.models.vehicle_model import VehicleModel
 from netex.models.vehicle_models_in_frame_rel_structure import VehicleModelsInFrameRelStructure
 from netex.models.vehicle_types_in_frame_rel_structure import VehicleTypesInFrameRelStructure
@@ -243,7 +243,7 @@ obj = PublicationDelivery(
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
-                                                    ValidityCondition1(
+                                                    ValidityCondition(
                                                         id='bar:foo',
                                                         version='001'
                                                     ),
@@ -324,12 +324,12 @@ obj = PublicationDelivery(
                                         ),
                                         parts=OrganisationPartsRelStructure(
                                             organisation_part_ref_or_organisation_part=[
-                                                OrganisationPart1(
+                                                OrganisationPart(
                                                     id='bar:foo',
                                                     version='001',
                                                     administrative_zones=AdministrativeZonesRelStructure(
                                                         administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone=[
-                                                            AdministrativeZone1(
+                                                            AdministrativeZone(
                                                                 id='bar:foo',
                                                                 version='001'
                                                             ),
@@ -629,7 +629,7 @@ obj = PublicationDelivery(
                             ),
                             activation_points=ActivationPointsInFrameRelStructure(
                                 activation_point=[
-                                    ActivationPoint1(
+                                    ActivationPoint(
                                         id='bar:foo3',
                                         version='001'
                                     ),
@@ -666,7 +666,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='bar:foo2',
                                         version='001',
                                         name=MultilingualString(
@@ -700,7 +700,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='bar:foo2-a',
                                                     version='001',
                                                     name=MultilingualString(
@@ -710,7 +710,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='bar:foo2-bis',
                                         version='001',
                                         name=MultilingualString(
@@ -779,7 +779,7 @@ obj = PublicationDelivery(
                                         ),
                                         parking_areas=ParkingAreasRelStructure(
                                             parking_area_ref_or_parking_area=[
-                                                ParkingArea1(
+                                                ParkingArea(
                                                     id='bar:foo7',
                                                     version='001',
                                                     name=MultilingualString(
@@ -787,7 +787,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     bays=ParkingBaysRelStructure(
                                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay=[
-                                                            ParkingBay1(
+                                                            ParkingBay(
                                                                 id='bar:foo8',
                                                                 version='001',
                                                                 name=MultilingualString(
@@ -824,7 +824,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='bar:foo9',
                                         version='001',
                                         name=MultilingualString(
@@ -860,7 +860,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='bar:foo',
                                         version='001',
                                         name=MultilingualString(
@@ -961,7 +961,7 @@ obj = PublicationDelivery(
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
-                                    JourneyPattern1(
+                                    JourneyPattern(
                                         id='bar:foo2',
                                         version='001',
                                         name=MultilingualString(
@@ -1001,14 +1001,14 @@ obj = PublicationDelivery(
                             ),
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    VehicleJourney1(
+                                    VehicleJourney(
                                         id='bar:foo',
                                         version='001',
                                         name=MultilingualString(
                                             value='JOURNEY'
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='bar:foo1',
                                         version='001',
                                         name=MultilingualString(

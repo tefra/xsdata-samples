@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 
-from .alternative_mode_of_operation_1 import AlternativeModeOfOperation1
+from .alternative_mode_of_operation import AlternativeModeOfOperation
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_operation import FlexibleOperation
 from .personal_mode_of_operation import PersonalModeOfOperation
@@ -21,7 +21,7 @@ class ModesOfOperationRelStructure(ContainmentAggregationStructure):
     mode_of_operation_or_alternative_mode_of_operation_or_conventional_mode_of_operation: List[
         Union[
             PersonalModeOfOperation,
-            AlternativeModeOfOperation1,
+            AlternativeModeOfOperation,
             VehiclePooling,
             VehicleSharing,
             VehicleRental,
@@ -40,7 +40,7 @@ class ModesOfOperationRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "AlternativeModeOfOperation",
-                    "type": AlternativeModeOfOperation1,
+                    "type": AlternativeModeOfOperation,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

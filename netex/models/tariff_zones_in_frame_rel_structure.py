@@ -3,7 +3,7 @@ from typing import List, Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_zone import FareZone
-from .tariff_zone_1 import TariffZone1
+from .tariff_zone import TariffZone
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -13,7 +13,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "tariffZonesInFrame_RelStructure"
 
-    tariff_zone: List[Union[FareZone, TariffZone1]] = field(
+    tariff_zone: List[Union[FareZone, TariffZone]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -25,7 +25,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "TariffZone",
-                    "type": TariffZone1,
+                    "type": TariffZone,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

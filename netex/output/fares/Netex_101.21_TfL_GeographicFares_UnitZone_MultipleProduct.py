@@ -75,7 +75,7 @@ from netex.models.entitlement_required import EntitlementRequired
 from netex.models.entitlement_required_ref import EntitlementRequiredRef
 from netex.models.entitlement_type_enumeration import EntitlementTypeEnumeration
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import FareDayType
 from netex.models.entity_in_version_structure import TimebandVersionedChildStructure
@@ -162,7 +162,7 @@ from netex.models.interval_type_enumeration import IntervalTypeEnumeration
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
 from netex.models.limiting_rule import LimitingRule
 from netex.models.limiting_rule_ref import LimitingRuleRef
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -192,12 +192,12 @@ from netex.models.preassigned_fare_product_enumeration import PreassignedFarePro
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
 from netex.models.presentation_structure import PresentationStructure
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
-from netex.models.priceable_object_version_structure import Cell1
+from netex.models.priceable_object_version_structure import Cell
 from netex.models.priceable_object_version_structure import CellsRelStructure
-from netex.models.priceable_object_version_structure import FareTable1
+from netex.models.priceable_object_version_structure import FareTable
 from netex.models.priceable_object_version_structure import FareTablesRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
-from netex.models.pricing_rule_1 import PricingRule1
+from netex.models.pricing_rule import PricingRule
 from netex.models.pricing_rule_ref import PricingRuleRef
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
 from netex.models.private_code import PrivateCode
@@ -211,7 +211,7 @@ from netex.models.publication_request_structure import PublicationRequestStructu
 from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
 from netex.models.purchase_window import PurchaseWindow
 from netex.models.purchase_window_ref import PurchaseWindowRef
-from netex.models.quality_structure_factor_1 import QualityStructureFactor1
+from netex.models.quality_structure_factor import QualityStructureFactor
 from netex.models.quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
 from netex.models.quay_ref import QuayRef
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -264,7 +264,7 @@ from netex.models.specific_parameter_assignments_rel_structure import SpecificPa
 from netex.models.specific_parameter_assignments_rel_structure import SpecificParameterAssignmentsRelStructure
 from netex.models.start_time_at_stop_point import StartTimeAtStopPoint
 from netex.models.start_time_at_stop_points_rel_structure import StartTimeAtStopPointsRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
 from netex.models.stop_use_constraint_enumeration import StopUseConstraintEnumeration
@@ -273,8 +273,8 @@ from netex.models.supplement_product_enumeration import SupplementProductEnumera
 from netex.models.supplement_product_ref import SupplementProductRef
 from netex.models.tariff import Tariff
 from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_ref_structure import TariffZoneRefStructure
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
@@ -435,7 +435,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesRelStructure(
                                 day_type_ref_or_day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Peak',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -468,7 +468,7 @@ obj = PublicationDelivery(
                             version='any',
                             day_types=DayTypesRelStructure(
                                 day_type_ref_or_day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='tfl:OffPeak_Weekday',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -494,7 +494,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tfl:OffPeak_Weekend',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -521,7 +521,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tfl:OffPeak_Holiday',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -555,7 +555,7 @@ obj = PublicationDelivery(
                             version='any',
                             day_types=DayTypesRelStructure(
                                 day_type_ref_or_day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Travel_times_MF_day',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -588,7 +588,7 @@ obj = PublicationDelivery(
                             version='any',
                             day_types=DayTypesRelStructure(
                                 day_type_ref_or_day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Travel_times_MF_evening',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -613,7 +613,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Travel_times_Saturday',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -634,7 +634,7 @@ obj = PublicationDelivery(
                             version='any',
                             day_types=DayTypesRelStructure(
                                 day_type_ref_or_day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Travel_times_Sunday',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -655,7 +655,7 @@ obj = PublicationDelivery(
                             version='any',
                             day_types=DayTypesRelStructure(
                                 day_type_ref_or_day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Travel_times_FamilyDay@MF',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -677,7 +677,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Travel_times_FamilyDay@Weekends',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -699,7 +699,7 @@ obj = PublicationDelivery(
                             version='any',
                             day_types=DayTypesRelStructure(
                                 day_type_ref_or_day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Travel_times_Freedom_pass@MF',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -721,7 +721,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='tfl:Travel_times_Freedom_pass@Weekends',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -750,7 +750,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='tfl:Liverpool_Street_Station',
                                         version='1',
                                         name=MultilingualString(
@@ -778,7 +778,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:LVP_EUS@DayType:Mon-Tue-Wed--Thur-Sat',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -810,7 +810,7 @@ obj = PublicationDelivery(
                                                                                     ]
                                                                                 )
                                                                             ),
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:LVP_EUS@Friday',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -838,7 +838,7 @@ obj = PublicationDelivery(
                                                                                     ]
                                                                                 )
                                                                             ),
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:LVP_EUS@Sunday',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -867,7 +867,7 @@ obj = PublicationDelivery(
                                                                                     ]
                                                                                 )
                                                                             ),
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:LVP_EUS@Holiday',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -915,7 +915,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='tfl:Piccadilly_Circus',
                                         version='1',
                                         name=MultilingualString(
@@ -943,7 +943,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:PIC@Weekdays',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -971,7 +971,7 @@ obj = PublicationDelivery(
                                                                                     ]
                                                                                 )
                                                                             ),
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:PIC@Saturday',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -999,7 +999,7 @@ obj = PublicationDelivery(
                                                                                     ]
                                                                                 )
                                                                             ),
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:PIC@Sun',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -1047,7 +1047,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='tfl:Euston_Station',
                                         version='1',
                                         name=MultilingualString(
@@ -1088,7 +1088,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='tfl:Victoria_Station',
                                         version='1',
                                         name=MultilingualString(
@@ -1116,7 +1116,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:VIC_KGX@Mon-Tue-Wed-Thur-Fri-Sat',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -1177,7 +1177,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='tfl:Heathrow_Terminal_123',
                                         version='1',
                                         name=MultilingualString(
@@ -1205,7 +1205,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
-                                                                            DayType1(
+                                                                            DayType(
                                                                                 id='tfl:HTR@Everyday',
                                                                                 version='1',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -1254,7 +1254,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='tfl:Kings_Cross_Station',
                                         version='1',
                                         name=MultilingualString(
@@ -1404,51 +1404,51 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_1'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_2'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_3'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_4'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_5'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_6'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_7'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_8'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_9'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Watford_Junction'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Grays'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Euston'
                                         ),
@@ -1503,7 +1503,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='lul:BAK',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1559,7 +1559,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:CEN',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1599,7 +1599,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:CIR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1639,7 +1639,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:TRM',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1695,7 +1695,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:DIS',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1735,7 +1735,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:JUB',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1791,7 +1791,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:DLR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1847,7 +1847,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:HAM',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1887,7 +1887,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:MET',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1943,7 +1943,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:NTN',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1983,7 +1983,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:OVR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -2031,7 +2031,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:PIC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -2071,7 +2071,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:VIC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -2111,7 +2111,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:WAC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -2223,7 +2223,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_9'
                                                 ),
@@ -2242,7 +2242,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_2'
                                                 ),
@@ -2261,7 +2261,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_8'
                                                 ),
@@ -2280,7 +2280,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_7'
                                                 ),
@@ -2298,7 +2298,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_8'
                                                 ),
@@ -2317,7 +2317,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_9'
                                                 ),
@@ -2335,7 +2335,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_7'
                                                 ),
@@ -2353,7 +2353,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_7'
                                                 ),
@@ -2371,7 +2371,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2389,11 +2389,11 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2412,7 +2412,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2431,7 +2431,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2450,7 +2450,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2468,7 +2468,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2486,7 +2486,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2504,7 +2504,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_1'
                                                 ),
@@ -2525,11 +2525,11 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_7'
                                                 ),
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2547,7 +2547,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2565,7 +2565,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2583,7 +2583,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_7'
                                                 ),
@@ -2601,7 +2601,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2619,7 +2619,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2637,7 +2637,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_2'
                                                 ),
@@ -2656,7 +2656,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2674,7 +2674,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_3'
                                                 ),
@@ -2693,7 +2693,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_7'
                                                 ),
@@ -2711,7 +2711,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Watford_Junction'
                                                 ),
@@ -2730,7 +2730,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_8'
                                                 ),
@@ -2748,7 +2748,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_6'
                                                 ),
@@ -2767,7 +2767,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_4'
                                                 ),
@@ -2785,7 +2785,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_3'
                                                 ),
@@ -2803,7 +2803,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_1'
                                                 ),
@@ -2822,7 +2822,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_1'
                                                 ),
@@ -2837,84 +2837,84 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_1',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zones 1 only'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_2',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 2 only'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_3',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 3 only'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_4',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 4 only'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_5',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 5 only'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_6',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 6 only'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_7',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 7 only'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_8',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 8 only*'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Zone_9',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 9'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Watford_Junction',
                                         version='any',
                                         name=MultilingualString(
                                             value='Watford Junction*'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Grays',
                                         version='any',
                                         name=MultilingualString(
                                             value='Grays'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='tfl:Euston',
                                         version='any',
                                         name=MultilingualString(
@@ -2945,19 +2945,19 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_1'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_2'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_3'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_4'
                                         ),
@@ -2974,7 +2974,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_2'
                                                 ),
@@ -2992,7 +2992,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='tfl:Zone_2'
                                                 ),
@@ -3022,51 +3022,51 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_1'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_2'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_3'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_4'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_5'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_6'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_7'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_8'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Zone_9'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Watford_Junction'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Grays'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='tfl:Euston'
                                         ),
@@ -3359,7 +3359,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nr:Theobalds_Grove_and_Waltham_Cross',
                                         version='any',
                                         name=MultilingualString(
@@ -3378,7 +3378,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nr:Ockendon_etc',
                                         version='any',
                                         name=MultilingualString(
@@ -3798,7 +3798,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='lrs:RB1',
                                         version='any',
                                         name=MultilingualString(
@@ -3816,7 +3816,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:RB2',
                                         version='any',
                                         name=MultilingualString(
@@ -3834,7 +3834,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Thames_River_Services'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:RB3',
                                         version='any',
                                         name=MultilingualString(
@@ -3852,7 +3852,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:RB4',
                                         version='any',
                                         name=MultilingualString(
@@ -3865,7 +3865,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:RB5',
                                         version='any',
                                         name=MultilingualString(
@@ -3883,7 +3883,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:RB6',
                                         version='any',
                                         name=MultilingualString(
@@ -3901,7 +3901,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:CrossRiver',
                                         version='any',
                                         name=MultilingualString(
@@ -3919,7 +3919,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:London_Eye',
                                         version='any',
                                         name=MultilingualString(
@@ -3932,7 +3932,7 @@ obj = PublicationDelivery(
                                             ref='lrs:London_Eye'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:Crown_River_cruises',
                                         version='any',
                                         name=MultilingualString(
@@ -3945,7 +3945,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Crown_River_cruises'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:City_Cruises',
                                         version='any',
                                         name=MultilingualString(
@@ -3963,7 +3963,7 @@ obj = PublicationDelivery(
                                             ref='lrs:City_Cruises'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:Thames_River_Services',
                                         version='any',
                                         name=MultilingualString(
@@ -3981,7 +3981,7 @@ obj = PublicationDelivery(
                                             ref='lrs:Thames_River_Services'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:WPSA',
                                         version='any',
                                         name=MultilingualString(
@@ -3999,7 +3999,7 @@ obj = PublicationDelivery(
                                             ref='lrs:WPSA'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lrs:Turk_Launches',
                                         version='any',
                                         name=MultilingualString(
@@ -4077,7 +4077,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='ea:Emirates',
                                         version='any',
                                         name=MultilingualString(
@@ -4124,7 +4124,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 pricing_rules=PricingRulesRelStructure(
                                     pricing_rule=[
-                                        PricingRule1(
+                                        PricingRule(
                                             id='tfl:2x',
                                             version='any',
                                             name=MultilingualString(
@@ -6092,35 +6092,35 @@ obj = PublicationDelivery(
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
                                             quality_structure_factor_ref_or_quality_structure_factor=[
-                                                QualityStructureFactor1(
+                                                QualityStructureFactor(
                                                     id='tfl:Resident',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='London Borough Resident'
                                                     )
                                                 ),
-                                                QualityStructureFactor1(
+                                                QualityStructureFactor(
                                                     id='tfl:Non_resident',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Not a London Borough Resident'
                                                     )
                                                 ),
-                                                QualityStructureFactor1(
+                                                QualityStructureFactor(
                                                     id='tfl:Max_duration_of_travel@peak',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='peak : maximum time of travel'
                                                     )
                                                 ),
-                                                QualityStructureFactor1(
+                                                QualityStructureFactor(
                                                     id='tfl:Max_duration_of_travel@offPeak',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='off peak maximum of time travel'
                                                     )
                                                 ),
-                                                QualityStructureFactor1(
+                                                QualityStructureFactor(
                                                     id='tfl:Max_duration_of_travel@MF_daytime',
                                                     version='any',
                                                     name=MultilingualString(
@@ -6374,7 +6374,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:child_5-10',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -6387,7 +6387,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='tfl:child_5-10@TravelCard_on_Oyster@bus',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -6405,7 +6405,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='tfl:child_5-10@metro',
                                                                 version='any',
                                                                 choice=UsageParameterPriceRef(
@@ -6420,7 +6420,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='tfl:child_5-10@rail',
                                                                 version='any',
                                                                 choice=UsageParameterPriceRef(
@@ -6435,7 +6435,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='tfl:child_5-10@river',
                                                                 version='any',
                                                                 choice=UsageParameterPriceRef(
@@ -6450,7 +6450,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='tfl:child_5-10@cableway',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -6490,7 +6490,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:child_11-15',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -6549,7 +6549,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:child_5-10',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -6601,7 +6601,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:child_11to15@11to15_OysterCard_holder',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -6645,7 +6645,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:child_11to15@student_RailCard',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -6700,7 +6700,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:youth_16to18@16Plus_OysterCard_holder',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -6747,7 +6747,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:youth_16to18@RailCard_holder',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -6812,7 +6812,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:18Plus@18Plus_Student_OysterPhotoCard_holder',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -6825,7 +6825,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='tfl:18Plus@TravelCard_on_Oyster@discount',
                                                                 version='any',
                                                                 description=MultilingualString(
@@ -6848,7 +6848,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='tfl:18Plus@Oyster@discount',
                                                                 version='any',
                                                                 description=MultilingualString(
@@ -6872,7 +6872,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:18Plus@student_RailCard',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -8731,7 +8731,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:TravelCard_Sale_discount@metro_tram_bus',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -9404,7 +9404,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:Oyster@concession',
                                                     version='any',
                                                     description=[
@@ -9884,7 +9884,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='tfl:Oyster@rail',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -9892,7 +9892,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 cells=CellsRelStructure(
                                                                     choice=[
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='tfl:Oyster@MaxPrice@rail@adult',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -9980,12 +9980,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='tfl:Oyster@metro',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
                                                                     choice=[
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='tfl:Oyster@MaxPrice@metro@adult',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -10073,12 +10073,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='tfl:Oyster@bus',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
                                                                     choice=[
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='tfl:Oyster@MaxPrice@Bus_Tram@adult',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -10183,12 +10183,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='tfl:Oyster@cableway',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
                                                                     choice=[
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='tfl:Oyster@MaxPrice@cableway@adult',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -10901,7 +10901,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:Group@peak@adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -10960,7 +10960,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:Group@peak@under18',
                                                     version='any',
                                                     name=MultilingualString(
@@ -11129,7 +11129,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:Family_day_TravelCard',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -13377,7 +13377,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
@@ -13406,11 +13406,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
@@ -13439,11 +13439,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Euston'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
@@ -13472,15 +13472,15 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
@@ -13509,11 +13509,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Euston'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
@@ -13542,19 +13542,19 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
@@ -13583,11 +13583,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Euston'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
@@ -13616,23 +13616,23 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
@@ -13661,11 +13661,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Euston'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
@@ -13694,27 +13694,27 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
@@ -13743,11 +13743,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Euston'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
@@ -13776,31 +13776,31 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
@@ -13829,11 +13829,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Euston'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
@@ -13862,35 +13862,35 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -13919,39 +13919,39 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -13980,11 +13980,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Euston'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -14013,39 +14013,39 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -14074,43 +14074,43 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -14139,43 +14139,43 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_1'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Grays'
                                                                         ),
@@ -14204,11 +14204,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Euston'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -14237,7 +14237,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
@@ -14266,11 +14266,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
@@ -14299,15 +14299,15 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
@@ -14336,19 +14336,19 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
@@ -14377,23 +14377,23 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
@@ -14422,27 +14422,27 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
@@ -14471,31 +14471,31 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -14524,35 +14524,35 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -14581,39 +14581,39 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -14642,39 +14642,39 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_2'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Grays'
                                                                         ),
@@ -14703,7 +14703,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
@@ -14732,11 +14732,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
@@ -14765,15 +14765,15 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
@@ -14802,19 +14802,19 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
@@ -14843,23 +14843,23 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
@@ -14888,27 +14888,27 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -14937,31 +14937,31 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -14990,35 +14990,35 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -15047,35 +15047,35 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_3'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Grays'
                                                                         ),
@@ -15104,7 +15104,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
@@ -15133,11 +15133,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
@@ -15166,15 +15166,15 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
@@ -15203,19 +15203,19 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
@@ -15244,23 +15244,23 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -15289,27 +15289,27 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -15338,31 +15338,31 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -15391,31 +15391,31 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_4'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Grays'
                                                                         ),
@@ -15444,7 +15444,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
@@ -15473,11 +15473,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
@@ -15506,15 +15506,15 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
@@ -15543,19 +15543,19 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -15584,23 +15584,23 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -15629,27 +15629,27 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -15678,27 +15678,27 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_5'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Grays'
                                                                         ),
@@ -15727,7 +15727,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
@@ -15756,11 +15756,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
@@ -15789,15 +15789,15 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -15826,19 +15826,19 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -15867,23 +15867,23 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -15912,23 +15912,23 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_6'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Grays'
                                                                         ),
@@ -15957,7 +15957,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
@@ -15986,11 +15986,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -16019,15 +16019,15 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -16056,19 +16056,19 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_7'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -16097,7 +16097,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
@@ -16126,11 +16126,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -16159,7 +16159,7 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_9'
                                                                         ),
@@ -16188,11 +16188,11 @@ obj = PublicationDelivery(
                                                                 validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Zone_8'
                                                                         ),
-                                                                        TariffZoneRef1(
+                                                                        TariffZoneRef(
                                                                             version='any',
                                                                             ref='tfl:Watford_Junction'
                                                                         ),
@@ -16206,7 +16206,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:Prepaid_trip@Single@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -17041,7 +17041,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:Oyster@Single@peak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -18120,7 +18120,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:Oyster@Single@offPeak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -19199,7 +19199,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:TravelCard@Day@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -20038,7 +20038,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:TravelCard@Day@offPeak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -20877,7 +20877,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:TravelCard_on_Oyster@Week@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -21716,7 +21716,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:TravelCard_on_Oyster@Monthly@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -22555,7 +22555,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:TravelCard_on_Oyster@Annual@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -24111,7 +24111,7 @@ obj = PublicationDelivery(
                                                                                     ],
                                                                                 ],
                                                                                 tariff_zone_ref=[
-                                                                                    TariffZoneRef1(
+                                                                                    TariffZoneRef(
                                                                                         version='any',
                                                                                         ref='tfl:Zone_1'
                                                                                     ),
@@ -24823,7 +24823,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_only@Single@peak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -25198,7 +25198,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_only@Single@offPeak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -25585,7 +25585,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_only@Single@peak@Adult@Watford_Junction',
                                                     version='any',
                                                     name=MultilingualString(
@@ -25648,7 +25648,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_only@Single@offPeak@Adult@Watford_Junction',
                                                     version='any',
                                                     name=MultilingualString(
@@ -25711,7 +25711,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Single@peak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -26202,7 +26202,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Single@offPeak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -26709,7 +26709,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Day@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -26756,7 +26756,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Day@offPeak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -26799,7 +26799,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Week@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -26846,7 +26846,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Month@anyTime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -26889,7 +26889,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Year@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -26936,7 +26936,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Single@peak@Adult@Watford_Junction',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27011,7 +27011,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Single@offPeak@Adult@Watford_Junction',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27086,7 +27086,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Watford_Junction@Day@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27157,7 +27157,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Watford_Junction@Day@offPeak@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27224,7 +27224,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Watford_Junction@Week@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27295,7 +27295,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Watford_Junction@Month@anyTime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27362,7 +27362,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Oyster_rail_through@Watford_Junction@Year@anytime@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27631,7 +27631,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='tfl:RailCard@TfL_Discount',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27650,7 +27650,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Standard_RailCard@Cost',
                                                     version='any',
                                                     name=MultilingualString(
@@ -27686,7 +27686,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:Standard_RailCard@Cost@2013-05-19',
                                                     version='any',
                                                     name=MultilingualString(
@@ -28240,7 +28240,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='nr:DisabledRailCard@Cost',
                                                     version='any',
                                                     name=MultilingualString(
@@ -28789,7 +28789,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='lbsl:Bus_Tram@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -28810,7 +28810,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Cash@Adult',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -28835,7 +28835,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Contactless_card@Adult',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -28864,7 +28864,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@Adult',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -28893,7 +28893,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@Adult',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -28918,7 +28918,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@Adult',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -28943,7 +28943,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@Adult',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -28971,7 +28971,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lbsl:Bus_Tram@18Plus',
                                                     version='any',
                                                     name=MultilingualString(
@@ -28987,7 +28987,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Cash@18Plus',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29008,7 +29008,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@18Plus',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29037,7 +29037,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@18Plus',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29062,7 +29062,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@18Plus',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29087,7 +29087,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@18Plus',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29115,7 +29115,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lbsl:Bus_Tram@16To18',
                                                     version='any',
                                                     name=MultilingualString(
@@ -29131,7 +29131,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Cash@16To18',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29152,7 +29152,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@16To18',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29185,7 +29185,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@16To18',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29210,7 +29210,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@16To18',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29231,7 +29231,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@16To18',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29259,7 +29259,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lbsl:Bus_Tram@11To15',
                                                     version='any',
                                                     name=MultilingualString(
@@ -29275,7 +29275,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Cash@11To15',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29296,7 +29296,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@11To15',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29325,7 +29325,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@11To15',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29350,7 +29350,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@11To15',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29375,7 +29375,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@11To15',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -29520,7 +29520,7 @@ obj = PublicationDelivery(
                                         is_available=False,
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
-                                                DayType1(
+                                                DayType(
                                                     id='lrs:July',
                                                     version='any',
                                                     properties=PropertiesOfDayRelStructure(
@@ -29533,7 +29533,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                DayType1(
+                                                DayType(
                                                     id='lrs:August',
                                                     version='any',
                                                     properties=PropertiesOfDayRelStructure(
@@ -29806,7 +29806,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB1@Single@Prepaid_trip',
                                                     version='any',
                                                     name=MultilingualString(
@@ -29873,7 +29873,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB1@Single@Oyster_PayAsYouGo',
                                                     version='any',
                                                     name=MultilingualString(
@@ -29940,7 +29940,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB1@Single@TravelCard',
                                                     version='any',
                                                     name=MultilingualString(
@@ -30007,7 +30007,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB1@Week@TravelCard',
                                                     version='any',
                                                     name=MultilingualString(
@@ -30074,7 +30074,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB1@Month@TravelCard',
                                                     version='any',
                                                     name=MultilingualString(
@@ -30141,7 +30141,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB1@7Month@TravelCard',
                                                     version='any',
                                                     name=MultilingualString(
@@ -30208,7 +30208,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB1@Year@TravelCard',
                                                     version='any',
                                                     name=MultilingualString(
@@ -30395,7 +30395,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB2@Adult',
                                                     version='any',
                                                     name=MultilingualString(
@@ -30420,7 +30420,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30442,7 +30442,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30464,7 +30464,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@other@single@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30482,7 +30482,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@PayAsYouGo_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30504,7 +30504,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@PayAsYouGo_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30526,7 +30526,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@other@single@PayAsYouGo_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30544,7 +30544,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@TravelCard_Sale_discount',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30566,7 +30566,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=7
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@TravelCard_Sale_discount',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30588,7 +30588,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=8
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@other@single@TravelCard_Sale_discount',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30606,7 +30606,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=9
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@return@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30628,7 +30628,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=10
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@return@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30650,7 +30650,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=11
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Adult@other@return@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30671,7 +30671,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB2@Child',
                                                     version='any',
                                                     name=MultilingualString(
@@ -30696,7 +30696,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30718,7 +30718,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30740,7 +30740,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@other@single@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30758,7 +30758,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@PayAsYouGo_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30780,7 +30780,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@PayAsYouGo_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30802,7 +30802,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@other@single@PayAsYouGo_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30820,7 +30820,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@TravelCard_Sale_discount',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30842,7 +30842,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=7
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@TravelCard_Sale_discount',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30864,7 +30864,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=8
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@other@single@TravelCard_Sale_discount',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30882,7 +30882,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=9
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@return@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30904,7 +30904,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=10
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@return@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30926,7 +30926,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=11
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Child@other@return@Prepaid_trip',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30947,7 +30947,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:RB2@Concessions',
                                                     version='any',
                                                     name=MultilingualString(
@@ -30972,7 +30972,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@Freedom_pass',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -30994,7 +30994,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@Freedom_pass',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -31016,7 +31016,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@other@single@Freedom_pass',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -31034,7 +31034,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@18Plus_OysterPhotoCard',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -31056,7 +31056,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@18Plus_OysterPhotoCard',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -31078,7 +31078,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@other@single@18Plus_OysterPhotoCard',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -31096,7 +31096,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@Tate_member',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -31118,7 +31118,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=7
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@Tate_member',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -31140,7 +31140,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=8
                                                             ),
-                                                            Cell1(
+                                                            Cell(
                                                                 id='lrs:RB2@Concessions@other@single@Tate_member',
                                                                 version='any',
                                                                 choice=FarePriceVersionedChildStructure(
@@ -31247,7 +31247,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:Tower@River_Roamer@Prepaid',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -31320,7 +31320,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:Tower@River_Roamer@TravelCard',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -31566,7 +31566,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='lrs:Tower@River_tour',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -31743,12 +31743,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
                                                                     choice=[
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@adult@single',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -31766,7 +31766,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1
                                                                         ),
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@adult@return',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -31784,7 +31784,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=2
                                                                         ),
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@child@single',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -31802,7 +31802,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=3
                                                                         ),
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@child@return',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -31861,12 +31861,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
                                                                     choice=[
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@adult@single',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -31884,7 +31884,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1
                                                                         ),
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@adult@return',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -31902,7 +31902,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=2
                                                                         ),
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@child@single',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -31920,7 +31920,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=3
                                                                         ),
-                                                                        Cell1(
+                                                                        Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@child@return',
                                                                             version='any',
                                                                             choice=FarePriceVersionedChildStructure(
@@ -32827,7 +32827,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='ea:Boarding_Pass@Prepaid_trip',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -32848,7 +32848,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='ea:Boarding_Pass@Prepaid_trip@Adult',
                                                                 version='any',
                                                                 prices_for=PriceableObjectRefsRelStructure(
@@ -32890,7 +32890,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='ea:Boarding_Pass@Prepaid_trip@Child',
                                                                 version='any',
                                                                 prices_for=PriceableObjectRefsRelStructure(
@@ -32943,7 +32943,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='ea:Boarding_Pass@discounted',
                                                     version='any',
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -32964,7 +32964,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='ea:Boarding_Pass@discounted@adult',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -33009,7 +33009,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='ea:Boarding_Pass@discounted@child',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -33065,7 +33065,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='ea:Boarding_Pass@Oyster_PayAsYouGo',
                                                     version='any',
                                                     name=MultilingualString(

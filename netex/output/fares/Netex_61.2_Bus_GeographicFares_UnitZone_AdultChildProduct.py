@@ -53,7 +53,7 @@ from netex.models.price_unit import PriceUnit
 from netex.models.price_unit_ref import PriceUnitRef
 from netex.models.price_units_rel_structure import PriceUnitsRelStructure
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.priceable_object_version_structure import PriceGroupsRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
@@ -66,8 +66,8 @@ from netex.models.round_trip_type_enumeration import RoundTripTypeEnumeration
 from netex.models.service_frame import ServiceFrame
 from netex.models.service_frame_ref import ServiceFrameRef
 from netex.models.tariff import Tariff
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_ref_structure import TariffZoneRefStructure
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
@@ -195,35 +195,35 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:A'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:B'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:C'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:D'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:P'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:Q'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:X'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:Y'
                                         ),
@@ -232,7 +232,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='mybus:A',
                                         version='any',
                                         name=MultilingualString(
@@ -242,7 +242,7 @@ obj = PublicationDelivery(
                                             value='Alpha'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='mybus:B',
                                         version='any',
                                         name=MultilingualString(
@@ -252,7 +252,7 @@ obj = PublicationDelivery(
                                             value='Bravo'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='mybus:C',
                                         version='any',
                                         name=MultilingualString(
@@ -262,7 +262,7 @@ obj = PublicationDelivery(
                                             value='Charley'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='mybus:D',
                                         version='any',
                                         name=MultilingualString(
@@ -272,7 +272,7 @@ obj = PublicationDelivery(
                                             value='Delta'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='mybus:P',
                                         version='any',
                                         name=MultilingualString(
@@ -282,7 +282,7 @@ obj = PublicationDelivery(
                                             value='Papa'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='mybus:Q',
                                         version='any',
                                         name=MultilingualString(
@@ -292,14 +292,14 @@ obj = PublicationDelivery(
                                             value='Quebec'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='mybus:X',
                                         version='any',
                                         name=MultilingualString(
                                             value='X Ray '
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='mybus:Y',
                                         version='any',
                                         name=MultilingualString(
@@ -1583,7 +1583,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='myfares:Unit_zone',
                                         version='1.0',
                                         name=MultilingualString(

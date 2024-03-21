@@ -3,7 +3,7 @@ from typing import List, Union
 
 from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
 )
@@ -17,7 +17,7 @@ class CappingRulePricesRelStructure(StrictContainmentAggregationStructure):
         name = "cappingRulePrices_RelStructure"
 
     capping_rule_price_ref_or_cell_ref_or_capping_rule_price: List[
-        Union[CappingRulePriceRef, CellRef1, CappingRulePrice]
+        Union[CappingRulePriceRef, CellRef, CappingRulePrice]
     ] = field(
         default_factory=list,
         metadata={
@@ -30,7 +30,7 @@ class CappingRulePricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

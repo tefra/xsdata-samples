@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .route_1 import Route1
+from .route import Route
 from .route_ref import RouteRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -13,7 +13,7 @@ class RoutesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routes_RelStructure"
 
-    route_ref_or_route: List[Union[RouteRef, Route1]] = field(
+    route_ref_or_route: List[Union[RouteRef, Route]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -25,7 +25,7 @@ class RoutesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "Route",
-                    "type": Route1,
+                    "type": Route,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -1,7 +1,7 @@
 from decimal import Decimal
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.arrival_structure import ArrivalStructure
-from netex.models.call_1 import Call1
+from netex.models.call import Call
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -13,7 +13,7 @@ from netex.models.day_type_refs_rel_structure import DayTypeRefsRelStructure
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
 from netex.models.departure_structure import DepartureStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.explicit_journey_refs_rel_structure import ExplicitJourneyRefsRelStructure
 from netex.models.frequency_groups_in_frame_rel_structure import FrequencyGroupsInFrameRelStructure
@@ -25,7 +25,7 @@ from netex.models.headway_journey_group_ref import HeadwayJourneyGroupRef
 from netex.models.headway_use_enumeration import HeadwayUseEnumeration
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
@@ -45,7 +45,7 @@ from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledS
 from netex.models.service_calendar import ServiceCalendar
 from netex.models.service_calendar_frame import ServiceCalendarFrame
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey import ServiceJourney
 from netex.models.service_journey_ref import ServiceJourneyRef
 from netex.models.service_link import ServiceLink
 from netex.models.service_link_ref_structure import ServiceLinkRefStructure
@@ -159,7 +159,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_fg_24o_01',
                                         version='any',
                                         departure_time=XmlTime(10, 0, 0, 0, 0),
@@ -189,7 +189,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -214,7 +214,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -236,7 +236,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -254,7 +254,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_fg_24o_02',
                                         version='any',
                                         departure_time=XmlTime(10, 15, 0, 0, 0),
@@ -284,7 +284,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -299,7 +299,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -311,7 +311,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -329,7 +329,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_fg_24o_03',
                                         version='any',
                                         departure_time=XmlTime(10, 30, 0, 0, 0),
@@ -359,7 +359,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_03_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -374,7 +374,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_03_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -386,7 +386,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_03_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -404,7 +404,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_fg_24o_04',
                                         version='any',
                                         departure_time=XmlTime(10, 45, 0, 0, 0),
@@ -434,7 +434,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_04_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -449,7 +449,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_04_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -461,7 +461,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_04_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -479,7 +479,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_fg_24o_05',
                                         version='any',
                                         departure_time=XmlTime(11, 0, 0, 0, 0),
@@ -509,7 +509,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_05_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -524,7 +524,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_05_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -536,7 +536,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_05_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -554,7 +554,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_fg_24o_06',
                                         version='any',
                                         departure_time=XmlTime(12, 0, 0, 0, 0),
@@ -576,7 +576,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_06_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -591,7 +591,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_06_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -603,7 +603,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_fg_24o_06_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -678,7 +678,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_24o',
                                         version='any',
                                         name=MultilingualString(
@@ -863,7 +863,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_01MTWTFSS',
                                         version='any',
                                         name=MultilingualString(

@@ -39,7 +39,7 @@ from netex.models.direction_of_use_enumeration import DirectionOfUseEnumeration
 from netex.models.discounting_rule import DiscountingRule
 from netex.models.discounting_rule_ref import DiscountingRuleRef
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import TimebandVersionedChildStructure
 from netex.models.entity_in_version_structure import TimebandsRelStructure
@@ -70,9 +70,9 @@ from netex.models.linear_ring import LinearRing
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.parking import Parking
-from netex.models.parking_area_1 import ParkingArea1
+from netex.models.parking_area import ParkingArea
 from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
-from netex.models.parking_bay_1 import ParkingBay1
+from netex.models.parking_bay import ParkingBay
 from netex.models.parking_bays_rel_structure import ParkingBaysRelStructure
 from netex.models.parking_capacities_rel_structure import ParkingCapacitiesRelStructure
 from netex.models.parking_capacity import ParkingCapacity
@@ -178,7 +178,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType1(
+                                        DayType(
                                             id='mypark:EveryDay',
                                             version='any',
                                             name=MultilingualString(
@@ -217,7 +217,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType1(
+                                        DayType(
                                             id='mypark:24_Hours_every_day',
                                             version='any',
                                             name=MultilingualString(
@@ -1108,7 +1108,7 @@ obj = PublicationDelivery(
                             ),
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
-                                    ParkingArea1(
+                                    ParkingArea(
                                         id='mypark:PP01@A01',
                                         version='any',
                                         name=MultilingualString(
@@ -1188,7 +1188,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ParkingArea1(
+                                    ParkingArea(
                                         id='mypark:PP01@A02',
                                         version='any',
                                         name=MultilingualString(
@@ -1254,7 +1254,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ParkingArea1(
+                                    ParkingArea(
                                         id='mypark:PP01@A03',
                                         version='any',
                                         name=MultilingualString(
@@ -1373,7 +1373,7 @@ obj = PublicationDelivery(
                                             ),
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
-                                                    DayType1(
+                                                    DayType(
                                                         id='mypark:WorkingDay',
                                                         version='any',
                                                         name=MultilingualString(
@@ -1596,7 +1596,7 @@ obj = PublicationDelivery(
                             ),
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
-                                    ParkingArea1(
+                                    ParkingArea(
                                         id='mypark:PS22@01',
                                         version='any',
                                         name=MultilingualString(
@@ -1709,7 +1709,7 @@ obj = PublicationDelivery(
                             ),
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
-                                    ParkingArea1(
+                                    ParkingArea(
                                         id='mypark:PB44@A01',
                                         version='any',
                                         name=MultilingualString(
@@ -1755,7 +1755,7 @@ obj = PublicationDelivery(
                                         ),
                                         bays=ParkingBaysRelStructure(
                                             parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay=[
-                                                ParkingBay1(
+                                                ParkingBay(
                                                     id='mypark:PB44@A01@B001',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1891,7 +1891,7 @@ obj = PublicationDelivery(
                                                     width=Decimal('4'),
                                                     recharging_available=False
                                                 ),
-                                                ParkingBay1(
+                                                ParkingBay(
                                                     id='mypark:PB44@A01@B002',
                                                     version='any',
                                                     name=MultilingualString(
@@ -2027,7 +2027,7 @@ obj = PublicationDelivery(
                                                     width=Decimal('4'),
                                                     recharging_available=False
                                                 ),
-                                                ParkingBay1(
+                                                ParkingBay(
                                                     id='mypark:PB44@A01@B003',
                                                     version='any',
                                                     name=MultilingualString(
@@ -2182,7 +2182,7 @@ obj = PublicationDelivery(
                                             ),
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
-                                                    DayType1(
+                                                    DayType(
                                                         id='mypark:PNR01',
                                                         version='any',
                                                         properties=PropertiesOfDayRelStructure(

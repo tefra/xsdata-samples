@@ -30,7 +30,7 @@ from netex.models.general_version_frame_structure import CompositeFrame
 from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.generic_parameter_assignments_rel_structure import GenericParameterAssignment
 from netex.models.interchanging import Interchanging
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
@@ -44,7 +44,7 @@ from netex.models.participant_ref import ParticipantRef
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.priceable_object_version_structure import PriceGroupsRelStructure
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.publication_delivery import PublicationDelivery
@@ -184,7 +184,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:Line_1',
                                         version='any',
                                         name=MultilingualString(
@@ -587,7 +587,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='myfares:Line_1',
                                         version='1.0',
                                         members=FarePricesRelStructure(

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .sales_offer_package_price_ref import SalesOfferPackagePriceRef
 from .sales_offer_package_price_versioned_child_structure import (
     SalesOfferPackagePriceVersionedChildStructure,
@@ -24,7 +24,7 @@ class SalesOfferPackagePricesRelStructure(
         Union[
             SalesOfferPackagePriceRef,
             SalesOfferPackagePriceVersionedChildStructure,
-            CellRef1,
+            CellRef,
         ]
     ] = field(
         default_factory=list,
@@ -43,7 +43,7 @@ class SalesOfferPackagePricesRelStructure(
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -19,7 +19,7 @@ from netex.models.day_type_assignments_in_frame_rel_structure import DayTypeAssi
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import TimebandsRelStructure
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
@@ -227,7 +227,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='oda:DT01_Very_Busy',
                                         version='any',
                                         name=MultilingualString(
@@ -257,7 +257,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='oda:DT02_Busy',
                                         version='any',
                                         name=MultilingualString(
@@ -287,7 +287,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='oda:DT03_Normal',
                                         version='any',
                                         name=MultilingualString(
@@ -317,7 +317,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='oda:DT04_QUIET',
                                         version='any',
                                         name=MultilingualString(

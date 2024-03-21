@@ -5,7 +5,7 @@ from netex.models.assistance_facility_enumeration import AssistanceFacilityEnume
 from netex.models.assistance_facility_list import AssistanceFacilityList
 from netex.models.authority_ref_structure import AuthorityRefStructure
 from netex.models.block_ref import BlockRef
-from netex.models.call_1 import Call1
+from netex.models.call import Call
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -31,7 +31,7 @@ from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import OperatingDay
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.fare_class_enumeration import FareClassEnumeration
@@ -55,7 +55,7 @@ from netex.models.journey_run_times_rel_structure import JourneyRunTimesRelStruc
 from netex.models.journey_wait_time import JourneyWaitTime
 from netex.models.journey_wait_times_rel_structure import JourneyWaitTimesRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.link_refs_rel_structure import LinkRefsRelStructure
@@ -69,7 +69,7 @@ from netex.models.mobility_facility_list import MobilityFacilityList
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.notice import Notice
-from netex.models.notice_assignment_1 import NoticeAssignment1
+from netex.models.notice_assignment import NoticeAssignment
 from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from netex.models.notice_ref import NoticeRef
 from netex.models.notices_in_frame_rel_structure import NoticesInFrameRelStructure
@@ -79,7 +79,7 @@ from netex.models.onward_timing_link_view import OnwardTimingLinkView
 from netex.models.operating_day_ref import OperatingDayRef
 from netex.models.operating_day_ref_structure import OperatingDayRefStructure
 from netex.models.operating_days_in_frame_rel_structure import OperatingDaysInFrameRelStructure
-from netex.models.operating_period_1 import OperatingPeriod1
+from netex.models.operating_period import OperatingPeriod
 from netex.models.operating_periods_in_frame_rel_structure import OperatingPeriodsInFrameRelStructure
 from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
@@ -98,7 +98,7 @@ from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.resource_frame import ResourceFrame
 from netex.models.resource_frame_ref import ResourceFrameRef
-from netex.models.route_1 import Route1
+from netex.models.route import Route
 from netex.models.route_ref import RouteRef
 from netex.models.route_ref_structure import RouteRefStructure
 from netex.models.route_refs_rel_structure import RouteRefsRelStructure
@@ -117,7 +117,7 @@ from netex.models.service_facility_sets_in_frame_rel_structure import ServiceFac
 from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
 from netex.models.service_frame import ServiceFrame
 from netex.models.service_frame_ref import ServiceFrameRef
-from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey import ServiceJourney
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.service_link import ServiceLink
@@ -152,7 +152,7 @@ from netex.models.timing_link_ref_structure import TimingLinkRefStructure
 from netex.models.timing_links_in_frame_rel_structure import TimingLinksInFrameRelStructure
 from netex.models.timing_pattern import TimingPattern
 from netex.models.timing_patterns_in_frame_rel_structure import TimingPatternsInFrameRelStructure
-from netex.models.timing_point_1 import TimingPoint1
+from netex.models.timing_point import TimingPoint
 from netex.models.timing_point_in_journey_pattern import TimingPointInJourneyPattern
 from netex.models.timing_point_in_journey_pattern_ref import TimingPointInJourneyPatternRef
 from netex.models.timing_point_ref import TimingPointRef
@@ -277,7 +277,7 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route1(
+                                    Route(
                                         id='mybus:RT_24o',
                                         version='any',
                                         name=MultilingualString(
@@ -295,7 +295,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -492,7 +492,7 @@ obj = PublicationDelivery(
                                                     for_alighting=False,
                                                     notice_assignments=NoticeAssignmentsRelStructure(
                                                         sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                            NoticeAssignment1(
+                                                            NoticeAssignment(
                                                                 id='mybus:spijp_24o_01',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -523,7 +523,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     notice_assignments=NoticeAssignmentsRelStructure(
                                                         sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                            NoticeAssignment1(
+                                                            NoticeAssignment(
                                                                 id='mybus:spijp_24o_02',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -550,7 +550,7 @@ obj = PublicationDelivery(
                                                     for_boarding=False,
                                                     notice_assignments=NoticeAssignmentsRelStructure(
                                                         sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                            NoticeAssignment1(
+                                                            NoticeAssignment(
                                                                 id='mybus:spijp_24o_03',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -595,7 +595,7 @@ obj = PublicationDelivery(
                             ),
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='mybus:SSP_001_t1',
                                         version='any',
                                         name=MultilingualString(
@@ -607,7 +607,7 @@ obj = PublicationDelivery(
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='mybus:SSP_001_t2',
                                         version='any',
                                         name=MultilingualString(
@@ -619,7 +619,7 @@ obj = PublicationDelivery(
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='mybus:SSP_002_t3',
                                         version='any',
                                         name=MultilingualString(
@@ -878,7 +878,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     notice_assignments=NoticeAssignmentsRelStructure(
                                                         sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                            NoticeAssignment1(
+                                                            NoticeAssignment(
                                                                 id='mybus:pijp_24o_02',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -913,7 +913,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     notice_assignments=NoticeAssignmentsRelStructure(
                                                         sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                            NoticeAssignment1(
+                                                            NoticeAssignment(
                                                                 id='mybus:pijp_24o_04',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -948,7 +948,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     notice_assignments=NoticeAssignmentsRelStructure(
                                                         sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                            NoticeAssignment1(
+                                                            NoticeAssignment(
                                                                 id='mybus:tpip_24o_06',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -1252,7 +1252,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_24o_01',
                                         version='any',
                                         journey_accountings=JourneyAccountingsRelStructure(
@@ -1438,7 +1438,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_24o_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1467,7 +1467,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_24o_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1500,7 +1500,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_24o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1526,7 +1526,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_24o_02',
                                         version='any',
                                         departure_time=XmlTime(15, 20, 0, 0, 0),
@@ -1644,7 +1644,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_24o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1684,7 +1684,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=False,
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_24o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1714,7 +1714,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:sj_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1809,7 +1809,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_01-MF-NotHoliday',
                                         version='any',
                                         name=MultilingualString(
@@ -1832,7 +1832,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_02-Everyday-NotHoliday',
                                         version='any',
                                         name=MultilingualString(
@@ -1851,7 +1851,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_03-WE-NotHoliday',
                                         version='any',
                                         name=MultilingualString(
@@ -1871,7 +1871,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_04-AA-NotHoliday',
                                         version='any',
                                         name=MultilingualString(
@@ -1890,7 +1890,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_ChristmasEve',
                                         version='any',
                                         name=MultilingualString(
@@ -1909,7 +1909,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_ChristmasDay',
                                         version='any',
                                         name=MultilingualString(
@@ -1928,7 +1928,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_ChristmasDayDisplacement',
                                         version='any',
                                         name=MultilingualString(
@@ -1951,7 +1951,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_NewYearsEve',
                                         version='any',
                                         name=MultilingualString(
@@ -1970,7 +1970,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_NewYearsDay',
                                         version='any',
                                         name=MultilingualString(
@@ -1989,7 +1989,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_2ndJanuary',
                                         version='any',
                                         name=MultilingualString(
@@ -2008,7 +2008,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_NewYearsDayDisplacement',
                                         version='any',
                                         name=MultilingualString(
@@ -2031,7 +2031,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_GoodFriday',
                                         version='any',
                                         name=MultilingualString(
@@ -2050,7 +2050,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_EasterSunday',
                                         version='any',
                                         name=MultilingualString(
@@ -2069,7 +2069,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_EasterMonday',
                                         version='any',
                                         name=MultilingualString(
@@ -2116,7 +2116,7 @@ obj = PublicationDelivery(
                             ),
                             operating_periods=OperatingPeriodsInFrameRelStructure(
                                 operating_period_or_uic_operating_period=[
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='hde:op_010',
                                         version='any',
                                         name=MultilingualString(

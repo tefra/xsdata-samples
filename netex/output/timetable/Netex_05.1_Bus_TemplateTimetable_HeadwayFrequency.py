@@ -1,7 +1,7 @@
 from decimal import Decimal
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.arrival_structure import ArrivalStructure
-from netex.models.call_1 import Call1
+from netex.models.call import Call
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -12,7 +12,7 @@ from netex.models.day_type_ref import DayTypeRef
 from netex.models.day_type_refs_rel_structure import DayTypeRefsRelStructure
 from netex.models.departure_structure import DepartureStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.frequency_groups_rel_structure import FrequencyGroupsRelStructure
@@ -21,7 +21,7 @@ from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.headway_journey_group import HeadwayJourneyGroup
 from netex.models.headway_use_enumeration import HeadwayUseEnumeration
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
@@ -127,7 +127,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType1(
+                                        DayType(
                                             id='hde:DT_01MTWTFSS',
                                             version='any',
                                             name=MultilingualString(
@@ -143,7 +143,7 @@ obj = PublicationDelivery(
                                                 ]
                                             )
                                         ),
-                                        DayType1(
+                                        DayType(
                                             id='hde:DT_01MTWTF',
                                             version='any',
                                             name=MultilingualString(
@@ -215,7 +215,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='hde:tvjh_24o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -230,7 +230,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:tvjh_24o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -246,7 +246,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='hde:tvjh_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -311,7 +311,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_234',
                                         version='any',
                                         name=MultilingualString(

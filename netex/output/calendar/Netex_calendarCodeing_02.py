@@ -8,7 +8,7 @@ from netex.models.day_type_assignments_in_frame_rel_structure import DayTypeAssi
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import OperatingDay
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.multilingual_string import MultilingualString
@@ -294,7 +294,7 @@ obj = PublicationDelivery(
                 ),
                 day_types=DayTypesInFrameRelStructure(
                     day_type=[
-                        DayType1(
+                        DayType(
                             id='hde:DayType:DT_01-MF-NH',
                             version='any',
                             name=MultilingualString(
@@ -317,7 +317,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='hde:DayType:DT_02-AA-NH',
                             version='any',
                             name=MultilingualString(
@@ -336,7 +336,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='hde:DayType:DT_03-WE-NH',
                             version='any',
                             name=MultilingualString(
@@ -356,7 +356,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='hde:DayType:DT_04-AA-NH',
                             version='any',
                             name=MultilingualString(

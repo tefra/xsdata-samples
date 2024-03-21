@@ -27,7 +27,7 @@ from netex.models.entity_in_version_structure import AvailabilityCondition
 from netex.models.general_version_frame_structure import CompositeFrame
 from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.logical_display import LogicalDisplay
@@ -45,7 +45,7 @@ from netex.models.pos import Pos
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -63,7 +63,7 @@ from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.simple_point_version_structure import SimplePointVersionStructure
 from netex.models.site_frame import SiteFrame
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -192,7 +192,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -204,7 +204,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                         public_code='24'
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_46',
                                         version='any',
                                         name=MultilingualString(
@@ -216,7 +216,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='46'
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_68',
                                         version='any',
                                         name=MultilingualString(
@@ -1360,7 +1360,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP001A',
                                         version='any',
                                         name=MultilingualString(
@@ -1384,7 +1384,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_TRAM,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP001A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1413,7 +1413,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP002B',
                                         version='any',
                                         name=MultilingualString(
@@ -1443,7 +1443,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.TRAM_STATION,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP002B_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1467,7 +1467,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.TRAM_PLATFORM
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP002B_2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1492,7 +1492,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.N,
                                                     quay_type=QuayTypeEnumeration.TRAM_PLATFORM
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP002B_3',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1532,7 +1532,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP003C',
                                         version='any',
                                         name=MultilingualString(
@@ -1563,7 +1563,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_TRAM,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP003C_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1589,7 +1589,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.NE,
                                                     quay_type=QuayTypeEnumeration.TRAM_STOP
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP003C_2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',

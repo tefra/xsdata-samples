@@ -6,10 +6,10 @@ from .dated_service_journey import DatedServiceJourney
 from .dated_vehicle_journey import DatedVehicleJourney
 from .dead_run import DeadRun
 from .normal_dated_vehicle_journey import NormalDatedVehicleJourney
-from .service_journey_1 import ServiceJourney1
+from .service_journey import ServiceJourney
 from .special_service import SpecialService
 from .template_service_journey import TemplateServiceJourney
-from .vehicle_journey_1 import VehicleJourney1
+from .vehicle_journey import VehicleJourney
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -21,10 +21,10 @@ class JourneysInFrameRelStructure(ContainmentAggregationStructure):
 
     choice: List[
         Union[
-            VehicleJourney1,
+            VehicleJourney,
             DatedVehicleJourney,
             NormalDatedVehicleJourney,
-            ServiceJourney1,
+            ServiceJourney,
             DatedServiceJourney,
             DeadRun,
             SpecialService,
@@ -37,7 +37,7 @@ class JourneysInFrameRelStructure(ContainmentAggregationStructure):
             "choices": (
                 {
                     "name": "VehicleJourney",
-                    "type": VehicleJourney1,
+                    "type": VehicleJourney,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -52,7 +52,7 @@ class JourneysInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ServiceJourney",
-                    "type": ServiceJourney1,
+                    "type": ServiceJourney,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

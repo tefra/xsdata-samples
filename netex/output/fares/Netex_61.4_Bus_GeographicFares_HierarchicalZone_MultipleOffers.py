@@ -54,7 +54,7 @@ from netex.models.price_unit import PriceUnit
 from netex.models.price_unit_ref import PriceUnitRef
 from netex.models.price_units_rel_structure import PriceUnitsRelStructure
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.priceable_object_version_structure import PriceGroupsRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
 from netex.models.publication_delivery import PublicationDelivery
@@ -66,7 +66,7 @@ from netex.models.round_trip_type_enumeration import RoundTripTypeEnumeration
 from netex.models.service_frame import ServiceFrame
 from netex.models.service_frame_ref import ServiceFrameRef
 from netex.models.tariff import Tariff
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_ref_structure import TariffZoneRefStructure
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
@@ -194,15 +194,15 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:A'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:B'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='mybus:C'
                                         ),
@@ -240,7 +240,7 @@ obj = PublicationDelivery(
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='mybus:A'
                                                 ),
@@ -258,7 +258,7 @@ obj = PublicationDelivery(
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='mybus:B'
                                                 ),
@@ -762,7 +762,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='myfares:DTA@Nested_Zone',
                                         version='1.0',
                                         name=MultilingualString(

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 
 from .frame_containment_structure import FrameContainmentStructure
-from .priceable_object_version_structure import PriceGroup1
+from .priceable_object_version_structure import PriceGroup
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -12,7 +12,7 @@ class FarePricesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "farePricesInFrame_RelStructure"
 
-    price_group: List[PriceGroup1] = field(
+    price_group: List[PriceGroup] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup",

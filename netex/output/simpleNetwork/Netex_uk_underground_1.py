@@ -20,7 +20,7 @@ from netex.models.general_version_frame_structure import CompositeFrame
 from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.group_of_lines import GroupOfLines
 from netex.models.groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_network import LineNetwork
 from netex.models.line_networks_in_frame_rel_structure import LineNetworksInFrameRelStructure
 from netex.models.line_ref import LineRef
@@ -70,7 +70,7 @@ from netex.models.stop_area import StopArea
 from netex.models.stop_area_ref_structure import StopAreaRefStructure
 from netex.models.stop_area_refs_rel_structure import StopAreaRefsRelStructure
 from netex.models.stop_areas_in_frame_rel_structure import StopAreasInFrameRelStructure
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.topographic_place_ref import TopographicPlaceRef
 from netex.models.topographic_place_view import TopographicPlaceView
@@ -545,7 +545,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='lul:BAK',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -601,7 +601,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:CEN',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -641,7 +641,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:CIR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -681,7 +681,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:TRM',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -737,7 +737,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:DIS',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -777,7 +777,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:JUB',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -833,7 +833,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:DLR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -889,7 +889,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:HAM',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -929,7 +929,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:MET',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -985,7 +985,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:NTN',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1025,7 +1025,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:OVR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1065,7 +1065,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:PIC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1105,7 +1105,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:VIC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1145,7 +1145,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='lul:WAC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -26802,7 +26802,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     created=XmlDateTime(2009, 10, 29, 16, 30, 45),
                                                     changed=XmlDateTime(2009, 10, 29, 16, 30, 45),
                                                     ref='WATFDJ'

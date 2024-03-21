@@ -116,7 +116,7 @@ from netex.models.organisation_type_enumeration import OrganisationTypeEnumerati
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.parking import Parking
 from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
-from netex.models.parking_bay_1 import ParkingBay1
+from netex.models.parking_bay import ParkingBay
 from netex.models.parking_bay_ref import ParkingBayRef
 from netex.models.parking_bays_rel_structure import ParkingBaysRelStructure
 from netex.models.parking_type_enumeration import ParkingTypeEnumeration
@@ -138,13 +138,13 @@ from netex.models.preassigned_fare_product_enumeration import PreassignedFarePro
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import FareTable1
+from netex.models.priceable_object_version_structure import FareTable
 from netex.models.propulsion_type_enumeration import PropulsionTypeEnumeration
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
 from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -186,7 +186,7 @@ from netex.models.site_type_enumeration import SiteTypeEnumeration
 from netex.models.specific_parameter_assignments_rel_structure import SpecificParameterAssignment
 from netex.models.specific_parameter_assignments_rel_structure import SpecificParameterAssignmentsRelStructure
 from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.submode import Submode
@@ -924,7 +924,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='alphaville_aeroport',
                                         version='any',
                                         name=MultilingualString(
@@ -969,7 +969,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='alphaville_aeroport@taxi_set_down',
                                                     version='any',
                                                     name=MultilingualString(
@@ -980,7 +980,7 @@ obj = PublicationDelivery(
                                                     boarding_use=False,
                                                     alighting_use=True
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='alphaville_aeroport@taxi_pick_up',
                                                     version='any',
                                                     name=MultilingualString(
@@ -994,7 +994,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='alphaville_gare',
                                         version='any',
                                         name=MultilingualString(
@@ -1020,7 +1020,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='alphaville_gare@platform_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1030,7 +1030,7 @@ obj = PublicationDelivery(
                                                     boarding_use=True,
                                                     alighting_use=True
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='alphaville_gare@platform_2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1043,7 +1043,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='alphaville_gare@taxi',
                                         version='any',
                                         name=MultilingualString(
@@ -1065,7 +1065,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.TAXI,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='alphaville_gare@taxi_set_down',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1075,7 +1075,7 @@ obj = PublicationDelivery(
                                                     boarding_use=False,
                                                     alighting_use=True
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='alphaville_gare@taxi_pick_up',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1178,7 +1178,7 @@ obj = PublicationDelivery(
                                                     total_capacity=20,
                                                     bays=ParkingBaysRelStructure(
                                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay=[
-                                                            ParkingBay1(
+                                                            ParkingBay(
                                                                 id='alphaville_airport_taxi_parking@A1@chauff_1',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -1188,7 +1188,7 @@ obj = PublicationDelivery(
                                                                     value='Chauffeur 1'
                                                                 )
                                                             ),
-                                                            ParkingBay1(
+                                                            ParkingBay(
                                                                 id='alphaville_airport_taxi_parking@A1@chauff_2',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -2137,7 +2137,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable1(
+                                    FareTable(
                                         id='home_james@prepriced_trip',
                                         version='any',
                                         name=MultilingualString(
@@ -2613,7 +2613,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable1(
+                                    FareTable(
                                         id='home_james@charter',
                                         version='any',
                                         name=MultilingualString(

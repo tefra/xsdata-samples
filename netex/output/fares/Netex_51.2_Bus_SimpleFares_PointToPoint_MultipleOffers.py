@@ -43,7 +43,7 @@ from netex.models.group_of_lines import GroupOfLines
 from netex.models.group_of_lines_ref import GroupOfLinesRef
 from netex.models.groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
 from netex.models.interchanging import Interchanging
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -62,9 +62,9 @@ from netex.models.price_group_ref import PriceGroupRef
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.priceable_object_version_structure import CellsRelStructure
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import FareTable1
+from netex.models.priceable_object_version_structure import FareTable
 from netex.models.priceable_object_version_structure import FareTablesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.priceable_object_version_structure import PriceGroupsRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
@@ -210,7 +210,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -842,7 +842,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='myfares:Line24@discounts',
                                         version='1.0',
                                         members=FarePricesRelStructure(
@@ -884,7 +884,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable1(
+                                    FareTable(
                                         id='myfares:Line24',
                                         version='1.0',
                                         name=MultilingualString(
@@ -916,7 +916,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='myfares:Line24@p-ticket',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -932,7 +932,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='myfares:PointToPoint_01@p-ticket@standard',
                                                                 version='1.0',
                                                                 name=MultilingualString(
@@ -985,7 +985,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='myfares:PointToPoint_01@p-ticket@first',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -1041,7 +1041,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='myfares:Line24@m-ticket',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1057,7 +1057,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='myfares:PointToPoint_01@m-ticket@standard',
                                                                 version='1.0',
                                                                 name=MultilingualString(
@@ -1110,7 +1110,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='myfares:PointToPoint_01@m-ticket@first',
                                                                 version='any',
                                                                 name=MultilingualString(

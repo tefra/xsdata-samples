@@ -5,7 +5,7 @@ from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.day_type_assignment import DayTypeAssignment
 from netex.models.day_type_assignments_rel_structure import DayTypeAssignmentsRelStructure
 from netex.models.day_type_ref import DayTypeRef
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
@@ -80,11 +80,11 @@ obj = PublicationDelivery(
                     to_date=XmlDate(2008, 6, 14),
                     day_types=DayTypesRelStructure(
                         day_type_ref_or_day_type=[
-                            DayType1(
+                            DayType(
                                 id='noptis:9086002000100001',
                                 version='any'
                             ),
-                            DayType1(
+                            DayType(
                                 id='noptis:9086002000100002',
                                 version='any'
                             ),

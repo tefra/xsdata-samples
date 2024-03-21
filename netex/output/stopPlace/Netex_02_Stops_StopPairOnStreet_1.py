@@ -29,7 +29,7 @@ from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStruct
 from netex.models.pos import Pos
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -43,7 +43,7 @@ from netex.models.simple_point_version_structure import SimplePointVersionStruct
 from netex.models.site_frame import SiteFrame
 from netex.models.step_free_access import StepFreeAccess
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
@@ -205,7 +205,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='mybus:SP_0751A',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='01',
@@ -254,7 +254,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP_0751A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',
@@ -315,7 +315,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='mybus:Q_SP_0751A_2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',

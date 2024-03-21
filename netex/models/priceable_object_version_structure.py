@@ -21,7 +21,7 @@ from .capping_rule_ref import CappingRuleRef
 from .car_model_profile_ref import CarModelProfileRef
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .catering_service_ref import CateringServiceRef
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .charging_policy_ref import ChargingPolicyRef
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
 from .class_of_use_ref import ClassOfUseRef
@@ -225,7 +225,7 @@ from .subscribing_ref import SubscribingRef
 from .supplement_product_ref import SupplementProductRef
 from .suspending_ref import SuspendingRef
 from .tariff_ref import TariffRef
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .taxi_rank_ref import TaxiRankRef
 from .taxi_service_ref import TaxiServiceRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
@@ -411,7 +411,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
-            CellRef1,
+            CellRef,
             CustomerPurchasePackagePrice,
             "ParkingPrice",
             SalesOfferPackagePrice,
@@ -527,7 +527,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -631,7 +631,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
             FareTableRef,
             StandardFareTable,
             "FareTableInContext",
-            "FareTable1",
+            "FareTable",
         ]
     ] = field(
         default_factory=list,
@@ -660,7 +660,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "FareTable",
-                    "type": Type["FareTable1"],
+                    "type": Type["FareTable"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -859,9 +859,8 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
 
 
 @dataclass
-class PriceGroup1(PriceGroupVersionStructure):
+class PriceGroup(PriceGroupVersionStructure):
     class Meta:
-        name = "PriceGroup"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -1017,7 +1016,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceGroups_RelStructure"
 
-    price_group_ref_or_price_group: List[Union[PriceGroupRef, PriceGroup1]] = (
+    price_group_ref_or_price_group: List[Union[PriceGroupRef, PriceGroup]] = (
         field(
             default_factory=list,
             metadata={
@@ -1030,7 +1029,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
                     },
                     {
                         "name": "PriceGroup",
-                        "type": PriceGroup1,
+                        "type": PriceGroup,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                 ),
@@ -1896,7 +1895,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_ref: Optional[TariffZoneRef1] = field(
+    tariff_zone_ref: Optional[TariffZoneRef] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -2567,9 +2566,8 @@ class CellVersionedChildStructure(VersionedChildStructure):
 
 
 @dataclass
-class Cell1(CellVersionedChildStructure):
+class Cell(CellVersionedChildStructure):
     class Meta:
-        name = "Cell"
         namespace = "http://www.netex.org.uk/netex"
 
     validity_conditions_or_valid_between: Any = field(
@@ -2593,7 +2591,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
 
     choice: List[
         Union[
-            Cell1,
+            Cell,
             "CellsRelStructure.CellInContext",
             CustomerPurchasePackagePrice,
             ParkingPrice,
@@ -2630,7 +2628,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
-            CellRef1,
+            CellRef,
         ]
     ] = field(
         default_factory=list,
@@ -2639,7 +2637,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
             "choices": (
                 {
                     "name": "Cell",
-                    "type": Cell1,
+                    "type": Cell,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2824,7 +2822,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -3039,13 +3037,12 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
 
 
 @dataclass
-class FareTableInContext(FareTableVersionStructure):
+class FareTable(FareTableVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class FareTable1(FareTableVersionStructure):
+class FareTableInContext(FareTableVersionStructure):
     class Meta:
-        name = "FareTable"
         namespace = "http://www.netex.org.uk/netex"

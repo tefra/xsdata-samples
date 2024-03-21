@@ -21,7 +21,7 @@ from netex.models.distribution_assignments_rel_structure import DistributionAssi
 from netex.models.distribution_channel_ref import DistributionChannelRef
 from netex.models.distribution_channel_type_enumeration import DistributionChannelTypeEnumeration
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import ValidBetween
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.fare_demand_factor import FareDemandFactor
@@ -50,7 +50,7 @@ from netex.models.group_of_timebands_ref import GroupOfTimebandsRef
 from netex.models.groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.interchanging import Interchanging
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -69,7 +69,7 @@ from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.priceable_object_version_structure import CellsRelStructure
-from netex.models.priceable_object_version_structure import FareTable1
+from netex.models.priceable_object_version_structure import FareTable
 from netex.models.priceable_object_version_structure import FareTablesRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
@@ -98,8 +98,8 @@ from netex.models.service_frame_ref import ServiceFrameRef
 from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.tariff import Tariff
 from netex.models.tariff_ref import TariffRef
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_ref_structure import TariffZoneRefStructure
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
@@ -262,15 +262,15 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='myfares:1'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='myfares:2'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='myfares:3'
                                         ),
@@ -279,14 +279,14 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:Line_24',
                                         version='any',
                                         name=MultilingualString(
                                             value='Line  24'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:Line_48',
                                         version='any',
                                         name=MultilingualString(
@@ -310,7 +310,7 @@ obj = PublicationDelivery(
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='myfares:1'
                                                 ),
@@ -340,7 +340,7 @@ obj = PublicationDelivery(
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='myfares:2'
                                                 ),
@@ -370,7 +370,7 @@ obj = PublicationDelivery(
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='myfares:2'
                                                 ),
@@ -400,11 +400,11 @@ obj = PublicationDelivery(
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='myfares:2'
                                                 ),
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='myfares:3'
                                                 ),
@@ -434,7 +434,7 @@ obj = PublicationDelivery(
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='myfares:3'
                                                 ),
@@ -455,21 +455,21 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='myfares:1',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 1'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='myfares:2',
                                         version='any',
                                         name=MultilingualString(
                                             value='Zone 2'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='myfares:3',
                                         version='any',
                                         name=MultilingualString(
@@ -1158,7 +1158,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable1(
+                                    FareTable(
                                         id='myfares:DTA',
                                         version='1.0',
                                         name=MultilingualString(
@@ -1194,7 +1194,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='myfares:SingleTrip@off_peak',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1285,7 +1285,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='myfares:SingleTrip@peak',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1396,7 +1396,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='myfares:DT_01-MF-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -1419,7 +1419,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='myfares:DT_02-NotWorkingDay',
                                         version='any',
                                         name=MultilingualString(

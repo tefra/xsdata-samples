@@ -168,7 +168,7 @@ from netex.models.language_use_enumeration import LanguageUseEnumeration
 from netex.models.limiting_rule import LimitingRule
 from netex.models.limiting_rule_in_context import LimitingRuleInContext
 from netex.models.limiting_rule_ref import LimitingRuleRef
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.line_type_enumeration import LineTypeEnumeration
@@ -190,7 +190,7 @@ from netex.models.network_ref import NetworkRef
 from netex.models.networks_in_frame_rel_structure import NetworksInFrameRelStructure
 from netex.models.offered_travel_specification import OfferedTravelSpecification
 from netex.models.operating_days_in_frame_rel_structure import OperatingDaysInFrameRelStructure
-from netex.models.operating_period_1 import OperatingPeriod1
+from netex.models.operating_period import OperatingPeriod
 from netex.models.operating_period_ref import OperatingPeriodRef
 from netex.models.operating_periods_in_frame_rel_structure import OperatingPeriodsInFrameRelStructure
 from netex.models.operator import Operator
@@ -220,11 +220,11 @@ from netex.models.price_units_rel_structure import PriceUnitsRelStructure
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.priceable_object_version_structure import CellsRelStructure
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import FareTable1
+from netex.models.priceable_object_version_structure import FareTable
 from netex.models.priceable_object_version_structure import FareTablesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.pricing_parameter_set import PricingParameterSet
-from netex.models.pricing_rule_1 import PricingRule1
+from netex.models.pricing_rule import PricingRule
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
 from netex.models.pricing_service import PricingService
 from netex.models.pricing_service_ref import PricingServiceRef
@@ -240,7 +240,7 @@ from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
 from netex.models.purchase_window import PurchaseWindow
 from netex.models.purchase_window_ref import PurchaseWindowRef
 from netex.models.purpose_of_grouping import PurposeOfGrouping
-from netex.models.quality_structure_factor_1 import QualityStructureFactor1
+from netex.models.quality_structure_factor import QualityStructureFactor
 from netex.models.quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
 from netex.models.rail_submode import RailSubmode
 from netex.models.rail_submode_enumeration import RailSubmodeEnumeration
@@ -313,8 +313,8 @@ from netex.models.supplement_product_ref import SupplementProductRef
 from netex.models.system_of_units import SystemOfUnits
 from netex.models.tariff import Tariff
 from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
@@ -455,7 +455,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 pricing_rules=PricingRulesRelStructure(
                                     pricing_rule=[
-                                        PricingRule1(
+                                        PricingRule(
                                             id='atc:route',
                                             version='any',
                                             name=MultilingualString(
@@ -6193,7 +6193,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ],
                                                         tariff_zone_ref=[
-                                                            TariffZoneRef1(
+                                                            TariffZoneRef(
                                                                 ref='tfl:Zone1',
                                                                 version_ref='TODO'
                                                             ),
@@ -9435,7 +9435,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable1(
+                                    FareTable(
                                         id='atc:ATOC@Products@Trip@Prices@working_day',
                                         version='01',
                                         name=MultilingualString(
@@ -9453,7 +9453,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable1(
+                                                FareTable(
                                                     id='atc:ATOC@Products@Trip@Prices@LST_to_IPS',
                                                     version='01',
                                                     name=MultilingualString(
@@ -9470,7 +9470,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='atc:ATOC@Products@Trip@Prices@LST_to_IPS@anytime',
                                                                 version='01',
                                                                 name=MultilingualString(
@@ -9491,7 +9491,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 includes=FareTablesRelStructure(
                                                                     fare_table_ref_or_fare_table=[
-                                                                        FareTable1(
+                                                                        FareTable(
                                                                             id='atc:ATOC@Products@Trip@Prices@anytime@single ',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -9515,7 +9515,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             includes=FareTablesRelStructure(
                                                                                 fare_table_ref_or_fare_table=[
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@anytime@single@first',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -9529,7 +9529,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -9584,7 +9584,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -9690,7 +9690,7 @@ obj = PublicationDelivery(
                                                                                             ]
                                                                                         )
                                                                                     ),
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@anytime@single@second',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -9704,7 +9704,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -9759,7 +9759,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -9868,7 +9868,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             )
                                                                         ),
-                                                                        FareTable1(
+                                                                        FareTable(
                                                                             id='atc:ATOC@Products@Trip@Prices@anytime@return ',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -9892,7 +9892,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             includes=FareTablesRelStructure(
                                                                                 fare_table_ref_or_fare_table=[
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@anytime@return@first',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -9906,7 +9906,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -9964,7 +9964,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10057,7 +10057,7 @@ obj = PublicationDelivery(
                                                                                             ]
                                                                                         )
                                                                                     ),
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@anytime@return@second',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -10071,7 +10071,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10125,7 +10125,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10224,7 +10224,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='atc:ATOC@Products@Trip@Prices@LST_to_IPS@off_peak_regular',
                                                                 version='01',
                                                                 name=MultilingualString(
@@ -10245,7 +10245,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 includes=FareTablesRelStructure(
                                                                     fare_table_ref_or_fare_table=[
-                                                                        FareTable1(
+                                                                        FareTable(
                                                                             id='atc:ATOC@Products@Trip@Prices@off_peak@single ',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -10269,7 +10269,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             includes=FareTablesRelStructure(
                                                                                 fare_table_ref_or_fare_table=[
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@off_peak@single@first',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -10283,7 +10283,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10326,7 +10326,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10404,7 +10404,7 @@ obj = PublicationDelivery(
                                                                                             ]
                                                                                         )
                                                                                     ),
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@off_peak@single@second',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -10418,7 +10418,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10461,7 +10461,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10542,7 +10542,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             )
                                                                         ),
-                                                                        FareTable1(
+                                                                        FareTable(
                                                                             id='atc:ATOC@Products@Trip@Prices@off_peak@return ',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -10566,7 +10566,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             includes=FareTablesRelStructure(
                                                                                 fare_table_ref_or_fare_table=[
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@off_peak@return@first',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -10580,7 +10580,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10623,7 +10623,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10701,7 +10701,7 @@ obj = PublicationDelivery(
                                                                                             ]
                                                                                         )
                                                                                     ),
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@off_peak@return@second',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -10715,7 +10715,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10758,7 +10758,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -10842,7 +10842,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable1(
+                                                            FareTable(
                                                                 id='atc:ATOC@Products@Trip@Prices@LST_to_IPS@advance',
                                                                 version='01',
                                                                 name=MultilingualString(
@@ -10868,7 +10868,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 includes=FareTablesRelStructure(
                                                                     fare_table_ref_or_fare_table=[
-                                                                        FareTable1(
+                                                                        FareTable(
                                                                             id='atc:ATOC@Products@Trip@Prices@advance@single ',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -10898,7 +10898,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             includes=FareTablesRelStructure(
                                                                                 fare_table_ref_or_fare_table=[
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@advance@single@first',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -10912,7 +10912,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -11005,7 +11005,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -11039,7 +11039,7 @@ obj = PublicationDelivery(
                                                                                             ]
                                                                                         )
                                                                                     ),
-                                                                                    FareTable1(
+                                                                                    FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@advance@single@second',
                                                                                         version='01',
                                                                                         name=MultilingualString(
@@ -11053,7 +11053,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
                                                                                             fare_table_ref_or_fare_table=[
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -11146,7 +11146,7 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     )
                                                                                                 ),
-                                                                                                FareTable1(
+                                                                                                FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@child',
                                                                                                     version='01',
                                                                                                     name=MultilingualString(
@@ -11189,7 +11189,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable1(
+                                                FareTable(
                                                     id='atc:ATOC@Products@Trip@Prices@LST_to_SSD',
                                                     version='01',
                                                     name=MultilingualString(
@@ -14852,7 +14852,7 @@ obj = PublicationDelivery(
                             ),
                             operating_periods=OperatingPeriodsInFrameRelStructure(
                                 operating_period_or_uic_operating_period=[
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='abga:academic_year@short@2018',
                                         version='01',
                                         name=MultilingualString(
@@ -14864,7 +14864,7 @@ obj = PublicationDelivery(
                                             SeasonEnumeration.PERENNIALLY,
                                         ]
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='abga:academic_year@full@2018',
                                         version='01',
                                         name=MultilingualString(
@@ -14876,7 +14876,7 @@ obj = PublicationDelivery(
                                             SeasonEnumeration.PERENNIALLY,
                                         ]
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='abga:term@spring@2018',
                                         version='01',
                                         name=MultilingualString(
@@ -14891,7 +14891,7 @@ obj = PublicationDelivery(
                                             SeasonEnumeration.SPRING,
                                         ]
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='abga:term@summer@short@2018',
                                         version='01',
                                         name=MultilingualString(
@@ -14906,7 +14906,7 @@ obj = PublicationDelivery(
                                             SeasonEnumeration.SUMMER,
                                         ]
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='abga:term@summer@full@2018',
                                         version='01',
                                         name=MultilingualString(
@@ -14921,7 +14921,7 @@ obj = PublicationDelivery(
                                             SeasonEnumeration.SUMMER,
                                         ]
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='abga:term@autumn@2018',
                                         version='01',
                                         name=MultilingualString(
@@ -15060,7 +15060,7 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='01',
                                             ref='nptg:PlusBus_zone:IPSWICH'
                                         ),
@@ -15091,15 +15091,15 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='abga:LE@Rover@Norfolk'
                                                 ),
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='abga:LE@Rover@Suffolk'
                                                 ),
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     version='any',
                                                     ref='abga:LE@Rover@Cambridge'
                                                 ),
@@ -15110,7 +15110,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='abga:ln_Ely-to-Norwich',
                                         version='01',
                                         name=MultilingualString(
@@ -15123,7 +15123,7 @@ obj = PublicationDelivery(
                                         ),
                                         line_type=LineTypeEnumeration.LOCAL
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_London-to-Braintree',
                                         version='01',
                                         name=MultilingualString(
@@ -15136,7 +15136,7 @@ obj = PublicationDelivery(
                                         ),
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_London-to-Felixstowe',
                                         version='01',
                                         name=MultilingualString(
@@ -15148,7 +15148,7 @@ obj = PublicationDelivery(
                                             ref='atc:LE'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_London-to-Great-Yarmouth',
                                         version='01',
                                         name=MultilingualString(
@@ -15161,7 +15161,7 @@ obj = PublicationDelivery(
                                         ),
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_London-to-Kings_Lynn',
                                         version='01',
                                         name=MultilingualString(
@@ -15174,7 +15174,7 @@ obj = PublicationDelivery(
                                         ),
                                         line_type=LineTypeEnumeration.LOCAL
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_London-to-Lowestoft',
                                         version='01',
                                         name=MultilingualString(
@@ -15187,7 +15187,7 @@ obj = PublicationDelivery(
                                         ),
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_London-to-Norwich',
                                         version='01',
                                         name=MultilingualString(
@@ -15200,7 +15200,7 @@ obj = PublicationDelivery(
                                         ),
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_London-to-Sudbury',
                                         version='01',
                                         name=MultilingualString(
@@ -15213,7 +15213,7 @@ obj = PublicationDelivery(
                                         ),
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_London-to-Walton_on_the_Naze',
                                         version='01',
                                         name=MultilingualString(
@@ -15225,7 +15225,7 @@ obj = PublicationDelivery(
                                             ref='atc:LE'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_Stansted Express',
                                         version='01',
                                         name=MultilingualString(
@@ -15247,7 +15247,7 @@ obj = PublicationDelivery(
                                         ),
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
-                                    Line1(
+                                    Line(
                                         id='abga:ln_Stansted_Airport-to-Ely',
                                         version='01',
                                         name=MultilingualString(
@@ -15335,7 +15335,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='abga:LE@Rover@Norfolk',
                                         version='any',
                                         name=MultilingualString(
@@ -15361,7 +15361,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='abga:LE@Rover@Suffolk',
                                         version='any',
                                         name=MultilingualString(
@@ -15387,7 +15387,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='abga:LE@Rover@Cambridge',
                                         version='any',
                                         name=MultilingualString(
@@ -15720,7 +15720,7 @@ obj = PublicationDelivery(
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
                                             quality_structure_factor_ref_or_quality_structure_factor=[
-                                                QualityStructureFactor1(
+                                                QualityStructureFactor(
                                                     id='abga:multi_trip@10',
                                                     version='01',
                                                     name=MultilingualString(
@@ -18247,15 +18247,15 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='01',
                                             ref='nptg:PlusBus_zone:IPSWICH'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='01',
                                             ref='nptg:PlusBus_zone:NORWICH'
                                         ),
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='01',
                                             ref='nptg:PlusBus_zone:LOWESTOFT'
                                         ),
@@ -18414,7 +18414,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nptg:PlusBus:All_Zones',
                                         version='01',
                                         name=MultilingualString(
@@ -18443,7 +18443,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nptg:PlusBus:South_East_Region',
                                         version='01',
                                         name=MultilingualString(
@@ -18476,7 +18476,7 @@ obj = PublicationDelivery(
                                             ref='nptg:PlusBus:All_Zones'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nptg:PlusBus:Outside_South_East_Region',
                                         version='01',
                                         name=MultilingualString(
@@ -18509,7 +18509,7 @@ obj = PublicationDelivery(
                                             ref='nptg:PlusBus:All_Zones'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nptg:PlusBus_zone:IPSWICH',
                                         created=XmlDateTime(2013, 10, 11, 12, 27, 13),
                                         changed=XmlDateTime(2013, 10, 11, 12, 27, 13),
@@ -18590,7 +18590,7 @@ obj = PublicationDelivery(
                                             ref='nptg:PlusBus:South_East_Region'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nptg:PlusBus_zone:NORWICH',
                                         created=XmlDateTime(2013, 10, 11, 12, 27, 13),
                                         changed=XmlDateTime(2013, 10, 11, 12, 27, 13),
@@ -18671,7 +18671,7 @@ obj = PublicationDelivery(
                                             ref='nptg:PlusBus:South_East_Region'
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nptg:PlusBus_zone:LOWESTOFT',
                                         created=XmlDateTime(2013, 10, 11, 12, 27, 13),
                                         changed=XmlDateTime(2013, 10, 11, 12, 27, 13),
@@ -19971,7 +19971,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='jsp:plusbus@discounts',
                                         version='01',
                                         members=FarePricesRelStructure(
@@ -23451,61 +23451,61 @@ obj = PublicationDelivery(
                             ),
                             operating_periods=OperatingPeriodsInFrameRelStructure(
                                 operating_period_or_uic_operating_period=[
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w1_d',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 2, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 1, 5, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w1_we',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 6, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 1, 7, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w2_d',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 8, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 1, 12, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w2_we',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 13, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 1, 14, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w3_d',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 15, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 1, 19, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w3_we',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 20, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 1, 21, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w4_d',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 22, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 1, 26, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w4_we',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 27, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 1, 28, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w5_d',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 1, 29, 0, 0, 0),
                                         to_operating_day_ref_or_to_date=XmlDateTime(2018, 2, 2, 0, 0, 0)
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='atc:op@2018_w5_we',
                                         version='01',
                                         from_operating_day_ref_or_from_date=XmlDateTime(2018, 2, 3, 0, 0, 0),
@@ -24915,7 +24915,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 tariff_zone_ref=[
-                                                                                    TariffZoneRef1(
+                                                                                    TariffZoneRef(
                                                                                         version='01',
                                                                                         ref='nptg:PlusBus_zone:IPSWICH'
                                                                                     ),

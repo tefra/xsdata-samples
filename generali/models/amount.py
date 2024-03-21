@@ -853,7 +853,7 @@ class Properties:
             "type": "Element",
         },
     )
-    element: Optional[TypeType] = field(
+    value: Optional[TypeType] = field(
         default=None,
         metadata={
             "name": "$",

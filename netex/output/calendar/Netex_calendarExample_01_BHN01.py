@@ -7,7 +7,7 @@ from netex.models.day_type_assignment import DayTypeAssignment
 from netex.models.day_type_assignments_in_frame_rel_structure import DayTypeAssignmentsInFrameRelStructure
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import OperatingDay
 from netex.models.multilingual_string import MultilingualString
 from netex.models.operating_day_ref import OperatingDayRef
@@ -71,7 +71,7 @@ obj = PublicationDelivery(
                 ),
                 day_types=DayTypesInFrameRelStructure(
                     day_type=[
-                        DayType1(
+                        DayType(
                             id='ust:DT_01',
                             version='any',
                             name=MultilingualString(
@@ -91,7 +91,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_02',
                             version='any',
                             name=MultilingualString(
@@ -108,7 +108,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_11',
                             version='any',
                             name=MultilingualString(
@@ -127,7 +127,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_12',
                             version='any',
                             name=MultilingualString(
@@ -143,7 +143,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_13',
                             version='any',
                             name=MultilingualString(
@@ -159,7 +159,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_14',
                             version='any',
                             name=MultilingualString(
@@ -175,7 +175,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_21',
                             version='any',
                             name=MultilingualString(
@@ -196,7 +196,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_22',
                             version='any',
                             name=MultilingualString(
@@ -212,7 +212,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_31',
                             version='any',
                             name=MultilingualString(
@@ -229,7 +229,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_32',
                             version='any',
                             name=MultilingualString(
@@ -246,7 +246,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType1(
+                        DayType(
                             id='ust:DT_33',
                             version='any',
                             name=MultilingualString(

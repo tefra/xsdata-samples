@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .series_constraint_price_ref import SeriesConstraintPriceRef
 from .series_constraint_price_versioned_child_structure import (
     SeriesConstraintPriceVersionedChildStructure,
@@ -24,7 +24,7 @@ class SeriesConstraintPricesRelStructure(
         Union[
             SeriesConstraintPriceRef,
             SeriesConstraintPriceVersionedChildStructure,
-            CellRef1,
+            CellRef,
         ]
     ] = field(
         default_factory=list,
@@ -43,7 +43,7 @@ class SeriesConstraintPricesRelStructure(
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -6,7 +6,7 @@ from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.general_version_frame_structure import CompositeFrame
 from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
@@ -371,7 +371,7 @@ obj = PublicationDelivery(
                             version='any',
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='mybus:DT001_MF',
                                         created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),
                                         version='001',

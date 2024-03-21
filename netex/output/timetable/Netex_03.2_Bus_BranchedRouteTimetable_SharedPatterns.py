@@ -25,7 +25,7 @@ from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.direction_view import DirectionView
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.general_version_frame_structure import CompositeFrame
@@ -43,7 +43,7 @@ from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatterns
 from netex.models.journey_run_time import JourneyRunTime
 from netex.models.journey_run_times_rel_structure import JourneyRunTimesRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_network import LineNetwork
 from netex.models.line_networks_in_frame_rel_structure import LineNetworksInFrameRelStructure
 from netex.models.line_ref import LineRef
@@ -54,7 +54,7 @@ from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.notice import Notice
-from netex.models.notice_assignment_1 import NoticeAssignment1
+from netex.models.notice_assignment import NoticeAssignment
 from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from netex.models.notice_ref import NoticeRef
 from netex.models.notices_in_frame_rel_structure import NoticesInFrameRelStructure
@@ -77,7 +77,7 @@ from netex.models.sections_in_sequence_rel_structure import LineSection
 from netex.models.service_calendar import ServiceCalendar
 from netex.models.service_calendar_frame import ServiceCalendarFrame
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey import ServiceJourney
 from netex.models.service_journey_interchange import ServiceJourneyInterchange
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
@@ -244,7 +244,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -2414,7 +2414,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_YP_01',
                                         version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
@@ -2450,7 +2450,7 @@ obj = PublicationDelivery(
                                             )
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_YQ_02',
                                         version='any',
                                         departure_time=XmlTime(14, 30, 0, 0, 0),
@@ -2486,7 +2486,7 @@ obj = PublicationDelivery(
                                             )
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_ZP_03',
                                         version='any',
                                         departure_time=XmlTime(14, 40, 0, 0, 0),
@@ -2528,7 +2528,7 @@ obj = PublicationDelivery(
                                             )
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='hde:sj_ZQ_04',
                                         version='any',
                                         departure_time=XmlTime(14, 50, 0, 0, 0),
@@ -2685,7 +2685,7 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT1M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                NoticeAssignment1(
+                                                NoticeAssignment(
                                                     id='hde::sji_YP_01_YQ_02',
                                                     version='any',
                                                     order=1,
@@ -2736,7 +2736,7 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT1M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                NoticeAssignment1(
+                                                NoticeAssignment(
                                                     id='hde::sji_ZP_02_YP_03',
                                                     version='any',
                                                     order=1,
@@ -2787,7 +2787,7 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT1M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                NoticeAssignment1(
+                                                NoticeAssignment(
                                                     id='hde::sji_ZP_03_ZQ_04',
                                                     version='any',
                                                     order=1,
@@ -2833,7 +2833,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='hde:DT_01-MF-NH',
                                         version='any',
                                         name=MultilingualString(

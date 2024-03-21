@@ -3,7 +3,7 @@ from typing import List, Union
 
 from .frame_containment_structure import FrameContainmentStructure
 from .priceable_object_version_structure import (
-    FareTable1,
+    FareTable,
     FareTableInContext,
 )
 from .standard_fare_table import StandardFareTable
@@ -17,7 +17,7 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
         name = "fareTablesInFrame_RelStructure"
 
     fare_table: List[
-        Union[StandardFareTable, FareTableInContext, FareTable1]
+        Union[StandardFareTable, FareTableInContext, FareTable]
     ] = field(
         default_factory=list,
         metadata={
@@ -35,7 +35,7 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
                 },
                 {
                     "name": "FareTable",
-                    "type": FareTable1,
+                    "type": FareTable,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

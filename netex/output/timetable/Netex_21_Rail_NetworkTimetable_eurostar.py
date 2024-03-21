@@ -22,7 +22,7 @@ from netex.models.boarding_position_ref import BoardingPositionRef
 from netex.models.boarding_position_ref_structure import BoardingPositionRefStructure
 from netex.models.boarding_position_type_enumeration import BoardingPositionTypeEnumeration
 from netex.models.boarding_positions_rel_structure import BoardingPositionsRelStructure
-from netex.models.call_1 import Call1
+from netex.models.call import Call
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.catering_facility_enumeration import CateringFacilityEnumeration
 from netex.models.catering_facility_list import CateringFacilityList
@@ -67,7 +67,7 @@ from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.direction_view import DirectionView
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import OperatingDay
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
@@ -103,7 +103,7 @@ from netex.models.level_ref import LevelRef
 from netex.models.levels_rel_structure import LevelsRelStructure
 from netex.models.lift_free_access import LiftFreeAccess
 from netex.models.limitation_status_enumeration import LimitationStatusEnumeration
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_network import LineNetwork
 from netex.models.line_networks_in_frame_rel_structure import LineNetworksInFrameRelStructure
 from netex.models.line_ref import LineRef
@@ -125,7 +125,7 @@ from netex.models.network import Network
 from netex.models.network_ref import NetworkRef
 from netex.models.network_view import NetworkView
 from netex.models.notice import Notice
-from netex.models.notice_assignment_1 import NoticeAssignment1
+from netex.models.notice_assignment import NoticeAssignment
 from netex.models.notice_assignment_view import NoticeAssignmentView
 from netex.models.notice_assignment_views_rel_structure import NoticeAssignmentViewsRelStructure
 from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
@@ -136,7 +136,7 @@ from netex.models.nuisance_facility_list import NuisanceFacilityList
 from netex.models.onward_timing_link_view import OnwardTimingLinkView
 from netex.models.operating_day_ref_structure import OperatingDayRefStructure
 from netex.models.operating_days_in_frame_rel_structure import OperatingDaysInFrameRelStructure
-from netex.models.operating_period_1 import OperatingPeriod1
+from netex.models.operating_period import OperatingPeriod
 from netex.models.operating_period_ref import OperatingPeriodRef
 from netex.models.operating_periods_in_frame_rel_structure import OperatingPeriodsInFrameRelStructure
 from netex.models.operator import Operator
@@ -173,7 +173,7 @@ from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purpose_of_grouping import PurposeOfGrouping
 from netex.models.purpose_of_grouping_ref import PurposeOfGroupingRef
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_ref_structure import QuayRefStructure
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -181,7 +181,7 @@ from netex.models.resource_frame import ResourceFrame
 from netex.models.responsibility_set import ResponsibilitySet
 from netex.models.responsibility_sets_in_frame_rel_structure import ResponsibilitySetsInFrameRelStructure
 from netex.models.road_address import RoadAddress
-from netex.models.route_1 import Route1
+from netex.models.route import Route
 from netex.models.route_link import RouteLink
 from netex.models.route_links_in_frame_rel_structure import RouteLinksInFrameRelStructure
 from netex.models.route_point import RoutePoint
@@ -207,7 +207,7 @@ from netex.models.service_facility_set_ref import ServiceFacilitySetRef
 from netex.models.service_facility_sets_in_frame_rel_structure import ServiceFacilitySetsInFrameRelStructure
 from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey import ServiceJourney
 from netex.models.service_journey_interchange import ServiceJourneyInterchange
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
@@ -221,7 +221,7 @@ from netex.models.site_entrances_rel_structure import SiteEntrancesRelStructure
 from netex.models.site_frame import SiteFrame
 from netex.models.step_free_access import StepFreeAccess
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_entrance import StopPlaceEntrance
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
@@ -231,8 +231,8 @@ from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.suitabilities_rel_structure import SuitabilitiesRelStructure
 from netex.models.suitability import Suitability
 from netex.models.suitable_enumeration import SuitableEnumeration
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
@@ -748,7 +748,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:9100STPADOM',
                                         created=XmlDateTime(2009, 3, 30, 11, 8, 0),
                                         changed=XmlDateTime(2009, 3, 30, 13, 8, 0),
@@ -1565,7 +1565,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100STPADOM_5',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1625,7 +1625,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100STPADOM_6and7',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1685,7 +1685,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100STPADOM_6',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1696,7 +1696,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100STPADOM_6and7'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100STPADOM-7',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1707,7 +1707,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100STPADOM_6and7'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100STPADOM_8and9',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1767,7 +1767,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100STPADOM_8',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1778,7 +1778,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100STPADOM_8and9'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_9100STPADOM_9',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1789,7 +1789,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100STPADOM_8and9'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_9100STPADOM_10',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1852,7 +1852,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:9100EBSFDOM',
                                         created=XmlDateTime(2009, 3, 30, 11, 45, 0),
                                         changed=XmlDateTime(2009, 3, 30, 11, 48, 0),
@@ -1957,7 +1957,7 @@ obj = PublicationDelivery(
                                         ],
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     created=XmlDateTime(2009, 10, 29, 16, 30, 45),
                                                     changed=XmlDateTime(2009, 10, 29, 16, 30, 45),
                                                     version='any',
@@ -1967,7 +1967,7 @@ obj = PublicationDelivery(
                                         ),
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='naptStop:9100ASHFKY',
                                         created=XmlDateTime(2009, 3, 30, 11, 45, 0),
                                         changed=XmlDateTime(2009, 3, 30, 11, 48, 0),
@@ -2107,7 +2107,7 @@ obj = PublicationDelivery(
                                         ],
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef1(
+                                                TariffZoneRef(
                                                     created=XmlDateTime(2009, 10, 29, 16, 30, 45),
                                                     changed=XmlDateTime(2009, 10, 29, 16, 30, 45),
                                                     version='any',
@@ -3112,7 +3112,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_1and2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3129,7 +3129,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:LV_01_9100ASHFKY_01'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3146,7 +3146,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_1and2'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_1a',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3163,7 +3163,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_1'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_1b',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3180,7 +3180,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_1'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_1c',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3197,7 +3197,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_1'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3262,7 +3262,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_2a',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3279,7 +3279,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_2'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_2b',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3296,7 +3296,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_2'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_2c',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3313,7 +3313,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_2'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_5and6',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3330,7 +3330,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:LV_01_9100ASHFKY_01'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_5',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3395,7 +3395,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_5a',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3412,7 +3412,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_5'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_5b',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3429,7 +3429,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_5'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_5c',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3446,7 +3446,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_5'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_6',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3463,7 +3463,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_5and6'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_6a',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3480,7 +3480,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_6'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_6b',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3497,7 +3497,7 @@ obj = PublicationDelivery(
                                                         ref='naptStop:QY_01_9100ASHFKY_6'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='naptStop:QY_01_9100ASHFKY_6c',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3529,7 +3529,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_04_fr_Calais',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -3562,7 +3562,7 @@ obj = PublicationDelivery(
                                         ],
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_05_fr_LilleEuro',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -3583,7 +3583,7 @@ obj = PublicationDelivery(
                                         ],
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_05_fr_LilleDom',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -3604,7 +3604,7 @@ obj = PublicationDelivery(
                                         ],
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_06_fr_ParisGdN',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -3679,7 +3679,7 @@ obj = PublicationDelivery(
                                         ],
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_08_fr_MarneLV',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -3763,7 +3763,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_08_fr_MarneLV-1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3775,7 +3775,7 @@ obj = PublicationDelivery(
                                                         ref='frnapt:LV_08_fr_MarneLV-1_01'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_08_fr_MarneLV-2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3787,7 +3787,7 @@ obj = PublicationDelivery(
                                                         ref='frnapt:LV_08_fr_MarneLV-1_01'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_08_fr_MarneLV-3',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3798,7 +3798,7 @@ obj = PublicationDelivery(
                                                         ref='frnapt:LV_08_fr_MarneLV-1_01'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_08_fr_MarneLV-4',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3810,7 +3810,7 @@ obj = PublicationDelivery(
                                                         ref='frnapt:LV_08_fr_MarneLV-1_01'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_08_fr_MarneLV-5',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3825,7 +3825,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='benapt:STP_07_be_BrusselsMidiEs',
                                         version='any',
                                         responsibility_set_ref_attribute='be:RS_01',
@@ -3904,7 +3904,7 @@ obj = PublicationDelivery(
                                         ],
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_31_fr_Avignon',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -3955,7 +3955,7 @@ obj = PublicationDelivery(
                                         ],
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_21_fr_Moutiers',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -3989,7 +3989,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_21_fr_Moutiers-1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3997,7 +3997,7 @@ obj = PublicationDelivery(
                                                         lang='fr'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_21_fr_Moutiers-2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -4008,7 +4008,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_22_fr_AimeLP',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -4056,7 +4056,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_22_fr_AimeLP-1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -4266,7 +4266,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_22_fr_AimeLP-2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -4277,7 +4277,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='frnapt:STP_23_fr_BourgStM',
                                         version='any',
                                         responsibility_set_ref_attribute='fr:RS_01',
@@ -4320,7 +4320,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_23_fr_BourgStM-1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -4328,7 +4328,7 @@ obj = PublicationDelivery(
                                                         lang='fr'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='frnapt:QY_23_fr_BourgStM-2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -4888,7 +4888,7 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route1(
+                                    Route(
                                         id='eos:RT_01_out',
                                         version='any',
                                         name=MultilingualString(
@@ -5006,7 +5006,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_03_out',
                                         version='any',
                                         name=MultilingualString(
@@ -5124,7 +5124,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_04_out',
                                         version='any',
                                         name=MultilingualString(
@@ -5242,7 +5242,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_05_out',
                                         version='any',
                                         name=MultilingualString(
@@ -5373,7 +5373,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_06_out',
                                         version='any',
                                         name=MultilingualString(
@@ -5478,7 +5478,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_01_in',
                                         version='any',
                                         name=MultilingualString(
@@ -5596,7 +5596,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_03_in',
                                         version='any',
                                         name=MultilingualString(
@@ -5714,7 +5714,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_04_in',
                                         version='any',
                                         name=MultilingualString(
@@ -5832,7 +5832,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_05_in',
                                         version='any',
                                         name=MultilingualString(
@@ -5976,7 +5976,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='eos:RT_06_in',
                                         version='any',
                                         name=MultilingualString(
@@ -6098,7 +6098,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='eos:LN_London-Paris',
                                         version='any',
                                         name=MultilingualString(
@@ -6108,7 +6108,7 @@ obj = PublicationDelivery(
                                             colour_name='yellow'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='eos:LN_London-Brussels',
                                         version='any',
                                         name=MultilingualString(
@@ -6118,21 +6118,21 @@ obj = PublicationDelivery(
                                             colour_name='grey'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='eos:LN_London-Marne',
                                         version='any',
                                         name=MultilingualString(
                                             value='Eurostar Line: London to Disneyland / Marne'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='eos:LN_London-Avignon',
                                         version='any',
                                         name=MultilingualString(
                                             value='Eurostar Line: London to Avignon'
                                         )
                                     ),
-                                    Line1(
+                                    Line(
                                         id='eos:LN_London-Alps',
                                         version='any',
                                         name=MultilingualString(
@@ -9361,7 +9361,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nptgPlusBus:GRAVESEND',
                                         version='any',
                                         responsibility_set_ref_attribute='nptg:011',
@@ -9382,7 +9382,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TariffZone1(
+                                    TariffZone(
                                         id='nptgPlusBus:ASHFKY',
                                         version='any',
                                         responsibility_set_ref_attribute='nptg:011',
@@ -16271,7 +16271,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_Everyday',
                                         version='any',
                                         name=MultilingualString(
@@ -16287,7 +16287,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_MoTuWeThFr',
                                         version='any',
                                         name=MultilingualString(
@@ -16307,7 +16307,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_MoTuWeTh',
                                         version='any',
                                         name=MultilingualString(
@@ -16326,7 +16326,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_MoFr',
                                         version='any',
                                         name=MultilingualString(
@@ -16343,7 +16343,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_TuWeTh',
                                         version='any',
                                         name=MultilingualString(
@@ -16361,7 +16361,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_TuWeTh_2011.01.04-02.05',
                                         version='any',
                                         name=MultilingualString(
@@ -16379,7 +16379,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_TuWeTh_2011.01.04-02.05NOT',
                                         version='any',
                                         name=MultilingualString(
@@ -16397,7 +16397,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_Mo',
                                         version='any',
                                         name=MultilingualString(
@@ -16416,7 +16416,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_Fr',
                                         version='any',
                                         name=MultilingualString(
@@ -16432,7 +16432,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_Sa',
                                         version='any',
                                         name=MultilingualString(
@@ -16448,7 +16448,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_Su',
                                         version='any',
                                         name=MultilingualString(
@@ -16464,7 +16464,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC01_NoService',
                                         version='any',
                                         name=MultilingualString(
@@ -16536,7 +16536,7 @@ obj = PublicationDelivery(
                             ),
                             operating_periods=OperatingPeriodsInFrameRelStructure(
                                 operating_period_or_uic_operating_period=[
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='eos:OP_SC01_2010.12.12-2011.01.03',
                                         version='any',
                                         name=MultilingualString(
@@ -16551,7 +16551,7 @@ obj = PublicationDelivery(
                                             ref='eos:OP_SC01_2011.01.03'
                                         )
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='eos:OP_SC01_2011.01.04-2011.02.05',
                                         version='any',
                                         name=MultilingualString(
@@ -16566,7 +16566,7 @@ obj = PublicationDelivery(
                                             ref='eos:OP_SC01_2011.02.05'
                                         )
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='eos:OP_SC01_2011.02.06-2011.07.02',
                                         version='any',
                                         name=MultilingualString(
@@ -16785,7 +16785,7 @@ obj = PublicationDelivery(
                             ),
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9078',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -16814,7 +16814,7 @@ obj = PublicationDelivery(
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                NoticeAssignment1(
+                                                NoticeAssignment(
                                                     id='eos:VJ_MF_9078-01',
                                                     version='any',
                                                     order=1,
@@ -16876,7 +16876,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9078_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -16891,7 +16891,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9078_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -16913,7 +16913,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9078_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -16931,7 +16931,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9002a',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -16999,7 +16999,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9002a_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17014,7 +17014,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9002a_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17036,7 +17036,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9002a_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17058,7 +17058,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9002a_04',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17076,7 +17076,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9004',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -17166,7 +17166,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9004_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17181,7 +17181,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9004_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17196,7 +17196,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9004_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17214,7 +17214,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9006',
                                         version='any',
                                         description=MultilingualString(
@@ -17258,7 +17258,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9006_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17273,7 +17273,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9006_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17288,7 +17288,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9006_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17306,7 +17306,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9008',
                                         version='any',
                                         description=MultilingualString(
@@ -17354,7 +17354,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9008_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17369,7 +17369,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9008_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17387,7 +17387,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9012',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -17477,7 +17477,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9012_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17492,7 +17492,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9012_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17507,7 +17507,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9012_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17525,7 +17525,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9014',
                                         version='any',
                                         description=MultilingualString(
@@ -17569,7 +17569,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9014_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17591,7 +17591,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9014_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17606,7 +17606,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9014_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17624,7 +17624,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9018',
                                         version='any',
                                         description=MultilingualString(
@@ -17672,7 +17672,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9018_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17687,7 +17687,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9018_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17702,7 +17702,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EVF_9018_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17720,7 +17720,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9022F',
                                         version='any',
                                         description=MultilingualString(
@@ -17781,7 +17781,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9022F',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17796,7 +17796,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9022F',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17814,7 +17814,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9024',
                                         version='any',
                                         description=MultilingualString(
@@ -17858,7 +17858,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9024',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17873,7 +17873,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9024',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17888,7 +17888,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9024',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17906,7 +17906,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9030',
                                         version='any',
                                         description=MultilingualString(
@@ -17950,7 +17950,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9030',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17972,7 +17972,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9030',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -17990,7 +17990,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9034',
                                         version='any',
                                         description=MultilingualString(
@@ -18038,7 +18038,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9034',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18053,7 +18053,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9034',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18071,7 +18071,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9038',
                                         version='any',
                                         description=MultilingualString(
@@ -18115,7 +18115,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9038',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18137,7 +18137,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9038',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18155,7 +18155,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9040',
                                         version='any',
                                         description=MultilingualString(
@@ -18199,7 +18199,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9040',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18214,7 +18214,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9040',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18229,7 +18229,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9040',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18247,7 +18247,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9044',
                                         version='any',
                                         description=MultilingualString(
@@ -18291,7 +18291,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9044',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18306,7 +18306,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9044',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18324,7 +18324,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9046',
                                         version='any',
                                         description=MultilingualString(
@@ -18372,7 +18372,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9046',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18387,7 +18387,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9046',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18405,7 +18405,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9048',
                                         version='any',
                                         description=MultilingualString(
@@ -18462,7 +18462,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9048',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18484,7 +18484,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9048',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18502,7 +18502,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9050',
                                         version='any',
                                         description=MultilingualString(
@@ -18546,7 +18546,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9050',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18561,7 +18561,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9050',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18579,7 +18579,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9054a',
                                         version='any',
                                         description=MultilingualString(
@@ -18623,7 +18623,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9054a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18638,7 +18638,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9054a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18656,7 +18656,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9078b',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -18746,7 +18746,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9078b-01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18761,7 +18761,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9078b-01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18776,7 +18776,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9078b-01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18794,7 +18794,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9054b',
                                         version='any',
                                         description=MultilingualString(
@@ -18838,7 +18838,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9054b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18853,7 +18853,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9054b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18871,7 +18871,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9002b',
                                         version='any',
                                         description=MultilingualString(
@@ -18916,7 +18916,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9002b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18931,7 +18931,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9002b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -18949,7 +18949,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9010',
                                         version='any',
                                         description=MultilingualString(
@@ -18994,7 +18994,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9010',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19009,7 +19009,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9010',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19024,7 +19024,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9010',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19042,7 +19042,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9026',
                                         version='any',
                                         description=MultilingualString(
@@ -19087,7 +19087,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9026',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19102,7 +19102,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9026',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19120,7 +19120,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9036',
                                         version='any',
                                         description=MultilingualString(
@@ -19165,7 +19165,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9036',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19180,7 +19180,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9036',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19198,7 +19198,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9056',
                                         version='any',
                                         description=MultilingualString(
@@ -19243,7 +19243,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9056',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19258,7 +19258,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9056',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19276,7 +19276,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9108',
                                         version='any',
                                         description=MultilingualString(
@@ -19312,7 +19312,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19327,7 +19327,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19342,7 +19342,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19357,7 +19357,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19379,7 +19379,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19401,7 +19401,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=5
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19419,7 +19419,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9112',
                                         version='any',
                                         description=MultilingualString(
@@ -19455,7 +19455,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9112',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19470,7 +19470,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9112',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19488,7 +19488,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9120',
                                         version='any',
                                         description=MultilingualString(
@@ -19524,7 +19524,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9120',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19546,7 +19546,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9120',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19561,7 +19561,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9120',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19583,7 +19583,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9120',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19601,7 +19601,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9126',
                                         version='any',
                                         description=MultilingualString(
@@ -19637,7 +19637,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19652,7 +19652,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19667,7 +19667,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19682,7 +19682,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19697,7 +19697,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19715,7 +19715,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9132',
                                         version='any',
                                         description=MultilingualString(
@@ -19751,7 +19751,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9132',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19766,7 +19766,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9132',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19781,7 +19781,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9132',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19796,7 +19796,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9132',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19814,7 +19814,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9138',
                                         version='any',
                                         description=MultilingualString(
@@ -19850,7 +19850,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9138',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19865,7 +19865,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9138',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19880,7 +19880,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9138',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19898,7 +19898,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9148',
                                         version='any',
                                         description=MultilingualString(
@@ -19938,7 +19938,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9148',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19953,7 +19953,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9148',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19968,7 +19968,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9148',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -19986,7 +19986,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9154a',
                                         version='any',
                                         description=MultilingualString(
@@ -20039,7 +20039,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9154a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20054,7 +20054,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9154a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20069,7 +20069,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9154a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20084,7 +20084,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9154a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20102,7 +20102,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9154b',
                                         version='any',
                                         description=MultilingualString(
@@ -20151,7 +20151,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9154b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20173,7 +20173,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9154b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20188,7 +20188,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9154b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20206,7 +20206,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9158a',
                                         version='any',
                                         description=MultilingualString(
@@ -20242,7 +20242,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9158a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20257,7 +20257,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9158a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20272,7 +20272,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_MF_9158a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20290,7 +20290,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9110',
                                         version='any',
                                         description=MultilingualString(
@@ -20339,7 +20339,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20354,7 +20354,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20369,7 +20369,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20384,7 +20384,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20399,7 +20399,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20417,7 +20417,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9114',
                                         version='any',
                                         description=MultilingualString(
@@ -20466,7 +20466,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20481,7 +20481,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20496,7 +20496,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20511,7 +20511,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20526,7 +20526,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20544,7 +20544,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9116a',
                                         version='any',
                                         description=MultilingualString(
@@ -20593,7 +20593,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9116a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20608,7 +20608,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9116a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20623,7 +20623,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9116a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20638,7 +20638,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9116a',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20656,7 +20656,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9116b',
                                         version='any',
                                         description=MultilingualString(
@@ -20705,7 +20705,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9116b_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20720,7 +20720,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9116b_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20735,7 +20735,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9116b_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20750,7 +20750,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9116b_04',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20765,7 +20765,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9116b_05',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20783,7 +20783,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9130',
                                         version='any',
                                         description=MultilingualString(
@@ -20832,7 +20832,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9130_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20847,7 +20847,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9130_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20862,7 +20862,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9130_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20877,7 +20877,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9130_04',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20895,7 +20895,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9144',
                                         version='any',
                                         description=MultilingualString(
@@ -20935,7 +20935,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9144_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20950,7 +20950,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9144_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20965,7 +20965,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9144_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -20983,7 +20983,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_MF_9154c',
                                         version='any',
                                         description=MultilingualString(
@@ -21032,7 +21032,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9154c_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -21047,7 +21047,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9154c_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -21062,7 +21062,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9154c_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -21077,7 +21077,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:CL_VJ_SS_9154c_04',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -21095,7 +21095,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SS_9158b',
                                         version='any',
                                         description=MultilingualString(
@@ -21144,7 +21144,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9158b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -21159,7 +21159,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9158b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -21174,7 +21174,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9158b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -21189,7 +21189,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SS_9158b',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23262,7 +23262,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC02_Everyday',
                                         version='any',
                                         name=MultilingualString(
@@ -23278,7 +23278,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC02_MoWeThFrSu',
                                         version='any',
                                         name=MultilingualString(
@@ -23298,21 +23298,21 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC02_ExtraService',
                                         version='any',
                                         name=MultilingualString(
                                             value='Special Service'
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC02_31DecOnly',
                                         version='any',
                                         name=MultilingualString(
                                             value='Special Service 31 Dec'
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC02_NoService',
                                         version='any',
                                         name=MultilingualString(
@@ -23359,7 +23359,7 @@ obj = PublicationDelivery(
                             ),
                             operating_periods=OperatingPeriodsInFrameRelStructure(
                                 operating_period_or_uic_operating_period=[
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='eos:OP_SC02_2011.02.19-16',
                                         version='any',
                                         name=MultilingualString(
@@ -23374,7 +23374,7 @@ obj = PublicationDelivery(
                                             ref='eos:OP_SC02_2011.02.26'
                                         )
                                     ),
-                                    OperatingPeriod1(
+                                    OperatingPeriod(
                                         id='eos:OP_SC02_2011.04.09-23',
                                         version='any',
                                         name=MultilingualString(
@@ -23544,7 +23544,7 @@ obj = PublicationDelivery(
                             ),
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9074',
                                         version='any',
                                         description=MultilingualString(
@@ -23593,7 +23593,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9074_01',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23608,7 +23608,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9074_02',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23623,7 +23623,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9074_03',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23638,7 +23638,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9074_04',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23653,7 +23653,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9074_05',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23671,7 +23671,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_EV_9057',
                                         version='any',
                                         description=MultilingualString(
@@ -23725,7 +23725,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23751,7 +23751,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23766,7 +23766,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23781,7 +23781,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23796,7 +23796,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23814,7 +23814,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_XX_9071',
                                         version='any',
                                         description=MultilingualString(
@@ -23857,7 +23857,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_XX_9071',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23872,7 +23872,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_XX_9071',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -23887,7 +23887,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_XX_9071',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -24108,7 +24108,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC05_Sa1_out',
                                         version='any',
                                         name=MultilingualString(
@@ -24124,7 +24124,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC05_Fr_out',
                                         version='any',
                                         name=MultilingualString(
@@ -24140,7 +24140,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC05_Sa2_in',
                                         version='any',
                                         name=MultilingualString(
@@ -24156,7 +24156,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC05_Sa3_in',
                                         version='any',
                                         name=MultilingualString(
@@ -24172,7 +24172,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='eos:DT_SC05_NoService',
                                         version='any',
                                         name=MultilingualString(
@@ -25148,7 +25148,7 @@ obj = PublicationDelivery(
                             ),
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SA_9092',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -25201,7 +25201,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25216,7 +25216,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25231,7 +25231,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25246,7 +25246,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25261,7 +25261,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25279,7 +25279,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_FR_9096',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -25340,7 +25340,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25355,7 +25355,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25370,7 +25370,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25386,7 +25386,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25401,7 +25401,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25419,7 +25419,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SA_9095',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -25472,7 +25472,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25487,7 +25487,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25502,7 +25502,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25517,7 +25517,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25532,7 +25532,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25550,7 +25550,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='eos:VJ_SA_9099',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
@@ -25614,7 +25614,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9099',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25629,7 +25629,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9099',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25644,7 +25644,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9099',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25660,7 +25660,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='eos:VJ_SA_9099',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -25933,7 +25933,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='sncf:LN_Lille-Rennes',
                                         version='any',
                                         name=MultilingualString(
@@ -26615,7 +26615,7 @@ obj = PublicationDelivery(
                             ),
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='sncf:VJ_RT101_out_12:10',
                                         version='any',
                                         description=MultilingualString(
@@ -26654,7 +26654,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26669,7 +26669,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26681,7 +26681,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26693,7 +26693,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26705,7 +26705,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26723,7 +26723,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='sncf:VJ_RT101_out_12:05',
                                         version='any',
                                         description=MultilingualString(
@@ -26765,7 +26765,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26780,7 +26780,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26792,7 +26792,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26804,7 +26804,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26822,7 +26822,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='sncf:VJ_RT101_in_0610',
                                         version='any',
                                         description=MultilingualString(
@@ -26859,7 +26859,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26874,7 +26874,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26886,7 +26886,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26898,7 +26898,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26910,7 +26910,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26928,7 +26928,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='sncf:VJ_RT101_in_0925',
                                         version='any',
                                         description=MultilingualString(
@@ -26969,7 +26969,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26984,7 +26984,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -26996,7 +26996,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -27008,7 +27008,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -27020,7 +27020,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(

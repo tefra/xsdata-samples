@@ -39,7 +39,7 @@ from netex.models.participant_ref import ParticipantRef
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.priceable_object_version_structure import PriceGroupsRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
@@ -790,7 +790,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='myfares:Flat',
                                         version='1.0',
                                         name=MultilingualString(

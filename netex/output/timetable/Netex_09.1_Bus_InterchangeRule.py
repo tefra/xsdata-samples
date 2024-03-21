@@ -23,7 +23,7 @@ from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.interchange_rule import InterchangeRule
 from netex.models.interchange_rule_parameter_structure import InterchangeRuleParameterStructure
 from netex.models.interchange_rules_in_frame_rel_structure import InterchangeRulesInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_in_direction_ref import LineInDirectionRef
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -223,7 +223,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_1',
                                         version='any',
                                         name=MultilingualString(
@@ -235,7 +235,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='1'
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_2',
                                         version='any',
                                         name=MultilingualString(
@@ -247,7 +247,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='2'
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_3',
                                         version='any',
                                         name=MultilingualString(
@@ -259,7 +259,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='3'
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_4',
                                         version='any',
                                         name=MultilingualString(
@@ -271,7 +271,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='5'
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_5',
                                         version='any',
                                         name=MultilingualString(
@@ -283,7 +283,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='5'
                                     ),
-                                    Line1(
+                                    Line(
                                         id='mybus:LN_6',
                                         version='any',
                                         name=MultilingualString(

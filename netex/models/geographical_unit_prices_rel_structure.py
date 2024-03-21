@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
 
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .fare_price_versioned_child_structure import (
     FarePriceVersionedChildStructure,
 )
@@ -25,7 +25,7 @@ class GeographicalUnitPricesRelStructure(
         Union[
             GeographicalUnitPriceRef,
             "GeographicalUnitPriceVersionedChildStructure",
-            CellRef1,
+            CellRef,
         ]
     ] = field(
         default_factory=list,
@@ -46,7 +46,7 @@ class GeographicalUnitPricesRelStructure(
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

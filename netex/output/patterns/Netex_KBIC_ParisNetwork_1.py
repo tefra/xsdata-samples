@@ -20,7 +20,7 @@ from netex.models.infrastructure_junctions_in_frame_rel_structure import Infrast
 from netex.models.journey_pattern_wait_time import JourneyPatternWaitTime
 from netex.models.journey_pattern_wait_times_rel_structure import JourneyPatternWaitTimesRelStructure
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.link_projection import LinkProjection
@@ -41,7 +41,7 @@ from netex.models.pos import Pos
 from netex.models.projections_rel_structure import ProjectionsRelStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -55,7 +55,7 @@ from netex.models.road_address import RoadAddress
 from netex.models.road_element import RoadElement
 from netex.models.road_junction import RoadJunction
 from netex.models.road_point_ref_structure import RoadPointRefStructure
-from netex.models.route_1 import Route1
+from netex.models.route import Route
 from netex.models.route_link import RouteLink
 from netex.models.route_link_ref_structure import RouteLinkRefStructure
 from netex.models.route_links_in_frame_rel_structure import RouteLinksInFrameRelStructure
@@ -82,7 +82,7 @@ from netex.models.site_frame import SiteFrame
 from netex.models.spatial_feature_ref import SpatialFeatureRef
 from netex.models.spatial_features_in_frame_rel_structure import SpatialFeaturesInFrameRelStructure
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -97,7 +97,7 @@ from netex.models.timing_links_in_frame_rel_structure import TimingLinksInFrameR
 from netex.models.timing_pattern import TimingPattern
 from netex.models.timing_pattern_ref import TimingPatternRef
 from netex.models.timing_patterns_in_frame_rel_structure import TimingPatternsInFrameRelStructure
-from netex.models.timing_point_1 import TimingPoint1
+from netex.models.timing_point import TimingPoint
 from netex.models.timing_point_in_journey_pattern import TimingPointInJourneyPattern
 from netex.models.timing_point_ref import TimingPointRef
 from netex.models.timing_point_ref_structure import TimingPointRefStructure
@@ -255,7 +255,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP1',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -287,7 +287,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -310,7 +310,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP2',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -342,7 +342,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -365,7 +365,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP3',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -397,7 +397,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP3',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -420,7 +420,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP4',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -452,7 +452,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP4',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -475,7 +475,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP5',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -507,7 +507,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP5',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -530,7 +530,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP6',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -562,7 +562,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP6',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -585,7 +585,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP7',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -617,7 +617,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP7',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -640,7 +640,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP8',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -672,7 +672,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP8',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -695,7 +695,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP9',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -727,7 +727,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='spq:SSP9',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -750,7 +750,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='spq:SP10',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -940,7 +940,7 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route1(
+                                    Route(
                                         id='spq:Rt001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
@@ -1091,7 +1091,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='spq:LN0066',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
@@ -2123,7 +2123,7 @@ obj = PublicationDelivery(
                             ),
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='tim:TP1',
                                         version='any',
                                         name=MultilingualString(
@@ -2142,7 +2142,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='tim:TP2',
                                         version='any',
                                         name=MultilingualString(
@@ -2161,7 +2161,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='tim:TP3',
                                         version='any',
                                         name=MultilingualString(
@@ -2180,7 +2180,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='tim:TP4',
                                         version='any',
                                         name=MultilingualString(
@@ -2199,7 +2199,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='tim:TP5',
                                         version='any',
                                         name=MultilingualString(
@@ -2219,7 +2219,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    TimingPoint1(
+                                    TimingPoint(
                                         id='tim:TP6',
                                         version='any',
                                         name=MultilingualString(

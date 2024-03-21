@@ -39,7 +39,7 @@ from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.priceable_object_version_structure import FarePricesRelStructure
-from netex.models.priceable_object_version_structure import PriceGroup1
+from netex.models.priceable_object_version_structure import PriceGroup
 from netex.models.priceable_object_version_structure import PriceGroupsRelStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
@@ -52,8 +52,8 @@ from netex.models.sales_offer_packages_in_frame_rel_structure import SalesOfferP
 from netex.models.service_frame import ServiceFrame
 from netex.models.service_frame_ref import ServiceFrameRef
 from netex.models.tariff import Tariff
-from netex.models.tariff_zone_1 import TariffZone1
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_ref import TariffZoneRef
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
@@ -191,7 +191,7 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef1(
+                                        TariffZoneRef(
                                             version='any',
                                             ref='myfares:1'
                                         ),
@@ -200,7 +200,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone1(
+                                    TariffZone(
                                         id='myfares:1',
                                         version='any',
                                         name=MultilingualString(
@@ -346,7 +346,7 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef1(
+                                                                TariffZoneRef(
                                                                     version='any',
                                                                     ref='myfares:1'
                                                                 ),
@@ -629,7 +629,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup1(
+                                    PriceGroup(
                                         id='myfares:DTA@Time_interval',
                                         version='1.0',
                                         name=MultilingualString(

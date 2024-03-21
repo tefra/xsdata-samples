@@ -16,7 +16,7 @@ from netex.models.block_ref import BlockRef
 from netex.models.blocks_in_frame_rel_structure import BlocksInFrameRelStructure
 from netex.models.boarding_permission import BoardingPermission
 from netex.models.boarding_permission_enumeration import BoardingPermissionEnumeration
-from netex.models.call_1 import Call1
+from netex.models.call import Call
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.catering_facility_enumeration import CateringFacilityEnumeration
 from netex.models.catering_facility_list import CateringFacilityList
@@ -44,7 +44,7 @@ from netex.models.destination_display_ref import DestinationDisplayRef
 from netex.models.destination_displays_in_frame_rel_structure import DestinationDisplaysInFrameRelStructure
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.entity_in_version_structure import AvailabilityCondition
-from netex.models.entity_in_version_structure import DayType1
+from netex.models.entity_in_version_structure import DayType
 from netex.models.entity_in_version_structure import DayTypesRelStructure
 from netex.models.entity_in_version_structure import ValidityConditionsRelStructure
 from netex.models.fare_class import FareClass
@@ -69,7 +69,7 @@ from netex.models.journey_parts_rel_structure import JourneyPartsRelStructure
 from netex.models.journey_pattern_view import JourneyPatternView
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line_1 import Line1
+from netex.models.line import Line
 from netex.models.line_derived_view_structure import LineDerivedViewStructure
 from netex.models.line_view import LineView
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -95,12 +95,12 @@ from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purpose_of_journey_partition_ref import PurposeOfJourneyPartitionRef
-from netex.models.quay_1 import Quay1
+from netex.models.quay import Quay
 from netex.models.quay_assignment_view import QuayAssignmentView
 from netex.models.quay_ref_structure import QuayRefStructure
 from netex.models.quays_rel_structure import QuaysRelStructure
 from netex.models.reason_for_meeting_enumeration import ReasonForMeetingEnumeration
-from netex.models.route_1 import Route1
+from netex.models.route import Route
 from netex.models.route_ref import RouteRef
 from netex.models.routes_in_frame_rel_structure import RoutesInFrameRelStructure
 from netex.models.sanitary_facility_enumeration import SanitaryFacilityEnumeration
@@ -116,12 +116,12 @@ from netex.models.service_facility_set_ref import ServiceFacilitySetRef
 from netex.models.service_facility_sets_in_frame_rel_structure import ServiceFacilitySetsInFrameRelStructure
 from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey import ServiceJourney
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.service_journey_ref_structure import ServiceJourneyRefStructure
 from netex.models.site_frame import SiteFrame
-from netex.models.stop_place_1 import StopPlace1
+from netex.models.stop_place import StopPlace
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -262,7 +262,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='bbd:sj_447',
                                         version='any',
                                         description=MultilingualString(
@@ -427,7 +427,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_447_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -486,7 +486,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_447_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -560,7 +560,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_447_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -642,7 +642,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_447_004',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -681,7 +681,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='bbd:sj_40447',
                                         version='any',
                                         description=MultilingualString(
@@ -799,7 +799,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_40447_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -851,7 +851,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_40447_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -932,7 +932,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_40447_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -971,7 +971,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='bbd:sj_457',
                                         version='any',
                                         description=MultilingualString(
@@ -1134,7 +1134,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_457_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1186,7 +1186,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_457_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1267,7 +1267,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_457_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1386,7 +1386,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_457_004',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1468,7 +1468,7 @@ obj = PublicationDelivery(
                                             train_size_type=TrainSizeEnumeration.LONG
                                         )
                                     ),
-                                    ServiceJourney1(
+                                    ServiceJourney(
                                         id='bbd:sj_60457',
                                         version='any',
                                         description=MultilingualString(
@@ -1549,7 +1549,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_60457_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1622,7 +1622,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call1(
+                                                Call(
                                                     id='bbd:sj_60457_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -3369,7 +3369,7 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route1(
+                                    Route(
                                         id='myrail:RT_447',
                                         version='any',
                                         name=MultilingualString(
@@ -3379,7 +3379,7 @@ obj = PublicationDelivery(
                                             value='Route 447'
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='myrail:RT_40447',
                                         version='any',
                                         name=MultilingualString(
@@ -3389,7 +3389,7 @@ obj = PublicationDelivery(
                                             value='Route 40447'
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='myrail:RT_457',
                                         version='any',
                                         name=MultilingualString(
@@ -3399,7 +3399,7 @@ obj = PublicationDelivery(
                                             value='Route 457'
                                         )
                                     ),
-                                    Route1(
+                                    Route(
                                         id='myrail:RT_60457',
                                         version='any',
                                         name=MultilingualString(
@@ -3413,7 +3413,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line1(
+                                    Line(
                                         id='myrail:LN_nl_amsterdam-cz_prague',
                                         version='any',
                                         name=MultilingualString(
@@ -3424,7 +3424,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                     ),
-                                    Line1(
+                                    Line(
                                         id='myrail:LN_nl_amsterdam-pl_warsaw',
                                         version='any',
                                         name=MultilingualString(
@@ -3435,7 +3435,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                     ),
-                                    Line1(
+                                    Line(
                                         id='myrail:LN_nl_amsterdam-dk_copenhagen',
                                         version='any',
                                         name=MultilingualString(
@@ -3778,7 +3778,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace1(
+                                    StopPlace(
                                         id='uic:nl_amsterdam',
                                         version='any',
                                         name=MultilingualString(
@@ -3786,7 +3786,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='uic:nl_amsterdam_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3796,7 +3796,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='uic:de_berlin',
                                         version='any',
                                         name=MultilingualString(
@@ -3805,21 +3805,21 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='uic:de_berlin_1',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Platform 1'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='uic:de_berlin_2',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Platform 2'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='uic:de_berlin_3',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3829,7 +3829,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='uic:dk_copenhagen',
                                         version='any',
                                         name=MultilingualString(
@@ -3838,7 +3838,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='uic:dk_copenhagen_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3848,7 +3848,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='uic:de_hannover',
                                         version='any',
                                         name=MultilingualString(
@@ -3857,7 +3857,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='uic:de_hannover_5',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3867,7 +3867,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='uic:cz_prague',
                                         version='any',
                                         name=MultilingualString(
@@ -3876,14 +3876,14 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='uic:cz_prague_1',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Platform 1'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='uic:cz_prague_2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3893,7 +3893,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace1(
+                                    StopPlace(
                                         id='uic:pl_warsaw',
                                         version='any',
                                         name=MultilingualString(
@@ -3902,14 +3902,14 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay1(
+                                                Quay(
                                                     id='uic:pl_warsaw_7',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Platform 1'
                                                     )
                                                 ),
-                                                Quay1(
+                                                Quay(
                                                     id='uic:pl_warsaw_8',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3936,7 +3936,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType1(
+                                    DayType(
                                         id='bbd:DT_01-MF-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -3959,7 +3959,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType1(
+                                    DayType(
                                         id='bbd:DT_03-WE-NH',
                                         version='any',
                                         name=MultilingualString(

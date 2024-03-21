@@ -26,7 +26,7 @@ from .parking_price_ref import ParkingPriceRef
 from .price_group_ref import PriceGroupRef
 from .priceable_object_version_structure import (
     ParkingPrice,
-    PriceGroup1,
+    PriceGroup,
 )
 from .quality_structure_factor_price import QualityStructureFactorPrice
 from .quality_structure_factor_price_ref import QualityStructureFactorPriceRef
@@ -92,7 +92,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
             GeographicalIntervalPrice,
             GeographicalUnitPrice,
             SeriesConstraintPrice,
-            PriceGroup1,
+            PriceGroup,
         ]
     ] = field(
         default_factory=list,
@@ -281,7 +281,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "PriceGroup",
-                    "type": PriceGroup1,
+                    "type": PriceGroup,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
