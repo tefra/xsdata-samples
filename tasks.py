@@ -34,11 +34,23 @@ def get_suite(c: Context, suite: Optional[str] = None) -> Iterator[str]:
 
 
 @task
-def build(c: Context, suite: Optional[str] = None, output_format="dataclasses"):
+def build(
+    c: Context,
+    suite: Optional[str] = None,
+    output_format: str = "dataclasses",
+    cache: bool = False,
+    debug: bool = False,
+):
     run = partial(c.run, pty=True, echo=True)
+    build_cmd_args = f"--output {output_format}"
+    if cache:
+        build_cmd_args += " --cache"
+    if debug:
+        build_cmd_args += " --debug"
+
     for s in get_suite(c, suite):
         run(f"rm -rf {s}/models")
-        run(f"xsdata {SUITES[s]} --config {s}/.xsdata.xml --output {output_format}")
+        run(f"xsdata {SUITES[s]} --config {s}/.xsdata.xml {build_cmd_args}")
 
 
 @task
@@ -63,11 +75,24 @@ def config(c: Context, suite: Optional[str] = None):
 
 
 @task(name="all")
-def all_tasks(c: Context, suite: Optional[str] = None, output_format="dataclasses"):
+def all_tasks(
+    c: Context,
+    suite: Optional[str] = None,
+    output_format: str = "dataclasses",
+    cache: bool = False,
+    debug: bool = False,
+):
     run = partial(c.run, pty=True, echo=True)
+
+    build_cmd_args = f"--output {output_format}"
+    if cache:
+        build_cmd_args += " --cache"
+    if debug:
+        build_cmd_args += " --debug"
+
     for s in get_suite(c, suite):
         run(f"rm -rf {s}/models")
-        run(f"xsdata {SUITES[s]} --config {s}/.xsdata.xml --output {output_format}")
+        run(f"xsdata {SUITES[s]} --config {s}/.xsdata.xml {build_cmd_args}")
         run(f"pytest --output-format {output_format} {s}/")
 
         if s != "generali":
