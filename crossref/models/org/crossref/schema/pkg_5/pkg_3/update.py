@@ -61,7 +61,6 @@ class Update:
             "choices": (
                 {
                     "type": str,
-                    "default": "",
                     "min_length": 6,
                     "max_length": 2048,
                     "pattern": r"10\.[0-9]{4,9}/.{1,200}",

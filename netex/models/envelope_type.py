@@ -30,6 +30,7 @@ class EnvelopeType:
                     "name": "pos",
                     "type": Pos,
                     "namespace": "http://www.opengis.net/gml/3.2",
+                    "max_occurs": 2,
                 },
             ),
             "max_occurs": 2,

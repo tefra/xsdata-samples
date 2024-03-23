@@ -29,7 +29,6 @@ class A:
             "choices": (
                 {
                     "type": str,
-                    "default": "",
                 },
             ),
         },
