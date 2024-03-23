@@ -58,7 +58,7 @@ class Amount:
             "type": "Element",
         },
     )
-    value: Optional[object] = field(
+    dollar_sign: Optional[object] = field(
         default=None,
         metadata={
             "name": "$",
@@ -104,7 +104,7 @@ class Code:
             "type": "Element",
         },
     )
-    value: Optional[object] = field(
+    dollar_sign: Optional[object] = field(
         default=None,
         metadata={
             "name": "$",
@@ -256,7 +256,7 @@ class Quantity:
             "type": "Element",
         },
     )
-    value: Optional[object] = field(
+    dollar_sign: Optional[object] = field(
         default=None,
         metadata={
             "name": "$",
@@ -322,7 +322,7 @@ class TypeCode:
             "type": "Element",
         },
     )
-    value: Optional[object] = field(
+    dollar_sign: Optional[object] = field(
         default=None,
         metadata={
             "name": "$",
@@ -853,7 +853,7 @@ class Properties:
             "type": "Element",
         },
     )
-    element: Optional[TypeType] = field(
+    dollar_sign: Optional[TypeType] = field(
         default=None,
         metadata={
             "name": "$",
