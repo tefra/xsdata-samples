@@ -172,7 +172,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         name = "validityParameters_RelStructure"
 
     vehicle_modes_or_transport_modes: List[
-        Union[VehicleModeEnumeration, AllModesEnumeration]
+        Union[List[VehicleModeEnumeration], List[AllModesEnumeration]]
     ] = field(
         default_factory=list,
         metadata={

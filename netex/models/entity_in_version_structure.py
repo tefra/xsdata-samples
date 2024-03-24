@@ -736,7 +736,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
         name = "ValidDuring_VersionStructure"
 
     choice: Optional[
-        Union[FareDayTypeRef, DayTypeRef, DayOfWeekEnumeration, str]
+        Union[FareDayTypeRef, DayTypeRef, List[DayOfWeekEnumeration], str]
     ] = field(
         default=None,
         metadata={
