@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+  <ns0:Header>
+    <ns0:ID>IREF257793</ns0:ID>
+    <ns0:Test>false</ns0:Test>
+    <ns0:Prepared>2021-03-08T17:49:35Z</ns0:Prepared>
+    <ns0:Sender id="Unknown"/>
+    <ns0:Receiver id="not_supplied"/>
+  </ns0:Header>
+  <ns0:Structures>
+    <ns1:GeographicCodelists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+      <ns1:GeographicCodelist id="CL_ADMIN_AREA" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=EXAMPLE:CL_ADMIN_AREA(1.0)" version="1.0" agencyID="EXAMPLE" geoType="GeographicCodelist">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Administrative Area</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Example Geographic Codelist for administrative areas. The geography for each area is defined by a Geo Feature Set potentially consisting of any number of Features which can be areas, lines or points. The codes are used as normal in data.</ns2:Description>
+        <ns1:GeoFeatureSetCode id="A1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=EXAMPLE:CL_ADMIN_AREA(1.0).A1" value="CRS, PRECISION: {(POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), …): GEO _DESCRIPTION}, {(POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), …): GEO _DESCRIPTION}, …: GEO_DESCRIPTION">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Admin Area 1</ns2:Name>
+        </ns1:GeoFeatureSetCode>
+        <ns1:GeoFeatureSetCode id="A2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=EXAMPLE:CL_ADMIN_AREA(1.0).A1" value="CRS, PRECISION: {(POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), …): GEO _DESCRIPTION}, {(POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), …): GEO _DESCRIPTION}, …: GEO_DESCRIPTION">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Admin Area 2</ns2:Name>
+        </ns1:GeoFeatureSetCode>
+        <ns1:GeoFeatureSetCode id="A3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=EXAMPLE:CL_ADMIN_AREA(1.0).A1" value="CRS, PRECISION: {(POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), …): GEO _DESCRIPTION}, {(POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), POLYGON Z ((X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), (X_COORDINATE Y_COORDINATE ALT, X_COORDINATE Y_COORDINATE ALT, …), …), …): GEO _DESCRIPTION}, …: GEO_DESCRIPTION">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Admin Area 3</ns2:Name>
+        </ns1:GeoFeatureSetCode>
+      </ns1:GeographicCodelist>
+    </ns1:GeographicCodelists>
+  </ns0:Structures>
+</ns0:Structure>
+

@@ -65,13 +65,7 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
 
     @dataclass
     class Address(PostalAddressVersionStructure):
-        validity_conditions_or_valid_between: Any = field(
-            init=False,
-            metadata={
-                "type": "Ignore",
-            },
-        )
-        alternative_texts: Any = field(
+        members: Any = field(
             init=False,
             metadata={
                 "type": "Ignore",
@@ -95,7 +89,13 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
                 "type": "Ignore",
             },
         )
-        members: Any = field(
+        validity_conditions_or_valid_between: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        alternative_texts: Any = field(
             init=False,
             metadata={
                 "type": "Ignore",

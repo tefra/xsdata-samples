@@ -13,13 +13,13 @@ class OnwardTimingLinkView(OnwardTimingLinkDerivedViewStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    branding_ref: Any = field(
+    timing_link_in_journey_pattern_ref: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
         },
     )
-    timing_link_in_journey_pattern_ref: Any = field(
+    branding_ref: Any = field(
         init=False,
         metadata={
             "type": "Ignore",

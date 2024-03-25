@@ -16,6 +16,7 @@ SUITES = {
     "npo": "npo/schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd",
     "reqif": "reqif/schemas/reqif.xsd",
     "sabre": "sabre/schemas",
+    "sdmx_ml": "sdmx_ml/repo/schemas/ -r",
     "spacex": "spacex/launches.json",
     "travelport": "travelport/schemas -r",
     "ubl": "ubl/schemas/maindoc",
@@ -95,7 +96,7 @@ def all_tasks(
         run(f"xsdata {SUITES[s]} --config {s}/.xsdata.xml {build_cmd_args}")
         run(f"pytest --output-format {output_format} {s}/")
 
-        if s != "generali":
+        if s not in ("generali", "sdmx_ml"):
             run(f"mypy {s}/models")
 
 

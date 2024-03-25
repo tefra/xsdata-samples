@@ -7,3 +7,6 @@
 [submodule "crossref/schema"]
 	path = crossref/schema
 	url = https://gitlab.com/crossref/schema.git
+[submodule "sdmx_ml/repo"]
+	path = sdmx_ml/repo
+	url = git@github.com:sdmx-twg/sdmx-ml.git

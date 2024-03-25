@@ -11,13 +11,25 @@ class SimpleValidityCondition(ValidBetweenVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    validity_conditions_or_valid_between: Any = field(
+    name: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
         },
     )
-    alternative_texts: Any = field(
+    description: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    conditioned_object_ref: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    with_condition_ref: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
@@ -41,25 +53,13 @@ class SimpleValidityCondition(ValidBetweenVersionStructure):
             "type": "Ignore",
         },
     )
-    name: Any = field(
+    validity_conditions_or_valid_between: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
         },
     )
-    description: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
-    conditioned_object_ref: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
-    with_condition_ref: Any = field(
+    alternative_texts: Any = field(
         init=False,
         metadata={
             "type": "Ignore",

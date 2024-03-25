@@ -2335,10 +2335,6 @@ class Cv(Ce):
     text.
 
     Used when a single code value must be sent.
-
-    :ivar qualifier: Specifies additional codes that increase the
-        specificity of the primary code.
-    :ivar translation:
     """
 
     class Meta:
@@ -2364,10 +2360,9 @@ class EivlEvent(Ce):
     A code for a common (periodical) activity of daily living based on which the
     event related periodic interval is specified.
 
+    :ivar qualifier:
     :ivar original_text: The text or phrase used as the basis for the
         coding.
-    :ivar qualifier: Specifies additional codes that increase the
-        specificity of the primary code.
     :ivar translation: A set of other concept descriptors that translate
         this concept descriptor into other code systems.
     :ivar code_system:
@@ -2377,13 +2372,13 @@ class EivlEvent(Ce):
     class Meta:
         name = "EIVL.event"
 
-    original_text: Any = field(
+    qualifier: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
         },
     )
-    qualifier: Any = field(
+    original_text: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
@@ -3207,12 +3202,10 @@ class Cs(Cv):
 
     Used when a single code value must be sent.
 
+    :ivar qualifier:
+    :ivar translation:
     :ivar original_text: The text or phrase used as the basis for the
         coding.
-    :ivar qualifier: Specifies additional codes that increase the
-        specificity of the primary code.
-    :ivar translation: A set of other concept descriptors that translate
-        this concept descriptor into other code systems.
     :ivar code_system:
     :ivar code_system_name:
     :ivar code_system_version:
@@ -3222,12 +3215,6 @@ class Cs(Cv):
     class Meta:
         name = "CS"
 
-    original_text: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
     qualifier: Any = field(
         init=False,
         metadata={
@@ -3235,6 +3222,12 @@ class Cs(Cv):
         },
     )
     translation: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    original_text: Any = field(
         init=False,
         metadata={
             "type": "Ignore",

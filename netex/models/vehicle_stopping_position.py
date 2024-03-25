@@ -13,12 +13,6 @@ class VehicleStoppingPosition(VehicleStoppingPositionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    members: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
     url: Any = field(
         init=False,
         metadata={
@@ -38,6 +32,12 @@ class VehicleStoppingPosition(VehicleStoppingPositionVersionStructure):
         },
     )
     road_address: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    members: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
