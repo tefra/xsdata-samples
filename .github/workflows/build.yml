@@ -22,11 +22,12 @@ jobs:
           - { name: "Crossref Metadata", id: "crossref" }
           - { name: "DateX II", id: "datexii" }
           - { name: "EWP", id: "ewp" }
-          - { name: "Generali", id: "generali" }
+          - { name: "Generali", id: "generali", skip_mypy: true }
           - { name: "NeTEx", id: "netex" }
           - { name: "NPO API", id: "npo" }
           - { name: "ReqIF", id: "reqif" }
           - { name: "Sabre", id: "sabre" }
+          - { name: "Sdmx-ml", id: "sdmx-ml", skip_mypy: true }
           - { name: "SpaceX", id: "spacex" }
           - { name: "Travelport", id: "travelport" }
           - { name: "UBL", id: "ubl" }
@@ -49,5 +50,5 @@ jobs:
       - name: Run Tests
         run: invoke ${{ matrix.collection.id }}.test
       - name: Run mypy
-        if: matrix.collection.id != 'generali'
+        if: matrix.collection.skip_mypy != true
         run: invoke ${{ matrix.collection.id }}.mypy

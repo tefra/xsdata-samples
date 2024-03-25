@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="24.2">
+<Config xmlns="http://pypi.org/project/xsdata" version="24.3.1">
   <Output maxLineLength="79" subscriptableTypes="false" unionType="false">
     <Package>common_types.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
@@ -7,6 +7,7 @@
     <DocstringStyle>reStructuredText</DocstringStyle>
     <RelativeImports>true</RelativeImports>
     <CompoundFields defaultName="choice" useSubstitutionGroups="false" forceDefaultName="false" maxNameParts="3">false</CompoundFields>
+    <WrapperFields>false</WrapperFields>
     <PostponedAnnotations>false</PostponedAnnotations>
     <UnnestClasses>false</UnnestClasses>
     <IgnorePatterns>false</IgnorePatterns>

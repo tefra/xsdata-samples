@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:StructureSpecificData xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+  <ns0:Header>
+    <ns0:ID>IREF411123</ns0:ID>
+    <ns0:Test>false</ns0:Test>
+    <ns0:Prepared>2021-03-08T22:05:13Z</ns0:Prepared>
+    <ns0:Sender id="Unknown"/>
+    <ns0:Receiver id="ANONYMOUS"/>
+    <ns0:Structure structureID="ECB_EXR_COMPLEX_ATTRIBUTES_1_0" namespace="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ECB:EXR(1.0):ObsLevelDim:TIME_PERIOD" dimensionAtObservation="TIME_PERIOD">
+      <ns1:StructureUsage xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ECB:EXR(1.0)</ns1:StructureUsage>
+    </ns0:Structure>
+    <ns0:DataSetAction>Information</ns0:DataSetAction>
+    <ns0:Extracted>2021-03-08T22:05:13</ns0:Extracted>
+    <ns0:ReportingBegin>1999-01-01T00:00:00</ns0:ReportingBegin>
+    <ns0:ReportingEnd>2019-01-01T23:59:59</ns0:ReportingEnd>
+  </ns0:Header>
+  <ns0:DataSet xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific" ns1:structureRef="ECB_EXR_COMPLEX_ATTRIBUTES_1_0">
+    <Series FREQ="A" CURRENCY="CAD" CURRENCY_DENOM="EUR" EXR_TYPE="SP00" EXR_SUFFIX="A" TIME_FORMAT="P1Y" COLLECTION="A" DECIMALS="4" TITLE_COMPL="ECB reference exchange rate, Canadian dollar/Euro, 2:15 pm (C.E.T.)" UNIT="CAD" UNIT_MULT="0">
+      <Comp id="TITLE">
+        <Value>
+          <ns2:Text xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Some English Text</ns2:Text>
+          <ns2:Text xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common" xml:lang="fr">Quelques textes en anglais</ns2:Text>
+        </Value>
+        <Value>
+          <ns2:Text xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Additional English Text where lang defaults to en</ns2:Text>
+          <ns2:Text xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common" xml:lang="fr">Texte anglais supplémentaire</ns2:Text>
+        </Value>
+      </Comp>
+      <Comp id="SOURCE_AGENCY">
+        <Value>4F0</Value>
+        <Value>4D0</Value>
+        <Value>CZ2</Value>
+      </Comp>
+      <Comp id="SOURCE_PUB">
+        <Value>First publication source</Value>
+        <Value>Second publication source</Value>
+      </Comp>
+      <Obs TIME_PERIOD="2017" OBS_VALUE="1.46472274509804">
+        <Comp id="OBS_STATUS">
+          <Value>A</Value>
+          <Value>F</Value>
+        </Comp>
+      </Obs>
+      <Obs TIME_PERIOD="2018" OBS_VALUE="1.529364705882353">
+        <Comp id="OBS_STATUS">
+          <Value>J</Value>
+          <Value>U</Value>
+          <Value>N</Value>
+        </Comp>
+      </Obs>
+      <Obs TIME_PERIOD="2019" OBS_VALUE="1.485477254901961">
+        <Comp id="OBS_STATUS">
+          <Value>A</Value>
+        </Comp>
+      </Obs>
+    </Series>
+  </ns0:DataSet>
+</ns0:StructureSpecificData>
+

@@ -13,13 +13,13 @@ class PassengerStopAssignmentView(PassengerStopAssignmentDerivedViewStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    branding_ref: Any = field(
+    label: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
         },
     )
-    label: Any = field(
+    branding_ref: Any = field(
         init=False,
         metadata={
             "type": "Ignore",

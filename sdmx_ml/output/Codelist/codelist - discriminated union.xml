@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+  <ns0:Header>
+    <ns0:ID>IREF953220</ns0:ID>
+    <ns0:Test>false</ns0:Test>
+    <ns0:Prepared>2021-03-10T16:55:29Z</ns0:Prepared>
+    <ns0:Sender id="Unknown"/>
+    <ns0:Receiver id="not_supplied"/>
+  </ns0:Header>
+  <ns0:Structures>
+    <ns1:AgencySchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+      <ns1:AgencyScheme id="AGENCIES" urn="urn:sdmx:org.sdmx.infomodel.base.AgencyScheme=SDMX:AGENCIES(1.0)" agencyID="SDMX">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">SDMX Agency Scheme</ns2:Name>
+        <ns1:Agency id="SDMX" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=SDMX:AGENCIES(1.0).SDMX">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">SDMX</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">SDMX is an initiative to foster standards for the exchange of statistical information. It is sponsored by the Bank for International Settlements (BIS), the European Central Bank (ECB), the Statistical Office of the European Union (Eurostat), the International Monetary Fund (IMF), the Organization for Economic Co-Operation and Development (OECD), the United Nations (UN) and the World Bank.</ns2:Description>
+          <ns1:Contact>
+            <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">SDMX Secretariat</ns2:Name>
+            <ns1:Department>SDMX Secretariat</ns1:Department>
+            <ns1:Role>Single entry point for external inquiries</ns1:Role>
+            <ns1:URI>http://sdmx.org</ns1:URI>
+            <ns1:Email>secretariat@sdmx.org</ns1:Email>
+          </ns1:Contact>
+        </ns1:Agency>
+        <ns1:Agency id="EXAMPLE" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=SDMX:AGENCIES(1.0).EXAMPLE">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Example Agency</ns2:Name>
+        </ns1:Agency>
+      </ns1:AgencyScheme>
+    </ns1:AgencySchemes>
+    <ns1:Codelists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+      <ns1:Codelist id="CL_ACTIVITY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=EXAMPLE:CL_ACTIVITY(1.0)" version="1.0" agencyID="EXAMPLE">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Activity</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Activity</ns2:Description>
+        <ns1:CodelistExtension prefix="NACE2_">
+          <ns1:Codelist>urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_ACTIVITY_NACE2(1.0)</ns1:Codelist>
+        </ns1:CodelistExtension>
+        <ns1:CodelistExtension prefix="ISIC4_">
+          <ns1:Codelist>urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_ACTIVITY_ISIC4(1.0)</ns1:Codelist>
+        </ns1:CodelistExtension>
+      </ns1:Codelist>
+    </ns1:Codelists>
+    <ns1:ConceptSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+      <ns1:ConceptScheme id="CS_EXAMPLE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=EXAMPLE:CS_EXAMPLE(1.0)" version="1.0" agencyID="EXAMPLE">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Example concepts</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Example concepts</ns2:Description>
+        <ns1:Concept id="ACTIVITY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).ACTIVITY">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Labour force activity</ns2:Name>
+        </ns1:Concept>
+        <ns1:Concept id="INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).INDICATOR">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Labour force indicator</ns2:Name>
+        </ns1:Concept>
+        <ns1:Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).TIME_PERIOD">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Time period or range</ns2:Name>
+        </ns1:Concept>
+        <ns1:Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).OBS_VALUE">
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Observation value</ns2:Name>
+        </ns1:Concept>
+      </ns1:ConceptScheme>
+    </ns1:ConceptSchemes>
+    <ns1:DataConstraints xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+      <ns1:DataConstraint id="ISIC_CONSTRAINT" urn="urn:sdmx:org.sdmx.infomodel.registry.DataConstraint=EXAMPLE:ISIC_CONSTRAINT(1.0)" version="1.0" agencyID="EXAMPLE" role="Allowed">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ISIC Constraint</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ISIC Constraint</ns2:Description>
+        <ns1:ConstraintAttachment>
+          <ns1:Dataflow>urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=EXAMPLE:LABOUR_ISIC(1.0)</ns1:Dataflow>
+        </ns1:ConstraintAttachment>
+        <ns1:CubeRegion>
+          <ns1:KeyValue id="ACTIVITY">
+            <ns1:Value>ISIC4_%</ns1:Value>
+          </ns1:KeyValue>
+        </ns1:CubeRegion>
+      </ns1:DataConstraint>
+      <ns1:DataConstraint id="NACE_CONSTRAINT" urn="urn:sdmx:org.sdmx.infomodel.registry.DataConstraint=EXAMPLE:NACE_CONSTRAINT(1.0)" version="1.0" agencyID="EXAMPLE" role="Allowed">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">NACE Constraint</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">NACE Constraint</ns2:Description>
+        <ns1:ConstraintAttachment>
+          <ns1:Dataflow>urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=EXAMPLE:LABOUR_NACE(1.0)</ns1:Dataflow>
+        </ns1:ConstraintAttachment>
+        <ns1:CubeRegion>
+          <ns1:KeyValue id="ACTIVITY">
+            <ns1:Value>NACE2_%</ns1:Value>
+          </ns1:KeyValue>
+        </ns1:CubeRegion>
+      </ns1:DataConstraint>
+    </ns1:DataConstraints>
+    <ns1:Dataflows xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+      <ns1:Dataflow id="LABOUR_ISIC" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=EXAMPLE:LABOUR_ISIC(1.0)" version="1.0" agencyID="EXAMPLE">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Labour with ISIC4 activity coding</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Labour with ISIC4 activity coding</ns2:Description>
+        <ns1:Structure>urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=EXAMPLE:LABOUR(1.0.0)</ns1:Structure>
+      </ns1:Dataflow>
+      <ns1:Dataflow id="LABOUR_NACE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=EXAMPLE:LABOUR_NACE(1.0)" version="1.0" agencyID="EXAMPLE">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Labour with NACE2 activity coding</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Labour with NACE2 activity coding</ns2:Description>
+        <ns1:Structure>urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=EXAMPLE:LABOUR(1.0.0)</ns1:Structure>
+      </ns1:Dataflow>
+    </ns1:Dataflows>
+    <ns1:DataStructures xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+      <ns1:DataStructure id="LABOUR" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=EXAMPLE:LABOUR(1.0)" version="1.0" agencyID="EXAMPLE">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Labour</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Labour statistics</ns2:Description>
+        <ns1:DataStructureComponents>
+          <ns1:DimensionList urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=EXAMPLE:LABOUR(1.0).DimensionDescriptor">
+            <ns1:Dimension id="INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=EXAMPLE:LABOUR(1.0).INDICATOR" position="1">
+              <ns1:ConceptIdentity>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).INDICATOR</ns1:ConceptIdentity>
+            </ns1:Dimension>
+            <ns1:Dimension id="ACTIVITY" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=EXAMPLE:LABOUR(1.0).ACTIVITY" position="2">
+              <ns1:ConceptIdentity>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).ACTIVITY</ns1:ConceptIdentity>
+              <ns1:LocalRepresentation>
+                <ns1:Enumeration>urn:sdmx:org.sdmx.infomodel.codelist.Codelist=EXAMPLE:CL_ACTIVITY(1.0)</ns1:Enumeration>
+              </ns1:LocalRepresentation>
+            </ns1:Dimension>
+            <ns1:TimeDimension urn="urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=EXAMPLE:LABOUR(1.0).TIME_PERIOD">
+              <ns1:ConceptIdentity>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).TIME_PERIOD</ns1:ConceptIdentity>
+              <ns1:LocalRepresentation>
+                <ns1:TextFormat textType="ObservationalTimePeriod"/>
+              </ns1:LocalRepresentation>
+            </ns1:TimeDimension>
+          </ns1:DimensionList>
+          <ns1:MeasureList urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=EXAMPLE:LABOUR(1.0).MeasureDescriptor">
+            <ns1:Measure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Measure=EXAMPLE:LABOUR(1.0).OBS_VALUE">
+              <ns1:ConceptIdentity>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).OBS_VALUE</ns1:ConceptIdentity>
+            </ns1:Measure>
+          </ns1:MeasureList>
+        </ns1:DataStructureComponents>
+      </ns1:DataStructure>
+    </ns1:DataStructures>
+  </ns0:Structures>
+</ns0:Structure>
+

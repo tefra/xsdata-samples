@@ -399,6 +399,12 @@ class AlternativeText(AlternativeTextVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
+    extensions: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
     validity_conditions_or_valid_between: Any = field(
         init=False,
         metadata={
@@ -406,12 +412,6 @@ class AlternativeText(AlternativeTextVersionedChildStructure):
         },
     )
     alternative_texts: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
-    extensions: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
@@ -674,13 +674,25 @@ class ValidBetween(ValidBetweenVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    validity_conditions_or_valid_between: Any = field(
+    name: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
         },
     )
-    alternative_texts: Any = field(
+    description: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    conditioned_object_ref: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    with_condition_ref: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
@@ -704,25 +716,13 @@ class ValidBetween(ValidBetweenVersionStructure):
             "type": "Ignore",
         },
     )
-    name: Any = field(
+    validity_conditions_or_valid_between: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
         },
     )
-    description: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
-    conditioned_object_ref: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
-    with_condition_ref: Any = field(
+    alternative_texts: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
@@ -906,18 +906,6 @@ class ValidDuring(ValidDuringVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    validity_conditions_or_valid_between: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
-    alternative_texts: Any = field(
-        init=False,
-        metadata={
-            "type": "Ignore",
-        },
-    )
     key_list: Any = field(
         init=False,
         metadata={
@@ -931,6 +919,18 @@ class ValidDuring(ValidDuringVersionStructure):
         },
     )
     branding_ref: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
