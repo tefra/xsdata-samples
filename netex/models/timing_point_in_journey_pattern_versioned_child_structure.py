@@ -41,8 +41,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             ParkingPointRef,
             ReliefPointRef,
             TimingPointRef,
-            XmlDuration,
-            JourneyPatternWaitTimesRelStructure,
         ]
     ] = field(
         default=None,
@@ -84,16 +82,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(
                     "type": TimingPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
-                {
-                    "name": "WaitTime",
-                    "type": XmlDuration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "waitTimes",
-                    "type": JourneyPatternWaitTimesRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
             ),
         },
     )
@@ -111,6 +99,26 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             "name": "IsWaitPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    wait_time_or_wait_times: Optional[
+        Union[XmlDuration, JourneyPatternWaitTimesRelStructure]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WaitTime",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "waitTimes",
+                    "type": JourneyPatternWaitTimesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
     headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
