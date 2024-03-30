@@ -3,7 +3,7 @@ from enum import Enum
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class TypeOfInfolinkEnumeration(Enum):
+class TypeOfInfoLinkEnumeration(Enum):
     CONTACT = "contact"
     RESOURCE = "resource"
     INFO = "info"

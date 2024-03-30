@@ -1930,7 +1930,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Line 66'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:Org_TL001'
                                         ),
@@ -2202,7 +2202,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             service_patterns=ServicePatternsInFrameRelStructure(
-                                service_pattern_or_journey_pattern_view=[
+                                service_pattern=[
                                     ServicePattern(
                                         id='hde:SvP001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
@@ -3194,7 +3194,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='hde:JP001o',
                                         version='any',

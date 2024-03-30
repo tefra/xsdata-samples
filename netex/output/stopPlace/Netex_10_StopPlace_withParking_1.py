@@ -156,10 +156,10 @@ from netex.models.pos import Pos
 from netex.models.private_code import PrivateCode
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
+from netex.models.psychosensory_need_enumeration import PsychosensoryNeedEnumeration
 from netex.models.public_use_enumeration import PublicUseEnumeration
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.pyschosensory_need_enumeration import PyschosensoryNeedEnumeration
 from netex.models.quay import Quay
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_ref_structure import QuayRefStructure
@@ -1820,32 +1820,32 @@ obj = PublicationDelivery(
                                                     ),
                                                     Suitability(
                                                         id='naptStop:910GWIMBLDN_Ac1_S10',
-                                                        choice=PyschosensoryNeedEnumeration.VISUAL_IMPAIRMENT,
+                                                        choice=PsychosensoryNeedEnumeration.VISUAL_IMPAIRMENT,
                                                         suitable=SuitableEnumeration.SUITABLE
                                                     ),
                                                     Suitability(
                                                         id='naptStop:910GWIMBLDN_Ac1_S11',
-                                                        choice=PyschosensoryNeedEnumeration.AUDITORY_IMPAIRMENT,
+                                                        choice=PsychosensoryNeedEnumeration.AUDITORY_IMPAIRMENT,
                                                         suitable=SuitableEnumeration.SUITABLE
                                                     ),
                                                     Suitability(
                                                         id='naptStop:910GWIMBLDN_Ac1_S12',
-                                                        choice=PyschosensoryNeedEnumeration.AVERSE_TO_CROWDS,
+                                                        choice=PsychosensoryNeedEnumeration.AVERSE_TO_CROWDS,
                                                         suitable=SuitableEnumeration.SUITABLE
                                                     ),
                                                     Suitability(
                                                         id='naptStop:910GWIMBLDN_Ac1_S13',
-                                                        choice=PyschosensoryNeedEnumeration.AVERSE_TO_CONFINED_SPACES,
+                                                        choice=PsychosensoryNeedEnumeration.AVERSE_TO_CONFINED_SPACES,
                                                         suitable=SuitableEnumeration.SUITABLE
                                                     ),
                                                     Suitability(
                                                         id='naptStop:910GWIMBLDN_Ac1_S14',
-                                                        choice=PyschosensoryNeedEnumeration.AVERSE_TO_LIFTS,
+                                                        choice=PsychosensoryNeedEnumeration.AVERSE_TO_LIFTS,
                                                         suitable=SuitableEnumeration.SUITABLE
                                                     ),
                                                     Suitability(
                                                         id='naptStop:910GWIMBLDN_Ac1_S15',
-                                                        choice=PyschosensoryNeedEnumeration.AVERSE_TO_ESCALATORS,
+                                                        choice=PsychosensoryNeedEnumeration.AVERSE_TO_ESCALATORS,
                                                         suitable=SuitableEnumeration.SUITABLE
                                                     ),
                                                 ]

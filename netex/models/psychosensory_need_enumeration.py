@@ -3,7 +3,7 @@ from enum import Enum
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class PyschosensoryNeedEnumeration(Enum):
+class PsychosensoryNeedEnumeration(Enum):
     VISUAL_IMPAIRMENT = "visualImpairment"
     AUDITORY_IMPAIRMENT = "auditoryImpairment"
     COGNITIVE_INPUT_IMPAIRMENT = "cognitiveInputImpairment"

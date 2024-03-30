@@ -296,7 +296,7 @@ from netex.models.type_of_fare_contract_ref import TypeOfFareContractRef
 from netex.models.type_of_fare_product import TypeOfFareProduct
 from netex.models.type_of_fare_product_ref import TypeOfFareProductRef
 from netex.models.type_of_fare_product_refs_rel_structure import TypeOfFareProductRefsRelStructure
-from netex.models.type_of_infolink_enumeration import TypeOfInfolinkEnumeration
+from netex.models.type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 from netex.models.type_of_payment_method_ref import TypeOfPaymentMethodRef
 from netex.models.type_of_point_ref import TypeOfPointRef
 from netex.models.type_of_point_refs_rel_structure import TypeOfPointRefsRelStructure
@@ -4479,7 +4479,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://www.transferoviarcalatori.ro/tarife/tarife-tfc.html',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.FARE_SHEET,
+                                                        TypeOfInfoLinkEnumeration.FARE_SHEET,
                                                     ]
                                                 ),
                                             ]
@@ -7567,7 +7567,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://www.transferoviarcalatori.ro/tarife/tarife-tfc.html',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.FARE_SHEET,
+                                                        TypeOfInfoLinkEnumeration.FARE_SHEET,
                                                     ]
                                                 ),
                                             ]
@@ -8662,7 +8662,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://www.transferoviarcalatori.ro/tarife/tarife-tfc.html',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.FARE_SHEET,
+                                                        TypeOfInfoLinkEnumeration.FARE_SHEET,
                                                     ]
                                                 ),
                                             ]
@@ -9914,7 +9914,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://www.transferoviarcalatori.ro/tarife/oferta-dus-intors.html',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.FARE_SHEET,
+                                                        TypeOfInfoLinkEnumeration.FARE_SHEET,
                                                     ]
                                                 ),
                                             ]

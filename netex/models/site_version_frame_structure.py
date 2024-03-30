@@ -42,6 +42,7 @@ from .site_facility_sets_in_frame_rel_structure import (
 )
 from .stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from .tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
+from .taxi_ranks_in_frame_rel_structure import TaxiRanksInFrameRelStructure
 from .topographic_places_in_frame_rel_structure import (
     TopographicPlacesInFrameRelStructure,
 )
@@ -110,6 +111,14 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
                 "namespace": "http://www.netex.org.uk/netex",
             },
         )
+    )
+    taxi_ranks: Optional[TaxiRanksInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "taxiRanks",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     points_of_interest: Optional[PointsOfInterestInFrameRelStructure] = field(
         default=None,

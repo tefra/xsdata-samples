@@ -1771,7 +1771,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             service_patterns=ServicePatternsInFrameRelStructure(
-                                service_pattern_or_journey_pattern_view=[
+                                service_pattern=[
                                     ServicePattern(
                                         id='ssp:SvP001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
@@ -2606,7 +2606,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='ssp:JP001o',
                                         version='any',

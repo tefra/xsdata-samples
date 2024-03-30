@@ -529,7 +529,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             service_patterns=ServicePatternsInFrameRelStructure(
-                                service_pattern_or_journey_pattern_view=[
+                                service_pattern=[
                                     ServicePattern(
                                         id='hde:svp_42c@A+E',
                                         version='any',
@@ -1229,7 +1229,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='hde:sjp_42c@A+E',
                                         version='any',

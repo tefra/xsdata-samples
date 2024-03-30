@@ -306,7 +306,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='24',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='1.0',
                                             ref='acs:ACS'
                                         ),
@@ -454,7 +454,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             service_patterns=ServicePatternsInFrameRelStructure(
-                                service_pattern_or_journey_pattern_view=[
+                                service_pattern=[
                                     ServicePattern(
                                         id='hde:svp_24o',
                                         version='any',
@@ -828,7 +828,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='hde:sjp_24o',
                                         version='any',

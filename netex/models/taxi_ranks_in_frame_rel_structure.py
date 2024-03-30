@@ -2,20 +2,20 @@ from dataclasses import dataclass, field
 from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .stop_place import StopPlace
+from .taxi_rank import TaxiRank
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class StopPlacesInFrameRelStructure(ContainmentAggregationStructure):
+class TaxiRanksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
-        name = "stopPlacesInFrame_RelStructure"
+        name = "taxiRanksInFrame_RelStructure"
 
-    stop_place: List[StopPlace] = field(
+    taxi_rank: List[TaxiRank] = field(
         default_factory=list,
         metadata={
-            "name": "StopPlace",
+            "name": "TaxiRank",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,

@@ -376,6 +376,8 @@
                 </Quay>
               </quays>
             </StopPlace>
+          </stopPlaces>
+          <taxiRanks>
             <TaxiRank id="alphaville_hdv_taxi" version="any">
               <Name>Taxi Rank at Alphaville Hotel de Ville</Name>
               <adjacentSites>
@@ -388,7 +390,7 @@
                 </TaxiStand>
               </taxiStands>
             </TaxiRank>
-          </stopPlaces>
+          </taxiRanks>
           <pointsOfInterest>
             <PointOfInterest id="alphaville_hdv" version="any">
               <Name>Alphaville Hotel de Ville</Name>

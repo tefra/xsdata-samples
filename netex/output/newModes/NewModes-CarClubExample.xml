@@ -1019,6 +1019,7 @@
                     <SalesTransaction id="mct:Cust444@trans005@purchase_single_session" version="any">
                       <Name>Book and pay for  1-day use of a car</Name>
                       <Date>2021-10-01T10:10:00</Date>
+                      <IsValid>true</IsValid>
                       <TypeOfFareContractEntryRef ref="fxc:product_purchase" versionRef="EXTERNAL"/>
                       <Amount>103.50</Amount>
                       <ruleStepResults>
@@ -1031,6 +1032,7 @@
                         </RuleStepResult>
                       </ruleStepResults>
                       <PaymentMethod>creditCard</PaymentMethod>
+                      <CardNumber>1231 0000 0000 0000 0000</CardNumber>
                       <travelSpecifications>
                         <OfferedTravelSpecification id="mct:Cust444@trans005@purchase_single_session" version="any">
                           <Date>2021-10-08T11:15:00</Date>

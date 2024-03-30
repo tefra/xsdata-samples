@@ -259,7 +259,7 @@ from netex.models.travel_specifications_rel_structure import TravelSpecification
 from netex.models.type_of_access_right_assignment_ref import TypeOfAccessRightAssignmentRef
 from netex.models.type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
 from netex.models.type_of_fare_structure_element_ref import TypeOfFareStructureElementRef
-from netex.models.type_of_infolink_enumeration import TypeOfInfolinkEnumeration
+from netex.models.type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 from netex.models.type_of_proof_ref import TypeOfProofRef
 from netex.models.type_of_travel_document import TypeOfTravelDocument
 from netex.models.type_of_travel_document_ref import TypeOfTravelDocumentRef
@@ -753,21 +753,21 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='http:mycar.com/ios/car_station_alpha',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='http:mycar.com/android/car_station_alpha',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ],
                                                     target_platform='android'
                                                 ),
                                                 InfoLink(
                                                     value='http:mycar.com/web/car_station_alpha',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ],
                                                     target_platform='eb'
                                                 ),
@@ -1128,34 +1128,34 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='http:mycar.com/info',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                                 InfoLink(
                                                     value='http:mycar.com/ios',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='http:mycar.com/android',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='android'
                                                 ),
                                                 InfoLink(
                                                     value='http:mycar.com/ios',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='http:mycar.com/android',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='android'
                                                 ),
@@ -1279,7 +1279,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://mycar.com/membership.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                             ]
@@ -1485,13 +1485,13 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://mycar.com/tariff.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                                 InfoLink(
                                                     value='https://mycar.com/tariffMap.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MAP,
+                                                        TypeOfInfoLinkEnumeration.MAP,
                                                     ]
                                                 ),
                                             ]
@@ -1793,28 +1793,28 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://mycar.com/hirecheck_ios.htm',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_INSTALL_CHECK,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_INSTALL_CHECK,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='https://mycar.com/hirecheck_android.htm ',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_INSTALL_CHECK,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_INSTALL_CHECK,
                                                     ],
                                                     target_platform='android'
                                                 ),
                                                 InfoLink(
                                                     value='https://mycar.com/hire_ios.htm',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='https://mycar.com/hire_android.htm ',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='android'
                                                 ),
@@ -2660,6 +2660,7 @@ obj = PublicationDelivery(
                                                                     value='Book and pay for  1-day use of a car'
                                                                 ),
                                                                 date=XmlDateTime(2021, 10, 1, 10, 10, 0),
+                                                                is_valid=True,
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
                                                                     ref='fxc:product_purchase',
                                                                     version_ref='EXTERNAL'
@@ -2687,6 +2688,9 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 payment_method=PaymentMethodEnumeration.CREDIT_CARD,
+                                                                card_number=PrivateCodeStructure(
+                                                                    value='1231 0000 0000 0000 0000'
+                                                                ),
                                                                 travel_specifications=TravelSpecificationsRelStructure(
                                                                     travel_specification_ref_or_travel_specification=[
                                                                         OfferedTravelSpecification(

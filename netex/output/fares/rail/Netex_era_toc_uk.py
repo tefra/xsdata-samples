@@ -346,7 +346,7 @@ from netex.models.type_of_fare_contract_entry_ref import TypeOfFareContractEntry
 from netex.models.type_of_fare_contract_ref import TypeOfFareContractRef
 from netex.models.type_of_fare_product import TypeOfFareProduct
 from netex.models.type_of_fare_product_ref import TypeOfFareProductRef
-from netex.models.type_of_infolink_enumeration import TypeOfInfolinkEnumeration
+from netex.models.type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 from netex.models.type_of_point_ref import TypeOfPointRef
 from netex.models.type_of_point_refs_rel_structure import TypeOfPointRefsRelStructure
 from netex.models.type_of_product_category import TypeOfProductCategory
@@ -6362,7 +6362,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='http://www.nationalrail.co.uk/times_fares/ticket_types/46544.aspx',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                             ]
@@ -11763,7 +11763,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://www.greateranglia.co.uk/tickets-fares/season-tickets',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                             ]
@@ -13558,7 +13558,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='http://www.nationalrail.co.uk/Agc_Terms2018-19.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                             ]
@@ -15084,7 +15084,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://www.greateranglia.co.uk/tickets-fares/discounts/rangers-rovers/anglia-plus',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MAP,
+                                                        TypeOfInfoLinkEnumeration.MAP,
                                                     ]
                                                 ),
                                             ]
@@ -15117,7 +15117,7 @@ obj = PublicationDelivery(
                                             value='Ely to Norwich'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15130,7 +15130,7 @@ obj = PublicationDelivery(
                                             value='London to Braintree""'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15143,7 +15143,7 @@ obj = PublicationDelivery(
                                             value='London to Felixstowe""'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         )
@@ -15155,7 +15155,7 @@ obj = PublicationDelivery(
                                             value='London to Great Yarmouth"'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15168,7 +15168,7 @@ obj = PublicationDelivery(
                                             value='London to King\'s_Lynn"'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15181,7 +15181,7 @@ obj = PublicationDelivery(
                                             value='London to Lowestoft"'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15194,7 +15194,7 @@ obj = PublicationDelivery(
                                             value='London to Norwich'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15207,7 +15207,7 @@ obj = PublicationDelivery(
                                             value='London to Sudbury""'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15220,7 +15220,7 @@ obj = PublicationDelivery(
                                             value='London to Walton-on-the-Naze"'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         )
@@ -15241,7 +15241,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         url='https://www.stanstedexpress.com/',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15254,7 +15254,7 @@ obj = PublicationDelivery(
                                             value='London to Stansted Airport-to-Ely"'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         )
@@ -16168,7 +16168,7 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://public.greenrailtravel.co.uk/carnet.html',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                             ]
@@ -18281,25 +18281,25 @@ obj = PublicationDelivery(
                                                             InfoLink(
                                                                 value='http://www.plusbus.info/norwich',
                                                                 type_of_info_link=[
-                                                                    TypeOfInfolinkEnumeration.INFO,
+                                                                    TypeOfInfoLinkEnumeration.INFO,
                                                                 ]
                                                             ),
                                                             InfoLink(
                                                                 value='https://www.merseytravel.gov.uk/Tickets/compare-tickets/Pages/Plusbus.aspx',
                                                                 type_of_info_link=[
-                                                                    TypeOfInfolinkEnumeration.INFO,
+                                                                    TypeOfInfoLinkEnumeration.INFO,
                                                                 ]
                                                             ),
                                                             InfoLink(
                                                                 value='http://www.plusbus.info/shenfield',
                                                                 type_of_info_link=[
-                                                                    TypeOfInfolinkEnumeration.INFO,
+                                                                    TypeOfInfoLinkEnumeration.INFO,
                                                                 ]
                                                             ),
                                                             InfoLink(
                                                                 value='http://www.plusbus.info/meadowhl',
                                                                 type_of_info_link=[
-                                                                    TypeOfInfolinkEnumeration.INFO,
+                                                                    TypeOfInfoLinkEnumeration.INFO,
                                                                 ]
                                                             ),
                                                         ]
@@ -18342,7 +18342,7 @@ obj = PublicationDelivery(
                                                             InfoLink(
                                                                 value='http://www.plusbus.info/norwich',
                                                                 type_of_info_link=[
-                                                                    TypeOfInfolinkEnumeration.INFO,
+                                                                    TypeOfInfoLinkEnumeration.INFO,
                                                                 ]
                                                             ),
                                                         ]
@@ -18386,7 +18386,7 @@ obj = PublicationDelivery(
                                                             InfoLink(
                                                                 value='http://www.plusbus.info/meadowhl',
                                                                 type_of_info_link=[
-                                                                    TypeOfInfolinkEnumeration.INFO,
+                                                                    TypeOfInfoLinkEnumeration.INFO,
                                                                 ]
                                                             ),
                                                         ]

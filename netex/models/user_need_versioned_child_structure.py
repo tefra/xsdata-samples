@@ -5,7 +5,7 @@ from .encumbrance_enumeration import EncumbranceEnumeration
 from .entity_in_version_structure import VersionedChildStructure
 from .medical_need_enumeration import MedicalNeedEnumeration
 from .mobility_enumeration import MobilityEnumeration
-from .pyschosensory_need_enumeration import PyschosensoryNeedEnumeration
+from .psychosensory_need_enumeration import PsychosensoryNeedEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -18,7 +18,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
     choice: Optional[
         Union[
             MobilityEnumeration,
-            PyschosensoryNeedEnumeration,
+            PsychosensoryNeedEnumeration,
             MedicalNeedEnumeration,
             EncumbranceEnumeration,
         ]
@@ -34,7 +34,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "PsychosensoryNeed",
-                    "type": PyschosensoryNeedEnumeration,
+                    "type": PsychosensoryNeedEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

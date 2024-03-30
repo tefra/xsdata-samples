@@ -185,7 +185,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Line 5'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='1.0',
                                             ref='mybus:DTA'
                                         )

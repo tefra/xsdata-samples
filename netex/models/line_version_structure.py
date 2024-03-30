@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import List, Optional
 
 from .accessibility_assessment import AccessibilityAssessment
 from .all_vehicle_modes_of_transport_enumeration import (
@@ -118,24 +118,20 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    authority_ref_or_operator_ref: Optional[
-        Union[AuthorityRef, OperatorRef]
-    ] = field(
+    authority_ref: Optional[AuthorityRef] = field(
         default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
+            "name": "AuthorityRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    operator_ref: Optional[OperatorRef] = field(
+        default=None,
+        metadata={
+            "name": "OperatorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         },
     )
     additional_operators: Optional[TransportOrganisationRefsRelStructure] = (

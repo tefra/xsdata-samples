@@ -494,7 +494,6 @@ from .bus_submode_enumeration import BusSubmodeEnumeration
 from .call import Call
 from .call_abstract import CallAbstract
 from .call_versioned_child_structure import CallVersionedChildStructure
-from .call_z import CallZ
 from .calls_rel_structure import CallsRelStructure
 from .cancelling import Cancelling
 from .cancelling_ref import CancellingRef
@@ -1154,7 +1153,6 @@ from .dated_call import DatedCall
 from .dated_call_versioned_child_structure import (
     DatedCallVersionedChildStructure,
 )
-from .dated_call_z import DatedCallZ
 from .dated_calls_rel_structure import DatedCallsRelStructure
 from .dated_passing_time import DatedPassingTime
 from .dated_passing_time_versioned_child_structure import (
@@ -3891,6 +3889,7 @@ from .properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from .property_of_day import PropertyOfDay
 from .property_of_day_structure import PropertyOfDayStructure
 from .propulsion_type_enumeration import PropulsionTypeEnumeration
+from .psychosensory_need_enumeration import PsychosensoryNeedEnumeration
 from .public_use_enumeration import PublicUseEnumeration
 from .publication_delivery import PublicationDelivery
 from .publication_delivery_structure import PublicationDeliveryStructure
@@ -3929,7 +3928,6 @@ from .purpose_of_journey_partition_value_structure import (
 from .purposes_of_grouping_in_frame_rel_structure import (
     PurposesOfGroupingInFrameRelStructure,
 )
-from .pyschosensory_need_enumeration import PyschosensoryNeedEnumeration
 from .quality_structure_factor import QualityStructureFactor
 from .quality_structure_factor_abstract import QualityStructureFactorAbstract
 from .quality_structure_factor_price import QualityStructureFactorPrice
@@ -5066,6 +5064,7 @@ from .taxi_rank_ref import TaxiRankRef
 from .taxi_rank_ref_structure import TaxiRankRefStructure
 from .taxi_rank_refs_rel_structure import TaxiRankRefsRelStructure
 from .taxi_rank_version_structure import TaxiRankVersionStructure
+from .taxi_ranks_in_frame_rel_structure import TaxiRanksInFrameRelStructure
 from .taxi_service import TaxiService
 from .taxi_service_place_assignment import TaxiServicePlaceAssignment
 from .taxi_service_place_assignment_ref import TaxiServicePlaceAssignmentRef
@@ -5723,7 +5722,7 @@ from .type_of_flexible_service_value_structure import (
 from .type_of_frame_ref import TypeOfFrameRef
 from .type_of_frame_ref_structure import TypeOfFrameRefStructure
 from .type_of_frame_refs_rel_structure import TypeOfFrameRefsRelStructure
-from .type_of_infolink_enumeration import TypeOfInfolinkEnumeration
+from .type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 from .type_of_journey_pattern import TypeOfJourneyPattern
 from .type_of_journey_pattern_ref import TypeOfJourneyPatternRef
 from .type_of_journey_pattern_ref_structure import (
@@ -7097,7 +7096,6 @@ __all__ = [
     "Call",
     "CallAbstract",
     "CallVersionedChildStructure",
-    "CallZ",
     "CallsRelStructure",
     "Cancelling",
     "CancellingRef",
@@ -7515,7 +7513,6 @@ __all__ = [
     "DataSupplyRequestStructure",
     "DatedCall",
     "DatedCallVersionedChildStructure",
-    "DatedCallZ",
     "DatedCallsRelStructure",
     "DatedPassingTime",
     "DatedPassingTimeVersionedChildStructure",
@@ -9310,6 +9307,7 @@ __all__ = [
     "PropertyOfDay",
     "PropertyOfDayStructure",
     "PropulsionTypeEnumeration",
+    "PsychosensoryNeedEnumeration",
     "PublicUseEnumeration",
     "PublicationDelivery",
     "PublicationDeliveryStructure",
@@ -9336,7 +9334,6 @@ __all__ = [
     "PurposeOfJourneyPartitionRefStructure",
     "PurposeOfJourneyPartitionValueStructure",
     "PurposesOfGroupingInFrameRelStructure",
-    "PyschosensoryNeedEnumeration",
     "QualityStructureFactor",
     "QualityStructureFactorAbstract",
     "QualityStructureFactorPrice",
@@ -10113,6 +10110,7 @@ __all__ = [
     "TaxiRankRefStructure",
     "TaxiRankRefsRelStructure",
     "TaxiRankVersionStructure",
+    "TaxiRanksInFrameRelStructure",
     "TaxiService",
     "TaxiServicePlaceAssignment",
     "TaxiServicePlaceAssignmentRef",
@@ -10528,7 +10526,7 @@ __all__ = [
     "TypeOfFrameRef",
     "TypeOfFrameRefStructure",
     "TypeOfFrameRefsRelStructure",
-    "TypeOfInfolinkEnumeration",
+    "TypeOfInfoLinkEnumeration",
     "TypeOfJourneyPattern",
     "TypeOfJourneyPatternRef",
     "TypeOfJourneyPatternRefStructure",

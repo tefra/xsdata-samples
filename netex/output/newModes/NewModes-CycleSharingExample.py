@@ -297,7 +297,7 @@ from netex.models.type_of_equipment import TypeOfEquipment
 from netex.models.type_of_equipment_ref import TypeOfEquipmentRef
 from netex.models.type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
 from netex.models.type_of_fare_structure_element_ref import TypeOfFareStructureElementRef
-from netex.models.type_of_infolink_enumeration import TypeOfInfolinkEnumeration
+from netex.models.type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 from netex.models.type_of_travel_document import TypeOfTravelDocument
 from netex.models.type_of_travel_document_ref import TypeOfTravelDocumentRef
 from netex.models.type_of_travel_document_refs_rel_structure import TypeOfTravelDocumentRefsRelStructure
@@ -923,21 +923,21 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='http:metrobike.eu/ios/bike_station_alpha',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='http:metrobike.eu/android/bike_station_alpha',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ],
                                                     target_platform='android'
                                                 ),
                                                 InfoLink(
                                                     value='http:metrobike.eu/web/bike_station_alpha',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ],
                                                     target_platform='eb'
                                                 ),
@@ -1871,34 +1871,34 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='http:metrobike.eu/info',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                                 InfoLink(
                                                     value='http:metrobike.eu/ios',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='http:metrobike.eu/android',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='android'
                                                 ),
                                                 InfoLink(
                                                     value='http:metrobike.eu/ios',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='http:metrobike.eu/android',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='android'
                                                 ),
@@ -2174,13 +2174,13 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://metrobike.eu/tariff.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                                 InfoLink(
                                                     value='https://metrobike.eu/tariffMap.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MAP,
+                                                        TypeOfInfoLinkEnumeration.MAP,
                                                     ]
                                                 ),
                                             ]
@@ -2542,28 +2542,28 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://metrobike.com/hirecheck_ios.htm',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_INSTALL_CHECK,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_INSTALL_CHECK,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='https://metrobike.com/hirecheck_android.htm ',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_INSTALL_CHECK,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_INSTALL_CHECK,
                                                     ],
                                                     target_platform='android'
                                                 ),
                                                 InfoLink(
                                                     value='https://metrobike.com/hire_ios.htm',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='ios'
                                                 ),
                                                 InfoLink(
                                                     value='https://metrobike.com/hire_android.htm ',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MOBILE_APP_DOWNLOAD,
+                                                        TypeOfInfoLinkEnumeration.MOBILE_APP_DOWNLOAD,
                                                     ],
                                                     target_platform='android'
                                                 ),
@@ -2981,13 +2981,13 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://metrobike.eu/tariff.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                                 InfoLink(
                                                     value='https://metrobike.eu/tariffMap.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MAP,
+                                                        TypeOfInfoLinkEnumeration.MAP,
                                                     ]
                                                 ),
                                             ]

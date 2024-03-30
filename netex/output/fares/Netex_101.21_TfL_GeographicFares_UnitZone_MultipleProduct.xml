@@ -4948,7 +4948,7 @@ You can only get these as paper tickets, not on an Oyster card, and they must be
             <DistributionChannel id="tfl:Visitor_Centres" version="any">
               <Name>Visitor centres</Name>
               <PaymentMethods>debitCard creditCard companyCheque cash</PaymentMethods>
-              <DistributionGroupRef version="any" ref="nr:Visitor_Centres"/>
+              <DistributionGroupRef version="any" ref="tfl:Visitor_Centres"/>
             </DistributionChannel>
             <DistributionChannel id="tfl:OverseasAgents" version="any">
               <Name>Overseas Agents centres</Name>
@@ -4973,7 +4973,7 @@ You can't
 	Get an Oyster photocard for discount travel
 	Buy paper tickets (cash single tickets and Day Travelcards)</Description>
               <PaymentMethods>debitCard creditCard cash</PaymentMethods>
-              <DistributionGroupRef ref="nr:OysterTicketShops"/>
+              <DistributionGroupRef version="any" ref="nr:OysterTicketShops"/>
             </DistributionChannel>
             <DistributionChannel id="tfl:Oyster_Online" version="any">
               <Name>Oyster Online</Name>
@@ -15130,6 +15130,12 @@ For more information on National Rail services see the
               </members>
             </GeneralGroupOfEntities>
             <GeneralGroupOfEntities id="tfl:Registered_Educational_Establishments" version="any" nameOfMemberClass="OtherOrganisation">
+              <Name>List of registered universties</Name>
+              <members>
+                <OtherOrganisationRef ref="tfl:University_of_London"/>
+              </members>
+            </GeneralGroupOfEntities>
+            <GeneralGroupOfEntities id="nr:OysterTicketShops" version="any" nameOfMemberClass="OtherOrganisation">
               <Name>List of registered universties</Name>
               <members>
                 <OtherOrganisationRef ref="tfl:University_of_London"/>

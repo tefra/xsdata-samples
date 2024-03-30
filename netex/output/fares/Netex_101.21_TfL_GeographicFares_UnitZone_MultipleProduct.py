@@ -3408,7 +3408,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='nr:Chingford+Liverpool_Street',
                                         version='any',
@@ -3811,7 +3811,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='RB1',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
@@ -3829,7 +3829,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='RB2',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Thames_River_Services'
                                         )
@@ -3847,7 +3847,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='RB3',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
@@ -3860,7 +3860,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.WATER,
                                         public_code='RB4',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
@@ -3878,7 +3878,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='RB5',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
@@ -3896,7 +3896,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='RB6',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
@@ -3914,7 +3914,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='CrossRiver',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         )
@@ -3927,7 +3927,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.WATER,
                                         public_code='CrossRiver',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:London_Eye'
                                         )
@@ -3940,7 +3940,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.WATER,
                                         public_code='CrossRiver',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Crown_River_cruises'
                                         )
@@ -3958,7 +3958,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='City_Cruises',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:City_Cruises'
                                         )
@@ -3976,7 +3976,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='TRS',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Thames_River_Services'
                                         )
@@ -3994,7 +3994,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='WPSA',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:WPSA'
                                         )
@@ -4012,7 +4012,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         public_code='Turk',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Turk_Launches'
                                         )
@@ -11550,7 +11550,7 @@ obj = PublicationDelivery(
                                         ],
                                         distribution_points_or_distribution_group_ref=GeneralGroupOfEntitiesRefStructure(
                                             version='any',
-                                            ref='nr:Visitor_Centres'
+                                            ref='tfl:Visitor_Centres'
                                         )
                                     ),
                                     DistributionChannel(
@@ -11588,6 +11588,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CASH,
                                         ],
                                         distribution_points_or_distribution_group_ref=GeneralGroupOfEntitiesRefStructure(
+                                            version='any',
                                             ref='nr:OysterTicketShops'
                                         )
                                     ),
@@ -36226,6 +36227,21 @@ obj = PublicationDelivery(
                                     ),
                                     GeneralGroupOfEntities(
                                         id='tfl:Registered_Educational_Establishments',
+                                        version='any',
+                                        name=MultilingualString(
+                                            value='List of registered universties'
+                                        ),
+                                        members=ObjectRefsRelStructure(
+                                            choice=[
+                                                OtherOrganisationRef(
+                                                    ref='tfl:University_of_London'
+                                                ),
+                                            ]
+                                        ),
+                                        name_of_member_class='OtherOrganisation'
+                                    ),
+                                    GeneralGroupOfEntities(
+                                        id='nr:OysterTicketShops',
                                         version='any',
                                         name=MultilingualString(
                                             value='List of registered universties'

@@ -217,7 +217,7 @@ obj = PublicationDelivery(
                                             value='Line 24 Alpha to Charley'
                                         ),
                                         public_code='24',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        operator_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         )

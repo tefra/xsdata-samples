@@ -200,6 +200,7 @@ from netex.models.tariff_ref import TariffRef
 from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
 from netex.models.taxi_parking_area import TaxiParkingArea
 from netex.models.taxi_rank import TaxiRank
+from netex.models.taxi_ranks_in_frame_rel_structure import TaxiRanksInFrameRelStructure
 from netex.models.taxi_stand import TaxiStand
 from netex.models.taxi_stands_rel_structure import TaxiStandsRelStructure
 from netex.models.taxi_submode import TaxiSubmode
@@ -229,7 +230,7 @@ from netex.models.travel_specifications_rel_structure import TravelSpecification
 from netex.models.type_of_access_right_assignment_ref import TypeOfAccessRightAssignmentRef
 from netex.models.type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
 from netex.models.type_of_fare_structure_element_ref import TypeOfFareStructureElementRef
-from netex.models.type_of_infolink_enumeration import TypeOfInfolinkEnumeration
+from netex.models.type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 from netex.models.type_of_parking import TypeOfParking
 from netex.models.type_of_parking_ref import TypeOfParkingRef
 from netex.models.type_of_travel_document import TypeOfTravelDocument
@@ -1088,6 +1089,10 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
+                                ]
+                            ),
+                            taxi_ranks=TaxiRanksInFrameRelStructure(
+                                taxi_rank=[
                                     TaxiRank(
                                         id='alphaville_hdv_taxi',
                                         version='any',
@@ -1620,13 +1625,13 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://homeJames.eu/tariff.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                                 InfoLink(
                                                     value='https://homeJames.eu/tariffMap.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MAP,
+                                                        TypeOfInfoLinkEnumeration.MAP,
                                                     ]
                                                 ),
                                             ]
@@ -2245,13 +2250,13 @@ obj = PublicationDelivery(
                                                 InfoLink(
                                                     value='https://homeJames.eu/tariffBespoke.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.INFO,
+                                                        TypeOfInfoLinkEnumeration.INFO,
                                                     ]
                                                 ),
                                                 InfoLink(
                                                     value='https://homeJames.eu/tariffMap.pdf',
                                                     type_of_info_link=[
-                                                        TypeOfInfolinkEnumeration.MAP,
+                                                        TypeOfInfoLinkEnumeration.MAP,
                                                     ]
                                                 ),
                                             ]

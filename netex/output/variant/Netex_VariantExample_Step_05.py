@@ -128,7 +128,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             service_patterns=ServicePatternsInFrameRelStructure(
-                                service_pattern_or_journey_pattern_view=[
+                                service_pattern=[
                                     ServicePattern(
                                         id='mybus:ServicePattern:SP001',
                                         created=XmlDateTime(2010, 5, 21, 10, 30, 51, 0, 0),
