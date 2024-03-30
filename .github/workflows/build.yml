@@ -52,6 +52,7 @@ jobs:
       - name: Generate Code
         run: invoke ${{ matrix.collection.id }}.build
       - name: Run Tests
+        if: matrix.python != '3.13-dev' || matrix.collection.id != 'netex'
         run: invoke ${{ matrix.collection.id }}.test
       - name: Run mypy
         if: matrix.collection.skip_mypy != true
