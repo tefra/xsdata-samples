@@ -39,11 +39,14 @@ def build(
     c: Context,
     suite: Optional[str] = None,
     output_format: str = "dataclasses",
+    unnest_classes: bool = False,
     cache: bool = False,
     debug: bool = False,
 ):
     run = partial(c.run, pty=True, echo=True)
     build_cmd_args = f"--output {output_format}"
+    if unnest_classes:
+        build_cmd_args += " --unnest-classes"
     if cache:
         build_cmd_args += " --cache"
     if debug:
@@ -80,12 +83,15 @@ def all_tasks(
     c: Context,
     suite: Optional[str] = None,
     output_format: str = "dataclasses",
+    unnest_classes: bool = False,
     cache: bool = False,
     debug: bool = False,
 ):
     run = partial(c.run, pty=True, echo=True)
 
     build_cmd_args = f"--output {output_format}"
+    if unnest_classes:
+        build_cmd_args += " --unnest-classes"
     if cache:
         build_cmd_args += " --cache"
     if debug:
