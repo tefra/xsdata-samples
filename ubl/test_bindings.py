@@ -10,13 +10,15 @@ from ubl.models.maindoc import *  # noqa
 cases = []
 ids = []
 here = Path(__file__).parent
+samples = here.joinpath("samples")
+output = here.joinpath("output")
+
 schemas = here.joinpath("schemas/maindoc").resolve().glob("*")
 for sch in list(schemas):
     _, name, _ = sch.name.split("-")
-    for smp in here.joinpath("samples").glob(f"UBL-{name}-*.xml"):
-        if not smp.stem.endswith("xsdata"):
-            cases.append((str(sch), str(smp)))
-            ids.append(smp.name)
+    for smp in samples.glob(f"UBL-{name}-*.xml"):
+        cases.append((str(sch), str(smp.name)))
+        ids.append(smp.name)
 
 
 @functools.lru_cache(maxsize=5)
@@ -27,13 +29,13 @@ def get_validator(xsd: str):
 @pytest.mark.parametrize("schema,sample", cases, ids=ids)
 def test_serialize(schema, sample, xml_parser, xml_serializer, code_serializer):
     ns_map: Dict = {}
-    obj = xml_parser.parse(sample, ns_map=ns_map)
+
+    obj = xml_parser.from_path(samples.joinpath(sample), ns_map=ns_map)
     result = xml_serializer.render(obj, ns_map=ns_map)
     code = code_serializer.render(obj)
-    output = Path(sample)
 
-    output.with_suffix(".py").write_text(code)
-    expected = output.with_suffix(".xsdata.xml")
+    expected = output.joinpath(sample)
+    expected.with_suffix(".py").write_text(code)
     if expected.exists():
         assert expected.read_text() == result
     else:
