@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, List, Optional, Type, Union
+from typing import Any, ForwardRef, List, Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 
@@ -537,7 +537,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "ParkingPrice",
-                    "type": Type["ParkingPrice"],
+                    "type": ForwardRef("ParkingPrice"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -655,12 +655,12 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "FareTableInContext",
-                    "type": Type["FareTableInContext"],
+                    "type": ForwardRef("FareTableInContext"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "FareTable",
-                    "type": Type["FareTable"],
+                    "type": ForwardRef("FareTable"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -2642,7 +2642,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellInContext",
-                    "type": Type["CellsRelStructure.CellInContext"],
+                    "type": ForwardRef("CellsRelStructure.CellInContext"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum
 from .ref import Ref
@@ -54,23 +54,23 @@ class FmConditionByFeaturesAndSwSystemconsts:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "FmConditionByFeaturesAndSwSystemconsts.SyscStringRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "FmConditionByFeaturesAndSwSystemconsts.SyscRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "FEATURE-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "FmConditionByFeaturesAndSwSystemconsts.FeatureRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

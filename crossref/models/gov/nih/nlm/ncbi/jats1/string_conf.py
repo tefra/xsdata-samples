@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Abbrev,
@@ -230,7 +230,7 @@ class StringConf:
                 },
                 {
                     "name": "string-conf",
-                    "type": Type["StringConf"],
+                    "type": ForwardRef("StringConf"),
                 },
             ),
         },

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Type, Union
+from typing import ForwardRef, Optional, Union
 
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
@@ -96,12 +96,16 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "choices": (
                 {
                     "name": "FuelType",
-                    "type": Type["TransportTypeVersionStructure.FuelType"],
+                    "type": ForwardRef(
+                        "TransportTypeVersionStructure.FuelType"
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "TypeOfFuel",
-                    "type": Type["TransportTypeVersionStructure.TypeOfFuel"],
+                    "type": ForwardRef(
+                        "TransportTypeVersionStructure.TypeOfFuel"
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

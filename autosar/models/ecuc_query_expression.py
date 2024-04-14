@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .ecuc_definition_element_subtypes_enum import (
     EcucDefinitionElementSubtypesEnum,
@@ -57,16 +57,16 @@ class EcucQueryExpression:
             "choices": (
                 {
                     "name": "CONFIG-ELEMENT-DEF-GLOBAL-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "EcucQueryExpression.ConfigElementDefGlobalRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "CONFIG-ELEMENT-DEF-LOCAL-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "EcucQueryExpression.ConfigElementDefLocalRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

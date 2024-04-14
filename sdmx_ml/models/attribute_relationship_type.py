@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Type, Union
+from typing import ForwardRef, Tuple, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.optional_local_dimension_reference_type import (
@@ -31,7 +31,7 @@ class AttributeRelationshipType:
             "choices": (
                 {
                     "name": "Dataflow",
-                    "type": Type["AttributeRelationshipType.Dataflow"],
+                    "type": ForwardRef("AttributeRelationshipType.Dataflow"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
@@ -47,7 +47,9 @@ class AttributeRelationshipType:
                 },
                 {
                     "name": "Observation",
-                    "type": Type["AttributeRelationshipType.Observation"],
+                    "type": ForwardRef(
+                        "AttributeRelationshipType.Observation"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

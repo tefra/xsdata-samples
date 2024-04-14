@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Type
+from typing import ForwardRef, List
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.math import Math
 
@@ -20,57 +20,57 @@ class XrefFaces:
             "choices": (
                 {
                     "name": "b",
-                    "type": Type["B"],
+                    "type": ForwardRef("B"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "i",
-                    "type": Type["I"],
+                    "type": ForwardRef("I"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "em",
-                    "type": Type["Em"],
+                    "type": ForwardRef("Em"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "strong",
-                    "type": Type["Strong"],
+                    "type": ForwardRef("Strong"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "u",
-                    "type": Type["U"],
+                    "type": ForwardRef("U"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "ovl",
-                    "type": Type["Ovl"],
+                    "type": ForwardRef("Ovl"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "scp",
-                    "type": Type["Scp"],
+                    "type": ForwardRef("Scp"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "tt",
-                    "type": Type["Tt"],
+                    "type": ForwardRef("Tt"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {
                     "name": "font",
-                    "type": Type["Font"],
+                    "type": ForwardRef("Font"),
                     "namespace": "http://www.crossref.org/schema/5.3.1",
                 },
                 {

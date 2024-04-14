@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from .direct_position_type import DirectPositionType
 from .pos import Pos
@@ -18,12 +18,12 @@ class EnvelopeType:
             "choices": (
                 {
                     "name": "lowerCorner",
-                    "type": Type["EnvelopeType.LowerCorner"],
+                    "type": ForwardRef("EnvelopeType.LowerCorner"),
                     "namespace": "http://www.opengis.net/gml/3.2",
                 },
                 {
                     "name": "upperCorner",
-                    "type": Type["EnvelopeType.UpperCorner"],
+                    "type": ForwardRef("EnvelopeType.UpperCorner"),
                     "namespace": "http://www.opengis.net/gml/3.2",
                 },
                 {

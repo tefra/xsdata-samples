@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, List, Optional, Type, Union
+from typing import Any, ForwardRef, List, Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 
@@ -46,12 +46,12 @@ class EntityInVersionStructure(EntityStructure):
             "choices": (
                 {
                     "name": "validityConditions",
-                    "type": Type["ValidityConditionsRelStructure"],
+                    "type": ForwardRef("ValidityConditionsRelStructure"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "ValidBetween",
-                    "type": Type["ValidBetween"],
+                    "type": ForwardRef("ValidBetween"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -505,16 +505,16 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
                 },
                 {
                     "name": "AttributeValue",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ValidityRuleParameterVersionStructure.AttributeValue"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "Method",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ValidityRuleParameterVersionStructure.Method"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

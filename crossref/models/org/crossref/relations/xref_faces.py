@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Type
+from typing import ForwardRef, List
 
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
@@ -18,57 +18,57 @@ class XrefFaces:
             "choices": (
                 {
                     "name": "b",
-                    "type": Type["B"],
+                    "type": ForwardRef("B"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "i",
-                    "type": Type["I"],
+                    "type": ForwardRef("I"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "em",
-                    "type": Type["Em"],
+                    "type": ForwardRef("Em"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "strong",
-                    "type": Type["Strong"],
+                    "type": ForwardRef("Strong"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "u",
-                    "type": Type["U"],
+                    "type": ForwardRef("U"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "ovl",
-                    "type": Type["Ovl"],
+                    "type": ForwardRef("Ovl"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "scp",
-                    "type": Type["Scp"],
+                    "type": ForwardRef("Scp"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "tt",
-                    "type": Type["Tt"],
+                    "type": ForwardRef("Tt"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
                 {
                     "name": "font",
-                    "type": Type["Font"],
+                    "type": ForwardRef("Font"),
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
             ),

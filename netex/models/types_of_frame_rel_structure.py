@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from .class_ref_structure import ClassRefStructure
 from .classes_in_repository_rel_structure import (
@@ -35,7 +35,7 @@ class TypesOfFrameRelStructure(OneToManyRelationshipStructure):
                 },
                 {
                     "name": "TypeOfFrame",
-                    "type": Type["TypeOfFrame"],
+                    "type": ForwardRef("TypeOfFrame"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

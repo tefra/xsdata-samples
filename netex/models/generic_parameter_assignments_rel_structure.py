@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .logical_operation_enumeration import LogicalOperationEnumeration
@@ -26,12 +26,12 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "choices": (
                 {
                     "name": "GenericParameterAssignment",
-                    "type": Type["GenericParameterAssignment"],
+                    "type": ForwardRef("GenericParameterAssignment"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "GenericParameterAssignmentInContext",
-                    "type": Type["GenericParameterAssignmentInContext"],
+                    "type": ForwardRef("GenericParameterAssignmentInContext"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

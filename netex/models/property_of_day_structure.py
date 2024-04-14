@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from xsdata.models.datatype import XmlPeriod
 
@@ -65,17 +65,17 @@ class PropertyOfDayStructure:
             "choices": (
                 {
                     "name": "MonthOfYear",
-                    "type": Type["PropertyOfDayStructure.MonthOfYear"],
+                    "type": ForwardRef("PropertyOfDayStructure.MonthOfYear"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "DayOfMonth",
-                    "type": Type["PropertyOfDayStructure.DayOfMonth"],
+                    "type": ForwardRef("PropertyOfDayStructure.DayOfMonth"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "DayOfYear",
-                    "type": Type["PropertyOfDayStructure.DayOfYear"],
+                    "type": ForwardRef("PropertyOfDayStructure.DayOfYear"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

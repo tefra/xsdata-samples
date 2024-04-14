@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .interval_type_enum_simple import IntervalTypeEnumSimple
@@ -113,12 +113,12 @@ class Limit:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type["Limit.SyscStringRef"],
+                    "type": ForwardRef("Limit.SyscStringRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type["Limit.SyscRef"],
+                    "type": ForwardRef("Limit.SyscRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

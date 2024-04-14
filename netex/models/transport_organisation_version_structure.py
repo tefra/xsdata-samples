@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, List, Optional, Type, Union
+from typing import Any, ForwardRef, List, Optional, Union
 
 from .air_submode import AirSubmode
 from .all_modes_enumeration import AllModesEnumeration
@@ -69,9 +69,9 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
                 },
                 {
                     "name": "Address",
-                    "type": Type[
+                    "type": ForwardRef(
                         "TransportOrganisationVersionStructure.Address"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

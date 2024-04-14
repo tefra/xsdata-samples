@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from .administrative_zone_ref import AdministrativeZoneRef
 from .all_modes_enumeration import AllModesEnumeration
@@ -47,12 +47,12 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "TransportAdministrativeZone",
-                    "type": Type["TransportAdministrativeZone"],
+                    "type": ForwardRef("TransportAdministrativeZone"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "AdministrativeZone",
-                    "type": Type["AdministrativeZone"],
+                    "type": ForwardRef("AdministrativeZone"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

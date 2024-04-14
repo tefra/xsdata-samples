@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -3277,7 +3277,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "CompositeFrame",
-                    "type": Type["CompositeFrame"],
+                    "type": ForwardRef("CompositeFrame"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3332,7 +3332,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "GeneralFrame",
-                    "type": Type["GeneralFrame"],
+                    "type": ForwardRef("GeneralFrame"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -4418,7 +4418,7 @@ class FramesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "GeneralFrame",
-                    "type": Type["GeneralFrame"],
+                    "type": ForwardRef("GeneralFrame"),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

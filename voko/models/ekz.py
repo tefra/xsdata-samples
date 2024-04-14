@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from voko.models.baz import Baz
 from voko.models.ctl import Ctl
@@ -43,7 +43,7 @@ class Trdgrp:
             "choices": (
                 {
                     "name": "trd",
-                    "type": Type["Trd"],
+                    "type": ForwardRef("Trd"),
                 },
             ),
         },
@@ -78,23 +78,23 @@ class Ekz:
                 },
                 {
                     "name": "ref",
-                    "type": Type["Ref"],
+                    "type": ForwardRef("Ref"),
                 },
                 {
                     "name": "refgrp",
-                    "type": Type["Refgrp"],
+                    "type": ForwardRef("Refgrp"),
                 },
                 {
                     "name": "ind",
-                    "type": Type["Ind"],
+                    "type": ForwardRef("Ind"),
                 },
                 {
                     "name": "trd",
-                    "type": Type["Trd"],
+                    "type": ForwardRef("Trd"),
                 },
                 {
                     "name": "trdgrp",
-                    "type": Type["Trdgrp"],
+                    "type": ForwardRef("Trdgrp"),
                 },
                 {
                     "name": "tld",
@@ -106,7 +106,7 @@ class Ekz:
                 },
                 {
                     "name": "klr",
-                    "type": Type["Klr"],
+                    "type": ForwardRef("Klr"),
                 },
                 {
                     "name": "em",
@@ -195,7 +195,7 @@ class Ref:
                 },
                 {
                     "name": "klr",
-                    "type": Type["Klr"],
+                    "type": ForwardRef("Klr"),
                 },
                 {
                     "name": "sncref",
@@ -227,7 +227,7 @@ class Refgrp:
             "choices": (
                 {
                     "name": "ref",
-                    "type": Type["Ref"],
+                    "type": ForwardRef("Ref"),
                 },
             ),
         },
@@ -260,15 +260,15 @@ class Trd:
             "choices": (
                 {
                     "name": "klr",
-                    "type": Type["Klr"],
+                    "type": ForwardRef("Klr"),
                 },
                 {
                     "name": "ind",
-                    "type": Type["Ind"],
+                    "type": ForwardRef("Ind"),
                 },
                 {
                     "name": "mll",
-                    "type": Type["Mll"],
+                    "type": ForwardRef("Mll"),
                 },
                 {
                     "name": "ofc",
@@ -331,7 +331,7 @@ class Klr:
                 },
                 {
                     "name": "klr",
-                    "type": Type["Klr"],
+                    "type": ForwardRef("Klr"),
                 },
                 {
                     "name": "em",
@@ -400,7 +400,7 @@ class Ind:
                 },
                 {
                     "name": "mll",
-                    "type": Type["Mll"],
+                    "type": ForwardRef("Mll"),
                 },
             ),
         },

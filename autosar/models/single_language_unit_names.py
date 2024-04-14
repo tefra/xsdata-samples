@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .supscript import Supscript
 
@@ -51,12 +51,12 @@ class SingleLanguageUnitNames:
             "choices": (
                 {
                     "name": "SUP",
-                    "type": Type["SingleLanguageUnitNames.Sup"],
+                    "type": ForwardRef("SingleLanguageUnitNames.Sup"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Type["SingleLanguageUnitNames.Sub"],
+                    "type": ForwardRef("SingleLanguageUnitNames.Sub"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

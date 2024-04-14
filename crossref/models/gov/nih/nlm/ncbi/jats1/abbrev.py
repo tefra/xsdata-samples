@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.access_date import AccessDate
 from crossref.models.gov.nih.nlm.ncbi.jats1.alt_text import AltText
@@ -467,7 +467,7 @@ class Abbrev:
             "choices": (
                 {
                     "name": "def",
-                    "type": Type["Def"],
+                    "type": ForwardRef("Def"),
                 },
             ),
         },
@@ -1030,11 +1030,11 @@ class ConfSponsor:
             "choices": (
                 {
                     "name": "institution",
-                    "type": Type["Institution"],
+                    "type": ForwardRef("Institution"),
                 },
                 {
                     "name": "institution-wrap",
-                    "type": Type["InstitutionWrap"],
+                    "type": ForwardRef("InstitutionWrap"),
                 },
             ),
         },
@@ -1094,19 +1094,19 @@ class CopyrightHolder:
             "choices": (
                 {
                     "name": "institution",
-                    "type": Type["Institution"],
+                    "type": ForwardRef("Institution"),
                 },
                 {
                     "name": "institution-wrap",
-                    "type": Type["InstitutionWrap"],
+                    "type": ForwardRef("InstitutionWrap"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -1225,11 +1225,11 @@ class Edition:
             "choices": (
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -1520,11 +1520,11 @@ class Institution:
             "choices": (
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -1741,51 +1741,51 @@ class AddrLine:
             "choices": (
                 {
                     "name": "bold",
-                    "type": Type["Bold"],
+                    "type": ForwardRef("Bold"),
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
-                    "type": Type["Alternatives"],
+                    "type": ForwardRef("Alternatives"),
                 },
                 {
                     "name": "inline-graphic",
@@ -1793,7 +1793,7 @@ class AddrLine:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -1801,11 +1801,11 @@ class AddrLine:
                 },
                 {
                     "name": "chem-struct",
-                    "type": Type["ChemStruct"],
+                    "type": ForwardRef("ChemStruct"),
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "abbrev",
@@ -1813,7 +1813,7 @@ class AddrLine:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -1829,19 +1829,19 @@ class AddrLine:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
                 {
                     "name": "city",
@@ -1857,11 +1857,11 @@ class AddrLine:
                 },
                 {
                     "name": "institution",
-                    "type": Type["Institution"],
+                    "type": ForwardRef("Institution"),
                 },
                 {
                     "name": "institution-wrap",
-                    "type": Type["InstitutionWrap"],
+                    "type": ForwardRef("InstitutionWrap"),
                 },
                 {
                     "name": "phone",
@@ -1937,7 +1937,7 @@ class AltTitle:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -1945,63 +1945,63 @@ class AltTitle:
                 },
                 {
                     "name": "inline-supplementary-material",
-                    "type": Type["InlineSupplementaryMaterial"],
+                    "type": ForwardRef("InlineSupplementaryMaterial"),
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
-                    "type": Type["Bold"],
+                    "type": ForwardRef("Bold"),
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
-                    "type": Type["Alternatives"],
+                    "type": ForwardRef("Alternatives"),
                 },
                 {
                     "name": "inline-graphic",
@@ -2009,7 +2009,7 @@ class AltTitle:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -2017,11 +2017,11 @@ class AltTitle:
                 },
                 {
                     "name": "chem-struct",
-                    "type": Type["ChemStruct"],
+                    "type": ForwardRef("ChemStruct"),
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -2038,7 +2038,7 @@ class AltTitle:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -2054,31 +2054,31 @@ class AltTitle:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
                 {
                     "name": "break",
@@ -2253,7 +2253,7 @@ class ArticleTitle:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -2261,59 +2261,59 @@ class ArticleTitle:
                 },
                 {
                     "name": "inline-supplementary-material",
-                    "type": Type["InlineSupplementaryMaterial"],
+                    "type": ForwardRef("InlineSupplementaryMaterial"),
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
-                    "type": Type["Bold"],
+                    "type": ForwardRef("Bold"),
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -2325,7 +2325,7 @@ class ArticleTitle:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -2333,11 +2333,11 @@ class ArticleTitle:
                 },
                 {
                     "name": "chem-struct",
-                    "type": Type["ChemStruct"],
+                    "type": ForwardRef("ChemStruct"),
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -2354,7 +2354,7 @@ class ArticleTitle:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -2370,31 +2370,31 @@ class ArticleTitle:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
                 {
                     "name": "break",
@@ -2455,7 +2455,7 @@ class Attrib:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -2463,59 +2463,59 @@ class Attrib:
                 },
                 {
                     "name": "inline-supplementary-material",
-                    "type": Type["InlineSupplementaryMaterial"],
+                    "type": ForwardRef("InlineSupplementaryMaterial"),
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
-                    "type": Type["Bold"],
+                    "type": ForwardRef("Bold"),
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -2527,7 +2527,7 @@ class Attrib:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -2535,11 +2535,11 @@ class Attrib:
                 },
                 {
                     "name": "chem-struct",
-                    "type": Type["ChemStruct"],
+                    "type": ForwardRef("ChemStruct"),
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -2556,7 +2556,7 @@ class Attrib:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -2572,31 +2572,31 @@ class Attrib:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -2728,47 +2728,47 @@ class AwardId:
             "choices": (
                 {
                     "name": "bold",
-                    "type": Type["Bold"],
+                    "type": ForwardRef("Bold"),
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -2780,7 +2780,7 @@ class AwardId:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -2788,11 +2788,11 @@ class AwardId:
                 },
                 {
                     "name": "chem-struct",
-                    "type": Type["ChemStruct"],
+                    "type": ForwardRef("ChemStruct"),
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "abbrev",
@@ -2800,7 +2800,7 @@ class AwardId:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -2816,19 +2816,19 @@ class AwardId:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -2884,7 +2884,7 @@ class Bold:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -2892,59 +2892,59 @@ class Bold:
                 },
                 {
                     "name": "inline-supplementary-material",
-                    "type": Type["InlineSupplementaryMaterial"],
+                    "type": ForwardRef("InlineSupplementaryMaterial"),
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
-                    "type": Type["Bold"],
+                    "type": ForwardRef("Bold"),
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -2956,7 +2956,7 @@ class Bold:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -2964,11 +2964,11 @@ class Bold:
                 },
                 {
                     "name": "chem-struct",
-                    "type": Type["ChemStruct"],
+                    "type": ForwardRef("ChemStruct"),
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -2985,7 +2985,7 @@ class Bold:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -3001,31 +3001,31 @@ class Bold:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -3265,11 +3265,11 @@ class Speaker:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
             ),
         },
@@ -3474,11 +3474,11 @@ class Aff:
                 },
                 {
                     "name": "institution",
-                    "type": Type["Institution"],
+                    "type": ForwardRef("Institution"),
                 },
                 {
                     "name": "institution-wrap",
-                    "type": Type["InstitutionWrap"],
+                    "type": ForwardRef("InstitutionWrap"),
                 },
                 {
                     "name": "phone",
@@ -3498,7 +3498,7 @@ class Aff:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -3506,15 +3506,15 @@ class Aff:
                 },
                 {
                     "name": "inline-supplementary-material",
-                    "type": Type["InlineSupplementaryMaterial"],
+                    "type": ForwardRef("InlineSupplementaryMaterial"),
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "break",
@@ -3522,71 +3522,71 @@ class Aff:
                 },
                 {
                     "name": "bold",
-                    "type": Type["Bold"],
+                    "type": ForwardRef("Bold"),
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "label",
-                    "type": Type["Label"],
+                    "type": ForwardRef("Label"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -3647,7 +3647,7 @@ class ChapterTitle:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -3659,43 +3659,43 @@ class ChapterTitle:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -3707,7 +3707,7 @@ class ChapterTitle:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -3715,11 +3715,11 @@ class ChapterTitle:
                 },
                 {
                     "name": "chem-struct",
-                    "type": Type["ChemStruct"],
+                    "type": ForwardRef("ChemStruct"),
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -3732,31 +3732,31 @@ class ChapterTitle:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -3879,7 +3879,7 @@ class ChemStruct:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -3895,55 +3895,55 @@ class ChemStruct:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "label",
-                    "type": Type["Label"],
+                    "type": ForwardRef("Label"),
                 },
                 {
                     "name": "def-list",
-                    "type": Type["DefList"],
+                    "type": ForwardRef("DefList"),
                 },
                 {
                     "name": "list",
-                    "type": Type["ListType"],
+                    "type": ForwardRef("ListType"),
                 },
                 {
                     "name": "tex-math",
@@ -3956,11 +3956,11 @@ class ChemStruct:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "alternatives",
@@ -3972,39 +3972,39 @@ class ChemStruct:
                 },
                 {
                     "name": "code",
-                    "type": Type["Code"],
+                    "type": ForwardRef("Code"),
                 },
                 {
                     "name": "graphic",
-                    "type": Type["Graphic"],
+                    "type": ForwardRef("Graphic"),
                 },
                 {
                     "name": "media",
-                    "type": Type["Media"],
+                    "type": ForwardRef("Media"),
                 },
                 {
                     "name": "preformat",
-                    "type": Type["Preformat"],
+                    "type": ForwardRef("Preformat"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -4120,7 +4120,7 @@ class Code:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -4132,43 +4132,43 @@ class Code:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "inline-graphic",
@@ -4176,7 +4176,7 @@ class Code:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -4188,7 +4188,7 @@ class Code:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -4204,31 +4204,31 @@ class Code:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -4304,11 +4304,11 @@ class ConfLoc:
                 },
                 {
                     "name": "institution",
-                    "type": Type["Institution"],
+                    "type": ForwardRef("Institution"),
                 },
                 {
                     "name": "institution-wrap",
-                    "type": Type["InstitutionWrap"],
+                    "type": ForwardRef("InstitutionWrap"),
                 },
                 {
                     "name": "phone",
@@ -4384,7 +4384,7 @@ class CopyrightStatement:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -4396,59 +4396,59 @@ class CopyrightStatement:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -4512,7 +4512,7 @@ class DataTitle:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -4524,7 +4524,7 @@ class DataTitle:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -4536,59 +4536,59 @@ class DataTitle:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -4710,59 +4710,59 @@ class ExtLink:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -5437,7 +5437,7 @@ class Comment:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -5445,15 +5445,15 @@ class Comment:
                 },
                 {
                     "name": "inline-supplementary-material",
-                    "type": Type["InlineSupplementaryMaterial"],
+                    "type": ForwardRef("InlineSupplementaryMaterial"),
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
@@ -5461,43 +5461,43 @@ class Comment:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -5509,7 +5509,7 @@ class Comment:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -5521,7 +5521,7 @@ class Comment:
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -5538,7 +5538,7 @@ class Comment:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -5554,31 +5554,31 @@ class Comment:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -5621,7 +5621,7 @@ class DefHead:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -5629,15 +5629,15 @@ class DefHead:
                 },
                 {
                     "name": "inline-supplementary-material",
-                    "type": Type["InlineSupplementaryMaterial"],
+                    "type": ForwardRef("InlineSupplementaryMaterial"),
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
@@ -5645,43 +5645,43 @@ class DefHead:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -5693,7 +5693,7 @@ class DefHead:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -5705,7 +5705,7 @@ class DefHead:
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -5722,7 +5722,7 @@ class DefHead:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -5738,31 +5738,31 @@ class DefHead:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -5838,7 +5838,7 @@ class DispFormula:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "uri",
@@ -5858,43 +5858,43 @@ class DispFormula:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "object-id",
@@ -5906,7 +5906,7 @@ class DispFormula:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -5918,27 +5918,27 @@ class DispFormula:
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "kwd-group",
-                    "type": Type["KwdGroup"],
+                    "type": ForwardRef("KwdGroup"),
                 },
                 {
                     "name": "subj-group",
-                    "type": Type["SubjGroup"],
+                    "type": ForwardRef("SubjGroup"),
                 },
                 {
                     "name": "label",
-                    "type": Type["Label"],
+                    "type": ForwardRef("Label"),
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "tex-math",
@@ -5963,23 +5963,23 @@ class DispFormula:
                 },
                 {
                     "name": "graphic",
-                    "type": Type["Graphic"],
+                    "type": ForwardRef("Graphic"),
                 },
                 {
                     "name": "media",
-                    "type": Type["Media"],
+                    "type": ForwardRef("Media"),
                 },
                 {
                     "name": "preformat",
-                    "type": Type["Preformat"],
+                    "type": ForwardRef("Preformat"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -6044,15 +6044,15 @@ class FixedCase:
                 },
                 {
                     "name": "inline-supplementary-material",
-                    "type": Type["InlineSupplementaryMaterial"],
+                    "type": ForwardRef("InlineSupplementaryMaterial"),
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
@@ -6060,43 +6060,43 @@ class FixedCase:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -6108,7 +6108,7 @@ class FixedCase:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -6120,7 +6120,7 @@ class FixedCase:
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -6137,7 +6137,7 @@ class FixedCase:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -6153,31 +6153,31 @@ class FixedCase:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -7013,39 +7013,39 @@ class FundingSource:
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -7057,7 +7057,7 @@ class FundingSource:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -7069,7 +7069,7 @@ class FundingSource:
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "abbrev",
@@ -7077,7 +7077,7 @@ class FundingSource:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -7093,27 +7093,27 @@ class FundingSource:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
                 {
                     "name": "institution",
-                    "type": Type["Institution"],
+                    "type": ForwardRef("Institution"),
                 },
                 {
                     "name": "institution-wrap",
-                    "type": Type["InstitutionWrap"],
+                    "type": ForwardRef("InstitutionWrap"),
                 },
             ),
         },
@@ -7181,55 +7181,55 @@ class Gov:
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
             ),
         },
@@ -7305,39 +7305,39 @@ class InlineFormula:
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -7349,7 +7349,7 @@ class InlineFormula:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -7361,7 +7361,7 @@ class InlineFormula:
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "tex-math",
@@ -7374,19 +7374,19 @@ class InlineFormula:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -7566,55 +7566,55 @@ class InlineMedia:
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -7766,55 +7766,55 @@ class InlineSupplementaryMaterial:
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -8602,11 +8602,11 @@ class Italic:
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
@@ -8618,39 +8618,39 @@ class Italic:
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -8707,11 +8707,11 @@ class Italic:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -8719,19 +8719,19 @@ class Italic:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -8852,43 +8852,43 @@ class Collab:
                 },
                 {
                     "name": "fixed-case",
-                    "type": Type["FixedCase"],
+                    "type": ForwardRef("FixedCase"),
                 },
                 {
                     "name": "italic",
-                    "type": Type["Italic"],
+                    "type": ForwardRef("Italic"),
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -8900,7 +8900,7 @@ class Collab:
                 },
                 {
                     "name": "inline-media",
-                    "type": Type["InlineMedia"],
+                    "type": ForwardRef("InlineMedia"),
                 },
                 {
                     "name": "private-char",
@@ -8912,7 +8912,7 @@ class Collab:
                 },
                 {
                     "name": "inline-formula",
-                    "type": Type["InlineFormula"],
+                    "type": ForwardRef("InlineFormula"),
                 },
                 {
                     "name": "abbrev",
@@ -8920,7 +8920,7 @@ class Collab:
                 },
                 {
                     "name": "index-term",
-                    "type": Type["IndexTerm"],
+                    "type": ForwardRef("IndexTerm"),
                 },
                 {
                     "name": "index-term-range-end",
@@ -8936,19 +8936,19 @@ class Collab:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
                 {
                     "name": "addr-line",
@@ -8968,11 +8968,11 @@ class Collab:
                 },
                 {
                     "name": "institution",
-                    "type": Type["Institution"],
+                    "type": ForwardRef("Institution"),
                 },
                 {
                     "name": "institution-wrap",
-                    "type": Type["InstitutionWrap"],
+                    "type": ForwardRef("InstitutionWrap"),
                 },
                 {
                     "name": "phone",
@@ -8988,7 +8988,7 @@ class Collab:
                 },
                 {
                     "name": "contrib-group",
-                    "type": Type["ContribGroup"],
+                    "type": ForwardRef("ContribGroup"),
                 },
                 {
                     "name": "address",
@@ -9016,15 +9016,15 @@ class Collab:
                 },
                 {
                     "name": "ext-link",
-                    "type": Type["ExtLink"],
+                    "type": ForwardRef("ExtLink"),
                 },
                 {
                     "name": "on-behalf-of",
-                    "type": Type["OnBehalfOf"],
+                    "type": ForwardRef("OnBehalfOf"),
                 },
                 {
                     "name": "role",
-                    "type": Type["Role"],
+                    "type": ForwardRef("Role"),
                 },
                 {
                     "name": "uri",
@@ -9032,11 +9032,11 @@ class Collab:
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "fn",
-                    "type": Type["Fn"],
+                    "type": ForwardRef("Fn"),
                 },
             ),
         },
@@ -9422,51 +9422,51 @@ class Kwd:
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -9530,35 +9530,35 @@ class Label:
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -9586,11 +9586,11 @@ class Label:
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -9658,11 +9658,11 @@ class Monospace:
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
@@ -9678,35 +9678,35 @@ class Monospace:
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -9763,11 +9763,11 @@ class Monospace:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -9775,19 +9775,19 @@ class Monospace:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -12282,35 +12282,35 @@ class MixedCitation:
                 },
                 {
                     "name": "monospace",
-                    "type": Type["Monospace"],
+                    "type": ForwardRef("Monospace"),
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -12362,11 +12362,11 @@ class MixedCitation:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "annotation",
@@ -12518,7 +12518,7 @@ class MixedCitation:
                 },
                 {
                     "name": "part-title",
-                    "type": Type["PartTitle"],
+                    "type": ForwardRef("PartTitle"),
                 },
                 {
                     "name": "patent",
@@ -12526,7 +12526,7 @@ class MixedCitation:
                 },
                 {
                     "name": "person-group",
-                    "type": Type["PersonGroup"],
+                    "type": ForwardRef("PersonGroup"),
                 },
                 {
                     "name": "pub-id",
@@ -12542,7 +12542,7 @@ class MixedCitation:
                 },
                 {
                     "name": "role",
-                    "type": Type["Role"],
+                    "type": ForwardRef("Role"),
                 },
                 {
                     "name": "season",
@@ -12550,7 +12550,7 @@ class MixedCitation:
                 },
                 {
                     "name": "series",
-                    "type": Type["Series"],
+                    "type": ForwardRef("Series"),
                 },
                 {
                     "name": "size",
@@ -12558,11 +12558,11 @@ class MixedCitation:
                 },
                 {
                     "name": "source",
-                    "type": Type["Source"],
+                    "type": ForwardRef("Source"),
                 },
                 {
                     "name": "std",
-                    "type": Type["Std"],
+                    "type": ForwardRef("Std"),
                 },
                 {
                     "name": "string-date",
@@ -12574,15 +12574,15 @@ class MixedCitation:
                 },
                 {
                     "name": "supplement",
-                    "type": Type["Supplement"],
+                    "type": ForwardRef("Supplement"),
                 },
                 {
                     "name": "trans-source",
-                    "type": Type["TransSource"],
+                    "type": ForwardRef("TransSource"),
                 },
                 {
                     "name": "trans-title",
-                    "type": Type["TransTitle"],
+                    "type": ForwardRef("TransTitle"),
                 },
                 {
                     "name": "uri",
@@ -12590,7 +12590,7 @@ class MixedCitation:
                 },
                 {
                     "name": "version",
-                    "type": Type["Version"],
+                    "type": ForwardRef("Version"),
                 },
                 {
                     "name": "volume",
@@ -12610,11 +12610,11 @@ class MixedCitation:
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -12717,7 +12717,7 @@ class PersonGroup:
                 },
                 {
                     "name": "role",
-                    "type": Type["Role"],
+                    "type": ForwardRef("Role"),
                 },
             ),
         },
@@ -13595,11 +13595,11 @@ class NamedContent:
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "address",
@@ -13659,31 +13659,31 @@ class NamedContent:
                 },
                 {
                     "name": "preformat",
-                    "type": Type["Preformat"],
+                    "type": ForwardRef("Preformat"),
                 },
                 {
                     "name": "question",
-                    "type": Type["Question"],
+                    "type": ForwardRef("Question"),
                 },
                 {
                     "name": "question-wrap",
-                    "type": Type["QuestionWrap"],
+                    "type": ForwardRef("QuestionWrap"),
                 },
                 {
                     "name": "question-wrap-group",
-                    "type": Type["QuestionWrapGroup"],
+                    "type": ForwardRef("QuestionWrapGroup"),
                 },
                 {
                     "name": "supplementary-material",
-                    "type": Type["SupplementaryMaterial"],
+                    "type": ForwardRef("SupplementaryMaterial"),
                 },
                 {
                     "name": "table-wrap",
-                    "type": Type["TableWrap"],
+                    "type": ForwardRef("TableWrap"),
                 },
                 {
                     "name": "table-wrap-group",
-                    "type": Type["TableWrapGroup"],
+                    "type": ForwardRef("TableWrapGroup"),
                 },
                 {
                     "name": "disp-formula",
@@ -13711,31 +13711,31 @@ class NamedContent:
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "inline-graphic",
@@ -13796,11 +13796,11 @@ class NamedContent:
                 },
                 {
                     "name": "named-content",
-                    "type": Type["NamedContent"],
+                    "type": ForwardRef("NamedContent"),
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -13808,19 +13808,19 @@ class NamedContent:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
                 {
                     "name": "disp-quote",
@@ -13828,15 +13828,15 @@ class NamedContent:
                 },
                 {
                     "name": "speech",
-                    "type": Type["Speech"],
+                    "type": ForwardRef("Speech"),
                 },
                 {
                     "name": "statement",
-                    "type": Type["Statement"],
+                    "type": ForwardRef("Statement"),
                 },
                 {
                     "name": "verse-group",
-                    "type": Type["VerseGroup"],
+                    "type": ForwardRef("VerseGroup"),
                 },
             ),
         },
@@ -14238,11 +14238,11 @@ class Overline:
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "bold",
@@ -14262,31 +14262,31 @@ class Overline:
                 },
                 {
                     "name": "overline",
-                    "type": Type["Overline"],
+                    "type": ForwardRef("Overline"),
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -14347,7 +14347,7 @@ class Overline:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -14355,19 +14355,19 @@ class Overline:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -14443,11 +14443,11 @@ class P:
                 },
                 {
                     "name": "related-article",
-                    "type": Type["RelatedArticle"],
+                    "type": ForwardRef("RelatedArticle"),
                 },
                 {
                     "name": "related-object",
-                    "type": Type["RelatedObject"],
+                    "type": ForwardRef("RelatedObject"),
                 },
                 {
                     "name": "address",
@@ -14507,31 +14507,31 @@ class P:
                 },
                 {
                     "name": "preformat",
-                    "type": Type["Preformat"],
+                    "type": ForwardRef("Preformat"),
                 },
                 {
                     "name": "question",
-                    "type": Type["Question"],
+                    "type": ForwardRef("Question"),
                 },
                 {
                     "name": "question-wrap",
-                    "type": Type["QuestionWrap"],
+                    "type": ForwardRef("QuestionWrap"),
                 },
                 {
                     "name": "question-wrap-group",
-                    "type": Type["QuestionWrapGroup"],
+                    "type": ForwardRef("QuestionWrapGroup"),
                 },
                 {
                     "name": "supplementary-material",
-                    "type": Type["SupplementaryMaterial"],
+                    "type": ForwardRef("SupplementaryMaterial"),
                 },
                 {
                     "name": "table-wrap",
-                    "type": Type["TableWrap"],
+                    "type": ForwardRef("TableWrap"),
                 },
                 {
                     "name": "table-wrap-group",
-                    "type": Type["TableWrapGroup"],
+                    "type": ForwardRef("TableWrapGroup"),
                 },
                 {
                     "name": "disp-formula",
@@ -14579,27 +14579,27 @@ class P:
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "award-id",
@@ -14676,7 +14676,7 @@ class P:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "disp-quote",
@@ -14684,15 +14684,15 @@ class P:
                 },
                 {
                     "name": "speech",
-                    "type": Type["Speech"],
+                    "type": ForwardRef("Speech"),
                 },
                 {
                     "name": "statement",
-                    "type": Type["Statement"],
+                    "type": ForwardRef("Statement"),
                 },
                 {
                     "name": "verse-group",
-                    "type": Type["VerseGroup"],
+                    "type": ForwardRef("VerseGroup"),
                 },
                 {
                     "name": "fn",
@@ -14700,19 +14700,19 @@ class P:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -14801,27 +14801,27 @@ class PartTitle:
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "alternatives",
@@ -14862,7 +14862,7 @@ class PartTitle:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -14870,19 +14870,19 @@ class PartTitle:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -15010,27 +15010,27 @@ class Preformat:
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
-                    "type": Type["Ruby"],
+                    "type": ForwardRef("Ruby"),
                 },
                 {
                     "name": "abbrev",
@@ -15058,15 +15058,15 @@ class Preformat:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -15146,23 +15146,23 @@ class Rb:
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
             ),
         },
@@ -15995,23 +15995,23 @@ class RelatedArticle:
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -16027,7 +16027,7 @@ class RelatedArticle:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "annotation",
@@ -16203,7 +16203,7 @@ class RelatedArticle:
                 },
                 {
                     "name": "role",
-                    "type": Type["Role"],
+                    "type": ForwardRef("Role"),
                 },
                 {
                     "name": "season",
@@ -16211,7 +16211,7 @@ class RelatedArticle:
                 },
                 {
                     "name": "series",
-                    "type": Type["Series"],
+                    "type": ForwardRef("Series"),
                 },
                 {
                     "name": "size",
@@ -16219,11 +16219,11 @@ class RelatedArticle:
                 },
                 {
                     "name": "source",
-                    "type": Type["Source"],
+                    "type": ForwardRef("Source"),
                 },
                 {
                     "name": "std",
-                    "type": Type["Std"],
+                    "type": ForwardRef("Std"),
                 },
                 {
                     "name": "string-date",
@@ -16235,15 +16235,15 @@ class RelatedArticle:
                 },
                 {
                     "name": "supplement",
-                    "type": Type["Supplement"],
+                    "type": ForwardRef("Supplement"),
                 },
                 {
                     "name": "trans-source",
-                    "type": Type["TransSource"],
+                    "type": ForwardRef("TransSource"),
                 },
                 {
                     "name": "trans-title",
-                    "type": Type["TransTitle"],
+                    "type": ForwardRef("TransTitle"),
                 },
                 {
                     "name": "uri",
@@ -16251,7 +16251,7 @@ class RelatedArticle:
                 },
                 {
                     "name": "version",
-                    "type": Type["Version"],
+                    "type": ForwardRef("Version"),
                 },
                 {
                     "name": "volume",
@@ -16271,11 +16271,11 @@ class RelatedArticle:
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -16483,23 +16483,23 @@ class RelatedObject:
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -16511,7 +16511,7 @@ class RelatedObject:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "annotation",
@@ -16687,7 +16687,7 @@ class RelatedObject:
                 },
                 {
                     "name": "role",
-                    "type": Type["Role"],
+                    "type": ForwardRef("Role"),
                 },
                 {
                     "name": "season",
@@ -16695,7 +16695,7 @@ class RelatedObject:
                 },
                 {
                     "name": "series",
-                    "type": Type["Series"],
+                    "type": ForwardRef("Series"),
                 },
                 {
                     "name": "size",
@@ -16703,11 +16703,11 @@ class RelatedObject:
                 },
                 {
                     "name": "source",
-                    "type": Type["Source"],
+                    "type": ForwardRef("Source"),
                 },
                 {
                     "name": "std",
-                    "type": Type["Std"],
+                    "type": ForwardRef("Std"),
                 },
                 {
                     "name": "string-date",
@@ -16719,15 +16719,15 @@ class RelatedObject:
                 },
                 {
                     "name": "supplement",
-                    "type": Type["Supplement"],
+                    "type": ForwardRef("Supplement"),
                 },
                 {
                     "name": "trans-source",
-                    "type": Type["TransSource"],
+                    "type": ForwardRef("TransSource"),
                 },
                 {
                     "name": "trans-title",
-                    "type": Type["TransTitle"],
+                    "type": ForwardRef("TransTitle"),
                 },
                 {
                     "name": "uri",
@@ -16735,7 +16735,7 @@ class RelatedObject:
                 },
                 {
                     "name": "version",
-                    "type": Type["Version"],
+                    "type": ForwardRef("Version"),
                 },
                 {
                     "name": "volume",
@@ -16755,11 +16755,11 @@ class RelatedObject:
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -17163,23 +17163,23 @@ class Roman:
                 },
                 {
                     "name": "roman",
-                    "type": Type["Roman"],
+                    "type": ForwardRef("Roman"),
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -17244,7 +17244,7 @@ class Roman:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -17252,19 +17252,19 @@ class Roman:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -17463,19 +17463,19 @@ class SansSerif:
                 },
                 {
                     "name": "sans-serif",
-                    "type": Type["SansSerif"],
+                    "type": ForwardRef("SansSerif"),
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -17540,7 +17540,7 @@ class SansSerif:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -17548,19 +17548,19 @@ class SansSerif:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -17664,15 +17664,15 @@ class Sc:
                 },
                 {
                     "name": "sc",
-                    "type": Type["Sc"],
+                    "type": ForwardRef("Sc"),
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -17737,7 +17737,7 @@ class Sc:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -17745,19 +17745,19 @@ class Sc:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -17865,11 +17865,11 @@ class Strike:
                 },
                 {
                     "name": "strike",
-                    "type": Type["Strike"],
+                    "type": ForwardRef("Strike"),
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -17934,7 +17934,7 @@ class Strike:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -17942,19 +17942,19 @@ class Strike:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -18135,15 +18135,15 @@ class StyledContent:
                 },
                 {
                     "name": "supplementary-material",
-                    "type": Type["SupplementaryMaterial"],
+                    "type": ForwardRef("SupplementaryMaterial"),
                 },
                 {
                     "name": "table-wrap",
-                    "type": Type["TableWrap"],
+                    "type": ForwardRef("TableWrap"),
                 },
                 {
                     "name": "table-wrap-group",
-                    "type": Type["TableWrapGroup"],
+                    "type": ForwardRef("TableWrapGroup"),
                 },
                 {
                     "name": "disp-formula",
@@ -18191,7 +18191,7 @@ class StyledContent:
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -18260,7 +18260,7 @@ class StyledContent:
                 },
                 {
                     "name": "styled-content",
-                    "type": Type["StyledContent"],
+                    "type": ForwardRef("StyledContent"),
                 },
                 {
                     "name": "fn",
@@ -18268,19 +18268,19 @@ class StyledContent:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
                 {
                     "name": "disp-quote",
@@ -18296,7 +18296,7 @@ class StyledContent:
                 },
                 {
                     "name": "verse-group",
-                    "type": Type["VerseGroup"],
+                    "type": ForwardRef("VerseGroup"),
                 },
             ),
         },
@@ -18408,7 +18408,7 @@ class Sub:
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -18481,19 +18481,19 @@ class Sub:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
-                    "type": Type["Sub"],
+                    "type": ForwardRef("Sub"),
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -18605,7 +18605,7 @@ class Sup:
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -18678,11 +18678,11 @@ class Sup:
                 },
                 {
                     "name": "target",
-                    "type": Type["Target"],
+                    "type": ForwardRef("Target"),
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",
@@ -18690,7 +18690,7 @@ class Sup:
                 },
                 {
                     "name": "sup",
-                    "type": Type["Sup"],
+                    "type": ForwardRef("Sup"),
                 },
             ),
         },
@@ -18859,7 +18859,7 @@ class Target:
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -19068,7 +19068,7 @@ class Underline:
                 },
                 {
                     "name": "underline",
-                    "type": Type["Underline"],
+                    "type": ForwardRef("Underline"),
                 },
                 {
                     "name": "ruby",
@@ -19145,7 +19145,7 @@ class Underline:
                 },
                 {
                     "name": "xref",
-                    "type": Type["Xref"],
+                    "type": ForwardRef("Xref"),
                 },
                 {
                     "name": "sub",

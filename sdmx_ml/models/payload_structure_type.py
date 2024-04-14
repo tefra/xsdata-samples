@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Type, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.obs_dimensions_code_type import ObsDimensionsCodeType
 
@@ -60,17 +60,19 @@ class PayloadStructureType:
             "choices": (
                 {
                     "name": "ProvisionAgreement",
-                    "type": Type["PayloadStructureType.ProvisionAgreement"],
+                    "type": ForwardRef(
+                        "PayloadStructureType.ProvisionAgreement"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
                 },
                 {
                     "name": "StructureUsage",
-                    "type": Type["PayloadStructureType.StructureUsage"],
+                    "type": ForwardRef("PayloadStructureType.StructureUsage"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
                 },
                 {
                     "name": "Structure",
-                    "type": Type["PayloadStructureType.Structure"],
+                    "type": ForwardRef("PayloadStructureType.Structure"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
                 },
             ),

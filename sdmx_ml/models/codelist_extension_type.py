@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Type, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.code_selection_type import CodeSelectionType
 
@@ -45,16 +45,16 @@ class CodelistExtensionType:
             "choices": (
                 {
                     "name": "InclusiveCodeSelection",
-                    "type": Type[
+                    "type": ForwardRef(
                         "CodelistExtensionType.InclusiveCodeSelection"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "ExclusiveCodeSelection",
-                    "type": Type[
+                    "type": ForwardRef(
                         "CodelistExtensionType.ExclusiveCodeSelection"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

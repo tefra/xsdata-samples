@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .ref import Ref
@@ -119,16 +119,16 @@ class DiagnosticWwhObdDtcClassEnumValueVariationPoint:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "DiagnosticWwhObdDtcClassEnumValueVariationPoint.SyscStringRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "DiagnosticWwhObdDtcClassEnumValueVariationPoint.SyscRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

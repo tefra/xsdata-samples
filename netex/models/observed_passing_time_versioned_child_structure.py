@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -35,30 +35,30 @@ class ObservedPassingTimeVersionedChildStructure(
             "choices": (
                 {
                     "name": "ActualArrivalTime",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ObservedPassingTimeVersionedChildStructure.ActualArrivalTime"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "ArrivalDayOffset",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ObservedPassingTimeVersionedChildStructure.ArrivalDayOffset"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "ActualDepartureTime",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ObservedPassingTimeVersionedChildStructure.ActualDepartureTime"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "DepartureDayOffset",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ObservedPassingTimeVersionedChildStructure.DepartureDayOffset"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -68,16 +68,16 @@ class ObservedPassingTimeVersionedChildStructure(
                 },
                 {
                     "name": "ActualNonstopPassingTime",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ObservedPassingTimeVersionedChildStructure.ActualNonstopPassingTime"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "PassingTimeDayOffset",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ObservedPassingTimeVersionedChildStructure.PassingTimeDayOffset"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

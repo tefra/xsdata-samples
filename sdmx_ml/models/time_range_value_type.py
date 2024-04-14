@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -32,22 +32,22 @@ class TimeRangeValueType:
             "choices": (
                 {
                     "name": "BeforePeriod",
-                    "type": Type["TimeRangeValueType.BeforePeriod"],
+                    "type": ForwardRef("TimeRangeValueType.BeforePeriod"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "AfterPeriod",
-                    "type": Type["TimeRangeValueType.AfterPeriod"],
+                    "type": ForwardRef("TimeRangeValueType.AfterPeriod"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "StartPeriod",
-                    "type": Type["TimeRangeValueType.StartPeriod"],
+                    "type": ForwardRef("TimeRangeValueType.StartPeriod"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "EndPeriod",
-                    "type": Type["TimeRangeValueType.EndPeriod"],
+                    "type": ForwardRef("TimeRangeValueType.EndPeriod"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

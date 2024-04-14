@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from crossref.models.org.crossref.fundref.assertion_name import AssertionName
 from crossref.models.org.crossref.fundref.assertion_provider import (
@@ -43,7 +43,7 @@ class Assertion:
             "choices": (
                 {
                     "name": "assertion",
-                    "type": Type["Assertion"],
+                    "type": ForwardRef("Assertion"),
                 },
             ),
         },

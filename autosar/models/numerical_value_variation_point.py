@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .ref import Ref
@@ -101,12 +101,14 @@ class NumericalValueVariationPoint:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type["NumericalValueVariationPoint.SyscStringRef"],
+                    "type": ForwardRef(
+                        "NumericalValueVariationPoint.SyscStringRef"
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type["NumericalValueVariationPoint.SyscRef"],
+                    "type": ForwardRef("NumericalValueVariationPoint.SyscRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

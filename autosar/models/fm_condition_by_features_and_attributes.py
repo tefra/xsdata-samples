@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .fm_attribute_def_subtypes_enum import FmAttributeDefSubtypesEnum
 from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum
@@ -55,16 +55,16 @@ class FmConditionByFeaturesAndAttributes:
             "choices": (
                 {
                     "name": "ATTRIBUTE-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "FmConditionByFeaturesAndAttributes.AttributeRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "FEATURE-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "FmConditionByFeaturesAndAttributes.FeatureRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

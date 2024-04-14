@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.queryable_data_source_type_1 import (
     QueryableDataSourceType1,
@@ -29,19 +29,23 @@ class DataConstraintAttachmentType:
             "choices": (
                 {
                     "name": "DataProvider",
-                    "type": Type["DataConstraintAttachmentType.DataProvider"],
+                    "type": ForwardRef(
+                        "DataConstraintAttachmentType.DataProvider"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "SimpleDataSource",
-                    "type": Type[
+                    "type": ForwardRef(
                         "DataConstraintAttachmentType.SimpleDataSource"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "DataStructure",
-                    "type": Type["DataConstraintAttachmentType.DataStructure"],
+                    "type": ForwardRef(
+                        "DataConstraintAttachmentType.DataStructure"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),
@@ -66,14 +70,16 @@ class DataConstraintAttachmentType:
                 },
                 {
                     "name": "Dataflow",
-                    "type": Type["DataConstraintAttachmentType.Dataflow"],
+                    "type": ForwardRef(
+                        "DataConstraintAttachmentType.Dataflow"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "ProvisionAgreement",
-                    "type": Type[
+                    "type": ForwardRef(
                         "DataConstraintAttachmentType.ProvisionAgreement"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

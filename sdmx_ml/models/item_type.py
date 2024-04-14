@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Optional, Tuple, Type, Union
+from typing import Any, ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.concept_representation import ConceptRepresentation
 from sdmx_ml.models.contact_type_1 import ContactType1
@@ -56,87 +56,87 @@ class ItemType(ItemBaseType):
                 },
                 {
                     "name": "CustomType",
-                    "type": Type["CustomType"],
+                    "type": ForwardRef("CustomType"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "UserDefinedOperator",
-                    "type": Type["UserDefinedOperator"],
+                    "type": ForwardRef("UserDefinedOperator"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Ruleset",
-                    "type": Type["Ruleset"],
+                    "type": ForwardRef("Ruleset"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "NamePersonalisation",
-                    "type": Type["NamePersonalisation"],
+                    "type": ForwardRef("NamePersonalisation"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "VtlMapping",
-                    "type": Type["VtlMapping"],
+                    "type": ForwardRef("VtlMapping"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Transformation",
-                    "type": Type["Transformation"],
+                    "type": ForwardRef("Transformation"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "ReportingCategory",
-                    "type": Type["ReportingCategory"],
+                    "type": ForwardRef("ReportingCategory"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "OrganisationUnit",
-                    "type": Type["OrganisationUnit"],
+                    "type": ForwardRef("OrganisationUnit"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "MetadataProvider",
-                    "type": Type["MetadataProvider"],
+                    "type": ForwardRef("MetadataProvider"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "DataProvider",
-                    "type": Type["DataProvider"],
+                    "type": ForwardRef("DataProvider"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "DataConsumer",
-                    "type": Type["DataConsumer"],
+                    "type": ForwardRef("DataConsumer"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Agency",
-                    "type": Type["Agency"],
+                    "type": ForwardRef("Agency"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Concept",
-                    "type": Type["Concept"],
+                    "type": ForwardRef("Concept"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "GeoGridCode",
-                    "type": Type["GeoGridCode"],
+                    "type": ForwardRef("GeoGridCode"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "GeoFeatureSetCode",
-                    "type": Type["GeoFeatureSetCode"],
+                    "type": ForwardRef("GeoFeatureSetCode"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Code",
-                    "type": Type["Code"],
+                    "type": ForwardRef("Code"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Category",
-                    "type": Type["Category"],
+                    "type": ForwardRef("Category"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),
@@ -382,12 +382,16 @@ class ReportingCategoryType(ReportingCategoryBaseType):
             "choices": (
                 {
                     "name": "StructuralMetadata",
-                    "type": Type["ReportingCategoryType.StructuralMetadata"],
+                    "type": ForwardRef(
+                        "ReportingCategoryType.StructuralMetadata"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "ProvisioningMetadata",
-                    "type": Type["ReportingCategoryType.ProvisioningMetadata"],
+                    "type": ForwardRef(
+                        "ReportingCategoryType.ProvisioningMetadata"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),
@@ -902,7 +906,7 @@ class VtlMappingType(VtlMappingBaseType):
             "choices": (
                 {
                     "name": "Dataflow",
-                    "type": Type["VtlMappingType.Dataflow"],
+                    "type": ForwardRef("VtlMappingType.Dataflow"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
@@ -922,12 +926,12 @@ class VtlMappingType(VtlMappingBaseType):
                 },
                 {
                     "name": "Codelist",
-                    "type": Type["VtlMappingType.Codelist"],
+                    "type": ForwardRef("VtlMappingType.Codelist"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Concept",
-                    "type": Type["VtlMappingType.Concept"],
+                    "type": ForwardRef("VtlMappingType.Concept"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

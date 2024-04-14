@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Type, Union
+from typing import ForwardRef, Tuple, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.identifiable_object_event_type import (
@@ -101,49 +101,51 @@ class StructuralRepositoryEventsType:
                 },
                 {
                     "name": "AgencyScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.AgencyScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "DataConsmerScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.DataConsmerScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "DataProviderScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.DataProviderScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "OrganisationUnitScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.OrganisationUnitScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "Dataflow",
-                    "type": Type["StructuralRepositoryEventsType.Dataflow"],
+                    "type": ForwardRef(
+                        "StructuralRepositoryEventsType.Dataflow"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "Metadataflow",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.Metadataflow"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "CategoryScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.CategoryScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
@@ -153,108 +155,114 @@ class StructuralRepositoryEventsType:
                 },
                 {
                     "name": "Codelist",
-                    "type": Type["StructuralRepositoryEventsType.Codelist"],
+                    "type": ForwardRef(
+                        "StructuralRepositoryEventsType.Codelist"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "HierarchicalCodelist",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.HierarchicalCodelist"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "ConceptScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.ConceptScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "MetadataStructureDefinition",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.MetadataStructureDefinition"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "KeyFamily",
-                    "type": Type["StructuralRepositoryEventsType.KeyFamily"],
+                    "type": ForwardRef(
+                        "StructuralRepositoryEventsType.KeyFamily"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "StructureSet",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.StructureSet"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "ReportingTaxonomy",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.ReportingTaxonomy"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "Process",
-                    "type": Type["StructuralRepositoryEventsType.Process"],
+                    "type": ForwardRef(
+                        "StructuralRepositoryEventsType.Process"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "AttachmentConstraint",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.AttachmentConstraint"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "ContentConstraint",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.ContentConstraint"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "ProvisionAgreement",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.ProvisionAgreement"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "TransformationScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.TransformationScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "NameAliasScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.NameAliasScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "NamePersonalisationScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.NamePersonalisationScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "RulesetScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.RulesetScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "UserDefinedOperatorScheme",
-                    "type": Type[
+                    "type": ForwardRef(
                         "StructuralRepositoryEventsType.UserDefinedOperatorScheme"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
             ),

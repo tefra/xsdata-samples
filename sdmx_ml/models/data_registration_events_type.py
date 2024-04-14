@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.maintainable_event_type import MaintainableEventType
@@ -46,38 +46,42 @@ class DataRegistrationEventsType:
                 },
                 {
                     "name": "RegistrationID",
-                    "type": Type["DataRegistrationEventsType.RegistrationId"],
+                    "type": ForwardRef(
+                        "DataRegistrationEventsType.RegistrationId"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "ProvisionAgreement",
-                    "type": Type[
+                    "type": ForwardRef(
                         "DataRegistrationEventsType.ProvisionAgreement"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "DataProvider",
-                    "type": Type["DataRegistrationEventsType.DataProvider"],
+                    "type": ForwardRef(
+                        "DataRegistrationEventsType.DataProvider"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "DataflowReference",
-                    "type": Type[
+                    "type": ForwardRef(
                         "DataRegistrationEventsType.DataflowReference"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "KeyFamilyReference",
-                    "type": Type[
+                    "type": ForwardRef(
                         "DataRegistrationEventsType.KeyFamilyReference"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "Category",
-                    "type": Type["DataRegistrationEventsType.Category"],
+                    "type": ForwardRef("DataRegistrationEventsType.Category"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
             ),

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .autosar_operation_argument_instance_subtypes_enum import (
     AutosarOperationArgumentInstanceSubtypesEnum,
@@ -67,28 +67,30 @@ class TdEventOccurrenceExpressionFormula:
             "choices": (
                 {
                     "name": "ARGUMENT-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "TdEventOccurrenceExpressionFormula.ArgumentRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "EVENT-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "TdEventOccurrenceExpressionFormula.EventRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "MODE-REF",
-                    "type": Type["TdEventOccurrenceExpressionFormula.ModeRef"],
+                    "type": ForwardRef(
+                        "TdEventOccurrenceExpressionFormula.ModeRef"
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "VARIABLE-REF",
-                    "type": Type[
+                    "type": ForwardRef(
                         "TdEventOccurrenceExpressionFormula.VariableRef"
-                    ],
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

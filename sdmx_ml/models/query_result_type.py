@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Type, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.result_type import ResultType
 
@@ -34,12 +34,12 @@ class QueryResultType:
             "choices": (
                 {
                     "name": "DataResult",
-                    "type": Type["QueryResultType.DataResult"],
+                    "type": ForwardRef("QueryResultType.DataResult"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "MetadataResult",
-                    "type": Type["QueryResultType.MetadataResult"],
+                    "type": ForwardRef("QueryResultType.MetadataResult"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
             ),

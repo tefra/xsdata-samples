@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
@@ -276,7 +276,7 @@ class StrucDocCaption:
             "choices": (
                 {
                     "name": "linkHtml",
-                    "type": Type["StrucDocLinkHtml"],
+                    "type": ForwardRef("StrucDocLinkHtml"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -291,7 +291,7 @@ class StrucDocCaption:
                 },
                 {
                     "name": "footnote",
-                    "type": Type["StrucDocFootnote"],
+                    "type": ForwardRef("StrucDocFootnote"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -403,7 +403,7 @@ class StrucDocTitleContent:
             "choices": (
                 {
                     "name": "content",
-                    "type": Type["StrucDocTitleContent"],
+                    "type": ForwardRef("StrucDocTitleContent"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -423,7 +423,7 @@ class StrucDocTitleContent:
                 },
                 {
                     "name": "footnote",
-                    "type": Type["StrucDocTitleFootnote"],
+                    "type": ForwardRef("StrucDocTitleFootnote"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -649,12 +649,12 @@ class StrucDocContent:
             "choices": (
                 {
                     "name": "content",
-                    "type": Type["StrucDocContent"],
+                    "type": ForwardRef("StrucDocContent"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
                     "name": "linkHtml",
-                    "type": Type["StrucDocLinkHtml"],
+                    "type": ForwardRef("StrucDocLinkHtml"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -674,7 +674,7 @@ class StrucDocContent:
                 },
                 {
                     "name": "footnote",
-                    "type": Type["StrucDocFootnote"],
+                    "type": ForwardRef("StrucDocFootnote"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -808,7 +808,7 @@ class StrucDocFootnote:
                 },
                 {
                     "name": "linkHtml",
-                    "type": Type["StrucDocLinkHtml"],
+                    "type": ForwardRef("StrucDocLinkHtml"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
@@ -833,17 +833,17 @@ class StrucDocFootnote:
                 },
                 {
                     "name": "paragraph",
-                    "type": Type["StrucDocParagraph"],
+                    "type": ForwardRef("StrucDocParagraph"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
                     "name": "list",
-                    "type": Type["StrucDocList"],
+                    "type": ForwardRef("StrucDocList"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
                     "name": "table",
-                    "type": Type["StrucDocTable"],
+                    "type": ForwardRef("StrucDocTable"),
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
@@ -1236,12 +1236,12 @@ class StrucDocItem:
                 },
                 {
                     "name": "list",
-                    "type": Type["StrucDocList"],
+                    "type": ForwardRef("StrucDocList"),
                     "namespace": "urn:hl7-org:v3",
                 },
                 {
                     "name": "table",
-                    "type": Type["StrucDocTable"],
+                    "type": ForwardRef("StrucDocTable"),
                     "namespace": "urn:hl7-org:v3",
                 },
             ),

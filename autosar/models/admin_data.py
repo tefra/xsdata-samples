@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .caption import Caption
 from .category_string import CategoryString
@@ -276,27 +276,27 @@ class BlueprintFormula:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type["BlueprintFormula.SyscStringRef"],
+                    "type": ForwardRef("BlueprintFormula.SyscStringRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type["BlueprintFormula.SyscRef"],
+                    "type": ForwardRef("BlueprintFormula.SyscRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "ECUC-QUERY-REF",
-                    "type": Type["BlueprintFormula.EcucQueryRef"],
+                    "type": ForwardRef("BlueprintFormula.EcucQueryRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "ECUC-REF",
-                    "type": Type["BlueprintFormula.EcucRef"],
+                    "type": ForwardRef("BlueprintFormula.EcucRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "VERBATIM",
-                    "type": Type["MultiLanguageVerbatim"],
+                    "type": ForwardRef("MultiLanguageVerbatim"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

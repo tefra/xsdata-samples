@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.cube_region_type import CubeRegionType
 from sdmx_ml.models.data_key_set_type import DataKeySetType
@@ -67,24 +67,30 @@ class QueryRegistrationRequestType:
                 },
                 {
                     "name": "ProvisionAgreement",
-                    "type": Type[
+                    "type": ForwardRef(
                         "QueryRegistrationRequestType.ProvisionAgreement"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "DataProvider",
-                    "type": Type["QueryRegistrationRequestType.DataProvider"],
+                    "type": ForwardRef(
+                        "QueryRegistrationRequestType.DataProvider"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "Dataflow",
-                    "type": Type["QueryRegistrationRequestType.Dataflow"],
+                    "type": ForwardRef(
+                        "QueryRegistrationRequestType.Dataflow"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "Metadataflow",
-                    "type": Type["QueryRegistrationRequestType.Metadataflow"],
+                    "type": ForwardRef(
+                        "QueryRegistrationRequestType.Metadataflow"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
             ),

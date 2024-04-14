@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.maintainable_event_type import MaintainableEventType
@@ -47,42 +47,44 @@ class MetadataRegistrationEventsType:
                 },
                 {
                     "name": "RegistrationID",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataRegistrationEventsType.RegistrationId"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "ProvisionAgreement",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataRegistrationEventsType.ProvisionAgreement"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "DataProvider",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataRegistrationEventsType.DataProvider"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "MetadataflowReference",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataRegistrationEventsType.MetadataflowReference"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "MetadataStructureDefinitionReference",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataRegistrationEventsType.MetadataStructureDefinitionReference"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "Category",
-                    "type": Type["MetadataRegistrationEventsType.Category"],
+                    "type": ForwardRef(
+                        "MetadataRegistrationEventsType.Category"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
             ),

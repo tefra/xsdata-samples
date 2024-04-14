@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.name import Name
 from sdmx_ml.models.text_type import TextType
@@ -66,27 +66,27 @@ class ContactType1:
             "choices": (
                 {
                     "name": "Telephone",
-                    "type": Type["ContactType1.Telephone"],
+                    "type": ForwardRef("ContactType1.Telephone"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Fax",
-                    "type": Type["ContactType1.Fax"],
+                    "type": ForwardRef("ContactType1.Fax"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "X400",
-                    "type": Type["ContactType1.X400"],
+                    "type": ForwardRef("ContactType1.X400"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "URI",
-                    "type": Type["ContactType1.Uri"],
+                    "type": ForwardRef("ContactType1.Uri"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Email",
-                    "type": Type["ContactType1.Email"],
+                    "type": ForwardRef("ContactType1.Email"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

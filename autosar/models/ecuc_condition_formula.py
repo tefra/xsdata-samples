@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .ecuc_query_subtypes_enum import EcucQuerySubtypesEnum
 from .ref import Ref
@@ -54,12 +54,14 @@ class EcucConditionFormula:
             "choices": (
                 {
                     "name": "ECUC-QUERY-REF",
-                    "type": Type["EcucConditionFormula.EcucQueryRef"],
+                    "type": ForwardRef("EcucConditionFormula.EcucQueryRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "ECUC-QUERY-STRING-REF",
-                    "type": Type["EcucConditionFormula.EcucQueryStringRef"],
+                    "type": ForwardRef(
+                        "EcucConditionFormula.EcucQueryStringRef"
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

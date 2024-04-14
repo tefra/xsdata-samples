@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Type, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -56,12 +56,14 @@ class NotifyRegistryEventType:
             "choices": (
                 {
                     "name": "ObjectURN",
-                    "type": Type["NotifyRegistryEventType.ObjectUrn"],
+                    "type": ForwardRef("NotifyRegistryEventType.ObjectUrn"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "RegistrationID",
-                    "type": Type["NotifyRegistryEventType.RegistrationId"],
+                    "type": ForwardRef(
+                        "NotifyRegistryEventType.RegistrationId"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
             ),

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -61,12 +61,14 @@ class MetadataSetType(MetadataSetBaseType):
             "choices": (
                 {
                     "name": "MetadataProvisionAgreement",
-                    "type": Type["MetadataSetType.MetadataProvisionAgreement"],
+                    "type": ForwardRef(
+                        "MetadataSetType.MetadataProvisionAgreement"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
                 },
                 {
                     "name": "Metadataflow",
-                    "type": Type["MetadataSetType.Metadataflow"],
+                    "type": ForwardRef("MetadataSetType.Metadataflow"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
                 },
             ),

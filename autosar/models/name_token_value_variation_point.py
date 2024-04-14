@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .ref import Ref
@@ -99,12 +99,14 @@ class NameTokenValueVariationPoint:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type["NameTokenValueVariationPoint.SyscStringRef"],
+                    "type": ForwardRef(
+                        "NameTokenValueVariationPoint.SyscStringRef"
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type["NameTokenValueVariationPoint.SyscRef"],
+                    "type": ForwardRef("NameTokenValueVariationPoint.SyscRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

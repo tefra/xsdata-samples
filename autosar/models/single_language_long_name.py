@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .emphasis_text import EmphasisText
 from .index_entry import IndexEntry
@@ -64,12 +64,12 @@ class SingleLanguageLongName:
                 },
                 {
                     "name": "SUP",
-                    "type": Type["SingleLanguageLongName.Sup"],
+                    "type": ForwardRef("SingleLanguageLongName.Sup"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Type["SingleLanguageLongName.Sub"],
+                    "type": ForwardRef("SingleLanguageLongName.Sub"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {

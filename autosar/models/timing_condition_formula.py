@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .autosar_operation_argument_instance_subtypes_enum import (
     AutosarOperationArgumentInstanceSubtypesEnum,
@@ -64,27 +64,35 @@ class TimingConditionFormula:
             "choices": (
                 {
                     "name": "TIMING-ARGUMENT-REF",
-                    "type": Type["TimingConditionFormula.TimingArgumentRef"],
+                    "type": ForwardRef(
+                        "TimingConditionFormula.TimingArgumentRef"
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "TIMING-CONDITION-REF",
-                    "type": Type["TimingConditionFormula.TimingConditionRef"],
+                    "type": ForwardRef(
+                        "TimingConditionFormula.TimingConditionRef"
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "TIMING-EVENT-REF",
-                    "type": Type["TimingConditionFormula.TimingEventRef"],
+                    "type": ForwardRef(
+                        "TimingConditionFormula.TimingEventRef"
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "TIMING-MODE-REF",
-                    "type": Type["TimingConditionFormula.TimingModeRef"],
+                    "type": ForwardRef("TimingConditionFormula.TimingModeRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "TIMING-VARIABLE-REF",
-                    "type": Type["TimingConditionFormula.TimingVariableRef"],
+                    "type": ForwardRef(
+                        "TimingConditionFormula.TimingVariableRef"
+                    ),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.wild_card_value_type import WildCardValueType
@@ -38,17 +38,17 @@ class VersionableObjectEventType:
                 },
                 {
                     "name": "URN",
-                    "type": Type["VersionableObjectEventType.Urn"],
+                    "type": ForwardRef("VersionableObjectEventType.Urn"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "ID",
-                    "type": Type["VersionableObjectEventType.Id"],
+                    "type": ForwardRef("VersionableObjectEventType.Id"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
                 {
                     "name": "Version",
-                    "type": Type["VersionableObjectEventType.Version"],
+                    "type": ForwardRef("VersionableObjectEventType.Version"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
                 },
             ),

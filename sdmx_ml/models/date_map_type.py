@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.identifiable_type import IdentifiableType
 from sdmx_ml.models.resolve_period_type import ResolvePeriodType
@@ -52,17 +52,17 @@ class DateMapType(IdentifiableType):
             "choices": (
                 {
                     "name": "FrequencyDimension",
-                    "type": Type["DateMapType.FrequencyDimension"],
+                    "type": ForwardRef("DateMapType.FrequencyDimension"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "MappedFrequencies",
-                    "type": Type["DateMapType.MappedFrequencies"],
+                    "type": ForwardRef("DateMapType.MappedFrequencies"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "TargetFrequencyID",
-                    "type": Type["DateMapType.TargetFrequencyId"],
+                    "type": ForwardRef("DateMapType.TargetFrequencyId"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

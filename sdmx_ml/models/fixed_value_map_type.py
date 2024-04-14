@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.annotable_type import AnnotableType
 
@@ -25,12 +25,12 @@ class FixedValueMapType(AnnotableType):
             "choices": (
                 {
                     "name": "Source",
-                    "type": Type["FixedValueMapType.Source"],
+                    "type": ForwardRef("FixedValueMapType.Source"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Target",
-                    "type": Type["FixedValueMapType.Target"],
+                    "type": ForwardRef("FixedValueMapType.Target"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

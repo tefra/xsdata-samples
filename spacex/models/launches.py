@@ -16,63 +16,54 @@ class Cores(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     flight: Optional[int] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     gridfins: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     legs: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     reused: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     landing_attempt: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     landing_success: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     landing_type: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     landpad: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
 
@@ -94,7 +85,6 @@ class Failures(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     reason: Optional[str] = field(
@@ -116,28 +106,24 @@ class Fairings(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     recovery_attempt: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     recovered: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     ships: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
 
@@ -152,14 +138,12 @@ class Flickr(JsonSchemaMixin):
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     original: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
 
@@ -174,14 +158,12 @@ class Patch(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     large: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
 
@@ -196,28 +178,24 @@ class Reddit(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     launch: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     media: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     recovery: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
 
@@ -253,35 +231,30 @@ class Links(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     webcast: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     youtube_id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     article: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     wikipedia: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
 
@@ -296,7 +269,6 @@ class Launches(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     links: Optional[Links] = field(
@@ -310,14 +282,12 @@ class Launches(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     static_fire_date_unix: Optional[int] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     tbd: Optional[bool] = field(
@@ -338,7 +308,6 @@ class Launches(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     rocket: Optional[str] = field(
@@ -352,35 +321,30 @@ class Launches(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     details: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     crew: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     ships: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     capsules: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     payloads: List[str] = field(
@@ -408,14 +372,12 @@ class Launches(JsonSchemaMixin):
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     failures: List[Failures] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     flight_number: Optional[int] = field(

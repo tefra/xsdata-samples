@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Optional, Type, Union
+from typing import Any, ForwardRef, Optional, Union
 
 from .country_ref import CountryRef
 from .online_service_refs_rel_structure import OnlineServiceRefsRelStructure
@@ -47,9 +47,9 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
                 },
                 {
                     "name": "Address",
-                    "type": Type[
+                    "type": ForwardRef(
                         "OnlineServiceOperatorVersionStructure.Address"
-                    ],
+                    ),
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

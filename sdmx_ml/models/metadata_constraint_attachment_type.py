@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.queryable_data_source_type_1 import (
     QueryableDataSourceType1,
@@ -30,30 +30,30 @@ class MetadataConstraintAttachmentType:
             "choices": (
                 {
                     "name": "MetadataProvider",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataConstraintAttachmentType.MetadataProvider"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "MetadataSet",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataConstraintAttachmentType.MetadataSet"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "SimpleDataSource",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataConstraintAttachmentType.SimpleDataSource"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "MetadataStructure",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataConstraintAttachmentType.MetadataStructure"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),
@@ -78,16 +78,16 @@ class MetadataConstraintAttachmentType:
                 },
                 {
                     "name": "Metadataflow",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataConstraintAttachmentType.Metadataflow"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "MetadataProvisionAgreement",
-                    "type": Type[
+                    "type": ForwardRef(
                         "MetadataConstraintAttachmentType.MetadataProvisionAgreement"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

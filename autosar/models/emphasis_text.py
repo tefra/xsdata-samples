@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .e_enum_font_simple import EEnumFontSimple
 from .e_enum_simple import EEnumSimple
@@ -84,12 +84,12 @@ class EmphasisText:
             "choices": (
                 {
                     "name": "SUB",
-                    "type": Type["EmphasisText.Sub"],
+                    "type": ForwardRef("EmphasisText.Sub"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUP",
-                    "type": Type["EmphasisText.Sup"],
+                    "type": ForwardRef("EmphasisText.Sup"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Dict, List, Optional, Type, Union
+from typing import Dict, ForwardRef, List, Optional, Union
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.abs import Abs
 from crossref.models.org.w3.pkg_1998.math.math_ml.and_mod import And
@@ -1357,17 +1357,17 @@ class CiContent:
                 },
                 {
                     "name": "maction",
-                    "type": Type["Maction"],
+                    "type": ForwardRef("Maction"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mlongdiv",
-                    "type": Type["Mlongdiv"],
+                    "type": ForwardRef("Mlongdiv"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mstack",
-                    "type": Type["Mstack"],
+                    "type": ForwardRef("Mstack"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
@@ -1377,87 +1377,87 @@ class CiContent:
                 },
                 {
                     "name": "mmultiscripts",
-                    "type": Type["Mmultiscripts"],
+                    "type": ForwardRef("Mmultiscripts"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "munderover",
-                    "type": Type["Munderover"],
+                    "type": ForwardRef("Munderover"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mover",
-                    "type": Type["Mover"],
+                    "type": ForwardRef("Mover"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "munder",
-                    "type": Type["Munder"],
+                    "type": ForwardRef("Munder"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msubsup",
-                    "type": Type["Msubsup"],
+                    "type": ForwardRef("Msubsup"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msup",
-                    "type": Type["Msup"],
+                    "type": ForwardRef("Msup"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msub",
-                    "type": Type["Msub"],
+                    "type": ForwardRef("Msub"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "menclose",
-                    "type": Type["Menclose"],
+                    "type": ForwardRef("Menclose"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mfenced",
-                    "type": Type["Mfenced"],
+                    "type": ForwardRef("Mfenced"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mphantom",
-                    "type": Type["Mphantom"],
+                    "type": ForwardRef("Mphantom"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mpadded",
-                    "type": Type["Mpadded"],
+                    "type": ForwardRef("Mpadded"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "merror",
-                    "type": Type["Merror"],
+                    "type": ForwardRef("Merror"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mstyle",
-                    "type": Type["Mstyle"],
+                    "type": ForwardRef("Mstyle"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mroot",
-                    "type": Type["Mroot"],
+                    "type": ForwardRef("Mroot"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msqrt",
-                    "type": Type["Msqrt"],
+                    "type": ForwardRef("Msqrt"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mfrac",
-                    "type": Type["Mfrac"],
+                    "type": ForwardRef("Mfrac"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mrow",
-                    "type": Type["Mrow"],
+                    "type": ForwardRef("Mrow"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
@@ -1529,17 +1529,17 @@ class CnContent:
                 },
                 {
                     "name": "maction",
-                    "type": Type["Maction"],
+                    "type": ForwardRef("Maction"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mlongdiv",
-                    "type": Type["Mlongdiv"],
+                    "type": ForwardRef("Mlongdiv"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mstack",
-                    "type": Type["Mstack"],
+                    "type": ForwardRef("Mstack"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
@@ -1549,87 +1549,87 @@ class CnContent:
                 },
                 {
                     "name": "mmultiscripts",
-                    "type": Type["Mmultiscripts"],
+                    "type": ForwardRef("Mmultiscripts"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "munderover",
-                    "type": Type["Munderover"],
+                    "type": ForwardRef("Munderover"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mover",
-                    "type": Type["Mover"],
+                    "type": ForwardRef("Mover"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "munder",
-                    "type": Type["Munder"],
+                    "type": ForwardRef("Munder"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msubsup",
-                    "type": Type["Msubsup"],
+                    "type": ForwardRef("Msubsup"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msup",
-                    "type": Type["Msup"],
+                    "type": ForwardRef("Msup"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msub",
-                    "type": Type["Msub"],
+                    "type": ForwardRef("Msub"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "menclose",
-                    "type": Type["Menclose"],
+                    "type": ForwardRef("Menclose"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mfenced",
-                    "type": Type["Mfenced"],
+                    "type": ForwardRef("Mfenced"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mphantom",
-                    "type": Type["Mphantom"],
+                    "type": ForwardRef("Mphantom"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mpadded",
-                    "type": Type["Mpadded"],
+                    "type": ForwardRef("Mpadded"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "merror",
-                    "type": Type["Merror"],
+                    "type": ForwardRef("Merror"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mstyle",
-                    "type": Type["Mstyle"],
+                    "type": ForwardRef("Mstyle"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mroot",
-                    "type": Type["Mroot"],
+                    "type": ForwardRef("Mroot"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msqrt",
-                    "type": Type["Msqrt"],
+                    "type": ForwardRef("Msqrt"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mfrac",
-                    "type": Type["Mfrac"],
+                    "type": ForwardRef("Mfrac"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mrow",
-                    "type": Type["Mrow"],
+                    "type": ForwardRef("Mrow"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
@@ -1696,17 +1696,17 @@ class CsymbolContent:
                 },
                 {
                     "name": "maction",
-                    "type": Type["Maction"],
+                    "type": ForwardRef("Maction"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mlongdiv",
-                    "type": Type["Mlongdiv"],
+                    "type": ForwardRef("Mlongdiv"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mstack",
-                    "type": Type["Mstack"],
+                    "type": ForwardRef("Mstack"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
@@ -1716,87 +1716,87 @@ class CsymbolContent:
                 },
                 {
                     "name": "mmultiscripts",
-                    "type": Type["Mmultiscripts"],
+                    "type": ForwardRef("Mmultiscripts"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "munderover",
-                    "type": Type["Munderover"],
+                    "type": ForwardRef("Munderover"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mover",
-                    "type": Type["Mover"],
+                    "type": ForwardRef("Mover"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "munder",
-                    "type": Type["Munder"],
+                    "type": ForwardRef("Munder"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msubsup",
-                    "type": Type["Msubsup"],
+                    "type": ForwardRef("Msubsup"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msup",
-                    "type": Type["Msup"],
+                    "type": ForwardRef("Msup"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msub",
-                    "type": Type["Msub"],
+                    "type": ForwardRef("Msub"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "menclose",
-                    "type": Type["Menclose"],
+                    "type": ForwardRef("Menclose"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mfenced",
-                    "type": Type["Mfenced"],
+                    "type": ForwardRef("Mfenced"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mphantom",
-                    "type": Type["Mphantom"],
+                    "type": ForwardRef("Mphantom"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mpadded",
-                    "type": Type["Mpadded"],
+                    "type": ForwardRef("Mpadded"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "merror",
-                    "type": Type["Merror"],
+                    "type": ForwardRef("Merror"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mstyle",
-                    "type": Type["Mstyle"],
+                    "type": ForwardRef("Mstyle"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mroot",
-                    "type": Type["Mroot"],
+                    "type": ForwardRef("Mroot"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "msqrt",
-                    "type": Type["Msqrt"],
+                    "type": ForwardRef("Msqrt"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mfrac",
-                    "type": Type["Mfrac"],
+                    "type": ForwardRef("Mfrac"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {
                     "name": "mrow",
-                    "type": Type["Mrow"],
+                    "type": ForwardRef("Mrow"),
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
                 {

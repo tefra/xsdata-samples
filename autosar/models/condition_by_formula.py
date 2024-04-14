@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .ref import Ref
@@ -68,12 +68,12 @@ class ConditionByFormula:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type["ConditionByFormula.SyscStringRef"],
+                    "type": ForwardRef("ConditionByFormula.SyscStringRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type["ConditionByFormula.SyscRef"],
+                    "type": ForwardRef("ConditionByFormula.SyscRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),

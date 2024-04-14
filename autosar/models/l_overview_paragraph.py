@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import ForwardRef, List, Optional
 
 from .br import Br
 from .emphasis_text import EmphasisText
@@ -95,7 +95,7 @@ class LOverviewParagraph:
                 },
                 {
                     "name": "TRACE-REF",
-                    "type": Type["LOverviewParagraph.TraceRef"],
+                    "type": ForwardRef("LOverviewParagraph.TraceRef"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
@@ -120,12 +120,12 @@ class LOverviewParagraph:
                 },
                 {
                     "name": "SUP",
-                    "type": Type["LOverviewParagraph.Sup"],
+                    "type": ForwardRef("LOverviewParagraph.Sup"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Type["LOverviewParagraph.Sub"],
+                    "type": ForwardRef("LOverviewParagraph.Sub"),
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {

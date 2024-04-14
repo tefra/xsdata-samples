@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Type, Union
+from typing import ForwardRef, Optional, Tuple, Union
 
 from sdmx_ml.models.queryable_data_source_type_1 import (
     QueryableDataSourceType1,
@@ -31,27 +31,35 @@ class ConstraintAttachmentType:
             "choices": (
                 {
                     "name": "DataProvider",
-                    "type": Type["ConstraintAttachmentType.DataProvider"],
+                    "type": ForwardRef(
+                        "ConstraintAttachmentType.DataProvider"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "MetadataProvider",
-                    "type": Type["ConstraintAttachmentType.MetadataProvider"],
+                    "type": ForwardRef(
+                        "ConstraintAttachmentType.MetadataProvider"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "MetadataSet",
-                    "type": Type["ConstraintAttachmentType.MetadataSet"],
+                    "type": ForwardRef("ConstraintAttachmentType.MetadataSet"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "SimpleDataSource",
-                    "type": Type["ConstraintAttachmentType.SimpleDataSource"],
+                    "type": ForwardRef(
+                        "ConstraintAttachmentType.SimpleDataSource"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "DataStructure",
-                    "type": Type["ConstraintAttachmentType.DataStructure"],
+                    "type": ForwardRef(
+                        "ConstraintAttachmentType.DataStructure"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),
@@ -79,31 +87,35 @@ class ConstraintAttachmentType:
                 },
                 {
                     "name": "MetadataStructure",
-                    "type": Type["ConstraintAttachmentType.MetadataStructure"],
+                    "type": ForwardRef(
+                        "ConstraintAttachmentType.MetadataStructure"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Dataflow",
-                    "type": Type["ConstraintAttachmentType.Dataflow"],
+                    "type": ForwardRef("ConstraintAttachmentType.Dataflow"),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "Metadataflow",
-                    "type": Type["ConstraintAttachmentType.Metadataflow"],
+                    "type": ForwardRef(
+                        "ConstraintAttachmentType.Metadataflow"
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "ProvisionAgreement",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ConstraintAttachmentType.ProvisionAgreement"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
                 {
                     "name": "MetadataProvisionAgreement",
-                    "type": Type[
+                    "type": ForwardRef(
                         "ConstraintAttachmentType.MetadataProvisionAgreement"
-                    ],
+                    ),
                     "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
                 },
             ),

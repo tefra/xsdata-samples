@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional, Type, Union
+from typing import ForwardRef, List, Optional, Union
 
 from .coordinates_structure import CoordinatesStructure
 
@@ -25,12 +25,12 @@ class LocationStructure1:
             "choices": (
                 {
                     "name": "Longitude",
-                    "type": Type["LocationStructure1.Longitude"],
+                    "type": ForwardRef("LocationStructure1.Longitude"),
                     "namespace": "http://www.siri.org.uk/siri",
                 },
                 {
                     "name": "Latitude",
-                    "type": Type["LocationStructure1.Latitude"],
+                    "type": ForwardRef("LocationStructure1.Latitude"),
                     "namespace": "http://www.siri.org.uk/siri",
                 },
                 {
