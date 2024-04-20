@@ -10,3 +10,6 @@
 [submodule "sdmx_ml/repo"]
 	path = sdmx_ml/repo
 	url = git@github.com:sdmx-twg/sdmx-ml.git
+[submodule "tpdb/repo"]
+	path = tpdb/repo
+	url = git@github.com:TermCOMP/TPDB.git

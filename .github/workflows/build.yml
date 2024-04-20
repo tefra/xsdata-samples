@@ -29,6 +29,7 @@ jobs:
           - { name: "Sabre", id: "sabre" }
           - { name: "Sdmx-ml", id: "sdmx-ml", skip_mypy: true }
           - { name: "SpaceX", id: "spacex" }
+          - { name: "TPDB", id: "tpdb" }
           - { name: "Travelport", id: "travelport" }
           - { name: "UBL", id: "ubl" }
           - { name: "Voko", id: "voko" }

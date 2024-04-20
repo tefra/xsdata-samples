@@ -1,0 +1,188 @@
+from tpdb.models.arity import Arity
+from tpdb.models.funcsym import Funcsym
+from tpdb.models.lhs import Lhs
+from tpdb.models.metainformation import Metainformation
+from tpdb.models.name import Name
+from tpdb.models.originalfilename import Originalfilename
+from tpdb.models.problem import Problem
+from tpdb.models.problem_type import ProblemType
+from tpdb.models.rhs import Rhs
+from tpdb.models.rule import Rule
+from tpdb.models.rules import Rules
+from tpdb.models.signature import Signature
+from tpdb.models.strategy import Strategy
+from tpdb.models.strategy_value import StrategyValue
+from tpdb.models.trs import Trs
+from tpdb.models.var import Var
+
+
+obj = Problem(
+    trs=Trs(
+        rules=Rules(
+            rule=[
+                Rule(
+                    lhs=Lhs(
+                        funapp=Lhs.Funapp(
+                            name=Name(
+                                value='a'
+                            ),
+                            arg=[
+                                Lhs.Funapp.Arg(
+                                    funapp=Lhs.Funapp(
+                                        name=Name(
+                                            value='b'
+                                        ),
+                                        arg=[
+                                            Lhs.Funapp.Arg(
+                                                funapp=Lhs.Funapp(
+                                                    name=Name(
+                                                        value='b'
+                                                    ),
+                                                    arg=[
+                                                        Lhs.Funapp.Arg(
+                                                            var=Var(
+                                                                value='x1'
+                                                            )
+                                                        ),
+                                                    ]
+                                                )
+                                            ),
+                                        ]
+                                    )
+                                ),
+                            ]
+                        )
+                    ),
+                    rhs=Rhs(
+                        funapp=Rhs.Funapp(
+                            name=Name(
+                                value='c'
+                            ),
+                            arg=[
+                                Rhs.Funapp.Arg(
+                                    funapp=Rhs.Funapp(
+                                        name=Name(
+                                            value='a'
+                                        ),
+                                        arg=[
+                                            Rhs.Funapp.Arg(
+                                                funapp=Rhs.Funapp(
+                                                    name=Name(
+                                                        value='b'
+                                                    ),
+                                                    arg=[
+                                                        Rhs.Funapp.Arg(
+                                                            var=Var(
+                                                                value='x1'
+                                                            )
+                                                        ),
+                                                    ]
+                                                )
+                                            ),
+                                        ]
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+                Rule(
+                    lhs=Lhs(
+                        funapp=Lhs.Funapp(
+                            name=Name(
+                                value='b'
+                            ),
+                            arg=[
+                                Lhs.Funapp.Arg(
+                                    funapp=Lhs.Funapp(
+                                        name=Name(
+                                            value='c'
+                                        ),
+                                        arg=[
+                                            Lhs.Funapp.Arg(
+                                                var=Var(
+                                                    value='x1'
+                                                )
+                                            ),
+                                        ]
+                                    )
+                                ),
+                            ]
+                        )
+                    ),
+                    rhs=Rhs(
+                        funapp=Rhs.Funapp(
+                            name=Name(
+                                value='b'
+                            ),
+                            arg=[
+                                Rhs.Funapp.Arg(
+                                    funapp=Rhs.Funapp(
+                                        name=Name(
+                                            value='b'
+                                        ),
+                                        arg=[
+                                            Rhs.Funapp.Arg(
+                                                funapp=Rhs.Funapp(
+                                                    name=Name(
+                                                        value='b'
+                                                    ),
+                                                    arg=[
+                                                        Rhs.Funapp.Arg(
+                                                            var=Var(
+                                                                value='x1'
+                                                            )
+                                                        ),
+                                                    ]
+                                                )
+                                            ),
+                                        ]
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+            ]
+        ),
+        signature=Signature(
+            funcsym=[
+                Funcsym(
+                    name=Name(
+                        value='a'
+                    ),
+                    arity=Arity(
+                        value=1
+                    )
+                ),
+                Funcsym(
+                    name=Name(
+                        value='b'
+                    ),
+                    arity=Arity(
+                        value=1
+                    )
+                ),
+                Funcsym(
+                    name=Name(
+                        value='c'
+                    ),
+                    arity=Arity(
+                        value=1
+                    )
+                ),
+            ]
+        )
+    ),
+    strategy=Strategy(
+        value=StrategyValue.FULL
+    ),
+    metainformation=Metainformation(
+        originalfilename=[
+            Originalfilename(
+                value='nt24.srs'
+            ),
+        ]
+    ),
+    type_value=ProblemType.TERMINATION
+)

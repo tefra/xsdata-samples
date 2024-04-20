@@ -18,6 +18,7 @@ SUITES = {
     "sabre": "sabre/schemas",
     "sdmx_ml": "sdmx_ml/repo/schemas/ -r",
     "spacex": "spacex/launches.json",
+    "tpdb": "tpdb/repo/xml/xtc.xsd",
     "travelport": "travelport/schemas -r",
     "ubl": "ubl/schemas/maindoc",
     "voko": "voko/dtd",
