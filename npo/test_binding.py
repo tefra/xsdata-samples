@@ -8,7 +8,9 @@ here = Path(__file__).parent.absolute()
 schema_path = here.joinpath("schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd")
 
 
-def test_bindings(xml_parser, xml_serializer, json_serializer, code_serializer):
+def test_bindings(
+    xml_parser, xml_serializer, json_serializer, code_serializer, tree_serializer
+):
     xml_fixture = here.joinpath("sample.xml")
     output = here.joinpath("sample.output.xml")
     ns_map = {
@@ -27,5 +29,8 @@ def test_bindings(xml_parser, xml_serializer, json_serializer, code_serializer):
     schema_doc = etree.parse(schema_path.as_uri())
     schema = etree.XMLSchema(schema_doc)
     schema.assertValid(etree.parse(str(output)))
+
+    xml_tree = tree_serializer.render(obj, ns_map=ns_map)
+    output.with_suffix(".etree.xml").write_bytes(etree.tostring(xml_tree))
 
     assert obj.items.item[0].result.title == "Antibiotics"

@@ -6,6 +6,7 @@ from xsdata.formats.dataclass.serializers import JsonSerializer
 from xsdata.formats.dataclass.serializers import PycodeSerializer
 from xsdata.formats.dataclass.serializers import XmlSerializer
 from xsdata.formats.dataclass.serializers.config import SerializerConfig
+from xsdata.formats.dataclass.serializers import TreeSerializer
 
 
 def pytest_addoption(parser):
@@ -56,3 +57,8 @@ def json_parser(xml_context):
 @pytest.fixture
 def json_serializer(xml_context, serializer_config):
     return JsonSerializer(context=xml_context, config=serializer_config)
+
+
+@pytest.fixture
+def tree_serializer(xml_context, serializer_config):
+    return TreeSerializer(context=xml_context, config=serializer_config)
