@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from .external_object_ref_structure import ExternalObjectRefStructure
+from .presentation_structure import PresentationStructure
 from .type_of_entity_version_structure import TypeOfEntityVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -18,4 +19,12 @@ class TypeOfProductCategoryStructure(TypeOfEntityVersionStructure):
                 "namespace": "http://www.netex.org.uk/netex",
             },
         )
+    )
+    presentation: Optional[PresentationStructure] = field(
+        default=None,
+        metadata={
+            "name": "Presentation",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )

@@ -394,7 +394,7 @@ obj = PublicationDelivery(
                         ref='mc_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version='any',
+                        version='1.0',
                         ref='mc:my_car'
                     ),
                     default_currency='EUR'
@@ -422,7 +422,7 @@ obj = PublicationDelivery(
                                 data_source=[
                                     DataSource(
                                         id='mc:my_car',
-                                        version='any',
+                                        version='1.0',
                                         email='feedback@mycar.com'
                                     ),
                                 ]

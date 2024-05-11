@@ -152,6 +152,7 @@
             <DefaultResponsibilitySetRef version="nptg:v2.1" ref="nptgAdminArea:082"/>
           </FrameDefaults>
           <dataSources>
+            <DataSource id="nptg:NaPTAN" version="001"/>
             <DataSource id="tbd:accessibility_data" version="1.0">
               <Email>data@accessibiity.org.uk</Email>
             </DataSource>
@@ -592,14 +593,17 @@
                 <Level id="tbd:9100WIMBLDN@Lvl_G0" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Ground </Name>
                   <PublicCode>G</PublicCode>
+                  <RelativeLevelOrder>0</RelativeLevelOrder>
                 </Level>
                 <Level id="tbd:9100WIMBLDN@Lvl_PL" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform Level</Name>
                   <PublicCode>PL</PublicCode>
+                  <RelativeLevelOrder>-1</RelativeLevelOrder>
                 </Level>
                 <Level id="tbd:9100WIMBLDN@Lvl_ST" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Street Level</Name>
                   <PublicCode>ST</PublicCode>
+                  <RelativeLevelOrder>1</RelativeLevelOrder>
                 </Level>
               </levels>
               <entrances>
@@ -4651,7 +4655,7 @@
                   <equipmentPlaces>
                     <EquipmentPlace id="tbd:4900ZZLUWIM3n4" created="2010-05-17T09:30:47Z" version="001">
                       <equipmentPositions>
-                        <EquipmentPosition id="tbd:4900ZZLUWIM3n4" dataSourceRef="tbd:accessibility_data" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" version="001">
+                        <EquipmentPosition id="tbd:4900ZZLUWIM3n4" dataSourceRef="tbd:accessibility_data" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" version="1.0">
                           <EquipmentRef version="any" ref="tbd:4900ZZLUWIM3n4_Eq-Seats1"/>
                           <Description>Seats on Platform 1 and 2. "0 metres from Platform entrance</Description>
                           <ReferencePointRef version="001" ref="tbd:9100WIMBLDN@5n6-EL1p"/>
@@ -5559,7 +5563,7 @@
                 <TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <OperatingOrganisationView>
-                <OrganisationRef version="any" ref="tfl:TfL"/>
+                <AuthorityRef version="any" ref="tfl:TfL"/>
                 <Name>Transport for London</Name>
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:910GWIMBLDN" xsi:type="StopPlaceRefStructure"/>
@@ -6266,7 +6270,7 @@
                 <TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <OperatingOrganisationView>
-                <OrganisationRef version="any" ref="tfl:TfL"/>
+                <AuthorityRef version="any" ref="tfl:TfL"/>
                 <Name>Transport for London</Name>
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:490G00272P" xsi:type="StopPlaceRefStructure"/>
@@ -6400,7 +6404,7 @@
                 <TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <OperatingOrganisationView>
-                <OrganisationRef version="any" ref="tfl:TfL"/>
+                <AuthorityRef version="any" ref="tfl:TfL"/>
                 <Name>Transport for London</Name>
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:490G00272P" xsi:type="StopPlaceRefStructure"/>

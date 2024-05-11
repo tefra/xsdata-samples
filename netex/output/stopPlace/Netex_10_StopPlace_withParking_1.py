@@ -27,6 +27,7 @@ from netex.models.assistance_service import AssistanceService
 from netex.models.assisted_boarding_location_enumeration import AssistedBoardingLocationEnumeration
 from netex.models.audible_signals_available import AudibleSignalsAvailable
 from netex.models.authority import Authority
+from netex.models.authority_ref import AuthorityRef
 from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.boarding_position import BoardingPosition
 from netex.models.boarding_position_ref import BoardingPositionRef
@@ -115,7 +116,6 @@ from netex.models.network_frame_topic_structure import NetworkFrameTopicStructur
 from netex.models.organisation_derived_view_structure import OrganisationDerivedViewStructure
 from netex.models.organisation_part import OrganisationPart
 from netex.models.organisation_parts_rel_structure import OrganisationPartsRelStructure
-from netex.models.organisation_ref import OrganisationRef
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
@@ -574,14 +574,14 @@ obj = PublicationDelivery(
                                 data_source=[
                                     DataSource(
                                         id='nptg:NaPTAN',
-                                        version='any',
+                                        version='001',
                                         name=MultilingualString(
                                             value='DfT Naptan database '
                                         )
                                     ),
                                     DataSource(
                                         id='nptg:Xtra_accessibility_data',
-                                        version='any',
+                                        version='001',
                                         name=MultilingualString(
                                             value='Additional accessibility Data '
                                         )
@@ -1764,7 +1764,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -2146,6 +2146,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 door=True,
                                                                 kept_open=True,
+                                                                door_control_element_height=Decimal('0.8'),
                                                                 wheelchair_passable=True
                                                             ),
                                                         ]
@@ -2179,6 +2180,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 door=True,
                                                                 kept_open=True,
+                                                                door_control_element_height=Decimal('0.8'),
                                                                 wheelchair_passable=True
                                                             ),
                                                         ]
@@ -3168,7 +3170,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-                                                                    value=LimitationStatusEnumeration.UNKNOWN
+
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -3330,7 +3332,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-                                                                    value=LimitationStatusEnumeration.UNKNOWN
+
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -3520,7 +3522,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-                                                                    value=LimitationStatusEnumeration.UNKNOWN
+
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -3630,7 +3632,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -3715,7 +3717,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -3794,7 +3796,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -3873,7 +3875,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -9943,7 +9945,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -10176,7 +10178,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -10355,7 +10357,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -10525,7 +10527,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-                                                                    value=LimitationStatusEnumeration.UNKNOWN
+
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -12229,7 +12231,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -12311,7 +12313,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         choice=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OrganisationRef(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                                 version='any',
                                                 ref='nptg:Org_Tfl'
                                             ),
@@ -12485,7 +12487,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -12583,7 +12585,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -12681,7 +12683,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -13980,7 +13982,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         choice=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OrganisationRef(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                                 version='any',
                                                 ref='nptg:Org_Tfl'
                                             ),
@@ -14133,7 +14135,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -14266,7 +14268,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         choice=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OrganisationRef(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                                 version='any',
                                                 ref='nptg:Org_Tfl'
                                             ),

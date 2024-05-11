@@ -354,7 +354,7 @@ The Calendar is shown coded as
             </ServicePattern>
           </servicePatterns>
           <stopAssignments>
-            <FlexibleStopAssignment id="hde:fsa_SSP_077+fsp_Sigma" version="any">
+            <FlexibleStopAssignment id="hde:fsa_SSP_077+fsp_Sigma" version="any" order="1">
               <Description lang="en">Assigns Charley to Tau Zone </Description>
               <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
               <FlexibleStopPlaceRef version="any" ref="mybus:fsp_Tau"/>
@@ -536,13 +536,13 @@ The Calendar is shown coded as
             <ServiceJourney id="hde:sj_24o@01" version="any">
               <journeyAccountings>
                 <JourneyAccounting id="mytim:sj_24o@01_01" version="any" order="1">
-                  <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
+                  <AuthorityRef ref="txc:xshire" versionRef="EXTERNAL"/>
                   <AccountingType>subsidy</AccountingType>
                   <Partial>false</Partial>
                   <Distance>20</Distance>
                 </JourneyAccounting>
                 <JourneyAccounting id="mytim:sj_24o@01_02" version="any" order="2">
-                  <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
+                  <AuthorityRef ref="txc:xshire" versionRef="EXTERNAL"/>
                   <AccountingType>contract</AccountingType>
                   <Partial>false</Partial>
                   <Distance>20</Distance>

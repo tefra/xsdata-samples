@@ -305,7 +305,7 @@
                 </languages>
               </Locale>
               <OperatingOrganisationView>
-                <OrganisationRef version="any" ref="noc:nr001"/>
+                <GeneralOrganisationRef version="any" ref="noc:nr001"/>
                 <Name>Network Rail</Name>
               </OperatingOrganisationView>
               <levels>
@@ -737,7 +737,7 @@
                 <TimeZone>GMT</TimeZone>
               </Locale>
               <OperatingOrganisationView>
-                <OrganisationRef version="any" ref="noc:nr001"/>
+                <GeneralOrganisationRef version="any" ref="noc:nr001"/>
                 <Name>Network Rail</Name>
               </OperatingOrganisationView>
               <levels>

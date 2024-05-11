@@ -688,13 +688,13 @@ The Calendar is shown coded as
             <ServiceJourney id="hde:sj_24o_01" version="any">
               <journeyAccountings>
                 <JourneyAccounting id="mytim:ac02" version="any" order="1">
-                  <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
+                  <AuthorityRef ref="txc:xshire" versionRef="EXTERNAL"/>
                   <AccountingType>subsidy</AccountingType>
                   <Partial>false</Partial>
                   <Distance>20</Distance>
                 </JourneyAccounting>
                 <JourneyAccounting id="mytim:ac03" version="any" order="2">
-                  <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
+                  <AuthorityRef ref="txc:xshire" versionRef="EXTERNAL"/>
                   <AccountingType>contract</AccountingType>
                   <Partial>false</Partial>
                   <Distance>20</Distance>

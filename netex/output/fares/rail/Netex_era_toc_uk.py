@@ -18529,7 +18529,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        polygon=Polygon(
+                                        polygon_or_multi_surface=Polygon(
                                             id='IPSWICH',
                                             srs_name='UKOS',
                                             exterior=Exterior(
@@ -18610,7 +18610,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        polygon=Polygon(
+                                        polygon_or_multi_surface=Polygon(
                                             id='NORWICH',
                                             srs_name='UKOS',
                                             exterior=Exterior(
@@ -18691,7 +18691,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        polygon=Polygon(
+                                        polygon_or_multi_surface=Polygon(
                                             id='LOWESTOFT',
                                             srs_name='UKOS',
                                             exterior=Exterior(

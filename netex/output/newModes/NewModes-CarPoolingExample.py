@@ -451,7 +451,7 @@ obj = PublicationDelivery(
                         ref='ryd_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version='any',
+                        version='1.0',
                         ref='rd:ryde'
                     ),
                     default_currency='GBP'
@@ -479,7 +479,7 @@ obj = PublicationDelivery(
                                 data_source=[
                                     DataSource(
                                         id='rd:ryde',
-                                        version='any',
+                                        version='1.0',
                                         email='feedback@ryde.eu',
                                         data_licence_code=ExternalObjectRefStructure(
                                             type_value='SPX',

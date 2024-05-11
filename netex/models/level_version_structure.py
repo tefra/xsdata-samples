@@ -61,6 +61,14 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    relative_level_order: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "RelativeLevelOrder",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     accessibility_assessment: Optional[
         AccessibilityAssessmentVersionedChildStructure
     ] = field(

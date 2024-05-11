@@ -3,7 +3,7 @@ from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleMo
 from netex.models.arrival_structure import ArrivalStructure
 from netex.models.assistance_facility_enumeration import AssistanceFacilityEnumeration
 from netex.models.assistance_facility_list import AssistanceFacilityList
-from netex.models.authority_ref_structure import AuthorityRefStructure
+from netex.models.authority_ref import AuthorityRef
 from netex.models.block_ref import BlockRef
 from netex.models.call import Call
 from netex.models.calls_rel_structure import CallsRelStructure
@@ -1261,9 +1261,9 @@ obj = PublicationDelivery(
                                                     id='mytim:ac02',
                                                     version='any',
                                                     order=1,
-                                                    organisation_ref=AuthorityRefStructure(
-                                                        value='EXTERNAL',
-                                                        ref='txc:xshire'
+                                                    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
+                                                        ref='txc:xshire',
+                                                        version_ref='EXTERNAL'
                                                     ),
                                                     accounting_type=JourneyAccountingEnumeration.SUBSIDY,
                                                     partial=[
@@ -1275,9 +1275,9 @@ obj = PublicationDelivery(
                                                     id='mytim:ac03',
                                                     version='any',
                                                     order=2,
-                                                    organisation_ref=AuthorityRefStructure(
-                                                        value='EXTERNAL',
-                                                        ref='txc:xshire'
+                                                    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
+                                                        ref='txc:xshire',
+                                                        version_ref='EXTERNAL'
                                                     ),
                                                     accounting_type=JourneyAccountingEnumeration.CONTRACT,
                                                     partial=[

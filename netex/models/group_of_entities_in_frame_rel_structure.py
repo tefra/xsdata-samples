@@ -31,6 +31,7 @@ from .group_of_places import GroupOfPlaces
 from .group_of_points import GroupOfPoints
 from .group_of_services import GroupOfServices
 from .group_of_single_journeys import GroupOfSingleJourneys
+from .group_of_tariff_zones import GroupOfTariffZones
 from .group_of_timing_links import GroupOfTimingLinks
 from .hail_and_ride_area import HailAndRideArea
 from .headway_journey_group import HeadwayJourneyGroup
@@ -111,6 +112,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             GroupOfOperators,
             GroupOfPlaces,
             GroupOfLinkSequences,
+            GroupOfTariffZones,
             MobilityServiceConstraintZone,
             RoutingConstraintZone,
             StopArea,
@@ -261,6 +263,11 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "GroupOfLinkSequences",
                     "type": GroupOfLinkSequences,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfTariffZones",
+                    "type": GroupOfTariffZones,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

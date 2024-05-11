@@ -158,10 +158,10 @@
         </ServiceCalendarFrame>
         <ResourceFrame id="nptg:SVC01" version="any">
           <dataSources>
-            <DataSource id="nptg:NaPTAN" version="any">
+            <DataSource id="nptg:NaPTAN" version="001">
               <Name>DfT Naptan database </Name>
             </DataSource>
-            <DataSource id="nptg:Xtra_accessibility_data" version="any">
+            <DataSource id="nptg:Xtra_accessibility_data" version="001">
               <Name>Additional accessibility Data </Name>
             </DataSource>
           </dataSources>
@@ -844,6 +844,7 @@
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2b-EI5_e1" version="any">
                       <Door>true</Door>
                       <KeptOpen>true</KeptOpen>
+                      <DoorControlElementHeight>0.8</DoorControlElementHeight>
                       <WheelchairPassable>true</WheelchairPassable>
                     </EntranceEquipment>
                   </placeEquipments>
@@ -862,6 +863,7 @@
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2b-EI6" version="any">
                       <Door>true</Door>
                       <KeptOpen>true</KeptOpen>
+                      <DoorControlElementHeight>0.8</DoorControlElementHeight>
                       <WheelchairPassable>true</WheelchairPassable>
                     </EntranceEquipment>
                   </placeEquipments>
@@ -5641,7 +5643,7 @@
                 <TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <OperatingOrganisationView>
-                <OrganisationRef version="any" ref="nptg:Org_Tfl"/>
+                <AuthorityRef version="any" ref="nptg:Org_Tfl"/>
                 <Name>Transport for London</Name>
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:910GWIMBLDN" xsi:type="StopPlaceRefStructure"/>
@@ -6387,7 +6389,7 @@
                 <TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <OperatingOrganisationView>
-                <OrganisationRef version="any" ref="nptg:Org_Tfl"/>
+                <AuthorityRef version="any" ref="nptg:Org_Tfl"/>
                 <Name>Transport for London</Name>
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:490G00272P" xsi:type="StopPlaceRefStructure"/>
@@ -6521,7 +6523,7 @@
                 <TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <OperatingOrganisationView>
-                <OrganisationRef version="any" ref="nptg:Org_Tfl"/>
+                <AuthorityRef version="any" ref="nptg:Org_Tfl"/>
                 <Name>Transport for London</Name>
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:490G00272P" xsi:type="StopPlaceRefStructure"/>

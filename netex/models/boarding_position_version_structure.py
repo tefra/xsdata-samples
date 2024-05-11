@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from decimal import Decimal
 from typing import Optional
 
 from .boarding_position_type_enumeration import BoardingPositionTypeEnumeration
@@ -33,6 +34,22 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
         default=None,
         metadata={
             "name": "boardingPositionEntrances",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    platform_height: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "PlatformHeight",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    edge_to_track_center_distance: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "EdgeToTrackCenterDistance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

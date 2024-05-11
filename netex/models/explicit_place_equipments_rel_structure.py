@@ -8,6 +8,7 @@ from .escalator_equipment import EscalatorEquipment
 from .general_sign_structure import GeneralSignStructure
 from .heading_sign_structure import HeadingSignStructure
 from .help_point_equipment import HelpPointEquipment
+from .lift_call_equipment import LiftCallEquipment
 from .lift_equipment import LiftEquipment
 from .other_place_equipment import OtherPlaceEquipment
 from .passenger_safety_equipment import PassengerSafetyEquipment
@@ -38,6 +39,7 @@ class ExplicitPlaceEquipmentsRelStructure(ContainmentAggregationStructure):
             EntranceEquipment,
             StaircaseEquipment,
             LiftEquipment,
+            LiftCallEquipment,
             EscalatorEquipment,
             TravelatorEquipment,
             RampEquipment,
@@ -82,6 +84,11 @@ class ExplicitPlaceEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "LiftEquipment",
                     "type": LiftEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LiftCallEquipment",
+                    "type": LiftCallEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

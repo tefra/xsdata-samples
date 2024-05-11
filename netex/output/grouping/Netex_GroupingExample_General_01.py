@@ -6,6 +6,8 @@ from netex.models.codespaces_rel_structure import CodespacesRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.general_group_of_entities import GeneralGroupOfEntities
 from netex.models.group_of_entities_in_frame_rel_structure import GroupOfEntitiesInFrameRelStructure
+from netex.models.group_of_tariff_zones import GroupOfTariffZones
+from netex.models.groups_of_tariff_zones_in_frame_rel_structure import GroupsOfTariffZonesInFrameRelStructure
 from netex.models.multilingual_string import MultilingualString
 from netex.models.object_refs_rel_structure import ObjectRefsRelStructure
 from netex.models.participant_ref import ParticipantRef
@@ -16,6 +18,9 @@ from netex.models.purpose_of_grouping_ref import PurposeOfGroupingRef
 from netex.models.resource_frame import ResourceFrame
 from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
 from netex.models.service_link_ref import ServiceLinkRef
+from netex.models.site_frame import SiteFrame
+from netex.models.tariff_zone_ref import TariffZoneRef
+from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.types_of_value_in_frame_rel_structure import TypesOfValueInFrameRelStructure
 from netex.models.types_of_value_structure import TypesOfValueStructure
 from netex.models.value_set import ValueSet
@@ -119,6 +124,46 @@ obj = PublicationDelivery(
                                     ),
                                     ServiceLinkRef(
                                         ref='mybus:SL_AtoB01'
+                                    ),
+                                ]
+                            )
+                        ),
+                    ]
+                )
+            ),
+            SiteFrame(
+                id='mybus:ExampleGroupOfTariffZones',
+                version='any',
+                groups_of_tariff_zones=GroupsOfTariffZonesInFrameRelStructure(
+                    group_of_tariff_zones=[
+                        GroupOfTariffZones(
+                            id='mybus:InnerOslo',
+                            version='any',
+                            members=TariffZoneRefsRelStructure(
+                                tariff_zone_ref=[
+                                    TariffZoneRef(
+                                        ref='mybus:ZoneA',
+                                        version_ref='EXTERNAL'
+                                    ),
+                                    TariffZoneRef(
+                                        ref='mybus:ZoneB',
+                                        version_ref='EXTERNAL'
+                                    ),
+                                ]
+                            )
+                        ),
+                        GroupOfTariffZones(
+                            id='mybus:GreaterOslo',
+                            version='any',
+                            members=TariffZoneRefsRelStructure(
+                                tariff_zone_ref=[
+                                    TariffZoneRef(
+                                        ref='mybus:ZoneC',
+                                        version_ref='EXTERNAL'
+                                    ),
+                                    TariffZoneRef(
+                                        ref='mybus:ZoneD',
+                                        version_ref='EXTERNAL'
                                     ),
                                 ]
                             )

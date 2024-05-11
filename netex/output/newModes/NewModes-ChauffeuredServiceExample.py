@@ -374,7 +374,7 @@ obj = PublicationDelivery(
                         ref='hjm_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version='any',
+                        version='1.0',
                         ref='hjm:home_james'
                     ),
                     default_currency='GBP'
@@ -402,7 +402,7 @@ obj = PublicationDelivery(
                                 data_source=[
                                     DataSource(
                                         id='hjm:home_james',
-                                        version='any',
+                                        version='1.0',
                                         email='feedback@homeJames.eu'
                                     ),
                                 ]

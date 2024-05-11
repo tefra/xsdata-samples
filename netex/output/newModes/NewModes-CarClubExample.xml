@@ -38,7 +38,7 @@
       </codespaces>
       <FrameDefaults>
         <DefaultCodespaceRef ref="mc_data"/>
-        <DefaultDataSourceRef version="any" ref="mc:my_car"/>
+        <DefaultDataSourceRef version="1.0" ref="mc:my_car"/>
         <DefaultCurrency>EUR</DefaultCurrency>
       </FrameDefaults>
       <frames>
@@ -52,7 +52,7 @@
             </Codespace>
           </codespaces>
           <dataSources>
-            <DataSource id="mc:my_car" version="any">
+            <DataSource id="mc:my_car" version="1.0">
               <Email>feedback@mycar.com</Email>
             </DataSource>
           </dataSources>

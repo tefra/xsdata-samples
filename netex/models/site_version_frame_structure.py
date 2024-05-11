@@ -20,6 +20,9 @@ from .flexible_stop_places_in_frame_rel_structure import (
 from .groups_of_stop_places_in_frame_rel_structure import (
     GroupsOfStopPlacesInFrameRelStructure,
 )
+from .groups_of_tariff_zones_in_frame_rel_structure import (
+    GroupsOfTariffZonesInFrameRelStructure,
+)
 from .navigation_paths_in_frame_rel_structure import (
     NavigationPathsInFrameRelStructure,
 )
@@ -211,6 +214,16 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
         default=None,
         metadata={
             "name": "tariffZones",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    groups_of_tariff_zones: Optional[
+        GroupsOfTariffZonesInFrameRelStructure
+    ] = field(
+        default=None,
+        metadata={
+            "name": "groupsOfTariffZones",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

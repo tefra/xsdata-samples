@@ -3,6 +3,7 @@ from typing import ForwardRef, List, Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
+from .accepted_driver_permit import AcceptedDriverPermit
 from .access import Access
 from .access_right_in_product import AccessRightInProduct
 from .access_right_parameter_assignment import AccessRightParameterAssignment
@@ -207,6 +208,7 @@ from .group_of_points import GroupOfPoints
 from .group_of_sales_offer_packages import GroupOfSalesOfferPackages
 from .group_of_services import GroupOfServices
 from .group_of_single_journeys import GroupOfSingleJourneys
+from .group_of_tariff_zones import GroupOfTariffZones
 from .group_of_timebands import GroupOfTimebands
 from .group_of_timing_links import GroupOfTimingLinks
 from .group_ticket import GroupTicket
@@ -237,6 +239,7 @@ from .journey_wait_time import JourneyWaitTime
 from .layer import Layer
 from .left_luggage_service import LeftLuggageService
 from .level import Level
+from .lift_call_equipment import LiftCallEquipment
 from .lift_equipment import LiftEquipment
 from .limiting_rule import LimitingRule
 from .limiting_rule_in_context import LimitingRuleInContext
@@ -302,6 +305,7 @@ from .parking_passenger_entrance import ParkingPassengerEntrance
 from .parking_point import ParkingPoint
 from .parking_properties import ParkingProperties
 from .parking_tariff import ParkingTariff
+from .passenger_beacon_equipment import PassengerBeaconEquipment
 from .passenger_carrying_requirement import PassengerCarryingRequirement
 from .passenger_carrying_requirements_view import (
     PassengerCarryingRequirementsView,
@@ -377,6 +381,7 @@ from .residential_qualification_eligibility import (
     ResidentialQualificationEligibility,
 )
 from .resource_frame import ResourceFrame
+from .responsibility_role import ResponsibilityRole
 from .responsibility_set import ResponsibilitySet
 from .restricted_manoeuvre import RestrictedManoeuvre
 from .retail_consortium import RetailConsortium
@@ -531,6 +536,7 @@ from .type_of_concession import TypeOfConcession
 from .type_of_congestion import TypeOfCongestion
 from .type_of_customer_account import TypeOfCustomerAccount
 from .type_of_delivery_variant import TypeOfDeliveryVariant
+from .type_of_driver_permit import TypeOfDriverPermit
 from .type_of_entity import TypeOfEntity
 from .type_of_equipment import TypeOfEquipment
 from .type_of_facility import TypeOfFacility
@@ -598,6 +604,7 @@ from .vehicle_access_credentials_assignment import (
 )
 from .vehicle_charging_equipment import VehicleChargingEquipment
 from .vehicle_equipment_profile import VehicleEquipmentProfile
+from .vehicle_equipment_profile_member import VehicleEquipmentProfileMember
 from .vehicle_journey import VehicleJourney
 from .vehicle_journey_headway import VehicleJourneyHeadway
 from .vehicle_journey_layover import VehicleJourneyLayover
@@ -742,6 +749,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             FareContractSecurityListing,
             CustomerSecurityListing,
             CustomerAccountSecurityListing,
+            VehicleEquipmentProfileMember,
             StairFlight,
             OnboardStay,
             Accommodation,
@@ -941,6 +949,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             FacilityRequirement,
             VehicleManoeuvringRequirement,
             PassengerCarryingRequirement,
+            AcceptedDriverPermit,
             SimpleVehicleType,
             VehicleType,
             TransportType,
@@ -988,6 +997,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             QueueingEquipment,
             EntranceEquipment,
             RampEquipment,
+            LiftCallEquipment,
             LiftEquipment,
             TravelatorEquipment,
             StaircaseEquipment,
@@ -1000,6 +1010,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             SignEquipment,
             PassengerInformationEquipment,
             RubbishDisposalEquipment,
+            PassengerBeaconEquipment,
             HelpPointEquipment,
             PassengerSafetyEquipment,
             SanitaryEquipment,
@@ -1146,6 +1157,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             GroupOfOperators,
             GroupOfPlaces,
             GroupOfLinkSequences,
+            GroupOfTariffZones,
             MobilityServiceConstraintZone,
             RoutingConstraintZone,
             StopArea,
@@ -1202,6 +1214,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             GroupOfPoints,
             Layer,
             GeneralGroupOfEntities,
+            ResponsibilityRole,
             ResponsibilitySet,
             ValueSet,
             TypeOfFleet,
@@ -1222,6 +1235,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             TypeOfServiceFeature,
             Direction,
             TypeOfSecurityList,
+            TypeOfDriverPermit,
             PurposeOfEquipmentProfile,
             TypeOfProductCategory,
             TypeOfPaymentMethod,
@@ -1623,6 +1637,11 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "CustomerAccountSecurityListing",
                     "type": CustomerAccountSecurityListing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleEquipmentProfileMember",
+                    "type": VehicleEquipmentProfileMember,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2621,6 +2640,11 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "AcceptedDriverPermit",
+                    "type": AcceptedDriverPermit,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "SimpleVehicleType",
                     "type": SimpleVehicleType,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -2856,6 +2880,11 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "LiftCallEquipment",
+                    "type": LiftCallEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "LiftEquipment",
                     "type": LiftEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -2913,6 +2942,11 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "RubbishDisposalEquipment",
                     "type": RubbishDisposalEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerBeaconEquipment",
+                    "type": PassengerBeaconEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3646,6 +3680,11 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "GroupOfTariffZones",
+                    "type": GroupOfTariffZones,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "MobilityServiceConstraintZone",
                     "type": MobilityServiceConstraintZone,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -3926,6 +3965,11 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "ResponsibilityRole",
+                    "type": ResponsibilityRole,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "ResponsibilitySet",
                     "type": ResponsibilitySet,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -4023,6 +4067,11 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "TypeOfSecurityList",
                     "type": TypeOfSecurityList,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfDriverPermit",
+                    "type": TypeOfDriverPermit,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -4678,6 +4727,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             FacilityRequirement,
             VehicleManoeuvringRequirement,
             PassengerCarryingRequirement,
+            AcceptedDriverPermit,
             SimpleVehicleType,
             VehicleType,
             TransportType,
@@ -4725,6 +4775,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             QueueingEquipment,
             EntranceEquipment,
             RampEquipment,
+            LiftCallEquipment,
             LiftEquipment,
             TravelatorEquipment,
             StaircaseEquipment,
@@ -4737,6 +4788,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             SignEquipment,
             PassengerInformationEquipment,
             RubbishDisposalEquipment,
+            PassengerBeaconEquipment,
             HelpPointEquipment,
             PassengerSafetyEquipment,
             SanitaryEquipment,
@@ -4883,6 +4935,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             GroupOfOperators,
             GroupOfPlaces,
             GroupOfLinkSequences,
+            GroupOfTariffZones,
             MobilityServiceConstraintZone,
             RoutingConstraintZone,
             StopArea,
@@ -4939,6 +4992,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             GroupOfPoints,
             Layer,
             GeneralGroupOfEntities,
+            ResponsibilityRole,
             ResponsibilitySet,
             ValueSet,
             TypeOfFleet,
@@ -4959,6 +5013,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             TypeOfServiceFeature,
             Direction,
             TypeOfSecurityList,
+            TypeOfDriverPermit,
             PurposeOfEquipmentProfile,
             TypeOfProductCategory,
             TypeOfPaymentMethod,
@@ -5904,6 +5959,11 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "AcceptedDriverPermit",
+                    "type": AcceptedDriverPermit,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "SimpleVehicleType",
                     "type": SimpleVehicleType,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6139,6 +6199,11 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "LiftCallEquipment",
+                    "type": LiftCallEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "LiftEquipment",
                     "type": LiftEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6196,6 +6261,11 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "RubbishDisposalEquipment",
                     "type": RubbishDisposalEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerBeaconEquipment",
+                    "type": PassengerBeaconEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6929,6 +6999,11 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "GroupOfTariffZones",
+                    "type": GroupOfTariffZones,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "MobilityServiceConstraintZone",
                     "type": MobilityServiceConstraintZone,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7209,6 +7284,11 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "ResponsibilityRole",
+                    "type": ResponsibilityRole,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "ResponsibilitySet",
                     "type": ResponsibilitySet,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7306,6 +7386,11 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "TypeOfSecurityList",
                     "type": TypeOfSecurityList,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfDriverPermit",
+                    "type": TypeOfDriverPermit,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

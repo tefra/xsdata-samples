@@ -14,6 +14,8 @@ from netex.models.codespaces_rel_structure import CodespacesRelStructure
 from netex.models.country_ref import CountryRef
 from netex.models.covered_enumeration import CoveredEnumeration
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
+from netex.models.data_source import DataSource
+from netex.models.data_sources_in_frame_rel_structure import DataSourcesInFrameRelStructure
 from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.entity_in_version_structure import AvailabilityCondition
@@ -55,6 +57,7 @@ from netex.models.property_of_day import PropertyOfDay
 from netex.models.public_use_enumeration import PublicUseEnumeration
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
+from netex.models.resource_frame import ResourceFrame
 from netex.models.simple_point_version_structure import SimplePointVersionStructure
 from netex.models.site_entrances_rel_structure import SiteEntrancesRelStructure
 from netex.models.site_facility_set import SiteFacilitySet
@@ -83,6 +86,18 @@ obj = PublicationDelivery(
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
         choice=[
+            ResourceFrame(
+                id='ResourceFrame:RF01',
+                version='any',
+                data_sources=DataSourcesInFrameRelStructure(
+                    data_source=[
+                        DataSource(
+                            id='parkopedia',
+                            version='any'
+                        ),
+                    ]
+                )
+            ),
             SiteFrame(
                 id='SiteFrame:SF01',
                 validity_conditions_or_valid_between=[

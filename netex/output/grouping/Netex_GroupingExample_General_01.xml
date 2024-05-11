@@ -46,6 +46,22 @@
         </GeneralGroupOfEntities>
       </groupsOfEntities>
     </ResourceFrame>
+    <SiteFrame id="mybus:ExampleGroupOfTariffZones" version="any">
+      <groupsOfTariffZones>
+        <GroupOfTariffZones id="mybus:InnerOslo" version="any">
+          <members>
+            <TariffZoneRef ref="mybus:ZoneA" versionRef="EXTERNAL"/>
+            <TariffZoneRef ref="mybus:ZoneB" versionRef="EXTERNAL"/>
+          </members>
+        </GroupOfTariffZones>
+        <GroupOfTariffZones id="mybus:GreaterOslo" version="any">
+          <members>
+            <TariffZoneRef ref="mybus:ZoneC" versionRef="EXTERNAL"/>
+            <TariffZoneRef ref="mybus:ZoneD" versionRef="EXTERNAL"/>
+          </members>
+        </GroupOfTariffZones>
+      </groupsOfTariffZones>
+    </SiteFrame>
   </dataObjects>
 </PublicationDelivery>
 

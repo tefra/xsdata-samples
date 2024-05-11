@@ -25,6 +25,7 @@ from .type_of_concession import TypeOfConcession
 from .type_of_congestion import TypeOfCongestion
 from .type_of_customer_account import TypeOfCustomerAccount
 from .type_of_delivery_variant import TypeOfDeliveryVariant
+from .type_of_driver_permit import TypeOfDriverPermit
 from .type_of_entity import TypeOfEntity
 from .type_of_equipment import TypeOfEquipment
 from .type_of_facility import TypeOfFacility
@@ -107,6 +108,7 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
             TypeOfServiceFeature,
             Direction,
             TypeOfSecurityList,
+            TypeOfDriverPermit,
             PurposeOfEquipmentProfile,
             TypeOfProductCategory,
             TypeOfPaymentMethod,
@@ -260,6 +262,11 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "TypeOfSecurityList",
                     "type": TypeOfSecurityList,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfDriverPermit",
+                    "type": TypeOfDriverPermit,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

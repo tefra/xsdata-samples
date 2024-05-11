@@ -5,6 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 class AccommodationFacilityEnumeration(Enum):
     UNKNOWN = "unknown"
+    STANDING = "standing"
     SEATING = "seating"
     SLEEPER = "sleeper"
     SINGLE_SLEEPER = "singleSleeper"
@@ -20,4 +21,5 @@ class AccommodationFacilityEnumeration(Enum):
     RECREATION_AREA = "recreationArea"
     PANORAMA_COACH = "panoramaCoach"
     PULLMAN_COACH = "pullmanCoach"
-    STANDING = "standing"
+    PUSHCHAIR = "pushchair"
+    WHEELCHAIR = "wheelchair"

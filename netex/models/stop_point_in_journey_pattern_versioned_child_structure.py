@@ -22,6 +22,9 @@ from .point_in_link_sequence_versioned_child_structure import (
 from .request_method_type_enumeration import RequestMethodTypeEnumeration
 from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .service_link_ref_structure import ServiceLinkRefStructure
+from .side_in_direction_of_travel_enumeration import (
+    SideInDirectionOfTravelEnumeration,
+)
 from .stop_use_enumeration import StopUseEnumeration
 from .timing_link_ref_structure import TimingLinkRefStructure
 from .vias_rel_structure import ViasRelStructure
@@ -119,6 +122,26 @@ class StopPointInJourneyPatternVersionedChildStructure(
         default=None,
         metadata={
             "name": "ForBoarding",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    alighting_side_in_direction_of_travel: Optional[
+        SideInDirectionOfTravelEnumeration
+    ] = field(
+        default=None,
+        metadata={
+            "name": "AlightingSideInDirectionOfTravel",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    boarding_side_in_direction_of_travel: Optional[
+        SideInDirectionOfTravelEnumeration
+    ] = field(
+        default=None,
+        metadata={
+            "name": "BoardingSideInDirectionOfTravel",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

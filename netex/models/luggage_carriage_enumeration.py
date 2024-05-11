@@ -17,4 +17,5 @@ class LuggageCarriageEnumeration(Enum):
     CYCLES_ALLOWED_IN_VAN = "cyclesAllowedInVan"
     CYCLES_ALLOWED_IN_CARRIAGE = "cyclesAllowedInCarriage"
     CYCLES_ALLOWED_WITH_RESERVATION = "cyclesAllowedWithReservation"
+    PUSHCHAIRS_ALLOWED = "pushchairsAllowed"
     VEHICLE_TRANSPORT = "vehicleTransport"

@@ -14,10 +14,18 @@ class SeatingEquipmentVersionStructure(WaitingEquipmentVersionStructure):
     class Meta:
         name = "SeatingEquipment_VersionStructure"
 
-    armrest: Optional[bool] = field(
+    arm_rest: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "Armrest",
+            "name": "ArmRest",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    back_rest: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "BackRest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

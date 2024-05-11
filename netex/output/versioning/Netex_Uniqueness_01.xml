@@ -40,7 +40,7 @@
                   </operatingDays>
                 </AvailabilityCondition>
                 <ValidDuring id="bar:foo" version="001"/>
-                <ValidBetween id="bar:foo" version="001"/>
+                <ValidBetween id="bar:foo2" version="001"/>
               </validityConditions>
               <alternativeTexts>
                 <AlternativeText id="bar:foo" version="001" attributeName="Name" order="1">

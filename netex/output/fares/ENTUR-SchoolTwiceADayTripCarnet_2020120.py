@@ -21,6 +21,8 @@ from netex.models.customer_purchase_parameter_assignments_rel_structure import C
 from netex.models.customer_ref import CustomerRef
 from netex.models.customers_in_frame_rel_structure import CustomersInFrameRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
+from netex.models.data_source import DataSource
+from netex.models.data_sources_in_frame_rel_structure import DataSourcesInFrameRelStructure
 from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
 from netex.models.day_type_assignment import DayTypeAssignment
 from netex.models.day_type_assignments_in_frame_rel_structure import DayTypeAssignmentsInFrameRelStructure
@@ -75,6 +77,7 @@ from netex.models.refund_type_enumeration import RefundTypeEnumeration
 from netex.models.refunding import Refunding
 from netex.models.replacing import Replacing
 from netex.models.resell_type_enumeration import ResellTypeEnumeration
+from netex.models.resource_frame import ResourceFrame
 from netex.models.sales_offer_package import SalesOfferPackage
 from netex.models.sales_offer_package_element import SalesOfferPackageElement
 from netex.models.sales_offer_package_elements_rel_structure import SalesOfferPackageElementsRelStructure
@@ -134,6 +137,18 @@ obj = PublicationDelivery(
                 version='1',
                 frames=FramesRelStructure(
                     common_frame=[
+                        ResourceFrame(
+                            id='ENT:1',
+                            version='1',
+                            data_sources=DataSourcesInFrameRelStructure(
+                                data_source=[
+                                    DataSource(
+                                        id='ENT:fare_data',
+                                        version='1'
+                                    ),
+                                ]
+                            )
+                        ),
                         FareFrame(
                             id='ENT:1',
                             version='1',

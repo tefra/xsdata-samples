@@ -36,6 +36,7 @@ from .heading_sign_ref import HeadingSignRef
 from .help_point_equipment_ref import HelpPointEquipmentRef
 from .hire_service_ref import HireServiceRef
 from .left_luggage_service_ref import LeftLuggageServiceRef
+from .lift_call_equipment_ref import LiftCallEquipmentRef
 from .lift_equipment_ref import LiftEquipmentRef
 from .local_service_ref import LocalServiceRef
 from .lost_property_service_ref import LostPropertyServiceRef
@@ -44,6 +45,7 @@ from .luggage_service_ref import LuggageServiceRef
 from .meeting_point_service_ref import MeetingPointServiceRef
 from .money_service_ref import MoneyServiceRef
 from .online_service_ref import OnlineServiceRef
+from .passenger_beacon_equipment_ref import PassengerBeaconEquipmentRef
 from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment_ref import (
     PassengerInformationEquipmentRef,
@@ -216,6 +218,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             QueueingEquipmentRef,
             TravelatorEquipmentRef,
             EscalatorEquipmentRef,
+            LiftCallEquipmentRef,
             LiftEquipmentRef,
             CrossingEquipmentRef,
             RampEquipmentRef,
@@ -225,6 +228,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             PlaceSignRef,
             SignEquipmentRef,
             RubbishDisposalEquipmentRef,
+            PassengerBeaconEquipmentRef,
             HelpPointEquipmentRef,
             PassengerSafetyEquipmentRef,
             SanitaryEquipmentRef,
@@ -460,6 +464,11 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "LiftCallEquipmentRef",
+                    "type": LiftCallEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "LiftEquipmentRef",
                     "type": LiftEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -502,6 +511,11 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                 {
                     "name": "RubbishDisposalEquipmentRef",
                     "type": RubbishDisposalEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerBeaconEquipmentRef",
+                    "type": PassengerBeaconEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -79,6 +79,7 @@ from netex.models.fare_classes import FareClasses
 from netex.models.fuel_type_enumeration import FuelTypeEnumeration
 from netex.models.gender_limitation_enumeration import GenderLimitationEnumeration
 from netex.models.general_organisation import GeneralOrganisation
+from netex.models.general_organisation_ref import GeneralOrganisationRef
 from netex.models.general_version_frame_structure import CompositeFrame
 from netex.models.general_version_frame_structure import FramesRelStructure
 from netex.models.group_of_services import GroupOfServices
@@ -143,7 +144,6 @@ from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
 from netex.models.operator_view import OperatorView
 from netex.models.organisation_derived_view_structure import OrganisationDerivedViewStructure
-from netex.models.organisation_ref import OrganisationRef
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.participant_ref import ParticipantRef
@@ -823,7 +823,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -886,7 +886,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         choice=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OrganisationRef(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=GeneralOrganisationRef(
                                                 version='any',
                                                 ref='noc:nr001'
                                             ),
@@ -1919,7 +1919,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -2032,7 +2032,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -2068,7 +2068,7 @@ obj = PublicationDelivery(
                                             time_zone='GMT'
                                         ),
                                         choice=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OrganisationRef(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=GeneralOrganisationRef(
                                                 version='any',
                                                 ref='noc:nr001'
                                             ),

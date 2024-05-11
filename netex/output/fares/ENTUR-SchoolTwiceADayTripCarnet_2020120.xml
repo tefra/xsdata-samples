@@ -7,6 +7,11 @@
   <dataObjects>
     <CompositeFrame id="ENT:school_carnet:38" dataSourceRef="ENT:fare_data" version="1">
       <frames>
+        <ResourceFrame id="ENT:1" version="1">
+          <dataSources>
+            <DataSource id="ENT:fare_data" version="1"/>
+          </dataSources>
+        </ResourceFrame>
         <FareFrame id="ENT:1" version="1">
           <tariffs>
             <Tariff id="ENT:school_carnet:380" version="1">

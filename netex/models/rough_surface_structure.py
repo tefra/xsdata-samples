@@ -18,6 +18,14 @@ class RoughSurfaceStructure(AccessEquipmentVersionStructure):
             "required": True,
         },
     )
+    visual_contrast: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "VisualContrast",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     suitable_for_cycles: Optional[bool] = field(
         default=None,
         metadata={

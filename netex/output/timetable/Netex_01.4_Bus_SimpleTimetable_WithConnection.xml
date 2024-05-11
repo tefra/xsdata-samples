@@ -298,7 +298,7 @@
             </Connection>
           </connections>
           <stopAssignments>
-            <FlexibleStopAssignment id="hde:fsa_SSP_021+fsp_Quebec" version="any">
+            <FlexibleStopAssignment id="hde:fsa_SSP_021+fsp_Quebec" version="any" order="1">
               <Description lang="en">Assigns   Quebec  to flexibleHail and ride section</Description>
               <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
               <FlexibleStopPlaceRef version="any" ref="mybus:fsp_Quebec"/>

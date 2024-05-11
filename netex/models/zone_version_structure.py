@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 
 from .group_of_points_version_structure import GroupOfPointsVersionStructure
+from .multi_surface import MultiSurface
 from .polygon import Polygon
 from .projections_rel_structure import ProjectionsRelStructure
 from .simple_point_version_structure import SimplePointVersionStructure
@@ -31,12 +32,22 @@ class ZoneVersionStructure(GroupOfPointsVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    polygon: Optional[Polygon] = field(
+    polygon_or_multi_surface: Optional[Union[Polygon, MultiSurface]] = field(
         default=None,
         metadata={
-            "name": "Polygon",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "Polygon",
+                    "type": Polygon,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "MultiSurface",
+                    "type": MultiSurface,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+            ),
         },
     )
     projections: Optional[ProjectionsRelStructure] = field(

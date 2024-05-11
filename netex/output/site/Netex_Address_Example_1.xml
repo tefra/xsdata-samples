@@ -8,6 +8,11 @@
   </PublicationRequest>
   <PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
   <dataObjects>
+    <ResourceFrame id="ResourceFrame:RF01" version="any">
+      <dataSources>
+        <DataSource id="parkopedia" version="any"/>
+      </dataSources>
+    </ResourceFrame>
     <SiteFrame id="SiteFrame:SF01" version="any">
       <validityConditions>
         <AvailabilityCondition id="mysite:PP01_OpeningHours" version="any">

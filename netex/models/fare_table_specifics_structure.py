@@ -33,6 +33,7 @@ from .heading_sign_ref import HeadingSignRef
 from .help_point_equipment_ref import HelpPointEquipmentRef
 from .hire_service_ref import HireServiceRef
 from .left_luggage_service_ref import LeftLuggageServiceRef
+from .lift_call_equipment_ref import LiftCallEquipmentRef
 from .lift_equipment_ref import LiftEquipmentRef
 from .line_ref import LineRef
 from .local_service_ref import LocalServiceRef
@@ -45,6 +46,7 @@ from .network_ref import NetworkRef
 from .online_service_ref import OnlineServiceRef
 from .operator_ref import OperatorRef
 from .parking_ref import ParkingRef
+from .passenger_beacon_equipment_ref import PassengerBeaconEquipmentRef
 from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment_ref import (
     PassengerInformationEquipmentRef,
@@ -421,6 +423,7 @@ class FareTableSpecificsStructure:
             QueueingEquipmentRef,
             TravelatorEquipmentRef,
             EscalatorEquipmentRef,
+            LiftCallEquipmentRef,
             LiftEquipmentRef,
             CrossingEquipmentRef,
             RampEquipmentRef,
@@ -430,6 +433,7 @@ class FareTableSpecificsStructure:
             PlaceSignRef,
             SignEquipmentRef,
             RubbishDisposalEquipmentRef,
+            PassengerBeaconEquipmentRef,
             HelpPointEquipmentRef,
             PassengerSafetyEquipmentRef,
             SanitaryEquipmentRef,
@@ -665,6 +669,11 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "LiftCallEquipmentRef",
+                    "type": LiftCallEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "LiftEquipmentRef",
                     "type": LiftEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -707,6 +716,11 @@ class FareTableSpecificsStructure:
                 {
                     "name": "RubbishDisposalEquipmentRef",
                     "type": RubbishDisposalEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerBeaconEquipmentRef",
+                    "type": PassengerBeaconEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

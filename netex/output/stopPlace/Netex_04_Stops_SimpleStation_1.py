@@ -564,7 +564,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -1068,7 +1068,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.FALSE
@@ -1205,7 +1205,7 @@ obj = PublicationDelivery(
                                                                     value=LimitationStatusEnumeration.TRUE
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-                                                                    value=LimitationStatusEnumeration.UNKNOWN
+
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
                                                                     value=LimitationStatusEnumeration.TRUE
@@ -1967,7 +1967,7 @@ obj = PublicationDelivery(
 
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
 
@@ -2040,7 +2040,7 @@ obj = PublicationDelivery(
 
                                                                 ),
                                                                 audible_signals_available=AudibleSignalsAvailable(
-
+                                                                    value=LimitationStatusEnumeration.FALSE
                                                                 ),
                                                                 visual_signs_available=VisualSignsAvailable(
 

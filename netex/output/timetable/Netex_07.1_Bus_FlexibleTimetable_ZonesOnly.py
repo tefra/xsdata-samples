@@ -175,7 +175,7 @@ obj = PublicationDelivery(
                                                             precision=Decimal('12')
                                                         )
                                                     ),
-                                                    polygon=Polygon(
+                                                    polygon_or_multi_surface=Polygon(
                                                         id='a1234',
                                                         srs_name='wgs84',
                                                         exterior=Exterior(
@@ -266,7 +266,7 @@ obj = PublicationDelivery(
                                                             precision=Decimal('12')
                                                         )
                                                     ),
-                                                    polygon=Polygon(
+                                                    polygon_or_multi_surface=Polygon(
                                                         id='b1234',
                                                         srs_name='wgs84',
                                                         exterior=Exterior(
@@ -323,7 +323,7 @@ obj = PublicationDelivery(
                                                             precision=Decimal('12')
                                                         )
                                                     ),
-                                                    polygon=Polygon(
+                                                    polygon_or_multi_surface=Polygon(
                                                         id='c1234',
                                                         srs_name='wgs84',
                                                         exterior=Exterior(

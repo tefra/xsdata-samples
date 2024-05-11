@@ -5,6 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 class NuisanceFacilityEnumeration(Enum):
     UNKNOWN = "unknown"
+    OTHER = "other"
     SMOKING = "smoking"
     NO_SMOKING = "noSmoking"
     FAMILY_AREA = "familyArea"

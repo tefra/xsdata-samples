@@ -1,4 +1,6 @@
 from decimal import Decimal
+from netex.models.accepted_driver_permit import AcceptedDriverPermit
+from netex.models.accepted_driver_permits_rel_structure import AcceptedDriverPermitsRelStructure
 from netex.models.access_right_in_product import AccessRightInProduct
 from netex.models.access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
 from netex.models.account_status_type_enumeration import AccountStatusTypeEnumeration
@@ -293,6 +295,8 @@ from netex.models.travel_specification_summary_endpoint_structure import TravelS
 from netex.models.travel_specification_summary_view import TravelSpecificationSummaryView
 from netex.models.travel_specifications_rel_structure import TravelSpecificationsRelStructure
 from netex.models.type_of_access_right_assignment_ref import TypeOfAccessRightAssignmentRef
+from netex.models.type_of_driver_permit import TypeOfDriverPermit
+from netex.models.type_of_driver_permit_ref import TypeOfDriverPermitRef
 from netex.models.type_of_equipment import TypeOfEquipment
 from netex.models.type_of_equipment_ref import TypeOfEquipmentRef
 from netex.models.type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
@@ -327,6 +331,8 @@ from netex.models.vehicle_access_credentials_assignment import VehicleAccessCred
 from netex.models.vehicle_access_credentials_assignment_ref import VehicleAccessCredentialsAssignmentRef
 from netex.models.vehicle_equipmen_profiles_in_frame_rel_structure import VehicleEquipmenProfilesInFrameRelStructure
 from netex.models.vehicle_equipment_profile import VehicleEquipmentProfile
+from netex.models.vehicle_equipment_profile_member import VehicleEquipmentProfileMember
+from netex.models.vehicle_equipment_profile_members_rel_structure import VehicleEquipmentProfileMembersRelStructure
 from netex.models.vehicle_equipment_profile_refs_rel_structure import VehicleEquipmentProfileRefsRelStructure
 from netex.models.vehicle_model import VehicleModel
 from netex.models.vehicle_model_profiles_in_frame_rel_structure import VehicleModelProfilesInFrameRelStructure
@@ -367,7 +373,7 @@ obj = PublicationDelivery(
             value='SYS002'
         ),
         description=MultilingualString(
-            value='Request for Metrobike 1  tariff'
+            value='Request for Metrobike 1 tariff'
         ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
@@ -422,10 +428,10 @@ obj = PublicationDelivery(
                 version='1.0',
                 responsibility_set_ref_attribute='mb:tariffs',
                 name=MultilingualString(
-                    value='Cycle Sharing  Example'
+                    value='Cycle Sharing Example'
                 ),
                 description=MultilingualString(
-                    value='This is an example showing how one might encode   a cycle sharings scheme " Metrobike"  in NeTEx.  It includes some  prices.'
+                    value='This is an example showing how one might encode a cycle sharings scheme " Metrobike" in NeTEx. It includes some prices.'
                 ),
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
@@ -439,7 +445,7 @@ obj = PublicationDelivery(
                         ref='mb_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version='any',
+                        version='1.0',
                         ref='mb:metrobike'
                     ),
                     default_currency='EUR'
@@ -451,7 +457,7 @@ obj = PublicationDelivery(
                             version='1.0',
                             responsibility_set_ref_attribute='mb:network_data',
                             name=MultilingualString(
-                                value='Metrobike Operator specific  common resources'
+                                value='Metrobike Operator specific common resources'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
@@ -467,7 +473,7 @@ obj = PublicationDelivery(
                                 data_source=[
                                     DataSource(
                                         id='mb:metrobike',
-                                        version='any',
+                                        version='1.0',
                                         email='feedback@metrobike.eu'
                                     ),
                                 ]
@@ -554,7 +560,7 @@ obj = PublicationDelivery(
                                         id='BikeEquip',
                                         version='any',
                                         name=MultilingualString(
-                                            value='Bike equimebt'
+                                            value='Bike equipment'
                                         ),
                                         values=TypesOfValueStructure(
                                             type_of_value_or_type_of_entity=[
@@ -565,9 +571,42 @@ obj = PublicationDelivery(
                                                         value='Battery'
                                                     )
                                                 ),
+                                                TypeOfEquipment(
+                                                    id='charger',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='Charger'
+                                                    )
+                                                ),
                                             ]
                                         ),
-                                        class_of_values='TypeOfEequipment'
+                                        class_of_values='TypeOfEquipment'
+                                    ),
+                                    ValueSet(
+                                        id='DriverPermits',
+                                        version='any',
+                                        name=MultilingualString(
+                                            value='Driving licence types'
+                                        ),
+                                        values=TypesOfValueStructure(
+                                            type_of_value_or_type_of_entity=[
+                                                TypeOfDriverPermit(
+                                                    id='ecycle_permit',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='ecycle'
+                                                    )
+                                                ),
+                                                TypeOfDriverPermit(
+                                                    id='car_permit',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='car'
+                                                    )
+                                                ),
+                                            ]
+                                        ),
+                                        class_of_values='TypeOfDriverPermit'
                                     ),
                                 ]
                             ),
@@ -745,7 +784,27 @@ obj = PublicationDelivery(
                                         weight=Decimal('60'),
                                         licence_requirements=LicenceRequirementsEnumeration.NONE,
                                         vehicle_category=SimpleVehicleCategoryEnumeration.CYCLE,
-                                        minimum_age=14
+                                        minimum_age=14,
+                                        accepted_driver_permits=AcceptedDriverPermitsRelStructure(
+                                            accepted_driver_permit=[
+                                                AcceptedDriverPermit(
+                                                    id='electric_cycle@scooter',
+                                                    version='any',
+                                                    type_of_driver_permit_ref=TypeOfDriverPermitRef(
+                                                        version='any',
+                                                        ref='ecycle_permit'
+                                                    )
+                                                ),
+                                                AcceptedDriverPermit(
+                                                    id='electric_cycle@car',
+                                                    version='any',
+                                                    type_of_driver_permit_ref=TypeOfDriverPermitRef(
+                                                        version='any',
+                                                        ref='car_permit'
+                                                    )
+                                                ),
+                                            ]
+                                        )
                                     ),
                                 ]
                             ),
@@ -812,9 +871,33 @@ obj = PublicationDelivery(
                                         id='ebike',
                                         version='any',
                                         units=2,
-                                        type_of_equipment_ref=TypeOfEquipmentRef(
-                                            version='any',
-                                            ref='battery'
+                                        vehicle_equipment_profile_members=VehicleEquipmentProfileMembersRelStructure(
+                                            vehicle_equipment_profile_member=[
+                                                VehicleEquipmentProfileMember(
+                                                    id='ebike@battery',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='Batteries'
+                                                    ),
+                                                    minimum_units=2,
+                                                    type_of_equipment_ref=TypeOfEquipmentRef(
+                                                        version='any',
+                                                        ref='battery'
+                                                    )
+                                                ),
+                                                VehicleEquipmentProfileMember(
+                                                    id='ebike@charger',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='Charger'
+                                                    ),
+                                                    minimum_units=1,
+                                                    type_of_equipment_ref=TypeOfEquipmentRef(
+                                                        version='any',
+                                                        ref='charger'
+                                                    )
+                                                ),
+                                            ]
                                         )
                                     ),
                                     ChargingEquipmentProfile(
@@ -1255,7 +1338,7 @@ obj = PublicationDelivery(
                                                                 id='bike_station_beta_B1@rack',
                                                                 version='any',
                                                                 name=MultilingualString(
-                                                                    value='Ticket Machine   at Bike Station Beta'
+                                                                    value='Ticket Machine at Bike Station Beta'
                                                                 ),
                                                                 ticket_machines=True,
                                                                 number_of_machines=1,
@@ -2034,7 +2117,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Use of zone in peak hours'
                                         ),
-                                        polygon=Polygon(
+                                        polygon_or_multi_surface=Polygon(
                                             id='PB44_A01_B001',
                                             exterior=Exterior(
                                                 linear_ring=LinearRing(
@@ -2207,7 +2290,7 @@ obj = PublicationDelivery(
                                                     id='metrobike@M45+M90',
                                                     version='any',
                                                     name=MultilingualString(
-                                                        value='45 - 90  minutes'
+                                                        value='45 - 90 minutes'
                                                     ),
                                                     duration=XmlDuration("PT45M")
                                                 ),
@@ -2215,7 +2298,7 @@ obj = PublicationDelivery(
                                                     id='metrobike@M90-eachM60',
                                                     version='any',
                                                     name=MultilingualString(
-                                                        value='90 - 600  minutes, per hour'
+                                                        value='90 - 600 minutes, per hour'
                                                     ),
                                                     duration=XmlDuration("PT60M")
                                                 ),
@@ -2223,7 +2306,7 @@ obj = PublicationDelivery(
                                                     id='metrobike@M600+',
                                                     version='any',
                                                     name=MultilingualString(
-                                                        value='More than 5 hours  600  minutes'
+                                                        value='More than 5 hours 600 minutes'
                                                     ),
                                                     duration=XmlDuration("P1D")
                                                 ),
@@ -2589,7 +2672,7 @@ obj = PublicationDelivery(
                                                     id='metrobike@single_session@travel',
                                                     version='any',
                                                     name=MultilingualString(
-                                                        value='Single  ride'
+                                                        value='Single ride'
                                                     ),
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
@@ -2800,7 +2883,7 @@ obj = PublicationDelivery(
                                             ref='myBrand'
                                         ),
                                         name=MultilingualString(
-                                            value='Metrobike one-session purchase from  ticket machine'
+                                            value='Metrobike one-session purchase from ticket machine'
                                         ),
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
@@ -2954,7 +3037,7 @@ obj = PublicationDelivery(
                             version='1.0',
                             responsibility_set_ref_attribute='mb:tariffs',
                             name=MultilingualString(
-                                value='Metrobike  day Pass1'
+                                value='Metrobike day Pass1'
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
@@ -3181,7 +3264,7 @@ obj = PublicationDelivery(
                                                     id='metrobike@day_pass@travel',
                                                     version='any',
                                                     name=MultilingualString(
-                                                        value='Single  ride'
+                                                        value='Single ride'
                                                     ),
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
@@ -3369,7 +3452,7 @@ obj = PublicationDelivery(
                                         id='metrobike',
                                         version='any',
                                         name=MultilingualString(
-                                            value='Metrobike  prices'
+                                            value='Metrobike prices'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
@@ -3482,7 +3565,7 @@ obj = PublicationDelivery(
                                                                             id='metrobike@M90-eachM60',
                                                                             version='any',
                                                                             name=MultilingualString(
-                                                                                value='90 to 600 minutes, charge  per hour e'
+                                                                                value='90 to 600 minutes, charge per hour e'
                                                                             ),
                                                                             amount=Decimal('4.00'),
                                                                             units=Decimal('60'),
@@ -4251,7 +4334,7 @@ obj = PublicationDelivery(
                                                     id='mbt:Anon001@trans069@purchase_single_session@checkout',
                                                     version='any',
                                                     name=MultilingualString(
-                                                        value='Buy Single   ticket Adult'
+                                                        value='Buy Single ticket Adult'
                                                     ),
                                                     date=XmlDateTime(2020, 12, 8, 12, 1, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
@@ -4509,7 +4592,7 @@ obj = PublicationDelivery(
                                                                                 ref='per_hour'
                                                                             ),
                                                                             narrative=MultilingualString(
-                                                                                value='91 minutes  to 600 minutes'
+                                                                                value='91 minutes to 600 minutes'
                                                                             ),
                                                                             id='mbt:Anon001@trans069@purchase_single_session@return',
                                                                             order=2
@@ -4875,7 +4958,7 @@ obj = PublicationDelivery(
                                         changed=XmlDateTime(2020, 12, 8, 14, 47, 0),
                                         version='any',
                                         name=MultilingualString(
-                                            value='Single session cycle  use'
+                                            value='Single session cycle use'
                                         ),
                                         customer_ref=CustomerRef(
                                             ref='mbt:Anon001',
@@ -4932,7 +5015,7 @@ obj = PublicationDelivery(
                                                                             created=XmlDateTime(2020, 12, 8, 14, 47, 0),
                                                                             version='any',
                                                                             name=MultilingualString(
-                                                                                value='Check back in to station  beta_b1_004'
+                                                                                value='Check back in to station beta_b1_004'
                                                                             ),
                                                                             order=1,
                                                                             validity_parameters=ValidityParametersRelStructure(
@@ -5032,7 +5115,7 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2020, 12, 8, 14, 47, 0),
                                                     version='any',
                                                     name=MultilingualString(
-                                                        value='Additional charge  3 + 4'
+                                                        value='Additional charge 3 + 4'
                                                     ),
                                                     amount=Decimal('7.00'),
                                                     customer_purchase_package_ref_or_customer_purchase_package_element_ref=CustomerPurchasePackageRef(

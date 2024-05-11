@@ -33,6 +33,8 @@ from netex.models.congestion_enumeration import CongestionEnumeration
 from netex.models.country_ref import CountryRef
 from netex.models.covered_enumeration import CoveredEnumeration
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
+from netex.models.data_source import DataSource
+from netex.models.data_sources_in_frame_rel_structure import DataSourcesInFrameRelStructure
 from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.direction_of_use_enumeration import DirectionOfUseEnumeration
@@ -168,6 +170,18 @@ obj = PublicationDelivery(
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
         choice=[
+            ResourceFrame(
+                id='mypark:RF01',
+                version='any',
+                data_sources=DataSourcesInFrameRelStructure(
+                    data_source=[
+                        DataSource(
+                            id='parkopedia',
+                            version='any'
+                        ),
+                    ]
+                )
+            ),
             SiteFrame(
                 id='mypark:SF01',
                 validity_conditions_or_valid_between=[
@@ -316,7 +330,7 @@ obj = PublicationDelivery(
                                     srs_name='WGS84'
                                 )
                             ),
-                            polygon=Polygon(
+                            polygon_or_multi_surface=Polygon(
                                 id='PP01_ID_1',
                                 srs_name='wgs84',
                                 srs_dimension=2,
@@ -436,7 +450,7 @@ obj = PublicationDelivery(
                                             value=LimitationStatusEnumeration.TRUE
                                         ),
                                         audible_signals_available=AudibleSignalsAvailable(
-
+                                            value=LimitationStatusEnumeration.FALSE
                                         ),
                                         visual_signs_available=VisualSignsAvailable(
                                             value=LimitationStatusEnumeration.FALSE
@@ -1773,7 +1787,7 @@ obj = PublicationDelivery(
                                                             )
                                                         )
                                                     ),
-                                                    polygon=Polygon(
+                                                    polygon_or_multi_surface=Polygon(
                                                         id='PB44_A01_B001',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
@@ -1909,7 +1923,7 @@ obj = PublicationDelivery(
                                                             )
                                                         )
                                                     ),
-                                                    polygon=Polygon(
+                                                    polygon_or_multi_surface=Polygon(
                                                         id='PB44_A01_B002',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
@@ -2045,7 +2059,7 @@ obj = PublicationDelivery(
                                                             )
                                                         )
                                                     ),
-                                                    polygon=Polygon(
+                                                    polygon_or_multi_surface=Polygon(
                                                         id='def',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
@@ -2235,7 +2249,7 @@ obj = PublicationDelivery(
                                     srs_name='WGS84'
                                 )
                             ),
-                            polygon=Polygon(
+                            polygon_or_multi_surface=Polygon(
                                 id='I1D_12',
                                 srs_name='wgs84',
                                 srs_dimension=2,

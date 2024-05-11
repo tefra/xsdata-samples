@@ -5,6 +5,10 @@ from typing import Optional
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .gradient_enumeration import GradientEnumeration
 from .handrail_enumeration import HandrailEnumeration
+from .ramp_turning_space_position_enumeration import (
+    RampTurningSpacePositionEnumeration,
+)
+from .safety_edge_enumeration import SafetyEdgeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -18,6 +22,14 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "Length",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    maximum_load: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "MaximumLoad",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -46,6 +58,14 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    handrail_type: Optional[HandrailEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "HandrailType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     handrail_height: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -54,10 +74,18 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    handrail_type: Optional[HandrailEnumeration] = field(
+    lower_handrail_height: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "HandrailType",
+            "name": "LowerHandrailHeight",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    tactile_writing: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "TactileWriting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -90,6 +118,30 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "SuitableForCycles",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    rest_stop_distance: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "RestStopDistance",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    safety_edge: Optional[SafetyEdgeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "SafetyEdge",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    turning_space: Optional[RampTurningSpacePositionEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "TurningSpace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

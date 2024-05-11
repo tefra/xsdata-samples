@@ -116,6 +116,7 @@ from .hire_service_ref import HireServiceRef
 from .info_links_rel_structure import InfoLinksRelStructure
 from .interchanging_ref import InterchangingRef
 from .left_luggage_service_ref import LeftLuggageServiceRef
+from .lift_call_equipment_ref import LiftCallEquipmentRef
 from .lift_equipment_ref import LiftEquipmentRef
 from .limiting_rule_ref import LimitingRuleRef
 from .line_ref import LineRef
@@ -142,6 +143,7 @@ from .parking_properties_ref import ParkingPropertiesRef
 from .parking_ref import ParkingRef
 from .parking_tariff_ref import ParkingTariffRef
 from .parking_vehicle_enumeration import ParkingVehicleEnumeration
+from .passenger_beacon_equipment_ref import PassengerBeaconEquipmentRef
 from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment_ref import (
     PassengerInformationEquipmentRef,
@@ -2130,6 +2132,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             QueueingEquipmentRef,
             TravelatorEquipmentRef,
             EscalatorEquipmentRef,
+            LiftCallEquipmentRef,
             LiftEquipmentRef,
             CrossingEquipmentRef,
             RampEquipmentRef,
@@ -2139,6 +2142,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             PlaceSignRef,
             SignEquipmentRef,
             RubbishDisposalEquipmentRef,
+            PassengerBeaconEquipmentRef,
             HelpPointEquipmentRef,
             PassengerSafetyEquipmentRef,
             SanitaryEquipmentRef,
@@ -2374,6 +2378,11 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "LiftCallEquipmentRef",
+                    "type": LiftCallEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "LiftEquipmentRef",
                     "type": LiftEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -2416,6 +2425,11 @@ class CellVersionedChildStructure(VersionedChildStructure):
                 {
                     "name": "RubbishDisposalEquipmentRef",
                     "type": RubbishDisposalEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerBeaconEquipmentRef",
+                    "type": PassengerBeaconEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

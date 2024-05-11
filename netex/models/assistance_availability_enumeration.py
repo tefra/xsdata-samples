@@ -8,4 +8,5 @@ class AssistanceAvailabilityEnumeration(Enum):
     AVAILABLE = "available"
     AVAILABLE_IF_BOOKED = "availableIfBooked"
     AVAILABLE_AT_CERTAIN_TIMES = "availableAtCertainTimes"
+    AVAILABLE_DEPENDENT_ON_JOURNEY = "availableDependentOnJourney"
     UNKNOWN = "unknown"

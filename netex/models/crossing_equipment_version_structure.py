@@ -2,8 +2,11 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
+from .bollard_crossing_enumeration import BollardCrossingEnumeration
 from .crossing_type_enumeration import CrossingTypeEnumeration
+from .marking_status_enumeration import MarkingStatusEnumeration
 from .tactile_warning_strip_enumeration import TactileWarningStripEnumeration
+from .visual_obstacle_enumeration import VisualObstacleEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -89,6 +92,46 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "SuitableForCycles",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    marking_status: Optional[MarkingStatusEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "MarkingStatus",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    vibrating_crossing_aids: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "VibratingCrossingAids",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    bump_crossing: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "BumpCrossing",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    visual_obstacle: Optional[VisualObstacleEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "VisualObstacle",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    bollard_crossing: Optional[BollardCrossingEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "BollardCrossing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

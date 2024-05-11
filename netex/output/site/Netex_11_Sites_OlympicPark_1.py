@@ -31,6 +31,8 @@ from netex.models.country_ref import CountryRef
 from netex.models.covered_enumeration import CoveredEnumeration
 from netex.models.crowding_enumeration import CrowdingEnumeration
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
+from netex.models.data_source import DataSource
+from netex.models.data_sources_in_frame_rel_structure import DataSourcesInFrameRelStructure
 from netex.models.day_type_assignment import DayTypeAssignment
 from netex.models.day_type_assignments_in_frame_rel_structure import DayTypeAssignmentsInFrameRelStructure
 from netex.models.day_type_ref import DayTypeRef
@@ -235,6 +237,18 @@ obj = PublicationDelivery(
                 ),
                 frames=FramesRelStructure(
                     common_frame=[
+                        ResourceFrame(
+                            id='oda:RES_01',
+                            version='any',
+                            data_sources=DataSourcesInFrameRelStructure(
+                                data_source=[
+                                    DataSource(
+                                        id='NaPTAN',
+                                        version='any'
+                                    ),
+                                ]
+                            )
+                        ),
                         ServiceCalendarFrame(
                             id='oda:CAL_01',
                             version='any',
@@ -932,7 +946,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -1140,7 +1154,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -1337,7 +1351,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE
@@ -1528,7 +1542,7 @@ obj = PublicationDelivery(
                                                         value=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     audible_signals_available=AudibleSignalsAvailable(
-
+                                                        value=LimitationStatusEnumeration.FALSE
                                                     ),
                                                     visual_signs_available=VisualSignsAvailable(
                                                         value=LimitationStatusEnumeration.TRUE

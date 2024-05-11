@@ -15,4 +15,7 @@ class PassengerInformationEquipmentEnumeration(Enum):
     NETWORK_STATUS = "networkStatus"
     REAL_TIME_DISRUPTIONS = "realTimeDisruptions"
     REAL_TIME_DEPARTURES = "realTimeDepartures"
+    STATION_MAP = "stationMap"
+    ACOUSTIC_STATION_MAP = "acousticStationMap"
+    TACTILE_STATION_MAP = "tactileStationMap"
     OTHER = "other"

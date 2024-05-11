@@ -38,7 +38,7 @@
       </codespaces>
       <FrameDefaults>
         <DefaultCodespaceRef ref="ryd_data"/>
-        <DefaultDataSourceRef version="any" ref="rd:ryde"/>
+        <DefaultDataSourceRef version="1.0" ref="rd:ryde"/>
         <DefaultCurrency>GBP</DefaultCurrency>
       </FrameDefaults>
       <frames>
@@ -52,7 +52,7 @@
             </Codespace>
           </codespaces>
           <dataSources>
-            <DataSource id="rd:ryde" version="any">
+            <DataSource id="rd:ryde" version="1.0">
               <Email>feedback@ryde.eu</Email>
               <DataLicenceCode type="SPX" ref="GSCYQ"/>
               <DataLicenceUrl>https://opendata.eu/vanilla</DataLicenceUrl>

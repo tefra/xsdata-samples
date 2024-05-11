@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from decimal import Decimal
 from typing import List, Optional, Union
 
 from .access_space_ref import AccessSpaceRef
@@ -268,6 +269,62 @@ class PassengerInformationEquipmentVersionStructure(
         default=None,
         metadata={
             "name": "TypeOfPassengerInformationEquipmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    low_counter_access: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "LowCounterAccess",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    height_of_low_counter: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "HeightOfLowCounter",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    induction_loops: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "InductionLoops",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    tactile_interface_available: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "TactileInterfaceAvailable",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    audio_interface_available: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "AudioInterfaceAvailable",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    disabled_priority: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "DisabledPriority",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    wheelchair_suitable: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "WheelchairSuitable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

@@ -1,7 +1,7 @@
 from decimal import Decimal
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.arrival_structure import ArrivalStructure
-from netex.models.authority_ref_structure import AuthorityRefStructure
+from netex.models.authority_ref import AuthorityRef
 from netex.models.block_ref import BlockRef
 from netex.models.booking_access_enumeration import BookingAccessEnumeration
 from netex.models.booking_method_enumeration import BookingMethodEnumeration
@@ -298,7 +298,7 @@ obj = PublicationDelivery(
                                                             precision=Decimal('12')
                                                         )
                                                     ),
-                                                    polygon=Polygon(
+                                                    polygon_or_multi_surface=Polygon(
                                                         id='b1234',
                                                         srs_name='wgs84',
                                                         exterior=Exterior(
@@ -351,7 +351,7 @@ obj = PublicationDelivery(
                                                             precision=Decimal('12')
                                                         )
                                                     ),
-                                                    polygon=Polygon(
+                                                    polygon_or_multi_surface=Polygon(
                                                         id='c1234',
                                                         srs_name='wgs84',
                                                         exterior=Exterior(
@@ -799,6 +799,7 @@ obj = PublicationDelivery(
                                             value='Assigns Charley to Tau Zone ',
                                             lang='en'
                                         ),
+                                        order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='mybus:SSP_077'
@@ -1254,9 +1255,9 @@ obj = PublicationDelivery(
                                                     id='mytim:sj_24o@01_01',
                                                     version='any',
                                                     order=1,
-                                                    organisation_ref=AuthorityRefStructure(
-                                                        value='EXTERNAL',
-                                                        ref='txc:xshire'
+                                                    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
+                                                        ref='txc:xshire',
+                                                        version_ref='EXTERNAL'
                                                     ),
                                                     accounting_type=JourneyAccountingEnumeration.SUBSIDY,
                                                     partial=[
@@ -1268,9 +1269,9 @@ obj = PublicationDelivery(
                                                     id='mytim:sj_24o@01_02',
                                                     version='any',
                                                     order=2,
-                                                    organisation_ref=AuthorityRefStructure(
-                                                        value='EXTERNAL',
-                                                        ref='txc:xshire'
+                                                    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
+                                                        ref='txc:xshire',
+                                                        version_ref='EXTERNAL'
                                                     ),
                                                     accounting_type=JourneyAccountingEnumeration.CONTRACT,
                                                     partial=[

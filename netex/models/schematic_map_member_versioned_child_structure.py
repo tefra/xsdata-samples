@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 
+from .accepted_driver_permit_ref import AcceptedDriverPermitRef
 from .access_ref import AccessRef
 from .access_right_in_product_ref import AccessRightInProductRef
 from .access_space_ref import AccessSpaceRef
@@ -182,6 +183,7 @@ from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
 from .group_of_services_ref import GroupOfServicesRef
 from .group_of_single_journeys_ref import GroupOfSingleJourneysRef
 from .group_of_stop_places_ref import GroupOfStopPlacesRef
+from .group_of_tariff_zones_ref import GroupOfTariffZonesRef
 from .group_of_timebands_ref import GroupOfTimebandsRef
 from .group_of_timing_links_ref import GroupOfTimingLinksRef
 from .group_ticket_ref import GroupTicketRef
@@ -467,6 +469,7 @@ from .type_of_concession_ref import TypeOfConcessionRef
 from .type_of_congestion_ref import TypeOfCongestionRef
 from .type_of_customer_account_ref import TypeOfCustomerAccountRef
 from .type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
+from .type_of_driver_permit_ref import TypeOfDriverPermitRef
 from .type_of_equipment_ref import TypeOfEquipmentRef
 from .type_of_facility_ref import TypeOfFacilityRef
 from .type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
@@ -528,6 +531,9 @@ from .validity_condition_ref import ValidityConditionRef
 from .validity_rule_parameter_ref import ValidityRuleParameterRef
 from .validity_trigger_ref import ValidityTriggerRef
 from .vehicle_entrance_ref import VehicleEntranceRef
+from .vehicle_equipment_profile_member_ref import (
+    VehicleEquipmentProfileMemberRef,
+)
 from .vehicle_equipment_profile_ref import VehicleEquipmentProfileRef
 from .vehicle_journey_ref import VehicleJourneyRef
 from .vehicle_manoeuvring_requirement_ref import (
@@ -795,6 +801,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             DeliveryVariantRef,
             NoticeRef,
             VehicleProfileRef,
+            VehicleEquipmentProfileMemberRef,
             ChargingEquipmentProfileRef,
             VehicleEquipmentProfileRef,
             VehicleModelRef,
@@ -997,6 +1004,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             FareSectionRef,
             GeneralSectionRef,
             SectionRef,
+            GroupOfTariffZonesRef,
             LogRef,
             GroupOfTimebandsRef,
             PlaceRef,
@@ -1041,6 +1049,8 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             TypeOfActivationRef,
             TypeOfFleetRef,
             DirectionRef,
+            TypeOfDriverPermitRef,
+            AcceptedDriverPermitRef,
             PurposeOfEquipmentProfileRef,
             TypeOfProductCategoryRef,
             TypeOfPaymentMethodRef,
@@ -2150,6 +2160,11 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "VehicleEquipmentProfileMemberRef",
+                    "type": VehicleEquipmentProfileMemberRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "ChargingEquipmentProfileRef",
                     "type": ChargingEquipmentProfileRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -3160,6 +3175,11 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "GroupOfTariffZonesRef",
+                    "type": GroupOfTariffZonesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "LogRef",
                     "type": LogRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -3377,6 +3397,16 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
                 {
                     "name": "DirectionRef",
                     "type": DirectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfDriverPermitRef",
+                    "type": TypeOfDriverPermitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AcceptedDriverPermitRef",
+                    "type": AcceptedDriverPermitRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

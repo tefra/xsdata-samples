@@ -813,6 +813,7 @@ obj = PublicationDelivery(
                                             value='Assigns   Quebec  to flexibleHail and ride section',
                                             lang='en'
                                         ),
+                                        order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='mybus:SSP_021'

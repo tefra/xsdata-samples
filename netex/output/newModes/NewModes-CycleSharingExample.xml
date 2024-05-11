@@ -5,7 +5,7 @@
   <PublicationRequest>
     <RequestTimestamp>2020-12-17T09:30:46Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
-    <Description>Request for Metrobike 1  tariff</Description>
+    <Description>Request for Metrobike 1 tariff</Description>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
@@ -31,19 +31,19 @@
         <FromDate>2020-01-01T00:00:00</FromDate>
         <ToDate>2020-12-31T12:00:00</ToDate>
       </ValidBetween>
-      <Name>Cycle Sharing  Example</Name>
-      <Description>This is an example showing how one might encode   a cycle sharings scheme " Metrobike"  in NeTEx.  It includes some  prices.</Description>
+      <Name>Cycle Sharing Example</Name>
+      <Description>This is an example showing how one might encode a cycle sharings scheme " Metrobike" in NeTEx. It includes some prices.</Description>
       <codespaces>
         <CodespaceRef ref="mb_data"/>
       </codespaces>
       <FrameDefaults>
         <DefaultCodespaceRef ref="mb_data"/>
-        <DefaultDataSourceRef version="any" ref="mb:metrobike"/>
+        <DefaultDataSourceRef version="1.0" ref="mb:metrobike"/>
         <DefaultCurrency>EUR</DefaultCurrency>
       </FrameDefaults>
       <frames>
         <ResourceFrame id="mb:cycle_sharing_example" version="1.0" responsibilitySetRef="mb:network_data">
-          <Name>Metrobike Operator specific  common resources</Name>
+          <Name>Metrobike Operator specific common resources</Name>
           <codespaces>
             <Codespace id="mb_data">
               <Xmlns>mb</Xmlns>
@@ -52,7 +52,7 @@
             </Codespace>
           </codespaces>
           <dataSources>
-            <DataSource id="mb:metrobike" version="any">
+            <DataSource id="mb:metrobike" version="1.0">
               <Email>feedback@metrobike.eu</Email>
             </DataSource>
           </dataSources>
@@ -88,12 +88,26 @@
                 </Branding>
               </values>
             </ValueSet>
-            <ValueSet id="BikeEquip" version="any" classOfValues="TypeOfEequipment">
-              <Name>Bike equimebt</Name>
+            <ValueSet id="BikeEquip" version="any" classOfValues="TypeOfEquipment">
+              <Name>Bike equipment</Name>
               <values>
                 <TypeOfEquipment id="battery" version="any">
                   <Name>Battery</Name>
                 </TypeOfEquipment>
+                <TypeOfEquipment id="charger" version="any">
+                  <Name>Charger</Name>
+                </TypeOfEquipment>
+              </values>
+            </ValueSet>
+            <ValueSet id="DriverPermits" version="any" classOfValues="TypeOfDriverPermit">
+              <Name>Driving licence types</Name>
+              <values>
+                <TypeOfDriverPermit id="ecycle_permit" version="any">
+                  <Name>ecycle</Name>
+                </TypeOfDriverPermit>
+                <TypeOfDriverPermit id="car_permit" version="any">
+                  <Name>car</Name>
+                </TypeOfDriverPermit>
               </values>
             </ValueSet>
           </typesOfValue>
@@ -194,6 +208,14 @@
               <LicenceRequirements>none</LicenceRequirements>
               <VehicleCategory>cycle</VehicleCategory>
               <MinimumAge>14</MinimumAge>
+              <acceptedDriverPermits>
+                <AcceptedDriverPermit id="electric_cycle@scooter" version="any">
+                  <TypeOfDriverPermitRef version="any" ref="ecycle_permit"/>
+                </AcceptedDriverPermit>
+                <AcceptedDriverPermit id="electric_cycle@car" version="any">
+                  <TypeOfDriverPermitRef version="any" ref="car_permit"/>
+                </AcceptedDriverPermit>
+              </acceptedDriverPermits>
             </SimpleVehicleType>
           </vehicleTypes>
           <vehicleModels>
@@ -219,7 +241,18 @@
           <vehicleEquipmentProfiles>
             <VehicleEquipmentProfile id="ebike" version="any">
               <Units>2</Units>
-              <TypeOfEquipmentRef version="any" ref="battery"/>
+              <vehicleEquipmentProfileMembers>
+                <VehicleEquipmentProfileMember id="ebike@battery" version="any">
+                  <Name>Batteries</Name>
+                  <MinimumUnits>2</MinimumUnits>
+                  <TypeOfEquipmentRef version="any" ref="battery"/>
+                </VehicleEquipmentProfileMember>
+                <VehicleEquipmentProfileMember id="ebike@charger" version="any">
+                  <Name>Charger</Name>
+                  <MinimumUnits>1</MinimumUnits>
+                  <TypeOfEquipmentRef version="any" ref="charger"/>
+                </VehicleEquipmentProfileMember>
+              </vehicleEquipmentProfileMembers>
             </VehicleEquipmentProfile>
             <ChargingEquipmentProfile id="ebike_charging" version="any">
               <CouplingType>plug</CouplingType>
@@ -430,7 +463,7 @@
                       <CycleStorageType>docks</CycleStorageType>
                     </CycleStorageEquipment>
                     <TicketingEquipment id="bike_station_beta_B1@rack" version="any">
-                      <Name>Ticket Machine   at Bike Station Beta</Name>
+                      <Name>Ticket Machine at Bike Station Beta</Name>
                       <TicketMachines>true</TicketMachines>
                       <NumberOfMachines>1</NumberOfMachines>
                       <TicketingFacilityList>ticketMachines</TicketingFacilityList>
@@ -808,15 +841,15 @@
                   <Duration>PT45M</Duration>
                 </TimeInterval>
                 <TimeInterval id="metrobike@M45+M90" version="any">
-                  <Name>45 - 90  minutes</Name>
+                  <Name>45 - 90 minutes</Name>
                   <Duration>PT45M</Duration>
                 </TimeInterval>
                 <TimeInterval id="metrobike@M90-eachM60" version="any">
-                  <Name>90 - 600  minutes, per hour</Name>
+                  <Name>90 - 600 minutes, per hour</Name>
                   <Duration>PT60M</Duration>
                 </TimeInterval>
                 <TimeInterval id="metrobike@M600+" version="any">
-                  <Name>More than 5 hours  600  minutes</Name>
+                  <Name>More than 5 hours 600 minutes</Name>
                   <Duration>P1D</Duration>
                 </TimeInterval>
               </timeIntervals>
@@ -972,7 +1005,7 @@
               </ConditionSummary>
               <validableElements>
                 <ValidableElement id="metrobike@single_session@travel" version="any">
-                  <Name>Single  ride</Name>
+                  <Name>Single ride</Name>
                   <fareStructureElements>
                     <FareStructureElementRef version="any" ref="metrobike@single_session@access"/>
                     <FareStructureElementRef version="any" ref="metrobike@single_session@durations"/>
@@ -1054,7 +1087,7 @@
             </SalesOfferPackage>
             <SalesOfferPackage id="metrobike@single_session-SOP@p-ticket" version="any">
               <BrandingRef version="any" ref="myBrand"/>
-              <Name>Metrobike one-session purchase from  ticket machine</Name>
+              <Name>Metrobike one-session purchase from ticket machine</Name>
               <distributionAssignments>
                 <DistributionAssignment id="metrobike@single_session-SOP@p-ticket@onStreet" version="any" order="1">
                   <Name>On street ticket machine</Name>
@@ -1113,7 +1146,7 @@
           </salesOfferPackages>
         </FareFrame>
         <FareFrame id="mb:cycle_sharing_example-day_pass" dataSourceRef="mb:metrobike" version="1.0" responsibilitySetRef="mb:tariffs">
-          <Name>Metrobike  day Pass1</Name>
+          <Name>Metrobike day Pass1</Name>
           <prerequisites>
             <MobilityServiceFrameRef version="1.0" ref="mb:cycle_sharing_example"/>
             <SiteFrameRef version="1.0" ref="mb:cycle_sharing_example"/>
@@ -1208,7 +1241,7 @@
               </ConditionSummary>
               <validableElements>
                 <ValidableElement id="metrobike@day_pass@travel" version="any">
-                  <Name>Single  ride</Name>
+                  <Name>Single ride</Name>
                   <fareStructureElements>
                     <FareStructureElementRef version="any" ref="metrobike@day_pass@access"/>
                     <FareStructureElementRef version="any" ref="metrobike@day_pass@eligibility"/>
@@ -1286,7 +1319,7 @@
           </PricingParameterSet>
           <fareTables>
             <FareTable id="metrobike" version="any">
-              <Name>Metrobike  prices</Name>
+              <Name>Metrobike prices</Name>
               <OperatorRef version="any" ref="noc:MBIKE"/>
               <limitations>
                 <UserProfileRef version="any" ref="notATot"/>
@@ -1331,7 +1364,7 @@
                           <TimeIntervalRef version="any" ref="metrobike@M45+M90"/>
                         </TimeIntervalPrice>
                         <TimeIntervalPrice id="metrobike@M90-eachM60" version="any">
-                          <Name>90 to 600 minutes, charge  per hour e</Name>
+                          <Name>90 to 600 minutes, charge per hour e</Name>
                           <Amount>4.00</Amount>
                           <Units>60</Units>
                           <TimeIntervalRef version="any" ref="metrobike@M90-eachM60"/>
@@ -1681,7 +1714,7 @@
               <CustomerRef ref="mbt:Anon001" versionRef="EXTERNAL"/>
               <fareContractEntries>
                 <SalesTransaction id="mbt:Anon001@trans069@purchase_single_session@checkout" version="any">
-                  <Name>Buy Single   ticket Adult</Name>
+                  <Name>Buy Single ticket Adult</Name>
                   <Date>2020-12-08T12:01:00</Date>
                   <TypeOfFareContractEntryRef ref="fxc:product_purchase" versionRef="EXTERNAL"/>
                   <Amount>2.10</Amount>
@@ -1772,7 +1805,7 @@
                           <AdjustmentAmount>8.00</AdjustmentAmount>
                           <AdjustmentUnits>120</AdjustmentUnits>
                           <PricingRuleRef version="any" ref="per_hour"/>
-                          <Narrative>91 minutes  to 600 minutes</Narrative>
+                          <Narrative>91 minutes to 600 minutes</Narrative>
                         </RuleStepResult>
                       </ruleStepResults>
                       <EndOfValidity>2020-10-08T13:10:00</EndOfValidity>
@@ -1899,7 +1932,7 @@
                 <FromDate>2020-12-08T12:01:00</FromDate>
                 <ToDate>2020-12-08T14:01:00</ToDate>
               </ValidBetween>
-              <Name>Single session cycle  use</Name>
+              <Name>Single session cycle use</Name>
               <CustomerRef ref="mbt:Anon001" versionRef="EXTERNAL"/>
               <customerPurchasePackageElements>
                 <CustomerPurchasePackageElement id="mbt:Anon001@027" created="2020-12-08T12:01:00" version="any" order="1">
@@ -1920,7 +1953,7 @@
                       <MarkedAs>used</MarkedAs>
                       <validityParameterAssignments>
                         <CustomerPurchaseParameterAssignment id="mbt:Anon001@027@002" created="2020-12-08T14:47:00" version="any" order="1">
-                          <Name>Check back in to station  beta_b1_004</Name>
+                          <Name>Check back in to station beta_b1_004</Name>
                           <validityParameters>
                             <MonitoredVehicleSharingParkingBayRef version="any" ref="bike_station_beta_B1@04"/>
                           </validityParameters>
@@ -1953,7 +1986,7 @@
                   <CustomerPurchasePackageRef version="any" ref="mbt:Anon001@027"/>
                 </CustomerPurchasePackagePrice>
                 <CustomerPurchasePackagePrice id="mbt:Anon001@027" created="2020-12-08T14:47:00" version="any">
-                  <Name>Additional charge  3 + 4</Name>
+                  <Name>Additional charge 3 + 4</Name>
                   <Amount>7.00</Amount>
                   <CustomerPurchasePackageRef version="any" ref="mbt:Anon001@027"/>
                 </CustomerPurchasePackagePrice>

@@ -19,9 +19,13 @@ from .heading_sign import HeadingSign
 from .heading_sign_ref import HeadingSignRef
 from .help_point_equipment import HelpPointEquipment
 from .help_point_equipment_ref import HelpPointEquipmentRef
+from .lift_call_equipment import LiftCallEquipment
+from .lift_call_equipment_ref import LiftCallEquipmentRef
 from .lift_equipment import LiftEquipment
 from .lift_equipment_ref import LiftEquipmentRef
 from .luggage_locker_equipment_ref import LuggageLockerEquipmentRef
+from .passenger_beacon_equipment import PassengerBeaconEquipment
+from .passenger_beacon_equipment_ref import PassengerBeaconEquipmentRef
 from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment import PassengerInformationEquipment
 from .passenger_information_equipment_ref import (
@@ -94,6 +98,7 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
             QueueingEquipmentRef,
             TravelatorEquipmentRef,
             EscalatorEquipmentRef,
+            LiftCallEquipmentRef,
             LiftEquipmentRef,
             CrossingEquipmentRef,
             RampEquipmentRef,
@@ -103,6 +108,7 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
             PlaceSignRef,
             SignEquipmentRef,
             RubbishDisposalEquipmentRef,
+            PassengerBeaconEquipmentRef,
             HelpPointEquipmentRef,
             PassengerSafetyEquipmentRef,
             SanitaryEquipmentRef,
@@ -124,6 +130,7 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
             QueueingEquipment,
             EntranceEquipment,
             RampEquipment,
+            LiftCallEquipment,
             LiftEquipment,
             TravelatorEquipment,
             StaircaseEquipment,
@@ -136,6 +143,7 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
             SignEquipment,
             PassengerInformationEquipment,
             RubbishDisposalEquipment,
+            PassengerBeaconEquipment,
             HelpPointEquipment,
             PassengerSafetyEquipment,
             SanitaryEquipment,
@@ -225,6 +233,11 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "LiftCallEquipmentRef",
+                    "type": LiftCallEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "LiftEquipmentRef",
                     "type": LiftEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -267,6 +280,11 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "RubbishDisposalEquipmentRef",
                     "type": RubbishDisposalEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerBeaconEquipmentRef",
+                    "type": PassengerBeaconEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -375,6 +393,11 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "LiftCallEquipment",
+                    "type": LiftCallEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "LiftEquipment",
                     "type": LiftEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -432,6 +455,11 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "RubbishDisposalEquipment",
                     "type": RubbishDisposalEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerBeaconEquipment",
+                    "type": PassengerBeaconEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

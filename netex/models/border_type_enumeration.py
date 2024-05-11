@@ -18,6 +18,7 @@ class BorderTypeEnumeration(Enum):
     SOLID_EDGE = "solidEdge"
     WATER = "water"
     GRAVEL = "gravel"
+    HANDRAIL = "handrail"
     NO_PHYSICAL_BORDER = "noPhysicalBorder"
     OTHER_PHYSICAL_BORDER = "otherPhysicalBorder"
     UNKNOWN = "unknown"

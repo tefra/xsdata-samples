@@ -2,6 +2,9 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 
+from .accepted_driver_permits_rel_structure import (
+    AcceptedDriverPermitsRelStructure,
+)
 from .licence_requirements_enumeration import LicenceRequirementsEnumeration
 from .simple_vehicle_category_enumeration import (
     SimpleVehicleCategoryEnumeration,
@@ -87,4 +90,14 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
+    )
+    accepted_driver_permits: Optional[AcceptedDriverPermitsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "acceptedDriverPermits",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

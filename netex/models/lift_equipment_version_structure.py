@@ -4,6 +4,9 @@ from typing import Optional
 
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .handrail_enumeration import HandrailEnumeration
+from .reached_floor_announcement_enumeration import (
+    ReachedFloorAnnouncementEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -53,6 +56,14 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    internal_height: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "InternalHeight",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     handrail_type: Optional[HandrailEnumeration] = field(
         default=None,
         metadata={
@@ -73,6 +84,14 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "LowerHandrailHeight",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    tactile_writing: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "TactileWriting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -197,6 +216,16 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    reached_floor_announcement: Optional[
+        ReachedFloorAnnouncementEnumeration
+    ] = field(
+        default=None,
+        metadata={
+            "name": "ReachedFloorAnnouncement",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     magnetic_induction_loop: Optional[bool] = field(
         default=None,
         metadata={
@@ -225,14 +254,6 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "ButtonsHeight",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    netex_org_uk_netex_ground_markaligned_with_button: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "GroundMarkalignedWithButton",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

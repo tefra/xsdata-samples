@@ -278,7 +278,7 @@ obj = PublicationDelivery(
                                                         version='001'
                                                     ),
                                                     ValidBetween(
-                                                        id='bar:foo',
+                                                        id='bar:foo2',
                                                         version='001'
                                                     ),
                                                 ]

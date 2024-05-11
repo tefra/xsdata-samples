@@ -19,5 +19,7 @@ class ParkingUserEnumeration(Enum):
     EMERGENCY_SERVICES = "emergencyServices"
     TAXI = "taxi"
     VEHICLE_SHARING = "vehicleSharing"
+    WOMEN = "women"
+    FAMILIES = "families"
     OTHER = "other"
     ALL = "all"

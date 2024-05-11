@@ -61,6 +61,11 @@
         <DefaultCodespaceRef ref="oda"/>
       </FrameDefaults>
       <frames>
+        <ResourceFrame id="oda:RES_01" version="any">
+          <dataSources>
+            <DataSource id="NaPTAN" version="any"/>
+          </dataSources>
+        </ResourceFrame>
         <ServiceCalendarFrame id="oda:CAL_01" version="any">
           <Name>Olympic Park2 2012  </Name>
           <ServiceCalendar id="oda:CAL_01" version="any">

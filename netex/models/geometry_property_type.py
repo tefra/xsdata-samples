@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional, Union
 
 from .line_string import LineString
+from .multi_surface import MultiSurface
 from .nil_reason_enumeration_value import NilReasonEnumerationValue
 from .point_1 import Point1
 from .polygon import Polygon
@@ -11,13 +12,16 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryPropertyType:
-    abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: Optional[
-        Union[Polygon, LineString, Point1]
-    ] = field(
+    choice: Optional[Union[MultiSurface, Polygon, LineString, Point1]] = field(
         default=None,
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "MultiSurface",
+                    "type": MultiSurface,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
                 {
                     "name": "Polygon",
                     "type": Polygon,

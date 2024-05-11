@@ -10,6 +10,7 @@ from .passenger_equipment_version_structure import (
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .sanitary_facility_list import SanitaryFacilityList
 from .staffing_enumeration import StaffingEnumeration
+from .toilets_type_enumeration import ToiletsTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -147,6 +148,30 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "KeyScheme",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    hand_washing: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "HandWashing",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    drinking_water: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "DrinkingWater",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    toilets_type: Optional[ToiletsTypeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "ToiletsType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

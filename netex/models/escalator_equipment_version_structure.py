@@ -43,3 +43,11 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    monitoring_remote_control: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "MonitoringRemoteControl",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )

@@ -1,8 +1,14 @@
 from dataclasses import dataclass, field
+from decimal import Decimal
 from typing import Optional
 
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
+from .compass_bearing8_enumeration import CompassBearing8Enumeration
+from .door_handle_enumeration import DoorHandleEnumeration
 from .entrance_attention_enumeration import EntranceAttentionEnumeration
+from .entrance_turning_space_position_enumeration import (
+    EntranceTurningSpacePositionEnumeration,
+)
 from .necessary_force_enumeration import NecessaryForceEnumeration
 from .staffing_enumeration import StaffingEnumeration
 
@@ -18,6 +24,30 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "Door",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    door_orientation: Optional[CompassBearing8Enumeration] = field(
+        default=None,
+        metadata={
+            "name": "DoorOrientation",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    door_handle_outside: Optional[DoorHandleEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "DoorHandleOutside",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    door_handle_inside: Optional[DoorHandleEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "DoorHandleInside",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -110,6 +140,14 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    door_control_element_height: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "DoorControlElementHeight",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     glass_door: Optional[bool] = field(
         default=None,
         metadata={
@@ -190,10 +228,36 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    opening_necessary_force: Optional[NecessaryForceEnumeration] = field(
+    ramp_doorbell: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "OpeningNecessaryForce",
+            "name": "RampDoorbell",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    recognizable: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "Recognizable",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    turning_space_position: Optional[
+        EntranceTurningSpacePositionEnumeration
+    ] = field(
+        default=None,
+        metadata={
+            "name": "TurningSpacePosition",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    wheelchair_turning_circle: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "WheelchairTurningCircle",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

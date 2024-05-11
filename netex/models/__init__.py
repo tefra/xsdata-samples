@@ -28,6 +28,8 @@ from .abstract_functional_service_request_structure import (
 from .abstract_functional_service_subscription_request import (
     AbstractFunctionalServiceSubscriptionRequest,
 )
+from .abstract_geometric_aggregate import AbstractGeometricAggregate
+from .abstract_geometric_aggregate_type import AbstractGeometricAggregateType
 from .abstract_geometric_primitive import AbstractGeometricPrimitive
 from .abstract_geometric_primitive_type import AbstractGeometricPrimitiveType
 from .abstract_geometry import AbstractGeometry
@@ -77,6 +79,17 @@ from .abstract_subscription_structure import AbstractSubscriptionStructure
 from .abstract_surface import AbstractSurface
 from .abstract_surface_type import AbstractSurfaceType
 from .abstract_tracked_request import AbstractTrackedRequest
+from .accepted_driver_permit import AcceptedDriverPermit
+from .accepted_driver_permit_ref import AcceptedDriverPermitRef
+from .accepted_driver_permit_ref_structure import (
+    AcceptedDriverPermitRefStructure,
+)
+from .accepted_driver_permit_version_structure import (
+    AcceptedDriverPermitVersionStructure,
+)
+from .accepted_driver_permits_rel_structure import (
+    AcceptedDriverPermitsRelStructure,
+)
 from .access import Access
 from .access_end_structure import AccessEndStructure
 from .access_equipment import AccessEquipment
@@ -273,6 +286,7 @@ from .administrative_zones_rel_structure import (
     TransportAdministrativeZone,
     TransportAdministrativeZoneVersionStructure,
 )
+from .aggregation_type import AggregationType
 from .air_submode import AirSubmode
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .alias_structure import AliasStructure
@@ -423,10 +437,13 @@ from .battery_equipment_version_structure import (
     BatteryEquipmentVersionStructure,
 )
 from .bay_geometry_enumeration import BayGeometryEnumeration
+from .beacon_direction_enumeration import BeaconDirectionEnumeration
 from .beacon_point import BeaconPoint
 from .beacon_point_ref import BeaconPointRef
 from .beacon_point_ref_structure import BeaconPointRefStructure
 from .beacon_point_version_structure import BeaconPointVersionStructure
+from .beacon_protocol_enumeration import BeaconProtocolEnumeration
+from .beacon_type_enumeration import BeaconTypeEnumeration
 from .berth_facility import BerthFacility
 from .berth_facility_enumeration import BerthFacilityEnumeration
 from .beyond_data_horizon import BeyondDataHorizon
@@ -464,6 +481,7 @@ from .boarding_position_version_structure import (
     BoardingPositionVersionStructure,
 )
 from .boarding_positions_rel_structure import BoardingPositionsRelStructure
+from .bollard_crossing_enumeration import BollardCrossingEnumeration
 from .booking_access_enumeration import BookingAccessEnumeration
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .booking_charge_type_enumeration import BookingChargeTypeEnumeration
@@ -1430,6 +1448,7 @@ from .distribution_channels_in_frame_rel_structure import (
     DistributionChannelsInFrameRelStructure,
 )
 from .distribution_rights_enumeration import DistributionRightsEnumeration
+from .door_handle_enumeration import DoorHandleEnumeration
 from .driver_ref import DriverRef
 from .driver_ref_structure import DriverRefStructure
 from .driver_schedule_frame import DriverScheduleFrame
@@ -1596,6 +1615,9 @@ from .entrance_equipment_version_structure import (
 from .entrance_ref import EntranceRef
 from .entrance_ref_structure import EntranceRefStructure
 from .entrance_refs_rel_structure import EntranceRefsRelStructure
+from .entrance_turning_space_position_enumeration import (
+    EntranceTurningSpacePositionEnumeration,
+)
 from .envelope import Envelope
 from .envelope_type import EnvelopeType
 from .equipment import Equipment
@@ -2277,6 +2299,12 @@ from .group_of_stop_places import GroupOfStopPlaces
 from .group_of_stop_places_ref import GroupOfStopPlacesRef
 from .group_of_stop_places_ref_structure import GroupOfStopPlacesRefStructure
 from .group_of_stop_places_structure import GroupOfStopPlacesStructure
+from .group_of_tariff_zones import GroupOfTariffZones
+from .group_of_tariff_zones_ref import GroupOfTariffZonesRef
+from .group_of_tariff_zones_ref_structure import GroupOfTariffZonesRefStructure
+from .group_of_tariff_zones_version_structure import (
+    GroupOfTariffZonesVersionStructure,
+)
 from .group_of_timebands import GroupOfTimebands
 from .group_of_timebands_in_frame_rel_structure import (
     GroupOfTimebandsInFrameRelStructure,
@@ -2335,6 +2363,9 @@ from .groups_of_single_journeys_rel_structure import (
 )
 from .groups_of_stop_places_in_frame_rel_structure import (
     GroupsOfStopPlacesInFrameRelStructure,
+)
+from .groups_of_tariff_zones_in_frame_rel_structure import (
+    GroupsOfTariffZonesInFrameRelStructure,
 )
 from .guide_dog_access import GuideDogAccess
 from .hail_and_ride_area import HailAndRideArea
@@ -2671,11 +2702,18 @@ from .left_luggage_service_version_structure import (
     LeftLuggageServiceVersionStructure,
 )
 from .level import Level
+from .level_access_into_vehicle import LevelAccessIntoVehicle
 from .level_ref import LevelRef
 from .level_ref_structure import LevelRefStructure
 from .level_version_structure import LevelVersionStructure
 from .levels_rel_structure import LevelsRelStructure
 from .licence_requirements_enumeration import LicenceRequirementsEnumeration
+from .lift_call_equipment import LiftCallEquipment
+from .lift_call_equipment_ref import LiftCallEquipmentRef
+from .lift_call_equipment_ref_structure import LiftCallEquipmentRefStructure
+from .lift_call_equipment_version_structure import (
+    LiftCallEquipmentVersionStructure,
+)
 from .lift_equipment import LiftEquipment
 from .lift_equipment_ref import LiftEquipmentRef
 from .lift_equipment_ref_structure import LiftEquipmentRefStructure
@@ -2855,6 +2893,7 @@ from .management_agent_ref_structure import ManagementAgentRefStructure
 from .management_agent_version_structure import ManagementAgentVersionStructure
 from .mandatory_enumeration import MandatoryEnumeration
 from .marked_as_enumeration import MarkedAsEnumeration
+from .marking_status_enumeration import MarkingStatusEnumeration
 from .meal_facility import MealFacility
 from .meal_facility_enumeration import MealFacilityEnumeration
 from .meal_facility_list import MealFacilityList
@@ -3046,6 +3085,9 @@ from .month_validity_offset_versioned_structure import (
 from .month_validity_offsets_rel_structure import (
     MonthValidityOffsetsRelStructure,
 )
+from .multi_surface import MultiSurface
+from .multi_surface_property_type import MultiSurfacePropertyType
+from .multi_surface_type import MultiSurfaceType
 from .multilingual_string import MultilingualString
 from .name import Name
 from .name_type_enumeration import NameTypeEnumeration
@@ -3266,6 +3308,7 @@ from .organisation_part_version_structure import (
 )
 from .organisation_parts_rel_structure import OrganisationPartsRelStructure
 from .organisation_ref import OrganisationRef
+from .organisation_ref_abstract import OrganisationRefAbstract
 from .organisation_ref_structure import OrganisationRefStructure
 from .organisation_refs_rel_structure import OrganisationRefsRelStructure
 from .organisation_role_enumeration import OrganisationRoleEnumeration
@@ -3425,6 +3468,14 @@ from .passage_type_enumeration import PassageTypeEnumeration
 from .passenger_accessibility_needs import PassengerAccessibilityNeeds
 from .passenger_accessibility_needs_structure import (
     PassengerAccessibilityNeedsStructure,
+)
+from .passenger_beacon_equipment import PassengerBeaconEquipment
+from .passenger_beacon_equipment_ref import PassengerBeaconEquipmentRef
+from .passenger_beacon_equipment_ref_structure import (
+    PassengerBeaconEquipmentRefStructure,
+)
+from .passenger_beacon_equipment_version_structure import (
+    PassengerBeaconEquipmentVersionStructure,
 )
 from .passenger_capacities_rel_structure import PassengerCapacitiesRelStructure
 from .passenger_capacity import PassengerCapacity
@@ -3983,6 +4034,13 @@ from .ramp_equipment import RampEquipment
 from .ramp_equipment_ref import RampEquipmentRef
 from .ramp_equipment_ref_structure import RampEquipmentRefStructure
 from .ramp_equipment_version_structure import RampEquipmentVersionStructure
+from .ramp_free_access import RampFreeAccess
+from .ramp_turning_space_position_enumeration import (
+    RampTurningSpacePositionEnumeration,
+)
+from .reached_floor_announcement_enumeration import (
+    ReachedFloorAnnouncementEnumeration,
+)
 from .reason_for_meeting_enumeration import ReasonForMeetingEnumeration
 from .reference_type import ReferenceType
 from .refuelling_equipment import RefuellingEquipment
@@ -4299,6 +4357,7 @@ from .rubbish_disposal_equipment_ref_structure import (
 from .rubbish_disposal_equipment_version_structure import (
     RubbishDisposalEquipmentVersionStructure,
 )
+from .safety_edge_enumeration import SafetyEdgeEnumeration
 from .safety_facility import SafetyFacility
 from .safety_facility_enumeration import SafetyFacilityEnumeration
 from .safety_facility_list import SafetyFacilityList
@@ -4737,6 +4796,9 @@ from .shelter_equipment_ref_structure import ShelterEquipmentRefStructure
 from .shelter_equipment_version_structure import (
     ShelterEquipmentVersionStructure,
 )
+from .side_in_direction_of_travel_enumeration import (
+    SideInDirectionOfTravelEnumeration,
+)
 from .sign_content_enumeration import SignContentEnumeration
 from .sign_equipment import SignEquipment
 from .sign_equipment_ref import SignEquipmentRef
@@ -4860,6 +4922,8 @@ from .stair_flight_versioned_child_structure import (
     StairFlightVersionedChildStructure,
 )
 from .stair_flights_rel_structure import StairFlightsRelStructure
+from .stair_free_access import StairFreeAccess
+from .stair_ramp_enumeration import StairRampEnumeration
 from .staircase_equipment import StaircaseEquipment
 from .staircase_equipment_ref import StaircaseEquipmentRef
 from .staircase_equipment_ref_structure import StaircaseEquipmentRefStructure
@@ -4890,6 +4954,7 @@ from .start_time_at_stop_points_rel_structure import (
 from .status import Status
 from .status_enumeration import StatusEnumeration
 from .status_response_structure import StatusResponseStructure
+from .step_condition_enumeration import StepConditionEnumeration
 from .step_free_access import StepFreeAccess
 from .step_limit import StepLimit
 from .step_limit_ref import StepLimitRef
@@ -5016,6 +5081,8 @@ from .supplement_product_version_structure import (
 from .supply_contract_ref import SupplyContractRef
 from .supply_contract_ref_structure import SupplyContractRefStructure
 from .surface_array_property_type import SurfaceArrayPropertyType
+from .surface_member import SurfaceMember
+from .surface_members import SurfaceMembers
 from .surface_property import SurfaceProperty
 from .surface_property_type import SurfacePropertyType
 from .surface_type_enumeration import SurfaceTypeEnumeration
@@ -5025,6 +5092,7 @@ from .suspending_ref_structure import SuspendingRefStructure
 from .suspending_version_structure import SuspendingVersionStructure
 from .suspension_policy_enumeration import SuspensionPolicyEnumeration
 from .system_of_units import SystemOfUnits
+from .tactile_guidance_available import TactileGuidanceAvailable
 from .tactile_warning_strip_enumeration import TactileWarningStripEnumeration
 from .target_element import TargetElement
 from .target_passing_time import TargetPassingTime
@@ -5306,6 +5374,7 @@ from .timing_points_in_journey_pattern_rel_structure import (
     TimingPointsInJourneyPatternRelStructure,
 )
 from .timing_points_rel_structure import TimingPointsRelStructure
+from .toilets_type_enumeration import ToiletsTypeEnumeration
 from .topic import Topic
 from .topic_structure import TopicStructure
 from .topographic_place import TopographicPlace
@@ -5637,6 +5706,12 @@ from .type_of_delivery_variant_ref_structure import (
 )
 from .type_of_delivery_variant_value_structure import (
     TypeOfDeliveryVariantValueStructure,
+)
+from .type_of_driver_permit import TypeOfDriverPermit
+from .type_of_driver_permit_ref import TypeOfDriverPermitRef
+from .type_of_driver_permit_ref_structure import TypeOfDriverPermitRefStructure
+from .type_of_driver_permit_value_structure import (
+    TypeOfDriverPermitValueStructure,
 )
 from .type_of_entity import TypeOfEntity
 from .type_of_entity_ref import TypeOfEntityRef
@@ -6219,6 +6294,22 @@ from .vehicle_equipmen_profiles_in_frame_rel_structure import (
     VehicleEquipmenProfilesInFrameRelStructure,
 )
 from .vehicle_equipment_profile import VehicleEquipmentProfile
+from .vehicle_equipment_profile_member import VehicleEquipmentProfileMember
+from .vehicle_equipment_profile_member_ref import (
+    VehicleEquipmentProfileMemberRef,
+)
+from .vehicle_equipment_profile_member_ref_structure import (
+    VehicleEquipmentProfileMemberRefStructure,
+)
+from .vehicle_equipment_profile_member_refs_rel_structure import (
+    VehicleEquipmentProfileMemberRefsRelStructure,
+)
+from .vehicle_equipment_profile_member_version_structure import (
+    VehicleEquipmentProfileMemberVersionStructure,
+)
+from .vehicle_equipment_profile_members_rel_structure import (
+    VehicleEquipmentProfileMembersRelStructure,
+)
 from .vehicle_equipment_profile_ref import VehicleEquipmentProfileRef
 from .vehicle_equipment_profile_ref_structure import (
     VehicleEquipmentProfileRefStructure,
@@ -6701,6 +6792,7 @@ from .versions_rel_structure import VersionsRelStructure
 from .via_type_enumeration import ViaTypeEnumeration
 from .via_versioned_child_structure import ViaVersionedChildStructure
 from .vias_rel_structure import ViasRelStructure
+from .visual_obstacle_enumeration import VisualObstacleEnumeration
 from .visual_signs_available import VisualSignsAvailable
 from .waiting_equipment import WaitingEquipment
 from .waiting_equipment_ref import WaitingEquipmentRef
@@ -6776,6 +6868,8 @@ __all__ = [
     "AbstractFunctionalServiceRequest",
     "AbstractFunctionalServiceRequestStructure",
     "AbstractFunctionalServiceSubscriptionRequest",
+    "AbstractGeometricAggregate",
+    "AbstractGeometricAggregateType",
     "AbstractGeometricPrimitive",
     "AbstractGeometricPrimitiveType",
     "AbstractGeometry",
@@ -6811,6 +6905,11 @@ __all__ = [
     "AbstractSurface",
     "AbstractSurfaceType",
     "AbstractTrackedRequest",
+    "AcceptedDriverPermit",
+    "AcceptedDriverPermitRef",
+    "AcceptedDriverPermitRefStructure",
+    "AcceptedDriverPermitVersionStructure",
+    "AcceptedDriverPermitsRelStructure",
     "Access",
     "AccessEndStructure",
     "AccessEquipment",
@@ -6941,6 +7040,7 @@ __all__ = [
     "TransportAdministrativeZone",
     "TransportAdministrativeZoneVersionStructure",
     "AdministrativeZonesRelStructure",
+    "AggregationType",
     "AirSubmode",
     "AirSubmodeEnumeration",
     "AliasStructure",
@@ -7033,10 +7133,13 @@ __all__ = [
     "BatteryEquipmentRefStructure",
     "BatteryEquipmentVersionStructure",
     "BayGeometryEnumeration",
+    "BeaconDirectionEnumeration",
     "BeaconPoint",
     "BeaconPointRef",
     "BeaconPointRefStructure",
     "BeaconPointVersionStructure",
+    "BeaconProtocolEnumeration",
+    "BeaconTypeEnumeration",
     "BerthFacility",
     "BerthFacilityEnumeration",
     "BeyondDataHorizon",
@@ -7068,6 +7171,7 @@ __all__ = [
     "BoardingPositionTypeEnumeration",
     "BoardingPositionVersionStructure",
     "BoardingPositionsRelStructure",
+    "BollardCrossingEnumeration",
     "BookingAccessEnumeration",
     "BookingArrangementsStructure",
     "BookingChargeTypeEnumeration",
@@ -7674,6 +7778,7 @@ __all__ = [
     "DistributionChannelVersionStructure",
     "DistributionChannelsInFrameRelStructure",
     "DistributionRightsEnumeration",
+    "DoorHandleEnumeration",
     "DriverRef",
     "DriverRefStructure",
     "DriverScheduleFrame",
@@ -7796,6 +7901,7 @@ __all__ = [
     "EntranceRef",
     "EntranceRefStructure",
     "EntranceRefsRelStructure",
+    "EntranceTurningSpacePositionEnumeration",
     "Envelope",
     "EnvelopeType",
     "Equipment",
@@ -8241,6 +8347,10 @@ __all__ = [
     "GroupOfStopPlacesRef",
     "GroupOfStopPlacesRefStructure",
     "GroupOfStopPlacesStructure",
+    "GroupOfTariffZones",
+    "GroupOfTariffZonesRef",
+    "GroupOfTariffZonesRefStructure",
+    "GroupOfTariffZonesVersionStructure",
     "GroupOfTimebands",
     "GroupOfTimebandsInFrameRelStructure",
     "GroupOfTimebandsRef",
@@ -8270,6 +8380,7 @@ __all__ = [
     "GroupsOfServicesInFrameRelStructure",
     "GroupsOfSingleJourneysRelStructure",
     "GroupsOfStopPlacesInFrameRelStructure",
+    "GroupsOfTariffZonesInFrameRelStructure",
     "GuideDogAccess",
     "HailAndRideArea",
     "HailAndRideAreaRef",
@@ -8483,11 +8594,16 @@ __all__ = [
     "LeftLuggageServiceRefStructure",
     "LeftLuggageServiceVersionStructure",
     "Level",
+    "LevelAccessIntoVehicle",
     "LevelRef",
     "LevelRefStructure",
     "LevelVersionStructure",
     "LevelsRelStructure",
     "LicenceRequirementsEnumeration",
+    "LiftCallEquipment",
+    "LiftCallEquipmentRef",
+    "LiftCallEquipmentRefStructure",
+    "LiftCallEquipmentVersionStructure",
     "LiftEquipment",
     "LiftEquipmentRef",
     "LiftEquipmentRefStructure",
@@ -8631,6 +8747,7 @@ __all__ = [
     "ManagementAgentVersionStructure",
     "MandatoryEnumeration",
     "MarkedAsEnumeration",
+    "MarkingStatusEnumeration",
     "MealFacility",
     "MealFacilityEnumeration",
     "MealFacilityList",
@@ -8748,6 +8865,9 @@ __all__ = [
     "MonthValidityOffsetRefStructure",
     "MonthValidityOffsetVersionedStructure",
     "MonthValidityOffsetsRelStructure",
+    "MultiSurface",
+    "MultiSurfacePropertyType",
+    "MultiSurfaceType",
     "MultilingualString",
     "Name",
     "NameTypeEnumeration",
@@ -8894,6 +9014,7 @@ __all__ = [
     "OrganisationPartVersionStructure",
     "OrganisationPartsRelStructure",
     "OrganisationRef",
+    "OrganisationRefAbstract",
     "OrganisationRefStructure",
     "OrganisationRefsRelStructure",
     "OrganisationRoleEnumeration",
@@ -9012,6 +9133,10 @@ __all__ = [
     "PassageTypeEnumeration",
     "PassengerAccessibilityNeeds",
     "PassengerAccessibilityNeedsStructure",
+    "PassengerBeaconEquipment",
+    "PassengerBeaconEquipmentRef",
+    "PassengerBeaconEquipmentRefStructure",
+    "PassengerBeaconEquipmentVersionStructure",
     "PassengerCapacitiesRelStructure",
     "PassengerCapacity",
     "PassengerCapacityRef",
@@ -9375,6 +9500,9 @@ __all__ = [
     "RampEquipmentRef",
     "RampEquipmentRefStructure",
     "RampEquipmentVersionStructure",
+    "RampFreeAccess",
+    "RampTurningSpacePositionEnumeration",
+    "ReachedFloorAnnouncementEnumeration",
     "ReasonForMeetingEnumeration",
     "ReferenceType",
     "RefuellingEquipment",
@@ -9597,6 +9725,7 @@ __all__ = [
     "RubbishDisposalEquipmentRef",
     "RubbishDisposalEquipmentRefStructure",
     "RubbishDisposalEquipmentVersionStructure",
+    "SafetyEdgeEnumeration",
     "SafetyFacility",
     "SafetyFacilityEnumeration",
     "SafetyFacilityList",
@@ -9855,6 +9984,7 @@ __all__ = [
     "ShelterEquipmentRef",
     "ShelterEquipmentRefStructure",
     "ShelterEquipmentVersionStructure",
+    "SideInDirectionOfTravelEnumeration",
     "SignContentEnumeration",
     "SignEquipment",
     "SignEquipmentRef",
@@ -9956,6 +10086,8 @@ __all__ = [
     "StairFlight",
     "StairFlightVersionedChildStructure",
     "StairFlightsRelStructure",
+    "StairFreeAccess",
+    "StairRampEnumeration",
     "StaircaseEquipment",
     "StaircaseEquipmentRef",
     "StaircaseEquipmentRefStructure",
@@ -9974,6 +10106,7 @@ __all__ = [
     "Status",
     "StatusEnumeration",
     "StatusResponseStructure",
+    "StepConditionEnumeration",
     "StepFreeAccess",
     "StepLimit",
     "StepLimitRef",
@@ -10066,6 +10199,8 @@ __all__ = [
     "SupplyContractRef",
     "SupplyContractRefStructure",
     "SurfaceArrayPropertyType",
+    "SurfaceMember",
+    "SurfaceMembers",
     "SurfaceProperty",
     "SurfacePropertyType",
     "SurfaceTypeEnumeration",
@@ -10075,6 +10210,7 @@ __all__ = [
     "SuspendingVersionStructure",
     "SuspensionPolicyEnumeration",
     "SystemOfUnits",
+    "TactileGuidanceAvailable",
     "TactileWarningStripEnumeration",
     "TargetElement",
     "TargetPassingTime",
@@ -10266,6 +10402,7 @@ __all__ = [
     "TimingPointsInFrameRelStructure",
     "TimingPointsInJourneyPatternRelStructure",
     "TimingPointsRelStructure",
+    "ToiletsTypeEnumeration",
     "Topic",
     "TopicStructure",
     "TopographicPlace",
@@ -10470,6 +10607,10 @@ __all__ = [
     "TypeOfDeliveryVariantRef",
     "TypeOfDeliveryVariantRefStructure",
     "TypeOfDeliveryVariantValueStructure",
+    "TypeOfDriverPermit",
+    "TypeOfDriverPermitRef",
+    "TypeOfDriverPermitRefStructure",
+    "TypeOfDriverPermitValueStructure",
     "TypeOfEntity",
     "TypeOfEntityRef",
     "TypeOfEntityRefsRelStructure",
@@ -10825,6 +10966,12 @@ __all__ = [
     "VehicleEntrancesRelStructure",
     "VehicleEquipmenProfilesInFrameRelStructure",
     "VehicleEquipmentProfile",
+    "VehicleEquipmentProfileMember",
+    "VehicleEquipmentProfileMemberRef",
+    "VehicleEquipmentProfileMemberRefStructure",
+    "VehicleEquipmentProfileMemberRefsRelStructure",
+    "VehicleEquipmentProfileMemberVersionStructure",
+    "VehicleEquipmentProfileMembersRelStructure",
     "VehicleEquipmentProfileRef",
     "VehicleEquipmentProfileRefStructure",
     "VehicleEquipmentProfileRefsRelStructure",
@@ -11075,6 +11222,7 @@ __all__ = [
     "ViaTypeEnumeration",
     "ViaVersionedChildStructure",
     "ViasRelStructure",
+    "VisualObstacleEnumeration",
     "VisualSignsAvailable",
     "WaitingEquipment",
     "WaitingEquipmentRef",

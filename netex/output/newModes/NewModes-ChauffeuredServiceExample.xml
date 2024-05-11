@@ -38,7 +38,7 @@
       </codespaces>
       <FrameDefaults>
         <DefaultCodespaceRef ref="hjm_data"/>
-        <DefaultDataSourceRef version="any" ref="hjm:home_james"/>
+        <DefaultDataSourceRef version="1.0" ref="hjm:home_james"/>
         <DefaultCurrency>GBP</DefaultCurrency>
       </FrameDefaults>
       <frames>
@@ -52,7 +52,7 @@
             </Codespace>
           </codespaces>
           <dataSources>
-            <DataSource id="hjm:home_james" version="any">
+            <DataSource id="hjm:home_james" version="1.0">
               <Email>feedback@homeJames.eu</Email>
             </DataSource>
           </dataSources>

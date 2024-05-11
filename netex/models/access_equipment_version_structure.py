@@ -21,6 +21,14 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    height: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "Height",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     direction_of_use: Optional[DirectionOfUseEnumeration] = field(
         default=None,
         metadata={
