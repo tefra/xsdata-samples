@@ -5,5 +5,4 @@ pytest
 pre-commit
 requests
 typed_dataclass
-dataclasses-jsonschema
 xsdata[cli,lxml] @ git+https://github.com/tefra/xsdata

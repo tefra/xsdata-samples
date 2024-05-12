@@ -999,7 +999,9 @@
                 "recovery": null
             },
             "flickr": {
-                "small": [],
+                "small": [
+                    "https://farm8.staticflickr.com/7585/16602893909_1181317089_o.jpg"
+                ],
                 "original": [
                     "https://farm8.staticflickr.com/7585/16602893909_1181317089_o.jpg",
                     "https://farm9.staticflickr.com/8747/16581738577_83e0690136_o.png",

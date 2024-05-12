@@ -1,14 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 
-from dataclasses_jsonschema import JsonSchemaMixin
 from typed_dataclass import typed_dataclass
 from xsdata.models.datatype import XmlDateTime
+
+from spacex.mixins import DictMixin
 
 
 @dataclass
 @typed_dataclass
-class Cores(JsonSchemaMixin):
+class Cores(DictMixin):
     class Meta:
         name = "cores"
 
@@ -70,7 +71,7 @@ class Cores(JsonSchemaMixin):
 
 @dataclass
 @typed_dataclass
-class Failures(JsonSchemaMixin):
+class Failures(DictMixin):
     class Meta:
         name = "failures"
 
@@ -98,7 +99,7 @@ class Failures(JsonSchemaMixin):
 
 @dataclass
 @typed_dataclass
-class Fairings(JsonSchemaMixin):
+class Fairings(DictMixin):
     class Meta:
         name = "fairings"
 
@@ -130,11 +131,11 @@ class Fairings(JsonSchemaMixin):
 
 @dataclass
 @typed_dataclass
-class Flickr(JsonSchemaMixin):
+class Flickr(DictMixin):
     class Meta:
         name = "flickr"
 
-    small: List[object] = field(
+    small: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -150,7 +151,7 @@ class Flickr(JsonSchemaMixin):
 
 @dataclass
 @typed_dataclass
-class Patch(JsonSchemaMixin):
+class Patch(DictMixin):
     class Meta:
         name = "patch"
 
@@ -170,7 +171,7 @@ class Patch(JsonSchemaMixin):
 
 @dataclass
 @typed_dataclass
-class Reddit(JsonSchemaMixin):
+class Reddit(DictMixin):
     class Meta:
         name = "reddit"
 
@@ -202,7 +203,7 @@ class Reddit(JsonSchemaMixin):
 
 @dataclass
 @typed_dataclass
-class Links(JsonSchemaMixin):
+class Links(DictMixin):
     class Meta:
         name = "links"
 
@@ -261,7 +262,7 @@ class Links(JsonSchemaMixin):
 
 @dataclass
 @typed_dataclass
-class Launches(JsonSchemaMixin):
+class Launches(DictMixin):
     class Meta:
         name = "launches"
 
