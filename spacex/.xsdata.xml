@@ -28,7 +28,7 @@
     <Substitution type="module" search="2010.1" replace="2020a"/>
   </Substitutions>
   <Extensions>
-    <Extension type="class" class=".*" import="dataclasses_jsonschema.JsonSchemaMixin" prepend="false" applyIfDerived="false"/>
+    <Extension type="class" class=".*" import="spacex.mixins.DictMixin" prepend="false" applyIfDerived="false"/>
     <Extension type="decorator" class=".*" import="typed_dataclass.typed_dataclass" prepend="false" applyIfDerived="false"/>
   </Extensions>
 </Config>
