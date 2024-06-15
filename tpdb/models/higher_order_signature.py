@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
-from tpdb.models.func_declaration import FuncDeclaration
-from tpdb.models.var_declaration import VarDeclaration
+from tpdb.models.higher_order_signature_function_symbol_type_info import (
+    HigherOrderSignatureFunctionSymbolTypeInfo,
+)
+from tpdb.models.higher_order_signature_variable_type_info import (
+    HigherOrderSignatureVariableTypeInfo,
+)
 
 
 @dataclass
@@ -16,17 +20,15 @@ class HigherOrderSignature:
     class Meta:
         name = "higherOrderSignature"
 
-    variable_type_info: Optional["HigherOrderSignature.VariableTypeInfo"] = (
-        field(
-            default=None,
-            metadata={
-                "name": "variableTypeInfo",
-                "type": "Element",
-            },
-        )
+    variable_type_info: Optional[HigherOrderSignatureVariableTypeInfo] = field(
+        default=None,
+        metadata={
+            "name": "variableTypeInfo",
+            "type": "Element",
+        },
     )
     function_symbol_type_info: Optional[
-        "HigherOrderSignature.FunctionSymbolTypeInfo"
+        HigherOrderSignatureFunctionSymbolTypeInfo
     ] = field(
         default=None,
         metadata={
@@ -35,23 +37,3 @@ class HigherOrderSignature:
             "required": True,
         },
     )
-
-    @dataclass
-    class VariableTypeInfo:
-        var_declaration: List[VarDeclaration] = field(
-            default_factory=list,
-            metadata={
-                "name": "varDeclaration",
-                "type": "Element",
-            },
-        )
-
-    @dataclass
-    class FunctionSymbolTypeInfo:
-        func_declaration: List[FuncDeclaration] = field(
-            default_factory=list,
-            metadata={
-                "name": "funcDeclaration",
-                "type": "Element",
-            },
-        )

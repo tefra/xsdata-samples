@@ -1,12 +1,16 @@
 from tpdb.models.arity import Arity
 from tpdb.models.funcsym import Funcsym
 from tpdb.models.lhs import Lhs
+from tpdb.models.lhs_funapp import LhsFunapp
+from tpdb.models.lhs_funapp import LhsFunappArg
 from tpdb.models.metainformation import Metainformation
 from tpdb.models.name import Name
 from tpdb.models.originalfilename import Originalfilename
 from tpdb.models.problem import Problem
 from tpdb.models.problem_type import ProblemType
 from tpdb.models.rhs import Rhs
+from tpdb.models.rhs_funapp import RhsFunapp
+from tpdb.models.rhs_funapp import RhsFunappArg
 from tpdb.models.rule import Rule
 from tpdb.models.rules import Rules
 from tpdb.models.signature import Signature
@@ -22,42 +26,42 @@ obj = Problem(
             rule=[
                 Rule(
                     lhs=Lhs(
-                        funapp=Lhs.Funapp(
+                        funapp=LhsFunapp(
                             name=Name(
                                 value='R'
                             ),
                             arg=[
-                                Lhs.Funapp.Arg(
-                                    funapp=Lhs.Funapp(
+                                LhsFunappArg(
+                                    funapp=LhsFunapp(
                                         name=Name(
                                             value='a'
                                         ),
                                         arg=[
-                                            Lhs.Funapp.Arg(
-                                                funapp=Lhs.Funapp(
+                                            LhsFunappArg(
+                                                funapp=LhsFunapp(
                                                     name=Name(
                                                         value='a'
                                                     ),
                                                     arg=[
-                                                        Lhs.Funapp.Arg(
-                                                            funapp=Lhs.Funapp(
+                                                        LhsFunappArg(
+                                                            funapp=LhsFunapp(
                                                                 name=Name(
                                                                     value='a'
                                                                 ),
                                                                 arg=[
-                                                                    Lhs.Funapp.Arg(
-                                                                        funapp=Lhs.Funapp(
+                                                                    LhsFunappArg(
+                                                                        funapp=LhsFunapp(
                                                                             name=Name(
                                                                                 value='a'
                                                                             ),
                                                                             arg=[
-                                                                                Lhs.Funapp.Arg(
-                                                                                    funapp=Lhs.Funapp(
+                                                                                LhsFunappArg(
+                                                                                    funapp=LhsFunapp(
                                                                                         name=Name(
                                                                                             value='a'
                                                                                         ),
                                                                                         arg=[
-                                                                                            Lhs.Funapp.Arg(
+                                                                                            LhsFunappArg(
                                                                                                 var=Var(
                                                                                                     value='x1'
                                                                                                 )
@@ -81,42 +85,42 @@ obj = Problem(
                         )
                     ),
                     rhs=Rhs(
-                        funapp=Rhs.Funapp(
+                        funapp=RhsFunapp(
                             name=Name(
                                 value='b'
                             ),
                             arg=[
-                                Rhs.Funapp.Arg(
-                                    funapp=Rhs.Funapp(
+                                RhsFunappArg(
+                                    funapp=RhsFunapp(
                                         name=Name(
                                             value='b'
                                         ),
                                         arg=[
-                                            Rhs.Funapp.Arg(
-                                                funapp=Rhs.Funapp(
+                                            RhsFunappArg(
+                                                funapp=RhsFunapp(
                                                     name=Name(
                                                         value='b'
                                                     ),
                                                     arg=[
-                                                        Rhs.Funapp.Arg(
-                                                            funapp=Rhs.Funapp(
+                                                        RhsFunappArg(
+                                                            funapp=RhsFunapp(
                                                                 name=Name(
                                                                     value='b'
                                                                 ),
                                                                 arg=[
-                                                                    Rhs.Funapp.Arg(
-                                                                        funapp=Rhs.Funapp(
+                                                                    RhsFunappArg(
+                                                                        funapp=RhsFunapp(
                                                                             name=Name(
                                                                                 value='b'
                                                                             ),
                                                                             arg=[
-                                                                                Rhs.Funapp.Arg(
-                                                                                    funapp=Rhs.Funapp(
+                                                                                RhsFunappArg(
+                                                                                    funapp=RhsFunapp(
                                                                                         name=Name(
                                                                                             value='R'
                                                                                         ),
                                                                                         arg=[
-                                                                                            Rhs.Funapp.Arg(
+                                                                                            RhsFunappArg(
                                                                                                 var=Var(
                                                                                                     value='x1'
                                                                                                 )
@@ -142,30 +146,30 @@ obj = Problem(
                 ),
                 Rule(
                     lhs=Lhs(
-                        funapp=Lhs.Funapp(
+                        funapp=LhsFunapp(
                             name=Name(
                                 value='R'
                             ),
                             arg=[
-                                Lhs.Funapp.Arg(
-                                    funapp=Lhs.Funapp(
+                                LhsFunappArg(
+                                    funapp=LhsFunapp(
                                         name=Name(
                                             value='a'
                                         ),
                                         arg=[
-                                            Lhs.Funapp.Arg(
-                                                funapp=Lhs.Funapp(
+                                            LhsFunappArg(
+                                                funapp=LhsFunapp(
                                                     name=Name(
                                                         value='a'
                                                     ),
                                                     arg=[
-                                                        Lhs.Funapp.Arg(
-                                                            funapp=Lhs.Funapp(
+                                                        LhsFunappArg(
+                                                            funapp=LhsFunapp(
                                                                 name=Name(
                                                                     value='a'
                                                                 ),
                                                                 arg=[
-                                                                    Lhs.Funapp.Arg(
+                                                                    LhsFunappArg(
                                                                         var=Var(
                                                                             value='x1'
                                                                         )
@@ -183,30 +187,30 @@ obj = Problem(
                         )
                     ),
                     rhs=Rhs(
-                        funapp=Rhs.Funapp(
+                        funapp=RhsFunapp(
                             name=Name(
                                 value='b'
                             ),
                             arg=[
-                                Rhs.Funapp.Arg(
-                                    funapp=Rhs.Funapp(
+                                RhsFunappArg(
+                                    funapp=RhsFunapp(
                                         name=Name(
                                             value='b'
                                         ),
                                         arg=[
-                                            Rhs.Funapp.Arg(
-                                                funapp=Rhs.Funapp(
+                                            RhsFunappArg(
+                                                funapp=RhsFunapp(
                                                     name=Name(
                                                         value='b'
                                                     ),
                                                     arg=[
-                                                        Rhs.Funapp.Arg(
-                                                            funapp=Rhs.Funapp(
+                                                        RhsFunappArg(
+                                                            funapp=RhsFunapp(
                                                                 name=Name(
                                                                     value='R'
                                                                 ),
                                                                 arg=[
-                                                                    Rhs.Funapp.Arg(
+                                                                    RhsFunappArg(
                                                                         var=Var(
                                                                             value='x1'
                                                                         )
@@ -226,18 +230,18 @@ obj = Problem(
                 ),
                 Rule(
                     lhs=Lhs(
-                        funapp=Lhs.Funapp(
+                        funapp=LhsFunapp(
                             name=Name(
                                 value='b'
                             ),
                             arg=[
-                                Lhs.Funapp.Arg(
-                                    funapp=Lhs.Funapp(
+                                LhsFunappArg(
+                                    funapp=LhsFunapp(
                                         name=Name(
                                             value='L'
                                         ),
                                         arg=[
-                                            Lhs.Funapp.Arg(
+                                            LhsFunappArg(
                                                 var=Var(
                                                     value='x1'
                                                 )
@@ -249,18 +253,18 @@ obj = Problem(
                         )
                     ),
                     rhs=Rhs(
-                        funapp=Rhs.Funapp(
+                        funapp=RhsFunapp(
                             name=Name(
                                 value='L'
                             ),
                             arg=[
-                                Rhs.Funapp.Arg(
-                                    funapp=Rhs.Funapp(
+                                RhsFunappArg(
+                                    funapp=RhsFunapp(
                                         name=Name(
                                             value='a'
                                         ),
                                         arg=[
-                                            Rhs.Funapp.Arg(
+                                            RhsFunappArg(
                                                 var=Var(
                                                     value='x1'
                                                 )
@@ -274,18 +278,18 @@ obj = Problem(
                 ),
                 Rule(
                     lhs=Lhs(
-                        funapp=Lhs.Funapp(
+                        funapp=LhsFunapp(
                             name=Name(
                                 value='R'
                             ),
                             arg=[
-                                Lhs.Funapp.Arg(
-                                    funapp=Lhs.Funapp(
+                                LhsFunappArg(
+                                    funapp=LhsFunapp(
                                         name=Name(
                                             value='L'
                                         ),
                                         arg=[
-                                            Lhs.Funapp.Arg(
+                                            LhsFunappArg(
                                                 var=Var(
                                                     value='x1'
                                                 )
@@ -297,18 +301,18 @@ obj = Problem(
                         )
                     ),
                     rhs=Rhs(
-                        funapp=Rhs.Funapp(
+                        funapp=RhsFunapp(
                             name=Name(
                                 value='M'
                             ),
                             arg=[
-                                Rhs.Funapp.Arg(
-                                    funapp=Rhs.Funapp(
+                                RhsFunappArg(
+                                    funapp=RhsFunapp(
                                         name=Name(
                                             value='R'
                                         ),
                                         arg=[
-                                            Rhs.Funapp.Arg(
+                                            RhsFunappArg(
                                                 var=Var(
                                                     value='x1'
                                                 )
@@ -322,18 +326,18 @@ obj = Problem(
                 ),
                 Rule(
                     lhs=Lhs(
-                        funapp=Lhs.Funapp(
+                        funapp=LhsFunapp(
                             name=Name(
                                 value='R'
                             ),
                             arg=[
-                                Lhs.Funapp.Arg(
-                                    funapp=Lhs.Funapp(
+                                LhsFunappArg(
+                                    funapp=LhsFunapp(
                                         name=Name(
                                             value='M'
                                         ),
                                         arg=[
-                                            Lhs.Funapp.Arg(
+                                            LhsFunappArg(
                                                 var=Var(
                                                     value='x1'
                                                 )
@@ -345,24 +349,24 @@ obj = Problem(
                         )
                     ),
                     rhs=Rhs(
-                        funapp=Rhs.Funapp(
+                        funapp=RhsFunapp(
                             name=Name(
                                 value='b'
                             ),
                             arg=[
-                                Rhs.Funapp.Arg(
-                                    funapp=Rhs.Funapp(
+                                RhsFunappArg(
+                                    funapp=RhsFunapp(
                                         name=Name(
                                             value='L'
                                         ),
                                         arg=[
-                                            Rhs.Funapp.Arg(
-                                                funapp=Rhs.Funapp(
+                                            RhsFunappArg(
+                                                funapp=RhsFunapp(
                                                     name=Name(
                                                         value='R'
                                                     ),
                                                     arg=[
-                                                        Rhs.Funapp.Arg(
+                                                        RhsFunappArg(
                                                             var=Var(
                                                                 value='x1'
                                                             )

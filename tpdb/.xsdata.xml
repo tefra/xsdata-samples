@@ -9,7 +9,7 @@
     <CompoundFields defaultName="choice" useSubstitutionGroups="false" forceDefaultName="false" maxNameParts="3">false</CompoundFields>
     <WrapperFields>false</WrapperFields>
     <PostponedAnnotations>false</PostponedAnnotations>
-    <UnnestClasses>false</UnnestClasses>
+    <UnnestClasses>true</UnnestClasses>
     <IgnorePatterns>false</IgnorePatterns>
     <IncludeHeader>false</IncludeHeader>
   </Output>

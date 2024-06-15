@@ -15,7 +15,19 @@ from tpdb.models.full import Full
 from tpdb.models.func_declaration import FuncDeclaration
 from tpdb.models.funcsym import Funcsym
 from tpdb.models.higher_order_signature import HigherOrderSignature
+from tpdb.models.higher_order_signature_function_symbol_type_info import (
+    HigherOrderSignatureFunctionSymbolTypeInfo,
+)
+from tpdb.models.higher_order_signature_variable_type_info import (
+    HigherOrderSignatureVariableTypeInfo,
+)
 from tpdb.models.lhs import Lhs
+from tpdb.models.lhs_funapp import (
+    LhsApplication,
+    LhsFunapp,
+    LhsFunappArg,
+    LhsLambda,
+)
 from tpdb.models.maybe import Maybe
 from tpdb.models.metainformation import Metainformation
 from tpdb.models.name import Name
@@ -26,6 +38,12 @@ from tpdb.models.problem_type import ProblemType
 from tpdb.models.relrules import Relrules
 from tpdb.models.replacementmap import Replacementmap
 from tpdb.models.rhs import Rhs
+from tpdb.models.rhs_funapp import (
+    RhsApplication,
+    RhsFunapp,
+    RhsFunappArg,
+    RhsLambda,
+)
 from tpdb.models.rule import Rule
 from tpdb.models.rules import Rules
 from tpdb.models.signature import Signature
@@ -37,7 +55,10 @@ from tpdb.models.theory import Theory
 from tpdb.models.theory_value import TheoryValue
 from tpdb.models.trs import Trs
 from tpdb.models.type_declaration import TypeDeclaration
-from tpdb.models.type_mod import TypeType
+from tpdb.models.type_mod import (
+    TypeArrow,
+    TypeType,
+)
 from tpdb.models.var import Var
 from tpdb.models.var_declaration import VarDeclaration
 from tpdb.models.yes import Yes
@@ -60,7 +81,13 @@ __all__ = [
     "FuncDeclaration",
     "Funcsym",
     "HigherOrderSignature",
+    "HigherOrderSignatureFunctionSymbolTypeInfo",
+    "HigherOrderSignatureVariableTypeInfo",
     "Lhs",
+    "LhsApplication",
+    "LhsFunapp",
+    "LhsFunappArg",
+    "LhsLambda",
     "Maybe",
     "Metainformation",
     "Name",
@@ -71,6 +98,10 @@ __all__ = [
     "Relrules",
     "Replacementmap",
     "Rhs",
+    "RhsApplication",
+    "RhsFunapp",
+    "RhsFunappArg",
+    "RhsLambda",
     "Rule",
     "Rules",
     "Signature",
@@ -83,6 +114,7 @@ __all__ = [
     "Trs",
     "TypeDeclaration",
     "TypeType",
+    "TypeArrow",
     "Var",
     "VarDeclaration",
     "Yes",
