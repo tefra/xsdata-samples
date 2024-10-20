@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="24.4">
-  <Output maxLineLength="79" subscriptableTypes="true" unionType="true">
+<Config xmlns="http://pypi.org/project/xsdata" version="24.9">
+  <Output maxLineLength="79" subscriptableTypes="true" genericCollections="false" unionType="true">
     <Package>sabre.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
     <Structure>filenames</Structure>
