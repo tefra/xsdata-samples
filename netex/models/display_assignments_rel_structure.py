@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .display_assignment import DisplayAssignment
@@ -13,7 +14,7 @@ class DisplayAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "displayAssignments_RelStructure"
 
-    display_assignment_ref_or_display_assignment: List[
+    display_assignment_ref_or_display_assignment: Iterable[
         Union[DisplayAssignmentRef, DisplayAssignment]
     ] = field(
         default_factory=list,

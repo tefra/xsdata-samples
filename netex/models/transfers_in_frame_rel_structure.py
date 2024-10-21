@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .access import Access
 from .connection import Connection
@@ -15,7 +16,7 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transfersInFrame_RelStructure"
 
-    transfer: List[
+    transfer: Iterable[
         Union[Connection, DefaultConnection, SiteConnection, Access]
     ] = field(
         default_factory=list,

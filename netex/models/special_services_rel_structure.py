@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
@@ -14,7 +15,7 @@ class SpecialServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "specialServices_RelStructure"
 
-    dated_special_service_ref_or_special_service_ref_or_special_service: List[
+    dated_special_service_ref_or_special_service_ref_or_special_service: Iterable[
         Union[DatedSpecialServiceRef, SpecialServiceRef, SpecialService]
     ] = field(
         default_factory=list,

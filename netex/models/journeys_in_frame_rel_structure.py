@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dated_service_journey import DatedServiceJourney
@@ -19,7 +20,7 @@ class JourneysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeysInFrame_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             VehicleJourney,
             DatedVehicleJourney,

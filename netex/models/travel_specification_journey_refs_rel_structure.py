@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .service_journey_ref import ServiceJourneyRef
@@ -17,7 +18,7 @@ class TravelSpecificationJourneyRefsRelStructure(
     class Meta:
         name = "travelSpecificationJourneyRefs_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             TemplateServiceJourneyRef,
             ServiceJourneyRef,

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .accommodation_facility_enumeration import (
     AccommodationFacilityEnumeration,
@@ -13,7 +13,7 @@ class AccommodationFacilityList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: List[AccommodationFacilityEnumeration] = field(
+    value: Iterable[AccommodationFacilityEnumeration] = field(
         default_factory=lambda: [
             AccommodationFacilityEnumeration.UNKNOWN,
         ],

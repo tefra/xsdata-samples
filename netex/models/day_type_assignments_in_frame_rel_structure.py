@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .day_type_assignment import DayTypeAssignment
@@ -12,7 +12,7 @@ class DayTypeAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypeAssignmentsInFrame_RelStructure"
 
-    day_type_assignment: List[DayTypeAssignment] = field(
+    day_type_assignment: Iterable[DayTypeAssignment] = field(
         default_factory=list,
         metadata={
             "name": "DayTypeAssignment",

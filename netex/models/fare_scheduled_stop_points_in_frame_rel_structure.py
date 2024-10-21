@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .fare_scheduled_stop_point import FareScheduledStopPoint
 from .frame_containment_structure import FrameContainmentStructure
@@ -13,7 +14,7 @@ class FareScheduledStopPointsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareScheduledStopPointsInFrame_RelStructure"
 
-    scheduled_stop_point_or_fare_scheduled_stop_point: List[
+    scheduled_stop_point_or_fare_scheduled_stop_point: Iterable[
         Union[ScheduledStopPoint, FareScheduledStopPoint]
     ] = field(
         default_factory=list,

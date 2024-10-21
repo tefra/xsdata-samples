@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .frame_containment_structure import FrameContainmentStructure
 from .tariff import Tariff
@@ -12,7 +12,7 @@ class TariffsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "tariffsInFrame_RelStructure"
 
-    tariff: List[Tariff] = field(
+    tariff: Iterable[Tariff] = field(
         default_factory=list,
         metadata={
             "name": "Tariff",

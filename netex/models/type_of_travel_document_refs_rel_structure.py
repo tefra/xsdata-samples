@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_travel_document_ref import TypeOfTravelDocumentRef
@@ -12,7 +12,7 @@ class TypeOfTravelDocumentRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "TypeOfTravelDocumentRefs_RelStructure"
 
-    type_of_travel_document_ref: List[TypeOfTravelDocumentRef] = field(
+    type_of_travel_document_ref: Iterable[TypeOfTravelDocumentRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfTravelDocumentRef",

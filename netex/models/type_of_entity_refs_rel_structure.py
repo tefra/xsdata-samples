@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .all_distribution_channels_ref import AllDistributionChannelsRef
 from .customer_account_status_ref import CustomerAccountStatusRef
@@ -63,7 +64,7 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfEntityRefs_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             TypeOfRetailDeviceRef,
             CustomerAccountStatusRef,

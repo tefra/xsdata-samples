@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -164,7 +165,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: List[MultilingualString] = field(
+    description: Iterable[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "Description",

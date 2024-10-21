@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .level import Level
@@ -13,7 +14,7 @@ class LevelsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "levels_RelStructure"
 
-    level_ref_or_level: List[Union[LevelRef, Level]] = field(
+    level_ref_or_level: Iterable[Union[LevelRef, Level]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .passenger_capacity import PassengerCapacity
@@ -13,7 +14,7 @@ class PassengerCapacitiesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "passengerCapacities_RelStructure"
 
-    passenger_capacity_ref_or_passenger_capacity: List[
+    passenger_capacity_ref_or_passenger_capacity: Iterable[
         Union[PassengerCapacityRef, PassengerCapacity]
     ] = field(
         default_factory=list,

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDuration
 
@@ -66,7 +67,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             },
         )
     )
-    installment_payment_methods: List[PaymentMethodEnumeration] = field(
+    installment_payment_methods: Iterable[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "InstallmentPaymentMethods",

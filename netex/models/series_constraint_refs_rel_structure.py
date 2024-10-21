@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .series_constraint_ref import SeriesConstraintRef
@@ -12,7 +12,7 @@ class SeriesConstraintRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "seriesConstraintRefs_RelStructure"
 
-    series_constraint_ref: List[SeriesConstraintRef] = field(
+    series_constraint_ref: Iterable[SeriesConstraintRef] = field(
         default_factory=list,
         metadata={
             "name": "SeriesConstraintRef",

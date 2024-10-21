@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .access_space import AccessSpace
 from .access_zone import AccessZone
@@ -92,7 +93,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupOfEntitiesInFrame_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             PoolOfVehicles,
             GroupOfSingleJourneys,

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_access_right_assignment_ref import TypeOfAccessRightAssignmentRef
@@ -14,7 +14,7 @@ class TypeOfAccessRightAssignmentRefsRelStructure(
     class Meta:
         name = "TypeOfAccessRightAssignmentRefs_RelStructure"
 
-    type_of_access_right_assignment_ref: List[
+    type_of_access_right_assignment_ref: Iterable[
         TypeOfAccessRightAssignmentRef
     ] = field(
         default_factory=list,

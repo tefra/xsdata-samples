@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .line_in_direction_ref import LineInDirectionRef
@@ -12,7 +12,7 @@ class LinesInDirectionRefsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "linesInDirectionRefs_RelStructure"
 
-    line_in_direction_ref: List[LineInDirectionRef] = field(
+    line_in_direction_ref: Iterable[LineInDirectionRef] = field(
         default_factory=list,
         metadata={
             "name": "LineInDirectionRef",

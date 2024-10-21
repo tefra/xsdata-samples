@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .emv_card import EmvCard
 from .frame_containment_structure import FrameContainmentStructure
@@ -14,7 +15,7 @@ class MediumAccessDevicesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "mediumAccessDevicesInFrame_RelStructure"
 
-    emv_card_or_smartcard_or_mobile_device: List[
+    emv_card_or_smartcard_or_mobile_device: Iterable[
         Union[EmvCard, Smartcard, MobileDevice]
     ] = field(
         default_factory=list,

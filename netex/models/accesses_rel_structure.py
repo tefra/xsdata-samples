@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .access import Access
 from .access_ref import AccessRef
@@ -13,7 +14,7 @@ class AccessesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accesses_RelStructure"
 
-    access_ref_or_access: List[Union[AccessRef, Access]] = field(
+    access_ref_or_access: Iterable[Union[AccessRef, Access]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

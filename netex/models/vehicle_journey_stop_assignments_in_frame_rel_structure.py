@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
@@ -14,7 +14,7 @@ class VehicleJourneyStopAssignmentsInFrameRelStructure(
     class Meta:
         name = "vehicleJourneyStopAssignmentsInFrame_RelStructure"
 
-    vehicle_journey_stop_assignment: List[VehicleJourneyStopAssignment] = (
+    vehicle_journey_stop_assignment: Iterable[VehicleJourneyStopAssignment] = (
         field(
             default_factory=list,
             metadata={

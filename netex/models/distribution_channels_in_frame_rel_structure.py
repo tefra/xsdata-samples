@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .distribution_channel import DistributionChannel
 from .frame_containment_structure import FrameContainmentStructure
@@ -12,7 +12,7 @@ class DistributionChannelsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "distributionChannelsInFrame_RelStructure"
 
-    distribution_channel: List[DistributionChannel] = field(
+    distribution_channel: Iterable[DistributionChannel] = field(
         default_factory=list,
         metadata={
             "name": "DistributionChannel",

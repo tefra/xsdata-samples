@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .open_transport_mode import OpenTransportMode
@@ -12,7 +12,7 @@ class OpenModesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "openModesRelStructure"
 
-    open_transport_mode: List[OpenTransportMode] = field(
+    open_transport_mode: Iterable[OpenTransportMode] = field(
         default_factory=list,
         metadata={
             "name": "OpenTransportMode",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .garage_point import GaragePoint
@@ -15,7 +16,7 @@ class TimingPointsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timingPoints_RelStructure"
 
-    relief_point_or_parking_point_or_timing_point: List[
+    relief_point_or_parking_point_or_timing_point: Iterable[
         Union[ParkingPoint, GaragePoint, ReliefPoint, TimingPoint]
     ] = field(
         default_factory=list,

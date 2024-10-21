@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_service_ref import TypeOfServiceRef
@@ -12,7 +12,7 @@ class TypeOfServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfServiceRefs_RelStructure"
 
-    type_of_service_ref: List[TypeOfServiceRef] = field(
+    type_of_service_ref: Iterable[TypeOfServiceRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfServiceRef",

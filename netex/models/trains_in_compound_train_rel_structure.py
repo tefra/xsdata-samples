@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
@@ -16,7 +16,7 @@ class TrainsInCompoundTrainRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "trainsInCompoundTrain_RelStructure"
 
-    train_in_compound_train: List[
+    train_in_compound_train: Iterable[
         TrainInCompoundTrainVersionedChildStructure
     ] = field(
         default_factory=list,

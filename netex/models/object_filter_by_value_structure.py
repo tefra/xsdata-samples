@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .accepted_driver_permit_ref import AcceptedDriverPermitRef
 from .access_ref import AccessRef
@@ -657,7 +658,7 @@ class ObjectFilterByValueStructure:
 
     @dataclass
     class ObjectReferences:
-        choice: List[
+        choice: Iterable[
             Union[
                 TripLegRef,
                 IndividualPassengerInfoRef,

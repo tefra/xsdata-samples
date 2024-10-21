@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .allowed_line_direction_ref import AllowedLineDirectionRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,7 @@ class AllowedLineDirectionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "allowedLineDirectionRefs_RelStructure"
 
-    allowed_line_direction_ref: List[AllowedLineDirectionRef] = field(
+    allowed_line_direction_ref: Iterable[AllowedLineDirectionRef] = field(
         default_factory=list,
         metadata={
             "name": "AllowedLineDirectionRef",

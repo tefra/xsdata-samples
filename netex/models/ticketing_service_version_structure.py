@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .local_service_version_structure import LocalServiceVersionStructure
 from .payment_method_enumeration import PaymentMethodEnumeration
@@ -17,7 +18,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "TicketingService_VersionStructure"
 
-    vehicle_modes: List[VehicleModeEnumeration] = field(
+    vehicle_modes: Iterable[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",
@@ -26,16 +27,18 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "tokens": True,
         },
     )
-    ticketing_service_list: List[TicketingServiceFacilityEnumeration] = field(
-        default_factory=list,
-        metadata={
-            "name": "TicketingServiceList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        },
+    ticketing_service_list: Iterable[TicketingServiceFacilityEnumeration] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "TicketingServiceList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "tokens": True,
+            },
+        )
     )
-    ticket_type_list: List[List[TicketTypeEnumeration]] = field(
+    ticket_type_list: Iterable[Iterable[TicketTypeEnumeration]] = field(
         default_factory=list,
         metadata={
             "name": "TicketTypeList",
@@ -84,7 +87,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_methods: List[PaymentMethodEnumeration] = field(
+    payment_methods: Iterable[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .data_object_request import DataObjectRequest
 from .service_request_structure import ServiceRequestStructure
@@ -12,7 +12,7 @@ class ServiceRequest(ServiceRequestStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"
 
-    data_object_request: List[DataObjectRequest] = field(
+    data_object_request: Iterable[DataObjectRequest] = field(
         default_factory=list,
         metadata={
             "name": "DataObjectRequest",

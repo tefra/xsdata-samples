@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .distance_matrix_element_inverse_ref import (
     DistanceMatrixElementInverseRef,
@@ -15,7 +16,7 @@ class DistanceMatrixElementRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "distanceMatrixElementRefs_RelStructure"
 
-    distance_matrix_element_ref_or_distance_matrix_element_inverse_ref: List[
+    distance_matrix_element_ref_or_distance_matrix_element_inverse_ref: Iterable[
         Union[DistanceMatrixElementRef, DistanceMatrixElementInverseRef]
     ] = field(
         default_factory=list,

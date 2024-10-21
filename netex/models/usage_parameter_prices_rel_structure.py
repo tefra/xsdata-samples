@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .cell_ref import CellRef
 from .strict_containment_aggregation_structure import (
@@ -16,7 +17,7 @@ class UsageParameterPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "usageParameterPrices_RelStructure"
 
-    usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref: List[
+    usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref: Iterable[
         Union[UsageParameterPriceRef, UsageParameterPrice, CellRef]
     ] = field(
         default_factory=list,

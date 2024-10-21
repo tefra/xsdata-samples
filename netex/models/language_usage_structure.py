@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .language_use_enumeration import LanguageUseEnumeration
 
@@ -17,7 +18,7 @@ class LanguageUsageStructure:
             "required": True,
         },
     )
-    language_use: List[LanguageUseEnumeration] = field(
+    language_use: Iterable[LanguageUseEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "LanguageUse",

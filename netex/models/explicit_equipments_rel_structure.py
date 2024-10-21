@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
@@ -111,7 +112,7 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "explicitEquipments_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             PassengerInformationEquipmentRef,
             CycleStorageEquipmentRef,

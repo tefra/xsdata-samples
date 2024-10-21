@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
@@ -16,7 +17,7 @@ class CappingRulePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cappingRulePrices_RelStructure"
 
-    capping_rule_price_ref_or_cell_ref_or_capping_rule_price: List[
+    capping_rule_price_ref_or_cell_ref_or_capping_rule_price: Iterable[
         Union[CappingRulePriceRef, CellRef, CappingRulePrice]
     ] = field(
         default_factory=list,

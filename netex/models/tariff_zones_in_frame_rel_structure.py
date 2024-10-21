@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_zone import FareZone
@@ -13,7 +14,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "tariffZonesInFrame_RelStructure"
 
-    tariff_zone: List[Union[FareZone, TariffZone]] = field(
+    tariff_zone: Iterable[Union[FareZone, TariffZone]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

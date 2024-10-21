@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .access_mode_enumeration import AccessModeEnumeration
 from .accessibility_assessment import AccessibilityAssessment
@@ -31,7 +32,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_modes: List[AccessModeEnumeration] = field(
+    access_modes: Iterable[AccessModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "AccessModes",

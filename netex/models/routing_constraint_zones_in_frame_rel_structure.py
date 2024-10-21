@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .routing_constraint_zone import RoutingConstraintZone
@@ -14,7 +14,7 @@ class RoutingConstraintZonesInFrameRelStructure(
     class Meta:
         name = "routingConstraintZonesInFrame_RelStructure"
 
-    routing_constraint_zone: List[RoutingConstraintZone] = field(
+    routing_constraint_zone: Iterable[RoutingConstraintZone] = field(
         default_factory=list,
         metadata={
             "name": "RoutingConstraintZone",

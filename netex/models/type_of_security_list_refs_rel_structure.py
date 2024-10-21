@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_security_list_ref import TypeOfSecurityListRef
@@ -12,7 +12,7 @@ class TypeOfSecurityListRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfSecurityListRefs_RelStructure"
 
-    type_of_security_list_ref: List[TypeOfSecurityListRef] = field(
+    type_of_security_list_ref: Iterable[TypeOfSecurityListRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfSecurityListRef",

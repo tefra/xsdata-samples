@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .geographical_interval import GeographicalInterval
@@ -13,7 +14,7 @@ class GeographicalIntervalsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "geographicalIntervals_RelStructure"
 
-    geographical_interval_ref_or_geographical_interval: List[
+    geographical_interval_ref_or_geographical_interval: Iterable[
         Union[GeographicalIntervalRef, GeographicalInterval]
     ] = field(
         default_factory=list,

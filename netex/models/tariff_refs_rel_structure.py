@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .parking_tariff_ref import ParkingTariffRef
@@ -13,7 +14,7 @@ class TariffRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "tariffRefs_RelStructure"
 
-    tariff_ref: List[Union[ParkingTariffRef, TariffRef]] = field(
+    tariff_ref: Iterable[Union[ParkingTariffRef, TariffRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

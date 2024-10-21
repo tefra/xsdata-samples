@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .destination_display_variant_ref import DestinationDisplayVariantRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class DestinationDisplayVariantRefsRelStructure(
     class Meta:
         name = "destinationDisplayVariantRefs_RelStructure"
 
-    destination_display_variant_ref: List[DestinationDisplayVariantRef] = (
+    destination_display_variant_ref: Iterable[DestinationDisplayVariantRef] = (
         field(
             default_factory=list,
             metadata={

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .frame_containment_structure import FrameContainmentStructure
 from .validable_element import ValidableElement
@@ -12,7 +12,7 @@ class ValidableElementsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "validableElementsInFrame_RelStructure"
 
-    validable_element: List[ValidableElement] = field(
+    validable_element: Iterable[ValidableElement] = field(
         default_factory=list,
         metadata={
             "name": "ValidableElement",

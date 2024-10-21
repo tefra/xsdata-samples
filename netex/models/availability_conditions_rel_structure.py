@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .availability_condition_ref import AvailabilityConditionRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -17,7 +18,7 @@ class AvailabilityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "availabilityConditions_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             AvailabilityConditionRef,
             AvailabilityCondition,

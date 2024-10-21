@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .notice import Notice
@@ -12,7 +12,7 @@ class NoticesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticesInFrame_RelStructure"
 
-    notice: List[Notice] = field(
+    notice: Iterable[Notice] = field(
         default_factory=list,
         metadata={
             "name": "Notice",

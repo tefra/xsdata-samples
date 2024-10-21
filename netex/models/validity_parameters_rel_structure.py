@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .access_space_ref import AccessSpaceRef
 from .address_ref import AddressRef
@@ -171,8 +172,8 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityParameters_RelStructure"
 
-    vehicle_modes_or_transport_modes: List[
-        Union[List[VehicleModeEnumeration], List[AllModesEnumeration]]
+    vehicle_modes_or_transport_modes: Iterable[
+        Union[Iterable[VehicleModeEnumeration], Iterable[AllModesEnumeration]]
     ] = field(
         default_factory=list,
         metadata={
@@ -180,14 +181,14 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "choices": (
                 {
                     "name": "VehicleModes",
-                    "type": List[VehicleModeEnumeration],
+                    "type": Iterable[VehicleModeEnumeration],
                     "namespace": "http://www.netex.org.uk/netex",
                     "default_factory": list,
                     "tokens": True,
                 },
                 {
                     "name": "TransportModes",
-                    "type": List[AllModesEnumeration],
+                    "type": Iterable[AllModesEnumeration],
                     "namespace": "http://www.netex.org.uk/netex",
                     "default_factory": list,
                     "tokens": True,
@@ -195,7 +196,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    transport_submode: List[TransportSubmode] = field(
+    transport_submode: Iterable[TransportSubmode] = field(
         default_factory=list,
         metadata={
             "name": "TransportSubmode",
@@ -204,7 +205,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: List[
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Iterable[
         Union[
             PersonalModeOfOperationRef,
             VehiclePoolingRef,
@@ -251,7 +252,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    group_of_operators_ref: List[GroupOfOperatorsRef] = field(
+    group_of_operators_ref: Iterable[GroupOfOperatorsRef] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfOperatorsRef",
@@ -260,7 +261,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    choice: List[
+    choice: Iterable[
         Union[
             AllAuthoritiesRef,
             AllOperatorsRef,
@@ -361,7 +362,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    group_of_lines_ref: List[Union[NetworkRef, GroupOfLinesRef]] = field(
+    group_of_lines_ref: Iterable[Union[NetworkRef, GroupOfLinesRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -379,7 +380,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    line_ref: List[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: Iterable[Union[FlexibleLineRef, LineRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -397,7 +398,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    type_of_line_ref: List[TypeOfLineRef] = field(
+    type_of_line_ref: Iterable[TypeOfLineRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfLineRef",
@@ -406,7 +407,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    tariff_zone_ref: List[TariffZoneRef] = field(
+    tariff_zone_ref: Iterable[TariffZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",
@@ -415,7 +416,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    fare_zone_ref: List[FareZoneRef] = field(
+    fare_zone_ref: Iterable[FareZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "FareZoneRef",
@@ -424,7 +425,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    fare_section_ref: List[FareSectionRef] = field(
+    fare_section_ref: Iterable[FareSectionRef] = field(
         default_factory=list,
         metadata={
             "name": "FareSectionRef",
@@ -433,7 +434,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    scheduled_stop_point_ref: List[
+    scheduled_stop_point_ref: Iterable[
         Union[FareScheduledStopPointRef, ScheduledStopPointRef]
     ] = field(
         default_factory=list,
@@ -453,7 +454,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    vehicle_meeting_point_ref: List[VehicleMeetingPointRef] = field(
+    vehicle_meeting_point_ref: Iterable[VehicleMeetingPointRef] = field(
         default_factory=list,
         metadata={
             "name": "VehicleMeetingPointRef",
@@ -462,7 +463,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    vehicle_meeting_link_ref: List[VehicleMeetingLinkRef] = field(
+    vehicle_meeting_link_ref: Iterable[VehicleMeetingLinkRef] = field(
         default_factory=list,
         metadata={
             "name": "VehicleMeetingLinkRef",
@@ -471,7 +472,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    vehicle_meeting_place_ref: List[
+    vehicle_meeting_place_ref: Iterable[
         Union[VehiclePoolingMeetingPlaceRef, VehicleMeetingPlaceRef]
     ] = field(
         default_factory=list,
@@ -491,7 +492,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    place_use: List[PlaceUseEnumeration] = field(
+    place_use: Iterable[PlaceUseEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PlaceUse",
@@ -500,7 +501,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    topographic_place_ref: List[TopographicPlaceRef] = field(
+    topographic_place_ref: Iterable[TopographicPlaceRef] = field(
         default_factory=list,
         metadata={
             "name": "TopographicPlaceRef",
@@ -509,32 +510,32 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    address_ref: List[Union[PostalAddressRef, RoadAddressRef, AddressRef]] = (
-        field(
-            default_factory=list,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "PostalAddressRef",
-                        "type": PostalAddressRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "RoadAddressRef",
-                        "type": RoadAddressRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "AddressRef",
-                        "type": AddressRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    address_ref: Iterable[
+        Union[PostalAddressRef, RoadAddressRef, AddressRef]
+    ] = field(
+        default_factory=list,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PostalAddressRef",
+                    "type": PostalAddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadAddressRef",
+                    "type": RoadAddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AddressRef",
+                    "type": AddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
-    choice_1: List[
+    choice_1: Iterable[
         Union[
             VehicleStoppingPositionRef,
             VehicleStoppingPlaceRef,
@@ -743,7 +744,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    point_of_interest_classification_ref: List[
+    point_of_interest_classification_ref: Iterable[
         PointOfInterestClassificationRef
     ] = field(
         default_factory=list,
@@ -754,7 +755,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    mobility_service_constraint_zone_ref: List[
+    mobility_service_constraint_zone_ref: Iterable[
         MobilityServiceConstraintZoneRef
     ] = field(
         default_factory=list,
@@ -765,7 +766,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    routing_type: List[RoutingTypeEnumeration] = field(
+    routing_type: Iterable[RoutingTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "RoutingType",
@@ -774,7 +775,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    directions: List[RelativeDirectionEnumeration] = field(
+    directions: Iterable[RelativeDirectionEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "Directions",
@@ -783,7 +784,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    series_constraint_ref: List[SeriesConstraintRef] = field(
+    series_constraint_ref: Iterable[SeriesConstraintRef] = field(
         default_factory=list,
         metadata={
             "name": "SeriesConstraintRef",
@@ -792,7 +793,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    service_journey_pattern_ref: List[ServiceJourneyPatternRef] = field(
+    service_journey_pattern_ref: Iterable[ServiceJourneyPatternRef] = field(
         default_factory=list,
         metadata={
             "name": "ServiceJourneyPatternRef",
@@ -801,7 +802,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    single_journey_path_ref: List[SingleJourneyPathRef] = field(
+    single_journey_path_ref: Iterable[SingleJourneyPathRef] = field(
         default_factory=list,
         metadata={
             "name": "SingleJourneyPathRef",
@@ -810,7 +811,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    class_of_use_ref: List[ClassOfUseRef] = field(
+    class_of_use_ref: Iterable[ClassOfUseRef] = field(
         default_factory=list,
         metadata={
             "name": "ClassOfUseRef",
@@ -819,7 +820,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    fare_class: List[FareClass] = field(
+    fare_class: Iterable[FareClass] = field(
         default_factory=list,
         metadata={
             "name": "FareClass",
@@ -828,7 +829,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    facility_set_ref: List[
+    facility_set_ref: Iterable[
         Union[ServiceFacilitySetRef, SiteFacilitySetRef, FacilitySetRef]
     ] = field(
         default_factory=list,
@@ -853,7 +854,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    type_of_product_category_ref: List[TypeOfProductCategoryRef] = field(
+    type_of_product_category_ref: Iterable[TypeOfProductCategoryRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfProductCategoryRef",
@@ -862,7 +863,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    service_journey_ref: List[
+    service_journey_ref: Iterable[
         Union[TemplateServiceJourneyRef, ServiceJourneyRef]
     ] = field(
         default_factory=list,
@@ -882,7 +883,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    train_number_ref: List[TrainNumberRef] = field(
+    train_number_ref: Iterable[TrainNumberRef] = field(
         default_factory=list,
         metadata={
             "name": "TrainNumberRef",
@@ -891,7 +892,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    group_of_services_ref: List[GroupOfServicesRef] = field(
+    group_of_services_ref: Iterable[GroupOfServicesRef] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfServicesRef",
@@ -900,7 +901,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    single_journey_ref: List[SingleJourneyRef] = field(
+    single_journey_ref: Iterable[SingleJourneyRef] = field(
         default_factory=list,
         metadata={
             "name": "SingleJourneyRef",
@@ -909,7 +910,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    group_of_single_journeys_ref: List[GroupOfSingleJourneysRef] = field(
+    group_of_single_journeys_ref: Iterable[GroupOfSingleJourneysRef] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfSingleJourneysRef",
@@ -918,7 +919,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    transport_type_ref_or_vehicle_type_ref: List[
+    transport_type_ref_or_vehicle_type_ref: Iterable[
         Union[
             SimpleVehicleTypeRef,
             CompoundTrainRef,
@@ -959,7 +960,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    vehicle_model_ref: List[VehicleModelRef] = field(
+    vehicle_model_ref: Iterable[VehicleModelRef] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModelRef",
@@ -968,7 +969,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_service_ref: List[TypeOfServiceRef] = field(
+    type_of_service_ref: Iterable[TypeOfServiceRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfServiceRef",
@@ -977,7 +978,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    vehicle_model_profile_ref: List[
+    vehicle_model_profile_ref: Iterable[
         Union[CycleModelProfileRef, CarModelProfileRef]
     ] = field(
         default_factory=list,
@@ -997,7 +998,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    choice_2: List[
+    choice_2: Iterable[
         Union[
             OnlineServiceRef,
             VehicleRentalServiceRef,
@@ -1134,7 +1135,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    train_element_ref: List[TrainElementRef] = field(
+    train_element_ref: Iterable[TrainElementRef] = field(
         default_factory=list,
         metadata={
             "name": "TrainElementRef",
@@ -1143,7 +1144,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    train_component_label_assignment_ref: List[
+    train_component_label_assignment_ref: Iterable[
         TrainComponentLabelAssignmentRef
     ] = field(
         default_factory=list,
@@ -1154,7 +1155,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    passenger_seat_ref: List[PassengerSeatRef] = field(
+    passenger_seat_ref: Iterable[PassengerSeatRef] = field(
         default_factory=list,
         metadata={
             "name": "PassengerSeatRef",
@@ -1163,7 +1164,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    vehicle_ref: List[VehicleRef] = field(
+    vehicle_ref: Iterable[VehicleRef] = field(
         default_factory=list,
         metadata={
             "name": "VehicleRef",
@@ -1172,29 +1173,29 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_fare_structure_factor_ref: List[TypeOfFareStructureFactorRef] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFareStructureFactorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-                "sequence": 1,
-            },
-        )
+    type_of_fare_structure_factor_ref: Iterable[
+        TypeOfFareStructureFactorRef
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "TypeOfFareStructureFactorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "sequence": 1,
+        },
     )
-    type_of_fare_structure_element_ref: List[TypeOfFareStructureElementRef] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFareStructureElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-                "sequence": 1,
-            },
-        )
+    type_of_fare_structure_element_ref: Iterable[
+        TypeOfFareStructureElementRef
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "TypeOfFareStructureElementRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "sequence": 1,
+        },
     )
-    type_of_tariff_ref: List[TypeOfTariffRef] = field(
+    type_of_tariff_ref: Iterable[TypeOfTariffRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfTariffRef",
@@ -1203,7 +1204,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    discounting_rule_ref_or_pricing_rule_ref: List[
+    discounting_rule_ref_or_pricing_rule_ref: Iterable[
         Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef]
     ] = field(
         default_factory=list,
@@ -1228,7 +1229,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    type_of_pricing_rule_ref: List[TypeOfPricingRuleRef] = field(
+    type_of_pricing_rule_ref: Iterable[TypeOfPricingRuleRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfPricingRuleRef",
@@ -1237,7 +1238,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    charging_moment_ref: List[ChargingMomentRef] = field(
+    charging_moment_ref: Iterable[ChargingMomentRef] = field(
         default_factory=list,
         metadata={
             "name": "ChargingMomentRef",
@@ -1246,7 +1247,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_fare_product_ref: List[TypeOfFareProductRef] = field(
+    type_of_fare_product_ref: Iterable[TypeOfFareProductRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfFareProductRef",
@@ -1255,7 +1256,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_usage_parameter_ref: List[TypeOfUsageParameterRef] = field(
+    type_of_usage_parameter_ref: Iterable[TypeOfUsageParameterRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfUsageParameterRef",
@@ -1264,7 +1265,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_concession_ref: List[TypeOfConcessionRef] = field(
+    type_of_concession_ref: Iterable[TypeOfConcessionRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfConcessionRef",
@@ -1273,16 +1274,18 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_sales_offer_package_ref: List[TypeOfSalesOfferPackageRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfSalesOfferPackageRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequence": 1,
-        },
+    type_of_sales_offer_package_ref: Iterable[TypeOfSalesOfferPackageRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "TypeOfSalesOfferPackageRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "sequence": 1,
+            },
+        )
     )
-    type_of_travel_document_ref: List[TypeOfTravelDocumentRef] = field(
+    type_of_travel_document_ref: Iterable[TypeOfTravelDocumentRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfTravelDocumentRef",
@@ -1291,16 +1294,18 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_machine_readability_ref: List[TypeOfMachineReadabilityRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfMachineReadabilityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequence": 1,
-        },
+    type_of_machine_readability_ref: Iterable[TypeOfMachineReadabilityRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "TypeOfMachineReadabilityRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "sequence": 1,
+            },
+        )
     )
-    distribution_channel_ref_or_group_of_distribution_channels_ref: List[
+    distribution_channel_ref_or_group_of_distribution_channels_ref: Iterable[
         Union[DistributionChannelRef, GroupOfDistributionChannelsRef]
     ] = field(
         default_factory=list,
@@ -1320,7 +1325,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    fulfilment_method_ref: List[FulfilmentMethodRef] = field(
+    fulfilment_method_ref: Iterable[FulfilmentMethodRef] = field(
         default_factory=list,
         metadata={
             "name": "FulfilmentMethodRef",
@@ -1329,7 +1334,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_payment_method_ref: List[TypeOfPaymentMethodRef] = field(
+    type_of_payment_method_ref: Iterable[TypeOfPaymentMethodRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfPaymentMethodRef",

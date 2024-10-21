@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_frame_ref import TypeOfFrameRef
@@ -12,7 +12,7 @@ class TypeOfFrameRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfFrameRefs_RelStructure"
 
-    type_of_frame_ref: List[TypeOfFrameRef] = field(
+    type_of_frame_ref: Iterable[TypeOfFrameRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfFrameRef",

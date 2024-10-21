@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .companion_profile_ref import CompanionProfileRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +15,7 @@ class UserProfileRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "userProfileRefs_RelStructure"
 
-    user_profile_ref: List[
+    user_profile_ref: Iterable[
         Union[VehiclePoolerProfileRef, CompanionProfileRef, UserProfileRef]
     ] = field(
         default_factory=list,

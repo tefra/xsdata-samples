@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .complex_feature_member_versioned_child_structure import (
     ComplexFeatureMemberVersionedChildStructure,
@@ -14,7 +14,7 @@ class ComplexFeatureMembersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "complexFeatureMembers_RelStructure"
 
-    complex_feature_member: List[
+    complex_feature_member: Iterable[
         ComplexFeatureMemberVersionedChildStructure
     ] = field(
         default_factory=list,

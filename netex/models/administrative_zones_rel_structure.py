@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from .administrative_zone_ref import AdministrativeZoneRef
 from .all_modes_enumeration import AllModesEnumeration
@@ -29,7 +30,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
 
-    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[
+    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: Iterable[
         Union[
             AdministrativeZoneRef,
             "TransportAdministrativeZone",
@@ -181,7 +182,7 @@ class TransportAdministrativeZoneVersionStructure(
     class Meta:
         name = "TransportAdministrativeZone_VersionStructure"
 
-    vehicle_modes: List[AllModesEnumeration] = field(
+    vehicle_modes: Iterable[AllModesEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",

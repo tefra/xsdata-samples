@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -16,7 +17,7 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerEligibilityRefs_RelStructure"
 
-    customer_eligibility_ref: List[
+    customer_eligibility_ref: Iterable[
         Union[
             ResidentialQualificationEligibilityRef,
             CommercialProfileEligibilityRef,

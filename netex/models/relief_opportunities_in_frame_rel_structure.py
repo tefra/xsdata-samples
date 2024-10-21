@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .relief_opportunity import ReliefOpportunity
@@ -12,7 +12,7 @@ class ReliefOpportunitiesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "reliefOpportunitiesInFrame_RelStructure"
 
-    relief_opportunity: List[ReliefOpportunity] = field(
+    relief_opportunity: Iterable[ReliefOpportunity] = field(
         default_factory=list,
         metadata={
             "name": "ReliefOpportunity",

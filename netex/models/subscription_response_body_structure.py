@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class SubscriptionResponseBodyStructure:
-    response_status: List[ResponseStatus] = field(
+    response_status: Iterable[ResponseStatus] = field(
         default_factory=list,
         metadata={
             "name": "ResponseStatus",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
@@ -18,7 +18,7 @@ class TopographicPlaceDescriptorsRelStructure(
     class Meta:
         name = "topographicPlaceDescriptors_RelStructure"
 
-    topographic_place_descriptor: List[
+    topographic_place_descriptor: Iterable[
         TopographicPlaceDescriptorVersionedChildStructure
     ] = field(
         default_factory=list,

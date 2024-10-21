@@ -1,6 +1,7 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -162,7 +163,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_methods: List[PaymentMethodEnumeration] = field(
+    payment_methods: Iterable[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",

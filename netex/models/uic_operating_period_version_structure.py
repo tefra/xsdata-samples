@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .day_of_week_enumeration import DayOfWeekEnumeration
 from .operating_period_version_structure import OperatingPeriodVersionStructure
@@ -21,7 +22,7 @@ class UicOperatingPeriodVersionStructure(OperatingPeriodVersionStructure):
             "required": True,
         },
     )
-    days_of_week: List[DayOfWeekEnumeration] = field(
+    days_of_week: Iterable[DayOfWeekEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "DaysOfWeek",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .empty_type_1 import EmptyType1
 
@@ -8,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilityRequestPolicyStructure:
-    national_language: List[str] = field(
+    national_language: Iterable[str] = field(
         default_factory=list,
         metadata={
             "name": "NationalLanguage",

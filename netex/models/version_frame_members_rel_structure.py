@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .accepted_driver_permit import AcceptedDriverPermit
 from .access import Access
@@ -569,7 +570,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "versionFrameMembers_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             EntityInVersionInFrameRefStructure,
             Fleet,

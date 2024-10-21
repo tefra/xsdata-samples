@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .offered_travel_specification import OfferedTravelSpecification
@@ -18,7 +19,7 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "travelSpecifications_RelStructure"
 
-    travel_specification_ref_or_travel_specification: List[
+    travel_specification_ref_or_travel_specification: Iterable[
         Union[
             OfferedTravelSpecificationRef,
             RequestedTravelSpecificationRef,

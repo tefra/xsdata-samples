@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .complex_feature_projection import ComplexFeatureProjection
 from .complex_feature_projection_ref import ComplexFeatureProjectionRef
@@ -23,7 +24,7 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "projections_RelStructure"
 
-    projection_ref_or_projection: List[
+    projection_ref_or_projection: Iterable[
         Union[
             TopographicProjectionRef,
             ComplexFeatureProjectionRef,

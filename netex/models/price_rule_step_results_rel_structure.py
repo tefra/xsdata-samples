@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .price_rule_step_result_structure import PriceRuleStepResultStructure
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class PriceRuleStepResultsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceRuleStepResults_RelStructure"
 
-    rule_step_result: List[PriceRuleStepResultStructure] = field(
+    rule_step_result: Iterable[PriceRuleStepResultStructure] = field(
         default_factory=list,
         metadata={
             "name": "RuleStepResult",

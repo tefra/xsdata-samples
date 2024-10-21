@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_route import FlexibleRoute
@@ -13,7 +14,7 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routesInFrame_RelStructure"
 
-    route: List[Union[FlexibleRoute, Route]] = field(
+    route: Iterable[Union[FlexibleRoute, Route]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

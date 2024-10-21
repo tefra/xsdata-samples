@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .line_network import LineNetwork
@@ -12,7 +12,7 @@ class LineNetworksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "lineNetworksInFrame_RelStructure"
 
-    line_network: List[LineNetwork] = field(
+    line_network: Iterable[LineNetwork] = field(
         default_factory=list,
         metadata={
             "name": "LineNetwork",

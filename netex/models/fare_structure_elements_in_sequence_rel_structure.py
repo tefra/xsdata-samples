@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .controllable_element_in_sequence import ControllableElementInSequence
 from .fare_structure_element_in_sequence import FareStructureElementInSequence
@@ -17,7 +18,7 @@ class FareStructureElementsInSequenceRelStructure(
     class Meta:
         name = "fareStructureElementsInSequence_RelStructure"
 
-    fare_structure_element_in_sequence_or_controllable_element_in_sequence: List[
+    fare_structure_element_in_sequence_or_controllable_element_in_sequence: Iterable[
         Union[FareStructureElementInSequence, ControllableElementInSequence]
     ] = field(
         default_factory=list,

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
 from .capped_discount_right import CappedDiscountRight
@@ -18,7 +19,7 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareProductsInFrame_RelStructure"
 
-    fare_product: List[
+    fare_product: Iterable[
         Union[
             SupplementProduct,
             PreassignedFareProduct,

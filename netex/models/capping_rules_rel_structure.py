@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .capping_rule import CappingRule
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class CappingRulesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cappingRules_RelStructure"
 
-    capping_rule: List[CappingRule] = field(
+    capping_rule: Iterable[CappingRule] = field(
         default_factory=list,
         metadata={
             "name": "CappingRule",

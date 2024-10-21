@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .uic_product_characteristic_enumeration import (
     UicProductCharacteristicEnumeration,
@@ -13,7 +13,7 @@ class UicProductCharacteristicList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: List[UicProductCharacteristicEnumeration] = field(
+    value: Iterable[UicProductCharacteristicEnumeration] = field(
         default_factory=list,
         metadata={
             "tokens": True,

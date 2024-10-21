@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .driver_schedule_frame import DriverScheduleFrame
 from .fare_frame import FareFrame
@@ -26,7 +27,7 @@ class DataObjectsRelStructure:
     class Meta:
         name = "dataObjects_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             CompositeFrame,
             MobilityJourneyFrame,

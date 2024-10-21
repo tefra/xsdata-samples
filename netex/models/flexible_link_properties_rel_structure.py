@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_link_properties import FlexibleLinkProperties
@@ -12,7 +12,7 @@ class FlexibleLinkPropertiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleLinkProperties_RelStructure"
 
-    flexible_link_properties: List[FlexibleLinkProperties] = field(
+    flexible_link_properties: Iterable[FlexibleLinkProperties] = field(
         default_factory=list,
         metadata={
             "name": "FlexibleLinkProperties",

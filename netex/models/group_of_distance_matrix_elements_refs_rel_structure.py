@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .group_of_distance_matrix_elements_ref import (
     GroupOfDistanceMatrixElementsRef,
@@ -16,7 +16,7 @@ class GroupOfDistanceMatrixElementsRefsRelStructure(
     class Meta:
         name = "groupOfDistanceMatrixElementsRefs_RelStructure"
 
-    group_of_distance_matrix_elements_ref: List[
+    group_of_distance_matrix_elements_ref: Iterable[
         GroupOfDistanceMatrixElementsRef
     ] = field(
         default_factory=list,

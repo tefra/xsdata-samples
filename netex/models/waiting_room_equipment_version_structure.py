@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .class_of_use_ref import ClassOfUseRef
 from .fare_class_enumeration import FareClassEnumeration
@@ -16,7 +17,7 @@ class WaitingRoomEquipmentVersionStructure(WaitingEquipmentVersionStructure):
     class Meta:
         name = "WaitingRoomEquipment_VersionStructure"
 
-    fare_class: List[FareClassEnumeration] = field(
+    fare_class: Iterable[FareClassEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "FareClass",
@@ -33,7 +34,7 @@ class WaitingRoomEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sanitary: List[SanitaryFacilityEnumeration] = field(
+    sanitary: Iterable[SanitaryFacilityEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "Sanitary",

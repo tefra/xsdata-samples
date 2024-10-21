@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .class_in_frame import ClassInFrame
 from .class_in_frame_ref import ClassInFrameRef
@@ -13,7 +14,7 @@ class ClassesInRepositoryRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "classesInRepository_RelStructure"
 
-    class_in_frame_ref_or_class_in_frame: List[
+    class_in_frame_ref_or_class_in_frame: Iterable[
         Union[ClassInFrameRef, ClassInFrame]
     ] = field(
         default_factory=list,

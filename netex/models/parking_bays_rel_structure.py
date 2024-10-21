@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .monitored_vehicle_sharing_parking_bay import (
@@ -23,7 +24,7 @@ class ParkingBaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingBays_RelStructure"
 
-    parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay: List[
+    parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay: Iterable[
         Union[
             VehiclePoolingParkingBayRef,
             MonitoredVehicleSharingParkingBayRef,

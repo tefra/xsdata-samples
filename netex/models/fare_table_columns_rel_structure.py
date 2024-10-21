@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, List, Optional, Union
+from typing import Any, Optional, Union
 
 from .entity_in_version_structure import VersionedChildStructure
 from .fare_table_ref import FareTableRef
@@ -19,7 +20,7 @@ class FareTableColumnsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareTableColumns_RelStructure"
 
-    fare_table_column: List["FareTableColumn"] = field(
+    fare_table_column: Iterable["FareTableColumn"] = field(
         default_factory=list,
         metadata={
             "name": "FareTableColumn",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .entrance import Entrance
@@ -29,7 +30,7 @@ class SiteEntrancesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "siteEntrances_RelStructure"
 
-    entrance_ref_or_parking_entrance_ref_or_entrance: List[
+    entrance_ref_or_parking_entrance_ref_or_entrance: Iterable[
         Union[
             StopPlaceVehicleEntranceRef,
             StopPlaceEntranceRef,

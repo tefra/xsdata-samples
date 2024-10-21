@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
@@ -125,7 +126,7 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_methods: List[PaymentMethodEnumeration] = field(
+    payment_methods: Iterable[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",
@@ -144,7 +145,7 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             },
         )
     )
-    purchase_moment: List[PurchaseMomentEnumeration] = field(
+    purchase_moment: Iterable[PurchaseMomentEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PurchaseMoment",

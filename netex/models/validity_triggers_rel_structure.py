@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .entity_in_version_structure import ValidityTriggerVersionStructure
@@ -12,7 +12,7 @@ class ValidityTriggersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityTriggers_RelStructure"
 
-    validity_trigger: List[ValidityTriggerVersionStructure] = field(
+    validity_trigger: Iterable[ValidityTriggerVersionStructure] = field(
         default_factory=list,
         metadata={
             "name": "ValidityTrigger",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .path_link_in_sequence import PathLinkInSequence
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class PathLinksInSequenceRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pathLinksInSequence_RelStructure"
 
-    path_link_in_sequence: List[PathLinkInSequence] = field(
+    path_link_in_sequence: Iterable[PathLinkInSequence] = field(
         default_factory=list,
         metadata={
             "name": "PathLinkInSequence",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .machine_readable_enumeration import MachineReadableEnumeration
@@ -49,7 +50,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    machine_readable: List[MachineReadableEnumeration] = field(
+    machine_readable: Iterable[MachineReadableEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "MachineReadable",

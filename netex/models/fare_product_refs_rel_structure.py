@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
@@ -19,7 +20,7 @@ class FareProductRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareProductRefs_RelStructure"
 
-    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: List[
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Iterable[
         Union[
             SupplementProductRef,
             PreassignedFareProductRef,

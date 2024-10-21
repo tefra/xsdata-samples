@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .service_link import ServiceLink
@@ -12,7 +12,7 @@ class ServiceLinksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "serviceLinksInFrame_RelStructure"
 
-    service_link: List[ServiceLink] = field(
+    service_link: Iterable[ServiceLink] = field(
         default_factory=list,
         metadata={
             "name": "ServiceLink",

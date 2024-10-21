@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .additional_driver_option_ref import AdditionalDriverOptionRef
 from .booking_policy_ref import BookingPolicyRef
@@ -50,7 +51,7 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usageParameterRefs_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             AdditionalDriverOptionRef,
             RentalOptionRef,

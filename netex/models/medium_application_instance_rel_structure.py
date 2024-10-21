@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .medium_application_instance import MediumApplicationInstance
@@ -12,7 +12,7 @@ class MediumApplicationInstanceRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "mediumApplicationInstance_RelStructure"
 
-    medium_application_instance: List[MediumApplicationInstance] = field(
+    medium_application_instance: Iterable[MediumApplicationInstance] = field(
         default_factory=list,
         metadata={
             "name": "MediumApplicationInstance",

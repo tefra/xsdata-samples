@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .country_ref import CountryRef
 from .external_object_ref_structure import ExternalObjectRefStructure
@@ -136,7 +137,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_modes: List[VehicleModeEnumeration] = field(
+    vehicle_modes: Iterable[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",

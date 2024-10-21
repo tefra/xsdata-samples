@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .journey_part_ref import JourneyPartRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,7 @@ class JourneyPartRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyPartRefs_RelStructure"
 
-    journey_part_ref: List[JourneyPartRef] = field(
+    journey_part_ref: Iterable[JourneyPartRef] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPartRef",

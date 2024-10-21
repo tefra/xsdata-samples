@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking import Parking
@@ -12,7 +12,7 @@ class ParkingsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingsInFrame_RelStructure"
 
-    parking: List[Parking] = field(
+    parking: Iterable[Parking] = field(
         default_factory=list,
         metadata={
             "name": "Parking",

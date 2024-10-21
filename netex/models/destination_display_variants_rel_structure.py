@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .destination_display_variant import DestinationDisplayVariant
 from .strict_containment_aggregation_structure import (
@@ -16,7 +16,7 @@ class DestinationDisplayVariantsRelStructure(
     class Meta:
         name = "destinationDisplayVariants_RelStructure"
 
-    destination_display_variant: List[DestinationDisplayVariant] = field(
+    destination_display_variant: Iterable[DestinationDisplayVariant] = field(
         default_factory=list,
         metadata={
             "name": "DestinationDisplayVariant",

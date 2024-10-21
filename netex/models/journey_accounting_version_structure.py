@@ -1,6 +1,7 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -130,7 +131,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    partial: List[bool] = field(
+    partial: Iterable[bool] = field(
         default_factory=list,
         metadata={
             "name": "Partial",

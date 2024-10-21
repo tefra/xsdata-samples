@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .mobility_service_constraint_zone_ref import (
     MobilityServiceConstraintZoneRef,
@@ -16,7 +16,7 @@ class MobilityServiceConstraintZoneRefsRelStructure(
     class Meta:
         name = "mobilityServiceConstraintZoneRefs_RelStructure"
 
-    mobility_service_constraint_zone_ref: List[
+    mobility_service_constraint_zone_ref: Iterable[
         MobilityServiceConstraintZoneRef
     ] = field(
         default_factory=list,

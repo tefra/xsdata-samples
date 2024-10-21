@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .group_of_timebands_ref import GroupOfTimebandsRef
@@ -15,7 +16,7 @@ class GroupOfTimebandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupOfTimebands_RelStructure"
 
-    group_of_timebands_ref_or_group_of_timebands: List[
+    group_of_timebands_ref_or_group_of_timebands: Iterable[
         Union[GroupOfTimebandsRef, GroupOfTimebandsVersionedChildStructure]
     ] = field(
         default_factory=list,

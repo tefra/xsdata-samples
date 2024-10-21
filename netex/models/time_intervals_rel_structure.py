@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .time_interval import TimeInterval
@@ -13,7 +14,7 @@ class TimeIntervalsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeIntervals_RelStructure"
 
-    time_interval_ref_or_time_interval: List[
+    time_interval_ref_or_time_interval: Iterable[
         Union[TimeIntervalRef, TimeInterval]
     ] = field(
         default_factory=list,

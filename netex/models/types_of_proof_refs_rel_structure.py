@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_proof_ref import TypeOfProofRef
@@ -12,7 +12,7 @@ class TypesOfProofRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typesOfProofRefs_RelStructure"
 
-    type_of_proof_ref: List[TypeOfProofRef] = field(
+    type_of_proof_ref: Iterable[TypeOfProofRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfProofRef",

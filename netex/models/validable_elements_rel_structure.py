@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
@@ -15,7 +16,7 @@ class ValidableElementsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "validableElements_RelStructure"
 
-    validable_element_ref_or_validable_element: List[
+    validable_element_ref_or_validable_element: Iterable[
         Union[ValidableElementRef, ValidableElement]
     ] = field(
         default_factory=list,

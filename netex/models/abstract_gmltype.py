@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .description_reference import DescriptionReference
 from .identifier import Identifier
@@ -28,7 +29,7 @@ class AbstractGmltype:
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    name: List[Name] = field(
+    name: Iterable[Name] = field(
         default_factory=list,
         metadata={
             "type": "Element",

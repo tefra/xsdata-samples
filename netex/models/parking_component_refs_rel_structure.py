@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .monitored_vehicle_sharing_parking_bay_ref import (
     MonitoredVehicleSharingParkingBayRef,
@@ -21,7 +22,7 @@ class ParkingComponentRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "parkingComponentRefs_RelStructure"
 
-    parking_area_ref_or_parking_bay_ref_or_vehicle_sharing_parking_bay_ref: List[
+    parking_area_ref_or_parking_bay_ref_or_vehicle_sharing_parking_bay_ref: Iterable[
         Union[
             VehiclePoolingParkingAreaRef,
             VehicleSharingParkingAreaRef,

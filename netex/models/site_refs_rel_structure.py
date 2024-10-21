@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .parking_ref import ParkingRef
@@ -17,7 +18,7 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "siteRefs_RelStructure"
 
-    stop_place_ref_or_site_ref: List[
+    stop_place_ref_or_site_ref: Iterable[
         Union[
             TaxiRankRef,
             StopPlaceRef,

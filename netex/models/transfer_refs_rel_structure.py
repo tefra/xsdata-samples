@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .access_ref import AccessRef
 from .connection_ref import ConnectionRef
@@ -15,7 +16,7 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transferRefs_RelStructure"
 
-    connection_ref_or_transfer_ref: List[
+    connection_ref_or_transfer_ref: Iterable[
         Union[
             DefaultConnectionRef, SiteConnectionRef, ConnectionRef, AccessRef
         ]

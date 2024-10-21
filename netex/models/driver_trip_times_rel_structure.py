@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .driver_trip_time import DriverTripTime
@@ -13,7 +14,7 @@ class DriverTripTimesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "driverTripTimes_RelStructure"
 
-    driver_trip_time_ref_or_driver_trip_time: List[
+    driver_trip_time_ref_or_driver_trip_time: Iterable[
         Union[DriverTripTimeRef, DriverTripTime]
     ] = field(
         default_factory=list,

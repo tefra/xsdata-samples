@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .cell_ref import CellRef
 from .parking_price_ref import ParkingPriceRef
@@ -18,7 +19,7 @@ class ParkingPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "parkingPrices_RelStructure"
 
-    parking_price_ref_or_cell_ref_or_parking_price: List[
+    parking_price_ref_or_cell_ref_or_parking_price: Iterable[
         Union[ParkingPriceRef, CellRef, ParkingPriceVersionedChildStructure]
     ] = field(
         default_factory=list,

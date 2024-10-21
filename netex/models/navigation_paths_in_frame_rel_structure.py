@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .navigation_path import NavigationPath
@@ -12,7 +12,7 @@ class NavigationPathsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "navigationPathsInFrame_RelStructure"
 
-    navigation_path: List[NavigationPath] = field(
+    navigation_path: Iterable[NavigationPath] = field(
         default_factory=list,
         metadata={
             "name": "NavigationPath",

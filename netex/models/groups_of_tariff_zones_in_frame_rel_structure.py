@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .group_of_tariff_zones import GroupOfTariffZones
@@ -12,7 +12,7 @@ class GroupsOfTariffZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupsOfTariffZonesInFrame_RelStructure"
 
-    group_of_tariff_zones: List[GroupOfTariffZones] = field(
+    group_of_tariff_zones: Iterable[GroupOfTariffZones] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfTariffZones",

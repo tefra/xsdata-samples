@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .access_right_parameter_assignment import AccessRightParameterAssignment
 from .customer_purchase_parameter_assignment import (
@@ -25,7 +26,7 @@ class AccessRightParameterAssignmentsInFrameRelStructure(
     class Meta:
         name = "accessRightParameterAssignmentsInFrame_RelStructure"
 
-    access_right_parameter_assignment: List[
+    access_right_parameter_assignment: Iterable[
         Union[
             CustomerPurchaseParameterAssignment,
             SpecificParameterAssignment,

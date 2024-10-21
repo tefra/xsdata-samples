@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_stop_place import FlexibleStopPlace
@@ -13,7 +14,7 @@ class FlexibleStopPlacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleStopPlaces_RelStructure"
 
-    flexible_stop_place_ref_or_flexible_stop_place: List[
+    flexible_stop_place_ref_or_flexible_stop_place: Iterable[
         Union[FlexibleStopPlaceRef, FlexibleStopPlace]
     ] = field(
         default_factory=list,

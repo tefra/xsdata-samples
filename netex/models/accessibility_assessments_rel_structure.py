@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .accessibility_assessment import AccessibilityAssessment
 from .strict_containment_aggregation_structure import (
@@ -16,7 +16,7 @@ class AccessibilityAssessmentsRelStructure(
     class Meta:
         name = "accessibilityAssessments_RelStructure"
 
-    accessibility_assessment: List[AccessibilityAssessment] = field(
+    accessibility_assessment: Iterable[AccessibilityAssessment] = field(
         default_factory=list,
         metadata={
             "name": "AccessibilityAssessment",

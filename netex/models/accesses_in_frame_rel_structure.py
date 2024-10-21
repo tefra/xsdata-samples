@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .access import Access
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -12,7 +12,7 @@ class AccessesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accessesInFrame_RelStructure"
 
-    access: List[Access] = field(
+    access: Iterable[Access] = field(
         default_factory=list,
         metadata={
             "name": "Access",

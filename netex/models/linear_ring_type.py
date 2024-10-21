@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .abstract_ring_type import AbstractRingType
 from .point_property import PointProperty
@@ -11,7 +12,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class LinearRingType(AbstractRingType):
-    pos_or_point_property_or_pos_list: List[
+    pos_or_point_property_or_pos_list: Iterable[
         Union[Pos, PointProperty, PosList]
     ] = field(
         default_factory=list,

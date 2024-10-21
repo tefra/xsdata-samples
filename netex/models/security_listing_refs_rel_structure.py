@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .customer_account_security_listing_ref import (
     CustomerAccountSecurityListingRef,
@@ -23,7 +24,7 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "SecurityListingRefs_RelStructure"
 
-    security_listing_ref: List[
+    security_listing_ref: Iterable[
         Union[
             TravelDocumentSecurityListingRef,
             MediumAccessDeviceSecurityListingRef,

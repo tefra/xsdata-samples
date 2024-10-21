@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .default_interchange import DefaultInterchange
@@ -12,7 +12,7 @@ class DefaultInterchangseInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "defaultInterchangseInFrame_RelStructure"
 
-    default_interchange: List[DefaultInterchange] = field(
+    default_interchange: Iterable[DefaultInterchange] = field(
         default_factory=list,
         metadata={
             "name": "DefaultInterchange",

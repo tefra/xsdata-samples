@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .compound_train_ref import CompoundTrainRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -16,7 +17,7 @@ class TransportTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transportTypeRefs_RelStructure"
 
-    transport_type_ref_or_vehicle_type_ref: List[
+    transport_type_ref_or_vehicle_type_ref: Iterable[
         Union[
             SimpleVehicleTypeRef,
             CompoundTrainRef,

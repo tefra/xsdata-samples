@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .headway_journey_group import HeadwayJourneyGroup
@@ -13,7 +14,7 @@ class FrequencyGroupsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frequencyGroupsInFrame_RelStructure"
 
-    headway_journey_group_or_rhythmical_journey_group: List[
+    headway_journey_group_or_rhythmical_journey_group: Iterable[
         Union[HeadwayJourneyGroup, RhythmicalJourneyGroup]
     ] = field(
         default_factory=list,

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .line_section_point_type_enumeration import (
     LineSectionPointTypeEnumeration,
@@ -35,7 +36,7 @@ class PointOnLineSectionVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connecting_vehicle_modes: List[VehicleModeEnumeration] = field(
+    connecting_vehicle_modes: Iterable[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ConnectingVehicleModes",

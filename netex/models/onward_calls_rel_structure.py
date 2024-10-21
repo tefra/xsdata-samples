@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .onward_call import OnwardCall
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class OnwardCallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "onwardCalls_RelStructure"
 
-    onward_call: List[OnwardCall] = field(
+    onward_call: Iterable[OnwardCall] = field(
         default_factory=list,
         metadata={
             "name": "OnwardCall",

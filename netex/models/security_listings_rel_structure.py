@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_account_security_listing import CustomerAccountSecurityListing
@@ -19,7 +20,7 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityListings_RelStructure"
 
-    security_listing: List[
+    security_listing: Iterable[
         Union[
             MediumAccessDeviceSecurityListing,
             TravelDocumentSecurityListing,

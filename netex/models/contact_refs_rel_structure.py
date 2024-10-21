@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .contact_ref import ContactRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,7 @@ class ContactRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "contactRefs_RelStructure"
 
-    contact_ref: List[ContactRef] = field(
+    contact_ref: Iterable[ContactRef] = field(
         default_factory=list,
         metadata={
             "name": "ContactRef",

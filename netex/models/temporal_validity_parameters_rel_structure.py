@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .availability_condition_ref import AvailabilityConditionRef
 from .day_type_ref import DayTypeRef
@@ -21,7 +22,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "temporalValidityParameters_RelStructure"
 
-    day_type_ref: List[Union[FareDayTypeRef, DayTypeRef]] = field(
+    day_type_ref: Iterable[Union[FareDayTypeRef, DayTypeRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -39,7 +40,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    group_of_timebands_ref: List[GroupOfTimebandsRef] = field(
+    group_of_timebands_ref: Iterable[GroupOfTimebandsRef] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfTimebandsRef",
@@ -48,7 +49,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    operating_day_ref: List[OperatingDayRef] = field(
+    operating_day_ref: Iterable[OperatingDayRef] = field(
         default_factory=list,
         metadata={
             "name": "OperatingDayRef",
@@ -57,7 +58,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    operating_period_ref: List[
+    operating_period_ref: Iterable[
         Union[UicOperatingPeriodRef, OperatingPeriodRef]
     ] = field(
         default_factory=list,
@@ -77,7 +78,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    validity_condition_ref: List[
+    validity_condition_ref: Iterable[
         Union[
             AvailabilityConditionRef,
             ValidityRuleParameterRef,

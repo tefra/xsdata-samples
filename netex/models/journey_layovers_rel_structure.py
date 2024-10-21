@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .journey_layover import JourneyLayover
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class JourneyLayoversRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "journeyLayovers_RelStructure"
 
-    journey_layover: List[JourneyLayover] = field(
+    journey_layover: Iterable[JourneyLayover] = field(
         default_factory=list,
         metadata={
             "name": "JourneyLayover",

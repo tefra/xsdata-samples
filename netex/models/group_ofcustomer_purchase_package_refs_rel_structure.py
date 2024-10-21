@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .group_of_customer_purchase_packages_ref import (
     GroupOfCustomerPurchasePackagesRef,
@@ -16,7 +16,7 @@ class GroupOfcustomerPurchasePackageRefsRelStructure(
     class Meta:
         name = "groupOfcustomerPurchasePackageRefs_RelStructure"
 
-    group_of_customer_purchase_packages_ref: List[
+    group_of_customer_purchase_packages_ref: Iterable[
         GroupOfCustomerPurchasePackagesRef
     ] = field(
         default_factory=list,

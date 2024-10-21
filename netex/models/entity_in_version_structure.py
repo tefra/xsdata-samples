@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, ForwardRef, List, Optional, Union
+from typing import Any, ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 
@@ -37,7 +38,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class EntityInVersionStructure(EntityStructure):
-    validity_conditions_or_valid_between: List[
+    validity_conditions_or_valid_between: Iterable[
         Union["ValidityConditionsRelStructure", "ValidBetween"]
     ] = field(
         default_factory=list,
@@ -322,36 +323,36 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             ),
         },
     )
-    choice: List[Union[XmlTime, TimeOfDayEnumeration, int, XmlDuration]] = (
-        field(
-            default_factory=list,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "EndTime",
-                        "type": XmlTime,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "EndEvent",
-                        "type": TimeOfDayEnumeration,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "DayOffset",
-                        "type": int,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "Duration",
-                        "type": XmlDuration,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-                "max_occurs": 2,
-            },
-        )
+    choice: Iterable[
+        Union[XmlTime, TimeOfDayEnumeration, int, XmlDuration]
+    ] = field(
+        default_factory=list,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "EndTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndEvent",
+                    "type": TimeOfDayEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayOffset",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Duration",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
+        },
     )
 
 
@@ -480,7 +481,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: List[
+    choice: Iterable[
         Union[
             str,
             RelativeOperatorEnumeration,
@@ -578,7 +579,7 @@ class TimebandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timebands_RelStructure"
 
-    timeband_ref_or_timeband: List[
+    timeband_ref_or_timeband: Iterable[
         Union[TimebandRef, TimebandVersionedChildStructure]
     ] = field(
         default_factory=list,
@@ -736,7 +737,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
         name = "ValidDuring_VersionStructure"
 
     choice: Optional[
-        Union[FareDayTypeRef, DayTypeRef, List[DayOfWeekEnumeration], str]
+        Union[FareDayTypeRef, DayTypeRef, Iterable[DayOfWeekEnumeration], str]
     ] = field(
         default=None,
         metadata={
@@ -754,7 +755,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
                 },
                 {
                     "name": "DaysOfWeek",
-                    "type": List[DayOfWeekEnumeration],
+                    "type": Iterable[DayOfWeekEnumeration],
                     "namespace": "http://www.netex.org.uk/netex",
                     "default_factory": list,
                     "tokens": True,
@@ -822,7 +823,7 @@ class AlternativeTextsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "alternativeTexts_RelStructure"
 
-    alternative_text: List[AlternativeText] = field(
+    alternative_text: Iterable[AlternativeText] = field(
         default_factory=list,
         metadata={
             "name": "AlternativeText",
@@ -838,7 +839,7 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingDays_RelStructure"
 
-    operating_day_ref_or_operating_day: List[
+    operating_day_ref_or_operating_day: Iterable[
         Union[OperatingDayRef, OperatingDay]
     ] = field(
         default_factory=list,
@@ -955,7 +956,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypes_RelStructure"
 
-    day_type_ref_or_day_type: List[
+    day_type_ref_or_day_type: Iterable[
         Union[
             FareDayTypeRef,
             DayTypeRef,
@@ -1068,7 +1069,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             AvailabilityConditionRef,
             ValidityRuleParameterRef,

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .class_attribute_in_frame import ClassAttributeInFrame
 from .class_ref_type_enumeration import ClassRefTypeEnumeration
@@ -59,7 +60,7 @@ class ClassInFrameStructure:
 
     @dataclass
     class Attributes:
-        class_attribute_in_frame: List[ClassAttributeInFrame] = field(
+        class_attribute_in_frame: Iterable[ClassAttributeInFrame] = field(
             default_factory=list,
             metadata={
                 "name": "ClassAttributeInFrame",
@@ -71,12 +72,14 @@ class ClassInFrameStructure:
 
     @dataclass
     class Relationships:
-        class_relationship_in_frame: List[ClassRelationshipInFrame] = field(
-            default_factory=list,
-            metadata={
-                "name": "ClassRelationshipInFrame",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-                "min_occurs": 1,
-            },
+        class_relationship_in_frame: Iterable[ClassRelationshipInFrame] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ClassRelationshipInFrame",
+                    "type": "Element",
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "min_occurs": 1,
+                },
+            )
         )

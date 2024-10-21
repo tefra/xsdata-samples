@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .call import Call
 from .dated_call import DatedCall
@@ -15,7 +16,7 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "calls_RelStructure"
 
-    call: List[Union[DatedCall, Call]] = field(
+    call: Iterable[Union[DatedCall, Call]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .accessibility_assessment import AccessibilityAssessment
 from .common_version_frame_structure import CommonVersionFrameStructure
@@ -85,7 +86,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Timetable_VersionFrameStructure"
 
-    vehicle_modes: List[VehicleModeEnumeration] = field(
+    vehicle_modes: Iterable[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .logical_display import LogicalDisplay
@@ -12,7 +12,7 @@ class LogicalDisplaysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "logicalDisplaysInFrame_RelStructure"
 
-    logical_display: List[LogicalDisplay] = field(
+    logical_display: Iterable[LogicalDisplay] = field(
         default_factory=list,
         metadata={
             "name": "LogicalDisplay",

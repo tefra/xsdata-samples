@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .scheduled_stop_point import ScheduledStopPoint
@@ -12,7 +12,7 @@ class ScheduledStopPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "scheduledStopPointsInFrame_RelStructure"
 
-    scheduled_stop_point: List[ScheduledStopPoint] = field(
+    scheduled_stop_point: Iterable[ScheduledStopPoint] = field(
         default_factory=list,
         metadata={
             "name": "ScheduledStopPoint",

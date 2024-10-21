@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .service_facility_set import ServiceFacilitySet
@@ -12,7 +12,7 @@ class ServiceFacilitySetsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "serviceFacilitySetsInFrame_RelStructure"
 
-    service_facility_set: List[ServiceFacilitySet] = field(
+    service_facility_set: Iterable[ServiceFacilitySet] = field(
         default_factory=list,
         metadata={
             "name": "ServiceFacilitySet",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from .cell_ref import CellRef
 from .fare_price_versioned_child_structure import (
@@ -21,7 +22,7 @@ class GeographicalUnitPricesRelStructure(
     class Meta:
         name = "geographicalUnitPrices_RelStructure"
 
-    geographical_unit_price_ref_or_geographical_unit_price_or_cell_ref: List[
+    geographical_unit_price_ref_or_geographical_unit_price_or_cell_ref: Iterable[
         Union[
             GeographicalUnitPriceRef,
             "GeographicalUnitPriceVersionedChildStructure",

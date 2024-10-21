@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .dated_call import DatedCall
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class DatedCallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "datedCalls_RelStructure"
 
-    dated_call: List[DatedCall] = field(
+    dated_call: Iterable[DatedCall] = field(
         default_factory=list,
         metadata={
             "name": "DatedCall",

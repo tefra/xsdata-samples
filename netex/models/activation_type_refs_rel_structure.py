@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_activation_ref import TypeOfActivationRef
@@ -12,7 +12,7 @@ class ActivationTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "activationTypeRefs_RelStructure"
 
-    type_of_activation_ref: List[TypeOfActivationRef] = field(
+    type_of_activation_ref: Iterable[TypeOfActivationRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfActivationRef",

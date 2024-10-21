@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
@@ -16,12 +16,14 @@ class TimingPointsInJourneyPatternRelStructure(
     class Meta:
         name = "timingPointsInJourneyPattern_RelStructure"
 
-    timing_point_in_journey_pattern: List[TimingPointInJourneyPattern] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingPointInJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 2,
-        },
+    timing_point_in_journey_pattern: Iterable[TimingPointInJourneyPattern] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "TimingPointInJourneyPattern",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "min_occurs": 2,
+            },
+        )
     )

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .type_of_concession import TypeOfConcession
@@ -13,7 +14,7 @@ class TypeOfConcessionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfConcessions_RelStructure"
 
-    type_of_concession_ref_or_type_of_concession: List[
+    type_of_concession_ref_or_type_of_concession: Iterable[
         Union[TypeOfConcessionRef, TypeOfConcession]
     ] = field(
         default_factory=list,

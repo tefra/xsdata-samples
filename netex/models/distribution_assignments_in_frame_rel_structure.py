@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .distribution_assignment import DistributionAssignment
 from .frame_containment_structure import FrameContainmentStructure
@@ -12,7 +12,7 @@ class DistributionAssignmentsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "distributionAssignmentsInFrame_RelStructure"
 
-    distribution_assignment: List[DistributionAssignment] = field(
+    distribution_assignment: Iterable[DistributionAssignment] = field(
         default_factory=list,
         metadata={
             "name": "DistributionAssignment",

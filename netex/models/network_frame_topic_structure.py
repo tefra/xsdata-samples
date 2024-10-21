@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -89,7 +90,7 @@ class NetworkFrameTopicStructure(TopicStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: List[
+    choice_1: Iterable[
         Union[
             MobilityJourneyFrameRef,
             MobilityServiceFrameRef,
@@ -193,7 +194,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass
     class SelectionValidityConditions:
-        validity_condition: List[
+        validity_condition: Iterable[
             Union[
                 SimpleAvailabilityCondition,
                 ValidDuring,

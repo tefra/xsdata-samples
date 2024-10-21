@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .customer_security_listing_ref import CustomerSecurityListingRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,12 +12,14 @@ class CustomerSecurityListingRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "CustomerSecurityListingRefs_RelStructure"
 
-    customer_security_listing_ref: List[CustomerSecurityListingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerSecurityListingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-        },
+    customer_security_listing_ref: Iterable[CustomerSecurityListingRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "CustomerSecurityListingRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "min_occurs": 1,
+            },
+        )
     )

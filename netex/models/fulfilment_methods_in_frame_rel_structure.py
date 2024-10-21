@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .frame_containment_structure import FrameContainmentStructure
 from .fulfilment_method import FulfilmentMethod
@@ -12,7 +12,7 @@ class FulfilmentMethodsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fulfilmentMethodsInFrame_RelStructure"
 
-    fulfilment_method: List[FulfilmentMethod] = field(
+    fulfilment_method: Iterable[FulfilmentMethod] = field(
         default_factory=list,
         metadata={
             "name": "FulfilmentMethod",

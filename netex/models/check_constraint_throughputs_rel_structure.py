@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .check_constraint_throughput import CheckConstraintThroughput
 from .check_constraint_throughput_ref import CheckConstraintThroughputRef
@@ -17,7 +18,7 @@ class CheckConstraintThroughputsRelStructure(
     class Meta:
         name = "checkConstraintThroughputs_RelStructure"
 
-    check_constraint_throughput_ref_or_check_constraint_throughput: List[
+    check_constraint_throughput_ref_or_check_constraint_throughput: Iterable[
         Union[CheckConstraintThroughputRef, CheckConstraintThroughput]
     ] = field(
         default_factory=list,

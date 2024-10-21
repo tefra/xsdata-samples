@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -680,7 +681,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "entitiesInVersion_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             VehicleTypeZoneRestriction,
             MediumApplicationInstance,
@@ -4394,7 +4395,7 @@ class FramesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frames_RelStructure"
 
-    common_frame: List[
+    common_frame: Iterable[
         Union[
             MobilityJourneyFrame,
             MobilityServiceFrame,
@@ -4550,7 +4551,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "generalFrameMembers_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             GeneralFrameMember,
             Fleet,

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
@@ -70,7 +71,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
 
     @dataclass
     class Areas:
-        choice: List[
+        choice: Iterable[
             Union[
                 FlexibleArea,
                 FlexibleAreaRef,

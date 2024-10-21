@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .journey_wait_time import JourneyWaitTime
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class JourneyWaitTimesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "journeyWaitTimes_RelStructure"
 
-    journey_wait_time: List[JourneyWaitTime] = field(
+    journey_wait_time: Iterable[JourneyWaitTime] = field(
         default_factory=list,
         metadata={
             "name": "JourneyWaitTime",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking_bay_condition import ParkingBayCondition
@@ -15,7 +16,7 @@ class ParkingLogEntriesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingLogEntries_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             ParkingBayConditionRef,
             RentalAvailabilityRef,

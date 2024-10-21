@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .authenticated_request_structure import AuthenticatedRequestStructure
 from .empty_type_1 import EmptyType1
@@ -63,7 +64,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    all_or_subscription_ref: List[
+    all_or_subscription_ref: Iterable[
         Union[EmptyType1, SubscriptionQualifierStructure]
     ] = field(
         default_factory=list,

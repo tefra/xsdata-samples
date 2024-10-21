@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .validity_rule_parameter_ref import ValidityRuleParameterRef
@@ -12,7 +12,7 @@ class ValidityRuleParameterRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityRuleParameterRefs_RelStructure"
 
-    validity_rule_parameter_ref: List[ValidityRuleParameterRef] = field(
+    validity_rule_parameter_ref: Iterable[ValidityRuleParameterRef] = field(
         default_factory=list,
         metadata={
             "name": "ValidityRuleParameterRef",

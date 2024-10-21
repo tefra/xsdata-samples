@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .fare_quota_factor import FareQuotaFactor
 from .fare_quota_factor_ref import FareQuotaFactorRef
@@ -15,7 +16,7 @@ class FareQuotaFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareQuotaFactors_RelStructure"
 
-    fare_quota_factor_ref_or_fare_quota_factor: List[
+    fare_quota_factor_ref_or_fare_quota_factor: Iterable[
         Union[FareQuotaFactorRef, FareQuotaFactor]
     ] = field(
         default_factory=list,

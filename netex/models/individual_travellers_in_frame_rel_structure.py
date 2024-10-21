@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .frame_containment_structure import FrameContainmentStructure
 from .individual_traveller import IndividualTraveller
@@ -12,7 +12,7 @@ class IndividualTravellersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "individualTravellersInFrame_RelStructure"
 
-    individual_traveller: List[IndividualTraveller] = field(
+    individual_traveller: Iterable[IndividualTraveller] = field(
         default_factory=list,
         metadata={
             "name": "IndividualTraveller",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .stair_flight import StairFlight
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class StairFlightsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "stairFlights_RelStructure"
 
-    stair_flight: List[StairFlight] = field(
+    stair_flight: Iterable[StairFlight] = field(
         default_factory=list,
         metadata={
             "name": "StairFlight",

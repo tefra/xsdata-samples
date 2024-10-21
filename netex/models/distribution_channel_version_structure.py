@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .authority_ref import AuthorityRef
@@ -148,7 +149,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             ),
         },
     )
-    payment_methods: List[PaymentMethodEnumeration] = field(
+    payment_methods: Iterable[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",
@@ -167,7 +168,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             },
         )
     )
-    distribution_rights: List[DistributionRightsEnumeration] = field(
+    distribution_rights: Iterable[DistributionRightsEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "DistributionRights",

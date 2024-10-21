@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from .class_ref_structure import ClassRefStructure
 from .classes_in_repository_rel_structure import (
@@ -21,7 +22,7 @@ class TypesOfFrameRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typesOfFrame_RelStructure"
 
-    type_of_frame_ref_or_type_of_frame: List[
+    type_of_frame_ref_or_type_of_frame: Iterable[
         Union[TypeOfFrameRef, "TypeOfFrame"]
     ] = field(
         default_factory=list,

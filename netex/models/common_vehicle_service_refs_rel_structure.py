@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
@@ -16,7 +17,7 @@ class CommonVehicleServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "commonVehicleServiceRefs_RelStructure"
 
-    common_vehicle_service_ref_or_vehicle_pooling_service_ref: List[
+    common_vehicle_service_ref_or_vehicle_pooling_service_ref: Iterable[
         Union[
             VehicleRentalServiceRef,
             VehicleSharingServiceRef,

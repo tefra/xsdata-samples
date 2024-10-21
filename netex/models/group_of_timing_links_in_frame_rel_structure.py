@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .group_of_timing_links import GroupOfTimingLinks
@@ -12,7 +12,7 @@ class GroupOfTimingLinksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupOfTimingLinksInFrame_RelStructure"
 
-    group_of_timing_links: List[GroupOfTimingLinks] = field(
+    group_of_timing_links: Iterable[GroupOfTimingLinks] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfTimingLinks",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .crew_base_ref import CrewBaseRef
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class CrewBaseRefsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "crewBaseRefs_RelStructure"
 
-    crew_base_ref: List[CrewBaseRef] = field(
+    crew_base_ref: Iterable[CrewBaseRef] = field(
         default_factory=list,
         metadata={
             "name": "CrewBaseRef",

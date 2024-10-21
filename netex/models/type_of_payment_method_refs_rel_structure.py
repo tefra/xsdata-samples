@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_payment_method_ref import TypeOfPaymentMethodRef
@@ -12,7 +12,7 @@ class TypeOfPaymentMethodRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "TypeOfPaymentMethodRefs_RelStructure"
 
-    type_of_payment_method_ref: List[TypeOfPaymentMethodRef] = field(
+    type_of_payment_method_ref: Iterable[TypeOfPaymentMethodRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfPaymentMethodRef",

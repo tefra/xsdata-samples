@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .link_on_section import LinkOnSection
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class LinksOnSectionRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "linksOnSection_RelStructure"
 
-    link_on_section: List[LinkOnSection] = field(
+    link_on_section: Iterable[LinkOnSection] = field(
         default_factory=list,
         metadata={
             "name": "LinkOnSection",

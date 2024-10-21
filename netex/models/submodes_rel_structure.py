@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .submode import Submode
@@ -12,7 +12,7 @@ class SubmodesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "submodes_RelStructure"
 
-    submode: List[Submode] = field(
+    submode: Iterable[Submode] = field(
         default_factory=list,
         metadata={
             "name": "Submode",

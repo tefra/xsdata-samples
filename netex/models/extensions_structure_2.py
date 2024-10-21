@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -9,7 +9,7 @@ class ExtensionsStructure2:
     class Meta:
         name = "ExtensionsStructure"
 
-    any_element: List[object] = field(
+    any_element: Iterable[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

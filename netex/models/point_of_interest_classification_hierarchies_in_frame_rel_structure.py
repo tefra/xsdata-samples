@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .point_of_interest_classification_hierarchy import (
@@ -16,7 +16,7 @@ class PointOfInterestClassificationHierarchiesInFrameRelStructure(
     class Meta:
         name = "pointOfInterestClassificationHierarchiesInFrame_RelStructure"
 
-    point_of_interest_classification_hierarchy: List[
+    point_of_interest_classification_hierarchy: Iterable[
         PointOfInterestClassificationHierarchy
     ] = field(
         default_factory=list,

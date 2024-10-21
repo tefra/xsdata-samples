@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .point_1 import Point1
 
@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class PointArrayPropertyType:
-    point: List[Point1] = field(
+    point: Iterable[Point1] = field(
         default_factory=list,
         metadata={
             "name": "Point",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .journey_part import JourneyPart
@@ -12,7 +12,7 @@ class JourneyPartsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyPartsInFrame_RelStructure"
 
-    journey_part: List[JourneyPart] = field(
+    journey_part: Iterable[JourneyPart] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPart",

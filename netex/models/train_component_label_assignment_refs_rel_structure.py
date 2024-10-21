@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .train_component_label_assignment_ref import (
@@ -16,7 +16,7 @@ class TrainComponentLabelAssignmentRefsRelStructure(
     class Meta:
         name = "TrainComponentLabelAssignmentRefs_RelStructure"
 
-    train_component_label_assignment_ref: List[
+    train_component_label_assignment_ref: Iterable[
         TrainComponentLabelAssignmentRef
     ] = field(
         default_factory=list,

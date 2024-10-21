@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .quay import Quay
@@ -14,7 +15,7 @@ class QuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "quays_RelStructure"
 
-    taxi_stand_ref_or_quay_ref_or_quay: List[
+    taxi_stand_ref_or_quay_ref_or_quay: Iterable[
         Union[TaxiStandRef, QuayRef, Quay]
     ] = field(
         default_factory=list,

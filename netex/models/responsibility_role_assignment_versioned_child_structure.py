@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .data_role_type_enumeration import DataRoleTypeEnumeration
 from .entity_in_version_structure import VersionedChildStructure
@@ -38,7 +39,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_role_type: List[DataRoleTypeEnumeration] = field(
+    data_role_type: Iterable[DataRoleTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "DataRoleType",
@@ -47,7 +48,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "tokens": True,
         },
     )
-    stakeholder_role_type: List[StakeholderRoleTypeEnumeration] = field(
+    stakeholder_role_type: Iterable[StakeholderRoleTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "StakeholderRoleType",

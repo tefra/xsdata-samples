@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -73,7 +74,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    purchase_moment: List[PurchaseMomentEnumeration] = field(
+    purchase_moment: Iterable[PurchaseMomentEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PurchaseMoment",

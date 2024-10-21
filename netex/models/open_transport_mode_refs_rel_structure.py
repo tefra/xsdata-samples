@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .open_transport_mode_ref import OpenTransportModeRef
@@ -12,7 +12,7 @@ class OpenTransportModeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "openTransportModeRefs_RelStructure"
 
-    open_transport_mode_ref: List[OpenTransportModeRef] = field(
+    open_transport_mode_ref: Iterable[OpenTransportModeRef] = field(
         default_factory=list,
         metadata={
             "name": "OpenTransportModeRef",

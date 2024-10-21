@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_geometric_aggregate_type import AbstractGeometricAggregateType
 from .surface_member import SurfaceMember
@@ -10,7 +11,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class MultiSurfaceType(AbstractGeometricAggregateType):
-    surface_member: List[SurfaceMember] = field(
+    surface_member: Iterable[SurfaceMember] = field(
         default_factory=list,
         metadata={
             "name": "surfaceMember",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .block import Block
 from .compound_block import CompoundBlock
@@ -14,7 +15,7 @@ class BlocksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blocksInFrame_RelStructure"
 
-    block_or_compound_block_or_train_block: List[
+    block_or_compound_block_or_train_block: Iterable[
         Union[Block, CompoundBlock, TrainBlock]
     ] = field(
         default_factory=list,

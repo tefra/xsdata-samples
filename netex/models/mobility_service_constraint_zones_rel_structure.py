@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .mobility_service_constraint_zone import MobilityServiceConstraintZone
@@ -17,7 +18,7 @@ class MobilityServiceConstraintZonesRelStructure(
     class Meta:
         name = "mobilityServiceConstraintZones_RelStructure"
 
-    mobility_service_constraint_zone_ref_or_mobility_service_constraint_zone: List[
+    mobility_service_constraint_zone_ref_or_mobility_service_constraint_zone: Iterable[
         Union[MobilityServiceConstraintZoneRef, MobilityServiceConstraintZone]
     ] = field(
         default_factory=list,

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .accepted_driver_permit import AcceptedDriverPermit
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -12,7 +12,7 @@ class AcceptedDriverPermitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "acceptedDriverPermits_RelStructure"
 
-    accepted_driver_permit: List[AcceptedDriverPermit] = field(
+    accepted_driver_permit: Iterable[AcceptedDriverPermit] = field(
         default_factory=list,
         metadata={
             "name": "AcceptedDriverPermit",

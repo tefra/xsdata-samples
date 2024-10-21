@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .journey_pattern_wait_time import JourneyPatternWaitTime
 from .journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef
@@ -17,7 +18,7 @@ class JourneyPatternWaitTimesRelStructure(
     class Meta:
         name = "journeyPatternWaitTimes_RelStructure"
 
-    journey_pattern_wait_time_ref_or_journey_pattern_wait_time: List[
+    journey_pattern_wait_time_ref_or_journey_pattern_wait_time: Iterable[
         Union[JourneyPatternWaitTimeRef, JourneyPatternWaitTime]
     ] = field(
         default_factory=list,

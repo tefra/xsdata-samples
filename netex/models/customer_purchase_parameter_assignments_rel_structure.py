@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_purchase_parameter_assignment import (
@@ -16,7 +16,7 @@ class CustomerPurchaseParameterAssignmentsRelStructure(
     class Meta:
         name = "customerPurchaseParameterAssignments_RelStructure"
 
-    customer_purchase_parameter_assignment: List[
+    customer_purchase_parameter_assignment: Iterable[
         CustomerPurchaseParameterAssignment
     ] = field(
         default_factory=list,

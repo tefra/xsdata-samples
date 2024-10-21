@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .topographic_place import TopographicPlace
@@ -13,7 +13,7 @@ class TopographicPlacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "topographicPlaces_RelStructure"
 
-    topographic_place_ref: List[TopographicPlaceRef] = field(
+    topographic_place_ref: Iterable[TopographicPlaceRef] = field(
         default_factory=list,
         metadata={
             "name": "TopographicPlaceRef",
@@ -23,7 +23,7 @@ class TopographicPlacesRelStructure(ContainmentAggregationStructure):
             "sequence": 1,
         },
     )
-    topographic_place: List[TopographicPlace] = field(
+    topographic_place: Iterable[TopographicPlace] = field(
         default_factory=list,
         metadata={
             "name": "TopographicPlace",

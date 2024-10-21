@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dynamic_stop_assignment import DynamicStopAssignment
@@ -17,7 +18,7 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopAssignmentsInFrame_RelStructure"
 
-    stop_assignment: List[
+    stop_assignment: Iterable[
         Union[
             VehicleJourneyStopAssignment,
             FlexibleStopAssignment,

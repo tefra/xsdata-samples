@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .cell_ref import CellRef
 from .sales_offer_package_price_ref import SalesOfferPackagePriceRef
@@ -20,7 +21,7 @@ class SalesOfferPackagePricesRelStructure(
     class Meta:
         name = "salesOfferPackagePrices_RelStructure"
 
-    sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref: List[
+    sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref: Iterable[
         Union[
             SalesOfferPackagePriceRef,
             SalesOfferPackagePriceVersionedChildStructure,

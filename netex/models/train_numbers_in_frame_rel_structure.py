@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .train_number import TrainNumber
@@ -13,7 +14,7 @@ class TrainNumbersInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trainNumbersInFrame_RelStructure"
 
-    train_number_or_train_number_ref: List[
+    train_number_or_train_number_ref: Iterable[
         Union[TrainNumber, TrainNumberRef]
     ] = field(
         default_factory=list,

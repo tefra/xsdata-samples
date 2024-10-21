@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .availability_condition_ref import AvailabilityConditionRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -15,7 +16,7 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityConditionRefs_RelStructure"
 
-    validity_condition_ref: List[
+    validity_condition_ref: Iterable[
         Union[
             AvailabilityConditionRef,
             ValidityRuleParameterRef,

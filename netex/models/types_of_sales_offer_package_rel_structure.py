@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .type_of_sales_offer_package import TypeOfSalesOfferPackage
@@ -13,7 +14,7 @@ class TypesOfSalesOfferPackageRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfSalesOfferPackage_RelStructure"
 
-    type_of_sales_offer_package_ref_or_type_of_sales_offer_package: List[
+    type_of_sales_offer_package_ref_or_type_of_sales_offer_package: Iterable[
         Union[TypeOfSalesOfferPackageRef, TypeOfSalesOfferPackage]
     ] = field(
         default_factory=list,

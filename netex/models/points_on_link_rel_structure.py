@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .line_string_type import LineStringType
 from .point_on_link import PointOnLink
@@ -15,7 +16,7 @@ class PointsOnLinkRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsOnLink_RelStructure"
 
-    point_on_link: List[PointOnLink] = field(
+    point_on_link: Iterable[PointOnLink] = field(
         default_factory=list,
         metadata={
             "name": "PointOnLink",

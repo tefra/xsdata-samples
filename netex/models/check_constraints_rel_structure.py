@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .check_constraint import CheckConstraint
 from .check_constraint_ref import CheckConstraintRef
@@ -13,7 +14,7 @@ class CheckConstraintsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "checkConstraints_RelStructure"
 
-    check_constraint_ref_or_check_constraint: List[
+    check_constraint_ref_or_check_constraint: Iterable[
         Union[CheckConstraintRef, CheckConstraint]
     ] = field(
         default_factory=list,

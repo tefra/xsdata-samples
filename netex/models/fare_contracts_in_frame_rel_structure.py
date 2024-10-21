@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .fare_contract import FareContract
 from .frame_containment_structure import FrameContainmentStructure
@@ -12,7 +12,7 @@ class FareContractsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareContractsInFrame_RelStructure"
 
-    fare_contract: List[FareContract] = field(
+    fare_contract: Iterable[FareContract] = field(
         default_factory=list,
         metadata={
             "name": "FareContract",

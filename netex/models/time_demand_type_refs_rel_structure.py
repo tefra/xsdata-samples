@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .time_demand_type_ref import TimeDemandTypeRef
@@ -12,7 +12,7 @@ class TimeDemandTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "timeDemandTypeRefs_RelStructure"
 
-    time_demand_type_ref: List[TimeDemandTypeRef] = field(
+    time_demand_type_ref: Iterable[TimeDemandTypeRef] = field(
         default_factory=list,
         metadata={
             "name": "TimeDemandTypeRef",

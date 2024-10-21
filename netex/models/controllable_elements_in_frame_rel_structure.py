@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .controllable_element import ControllableElement
 from .frame_containment_structure import FrameContainmentStructure
@@ -12,7 +12,7 @@ class ControllableElementsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "controllableElementsInFrame_RelStructure"
 
-    controllable_element: List[ControllableElement] = field(
+    controllable_element: Iterable[ControllableElement] = field(
         default_factory=list,
         metadata={
             "name": "ControllableElement",

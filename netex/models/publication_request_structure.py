@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -77,7 +78,7 @@ class PublicationRequestStructure:
 
     @dataclass
     class Topics:
-        network_frame_topic: List[NetworkFrameTopicStructure] = field(
+        network_frame_topic: Iterable[NetworkFrameTopicStructure] = field(
             default_factory=list,
             metadata={
                 "name": "NetworkFrameTopic",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .frame_containment_structure import FrameContainmentStructure
 from .series_constraint import SeriesConstraint
@@ -12,7 +12,7 @@ class FareSeriesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareSeriesInFrame_RelStructure"
 
-    series_constraint: List[SeriesConstraint] = field(
+    series_constraint: Iterable[SeriesConstraint] = field(
         default_factory=list,
         metadata={
             "name": "SeriesConstraint",

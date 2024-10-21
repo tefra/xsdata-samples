@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .distribution_assignment_ref import DistributionAssignmentRef
@@ -20,14 +21,16 @@ class SpecificParameterAssignmentsRelStructure(
     class Meta:
         name = "specificParameterAssignments_RelStructure"
 
-    specific_parameter_assignment: List["SpecificParameterAssignment"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SpecificParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-        },
+    specific_parameter_assignment: Iterable["SpecificParameterAssignment"] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "SpecificParameterAssignment",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "min_occurs": 1,
+            },
+        )
     )
 
 

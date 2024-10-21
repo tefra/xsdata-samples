@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .railway_junction import RailwayJunction
@@ -16,7 +17,7 @@ class InfrastructureJunctionsInFrameRelStructure(
     class Meta:
         name = "infrastructureJunctionsInFrame_RelStructure"
 
-    railway_junction_or_road_junction_or_wire_junction: List[
+    railway_junction_or_road_junction_or_wire_junction: Iterable[
         Union[RailwayJunction, RoadJunction, WireJunction]
     ] = field(
         default_factory=list,

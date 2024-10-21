@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .frame_containment_structure import FrameContainmentStructure
 from .group_of_sales_offer_packages import GroupOfSalesOfferPackages
@@ -12,7 +12,7 @@ class GroupsOfSalesOfferPackagesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "groupsOfSalesOfferPackagesInFrame_RelStructure"
 
-    group_of_sales_offer_packages: List[GroupOfSalesOfferPackages] = field(
+    group_of_sales_offer_packages: Iterable[GroupOfSalesOfferPackages] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfSalesOfferPackages",

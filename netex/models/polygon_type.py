@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_surface_type import AbstractSurfaceType
 from .exterior import Exterior
@@ -17,7 +18,7 @@ class PolygonType(AbstractSurfaceType):
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    interior: List[Interior] = field(
+    interior: Iterable[Interior] = field(
         default_factory=list,
         metadata={
             "type": "Element",

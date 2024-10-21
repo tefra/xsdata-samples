@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_line import FlexibleLine
@@ -13,7 +14,7 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "linesInFrame_RelStructure"
 
-    line: List[Union[FlexibleLine, Line]] = field(
+    line: Iterable[Union[FlexibleLine, Line]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDuration
 
@@ -180,7 +181,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transfer_modes: List[AccessModeEnumeration] = field(
+    transfer_modes: Iterable[AccessModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "transferModes",

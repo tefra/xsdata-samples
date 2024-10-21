@@ -1,6 +1,7 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_period_enumeration import CappingPeriodEnumeration
@@ -39,7 +40,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    capped_discount_right_ref: List[CappedDiscountRightRef] = field(
+    capped_discount_right_ref: Iterable[CappedDiscountRightRef] = field(
         default_factory=list,
         metadata={
             "name": "CappedDiscountRightRef",
@@ -47,7 +48,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preassigned_fare_product_ref: List[
+    preassigned_fare_product_ref: Iterable[
         Union[SupplementProductRef, PreassignedFareProductRef]
     ] = field(
         default_factory=list,

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer import Customer
@@ -13,7 +14,7 @@ class CustomersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customers_RelStructure"
 
-    customer_ref_or_customer: List[Union[CustomerRef, Customer]] = field(
+    customer_ref_or_customer: Iterable[Union[CustomerRef, Customer]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

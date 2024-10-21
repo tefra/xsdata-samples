@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .suitability import Suitability
 from .user_need import UserNeed
@@ -39,7 +40,7 @@ class PassengerAccessibilityNeedsStructure:
 
     @dataclass
     class UserNeeds:
-        user_need: List[UserNeed] = field(
+        user_need: Iterable[UserNeed] = field(
             default_factory=list,
             metadata={
                 "name": "UserNeed",
@@ -50,7 +51,7 @@ class PassengerAccessibilityNeedsStructure:
 
     @dataclass
     class Suitabilities:
-        suitability: List[Suitability] = field(
+        suitability: Iterable[Suitability] = field(
             default_factory=list,
             metadata={
                 "name": "Suitability",

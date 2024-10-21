@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, ForwardRef, List, Optional, Union
+from typing import Any, ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 
@@ -393,7 +394,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "farePrices_RelStructure"
 
-    fare_price_ref_or_cell_ref_or_fare_price: List[
+    fare_price_ref_or_cell_ref_or_fare_price: Iterable[
         Union[
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,
@@ -627,7 +628,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareTables_RelStructure"
 
-    fare_table_ref_or_fare_table: List[
+    fare_table_ref_or_fare_table: Iterable[
         Union[
             StandardFareTableRef,
             FareTableRef,
@@ -1018,25 +1019,25 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceGroups_RelStructure"
 
-    price_group_ref_or_price_group: List[Union[PriceGroupRef, PriceGroup]] = (
-        field(
-            default_factory=list,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "PriceGroupRef",
-                        "type": PriceGroupRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "PriceGroup",
-                        "type": PriceGroup,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    price_group_ref_or_price_group: Iterable[
+        Union[PriceGroupRef, PriceGroup]
+    ] = field(
+        default_factory=list,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PriceGroupRef",
+                    "type": PriceGroupRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PriceGroup",
+                    "type": PriceGroup,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
 
 
@@ -1333,7 +1334,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    choice_1: List[
+    choice_1: Iterable[
         Union[
             CustomerPurchasePackageElementRef,
             CustomerPurchasePackageRef,
@@ -2603,7 +2604,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cells_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             Cell,
             "CellsRelStructure.CellInContext",

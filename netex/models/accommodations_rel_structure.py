@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .accommodation import Accommodation
 from .accommodation_ref import AccommodationRef
@@ -13,7 +14,7 @@ class AccommodationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accommodations_RelStructure"
 
-    accommodation_ref_or_accommodation: List[
+    accommodation_ref_or_accommodation: Iterable[
         Union[AccommodationRef, Accommodation]
     ] = field(
         default_factory=list,

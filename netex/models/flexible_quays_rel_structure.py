@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_area_ref import FlexibleAreaRef
@@ -15,7 +16,7 @@ class FlexibleQuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleQuays_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             HailAndRideAreaRef, FlexibleAreaRef, FlexibleQuayRef, FlexibleQuay
         ]

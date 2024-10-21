@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .coupled_journey import CoupledJourney
@@ -12,7 +12,7 @@ class CoupledJourneysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "coupledJourneysInFrame_RelStructure"
 
-    coupled_journey: List[CoupledJourney] = field(
+    coupled_journey: Iterable[CoupledJourney] = field(
         default_factory=list,
         metadata={
             "name": "CoupledJourney",

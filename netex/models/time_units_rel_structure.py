@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .time_unit import TimeUnit
@@ -13,7 +14,7 @@ class TimeUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeUnits_RelStructure"
 
-    time_unit_ref_or_time_unit: List[Union[TimeUnitRef, TimeUnit]] = field(
+    time_unit_ref_or_time_unit: Iterable[Union[TimeUnitRef, TimeUnit]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

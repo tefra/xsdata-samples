@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .travel_document_security_listing_ref import (
@@ -16,7 +16,7 @@ class TravelDocumentSecurityListingRefsRelStructure(
     class Meta:
         name = "TravelDocumentSecurityListingRefs_RelStructure"
 
-    travel_document_security_listing_ref: List[
+    travel_document_security_listing_ref: Iterable[
         TravelDocumentSecurityListingRef
     ] = field(
         default_factory=list,

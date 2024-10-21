@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, List, Optional
+from typing import Any, Optional
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .contact_structure import ContactStructure
@@ -151,7 +152,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_type: List[OrganisationTypeEnumeration] = field(
+    organisation_type: Iterable[OrganisationTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationType",

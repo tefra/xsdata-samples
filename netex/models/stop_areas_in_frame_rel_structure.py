@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .stop_area import StopArea
@@ -12,7 +12,7 @@ class StopAreasInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopAreasInFrame_RelStructure"
 
-    stop_area: List[StopArea] = field(
+    stop_area: Iterable[StopArea] = field(
         default_factory=list,
         metadata={
             "name": "StopArea",

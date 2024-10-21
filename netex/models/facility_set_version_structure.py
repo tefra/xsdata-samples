@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .accessibility_info_facility_list import AccessibilityInfoFacilityList
 from .accessibility_tool_list import AccessibilityToolList
@@ -179,7 +180,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    passenger_information_equipment_list: List[
+    passenger_information_equipment_list: Iterable[
         PassengerInformationEquipmentEnumeration
     ] = field(
         default_factory=list,

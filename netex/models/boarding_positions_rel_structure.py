@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .boarding_position import BoardingPosition
 from .boarding_position_ref import BoardingPositionRef
@@ -13,7 +14,7 @@ class BoardingPositionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "boardingPositions_RelStructure"
 
-    boarding_position_ref_or_boarding_position: List[
+    boarding_position_ref_or_boarding_position: Iterable[
         Union[BoardingPositionRef, BoardingPosition]
     ] = field(
         default_factory=list,

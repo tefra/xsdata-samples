@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .journey_pattern_headway import JourneyPatternHeadway
 from .strict_containment_aggregation_structure import (
@@ -16,7 +16,7 @@ class JourneyPatternHeadwaysRelStructure(
     class Meta:
         name = "journeyPatternHeadways_RelStructure"
 
-    journey_pattern_headway: List[JourneyPatternHeadway] = field(
+    journey_pattern_headway: Iterable[JourneyPatternHeadway] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPatternHeadway",

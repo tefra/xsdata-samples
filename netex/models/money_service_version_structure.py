@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .local_service_version_structure import LocalServiceVersionStructure
 from .money_service_enumeration import MoneyServiceEnumeration
@@ -12,7 +12,7 @@ class MoneyServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "MoneyService_VersionStructure"
 
-    service_list: List[MoneyServiceEnumeration] = field(
+    service_list: Iterable[MoneyServiceEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ServiceList",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .duty import Duty
@@ -12,7 +12,7 @@ class DutiesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dutiesInFrame_RelStructure"
 
-    duty: List[Duty] = field(
+    duty: Iterable[Duty] = field(
         default_factory=list,
         metadata={
             "name": "Duty",

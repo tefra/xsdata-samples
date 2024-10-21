@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
@@ -18,7 +19,7 @@ class FareStructureFactorsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareStructureFactors_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             ParkingChargeBandRef,
             TimeStructureFactorRef,

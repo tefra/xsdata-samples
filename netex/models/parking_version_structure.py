@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .accesses_rel_structure import AccessesRelStructure
 from .multilingual_string import MultilingualString
@@ -98,7 +99,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_vehicle_types: List[ParkingVehicleEnumeration] = field(
+    parking_vehicle_types: Iterable[ParkingVehicleEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ParkingVehicleTypes",
@@ -187,16 +188,18 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_payment_process: List[ParkingPaymentProcessEnumeration] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPaymentProcess",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        },
+    parking_payment_process: Iterable[ParkingPaymentProcessEnumeration] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "ParkingPaymentProcess",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "tokens": True,
+            },
+        )
     )
-    payment_methods: List[PaymentMethodEnumeration] = field(
+    payment_methods: Iterable[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",
@@ -226,7 +229,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    currencies_accepted: List[str] = field(
+    currencies_accepted: Iterable[str] = field(
         default_factory=list,
         metadata={
             "name": "CurrenciesAccepted",
@@ -238,7 +241,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "tokens": True,
         },
     )
-    cards_accepted: List[str] = field(
+    cards_accepted: Iterable[str] = field(
         default_factory=list,
         metadata={
             "name": "CardsAccepted",

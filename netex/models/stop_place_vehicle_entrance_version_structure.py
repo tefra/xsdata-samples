@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .air_submode import AirSubmode
 from .all_vehicle_modes_of_transport_enumeration import (
@@ -160,7 +161,7 @@ class StopPlaceVehicleEntranceVersionStructure(
             ),
         },
     )
-    other_transport_modes: List[VehicleModeEnumeration] = field(
+    other_transport_modes: Iterable[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "OtherTransportModes",

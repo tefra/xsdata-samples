@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .journey_meeting_ref import JourneyMeetingRef
 from .journey_meeting_view import JourneyMeetingView
@@ -15,7 +16,7 @@ class JourneyMeetingViewsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "journeyMeetingViews_RelStructure"
 
-    journey_meeting_ref_or_journey_meeting_view: List[
+    journey_meeting_ref_or_journey_meeting_view: Iterable[
         Union[JourneyMeetingRef, JourneyMeetingView]
     ] = field(
         default_factory=list,

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .customer_purchase_package_element_access import (
     CustomerPurchasePackageElementAccess,
@@ -18,7 +18,7 @@ class CustomerPurchasePackageElementAccessesRelStructure(
     class Meta:
         name = "customerPurchasePackageElementAccesses_RelStructure"
 
-    customer_purchase_package_element_access: List[
+    customer_purchase_package_element_access: Iterable[
         CustomerPurchasePackageElementAccess
     ] = field(
         default_factory=list,

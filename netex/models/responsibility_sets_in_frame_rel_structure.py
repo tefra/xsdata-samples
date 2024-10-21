@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .responsibility_set import ResponsibilitySet
@@ -12,7 +12,7 @@ class ResponsibilitySetsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "responsibilitySetsInFrame_RelStructure"
 
-    responsibility_set: List[ResponsibilitySet] = field(
+    responsibility_set: Iterable[ResponsibilitySet] = field(
         default_factory=list,
         metadata={
             "name": "ResponsibilitySet",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .classification_descriptor_version_structure import (
     ClassificationDescriptorVersionStructure,
@@ -18,7 +18,7 @@ class ClassificationDescriptorsRelStructure(
     class Meta:
         name = "classificationDescriptors_RelStructure"
 
-    classification_descriptor: List[
+    classification_descriptor: Iterable[
         ClassificationDescriptorVersionStructure
     ] = field(
         default_factory=list,

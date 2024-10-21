@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .logical_operation_enumeration import LogicalOperationEnumeration
@@ -15,7 +16,7 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "genericParameterAssignments_RelStructure"
 
-    generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[
+    generic_parameter_assignment_or_generic_parameter_assignment_in_context: Iterable[
         Union[
             "GenericParameterAssignment", "GenericParameterAssignmentInContext"
         ]

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .notice_assignment_view import NoticeAssignmentView
@@ -12,7 +12,7 @@ class NoticeAssignmentViewsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticeAssignmentViews_RelStructure"
 
-    notice_assignment_view: List[NoticeAssignmentView] = field(
+    notice_assignment_view: Iterable[NoticeAssignmentView] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignmentView",

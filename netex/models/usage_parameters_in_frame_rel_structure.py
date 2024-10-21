@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .additional_driver_option import AdditionalDriverOption
 from .cancelling import Cancelling
@@ -48,7 +49,7 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "usageParametersInFrame_RelStructure"
 
-    usage_parameter: List[
+    usage_parameter: Iterable[
         Union[
             AdditionalDriverOption,
             RentalOption,

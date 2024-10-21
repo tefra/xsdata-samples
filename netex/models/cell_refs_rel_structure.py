@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .cell_ref import CellRef
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class CellRefsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cellRefs_RelStructure"
 
-    cell_ref: List[CellRef] = field(
+    cell_ref: Iterable[CellRef] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",

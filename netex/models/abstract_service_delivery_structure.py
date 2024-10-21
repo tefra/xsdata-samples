@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 
@@ -18,7 +19,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractServiceDeliveryStructure(ResponseStructure):
-    choice: List[
+    choice: Iterable[
         Union[
             MessageQualifierStructure,
             ParticipantRefStructure,

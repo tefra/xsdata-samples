@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .layer_ref import LayerRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,7 @@ class LayerRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "layerRefs_RelStructure"
 
-    layer_ref: List[LayerRef] = field(
+    layer_ref: Iterable[LayerRef] = field(
         default_factory=list,
         metadata={
             "name": "LayerRef",

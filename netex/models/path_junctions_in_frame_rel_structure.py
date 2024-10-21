@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .path_junction import PathJunction
@@ -12,7 +12,7 @@ class PathJunctionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pathJunctionsInFrame_RelStructure"
 
-    path_junction: List[PathJunction] = field(
+    path_junction: Iterable[PathJunction] = field(
         default_factory=list,
         metadata={
             "name": "PathJunction",

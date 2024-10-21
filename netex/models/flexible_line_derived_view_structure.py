@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -36,7 +37,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_methods: List[BookingMethodEnumeration] = field(
+    booking_methods: Iterable[BookingMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "BookingMethods",
@@ -61,7 +62,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    buy_when: List[PurchaseMomentEnumeration] = field(
+    buy_when: Iterable[PurchaseMomentEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "BuyWhen",

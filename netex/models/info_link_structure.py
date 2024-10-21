@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 
@@ -14,7 +15,7 @@ class InfoLinkStructure:
             "required": True,
         },
     )
-    type_of_info_link: List[TypeOfInfoLinkEnumeration] = field(
+    type_of_info_link: Iterable[TypeOfInfoLinkEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "typeOfInfoLink",

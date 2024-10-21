@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .journey_pattern_ref import JourneyPatternRef
@@ -15,7 +16,7 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyPatternRefs_RelStructure"
 
-    journey_pattern_ref: List[
+    journey_pattern_ref: Iterable[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,

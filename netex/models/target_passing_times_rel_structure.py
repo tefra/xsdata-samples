@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
@@ -14,7 +14,7 @@ class TargetPassingTimesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "targetPassingTimes_RelStructure"
 
-    target_passing_time: List[TargetPassingTime] = field(
+    target_passing_time: Iterable[TargetPassingTime] = field(
         default_factory=list,
         metadata={
             "name": "TargetPassingTime",

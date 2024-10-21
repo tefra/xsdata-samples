@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .blacklist import Blacklist
 from .frame_containment_structure import FrameContainmentStructure
@@ -12,7 +12,7 @@ class BlacklistsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "blacklistsInFrame_RelStructure"
 
-    blacklist: List[Blacklist] = field(
+    blacklist: Iterable[Blacklist] = field(
         default_factory=list,
         metadata={
             "name": "Blacklist",

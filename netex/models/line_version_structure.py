@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .accessibility_assessment import AccessibilityAssessment
 from .all_vehicle_modes_of_transport_enumeration import (
@@ -249,7 +250,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_methods: List[PaymentMethodEnumeration] = field(
+    payment_methods: Iterable[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",
@@ -268,7 +269,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    purchase_moment: List[PurchaseMomentEnumeration] = field(
+    purchase_moment: Iterable[PurchaseMomentEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PurchaseMoment",

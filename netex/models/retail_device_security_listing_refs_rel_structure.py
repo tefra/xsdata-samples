@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .retail_device_security_listing_ref import RetailDeviceSecurityListingRef
@@ -14,7 +14,7 @@ class RetailDeviceSecurityListingRefsRelStructure(
     class Meta:
         name = "RetailDeviceSecurityListingRefs_RelStructure"
 
-    retail_device_security_listing_ref: List[
+    retail_device_security_listing_ref: Iterable[
         RetailDeviceSecurityListingRef
     ] = field(
         default_factory=list,

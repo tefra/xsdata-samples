@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,7 @@ class FareScheduledStopPointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareScheduledStopPointRefs_RelStructure"
 
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
+    fare_scheduled_stop_point_ref: Iterable[FareScheduledStopPointRef] = field(
         default_factory=list,
         metadata={
             "name": "FareScheduledStopPointRef",

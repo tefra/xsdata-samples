@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .access_feature_enumeration import AccessFeatureEnumeration
 from .access_mode_enumeration import AccessModeEnumeration
@@ -53,7 +54,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_modes: List[AccessModeEnumeration] = field(
+    access_modes: Iterable[AccessModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "AccessModes",
@@ -140,7 +141,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_feature_list: List[AccessFeatureEnumeration] = field(
+    access_feature_list: Iterable[AccessFeatureEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "AccessFeatureList",

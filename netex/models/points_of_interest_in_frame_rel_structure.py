@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .point_of_interest import PointOfInterest
@@ -12,7 +12,7 @@ class PointsOfInterestInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointsOfInterestInFrame_RelStructure"
 
-    point_of_interest: List[PointOfInterest] = field(
+    point_of_interest: Iterable[PointOfInterest] = field(
         default_factory=list,
         metadata={
             "name": "PointOfInterest",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .customer_purchase_package import CustomerPurchasePackage
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
@@ -13,7 +14,7 @@ class CustomerPurchasePackagesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerPurchasePackages_RelStructure"
 
-    customer_purchase_package_or_customer_purchase_package_ref: List[
+    customer_purchase_package_or_customer_purchase_package_ref: Iterable[
         Union[CustomerPurchasePackage, CustomerPurchasePackageRef]
     ] = field(
         default_factory=list,

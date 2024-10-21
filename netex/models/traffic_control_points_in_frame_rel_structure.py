@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .traffic_control_point import TrafficControlPoint
@@ -12,7 +12,7 @@ class TrafficControlPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trafficControlPointsInFrame_RelStructure"
 
-    traffic_control_point: List[TrafficControlPoint] = field(
+    traffic_control_point: Iterable[TrafficControlPoint] = field(
         default_factory=list,
         metadata={
             "name": "TrafficControlPoint",

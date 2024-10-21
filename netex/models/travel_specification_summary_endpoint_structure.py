@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .address_ref import AddressRef
 from .boarding_position_ref import BoardingPositionRef
@@ -145,7 +146,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_ref: List[TariffZoneRef] = field(
+    tariff_zone_ref: Iterable[TariffZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .time_demand_type_assignment import TimeDemandTypeAssignment
@@ -14,7 +14,7 @@ class TimeDemandTypeAssignmentsInFrameRelStructure(
     class Meta:
         name = "timeDemandTypeAssignmentsInFrame_RelStructure"
 
-    time_demand_type_assignment: List[TimeDemandTypeAssignment] = field(
+    time_demand_type_assignment: Iterable[TimeDemandTypeAssignment] = field(
         default_factory=list,
         metadata={
             "name": "TimeDemandTypeAssignment",

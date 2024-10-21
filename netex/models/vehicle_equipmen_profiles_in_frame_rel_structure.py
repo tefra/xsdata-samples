@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .charging_equipment_profile import ChargingEquipmentProfile
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +16,7 @@ class VehicleEquipmenProfilesInFrameRelStructure(
     class Meta:
         name = "vehicleEquipmenProfilesInFrame_RelStructure"
 
-    vehicle_equipment_profile_or_charging_equipment_profile: List[
+    vehicle_equipment_profile_or_charging_equipment_profile: Iterable[
         Union[VehicleEquipmentProfile, ChargingEquipmentProfile]
     ] = field(
         default_factory=list,

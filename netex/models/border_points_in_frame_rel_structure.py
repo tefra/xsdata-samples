@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .border_point import BorderPoint
 from .frame_containment_structure import FrameContainmentStructure
@@ -12,7 +12,7 @@ class BorderPointsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "borderPointsInFrame_RelStructure"
 
-    border_point: List[BorderPoint] = field(
+    border_point: Iterable[BorderPoint] = field(
         default_factory=list,
         metadata={
             "name": "BorderPoint",

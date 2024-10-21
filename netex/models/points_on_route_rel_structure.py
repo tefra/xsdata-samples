@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .point_on_route import PointOnRoute
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class PointsOnRouteRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsOnRoute_RelStructure"
 
-    point_on_route: List[PointOnRoute] = field(
+    point_on_route: Iterable[PointOnRoute] = field(
         default_factory=list,
         metadata={
             "name": "PointOnRoute",

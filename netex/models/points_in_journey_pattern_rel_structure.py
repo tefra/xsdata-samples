@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .point_in_journey_pattern import PointInJourneyPattern
 from .stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -18,7 +19,7 @@ class PointsInJourneyPatternRelStructure(
     class Meta:
         name = "pointsInJourneyPattern_RelStructure"
 
-    point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern: List[
+    point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern: Iterable[
         Union[
             PointInJourneyPattern,
             StopPointInJourneyPattern,

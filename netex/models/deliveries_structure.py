@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .data_object_delivery import DataObjectDelivery
 
@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DeliveriesStructure:
-    data_object_delivery: List[DataObjectDelivery] = field(
+    data_object_delivery: Iterable[DataObjectDelivery] = field(
         default_factory=list,
         metadata={
             "name": "DataObjectDelivery",

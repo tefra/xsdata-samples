@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .class_in_frame_ref import ClassInFrameRef
 from .class_ref import ClassRef
@@ -13,7 +14,7 @@ class ClassRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "classRefs_RelStructure"
 
-    class_ref: List[Union[ClassInFrameRef, ClassRef]] = field(
+    class_ref: Iterable[Union[ClassInFrameRef, ClassRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .branding import Branding
 from .charging_moment import ChargingMoment
@@ -88,7 +89,7 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueStructure"
 
-    type_of_value_or_type_of_entity: List[
+    type_of_value_or_type_of_entity: Iterable[
         Union[
             TypeOfFleet,
             ParkingBayStatus,

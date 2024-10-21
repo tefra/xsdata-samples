@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlPeriod
 
@@ -34,7 +35,7 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    days_of_week: List[DayOfWeekEnumeration] = field(
+    days_of_week: Iterable[DayOfWeekEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "DaysOfWeek",
@@ -43,7 +44,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    weeks_of_month: List[WeekOfMonthEnumeration] = field(
+    weeks_of_month: Iterable[WeekOfMonthEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "WeeksOfMonth",
@@ -89,7 +90,7 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    holiday_types: List[HolidayTypeEnumeration] = field(
+    holiday_types: Iterable[HolidayTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "HolidayTypes",
@@ -98,7 +99,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    seasons: List[SeasonEnumeration] = field(
+    seasons: Iterable[SeasonEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "Seasons",
@@ -107,7 +108,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    tides: List[TideEnumeration] = field(
+    tides: Iterable[TideEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "Tides",

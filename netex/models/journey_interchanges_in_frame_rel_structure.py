@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .service_journey_interchange import ServiceJourneyInterchange
@@ -15,7 +16,7 @@ class JourneyInterchangesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyInterchangesInFrame_RelStructure"
 
-    service_journey_pattern_interchange_or_service_journey_interchange: List[
+    service_journey_pattern_interchange_or_service_journey_interchange: Iterable[
         Union[ServiceJourneyPatternInterchange, ServiceJourneyInterchange]
     ] = field(
         default_factory=list,

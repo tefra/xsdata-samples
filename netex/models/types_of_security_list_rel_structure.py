@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .type_of_security_list import TypeOfSecurityList
@@ -13,7 +14,7 @@ class TypesOfSecurityListRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfSecurityList_RelStructure"
 
-    type_of_security_list_ref_or_type_of_security_list: List[
+    type_of_security_list_ref_or_type_of_security_list: Iterable[
         Union[TypeOfSecurityListRef, TypeOfSecurityList]
     ] = field(
         default_factory=list,

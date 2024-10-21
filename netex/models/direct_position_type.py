@@ -1,12 +1,13 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
 @dataclass
 class DirectPositionType:
-    value: List[float] = field(
+    value: Iterable[float] = field(
         default_factory=list,
         metadata={
             "tokens": True,

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .service_exclusion import ServiceExclusion
@@ -12,7 +12,7 @@ class ServiceExclusionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "serviceExclusionsInFrame_RelStructure"
 
-    service_exclusion: List[ServiceExclusion] = field(
+    service_exclusion: Iterable[ServiceExclusion] = field(
         default_factory=list,
         metadata={
             "name": "ServiceExclusion",

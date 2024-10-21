@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, ForwardRef, List, Optional, Union
+from typing import Any, ForwardRef, Optional, Union
 
 from .air_submode import AirSubmode
 from .all_modes_enumeration import AllModesEnumeration
@@ -215,7 +216,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             ),
         },
     )
-    operator_activities: List[OperatorActivitiesEnumeration] = field(
+    operator_activities: Iterable[OperatorActivitiesEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "OperatorActivities",

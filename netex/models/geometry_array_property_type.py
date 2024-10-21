@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .line_string import LineString
 from .multi_surface import MultiSurface
@@ -11,7 +12,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryArrayPropertyType:
-    choice: List[Union[MultiSurface, Polygon, LineString, Point1]] = field(
+    choice: Iterable[Union[MultiSurface, Polygon, LineString, Point1]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .accepted_driver_permit_ref import AcceptedDriverPermitRef
 from .access_ref import AccessRef
@@ -575,7 +576,7 @@ class ObjectRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "objectRefs_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             TripLegRef,
             IndividualPassengerInfoRef,

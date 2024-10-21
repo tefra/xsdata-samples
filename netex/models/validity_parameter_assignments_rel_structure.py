@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .access_right_parameter_assignment import AccessRightParameterAssignment
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -25,7 +26,7 @@ class ValidityParameterAssignmentsRelStructure(
     class Meta:
         name = "validityParameterAssignments_RelStructure"
 
-    access_right_parameter_assignment: List[
+    access_right_parameter_assignment: Iterable[
         Union[
             CustomerPurchaseParameterAssignment,
             SpecificParameterAssignment,

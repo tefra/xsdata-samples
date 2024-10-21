@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .route_link import RouteLink
@@ -12,7 +12,7 @@ class RouteLinksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routeLinksInFrame_RelStructure"
 
-    route_link: List[RouteLink] = field(
+    route_link: Iterable[RouteLink] = field(
         default_factory=list,
         metadata={
             "name": "RouteLink",

@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .activation_link_ref import ActivationLinkRef
 from .activation_link_ref_by_value import ActivationLinkRefByValue
@@ -33,7 +34,7 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "linkRefs_RelStructure"
 
-    link_ref_or_infrastructure_link_ref_or_link_ref_by_value: List[
+    link_ref_or_infrastructure_link_ref_or_link_ref_by_value: Iterable[
         Union[
             OnwardVehicleMeetingLinkRef,
             VehicleMeetingLinkRef,

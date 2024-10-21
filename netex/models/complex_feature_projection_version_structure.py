@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
@@ -45,7 +46,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: List[
+    choice: Iterable[
         Union[
             VehicleMeetingPointRef,
             WirePointRef,

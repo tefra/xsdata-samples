@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .codespace import Codespace
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -12,7 +12,7 @@ class CodespacesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "codespacesInFrame_RelStructure"
 
-    codespace: List[Codespace] = field(
+    codespace: Iterable[Codespace] = field(
         default_factory=list,
         metadata={
             "name": "Codespace",

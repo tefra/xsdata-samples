@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .medium_access_device_security_listing_ref import (
     MediumAccessDeviceSecurityListingRef,
@@ -16,7 +16,7 @@ class MediumAccessDeviceSecurityListingRefsRelStructure(
     class Meta:
         name = "mediumAccessDeviceSecurityListingRefs_RelStructure"
 
-    medium_access_device_security_listing_ref: List[
+    medium_access_device_security_listing_ref: Iterable[
         MediumAccessDeviceSecurityListingRef
     ] = field(
         default_factory=list,

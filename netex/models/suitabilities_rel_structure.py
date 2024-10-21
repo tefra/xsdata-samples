@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
@@ -14,7 +14,7 @@ class SuitabilitiesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "suitabilities_RelStructure"
 
-    suitability: List[Suitability] = field(
+    suitability: Iterable[Suitability] = field(
         default_factory=list,
         metadata={
             "name": "Suitability",

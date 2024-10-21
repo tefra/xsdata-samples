@@ -1,6 +1,7 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from .coordinates_structure import CoordinatesStructure
 
@@ -12,7 +13,7 @@ class LocationStructure1:
     class Meta:
         name = "LocationStructure"
 
-    longitude_or_latitude_or_coordinates: List[
+    longitude_or_latitude_or_coordinates: Iterable[
         Union[
             "LocationStructure1.Longitude",
             "LocationStructure1.Latitude",

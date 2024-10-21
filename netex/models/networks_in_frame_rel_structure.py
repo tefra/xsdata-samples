@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .network import Network
@@ -12,7 +12,7 @@ class NetworksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "networksInFrame_RelStructure"
 
-    network: List[Network] = field(
+    network: Iterable[Network] = field(
         default_factory=list,
         metadata={
             "name": "Network",

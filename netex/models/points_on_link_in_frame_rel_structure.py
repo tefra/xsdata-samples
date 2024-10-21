@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .point_on_link import PointOnLink
@@ -12,7 +12,7 @@ class PointsOnLinkInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointsOnLinkInFrame_RelStructure"
 
-    point_on_link: List[PointOnLink] = field(
+    point_on_link: Iterable[PointOnLink] = field(
         default_factory=list,
         metadata={
             "name": "PointOnLink",

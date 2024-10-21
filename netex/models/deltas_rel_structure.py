@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .delta import Delta
 
@@ -11,7 +11,7 @@ class DeltasRelStructure:
     class Meta:
         name = "deltas_RelStructure"
 
-    delta: List[Delta] = field(
+    delta: Iterable[Delta] = field(
         default_factory=list,
         metadata={
             "name": "Delta",

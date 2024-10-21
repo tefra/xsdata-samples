@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_structure_element import FareStructureElement
@@ -13,7 +14,7 @@ class FareStructureElementsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareStructureElements_RelStructure"
 
-    fare_structure_element_ref_or_fare_structure_element: List[
+    fare_structure_element_ref_or_fare_structure_element: Iterable[
         Union[FareStructureElementRef, FareStructureElement]
     ] = field(
         default_factory=list,

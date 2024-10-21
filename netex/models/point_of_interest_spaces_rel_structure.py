@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .point_of_interest_space import PointOfInterestSpace
@@ -13,7 +14,7 @@ class PointOfInterestSpacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointOfInterestSpaces_RelStructure"
 
-    point_of_interest_space_ref_or_point_of_interest_space: List[
+    point_of_interest_space_ref_or_point_of_interest_space: Iterable[
         Union[SiteComponentRefStructure, PointOfInterestSpace]
     ] = field(
         default_factory=list,

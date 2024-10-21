@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .controllable_element import ControllableElement
 from .controllable_element_ref import ControllableElementRef
@@ -15,7 +16,7 @@ class ControllableElementsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "controllableElements_RelStructure"
 
-    controllable_element_ref_or_controllable_element: List[
+    controllable_element_ref_or_controllable_element: Iterable[
         Union[ControllableElementRef, ControllableElement]
     ] = field(
         default_factory=list,

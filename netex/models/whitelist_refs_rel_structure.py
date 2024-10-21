@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .whitelist_ref import WhitelistRef
@@ -12,7 +12,7 @@ class WhitelistRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "whitelistRefs_RelStructure"
 
-    whitelist_ref: List[WhitelistRef] = field(
+    whitelist_ref: Iterable[WhitelistRef] = field(
         default_factory=list,
         metadata={
             "name": "WhitelistRef",

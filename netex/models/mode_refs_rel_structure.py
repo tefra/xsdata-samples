@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .mode_ref import ModeRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,7 @@ class ModeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "modeRefs_RelStructure"
 
-    mode_ref: List[ModeRef] = field(
+    mode_ref: Iterable[ModeRef] = field(
         default_factory=list,
         metadata={
             "name": "ModeRef",

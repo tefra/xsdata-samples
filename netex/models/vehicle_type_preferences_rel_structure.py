@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
@@ -16,7 +16,7 @@ class VehicleTypePreferencesRelStructure(
     class Meta:
         name = "vehicleTypePreferences_RelStructure"
 
-    vehicle_type_preference: List[VehicleTypePreference] = field(
+    vehicle_type_preference: Iterable[VehicleTypePreference] = field(
         default_factory=list,
         metadata={
             "name": "VehicleTypePreference",

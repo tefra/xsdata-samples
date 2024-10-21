@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .charging_equipment_profile import ChargingEquipmentProfile
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class ChargingEquipmenProfilesInFrameRelStructure(
     class Meta:
         name = "chargingEquipmenProfilesInFrame_RelStructure"
 
-    charging_equipment_profile: List[ChargingEquipmentProfile] = field(
+    charging_equipment_profile: Iterable[ChargingEquipmentProfile] = field(
         default_factory=list,
         metadata={
             "name": "ChargingEquipmentProfile",

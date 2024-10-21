@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .operational_context_ref import OperationalContextRef
@@ -12,7 +12,7 @@ class OperationalContexRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "operationalContexRefs_RelStructure"
 
-    operational_context_ref: List[OperationalContextRef] = field(
+    operational_context_ref: Iterable[OperationalContextRef] = field(
         default_factory=list,
         metadata={
             "name": "OperationalContextRef",

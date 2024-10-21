@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .stop_area_ref_structure import StopAreaRefStructure
@@ -12,7 +12,7 @@ class StopAreaRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "stopAreaRefs_RelStructure"
 
-    stop_area_ref: List[StopAreaRefStructure] = field(
+    stop_area_ref: Iterable[StopAreaRefStructure] = field(
         default_factory=list,
         metadata={
             "name": "StopAreaRef",

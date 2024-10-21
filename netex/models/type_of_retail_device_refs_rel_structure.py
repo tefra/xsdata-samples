@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_retail_device_ref import TypeOfRetailDeviceRef
@@ -12,7 +12,7 @@ class TypeOfRetailDeviceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfRetailDeviceRefs_RelStructure"
 
-    type_of_retail_device_ref: List[TypeOfRetailDeviceRef] = field(
+    type_of_retail_device_ref: Iterable[TypeOfRetailDeviceRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfRetailDeviceRef",

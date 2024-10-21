@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .discounting_rule import DiscountingRule
 from .frame_containment_structure import FrameContainmentStructure
@@ -15,7 +16,7 @@ class PricingRulesRelStructure(FrameContainmentStructure):
     class Meta:
         name = "pricingRules_RelStructure"
 
-    pricing_rule: List[
+    pricing_rule: Iterable[
         Union[
             LimitingRuleInContext, LimitingRule, DiscountingRule, PricingRule
         ]

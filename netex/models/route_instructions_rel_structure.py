@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .route_instruction import RouteInstruction
 from .strict_containment_aggregation_structure import (
@@ -14,7 +14,7 @@ class RouteInstructionsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "routeInstructions_RelStructure"
 
-    route_instruction: List[RouteInstruction] = field(
+    route_instruction: Iterable[RouteInstruction] = field(
         default_factory=list,
         metadata={
             "name": "RouteInstruction",

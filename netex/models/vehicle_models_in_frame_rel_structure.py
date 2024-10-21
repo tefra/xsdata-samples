@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .vehicle_model import VehicleModel
@@ -12,7 +12,7 @@ class VehicleModelsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleModelsInFrame_RelStructure"
 
-    vehicle_model: List[VehicleModel] = field(
+    vehicle_model: Iterable[VehicleModel] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModel",

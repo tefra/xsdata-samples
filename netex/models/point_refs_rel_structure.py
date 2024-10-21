@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
@@ -27,7 +28,7 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "pointRefs_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             VehicleMeetingPointRef,
             WirePointRef,

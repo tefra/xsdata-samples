@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .authority import Authority
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -13,7 +14,7 @@ class TransportOperatorsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportOperatorsInFrame_RelStructure"
 
-    authority_or_operator: List[Union[Authority, Operator]] = field(
+    authority_or_operator: Iterable[Union[Authority, Operator]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

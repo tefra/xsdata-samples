@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .frame_containment_structure import FrameContainmentStructure
 from .service_access_code import ServiceAccessCode
@@ -15,7 +16,7 @@ class TravelDocumentsRelStructure(FrameContainmentStructure):
     class Meta:
         name = "travelDocuments_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             ServiceAccessCodeRef,
             TravelDocumentRef,

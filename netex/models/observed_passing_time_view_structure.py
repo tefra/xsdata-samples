@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -14,7 +15,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
     class Meta:
         name = "ObservedPassingTime_ViewStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             "ObservedPassingTimeViewStructure.ActualArrivalTime",
             "ObservedPassingTimeViewStructure.ArrivalDayOffset",

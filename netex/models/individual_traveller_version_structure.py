@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .customer_ref import CustomerRef
 from .entity_in_version_structure import DataManagedObjectStructure
@@ -76,7 +77,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    languages: List[str] = field(
+    languages: Iterable[str] = field(
         default_factory=list,
         metadata={
             "name": "Languages",

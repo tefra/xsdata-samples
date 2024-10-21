@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .type_of_access_right_assignment import TypeOfAccessRightAssignment
@@ -15,7 +16,7 @@ class TypeOfAccessRightAssignmentsRelStructure(
     class Meta:
         name = "TypeOfAccessRightAssignments_RelStructure"
 
-    type_of_access_right_assignment_ref_or_type_of_access_right_assignment: List[
+    type_of_access_right_assignment_ref_or_type_of_access_right_assignment: Iterable[
         Union[TypeOfAccessRightAssignmentRef, TypeOfAccessRightAssignment]
     ] = field(
         default_factory=list,

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .group_of_operators import GroupOfOperators
@@ -12,7 +12,7 @@ class GroupsOfOperatorsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupsOfOperatorsInFrame_RelStructure"
 
-    group_of_operators: List[GroupOfOperators] = field(
+    group_of_operators: Iterable[GroupOfOperators] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfOperators",

@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List
 
 from .access_ref import AccessRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,7 @@ class AccessRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "accessRefs_RelStructure"
 
-    access_ref: List[AccessRef] = field(
+    access_ref: Iterable[AccessRef] = field(
         default_factory=list,
         metadata={
             "name": "AccessRef",

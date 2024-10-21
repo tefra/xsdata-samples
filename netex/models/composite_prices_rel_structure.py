@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
@@ -54,7 +55,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "compositePrices_RelStructure"
 
-    choice: List[
+    choice: Iterable[
         Union[
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,

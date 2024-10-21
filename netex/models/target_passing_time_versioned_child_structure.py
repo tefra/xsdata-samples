@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -18,7 +19,7 @@ class TargetPassingTimeVersionedChildStructure(
     class Meta:
         name = "TargetPassingTime_VersionedChildStructure"
 
-    choice_1: List[
+    choice_1: Iterable[
         Union[
             "TargetPassingTimeVersionedChildStructure.AimedArrivalTime",
             "TargetPassingTimeVersionedChildStructure.ArrivalDayOffset",
