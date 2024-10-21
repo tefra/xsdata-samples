@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python: [ "3.8", "3.9", "3.10", "3.11", "3.12", "3.13-dev" ]
+        python: ["3.9", "3.10", "3.11", "3.12", "3.13"]
         collection:
           - { name: "Amadeus", id: "amadeus" }
           - { name: "Autosar", id: "autosar" }
@@ -54,7 +54,7 @@ jobs:
       - name: Generate Code
         run: invoke ${{ matrix.collection.id }}.build
       - name: Run Tests
-        if: matrix.python != '3.13-dev' || matrix.collection.id != 'netex'
+        if: matrix.python != '3.13' || matrix.collection.id != 'netex'
         run: invoke ${{ matrix.collection.id }}.test
       - name: Run mypy
         if: matrix.collection.skip_mypy != true
