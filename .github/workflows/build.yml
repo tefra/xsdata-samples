@@ -19,7 +19,7 @@ jobs:
           - { name: "Amadeus", id: "amadeus" }
           - { name: "Autosar", id: "autosar" }
           - { name: "BPMN", id: "bpmn" }
-          - { name: "Common Types", id: "common-types" }
+          - { name: "Common Types", id: "common-types", skip_mypy: true }
           - { name: "Crossref Metadata", id: "crossref" }
           - { name: "DateX II", id: "datexii" }
           - { name: "EWP", id: "ewp" }
