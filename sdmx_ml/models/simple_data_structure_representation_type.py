@@ -18,6 +18,7 @@ class SimpleDataStructureRepresentationType(DataStructureRepresentationType):
 
     max_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

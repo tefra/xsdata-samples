@@ -28,6 +28,7 @@ class DataKeyValueType(MemberSelectionType):
 
     time_range: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -50,12 +51,14 @@ class DataKeyValueType(MemberSelectionType):
     )
     valid_from: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     valid_to: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

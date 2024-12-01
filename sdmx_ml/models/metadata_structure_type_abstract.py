@@ -22,12 +22,14 @@ class MetadataStructureTypeAbstract(PayloadStructureType):
 
     dimension_at_observation: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     explicit_measures: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

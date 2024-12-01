@@ -15,12 +15,14 @@ class OrganisationSchemeBaseType(ItemSchemeType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     version: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

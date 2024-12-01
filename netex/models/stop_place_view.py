@@ -13,6 +13,7 @@ class StopPlaceView(StopPlaceDerivedViewStructure):
 
     branding_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

@@ -38,42 +38,49 @@ class GroupDimensionBaseType(ComponentType):
 
     concept_identity: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     local_representation: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     link: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     annotations: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     id: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     urn: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     uri: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

@@ -17,6 +17,7 @@ class GenericMetadataStructureType(MetadataStructureTypeAbstract):
 
     namespace: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

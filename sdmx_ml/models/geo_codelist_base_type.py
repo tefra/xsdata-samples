@@ -15,6 +15,7 @@ class GeoCodelistBaseType(CodelistType):
 
     choice_2: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

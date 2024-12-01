@@ -15,6 +15,7 @@ class CubeKeyValueType(SimpleComponentValueType):
 
     lang: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

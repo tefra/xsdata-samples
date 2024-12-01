@@ -17,6 +17,7 @@ class BooleanValueType(ValueType):
 
     content: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

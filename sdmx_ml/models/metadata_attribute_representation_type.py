@@ -16,12 +16,14 @@ class MetadataAttributeRepresentationType(RepresentationType):
 
     min_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_occurs: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

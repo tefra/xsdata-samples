@@ -18,12 +18,14 @@ class MetadataAttributeValueSetType(MemberSelectionType):
 
     valid_from: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     valid_to: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

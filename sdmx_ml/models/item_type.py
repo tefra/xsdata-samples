@@ -153,6 +153,7 @@ class BaseOrganisationType(ItemType):
 
     choice_1: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -170,6 +171,7 @@ class CategoryType(ItemType):
 
     choice_1: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -188,6 +190,7 @@ class CodeType(ItemType):
 
     choice_1: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -203,6 +206,7 @@ class ConceptBaseType(ItemType):
 
     choice_1: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -218,6 +222,7 @@ class ReportingCategoryBaseType(ItemType):
 
     choice_1: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -233,6 +238,7 @@ class UnnestedItemType(ItemType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -309,6 +315,7 @@ class CustomTypeBaseType(UnnestedItemType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -333,6 +340,7 @@ class NamePersonalisationBaseType(UnnestedItemType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -428,6 +436,7 @@ class RulesetBaseType(UnnestedItemType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -444,6 +453,7 @@ class TransformationBaseType(UnnestedItemType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -460,6 +470,7 @@ class UserDefinedOperatorBaseType(UnnestedItemType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -475,6 +486,7 @@ class VtlMappingBaseType(UnnestedItemType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -491,6 +503,7 @@ class AgencyType(OrganisationType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -589,6 +602,7 @@ class DataConsumerType(OrganisationType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -605,6 +619,7 @@ class DataProviderType(OrganisationType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -661,6 +676,7 @@ class MetadataProviderType(OrganisationType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -725,6 +741,7 @@ class OrganisationUnitType(OrganisationType):
 
     choice_1: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

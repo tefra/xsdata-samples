@@ -24,6 +24,7 @@ class CodingTextFormatType(SimpleComponentTextFormatType):
 
     sentinel_value: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -37,24 +38,28 @@ class CodingTextFormatType(SimpleComponentTextFormatType):
     )
     time_interval: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     start_time: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     end_time: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     decimals: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

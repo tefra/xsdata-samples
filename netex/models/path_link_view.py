@@ -13,6 +13,7 @@ class PathLinkView(PathLinkDerivedViewStructure):
 
     branding_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

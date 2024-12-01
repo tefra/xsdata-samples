@@ -16,6 +16,7 @@ class GeoGridCodelistBaseType(GeoCodelistType):
 
     choice_3: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

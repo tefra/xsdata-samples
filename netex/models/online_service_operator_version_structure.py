@@ -67,36 +67,42 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
     class Address(PostalAddressVersionStructure):
         members: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         key_list: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         extensions: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         branding_ref: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         validity_conditions_or_valid_between: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         alternative_texts: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },

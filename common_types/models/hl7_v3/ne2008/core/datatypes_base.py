@@ -253,6 +253,7 @@ class AnynonNull(AnyType):
 
     null_flavor: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -1905,18 +1906,21 @@ class St(Ed):
     )
     compression: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     integrity_check: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     integrity_check_algorithm: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -2096,6 +2100,7 @@ class Ce(Cd):
 
     qualifier: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -2342,12 +2347,14 @@ class Cv(Ce):
 
     qualifier: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     translation: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -2374,18 +2381,21 @@ class EivlEvent(Ce):
 
     qualifier: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     original_text: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     translation: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -3217,42 +3227,49 @@ class Cs(Cv):
 
     qualifier: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     translation: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     original_text: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     code_system: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     code_system_name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     code_system_version: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     display_name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -3753,6 +3770,7 @@ class CeExplicit(CdExplicit):
 
     qualifier: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

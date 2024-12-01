@@ -22,18 +22,21 @@ class MetadataAttributeUsageBaseType(ComponentType):
 
     concept_identity: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     local_representation: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     id: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

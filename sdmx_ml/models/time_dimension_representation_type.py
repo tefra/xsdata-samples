@@ -18,6 +18,7 @@ class TimeDimensionRepresentationType(SimpleDataStructureRepresentationType):
 
     enumeration_or_enumeration_format: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

@@ -18,6 +18,7 @@ class DataStructureBaseType(StructureTypeAbstract):
 
     metadata_structure_components: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

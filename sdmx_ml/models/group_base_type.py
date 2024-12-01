@@ -14,12 +14,14 @@ class GroupBaseType(ComponentListType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     link: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

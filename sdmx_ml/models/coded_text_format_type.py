@@ -28,6 +28,7 @@ class CodedTextFormatType(SimpleComponentTextFormatType):
 
     sentinel_value: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -41,6 +42,7 @@ class CodedTextFormatType(SimpleComponentTextFormatType):
     )
     decimals: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

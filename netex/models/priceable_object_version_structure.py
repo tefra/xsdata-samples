@@ -2587,12 +2587,14 @@ class Cell(CellVersionedChildStructure):
 
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -2848,12 +2850,14 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
     class CellInContext(CellVersionedChildStructure):
         validity_conditions_or_valid_between: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },
         )
         alternative_texts: Any = field(
             init=False,
+            default=None,
             metadata={
                 "type": "Ignore",
             },

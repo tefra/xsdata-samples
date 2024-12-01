@@ -26,66 +26,77 @@ class TimeTextFormatType(SimpleComponentTextFormatType):
     )
     is_sequence: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     interval: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     start_value: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     end_value: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     time_interval: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     min_length: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_length: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     min_value: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     max_value: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     decimals: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     pattern: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

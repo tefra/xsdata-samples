@@ -22,6 +22,7 @@ class StructureSpecificDataHeaderType(BaseHeaderType):
 
     metadata_provider: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

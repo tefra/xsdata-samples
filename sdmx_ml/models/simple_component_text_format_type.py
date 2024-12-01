@@ -25,6 +25,7 @@ class SimpleComponentTextFormatType(BasicComponentTextFormatType):
     )
     is_multi_lingual: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

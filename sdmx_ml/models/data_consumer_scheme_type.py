@@ -21,12 +21,14 @@ class DataConsumerSchemeType(OrganisationSchemeType):
 
     choice_2: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     choice_3: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

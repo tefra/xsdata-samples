@@ -17,6 +17,7 @@ class DataStructureComponentsBaseType(GroupingType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

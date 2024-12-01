@@ -20,6 +20,7 @@ class DimensionListBaseType(ComponentListType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

@@ -46,6 +46,7 @@ class TimeDimensionType(BaseDimensionType):
 
     concept_role: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -69,6 +70,7 @@ class TimeDimensionType(BaseDimensionType):
     )
     position: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

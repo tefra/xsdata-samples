@@ -20,6 +20,7 @@ class AttributeListBaseType(ComponentListType):
 
     choice: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

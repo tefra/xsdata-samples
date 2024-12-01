@@ -15,12 +15,14 @@ class OnwardTimingLinkView(OnwardTimingLinkDerivedViewStructure):
 
     timing_link_in_journey_pattern_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     branding_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

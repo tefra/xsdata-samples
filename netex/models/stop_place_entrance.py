@@ -15,6 +15,7 @@ class StopPlaceEntrance(StopPlaceEntranceVersionStructure):
 
     members: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

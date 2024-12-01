@@ -28,24 +28,28 @@ class GenericMetadataHeaderType(BaseHeaderType):
 
     data_provider: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     reporting_begin: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     reporting_end: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     embargo_date: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

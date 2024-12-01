@@ -402,18 +402,21 @@ class AlternativeText(AlternativeTextVersionedChildStructure):
 
     extensions: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -456,12 +459,14 @@ class ValidityCondition(ValidityConditionVersionStructure):
 
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -677,54 +682,63 @@ class ValidBetween(ValidBetweenVersionStructure):
 
     name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     description: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     conditioned_object_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     with_condition_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     key_list: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     extensions: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     branding_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -787,12 +801,14 @@ class ValidityRuleParameter(ValidityRuleParameterVersionStructure):
 
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -806,12 +822,14 @@ class ValidityTrigger(ValidityTriggerVersionStructure):
 
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -909,30 +927,35 @@ class ValidDuring(ValidDuringVersionStructure):
 
     key_list: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     extensions: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     branding_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -1052,12 +1075,14 @@ class AvailabilityCondition(AvailabilityConditionVersionStructure):
 
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

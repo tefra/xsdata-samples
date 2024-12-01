@@ -16,6 +16,7 @@ class MeasureListType(ComponentListType):
 
     choice_1: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

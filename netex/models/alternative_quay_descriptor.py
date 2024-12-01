@@ -17,18 +17,21 @@ class AlternativeQuayDescriptor(
 
     name_type: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     validity_conditions_or_valid_between: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     alternative_texts: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

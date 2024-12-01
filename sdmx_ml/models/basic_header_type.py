@@ -51,66 +51,77 @@ class BasicHeaderType(BaseHeaderType):
 
     name: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     structure: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     data_provider: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     metadata_provider: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     data_set_action: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     data_set_id: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     extracted: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     reporting_begin: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     reporting_end: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     embargo_date: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     source: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

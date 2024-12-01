@@ -15,30 +15,35 @@ class VehicleStoppingPosition(VehicleStoppingPositionVersionStructure):
 
     url: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     image: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     postal_address: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     road_address: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     members: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

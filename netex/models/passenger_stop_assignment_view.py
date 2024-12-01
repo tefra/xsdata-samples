@@ -15,12 +15,14 @@ class PassengerStopAssignmentView(PassengerStopAssignmentDerivedViewStructure):
 
     label: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     branding_ref: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

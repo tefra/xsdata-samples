@@ -17,24 +17,28 @@ class SimpleKeyValueType(SimpleComponentValueType):
 
     cascade_values: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     lang: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     valid_from: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     valid_to: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

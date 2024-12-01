@@ -42,12 +42,14 @@ class MetadataTargetRegionType(RegionType):
 
     key_value: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
     )
     annotations: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },

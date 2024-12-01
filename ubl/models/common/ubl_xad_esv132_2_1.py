@@ -1127,6 +1127,7 @@ class DataObjectFormat(DataObjectFormatType):
 class OtherTimeStampType(GenericTimeStampType):
     include: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
@@ -1175,6 +1176,7 @@ class XadEstimeStampType(GenericTimeStampType):
 
     reference_info: Any = field(
         init=False,
+        default=None,
         metadata={
             "type": "Ignore",
         },
