@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.base_dimension_base_type import BaseDimensionBaseType
 
@@ -22,7 +22,7 @@ class BaseDimensionType(BaseDimensionBaseType):
         of the dimension in the key descriptor.
     """
 
-    concept_role: Tuple[str, ...] = field(
+    concept_role: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConceptRole",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .integer import Integer
@@ -146,7 +146,7 @@ class DataDumpEntry:
         :ivar byte_value: Supplier specific format.
         """
 
-        byte_value: List[Integer] = field(
+        byte_value: list[Integer] = field(
             default_factory=list,
             metadata={
                 "name": "BYTE-VALUE",

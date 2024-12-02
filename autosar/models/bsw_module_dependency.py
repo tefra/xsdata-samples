@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -335,7 +335,7 @@ class BswModuleDependency:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -346,7 +346,7 @@ class BswModuleDependency:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -357,7 +357,7 @@ class BswModuleDependency:
 
     @dataclass
     class TargetModuleRefs:
-        bsw_module_description_ref_conditional: List[
+        bsw_module_description_ref_conditional: list[
             BswModuleDescriptionRefConditional
         ] = field(
             default_factory=list,
@@ -370,7 +370,7 @@ class BswModuleDependency:
 
     @dataclass
     class RequiredEntrys:
-        bsw_module_entry_ref_conditional: List[
+        bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
         ] = field(
             default_factory=list,
@@ -383,7 +383,7 @@ class BswModuleDependency:
 
     @dataclass
     class ExpectedCallbacks:
-        bsw_module_entry_ref_conditional: List[
+        bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
         ] = field(
             default_factory=list,
@@ -396,7 +396,7 @@ class BswModuleDependency:
 
     @dataclass
     class ServiceItems:
-        bsw_mgr_needs: List[BswMgrNeeds] = field(
+        bsw_mgr_needs: list[BswMgrNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MGR-NEEDS",
@@ -404,7 +404,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_mgr_user_needs: List[ComMgrUserNeeds] = field(
+        com_mgr_user_needs: list[ComMgrUserNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "COM-MGR-USER-NEEDS",
@@ -412,7 +412,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_certificate_key_slot_needs: List[
+        crypto_certificate_key_slot_needs: list[
             CryptoCertificateKeySlotNeeds
         ] = field(
             default_factory=list,
@@ -422,7 +422,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_key_management_needs: List[CryptoKeyManagementNeeds] = field(
+        crypto_key_management_needs: list[CryptoKeyManagementNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-KEY-MANAGEMENT-NEEDS",
@@ -430,7 +430,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_service_job_needs: List[CryptoServiceJobNeeds] = field(
+        crypto_service_job_needs: list[CryptoServiceJobNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-SERVICE-JOB-NEEDS",
@@ -438,7 +438,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_service_needs: List[CryptoServiceNeeds] = field(
+        crypto_service_needs: list[CryptoServiceNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-SERVICE-NEEDS",
@@ -446,7 +446,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_clear_condition_needs: List[
+        diagnostic_clear_condition_needs: list[
             DiagnosticClearConditionNeeds
         ] = field(
             default_factory=list,
@@ -456,7 +456,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_communication_manager_needs: List[
+        diagnostic_communication_manager_needs: list[
             DiagnosticCommunicationManagerNeeds
         ] = field(
             default_factory=list,
@@ -466,7 +466,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_component_needs: List[DiagnosticComponentNeeds] = field(
+        diagnostic_component_needs: list[DiagnosticComponentNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-COMPONENT-NEEDS",
@@ -474,7 +474,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_control_needs: List[DiagnosticControlNeeds] = field(
+        diagnostic_control_needs: list[DiagnosticControlNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-CONTROL-NEEDS",
@@ -482,7 +482,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_enable_condition_needs: List[
+        diagnostic_enable_condition_needs: list[
             DiagnosticEnableConditionNeeds
         ] = field(
             default_factory=list,
@@ -492,7 +492,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_info_needs: List[DiagnosticEventInfoNeeds] = field(
+        diagnostic_event_info_needs: list[DiagnosticEventInfoNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-EVENT-INFO-NEEDS",
@@ -500,7 +500,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_manager_needs: List[DiagnosticEventManagerNeeds] = (
+        diagnostic_event_manager_needs: list[DiagnosticEventManagerNeeds] = (
             field(
                 default_factory=list,
                 metadata={
@@ -510,7 +510,7 @@ class BswModuleDependency:
                 },
             )
         )
-        diagnostic_event_needs: List[DiagnosticEventNeeds] = field(
+        diagnostic_event_needs: list[DiagnosticEventNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-EVENT-NEEDS",
@@ -518,7 +518,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_generic_uds_needs: List[DiagnosticGenericUdsNeeds] = field(
+        diagnostic_generic_uds_needs: list[DiagnosticGenericUdsNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-GENERIC-UDS-NEEDS",
@@ -526,7 +526,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_indicator_needs: List[DiagnosticIndicatorNeeds] = field(
+        diagnostic_indicator_needs: list[DiagnosticIndicatorNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-INDICATOR-NEEDS",
@@ -534,7 +534,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_io_control_needs: List[DiagnosticIoControlNeeds] = field(
+        diagnostic_io_control_needs: list[DiagnosticIoControlNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-IO-CONTROL-NEEDS",
@@ -542,7 +542,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_operation_cycle_needs: List[
+        diagnostic_operation_cycle_needs: list[
             DiagnosticOperationCycleNeeds
         ] = field(
             default_factory=list,
@@ -552,7 +552,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_file_transfer_needs: List[
+        diagnostic_request_file_transfer_needs: list[
             DiagnosticRequestFileTransferNeeds
         ] = field(
             default_factory=list,
@@ -562,7 +562,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_response_on_event_needs: List[
+        diagnostic_response_on_event_needs: list[
             DiagnosticResponseOnEventNeeds
         ] = field(
             default_factory=list,
@@ -572,7 +572,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_routine_needs: List[DiagnosticRoutineNeeds] = field(
+        diagnostic_routine_needs: list[DiagnosticRoutineNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ROUTINE-NEEDS",
@@ -580,7 +580,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_storage_condition_needs: List[
+        diagnostic_storage_condition_needs: list[
             DiagnosticStorageConditionNeeds
         ] = field(
             default_factory=list,
@@ -590,7 +590,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_upload_download_needs: List[
+        diagnostic_upload_download_needs: list[
             DiagnosticUploadDownloadNeeds
         ] = field(
             default_factory=list,
@@ -600,7 +600,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_value_needs: List[DiagnosticValueNeeds] = field(
+        diagnostic_value_needs: list[DiagnosticValueNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-VALUE-NEEDS",
@@ -608,7 +608,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostics_communication_security_needs: List[
+        diagnostics_communication_security_needs: list[
             DiagnosticsCommunicationSecurityNeeds
         ] = field(
             default_factory=list,
@@ -618,7 +618,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dlt_user_needs: List[DltUserNeeds] = field(
+        dlt_user_needs: list[DltUserNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DLT-USER-NEEDS",
@@ -626,7 +626,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_activation_line_needs: List[DoIpActivationLineNeeds] = field(
+        do_ip_activation_line_needs: list[DoIpActivationLineNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DO-IP-ACTIVATION-LINE-NEEDS",
@@ -634,7 +634,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_gid_needs: List[DoIpGidNeeds] = field(
+        do_ip_gid_needs: list[DoIpGidNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DO-IP-GID-NEEDS",
@@ -642,7 +642,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_gid_synchronization_needs: List[DoIpGidSynchronizationNeeds] = (
+        do_ip_gid_synchronization_needs: list[DoIpGidSynchronizationNeeds] = (
             field(
                 default_factory=list,
                 metadata={
@@ -652,7 +652,7 @@ class BswModuleDependency:
                 },
             )
         )
-        do_ip_power_mode_status_needs: List[DoIpPowerModeStatusNeeds] = field(
+        do_ip_power_mode_status_needs: list[DoIpPowerModeStatusNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "DO-IP-POWER-MODE-STATUS-NEEDS",
@@ -660,7 +660,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_routing_activation_authentication_needs: List[
+        do_ip_routing_activation_authentication_needs: list[
             DoIpRoutingActivationAuthenticationNeeds
         ] = field(
             default_factory=list,
@@ -670,7 +670,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_routing_activation_confirmation_needs: List[
+        do_ip_routing_activation_confirmation_needs: list[
             DoIpRoutingActivationConfirmationNeeds
         ] = field(
             default_factory=list,
@@ -680,7 +680,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dtc_status_change_notification_needs: List[
+        dtc_status_change_notification_needs: list[
             DtcStatusChangeNotificationNeeds
         ] = field(
             default_factory=list,
@@ -690,7 +690,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecu_state_mgr_user_needs: List[EcuStateMgrUserNeeds] = field(
+        ecu_state_mgr_user_needs: list[EcuStateMgrUserNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-STATE-MGR-USER-NEEDS",
@@ -698,7 +698,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        error_tracer_needs: List[ErrorTracerNeeds] = field(
+        error_tracer_needs: list[ErrorTracerNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "ERROR-TRACER-NEEDS",
@@ -706,7 +706,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        function_inhibition_availability_needs: List[
+        function_inhibition_availability_needs: list[
             FunctionInhibitionAvailabilityNeeds
         ] = field(
             default_factory=list,
@@ -716,7 +716,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        function_inhibition_needs: List[FunctionInhibitionNeeds] = field(
+        function_inhibition_needs: list[FunctionInhibitionNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "FUNCTION-INHIBITION-NEEDS",
@@ -724,7 +724,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        further_action_byte_needs: List[FurtherActionByteNeeds] = field(
+        further_action_byte_needs: list[FurtherActionByteNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "FURTHER-ACTION-BYTE-NEEDS",
@@ -732,7 +732,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        global_supervision_needs: List[GlobalSupervisionNeeds] = field(
+        global_supervision_needs: list[GlobalSupervisionNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-SUPERVISION-NEEDS",
@@ -740,7 +740,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        hardware_test_needs: List[HardwareTestNeeds] = field(
+        hardware_test_needs: list[HardwareTestNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "HARDWARE-TEST-NEEDS",
@@ -748,7 +748,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ids_mgr_custom_timestamp_needs: List[IdsMgrCustomTimestampNeeds] = (
+        ids_mgr_custom_timestamp_needs: list[IdsMgrCustomTimestampNeeds] = (
             field(
                 default_factory=list,
                 metadata={
@@ -758,7 +758,7 @@ class BswModuleDependency:
                 },
             )
         )
-        ids_mgr_needs: List[IdsMgrNeeds] = field(
+        ids_mgr_needs: list[IdsMgrNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "IDS-MGR-NEEDS",
@@ -766,7 +766,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        indicator_status_needs: List[IndicatorStatusNeeds] = field(
+        indicator_status_needs: list[IndicatorStatusNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "INDICATOR-STATUS-NEEDS",
@@ -774,7 +774,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_dcm_dm_19_support: List[J1939DcmDm19Support] = field(
+        j_1939_dcm_dm_19_support: list[J1939DcmDm19Support] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-DCM-DM-19-SUPPORT",
@@ -782,7 +782,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_rm_incoming_request_service_needs: List[
+        j_1939_rm_incoming_request_service_needs: list[
             J1939RmIncomingRequestServiceNeeds
         ] = field(
             default_factory=list,
@@ -792,7 +792,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_rm_outgoing_request_service_needs: List[
+        j_1939_rm_outgoing_request_service_needs: list[
             J1939RmOutgoingRequestServiceNeeds
         ] = field(
             default_factory=list,
@@ -802,7 +802,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nv_block_needs: List[NvBlockNeeds] = field(
+        nv_block_needs: list[NvBlockNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "NV-BLOCK-NEEDS",
@@ -810,7 +810,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_control_service_needs: List[ObdControlServiceNeeds] = field(
+        obd_control_service_needs: list[ObdControlServiceNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "OBD-CONTROL-SERVICE-NEEDS",
@@ -818,7 +818,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_info_service_needs: List[ObdInfoServiceNeeds] = field(
+        obd_info_service_needs: list[ObdInfoServiceNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "OBD-INFO-SERVICE-NEEDS",
@@ -826,7 +826,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_monitor_service_needs: List[ObdMonitorServiceNeeds] = field(
+        obd_monitor_service_needs: list[ObdMonitorServiceNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "OBD-MONITOR-SERVICE-NEEDS",
@@ -834,7 +834,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_pid_service_needs: List[ObdPidServiceNeeds] = field(
+        obd_pid_service_needs: list[ObdPidServiceNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "OBD-PID-SERVICE-NEEDS",
@@ -842,7 +842,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_ratio_denominator_needs: List[ObdRatioDenominatorNeeds] = field(
+        obd_ratio_denominator_needs: list[ObdRatioDenominatorNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "OBD-RATIO-DENOMINATOR-NEEDS",
@@ -850,7 +850,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_ratio_service_needs: List[ObdRatioServiceNeeds] = field(
+        obd_ratio_service_needs: list[ObdRatioServiceNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "OBD-RATIO-SERVICE-NEEDS",
@@ -858,7 +858,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        secure_on_board_communication_needs: List[
+        secure_on_board_communication_needs: list[
             SecureOnBoardCommunicationNeeds
         ] = field(
             default_factory=list,
@@ -868,7 +868,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        supervised_entity_checkpoint_needs: List[
+        supervised_entity_checkpoint_needs: list[
             SupervisedEntityCheckpointNeeds
         ] = field(
             default_factory=list,
@@ -878,7 +878,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        supervised_entity_needs: List[SupervisedEntityNeeds] = field(
+        supervised_entity_needs: list[SupervisedEntityNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "SUPERVISED-ENTITY-NEEDS",
@@ -886,7 +886,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sync_time_base_mgr_user_needs: List[SyncTimeBaseMgrUserNeeds] = field(
+        sync_time_base_mgr_user_needs: list[SyncTimeBaseMgrUserNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "SYNC-TIME-BASE-MGR-USER-NEEDS",
@@ -894,7 +894,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        v_2_x_fac_user_needs: List[V2XFacUserNeeds] = field(
+        v_2_x_fac_user_needs: list[V2XFacUserNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "V-2-X-FAC-USER-NEEDS",
@@ -902,7 +902,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        v_2_x_m_user_needs: List[V2XMUserNeeds] = field(
+        v_2_x_m_user_needs: list[V2XMUserNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "V-2-X-M-USER-NEEDS",
@@ -910,7 +910,7 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        vendor_specific_service_needs: List[VendorSpecificServiceNeeds] = (
+        vendor_specific_service_needs: list[VendorSpecificServiceNeeds] = (
             field(
                 default_factory=list,
                 metadata={
@@ -920,7 +920,7 @@ class BswModuleDependency:
                 },
             )
         )
-        warning_indicator_requested_bit_needs: List[
+        warning_indicator_requested_bit_needs: list[
             WarningIndicatorRequestedBitNeeds
         ] = field(
             default_factory=list,

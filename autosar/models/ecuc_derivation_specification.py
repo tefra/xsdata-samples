@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import MlFormula
 from .ecuc_parameter_derivation_formula import EcucParameterDerivationFormula
@@ -76,7 +76,7 @@ class EcucDerivationSpecification:
 
     @dataclass
     class EcucQuerys:
-        ecuc_query: List[EcucQuery] = field(
+        ecuc_query: list[EcucQuery] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-QUERY",

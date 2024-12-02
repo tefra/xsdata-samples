@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_event_subtypes_enum import AbstractEventSubtypesEnum
 from .admin_data import (
@@ -268,7 +268,7 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -279,7 +279,7 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -290,7 +290,7 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List[
+        trace_ref: list[
             "SynchronizationPointConstraint.TraceRefs.TraceRef"
         ] = field(
             default_factory=list,
@@ -325,7 +325,7 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class SourceEecRefs:
-        source_eec_ref: List[
+        source_eec_ref: list[
             "SynchronizationPointConstraint.SourceEecRefs.SourceEecRef"
         ] = field(
             default_factory=list,
@@ -349,7 +349,7 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class SourceEventRefs:
-        source_event_ref: List[
+        source_event_ref: list[
             "SynchronizationPointConstraint.SourceEventRefs.SourceEventRef"
         ] = field(
             default_factory=list,
@@ -373,7 +373,7 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class TargetEecRefs:
-        target_eec_ref: List[
+        target_eec_ref: list[
             "SynchronizationPointConstraint.TargetEecRefs.TargetEecRef"
         ] = field(
             default_factory=list,
@@ -397,7 +397,7 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class TargetEventRefs:
-        target_event_ref: List[
+        target_event_ref: list[
             "SynchronizationPointConstraint.TargetEventRefs.TargetEventRef"
         ] = field(
             default_factory=list,

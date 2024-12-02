@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.component_map_type import ComponentMapType
 from sdmx_ml.models.date_pattern_map_type import DatePatternMapType
@@ -69,7 +69,7 @@ class StructureMapType(StructureMapBaseType):
             "pattern": r".+\.datastructure\.DataStructure=.+|.+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.MetadataStructure=.+|.+\.metadatastructure\.Metadataflow=.+",
         },
     )
-    epoch_map: Tuple[EpochMapType, ...] = field(
+    epoch_map: tuple[EpochMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EpochMap",
@@ -77,7 +77,7 @@ class StructureMapType(StructureMapBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    date_pattern_map: Tuple[DatePatternMapType, ...] = field(
+    date_pattern_map: tuple[DatePatternMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DatePatternMap",
@@ -85,7 +85,7 @@ class StructureMapType(StructureMapBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    frequency_format_mapping: Tuple[FrequencyFormatMappingType, ...] = field(
+    frequency_format_mapping: tuple[FrequencyFormatMappingType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FrequencyFormatMapping",
@@ -93,7 +93,7 @@ class StructureMapType(StructureMapBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    component_map: Tuple[ComponentMapType, ...] = field(
+    component_map: tuple[ComponentMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ComponentMap",
@@ -101,7 +101,7 @@ class StructureMapType(StructureMapBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    fixed_value_map: Tuple[FixedValueMapType, ...] = field(
+    fixed_value_map: tuple[FixedValueMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FixedValueMap",

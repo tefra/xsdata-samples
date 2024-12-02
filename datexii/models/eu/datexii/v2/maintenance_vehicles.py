@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.maintenance_vehicle_actions_enum import (
@@ -30,7 +30,7 @@ class MaintenanceVehicles:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maintenance_vehicle_actions: List[MaintenanceVehicleActionsEnum] = field(
+    maintenance_vehicle_actions: list[MaintenanceVehicleActionsEnum] = field(
         default_factory=list,
         metadata={
             "name": "maintenanceVehicleActions",

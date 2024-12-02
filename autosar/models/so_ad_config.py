@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .logic_address import LogicAddress
 from .socket_address import SocketAddress
@@ -91,7 +91,7 @@ class SoAdConfig:
 
     @dataclass
     class Connections:
-        socket_connection: List[SocketConnection] = field(
+        socket_connection: list[SocketConnection] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-CONNECTION",
@@ -102,7 +102,7 @@ class SoAdConfig:
 
     @dataclass
     class ConnectionBundles:
-        socket_connection_bundle: List[SocketConnectionBundle] = field(
+        socket_connection_bundle: list[SocketConnectionBundle] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-CONNECTION-BUNDLE",
@@ -113,7 +113,7 @@ class SoAdConfig:
 
     @dataclass
     class LogicAddresss:
-        logic_address: List[LogicAddress] = field(
+        logic_address: list[LogicAddress] = field(
             default_factory=list,
             metadata={
                 "name": "LOGIC-ADDRESS",
@@ -124,7 +124,7 @@ class SoAdConfig:
 
     @dataclass
     class SocketAddresss:
-        socket_address: List[SocketAddress] = field(
+        socket_address: list[SocketAddress] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-ADDRESS",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -40,7 +40,7 @@ class CoctMt030202Uv01Place:
     class Meta:
         name = "COCT_MT030202UV01.Place"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -56,7 +56,7 @@ class CoctMt030202Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -64,7 +64,7 @@ class CoctMt030202Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -133,7 +133,7 @@ class CoctMt030202Uv01Birthplace:
     class Meta:
         name = "COCT_MT030202UV01.Birthplace"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -149,7 +149,7 @@ class CoctMt030202Uv01Birthplace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -205,7 +205,7 @@ class CoctMt030202Uv01Person:
     class Meta:
         name = "COCT_MT030202UV01.Person"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -221,7 +221,7 @@ class CoctMt030202Uv01Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -229,7 +229,7 @@ class CoctMt030202Uv01Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -237,7 +237,7 @@ class CoctMt030202Uv01Person:
             "min_occurs": 1,
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",

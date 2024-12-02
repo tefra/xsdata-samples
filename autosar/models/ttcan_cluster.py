@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -191,7 +191,7 @@ class TtcanCluster:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -202,7 +202,7 @@ class TtcanCluster:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -213,7 +213,7 @@ class TtcanCluster:
 
     @dataclass
     class TtcanClusterVariants:
-        ttcan_cluster_conditional: List[TtcanClusterConditional] = field(
+        ttcan_cluster_conditional: list[TtcanClusterConditional] = field(
             default_factory=list,
             metadata={
                 "name": "TTCAN-CLUSTER-CONDITIONAL",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentResponse,
@@ -109,7 +109,7 @@ class DocumentStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -117,7 +117,7 @@ class DocumentStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -149,7 +149,7 @@ class DocumentStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_response: Tuple[AdditionalDocumentResponse, ...] = (
+    additional_document_response: tuple[AdditionalDocumentResponse, ...] = (
         field(
             default_factory=tuple,
             metadata={

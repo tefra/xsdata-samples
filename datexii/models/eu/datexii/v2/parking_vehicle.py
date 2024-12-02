@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.individual_charge import IndividualCharge
@@ -56,7 +56,7 @@ class ParkingVehicle:
             "max_length": 1024,
         },
     )
-    group_of_parking_spaces_reference: List[str] = field(
+    group_of_parking_spaces_reference: list[str] = field(
         default_factory=list,
         metadata={
             "name": "groupOfParkingSpacesReference",
@@ -65,7 +65,7 @@ class ParkingVehicle:
             "max_length": 1024,
         },
     )
-    parking_permit: List[ParkingPermit] = field(
+    parking_permit: list[ParkingPermit] = field(
         default_factory=list,
         metadata={
             "name": "parkingPermit",

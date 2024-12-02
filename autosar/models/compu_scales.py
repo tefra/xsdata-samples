@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .compu_scale import CompuScale
 
@@ -58,7 +58,7 @@ class CompuScales:
 
     @dataclass
     class CompuScalesInner:
-        compu_scale: List[CompuScale] = field(
+        compu_scale: list[CompuScale] = field(
             default_factory=list,
             metadata={
                 "name": "COMPU-SCALE",

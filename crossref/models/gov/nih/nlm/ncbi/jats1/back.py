@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Bio,
@@ -33,58 +33,58 @@ class Back:
             "type": "Element",
         },
     )
-    title: List[Title] = field(
+    title: list[Title] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ack: List[Ack] = field(
+    ack: list[Ack] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    app_group: List[AppGroup] = field(
+    app_group: list[AppGroup] = field(
         default_factory=list,
         metadata={
             "name": "app-group",
             "type": "Element",
         },
     )
-    bio: List[Bio] = field(
+    bio: list[Bio] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn_group: List[FnGroup] = field(
+    fn_group: list[FnGroup] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: List[Glossary] = field(
+    glossary: list[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List[RefList] = field(
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
             "type": "Element",
         },
     )
-    notes: List[Notes] = field(
+    notes: list[Notes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sec: List[Sec] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -277,7 +277,7 @@ class SomeipTransformationISignalPropsConditional:
 
     @dataclass
     class DataPrototypeTransformationPropss:
-        data_prototype_transformation_props: List[
+        data_prototype_transformation_props: list[
             DataPrototypeTransformationProps
         ] = field(
             default_factory=list,
@@ -301,7 +301,7 @@ class SomeipTransformationISignalPropsConditional:
 
     @dataclass
     class TlvDataIds:
-        tlv_data_id_definition: List[TlvDataIdDefinition] = field(
+        tlv_data_id_definition: list[TlvDataIdDefinition] = field(
             default_factory=list,
             metadata={
                 "name": "TLV-DATA-ID-DEFINITION",
@@ -312,7 +312,7 @@ class SomeipTransformationISignalPropsConditional:
 
     @dataclass
     class TlvDataId0Refs:
-        tlv_data_id_0_ref: List[
+        tlv_data_id_0_ref: list[
             "SomeipTransformationISignalPropsConditional.TlvDataId0Refs.TlvDataId0Ref"
         ] = field(
             default_factory=list,
@@ -336,7 +336,7 @@ class SomeipTransformationISignalPropsConditional:
 
     @dataclass
     class TlvDataIdDefinitionRefs:
-        tlv_data_id_definition_ref: List[
+        tlv_data_id_definition_ref: list[
             "SomeipTransformationISignalPropsConditional.TlvDataIdDefinitionRefs.TlvDataIdDefinitionRef"
         ] = field(
             default_factory=list,

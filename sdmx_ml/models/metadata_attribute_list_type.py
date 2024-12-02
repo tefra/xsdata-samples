@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Tuple
+from typing import Any
 
 from sdmx_ml.models.component_list_type import ComponentListType
 from sdmx_ml.models.metadata_attribute_type import MetadataAttribute
@@ -29,7 +29,7 @@ class MetadataAttributeListType(ComponentListType):
             "type": "Ignore",
         },
     )
-    metadata_attribute: Tuple[MetadataAttribute, ...] = field(
+    metadata_attribute: tuple[MetadataAttribute, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MetadataAttribute",

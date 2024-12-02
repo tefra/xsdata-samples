@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -28,7 +28,7 @@ class CoctMt470000UvPerformer:
     class Meta:
         name = "COCT_MT470000UV.Performer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -44,7 +44,7 @@ class CoctMt470000UvPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -122,7 +122,7 @@ class CoctMt470000UvResponsibleParty:
     class Meta:
         name = "COCT_MT470000UV.ResponsibleParty"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -138,7 +138,7 @@ class CoctMt470000UvResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -217,7 +217,7 @@ class CoctMt470000UvConsent:
     class Meta:
         name = "COCT_MT470000UV.Consent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -233,7 +233,7 @@ class CoctMt470000UvConsent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -279,7 +279,7 @@ class CoctMt470000UvConsent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    responsible_party: List[CoctMt470000UvResponsibleParty] = field(
+    responsible_party: list[CoctMt470000UvResponsibleParty] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -289,7 +289,7 @@ class CoctMt470000UvConsent:
             "nillable": True,
         },
     )
-    performer: List[CoctMt470000UvPerformer] = field(
+    performer: list[CoctMt470000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",

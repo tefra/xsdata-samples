@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     Ad,
@@ -45,7 +45,7 @@ class RepcMt000700Uv01LocatedEntity:
     class Meta:
         name = "REPC_MT000700UV01.LocatedEntity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -61,7 +61,7 @@ class RepcMt000700Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -69,7 +69,7 @@ class RepcMt000700Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[Ad] = field(
+    addr: list[Ad] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -114,7 +114,7 @@ class RepcMt000700Uv01Organization:
     class Meta:
         name = "REPC_MT000700UV01.Organization"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -130,7 +130,7 @@ class RepcMt000700Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -138,28 +138,28 @@ class RepcMt000700Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[OnExplicit] = field(
+    name: list[OnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -197,7 +197,7 @@ class RepcMt000700Uv01Device:
     class Meta:
         name = "REPC_MT000700UV01.Device"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -213,7 +213,7 @@ class RepcMt000700Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -221,7 +221,7 @@ class RepcMt000700Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -243,7 +243,7 @@ class RepcMt000700Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_located_entity: List[RepcMt000700Uv01LocatedEntity] = field(
+    as_located_entity: list[RepcMt000700Uv01LocatedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLocatedEntity",
@@ -283,7 +283,7 @@ class RepcMt000700Uv01MaintainedEntity:
     class Meta:
         name = "REPC_MT000700UV01.MaintainedEntity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -299,7 +299,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -307,7 +307,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -321,14 +321,14 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",

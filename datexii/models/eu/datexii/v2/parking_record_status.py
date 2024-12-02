@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -128,7 +128,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    blurred_availability: List[bool] = field(
+    blurred_availability: list[bool] = field(
         default_factory=list,
         metadata={
             "name": "blurredAvailability",
@@ -136,7 +136,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_fault: List[ParkingFaultEnum] = field(
+    parking_fault: list[ParkingFaultEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingFault",
@@ -144,7 +144,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    winter_equipment_management_type: List[
+    winter_equipment_management_type: list[
         WinterEquipmentManagementTypeEnum
     ] = field(
         default_factory=list,
@@ -154,7 +154,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space_status: List[
+    parking_space_status: list[
         ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus
     ] = field(
         default_factory=list,
@@ -173,7 +173,7 @@ class ParkingRecordStatus:
             "required": True,
         },
     )
-    group_of_parking_spaces_status: List[
+    group_of_parking_spaces_status: list[
         ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus
     ] = field(
         default_factory=list,
@@ -199,7 +199,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_equipment_or_service_facility_status: List[
+    parking_equipment_or_service_facility_status: list[
         ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus
     ] = field(
         default_factory=list,
@@ -209,7 +209,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_usage_scenario_status: List[
+    parking_usage_scenario_status: list[
         ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus
     ] = field(
         default_factory=list,
@@ -219,7 +219,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_access_status: List[ParkingAccessStatus] = field(
+    parking_access_status: list[ParkingAccessStatus] = field(
         default_factory=list,
         metadata={
             "name": "parkingAccessStatus",
@@ -227,7 +227,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_route_status: List[ParkingRouteStatus] = field(
+    parking_route_status: list[ParkingRouteStatus] = field(
         default_factory=list,
         metadata={
             "name": "parkingRouteStatus",

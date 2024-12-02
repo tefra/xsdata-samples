@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 
 class LangValue(Enum):
@@ -68,7 +68,7 @@ class ApisImplemented:
         name = "apis-implemented"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
-    other_element: List[object] = field(
+    other_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -311,14 +311,14 @@ class Hei:
         name = "hei"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
-    other_id: List[OtherHeiId] = field(
+    other_id: list[OtherHeiId] = field(
         default_factory=list,
         metadata={
             "name": "other-id",
             "type": "Element",
         },
     )
-    name: List[StringWithOptionalLang] = field(
+    name: list[StringWithOptionalLang] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -370,7 +370,7 @@ class ManifestApiEntryBase:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    admin_email: List[AdminEmail] = field(
+    admin_email: list[AdminEmail] = field(
         default_factory=list,
         metadata={
             "name": "admin-email",
@@ -440,7 +440,7 @@ class ErrorResponse:
             "required": True,
         },
     )
-    user_message: List[MultilineStringWithOptionalLang] = field(
+    user_message: list[MultilineStringWithOptionalLang] = field(
         default_factory=list,
         metadata={
             "name": "user-message",
@@ -554,7 +554,7 @@ class Host:
         name = "host"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
 
-    admin_email: List[AdminEmail] = field(
+    admin_email: list[AdminEmail] = field(
         default_factory=list,
         metadata={
             "name": "admin-email",
@@ -602,7 +602,7 @@ class Host:
 
     @dataclass
     class InstitutionsCovered:
-        hei: List[Hei] = field(
+        hei: list[Hei] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
@@ -627,14 +627,14 @@ class Host:
             related to this key from your manifest.
         """
 
-        certificate: List[bytes] = field(
+        certificate: list[bytes] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
                 "format": "base64",
             },
         )
-        rsa_public_key: List[bytes] = field(
+        rsa_public_key: list[bytes] = field(
             default_factory=list,
             metadata={
                 "name": "rsa-public-key",
@@ -654,7 +654,7 @@ class Host:
             related to this key from your manifest.
         """
 
-        rsa_public_key: List[bytes] = field(
+        rsa_public_key: list[bytes] = field(
             default_factory=list,
             metadata={
                 "name": "rsa-public-key",
@@ -692,7 +692,7 @@ class Catalogue:
         name = "catalogue"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
-    host: List["Catalogue.Host"] = field(
+    host: list["Catalogue.Host"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -753,7 +753,7 @@ class Catalogue:
             name, but a different namespace and contents).
         """
 
-        admin_email: List[AdminEmail] = field(
+        admin_email: list[AdminEmail] = field(
             default_factory=list,
             metadata={
                 "name": "admin-email",
@@ -813,7 +813,7 @@ class Catalogue:
                 below).
             """
 
-            hei_id: List[str] = field(
+            hei_id: list[str] = field(
                 default_factory=list,
                 metadata={
                     "name": "hei-id",
@@ -850,7 +850,7 @@ class Catalogue:
                 the `binaries` section below.
             """
 
-            certificate: List[
+            certificate: list[
                 "Catalogue.Host.ClientCredentialsInUse.Certificate"
             ] = field(
                 default_factory=list,
@@ -858,7 +858,7 @@ class Catalogue:
                     "type": "Element",
                 },
             )
-            rsa_public_key: List[
+            rsa_public_key: list[
                 "Catalogue.Host.ClientCredentialsInUse.RsaPublicKey"
             ] = field(
                 default_factory=list,
@@ -922,7 +922,7 @@ class Catalogue:
                 it's SHA-256 digest in the `binaries` section below.
             """
 
-            rsa_public_key: List[
+            rsa_public_key: list[
                 "Catalogue.Host.ServerCredentialsInUse.RsaPublicKey"
             ] = field(
                 default_factory=list,
@@ -950,7 +950,7 @@ class Catalogue:
 
     @dataclass
     class Institutions:
-        hei: List[Hei] = field(
+        hei: list[Hei] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
@@ -964,7 +964,7 @@ class Catalogue:
             RSA public key.
         """
 
-        rsa_public_key: List["Catalogue.Binaries.RsaPublicKey"] = field(
+        rsa_public_key: list["Catalogue.Binaries.RsaPublicKey"] = field(
             default_factory=list,
             metadata={
                 "name": "rsa-public-key",
@@ -1019,7 +1019,7 @@ class Manifest:
         name = "manifest"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
 
-    host: List[Host] = field(
+    host: list[Host] = field(
         default_factory=list,
         metadata={
             "type": "Element",

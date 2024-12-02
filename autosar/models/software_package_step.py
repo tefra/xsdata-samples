@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -226,7 +226,7 @@ class SoftwarePackageStep:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -237,7 +237,7 @@ class SoftwarePackageStep:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -248,7 +248,7 @@ class SoftwarePackageStep:
 
     @dataclass
     class PreActivateRefs:
-        pre_activate_ref: List[
+        pre_activate_ref: list[
             "SoftwarePackageStep.PreActivateRefs.PreActivateRef"
         ] = field(
             default_factory=list,
@@ -283,7 +283,7 @@ class SoftwarePackageStep:
 
     @dataclass
     class Transfers:
-        software_package_storing: List[SoftwarePackageStoring] = field(
+        software_package_storing: list[SoftwarePackageStoring] = field(
             default_factory=list,
             metadata={
                 "name": "SOFTWARE-PACKAGE-STORING",
@@ -294,7 +294,7 @@ class SoftwarePackageStep:
 
     @dataclass
     class VerifyRefs:
-        verify_ref: List["SoftwarePackageStep.VerifyRefs.VerifyRef"] = field(
+        verify_ref: list["SoftwarePackageStep.VerifyRefs.VerifyRef"] = field(
             default_factory=list,
             metadata={
                 "name": "VERIFY-REF",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -401,7 +401,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -412,7 +412,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -423,7 +423,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class CapabilityRecords:
-        tag_with_optional_value: List[TagWithOptionalValue] = field(
+        tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
             metadata={
                 "name": "TAG-WITH-OPTIONAL-VALUE",
@@ -434,7 +434,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class MethodActivationRoutingGroups:
-        pdu_activation_routing_group: List[PduActivationRoutingGroup] = field(
+        pdu_activation_routing_group: list[PduActivationRoutingGroup] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-ACTIVATION-ROUTING-GROUP",
@@ -445,7 +445,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class RoutingGroupRefs:
-        routing_group_ref: List[
+        routing_group_ref: list[
             "ConsumedServiceInstance.RoutingGroupRefs.RoutingGroupRef"
         ] = field(
             default_factory=list,
@@ -469,7 +469,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class BlacklistedVersions:
-        someip_service_version: List[SomeipServiceVersion] = field(
+        someip_service_version: list[SomeipServiceVersion] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-SERVICE-VERSION",
@@ -480,7 +480,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class ConsumedEventGroups:
-        consumed_event_group: List[ConsumedEventGroup] = field(
+        consumed_event_group: list[ConsumedEventGroup] = field(
             default_factory=list,
             metadata={
                 "name": "CONSUMED-EVENT-GROUP",
@@ -491,7 +491,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class LocalUnicastAddresss:
-        application_endpoint_ref_conditional: List[
+        application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
         ] = field(
             default_factory=list,
@@ -515,7 +515,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class RemoteUnicastAddresss:
-        application_endpoint_ref_conditional: List[
+        application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
         ] = field(
             default_factory=list,
@@ -528,7 +528,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class SdClientTimerConfigs:
-        someip_sd_client_service_instance_config_ref_conditional: List[
+        someip_sd_client_service_instance_config_ref_conditional: list[
             SomeipSdClientServiceInstanceConfigRefConditional
         ] = field(
             default_factory=list,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -93,7 +93,7 @@ class SeparateSignalPath:
 
     @dataclass
     class Operations:
-        swc_to_swc_operation_arguments: List[SwcToSwcOperationArguments] = (
+        swc_to_swc_operation_arguments: list[SwcToSwcOperationArguments] = (
             field(
                 default_factory=list,
                 metadata={
@@ -106,7 +106,7 @@ class SeparateSignalPath:
 
     @dataclass
     class Signals:
-        swc_to_swc_signal: List[SwcToSwcSignal] = field(
+        swc_to_swc_signal: list[SwcToSwcSignal] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-TO-SWC-SIGNAL",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -165,7 +165,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class ContextSwcPrototypeRefs:
-        context_swc_prototype_ref: List[
+        context_swc_prototype_ref: list[
             "ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs.ContextSwcPrototypeRef"
         ] = field(
             default_factory=list,
@@ -211,7 +211,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class ContextImplementationDataElementRefs:
-        context_implementation_data_element_ref: List[
+        context_implementation_data_element_ref: list[
             "ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef"
         ] = field(
             default_factory=list,

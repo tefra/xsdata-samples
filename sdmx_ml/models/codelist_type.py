@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.codelist_base_type import CodelistBaseType
 from sdmx_ml.models.codelist_extension_type import CodelistExtensionType
@@ -20,7 +19,7 @@ class CodelistType(CodelistBaseType):
         in case conflicting codes must be included.
     """
 
-    codelist_extension: Tuple[CodelistExtensionType, ...] = field(
+    codelist_extension: tuple[CodelistExtensionType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CodelistExtension",

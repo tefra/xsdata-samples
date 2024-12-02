@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -182,7 +182,7 @@ class TimeSyncModuleInstantiation:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -193,7 +193,7 @@ class TimeSyncModuleInstantiation:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -204,7 +204,7 @@ class TimeSyncModuleInstantiation:
 
     @dataclass
     class TimeBases:
-        synchronized_time_base_consumer: List[SynchronizedTimeBaseConsumer] = (
+        synchronized_time_base_consumer: list[SynchronizedTimeBaseConsumer] = (
             field(
                 default_factory=list,
                 metadata={
@@ -214,7 +214,7 @@ class TimeSyncModuleInstantiation:
                 },
             )
         )
-        synchronized_time_base_provider: List[SynchronizedTimeBaseProvider] = (
+        synchronized_time_base_provider: list[SynchronizedTimeBaseProvider] = (
             field(
                 default_factory=list,
                 metadata={

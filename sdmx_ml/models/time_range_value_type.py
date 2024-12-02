@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -17,7 +17,7 @@ class TimeRangeValueType:
     inclusion in regards to the range.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             "TimeRangeValueType.BeforePeriod",
             "TimeRangeValueType.AfterPeriod",

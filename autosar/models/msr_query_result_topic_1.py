@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .topic_1 import Topic1
 
@@ -29,7 +29,7 @@ class MsrQueryResultTopic1:
     class Meta:
         name = "MSR-QUERY-RESULT-TOPIC-1"
 
-    topic_1: List[Topic1] = field(
+    topic_1: list[Topic1] = field(
         default_factory=list,
         metadata={
             "name": "TOPIC-1",

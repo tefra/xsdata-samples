@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ...hl7_v3.ne2008.multi_cache.prpa_in201306_uv02 import PrpaIn201306Uv02
 from ..common.nhinc_common import NhinTargetCommunityType
@@ -37,7 +37,7 @@ class RespondingGatewayPrpaIn201306Uv02ResponseType:
     class Meta:
         name = "RespondingGateway_PRPA_IN201306UV02ResponseType"
 
-    community_response: List[CommunityPrpaIn201306Uv02ResponseType] = field(
+    community_response: list[CommunityPrpaIn201306Uv02ResponseType] = field(
         default_factory=list,
         metadata={
             "name": "communityResponse",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     Cd,
@@ -61,7 +61,7 @@ class MfmiMt700711Uv01ActDefinition:
     class Meta:
         name = "MFMI_MT700711UV01.ActDefinition"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -77,7 +77,7 @@ class MfmiMt700711Uv01ActDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -85,7 +85,7 @@ class MfmiMt700711Uv01ActDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -139,7 +139,7 @@ class MfmiMt700711Uv01Author1:
     class Meta:
         name = "MFMI_MT700711UV01.Author1"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -155,7 +155,7 @@ class MfmiMt700711Uv01Author1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -202,7 +202,7 @@ class MfmiMt700711Uv01Author2:
     class Meta:
         name = "MFMI_MT700711UV01.Author2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -218,7 +218,7 @@ class MfmiMt700711Uv01Author2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -288,7 +288,7 @@ class MfmiMt700711Uv01AuthorOrPerformer:
     class Meta:
         name = "MFMI_MT700711UV01.AuthorOrPerformer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -304,7 +304,7 @@ class MfmiMt700711Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -398,7 +398,7 @@ class MfmiMt700711Uv01Custodian:
     class Meta:
         name = "MFMI_MT700711UV01.Custodian"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -414,7 +414,7 @@ class MfmiMt700711Uv01Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -461,7 +461,7 @@ class MfmiMt700711Uv01DataEnterer:
     class Meta:
         name = "MFMI_MT700711UV01.DataEnterer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -477,7 +477,7 @@ class MfmiMt700711Uv01DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -539,7 +539,7 @@ class MfmiMt700711Uv01InformationRecipient:
     class Meta:
         name = "MFMI_MT700711UV01.InformationRecipient"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -555,7 +555,7 @@ class MfmiMt700711Uv01InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -608,7 +608,7 @@ class MfmiMt700711Uv01Overseer:
     class Meta:
         name = "MFMI_MT700711UV01.Overseer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -624,7 +624,7 @@ class MfmiMt700711Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -709,7 +709,7 @@ class MfmiMt700711Uv01PriorRegisteredAct:
     class Meta:
         name = "MFMI_MT700711UV01.PriorRegisteredAct"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -725,7 +725,7 @@ class MfmiMt700711Uv01PriorRegisteredAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -733,7 +733,7 @@ class MfmiMt700711Uv01PriorRegisteredAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -771,7 +771,7 @@ class MfmiMt700711Uv01PriorRegisteredRole:
     class Meta:
         name = "MFMI_MT700711UV01.PriorRegisteredRole"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -787,7 +787,7 @@ class MfmiMt700711Uv01PriorRegisteredRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -795,7 +795,7 @@ class MfmiMt700711Uv01PriorRegisteredRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -835,7 +835,7 @@ class MfmiMt700711Uv01QueryAck:
     class Meta:
         name = "MFMI_MT700711UV01.QueryAck"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -851,7 +851,7 @@ class MfmiMt700711Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -922,7 +922,7 @@ class MfmiMt700711Uv01Reason:
     class Meta:
         name = "MFMI_MT700711UV01.Reason"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -938,7 +938,7 @@ class MfmiMt700711Uv01Reason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -985,7 +985,7 @@ class MfmiMt700711Uv01Definition:
     class Meta:
         name = "MFMI_MT700711UV01.Definition"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1001,7 +1001,7 @@ class MfmiMt700711Uv01Definition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1062,7 +1062,7 @@ class MfmiMt700711Uv01RegistrationRequest:
     class Meta:
         name = "MFMI_MT700711UV01.RegistrationRequest"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1078,7 +1078,7 @@ class MfmiMt700711Uv01RegistrationRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1086,14 +1086,14 @@ class MfmiMt700711Uv01RegistrationRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[MfmiMt700711Uv01Author1] = field(
+    author: list[MfmiMt700711Uv01Author1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1133,7 +1133,7 @@ class MfmiMt700711Uv01Subject3:
     class Meta:
         name = "MFMI_MT700711UV01.Subject3"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1149,7 +1149,7 @@ class MfmiMt700711Uv01Subject3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1190,7 +1190,7 @@ class MfmiMt700711Uv01Subject4:
     class Meta:
         name = "MFMI_MT700711UV01.Subject4"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1206,7 +1206,7 @@ class MfmiMt700711Uv01Subject4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1275,7 +1275,7 @@ class MfmiMt700711Uv01InFulfillmentOf:
     class Meta:
         name = "MFMI_MT700711UV01.InFulfillmentOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1291,7 +1291,7 @@ class MfmiMt700711Uv01InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1332,7 +1332,7 @@ class MfmiMt700711Uv01PriorRegistration:
     class Meta:
         name = "MFMI_MT700711UV01.PriorRegistration"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1348,7 +1348,7 @@ class MfmiMt700711Uv01PriorRegistration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1356,7 +1356,7 @@ class MfmiMt700711Uv01PriorRegistration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1419,7 +1419,7 @@ class MfmiMt700711Uv01ReplacementOf:
     class Meta:
         name = "MFMI_MT700711UV01.ReplacementOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1435,7 +1435,7 @@ class MfmiMt700711Uv01ReplacementOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",

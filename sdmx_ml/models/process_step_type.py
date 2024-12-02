@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.computation_type import ComputationType
 from sdmx_ml.models.input_output_type import InputOutputType
@@ -33,7 +33,7 @@ class ProcessStepType(ProcessStepBaseType):
         derive new information according to a given set of rules.
     """
 
-    input: Tuple[InputOutputType, ...] = field(
+    input: tuple[InputOutputType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Input",
@@ -41,7 +41,7 @@ class ProcessStepType(ProcessStepBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    output: Tuple[InputOutputType, ...] = field(
+    output: tuple[InputOutputType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Output",
@@ -57,7 +57,7 @@ class ProcessStepType(ProcessStepBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    transition: Tuple[TransitionType, ...] = field(
+    transition: tuple[TransitionType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Transition",
@@ -65,7 +65,7 @@ class ProcessStepType(ProcessStepBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    process_step: Tuple["ProcessStepType", ...] = field(
+    process_step: tuple["ProcessStepType", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcessStep",

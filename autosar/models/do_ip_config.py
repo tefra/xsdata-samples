@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .do_ip_interface import DoIpInterface
 from .do_ip_logic_address import DoIpLogicAddress
@@ -68,7 +68,7 @@ class DoIpConfig:
 
     @dataclass
     class DoipInterfaces:
-        do_ip_interface: List[DoIpInterface] = field(
+        do_ip_interface: list[DoIpInterface] = field(
             default_factory=list,
             metadata={
                 "name": "DO-IP-INTERFACE",

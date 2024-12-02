@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.parking_status_publication import (
     ParkingStatusPublication,
@@ -43,7 +43,7 @@ class GenericPublicationExtensionType:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    other_element: List[object] = field(
+    other_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

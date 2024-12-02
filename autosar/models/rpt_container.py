@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -282,7 +282,7 @@ class RptContainer:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -293,7 +293,7 @@ class RptContainer:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -304,7 +304,7 @@ class RptContainer:
 
     @dataclass
     class ByPassPointIrefs:
-        by_pass_point_iref: List[AnyInstanceRef] = field(
+        by_pass_point_iref: list[AnyInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "BY-PASS-POINT-IREF",
@@ -315,7 +315,7 @@ class RptContainer:
 
     @dataclass
     class ExplicitRptProfileSelectionRefs:
-        explicit_rpt_profile_selection_ref: List[
+        explicit_rpt_profile_selection_ref: list[
             "RptContainer.ExplicitRptProfileSelectionRefs.ExplicitRptProfileSelectionRef"
         ] = field(
             default_factory=list,
@@ -339,7 +339,7 @@ class RptContainer:
 
     @dataclass
     class RptContainers:
-        rpt_container: List["RptContainer"] = field(
+        rpt_container: list["RptContainer"] = field(
             default_factory=list,
             metadata={
                 "name": "RPT-CONTAINER",
@@ -350,7 +350,7 @@ class RptContainer:
 
     @dataclass
     class RptHooks:
-        rpt_hook: List[RptHook] = field(
+        rpt_hook: list[RptHook] = field(
             default_factory=list,
             metadata={
                 "name": "RPT-HOOK",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.payment_status_response import (
     ConfirmationId,
@@ -658,7 +658,7 @@ class IndicativeRateDetail:
 
 @dataclass(kw_only=True)
 class ListOfFee:
-    fee: List[Fee] = field(
+    fee: list[Fee] = field(
         default_factory=list,
         metadata={
             "name": "Fee",
@@ -870,7 +870,7 @@ class ListOfFxrateResponseDetail:
     class Meta:
         name = "ListOfFXRateResponseDetail"
 
-    fxrate_response_detail: List[FxrateResponseDetail] = field(
+    fxrate_response_detail: list[FxrateResponseDetail] = field(
         default_factory=list,
         metadata={
             "name": "FXRateResponseDetail",

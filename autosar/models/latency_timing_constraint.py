@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -272,7 +272,7 @@ class LatencyTimingConstraint:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -283,7 +283,7 @@ class LatencyTimingConstraint:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -294,7 +294,7 @@ class LatencyTimingConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["LatencyTimingConstraint.TraceRefs.TraceRef"] = field(
+        trace_ref: list["LatencyTimingConstraint.TraceRefs.TraceRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .caption import Caption
@@ -77,7 +77,7 @@ class Table:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tgroup: List[Tgroup] = field(
+    tgroup: list[Tgroup] = field(
         default_factory=list,
         metadata={
             "name": "TGROUP",
@@ -108,7 +108,7 @@ class Table:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",

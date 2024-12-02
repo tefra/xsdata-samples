@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -336,7 +336,7 @@ class SoftwarePackage:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -347,7 +347,7 @@ class SoftwarePackage:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -369,7 +369,7 @@ class SoftwarePackage:
 
     @dataclass
     class PreActivateIrefs:
-        pre_activate_iref: List[
+        pre_activate_iref: list[
             FunctionGroupStateInFunctionGroupSetInstanceRef
         ] = field(
             default_factory=list,
@@ -393,7 +393,7 @@ class SoftwarePackage:
 
     @dataclass
     class VerifyIrefs:
-        verify_iref: List[FunctionGroupStateInFunctionGroupSetInstanceRef] = (
+        verify_iref: list[FunctionGroupStateInFunctionGroupSetInstanceRef] = (
             field(
                 default_factory=list,
                 metadata={

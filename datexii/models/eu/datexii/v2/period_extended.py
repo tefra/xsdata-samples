@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from datexii.models.eu.datexii.v2.special_day import SpecialDay
 
@@ -16,7 +15,7 @@ class PeriodExtended:
         days.
     """
 
-    recurring_special_day: List[SpecialDay] = field(
+    recurring_special_day: list[SpecialDay] = field(
         default_factory=list,
         metadata={
             "name": "recurringSpecialDay",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Tuple, Union
+from typing import ForwardRef, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.identifiable_object_event_type import (
@@ -50,7 +50,7 @@ class StructuralRepositoryEventsType:
         referenced in a uniqueness constraint.
     """
 
-    agency_id: Tuple[Union[str, WildCardValueType], ...] = field(
+    agency_id: tuple[Union[str, WildCardValueType], ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AgencyID",
@@ -60,7 +60,7 @@ class StructuralRepositoryEventsType:
             "pattern": r"[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*",
         },
     )
-    choice: Tuple[
+    choice: tuple[
         Union[
             EmptyType,
             "StructuralRepositoryEventsType.AgencyScheme",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -232,7 +232,7 @@ class LinTpConfig:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -243,7 +243,7 @@ class LinTpConfig:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -265,7 +265,7 @@ class LinTpConfig:
 
     @dataclass
     class TpAddresss:
-        tp_address: List[TpAddress] = field(
+        tp_address: list[TpAddress] = field(
             default_factory=list,
             metadata={
                 "name": "TP-ADDRESS",
@@ -276,7 +276,7 @@ class LinTpConfig:
 
     @dataclass
     class TpConnections:
-        lin_tp_connection: List[LinTpConnection] = field(
+        lin_tp_connection: list[LinTpConnection] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-TP-CONNECTION",
@@ -287,7 +287,7 @@ class LinTpConfig:
 
     @dataclass
     class TpNodes:
-        lin_tp_node: List[LinTpNode] = field(
+        lin_tp_node: list[LinTpNode] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-TP-NODE",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.member_value_type import MemberValueType
 
@@ -20,7 +19,7 @@ class CodeSelectionType:
         can indicate whether child codes are to be included.
     """
 
-    member_value: Tuple[MemberValueType, ...] = field(
+    member_value: tuple[MemberValueType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MemberValue",

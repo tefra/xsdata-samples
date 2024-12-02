@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .acl_object_set import AclObjectSet
 from .acl_operation import AclOperation
@@ -978,7 +978,7 @@ class ArPackage:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -989,7 +989,7 @@ class ArPackage:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -1000,7 +1000,7 @@ class ArPackage:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -1008,7 +1008,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1018,7 +1018,7 @@ class ArPackage:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -1029,7 +1029,7 @@ class ArPackage:
 
     @dataclass
     class ReferenceBases:
-        reference_base: List[ReferenceBase] = field(
+        reference_base: list[ReferenceBase] = field(
             default_factory=list,
             metadata={
                 "name": "REFERENCE-BASE",
@@ -1040,7 +1040,7 @@ class ArPackage:
 
     @dataclass
     class Elements:
-        acl_object_set: List[AclObjectSet] = field(
+        acl_object_set: list[AclObjectSet] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-OBJECT-SET",
@@ -1048,7 +1048,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        acl_operation: List[AclOperation] = field(
+        acl_operation: list[AclOperation] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-OPERATION",
@@ -1056,7 +1056,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        acl_permission: List[AclPermission] = field(
+        acl_permission: list[AclPermission] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-PERMISSION",
@@ -1064,7 +1064,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        acl_role: List[AclRole] = field(
+        acl_role: list[AclRole] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-ROLE",
@@ -1072,7 +1072,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        adaptive_application_sw_component_type: List[
+        adaptive_application_sw_component_type: list[
             AdaptiveApplicationSwComponentType
         ] = field(
             default_factory=list,
@@ -1082,7 +1082,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        alias_name_set: List[AliasNameSet] = field(
+        alias_name_set: list[AliasNameSet] = field(
             default_factory=list,
             metadata={
                 "name": "ALIAS-NAME-SET",
@@ -1090,7 +1090,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        allocator: List[Allocator] = field(
+        allocator: list[Allocator] = field(
             default_factory=list,
             metadata={
                 "name": "ALLOCATOR",
@@ -1098,7 +1098,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ap_application_error: List[ApApplicationError] = field(
+        ap_application_error: list[ApApplicationError] = field(
             default_factory=list,
             metadata={
                 "name": "AP-APPLICATION-ERROR",
@@ -1106,7 +1106,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ap_application_error_domain: List[ApApplicationErrorDomain] = field(
+        ap_application_error_domain: list[ApApplicationErrorDomain] = field(
             default_factory=list,
             metadata={
                 "name": "AP-APPLICATION-ERROR-DOMAIN",
@@ -1114,7 +1114,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ap_application_error_set: List[ApApplicationErrorSet] = field(
+        ap_application_error_set: list[ApApplicationErrorSet] = field(
             default_factory=list,
             metadata={
                 "name": "AP-APPLICATION-ERROR-SET",
@@ -1122,7 +1122,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_array_data_type: List[ApplicationArrayDataType] = field(
+        application_array_data_type: list[ApplicationArrayDataType] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-ARRAY-DATA-TYPE",
@@ -1130,7 +1130,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_assoc_map_data_type: List[ApplicationAssocMapDataType] = (
+        application_assoc_map_data_type: list[ApplicationAssocMapDataType] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1140,7 +1140,7 @@ class ArPackage:
                 },
             )
         )
-        application_deferred_data_type: List[ApplicationDeferredDataType] = (
+        application_deferred_data_type: list[ApplicationDeferredDataType] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1150,7 +1150,7 @@ class ArPackage:
                 },
             )
         )
-        application_partition: List[ApplicationPartition] = field(
+        application_partition: list[ApplicationPartition] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-PARTITION",
@@ -1158,7 +1158,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_primitive_data_type: List[ApplicationPrimitiveDataType] = (
+        application_primitive_data_type: list[ApplicationPrimitiveDataType] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1168,7 +1168,7 @@ class ArPackage:
                 },
             )
         )
-        application_record_data_type: List[ApplicationRecordDataType] = field(
+        application_record_data_type: list[ApplicationRecordDataType] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-RECORD-DATA-TYPE",
@@ -1176,7 +1176,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_sw_component_type: List[ApplicationSwComponentType] = (
+        application_sw_component_type: list[ApplicationSwComponentType] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1186,7 +1186,7 @@ class ArPackage:
                 },
             )
         )
-        blueprint_mapping_set: List[BlueprintMappingSet] = field(
+        blueprint_mapping_set: list[BlueprintMappingSet] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-MAPPING-SET",
@@ -1194,7 +1194,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_composition_timing: List[BswCompositionTiming] = field(
+        bsw_composition_timing: list[BswCompositionTiming] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-COMPOSITION-TIMING",
@@ -1202,7 +1202,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_entry_relationship_set: List[BswEntryRelationshipSet] = field(
+        bsw_entry_relationship_set: list[BswEntryRelationshipSet] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-ENTRY-RELATIONSHIP-SET",
@@ -1210,7 +1210,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_implementation: List[BswImplementation] = field(
+        bsw_implementation: list[BswImplementation] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-IMPLEMENTATION",
@@ -1218,7 +1218,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_module_description: List[BswModuleDescription] = field(
+        bsw_module_description: list[BswModuleDescription] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODULE-DESCRIPTION",
@@ -1226,7 +1226,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_module_entry: List[BswModuleEntry] = field(
+        bsw_module_entry: list[BswModuleEntry] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODULE-ENTRY",
@@ -1234,7 +1234,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_module_timing: List[BswModuleTiming] = field(
+        bsw_module_timing: list[BswModuleTiming] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODULE-TIMING",
@@ -1242,7 +1242,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        build_action_manifest: List[BuildActionManifest] = field(
+        build_action_manifest: list[BuildActionManifest] = field(
             default_factory=list,
             metadata={
                 "name": "BUILD-ACTION-MANIFEST",
@@ -1250,7 +1250,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bus_mirror_channel_mapping_can: List[BusMirrorChannelMappingCan] = (
+        bus_mirror_channel_mapping_can: list[BusMirrorChannelMappingCan] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1260,7 +1260,7 @@ class ArPackage:
                 },
             )
         )
-        bus_mirror_channel_mapping_flexray: List[
+        bus_mirror_channel_mapping_flexray: list[
             BusMirrorChannelMappingFlexray
         ] = field(
             default_factory=list,
@@ -1270,7 +1270,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bus_mirror_channel_mapping_ip: List[BusMirrorChannelMappingIp] = field(
+        bus_mirror_channel_mapping_ip: list[BusMirrorChannelMappingIp] = field(
             default_factory=list,
             metadata={
                 "name": "BUS-MIRROR-CHANNEL-MAPPING-IP",
@@ -1278,7 +1278,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bus_mirror_channel_mapping_user_defined: List[
+        bus_mirror_channel_mapping_user_defined: list[
             BusMirrorChannelMappingUserDefined
         ] = field(
             default_factory=list,
@@ -1288,7 +1288,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        calibration_parameter_value_set: List[CalibrationParameterValueSet] = (
+        calibration_parameter_value_set: list[CalibrationParameterValueSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1298,7 +1298,7 @@ class ArPackage:
                 },
             )
         )
-        can_cluster: List[CanCluster] = field(
+        can_cluster: list[CanCluster] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-CLUSTER",
@@ -1306,7 +1306,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        can_frame: List[CanFrame] = field(
+        can_frame: list[CanFrame] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-FRAME",
@@ -1314,7 +1314,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        can_tp_config: List[CanTpConfig] = field(
+        can_tp_config: list[CanTpConfig] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-TP-CONFIG",
@@ -1322,7 +1322,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        client_id_definition_set: List[ClientIdDefinitionSet] = field(
+        client_id_definition_set: list[ClientIdDefinitionSet] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-ID-DEFINITION-SET",
@@ -1330,7 +1330,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        client_server_interface: List[ClientServerInterface] = field(
+        client_server_interface: list[ClientServerInterface] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-INTERFACE",
@@ -1338,7 +1338,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        client_server_interface_to_bsw_module_entry_blueprint_mapping: List[
+        client_server_interface_to_bsw_module_entry_blueprint_mapping: list[
             ClientServerInterfaceToBswModuleEntryBlueprintMapping
         ] = field(
             default_factory=list,
@@ -1348,7 +1348,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        collection: List[Collection] = field(
+        collection: list[Collection] = field(
             default_factory=list,
             metadata={
                 "name": "COLLECTION",
@@ -1356,7 +1356,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_certificate_to_crypto_certificate_mapping: List[
+        com_certificate_to_crypto_certificate_mapping: list[
             ComCertificateToCryptoCertificateMapping
         ] = field(
             default_factory=list,
@@ -1366,7 +1366,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_event_grant: List[ComEventGrant] = field(
+        com_event_grant: list[ComEventGrant] = field(
             default_factory=list,
             metadata={
                 "name": "COM-EVENT-GRANT",
@@ -1374,7 +1374,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_event_grant_design: List[ComEventGrantDesign] = field(
+        com_event_grant_design: list[ComEventGrantDesign] = field(
             default_factory=list,
             metadata={
                 "name": "COM-EVENT-GRANT-DESIGN",
@@ -1382,7 +1382,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_field_grant: List[ComFieldGrant] = field(
+        com_field_grant: list[ComFieldGrant] = field(
             default_factory=list,
             metadata={
                 "name": "COM-FIELD-GRANT",
@@ -1390,7 +1390,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_field_grant_design: List[ComFieldGrantDesign] = field(
+        com_field_grant_design: list[ComFieldGrantDesign] = field(
             default_factory=list,
             metadata={
                 "name": "COM-FIELD-GRANT-DESIGN",
@@ -1398,7 +1398,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_find_service_grant: List[ComFindServiceGrant] = field(
+        com_find_service_grant: list[ComFindServiceGrant] = field(
             default_factory=list,
             metadata={
                 "name": "COM-FIND-SERVICE-GRANT",
@@ -1406,7 +1406,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_find_service_grant_design: List[ComFindServiceGrantDesign] = field(
+        com_find_service_grant_design: list[ComFindServiceGrantDesign] = field(
             default_factory=list,
             metadata={
                 "name": "COM-FIND-SERVICE-GRANT-DESIGN",
@@ -1414,7 +1414,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_key_to_crypto_key_slot_mapping: List[
+        com_key_to_crypto_key_slot_mapping: list[
             ComKeyToCryptoKeySlotMapping
         ] = field(
             default_factory=list,
@@ -1424,7 +1424,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_method_grant: List[ComMethodGrant] = field(
+        com_method_grant: list[ComMethodGrant] = field(
             default_factory=list,
             metadata={
                 "name": "COM-METHOD-GRANT",
@@ -1432,7 +1432,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_method_grant_design: List[ComMethodGrantDesign] = field(
+        com_method_grant_design: list[ComMethodGrantDesign] = field(
             default_factory=list,
             metadata={
                 "name": "COM-METHOD-GRANT-DESIGN",
@@ -1440,7 +1440,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_offer_service_grant: List[ComOfferServiceGrant] = field(
+        com_offer_service_grant: list[ComOfferServiceGrant] = field(
             default_factory=list,
             metadata={
                 "name": "COM-OFFER-SERVICE-GRANT",
@@ -1448,7 +1448,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_offer_service_grant_design: List[ComOfferServiceGrantDesign] = (
+        com_offer_service_grant_design: list[ComOfferServiceGrantDesign] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1458,7 +1458,7 @@ class ArPackage:
                 },
             )
         )
-        com_sec_oc_to_crypto_key_slot_mapping: List[
+        com_sec_oc_to_crypto_key_slot_mapping: list[
             ComSecOcToCryptoKeySlotMapping
         ] = field(
             default_factory=list,
@@ -1468,7 +1468,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        complex_device_driver_sw_component_type: List[
+        complex_device_driver_sw_component_type: list[
             ComplexDeviceDriverSwComponentType
         ] = field(
             default_factory=list,
@@ -1478,7 +1478,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_interface: List[CompositeInterface] = field(
+        composite_interface: list[CompositeInterface] = field(
             default_factory=list,
             metadata={
                 "name": "COMPOSITE-INTERFACE",
@@ -1486,7 +1486,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composition_p_port_to_executable_p_port_mapping: List[
+        composition_p_port_to_executable_p_port_mapping: list[
             CompositionPPortToExecutablePPortMapping
         ] = field(
             default_factory=list,
@@ -1496,7 +1496,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composition_r_port_to_executable_r_port_mapping: List[
+        composition_r_port_to_executable_r_port_mapping: list[
             CompositionRPortToExecutableRPortMapping
         ] = field(
             default_factory=list,
@@ -1506,7 +1506,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composition_sw_component_type: List[CompositionSwComponentType] = (
+        composition_sw_component_type: list[CompositionSwComponentType] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1516,7 +1516,7 @@ class ArPackage:
                 },
             )
         )
-        compu_method: List[CompuMethod] = field(
+        compu_method: list[CompuMethod] = field(
             default_factory=list,
             metadata={
                 "name": "COMPU-METHOD",
@@ -1524,7 +1524,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        consistency_needs_blueprint_set: List[ConsistencyNeedsBlueprintSet] = (
+        consistency_needs_blueprint_set: list[ConsistencyNeedsBlueprintSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1534,7 +1534,7 @@ class ArPackage:
                 },
             )
         )
-        constant_specification: List[ConstantSpecification] = field(
+        constant_specification: list[ConstantSpecification] = field(
             default_factory=list,
             metadata={
                 "name": "CONSTANT-SPECIFICATION",
@@ -1542,7 +1542,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_specification_mapping_set: List[
+        constant_specification_mapping_set: list[
             ConstantSpecificationMappingSet
         ] = field(
             default_factory=list,
@@ -1552,7 +1552,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        consumed_provided_service_instance_group: List[
+        consumed_provided_service_instance_group: list[
             ConsumedProvidedServiceInstanceGroup
         ] = field(
             default_factory=list,
@@ -1562,7 +1562,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        container_i_pdu: List[ContainerIPdu] = field(
+        container_i_pdu: list[ContainerIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "CONTAINER-I-PDU",
@@ -1570,7 +1570,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        coupling_element: List[CouplingElement] = field(
+        coupling_element: list[CouplingElement] = field(
             default_factory=list,
             metadata={
                 "name": "COUPLING-ELEMENT",
@@ -1578,7 +1578,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        cp_software_cluster: List[CpSoftwareCluster] = field(
+        cp_software_cluster: list[CpSoftwareCluster] = field(
             default_factory=list,
             metadata={
                 "name": "CP-SOFTWARE-CLUSTER",
@@ -1586,7 +1586,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        cp_software_cluster_binary_manifest_descriptor: List[
+        cp_software_cluster_binary_manifest_descriptor: list[
             CpSoftwareClusterBinaryManifestDescriptor
         ] = field(
             default_factory=list,
@@ -1596,7 +1596,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        cp_software_cluster_mapping_set: List[CpSoftwareClusterMappingSet] = (
+        cp_software_cluster_mapping_set: list[CpSoftwareClusterMappingSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1606,7 +1606,7 @@ class ArPackage:
                 },
             )
         )
-        cp_software_cluster_resource_pool: List[
+        cp_software_cluster_resource_pool: list[
             CpSoftwareClusterResourcePool
         ] = field(
             default_factory=list,
@@ -1616,7 +1616,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_certificate_interface: List[CryptoCertificateInterface] = field(
+        crypto_certificate_interface: list[CryptoCertificateInterface] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-CERTIFICATE-INTERFACE",
@@ -1624,7 +1624,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_certificate_to_port_prototype_mapping: List[
+        crypto_certificate_to_port_prototype_mapping: list[
             CryptoCertificateToPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -1634,7 +1634,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_key_slot_interface: List[CryptoKeySlotInterface] = field(
+        crypto_key_slot_interface: list[CryptoKeySlotInterface] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-KEY-SLOT-INTERFACE",
@@ -1642,7 +1642,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_key_slot_to_port_prototype_mapping: List[
+        crypto_key_slot_to_port_prototype_mapping: list[
             CryptoKeySlotToPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -1652,7 +1652,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_need_to_port_prototype_mapping: List[
+        crypto_need_to_port_prototype_mapping: list[
             CryptoNeedToPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -1662,7 +1662,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_provider_interface: List[CryptoProviderInterface] = field(
+        crypto_provider_interface: list[CryptoProviderInterface] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-PROVIDER-INTERFACE",
@@ -1670,7 +1670,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_provider_to_port_prototype_mapping: List[
+        crypto_provider_to_port_prototype_mapping: list[
             CryptoProviderToPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -1680,7 +1680,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_service_certificate: List[CryptoServiceCertificate] = field(
+        crypto_service_certificate: list[CryptoServiceCertificate] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-SERVICE-CERTIFICATE",
@@ -1688,7 +1688,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_service_key: List[CryptoServiceKey] = field(
+        crypto_service_key: list[CryptoServiceKey] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-SERVICE-KEY",
@@ -1696,7 +1696,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_service_primitive: List[CryptoServicePrimitive] = field(
+        crypto_service_primitive: list[CryptoServicePrimitive] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-SERVICE-PRIMITIVE",
@@ -1704,7 +1704,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_service_queue: List[CryptoServiceQueue] = field(
+        crypto_service_queue: list[CryptoServiceQueue] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-SERVICE-QUEUE",
@@ -1712,7 +1712,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_trust_master_interface: List[CryptoTrustMasterInterface] = (
+        crypto_trust_master_interface: list[CryptoTrustMasterInterface] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1722,7 +1722,7 @@ class ArPackage:
                 },
             )
         )
-        custom_cpp_implementation_data_type: List[
+        custom_cpp_implementation_data_type: list[
             CustomCppImplementationDataType
         ] = field(
             default_factory=list,
@@ -1732,7 +1732,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_constr: List[DataConstr] = field(
+        data_constr: list[DataConstr] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-CONSTR",
@@ -1740,7 +1740,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_exchange_point: List[DataExchangePoint] = field(
+        data_exchange_point: list[DataExchangePoint] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-EXCHANGE-POINT",
@@ -1748,7 +1748,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_transformation_set: List[DataTransformationSet] = field(
+        data_transformation_set: list[DataTransformationSet] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-TRANSFORMATION-SET",
@@ -1756,7 +1756,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_type_mapping_set: List[DataTypeMappingSet] = field(
+        data_type_mapping_set: list[DataTypeMappingSet] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-TYPE-MAPPING-SET",
@@ -1764,7 +1764,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dcm_i_pdu: List[DcmIPdu] = field(
+        dcm_i_pdu: list[DcmIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "DCM-I-PDU",
@@ -1772,7 +1772,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dds_provided_service_instance: List[DdsProvidedServiceInstance] = (
+        dds_provided_service_instance: list[DdsProvidedServiceInstance] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1782,7 +1782,7 @@ class ArPackage:
                 },
             )
         )
-        dds_required_service_instance: List[DdsRequiredServiceInstance] = (
+        dds_required_service_instance: list[DdsRequiredServiceInstance] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1792,7 +1792,7 @@ class ArPackage:
                 },
             )
         )
-        dds_service_instance_to_machine_mapping: List[
+        dds_service_instance_to_machine_mapping: list[
             DdsServiceInstanceToMachineMapping
         ] = field(
             default_factory=list,
@@ -1802,7 +1802,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dds_service_interface_deployment: List[
+        dds_service_interface_deployment: list[
             DdsServiceInterfaceDeployment
         ] = field(
             default_factory=list,
@@ -1812,7 +1812,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        deterministic_client: List[DeterministicClient] = field(
+        deterministic_client: list[DeterministicClient] = field(
             default_factory=list,
             metadata={
                 "name": "DETERMINISTIC-CLIENT",
@@ -1820,7 +1820,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_access_permission: List[DiagnosticAccessPermission] = field(
+        diagnostic_access_permission: list[DiagnosticAccessPermission] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ACCESS-PERMISSION",
@@ -1828,7 +1828,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_aging: List[DiagnosticAging] = field(
+        diagnostic_aging: list[DiagnosticAging] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-AGING",
@@ -1836,7 +1836,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_clear_condition: List[DiagnosticClearCondition] = field(
+        diagnostic_clear_condition: list[DiagnosticClearCondition] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-CLEAR-CONDITION",
@@ -1844,7 +1844,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_clear_condition_group: List[
+        diagnostic_clear_condition_group: list[
             DiagnosticClearConditionGroup
         ] = field(
             default_factory=list,
@@ -1854,7 +1854,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_clear_condition_port_mapping: List[
+        diagnostic_clear_condition_port_mapping: list[
             DiagnosticClearConditionPortMapping
         ] = field(
             default_factory=list,
@@ -1864,7 +1864,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_clear_diagnostic_information: List[
+        diagnostic_clear_diagnostic_information: list[
             DiagnosticClearDiagnosticInformation
         ] = field(
             default_factory=list,
@@ -1874,7 +1874,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_clear_diagnostic_information_class: List[
+        diagnostic_clear_diagnostic_information_class: list[
             DiagnosticClearDiagnosticInformationClass
         ] = field(
             default_factory=list,
@@ -1884,7 +1884,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_clear_reset_emission_related_info: List[
+        diagnostic_clear_reset_emission_related_info: list[
             DiagnosticClearResetEmissionRelatedInfo
         ] = field(
             default_factory=list,
@@ -1894,7 +1894,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_clear_reset_emission_related_info_class: List[
+        diagnostic_clear_reset_emission_related_info_class: list[
             DiagnosticClearResetEmissionRelatedInfoClass
         ] = field(
             default_factory=list,
@@ -1904,7 +1904,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_com_control: List[DiagnosticComControl] = field(
+        diagnostic_com_control: list[DiagnosticComControl] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-COM-CONTROL",
@@ -1912,7 +1912,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_com_control_class: List[DiagnosticComControlClass] = field(
+        diagnostic_com_control_class: list[DiagnosticComControlClass] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-COM-CONTROL-CLASS",
@@ -1920,7 +1920,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_condition_interface: List[DiagnosticConditionInterface] = (
+        diagnostic_condition_interface: list[DiagnosticConditionInterface] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1930,7 +1930,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_connection: List[DiagnosticConnection] = field(
+        diagnostic_connection: list[DiagnosticConnection] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-CONNECTION",
@@ -1938,7 +1938,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_contribution_set: List[DiagnosticContributionSet] = field(
+        diagnostic_contribution_set: list[DiagnosticContributionSet] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-CONTRIBUTION-SET",
@@ -1946,7 +1946,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_control_dtc_setting: List[DiagnosticControlDtcSetting] = (
+        diagnostic_control_dtc_setting: list[DiagnosticControlDtcSetting] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1956,7 +1956,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_control_dtc_setting_class: List[
+        diagnostic_control_dtc_setting_class: list[
             DiagnosticControlDtcSettingClass
         ] = field(
             default_factory=list,
@@ -1966,7 +1966,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_custom_service_class: List[DiagnosticCustomServiceClass] = (
+        diagnostic_custom_service_class: list[DiagnosticCustomServiceClass] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1976,7 +1976,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_custom_service_instance: List[
+        diagnostic_custom_service_instance: list[
             DiagnosticCustomServiceInstance
         ] = field(
             default_factory=list,
@@ -1986,7 +1986,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_data_element_interface: List[
+        diagnostic_data_element_interface: list[
             DiagnosticDataElementInterface
         ] = field(
             default_factory=list,
@@ -1996,7 +1996,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_data_identifier: List[DiagnosticDataIdentifier] = field(
+        diagnostic_data_identifier: list[DiagnosticDataIdentifier] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-DATA-IDENTIFIER",
@@ -2004,7 +2004,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_data_identifier_generic_interface: List[
+        diagnostic_data_identifier_generic_interface: list[
             DiagnosticDataIdentifierGenericInterface
         ] = field(
             default_factory=list,
@@ -2014,7 +2014,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_data_identifier_interface: List[
+        diagnostic_data_identifier_interface: list[
             DiagnosticDataIdentifierInterface
         ] = field(
             default_factory=list,
@@ -2024,7 +2024,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_data_identifier_set: List[DiagnosticDataIdentifierSet] = (
+        diagnostic_data_identifier_set: list[DiagnosticDataIdentifierSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2034,7 +2034,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_data_transfer: List[DiagnosticDataTransfer] = field(
+        diagnostic_data_transfer: list[DiagnosticDataTransfer] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-DATA-TRANSFER",
@@ -2042,7 +2042,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_data_transfer_class: List[DiagnosticDataTransferClass] = (
+        diagnostic_data_transfer_class: list[DiagnosticDataTransferClass] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2052,7 +2052,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_dem_provided_data_mapping: List[
+        diagnostic_dem_provided_data_mapping: list[
             DiagnosticDemProvidedDataMapping
         ] = field(
             default_factory=list,
@@ -2062,7 +2062,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_do_ip_activation_line_interface: List[
+        diagnostic_do_ip_activation_line_interface: list[
             DiagnosticDoIpActivationLineInterface
         ] = field(
             default_factory=list,
@@ -2072,7 +2072,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_do_ip_group_identification_interface: List[
+        diagnostic_do_ip_group_identification_interface: list[
             DiagnosticDoIpGroupIdentificationInterface
         ] = field(
             default_factory=list,
@@ -2082,7 +2082,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_do_ip_power_mode_interface: List[
+        diagnostic_do_ip_power_mode_interface: list[
             DiagnosticDoIpPowerModeInterface
         ] = field(
             default_factory=list,
@@ -2092,7 +2092,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_do_ip_trigger_vehicle_announcement_interface: List[
+        diagnostic_do_ip_trigger_vehicle_announcement_interface: list[
             DiagnosticDoIpTriggerVehicleAnnouncementInterface
         ] = field(
             default_factory=list,
@@ -2102,7 +2102,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_download_interface: List[DiagnosticDownloadInterface] = (
+        diagnostic_download_interface: list[DiagnosticDownloadInterface] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2112,7 +2112,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_dtc_information_interface: List[
+        diagnostic_dtc_information_interface: list[
             DiagnosticDtcInformationInterface
         ] = field(
             default_factory=list,
@@ -2122,7 +2122,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_dynamic_data_identifier: List[
+        diagnostic_dynamic_data_identifier: list[
             DiagnosticDynamicDataIdentifier
         ] = field(
             default_factory=list,
@@ -2132,7 +2132,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_dynamically_define_data_identifier: List[
+        diagnostic_dynamically_define_data_identifier: list[
             DiagnosticDynamicallyDefineDataIdentifier
         ] = field(
             default_factory=list,
@@ -2142,7 +2142,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_dynamically_define_data_identifier_class: List[
+        diagnostic_dynamically_define_data_identifier_class: list[
             DiagnosticDynamicallyDefineDataIdentifierClass
         ] = field(
             default_factory=list,
@@ -2152,7 +2152,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_ecu_instance_props: List[DiagnosticEcuInstanceProps] = (
+        diagnostic_ecu_instance_props: list[DiagnosticEcuInstanceProps] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2162,7 +2162,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_ecu_reset: List[DiagnosticEcuReset] = field(
+        diagnostic_ecu_reset: list[DiagnosticEcuReset] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ECU-RESET",
@@ -2170,7 +2170,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_ecu_reset_class: List[DiagnosticEcuResetClass] = field(
+        diagnostic_ecu_reset_class: list[DiagnosticEcuResetClass] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ECU-RESET-CLASS",
@@ -2178,7 +2178,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_ecu_reset_interface: List[DiagnosticEcuResetInterface] = (
+        diagnostic_ecu_reset_interface: list[DiagnosticEcuResetInterface] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2188,7 +2188,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_enable_condition: List[DiagnosticEnableCondition] = field(
+        diagnostic_enable_condition: list[DiagnosticEnableCondition] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ENABLE-CONDITION",
@@ -2196,7 +2196,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_enable_condition_group: List[
+        diagnostic_enable_condition_group: list[
             DiagnosticEnableConditionGroup
         ] = field(
             default_factory=list,
@@ -2206,7 +2206,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_enable_condition_port_mapping: List[
+        diagnostic_enable_condition_port_mapping: list[
             DiagnosticEnableConditionPortMapping
         ] = field(
             default_factory=list,
@@ -2216,7 +2216,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_environmental_condition: List[
+        diagnostic_environmental_condition: list[
             DiagnosticEnvironmentalCondition
         ] = field(
             default_factory=list,
@@ -2226,7 +2226,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event: List[DiagnosticEvent] = field(
+        diagnostic_event: list[DiagnosticEvent] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-EVENT",
@@ -2234,7 +2234,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_interface: List[DiagnosticEventInterface] = field(
+        diagnostic_event_interface: list[DiagnosticEventInterface] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-EVENT-INTERFACE",
@@ -2242,7 +2242,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_port_mapping: List[DiagnosticEventPortMapping] = (
+        diagnostic_event_port_mapping: list[DiagnosticEventPortMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2252,7 +2252,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_event_to_debounce_algorithm_mapping: List[
+        diagnostic_event_to_debounce_algorithm_mapping: list[
             DiagnosticEventToDebounceAlgorithmMapping
         ] = field(
             default_factory=list,
@@ -2262,7 +2262,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_to_enable_condition_group_mapping: List[
+        diagnostic_event_to_enable_condition_group_mapping: list[
             DiagnosticEventToEnableConditionGroupMapping
         ] = field(
             default_factory=list,
@@ -2272,7 +2272,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_to_operation_cycle_mapping: List[
+        diagnostic_event_to_operation_cycle_mapping: list[
             DiagnosticEventToOperationCycleMapping
         ] = field(
             default_factory=list,
@@ -2282,7 +2282,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_to_security_event_mapping: List[
+        diagnostic_event_to_security_event_mapping: list[
             DiagnosticEventToSecurityEventMapping
         ] = field(
             default_factory=list,
@@ -2292,7 +2292,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_to_storage_condition_group_mapping: List[
+        diagnostic_event_to_storage_condition_group_mapping: list[
             DiagnosticEventToStorageConditionGroupMapping
         ] = field(
             default_factory=list,
@@ -2302,7 +2302,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_to_trouble_code_j_1939_mapping: List[
+        diagnostic_event_to_trouble_code_j_1939_mapping: list[
             DiagnosticEventToTroubleCodeJ1939Mapping
         ] = field(
             default_factory=list,
@@ -2312,7 +2312,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_to_trouble_code_uds_mapping: List[
+        diagnostic_event_to_trouble_code_uds_mapping: list[
             DiagnosticEventToTroubleCodeUdsMapping
         ] = field(
             default_factory=list,
@@ -2322,7 +2322,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_extended_data_record: List[DiagnosticExtendedDataRecord] = (
+        diagnostic_extended_data_record: list[DiagnosticExtendedDataRecord] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2332,7 +2332,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_fim_alias_event: List[DiagnosticFimAliasEvent] = field(
+        diagnostic_fim_alias_event: list[DiagnosticFimAliasEvent] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-FIM-ALIAS-EVENT",
@@ -2340,7 +2340,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_fim_alias_event_group: List[
+        diagnostic_fim_alias_event_group: list[
             DiagnosticFimAliasEventGroup
         ] = field(
             default_factory=list,
@@ -2350,7 +2350,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_fim_alias_event_group_mapping: List[
+        diagnostic_fim_alias_event_group_mapping: list[
             DiagnosticFimAliasEventGroupMapping
         ] = field(
             default_factory=list,
@@ -2360,7 +2360,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_fim_alias_event_mapping: List[
+        diagnostic_fim_alias_event_mapping: list[
             DiagnosticFimAliasEventMapping
         ] = field(
             default_factory=list,
@@ -2370,7 +2370,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_fim_event_group: List[DiagnosticFimEventGroup] = field(
+        diagnostic_fim_event_group: list[DiagnosticFimEventGroup] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-FIM-EVENT-GROUP",
@@ -2378,7 +2378,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_fim_function_mapping: List[DiagnosticFimFunctionMapping] = (
+        diagnostic_fim_function_mapping: list[DiagnosticFimFunctionMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2388,7 +2388,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_freeze_frame: List[DiagnosticFreezeFrame] = field(
+        diagnostic_freeze_frame: list[DiagnosticFreezeFrame] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-FREEZE-FRAME",
@@ -2396,7 +2396,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_function_identifier: List[DiagnosticFunctionIdentifier] = (
+        diagnostic_function_identifier: list[DiagnosticFunctionIdentifier] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2406,7 +2406,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_function_identifier_inhibit: List[
+        diagnostic_function_identifier_inhibit: list[
             DiagnosticFunctionIdentifierInhibit
         ] = field(
             default_factory=list,
@@ -2416,7 +2416,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_generic_uds_interface: List[
+        diagnostic_generic_uds_interface: list[
             DiagnosticGenericUdsInterface
         ] = field(
             default_factory=list,
@@ -2426,7 +2426,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_indicator: List[DiagnosticIndicator] = field(
+        diagnostic_indicator: list[DiagnosticIndicator] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-INDICATOR",
@@ -2434,7 +2434,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_indicator_interface: List[DiagnosticIndicatorInterface] = (
+        diagnostic_indicator_interface: list[DiagnosticIndicatorInterface] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2444,7 +2444,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_indicator_port_mapping: List[
+        diagnostic_indicator_port_mapping: list[
             DiagnosticIndicatorPortMapping
         ] = field(
             default_factory=list,
@@ -2454,7 +2454,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_info_type: List[DiagnosticInfoType] = field(
+        diagnostic_info_type: list[DiagnosticInfoType] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-INFO-TYPE",
@@ -2462,7 +2462,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_inhibit_source_event_mapping: List[
+        diagnostic_inhibit_source_event_mapping: list[
             DiagnosticInhibitSourceEventMapping
         ] = field(
             default_factory=list,
@@ -2472,7 +2472,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_io_control: List[DiagnosticIoControl] = field(
+        diagnostic_io_control: list[DiagnosticIoControl] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-IO-CONTROL",
@@ -2480,7 +2480,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_io_control_class: List[DiagnosticIoControlClass] = field(
+        diagnostic_io_control_class: list[DiagnosticIoControlClass] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-IO-CONTROL-CLASS",
@@ -2488,7 +2488,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_iumpr: List[DiagnosticIumpr] = field(
+        diagnostic_iumpr: list[DiagnosticIumpr] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-IUMPR",
@@ -2496,7 +2496,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_iumpr_denominator_group: List[
+        diagnostic_iumpr_denominator_group: list[
             DiagnosticIumprDenominatorGroup
         ] = field(
             default_factory=list,
@@ -2506,7 +2506,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_iumpr_group: List[DiagnosticIumprGroup] = field(
+        diagnostic_iumpr_group: list[DiagnosticIumprGroup] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-IUMPR-GROUP",
@@ -2514,7 +2514,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_j_1939_expanded_freeze_frame: List[
+        diagnostic_j_1939_expanded_freeze_frame: list[
             DiagnosticJ1939ExpandedFreezeFrame
         ] = field(
             default_factory=list,
@@ -2524,7 +2524,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_j_1939_freeze_frame: List[DiagnosticJ1939FreezeFrame] = (
+        diagnostic_j_1939_freeze_frame: list[DiagnosticJ1939FreezeFrame] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2534,7 +2534,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_j_1939_node: List[DiagnosticJ1939Node] = field(
+        diagnostic_j_1939_node: list[DiagnosticJ1939Node] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-J-1939-NODE",
@@ -2542,7 +2542,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_j_1939_spn: List[DiagnosticJ1939Spn] = field(
+        diagnostic_j_1939_spn: list[DiagnosticJ1939Spn] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-J-1939-SPN",
@@ -2550,7 +2550,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_j_1939_spn_mapping: List[DiagnosticJ1939SpnMapping] = field(
+        diagnostic_j_1939_spn_mapping: list[DiagnosticJ1939SpnMapping] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-J-1939-SPN-MAPPING",
@@ -2558,7 +2558,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_j_1939_sw_mapping: List[DiagnosticJ1939SwMapping] = field(
+        diagnostic_j_1939_sw_mapping: list[DiagnosticJ1939SwMapping] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-J-1939-SW-MAPPING",
@@ -2566,7 +2566,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_master_to_slave_event_mapping: List[
+        diagnostic_master_to_slave_event_mapping: list[
             DiagnosticMasterToSlaveEventMapping
         ] = field(
             default_factory=list,
@@ -2576,7 +2576,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_master_to_slave_event_mapping_set: List[
+        diagnostic_master_to_slave_event_mapping_set: list[
             DiagnosticMasterToSlaveEventMappingSet
         ] = field(
             default_factory=list,
@@ -2586,7 +2586,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_measurement_identifier: List[
+        diagnostic_measurement_identifier: list[
             DiagnosticMeasurementIdentifier
         ] = field(
             default_factory=list,
@@ -2596,7 +2596,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_memory_destination_mirror: List[
+        diagnostic_memory_destination_mirror: list[
             DiagnosticMemoryDestinationMirror
         ] = field(
             default_factory=list,
@@ -2606,7 +2606,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_memory_destination_port_mapping: List[
+        diagnostic_memory_destination_port_mapping: list[
             DiagnosticMemoryDestinationPortMapping
         ] = field(
             default_factory=list,
@@ -2616,7 +2616,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_memory_destination_primary: List[
+        diagnostic_memory_destination_primary: list[
             DiagnosticMemoryDestinationPrimary
         ] = field(
             default_factory=list,
@@ -2626,7 +2626,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_memory_destination_user_defined: List[
+        diagnostic_memory_destination_user_defined: list[
             DiagnosticMemoryDestinationUserDefined
         ] = field(
             default_factory=list,
@@ -2636,7 +2636,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_memory_identifier: List[DiagnosticMemoryIdentifier] = field(
+        diagnostic_memory_identifier: list[DiagnosticMemoryIdentifier] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-MEMORY-IDENTIFIER",
@@ -2644,7 +2644,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_monitor_interface: List[DiagnosticMonitorInterface] = field(
+        diagnostic_monitor_interface: list[DiagnosticMonitorInterface] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-MONITOR-INTERFACE",
@@ -2652,7 +2652,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_operation_cycle: List[DiagnosticOperationCycle] = field(
+        diagnostic_operation_cycle: list[DiagnosticOperationCycle] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-OPERATION-CYCLE",
@@ -2660,7 +2660,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_operation_cycle_interface: List[
+        diagnostic_operation_cycle_interface: list[
             DiagnosticOperationCycleInterface
         ] = field(
             default_factory=list,
@@ -2670,7 +2670,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_operation_cycle_port_mapping: List[
+        diagnostic_operation_cycle_port_mapping: list[
             DiagnosticOperationCyclePortMapping
         ] = field(
             default_factory=list,
@@ -2680,7 +2680,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_parameter_identifier: List[
+        diagnostic_parameter_identifier: list[
             DiagnosticParameterIdentifier
         ] = field(
             default_factory=list,
@@ -2690,7 +2690,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_powertrain_freeze_frame: List[
+        diagnostic_powertrain_freeze_frame: list[
             DiagnosticPowertrainFreezeFrame
         ] = field(
             default_factory=list,
@@ -2700,7 +2700,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_protocol: List[DiagnosticProtocol] = field(
+        diagnostic_protocol: list[DiagnosticProtocol] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-PROTOCOL",
@@ -2708,7 +2708,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_provided_data_mapping: List[
+        diagnostic_provided_data_mapping: list[
             DiagnosticProvidedDataMapping
         ] = field(
             default_factory=list,
@@ -2718,7 +2718,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_data_by_identifier: List[
+        diagnostic_read_data_by_identifier: list[
             DiagnosticReadDataByIdentifier
         ] = field(
             default_factory=list,
@@ -2728,7 +2728,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_data_by_identifier_class: List[
+        diagnostic_read_data_by_identifier_class: list[
             DiagnosticReadDataByIdentifierClass
         ] = field(
             default_factory=list,
@@ -2738,7 +2738,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_data_by_periodic_id: List[
+        diagnostic_read_data_by_periodic_id: list[
             DiagnosticReadDataByPeriodicId
         ] = field(
             default_factory=list,
@@ -2748,7 +2748,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_data_by_periodic_id_class: List[
+        diagnostic_read_data_by_periodic_id_class: list[
             DiagnosticReadDataByPeriodicIdClass
         ] = field(
             default_factory=list,
@@ -2758,7 +2758,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_dtc_information: List[DiagnosticReadDtcInformation] = (
+        diagnostic_read_dtc_information: list[DiagnosticReadDtcInformation] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2768,7 +2768,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_read_dtc_information_class: List[
+        diagnostic_read_dtc_information_class: list[
             DiagnosticReadDtcInformationClass
         ] = field(
             default_factory=list,
@@ -2778,7 +2778,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_memory_by_address: List[
+        diagnostic_read_memory_by_address: list[
             DiagnosticReadMemoryByAddress
         ] = field(
             default_factory=list,
@@ -2788,7 +2788,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_memory_by_address_class: List[
+        diagnostic_read_memory_by_address_class: list[
             DiagnosticReadMemoryByAddressClass
         ] = field(
             default_factory=list,
@@ -2798,7 +2798,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_scaling_data_by_identifier: List[
+        diagnostic_read_scaling_data_by_identifier: list[
             DiagnosticReadScalingDataByIdentifier
         ] = field(
             default_factory=list,
@@ -2808,7 +2808,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_read_scaling_data_by_identifier_class: List[
+        diagnostic_read_scaling_data_by_identifier_class: list[
             DiagnosticReadScalingDataByIdentifierClass
         ] = field(
             default_factory=list,
@@ -2818,7 +2818,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_control_of_on_board_device: List[
+        diagnostic_request_control_of_on_board_device: list[
             DiagnosticRequestControlOfOnBoardDevice
         ] = field(
             default_factory=list,
@@ -2828,7 +2828,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_control_of_on_board_device_class: List[
+        diagnostic_request_control_of_on_board_device_class: list[
             DiagnosticRequestControlOfOnBoardDeviceClass
         ] = field(
             default_factory=list,
@@ -2838,7 +2838,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_current_powertrain_data: List[
+        diagnostic_request_current_powertrain_data: list[
             DiagnosticRequestCurrentPowertrainData
         ] = field(
             default_factory=list,
@@ -2848,7 +2848,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_current_powertrain_data_class: List[
+        diagnostic_request_current_powertrain_data_class: list[
             DiagnosticRequestCurrentPowertrainDataClass
         ] = field(
             default_factory=list,
@@ -2858,7 +2858,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_download: List[DiagnosticRequestDownload] = field(
+        diagnostic_request_download: list[DiagnosticRequestDownload] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-REQUEST-DOWNLOAD",
@@ -2866,7 +2866,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_download_class: List[
+        diagnostic_request_download_class: list[
             DiagnosticRequestDownloadClass
         ] = field(
             default_factory=list,
@@ -2876,7 +2876,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_emission_related_dtc: List[
+        diagnostic_request_emission_related_dtc: list[
             DiagnosticRequestEmissionRelatedDtc
         ] = field(
             default_factory=list,
@@ -2886,7 +2886,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_emission_related_dtc_class: List[
+        diagnostic_request_emission_related_dtc_class: list[
             DiagnosticRequestEmissionRelatedDtcClass
         ] = field(
             default_factory=list,
@@ -2896,7 +2896,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_emission_related_dtc_permanent_status: List[
+        diagnostic_request_emission_related_dtc_permanent_status: list[
             DiagnosticRequestEmissionRelatedDtcPermanentStatus
         ] = field(
             default_factory=list,
@@ -2906,7 +2906,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_emission_related_dtc_permanent_status_class: List[
+        diagnostic_request_emission_related_dtc_permanent_status_class: list[
             DiagnosticRequestEmissionRelatedDtcPermanentStatusClass
         ] = field(
             default_factory=list,
@@ -2916,7 +2916,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_file_transfer: List[
+        diagnostic_request_file_transfer: list[
             DiagnosticRequestFileTransfer
         ] = field(
             default_factory=list,
@@ -2926,7 +2926,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_file_transfer_class: List[
+        diagnostic_request_file_transfer_class: list[
             DiagnosticRequestFileTransferClass
         ] = field(
             default_factory=list,
@@ -2936,7 +2936,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_on_board_monitoring_test_results: List[
+        diagnostic_request_on_board_monitoring_test_results: list[
             DiagnosticRequestOnBoardMonitoringTestResults
         ] = field(
             default_factory=list,
@@ -2946,7 +2946,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_on_board_monitoring_test_results_class: List[
+        diagnostic_request_on_board_monitoring_test_results_class: list[
             DiagnosticRequestOnBoardMonitoringTestResultsClass
         ] = field(
             default_factory=list,
@@ -2956,7 +2956,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_powertrain_freeze_frame_data: List[
+        diagnostic_request_powertrain_freeze_frame_data: list[
             DiagnosticRequestPowertrainFreezeFrameData
         ] = field(
             default_factory=list,
@@ -2966,7 +2966,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_powertrain_freeze_frame_data_class: List[
+        diagnostic_request_powertrain_freeze_frame_data_class: list[
             DiagnosticRequestPowertrainFreezeFrameDataClass
         ] = field(
             default_factory=list,
@@ -2976,7 +2976,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_upload: List[DiagnosticRequestUpload] = field(
+        diagnostic_request_upload: list[DiagnosticRequestUpload] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-REQUEST-UPLOAD",
@@ -2984,7 +2984,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_request_upload_class: List[DiagnosticRequestUploadClass] = (
+        diagnostic_request_upload_class: list[DiagnosticRequestUploadClass] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2994,7 +2994,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_request_vehicle_info: List[DiagnosticRequestVehicleInfo] = (
+        diagnostic_request_vehicle_info: list[DiagnosticRequestVehicleInfo] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3004,7 +3004,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_request_vehicle_info_class: List[
+        diagnostic_request_vehicle_info_class: list[
             DiagnosticRequestVehicleInfoClass
         ] = field(
             default_factory=list,
@@ -3014,7 +3014,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_response_on_event: List[DiagnosticResponseOnEvent] = field(
+        diagnostic_response_on_event: list[DiagnosticResponseOnEvent] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-RESPONSE-ON-EVENT",
@@ -3022,7 +3022,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_response_on_event_class: List[
+        diagnostic_response_on_event_class: list[
             DiagnosticResponseOnEventClass
         ] = field(
             default_factory=list,
@@ -3032,7 +3032,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_routine: List[DiagnosticRoutine] = field(
+        diagnostic_routine: list[DiagnosticRoutine] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ROUTINE",
@@ -3040,7 +3040,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_routine_control: List[DiagnosticRoutineControl] = field(
+        diagnostic_routine_control: list[DiagnosticRoutineControl] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ROUTINE-CONTROL",
@@ -3048,7 +3048,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_routine_control_class: List[
+        diagnostic_routine_control_class: list[
             DiagnosticRoutineControlClass
         ] = field(
             default_factory=list,
@@ -3058,7 +3058,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_routine_generic_interface: List[
+        diagnostic_routine_generic_interface: list[
             DiagnosticRoutineGenericInterface
         ] = field(
             default_factory=list,
@@ -3068,7 +3068,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_routine_interface: List[DiagnosticRoutineInterface] = field(
+        diagnostic_routine_interface: list[DiagnosticRoutineInterface] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ROUTINE-INTERFACE",
@@ -3076,7 +3076,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_security_access: List[DiagnosticSecurityAccess] = field(
+        diagnostic_security_access: list[DiagnosticSecurityAccess] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-SECURITY-ACCESS",
@@ -3084,7 +3084,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_security_access_class: List[
+        diagnostic_security_access_class: list[
             DiagnosticSecurityAccessClass
         ] = field(
             default_factory=list,
@@ -3094,7 +3094,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_security_event_reporting_mode_mapping: List[
+        diagnostic_security_event_reporting_mode_mapping: list[
             DiagnosticSecurityEventReportingModeMapping
         ] = field(
             default_factory=list,
@@ -3104,7 +3104,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_security_level: List[DiagnosticSecurityLevel] = field(
+        diagnostic_security_level: list[DiagnosticSecurityLevel] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-SECURITY-LEVEL",
@@ -3112,7 +3112,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_security_level_interface: List[
+        diagnostic_security_level_interface: list[
             DiagnosticSecurityLevelInterface
         ] = field(
             default_factory=list,
@@ -3122,7 +3122,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_security_level_port_mapping: List[
+        diagnostic_security_level_port_mapping: list[
             DiagnosticSecurityLevelPortMapping
         ] = field(
             default_factory=list,
@@ -3132,7 +3132,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_service_data_identifier_port_mapping: List[
+        diagnostic_service_data_identifier_port_mapping: list[
             DiagnosticServiceDataIdentifierPortMapping
         ] = field(
             default_factory=list,
@@ -3142,7 +3142,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_service_data_mapping: List[DiagnosticServiceDataMapping] = (
+        diagnostic_service_data_mapping: list[DiagnosticServiceDataMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3152,7 +3152,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_service_generic_mapping: List[
+        diagnostic_service_generic_mapping: list[
             DiagnosticServiceGenericMapping
         ] = field(
             default_factory=list,
@@ -3162,7 +3162,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_service_sw_mapping: List[DiagnosticServiceSwMapping] = (
+        diagnostic_service_sw_mapping: list[DiagnosticServiceSwMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3172,7 +3172,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_service_table: List[DiagnosticServiceTable] = field(
+        diagnostic_service_table: list[DiagnosticServiceTable] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-SERVICE-TABLE",
@@ -3180,7 +3180,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_service_validation_interface: List[
+        diagnostic_service_validation_interface: list[
             DiagnosticServiceValidationInterface
         ] = field(
             default_factory=list,
@@ -3190,7 +3190,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_session: List[DiagnosticSession] = field(
+        diagnostic_session: list[DiagnosticSession] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-SESSION",
@@ -3198,7 +3198,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_session_control: List[DiagnosticSessionControl] = field(
+        diagnostic_session_control: list[DiagnosticSessionControl] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-SESSION-CONTROL",
@@ -3206,7 +3206,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_session_control_class: List[
+        diagnostic_session_control_class: list[
             DiagnosticSessionControlClass
         ] = field(
             default_factory=list,
@@ -3216,7 +3216,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_software_cluster_props: List[
+        diagnostic_software_cluster_props: list[
             DiagnosticSoftwareClusterProps
         ] = field(
             default_factory=list,
@@ -3226,7 +3226,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_storage_condition: List[DiagnosticStorageCondition] = field(
+        diagnostic_storage_condition: list[DiagnosticStorageCondition] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-STORAGE-CONDITION",
@@ -3234,7 +3234,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_storage_condition_group: List[
+        diagnostic_storage_condition_group: list[
             DiagnosticStorageConditionGroup
         ] = field(
             default_factory=list,
@@ -3244,7 +3244,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_storage_condition_port_mapping: List[
+        diagnostic_storage_condition_port_mapping: list[
             DiagnosticStorageConditionPortMapping
         ] = field(
             default_factory=list,
@@ -3254,7 +3254,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_test_result: List[DiagnosticTestResult] = field(
+        diagnostic_test_result: list[DiagnosticTestResult] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-TEST-RESULT",
@@ -3262,7 +3262,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_test_routine_identifier: List[
+        diagnostic_test_routine_identifier: list[
             DiagnosticTestRoutineIdentifier
         ] = field(
             default_factory=list,
@@ -3272,7 +3272,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_transfer_exit: List[DiagnosticTransferExit] = field(
+        diagnostic_transfer_exit: list[DiagnosticTransferExit] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-TRANSFER-EXIT",
@@ -3280,7 +3280,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_transfer_exit_class: List[DiagnosticTransferExitClass] = (
+        diagnostic_transfer_exit_class: list[DiagnosticTransferExitClass] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3290,7 +3290,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_trouble_code_group: List[DiagnosticTroubleCodeGroup] = (
+        diagnostic_trouble_code_group: list[DiagnosticTroubleCodeGroup] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3300,7 +3300,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_trouble_code_j_1939: List[DiagnosticTroubleCodeJ1939] = (
+        diagnostic_trouble_code_j_1939: list[DiagnosticTroubleCodeJ1939] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3310,7 +3310,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_trouble_code_obd: List[DiagnosticTroubleCodeObd] = field(
+        diagnostic_trouble_code_obd: list[DiagnosticTroubleCodeObd] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-TROUBLE-CODE-OBD",
@@ -3318,7 +3318,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_trouble_code_props: List[DiagnosticTroubleCodeProps] = (
+        diagnostic_trouble_code_props: list[DiagnosticTroubleCodeProps] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3328,7 +3328,7 @@ class ArPackage:
                 },
             )
         )
-        diagnostic_trouble_code_uds: List[DiagnosticTroubleCodeUds] = field(
+        diagnostic_trouble_code_uds: list[DiagnosticTroubleCodeUds] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-TROUBLE-CODE-UDS",
@@ -3336,7 +3336,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_trouble_code_uds_to_clear_condition_group_mapping: List[
+        diagnostic_trouble_code_uds_to_clear_condition_group_mapping: list[
             DiagnosticTroubleCodeUdsToClearConditionGroupMapping
         ] = field(
             default_factory=list,
@@ -3346,7 +3346,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_trouble_code_uds_to_trouble_code_obd_mapping: List[
+        diagnostic_trouble_code_uds_to_trouble_code_obd_mapping: list[
             DiagnosticTroubleCodeUdsToTroubleCodeObdMapping
         ] = field(
             default_factory=list,
@@ -3356,7 +3356,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_upload_interface: List[DiagnosticUploadInterface] = field(
+        diagnostic_upload_interface: list[DiagnosticUploadInterface] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-UPLOAD-INTERFACE",
@@ -3364,7 +3364,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_write_data_by_identifier: List[
+        diagnostic_write_data_by_identifier: list[
             DiagnosticWriteDataByIdentifier
         ] = field(
             default_factory=list,
@@ -3374,7 +3374,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_write_data_by_identifier_class: List[
+        diagnostic_write_data_by_identifier_class: list[
             DiagnosticWriteDataByIdentifierClass
         ] = field(
             default_factory=list,
@@ -3384,7 +3384,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_write_memory_by_address: List[
+        diagnostic_write_memory_by_address: list[
             DiagnosticWriteMemoryByAddress
         ] = field(
             default_factory=list,
@@ -3394,7 +3394,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_write_memory_by_address_class: List[
+        diagnostic_write_memory_by_address_class: list[
             DiagnosticWriteMemoryByAddressClass
         ] = field(
             default_factory=list,
@@ -3404,7 +3404,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dlt_log_channel_design: List[DltLogChannelDesign] = field(
+        dlt_log_channel_design: list[DltLogChannelDesign] = field(
             default_factory=list,
             metadata={
                 "name": "DLT-LOG-CHANNEL-DESIGN",
@@ -3412,7 +3412,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dlt_log_channel_design_to_process_design_mapping: List[
+        dlt_log_channel_design_to_process_design_mapping: list[
             DltLogChannelDesignToProcessDesignMapping
         ] = field(
             default_factory=list,
@@ -3422,7 +3422,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dlt_log_channel_to_process_mapping: List[
+        dlt_log_channel_to_process_mapping: list[
             DltLogChannelToProcessMapping
         ] = field(
             default_factory=list,
@@ -3432,7 +3432,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dlt_message_collection_set: List[DltMessageCollectionSet] = field(
+        dlt_message_collection_set: list[DltMessageCollectionSet] = field(
             default_factory=list,
             metadata={
                 "name": "DLT-MESSAGE-COLLECTION-SET",
@@ -3440,7 +3440,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_tp_config: List[DoIpTpConfig] = field(
+        do_ip_tp_config: list[DoIpTpConfig] = field(
             default_factory=list,
             metadata={
                 "name": "DO-IP-TP-CONFIG",
@@ -3448,7 +3448,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        documentation: List[Documentation] = field(
+        documentation: list[Documentation] = field(
             default_factory=list,
             metadata={
                 "name": "DOCUMENTATION",
@@ -3456,7 +3456,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        e_2_e_profile_compatibility_props: List[
+        e_2_e_profile_compatibility_props: list[
             E2EProfileCompatibilityProps
         ] = field(
             default_factory=list,
@@ -3466,7 +3466,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        e_2_e_profile_configuration_set: List[E2EProfileConfigurationSet] = (
+        e_2_e_profile_configuration_set: list[E2EProfileConfigurationSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3476,7 +3476,7 @@ class ArPackage:
                 },
             )
         )
-        ecu_abstraction_sw_component_type: List[
+        ecu_abstraction_sw_component_type: list[
             EcuAbstractionSwComponentType
         ] = field(
             default_factory=list,
@@ -3486,7 +3486,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecu_instance: List[EcuInstance] = field(
+        ecu_instance: list[EcuInstance] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-INSTANCE",
@@ -3494,7 +3494,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecu_timing: List[EcuTiming] = field(
+        ecu_timing: list[EcuTiming] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-TIMING",
@@ -3502,7 +3502,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_definition_collection: List[EcucDefinitionCollection] = field(
+        ecuc_definition_collection: list[EcucDefinitionCollection] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-DEFINITION-COLLECTION",
@@ -3510,7 +3510,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_destination_uri_def_set: List[EcucDestinationUriDefSet] = field(
+        ecuc_destination_uri_def_set: list[EcucDestinationUriDefSet] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-DESTINATION-URI-DEF-SET",
@@ -3518,7 +3518,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_module_configuration_values: List[
+        ecuc_module_configuration_values: list[
             EcucModuleConfigurationValues
         ] = field(
             default_factory=list,
@@ -3528,7 +3528,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_module_def: List[EcucModuleDef] = field(
+        ecuc_module_def: list[EcucModuleDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-MODULE-DEF",
@@ -3536,7 +3536,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_value_collection: List[EcucValueCollection] = field(
+        ecuc_value_collection: list[EcucValueCollection] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-VALUE-COLLECTION",
@@ -3544,7 +3544,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        end_to_end_protection_set: List[EndToEndProtectionSet] = field(
+        end_to_end_protection_set: list[EndToEndProtectionSet] = field(
             default_factory=list,
             metadata={
                 "name": "END-TO-END-PROTECTION-SET",
@@ -3552,7 +3552,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        enumeration_mapping_table: List[EnumerationMappingTable] = field(
+        enumeration_mapping_table: list[EnumerationMappingTable] = field(
             default_factory=list,
             metadata={
                 "name": "ENUMERATION-MAPPING-TABLE",
@@ -3560,7 +3560,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        eth_ip_props: List[EthIpProps] = field(
+        eth_ip_props: list[EthIpProps] = field(
             default_factory=list,
             metadata={
                 "name": "ETH-IP-PROPS",
@@ -3568,7 +3568,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        eth_tcp_ip_icmp_props: List[EthTcpIpIcmpProps] = field(
+        eth_tcp_ip_icmp_props: list[EthTcpIpIcmpProps] = field(
             default_factory=list,
             metadata={
                 "name": "ETH-TCP-IP-ICMP-PROPS",
@@ -3576,7 +3576,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        eth_tcp_ip_props: List[EthTcpIpProps] = field(
+        eth_tcp_ip_props: list[EthTcpIpProps] = field(
             default_factory=list,
             metadata={
                 "name": "ETH-TCP-IP-PROPS",
@@ -3584,7 +3584,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        eth_tp_config: List[EthTpConfig] = field(
+        eth_tp_config: list[EthTpConfig] = field(
             default_factory=list,
             metadata={
                 "name": "ETH-TP-CONFIG",
@@ -3592,7 +3592,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_cluster: List[EthernetCluster] = field(
+        ethernet_cluster: list[EthernetCluster] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-CLUSTER",
@@ -3600,7 +3600,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_frame: List[EthernetFrame] = field(
+        ethernet_frame: list[EthernetFrame] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-FRAME",
@@ -3608,7 +3608,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_raw_data_stream_grant: List[EthernetRawDataStreamGrant] = (
+        ethernet_raw_data_stream_grant: list[EthernetRawDataStreamGrant] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3618,7 +3618,7 @@ class ArPackage:
                 },
             )
         )
-        ethernet_raw_data_stream_mapping: List[
+        ethernet_raw_data_stream_mapping: list[
             EthernetRawDataStreamMapping
         ] = field(
             default_factory=list,
@@ -3628,7 +3628,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_wakeup_sleep_on_dataline_config_set: List[
+        ethernet_wakeup_sleep_on_dataline_config_set: list[
             EthernetWakeupSleepOnDatalineConfigSet
         ] = field(
             default_factory=list,
@@ -3638,7 +3638,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        evaluated_variant_set: List[EvaluatedVariantSet] = field(
+        evaluated_variant_set: list[EvaluatedVariantSet] = field(
             default_factory=list,
             metadata={
                 "name": "EVALUATED-VARIANT-SET",
@@ -3646,7 +3646,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        executable: List[Executable] = field(
+        executable: list[Executable] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTABLE",
@@ -3654,7 +3654,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        executable_timing: List[ExecutableTiming] = field(
+        executable_timing: list[ExecutableTiming] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTABLE-TIMING",
@@ -3662,7 +3662,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flat_map: List[FlatMap] = field(
+        flat_map: list[FlatMap] = field(
             default_factory=list,
             metadata={
                 "name": "FLAT-MAP",
@@ -3670,7 +3670,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_ar_tp_config: List[FlexrayArTpConfig] = field(
+        flexray_ar_tp_config: list[FlexrayArTpConfig] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-AR-TP-CONFIG",
@@ -3678,7 +3678,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_cluster: List[FlexrayCluster] = field(
+        flexray_cluster: list[FlexrayCluster] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-CLUSTER",
@@ -3686,7 +3686,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_frame: List[FlexrayFrame] = field(
+        flexray_frame: list[FlexrayFrame] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-FRAME",
@@ -3694,7 +3694,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_tp_config: List[FlexrayTpConfig] = field(
+        flexray_tp_config: list[FlexrayTpConfig] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-TP-CONFIG",
@@ -3702,7 +3702,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        fm_feature: List[FmFeature] = field(
+        fm_feature: list[FmFeature] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE",
@@ -3710,7 +3710,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        fm_feature_map: List[FmFeatureMap] = field(
+        fm_feature_map: list[FmFeatureMap] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-MAP",
@@ -3718,7 +3718,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        fm_feature_model: List[FmFeatureModel] = field(
+        fm_feature_model: list[FmFeatureModel] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-MODEL",
@@ -3726,7 +3726,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        fm_feature_selection_set: List[FmFeatureSelectionSet] = field(
+        fm_feature_selection_set: list[FmFeatureSelectionSet] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-SELECTION-SET",
@@ -3734,7 +3734,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        function_group_set: List[FunctionGroupSet] = field(
+        function_group_set: list[FunctionGroupSet] = field(
             default_factory=list,
             metadata={
                 "name": "FUNCTION-GROUP-SET",
@@ -3742,7 +3742,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        gateway: List[Gateway] = field(
+        gateway: list[Gateway] = field(
             default_factory=list,
             metadata={
                 "name": "GATEWAY",
@@ -3750,7 +3750,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        general_purpose_connection: List[GeneralPurposeConnection] = field(
+        general_purpose_connection: list[GeneralPurposeConnection] = field(
             default_factory=list,
             metadata={
                 "name": "GENERAL-PURPOSE-CONNECTION",
@@ -3758,7 +3758,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        general_purpose_i_pdu: List[GeneralPurposeIPdu] = field(
+        general_purpose_i_pdu: list[GeneralPurposeIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "GENERAL-PURPOSE-I-PDU",
@@ -3766,7 +3766,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        general_purpose_pdu: List[GeneralPurposePdu] = field(
+        general_purpose_pdu: list[GeneralPurposePdu] = field(
             default_factory=list,
             metadata={
                 "name": "GENERAL-PURPOSE-PDU",
@@ -3774,7 +3774,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        generic_ethernet_frame: List[GenericEthernetFrame] = field(
+        generic_ethernet_frame: list[GenericEthernetFrame] = field(
             default_factory=list,
             metadata={
                 "name": "GENERIC-ETHERNET-FRAME",
@@ -3782,7 +3782,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        global_time_domain: List[GlobalTimeDomain] = field(
+        global_time_domain: list[GlobalTimeDomain] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-TIME-DOMAIN",
@@ -3790,7 +3790,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        hw_category: List[HwCategory] = field(
+        hw_category: list[HwCategory] = field(
             default_factory=list,
             metadata={
                 "name": "HW-CATEGORY",
@@ -3798,7 +3798,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        hw_element: List[HwElement] = field(
+        hw_element: list[HwElement] = field(
             default_factory=list,
             metadata={
                 "name": "HW-ELEMENT",
@@ -3806,7 +3806,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        hw_type: List[HwType] = field(
+        hw_type: list[HwType] = field(
             default_factory=list,
             metadata={
                 "name": "HW-TYPE",
@@ -3814,7 +3814,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_pv_6_ext_header_filter_set: List[IPv6ExtHeaderFilterSet] = field(
+        i_pv_6_ext_header_filter_set: list[IPv6ExtHeaderFilterSet] = field(
             default_factory=list,
             metadata={
                 "name": "I-PV-6-EXT-HEADER-FILTER-SET",
@@ -3822,7 +3822,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_signal: List[ISignal] = field(
+        i_signal: list[ISignal] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL",
@@ -3830,7 +3830,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_signal_group: List[ISignalGroup] = field(
+        i_signal_group: list[ISignalGroup] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-GROUP",
@@ -3838,7 +3838,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_signal_i_pdu: List[ISignalIPdu] = field(
+        i_signal_i_pdu: list[ISignalIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-I-PDU",
@@ -3846,7 +3846,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_signal_i_pdu_group: List[ISignalIPduGroup] = field(
+        i_signal_i_pdu_group: list[ISignalIPduGroup] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-I-PDU-GROUP",
@@ -3854,7 +3854,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ids_design: List[IdsDesign] = field(
+        ids_design: list[IdsDesign] = field(
             default_factory=list,
             metadata={
                 "name": "IDS-DESIGN",
@@ -3862,7 +3862,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        idsm_instance: List[IdsmInstance] = field(
+        idsm_instance: list[IdsmInstance] = field(
             default_factory=list,
             metadata={
                 "name": "IDSM-INSTANCE",
@@ -3870,7 +3870,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        idsm_properties: List[IdsmProperties] = field(
+        idsm_properties: list[IdsmProperties] = field(
             default_factory=list,
             metadata={
                 "name": "IDSM-PROPERTIES",
@@ -3878,7 +3878,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ieee_1722_tp_ethernet_frame: List[Ieee1722TpEthernetFrame] = field(
+        ieee_1722_tp_ethernet_frame: list[Ieee1722TpEthernetFrame] = field(
             default_factory=list,
             metadata={
                 "name": "IEEE-1722-TP-ETHERNET-FRAME",
@@ -3886,7 +3886,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type: List[ImplementationDataType] = field(
+        implementation_data_type: list[ImplementationDataType] = field(
             default_factory=list,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE",
@@ -3894,7 +3894,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        interface_mapping_set: List[InterfaceMappingSet] = field(
+        interface_mapping_set: list[InterfaceMappingSet] = field(
             default_factory=list,
             metadata={
                 "name": "INTERFACE-MAPPING-SET",
@@ -3902,7 +3902,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        interpolation_routine_mapping_set: List[
+        interpolation_routine_mapping_set: list[
             InterpolationRoutineMappingSet
         ] = field(
             default_factory=list,
@@ -3912,7 +3912,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ip_iam_remote_subject: List[IpIamRemoteSubject] = field(
+        ip_iam_remote_subject: list[IpIamRemoteSubject] = field(
             default_factory=list,
             metadata={
                 "name": "IP-IAM-REMOTE-SUBJECT",
@@ -3920,7 +3920,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ip_sec_config_props: List[IpSecConfigProps] = field(
+        ip_sec_config_props: list[IpSecConfigProps] = field(
             default_factory=list,
             metadata={
                 "name": "IP-SEC-CONFIG-PROPS",
@@ -3928,7 +3928,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ip_sec_iam_remote_subject: List[IpSecIamRemoteSubject] = field(
+        ip_sec_iam_remote_subject: list[IpSecIamRemoteSubject] = field(
             default_factory=list,
             metadata={
                 "name": "IP-SEC-IAM-REMOTE-SUBJECT",
@@ -3936,7 +3936,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_cluster: List[J1939Cluster] = field(
+        j_1939_cluster: list[J1939Cluster] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-CLUSTER",
@@ -3944,7 +3944,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_controller_application: List[J1939ControllerApplication] = (
+        j_1939_controller_application: list[J1939ControllerApplication] = (
             field(
                 default_factory=list,
                 metadata={
@@ -3954,7 +3954,7 @@ class ArPackage:
                 },
             )
         )
-        j_1939_dcm_i_pdu: List[J1939DcmIPdu] = field(
+        j_1939_dcm_i_pdu: list[J1939DcmIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-DCM-I-PDU",
@@ -3962,7 +3962,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_tp_config: List[J1939TpConfig] = field(
+        j_1939_tp_config: list[J1939TpConfig] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-TP-CONFIG",
@@ -3970,7 +3970,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        keyword_set: List[KeywordSet] = field(
+        keyword_set: list[KeywordSet] = field(
             default_factory=list,
             metadata={
                 "name": "KEYWORD-SET",
@@ -3978,7 +3978,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        life_cycle_info_set: List[LifeCycleInfoSet] = field(
+        life_cycle_info_set: list[LifeCycleInfoSet] = field(
             default_factory=list,
             metadata={
                 "name": "LIFE-CYCLE-INFO-SET",
@@ -3986,7 +3986,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        life_cycle_state_definition_group: List[
+        life_cycle_state_definition_group: list[
             LifeCycleStateDefinitionGroup
         ] = field(
             default_factory=list,
@@ -3996,7 +3996,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_cluster: List[LinCluster] = field(
+        lin_cluster: list[LinCluster] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-CLUSTER",
@@ -4004,7 +4004,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_event_triggered_frame: List[LinEventTriggeredFrame] = field(
+        lin_event_triggered_frame: list[LinEventTriggeredFrame] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-EVENT-TRIGGERED-FRAME",
@@ -4012,7 +4012,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_sporadic_frame: List[LinSporadicFrame] = field(
+        lin_sporadic_frame: list[LinSporadicFrame] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-SPORADIC-FRAME",
@@ -4020,7 +4020,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_tp_config: List[LinTpConfig] = field(
+        lin_tp_config: list[LinTpConfig] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-TP-CONFIG",
@@ -4028,7 +4028,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_unconditional_frame: List[LinUnconditionalFrame] = field(
+        lin_unconditional_frame: list[LinUnconditionalFrame] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-UNCONDITIONAL-FRAME",
@@ -4036,7 +4036,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        machine: List[Machine] = field(
+        machine: list[Machine] = field(
             default_factory=list,
             metadata={
                 "name": "MACHINE",
@@ -4044,7 +4044,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        machine_design: List[MachineDesign] = field(
+        machine_design: list[MachineDesign] = field(
             default_factory=list,
             metadata={
                 "name": "MACHINE-DESIGN",
@@ -4052,7 +4052,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        machine_timing: List[MachineTiming] = field(
+        machine_timing: list[MachineTiming] = field(
             default_factory=list,
             metadata={
                 "name": "MACHINE-TIMING",
@@ -4060,7 +4060,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mc_function: List[McFunction] = field(
+        mc_function: list[McFunction] = field(
             default_factory=list,
             metadata={
                 "name": "MC-FUNCTION",
@@ -4068,7 +4068,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mc_group: List[McGroup] = field(
+        mc_group: list[McGroup] = field(
             default_factory=list,
             metadata={
                 "name": "MC-GROUP",
@@ -4076,7 +4076,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mode_declaration_group: List[ModeDeclarationGroup] = field(
+        mode_declaration_group: list[ModeDeclarationGroup] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-DECLARATION-GROUP",
@@ -4084,7 +4084,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mode_declaration_mapping_set: List[ModeDeclarationMappingSet] = field(
+        mode_declaration_mapping_set: list[ModeDeclarationMappingSet] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-DECLARATION-MAPPING-SET",
@@ -4092,7 +4092,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mode_switch_interface: List[ModeSwitchInterface] = field(
+        mode_switch_interface: list[ModeSwitchInterface] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-SWITCH-INTERFACE",
@@ -4100,7 +4100,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        multiplexed_i_pdu: List[MultiplexedIPdu] = field(
+        multiplexed_i_pdu: list[MultiplexedIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "MULTIPLEXED-I-PDU",
@@ -4108,7 +4108,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        n_pdu: List[NPdu] = field(
+        n_pdu: list[NPdu] = field(
             default_factory=list,
             metadata={
                 "name": "N-PDU",
@@ -4116,7 +4116,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nm_config: List[NmConfig] = field(
+        nm_config: list[NmConfig] = field(
             default_factory=list,
             metadata={
                 "name": "NM-CONFIG",
@@ -4124,7 +4124,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nm_pdu: List[NmPdu] = field(
+        nm_pdu: list[NmPdu] = field(
             default_factory=list,
             metadata={
                 "name": "NM-PDU",
@@ -4132,7 +4132,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nv_block_sw_component_type: List[NvBlockSwComponentType] = field(
+        nv_block_sw_component_type: list[NvBlockSwComponentType] = field(
             default_factory=list,
             metadata={
                 "name": "NV-BLOCK-SW-COMPONENT-TYPE",
@@ -4140,7 +4140,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nv_data_interface: List[NvDataInterface] = field(
+        nv_data_interface: list[NvDataInterface] = field(
             default_factory=list,
             metadata={
                 "name": "NV-DATA-INTERFACE",
@@ -4148,7 +4148,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        parameter_interface: List[ParameterInterface] = field(
+        parameter_interface: list[ParameterInterface] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-INTERFACE",
@@ -4156,7 +4156,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        parameter_sw_component_type: List[ParameterSwComponentType] = field(
+        parameter_sw_component_type: list[ParameterSwComponentType] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-SW-COMPONENT-TYPE",
@@ -4164,7 +4164,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        pdur_i_pdu_group: List[PdurIPduGroup] = field(
+        pdur_i_pdu_group: list[PdurIPduGroup] = field(
             default_factory=list,
             metadata={
                 "name": "PDUR-I-PDU-GROUP",
@@ -4172,7 +4172,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_deployment_element_to_crypto_key_slot_mapping: List[
+        persistency_deployment_element_to_crypto_key_slot_mapping: list[
             PersistencyDeploymentElementToCryptoKeySlotMapping
         ] = field(
             default_factory=list,
@@ -4182,7 +4182,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_deployment_to_crypto_key_slot_mapping: List[
+        persistency_deployment_to_crypto_key_slot_mapping: list[
             PersistencyDeploymentToCryptoKeySlotMapping
         ] = field(
             default_factory=list,
@@ -4192,7 +4192,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_deployment_to_dlt_log_channel_mapping: List[
+        persistency_deployment_to_dlt_log_channel_mapping: list[
             PersistencyDeploymentToDltLogChannelMapping
         ] = field(
             default_factory=list,
@@ -4202,7 +4202,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_file_storage: List[PersistencyFileStorage] = field(
+        persistency_file_storage: list[PersistencyFileStorage] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-FILE-STORAGE",
@@ -4210,7 +4210,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_file_storage_interface: List[
+        persistency_file_storage_interface: list[
             PersistencyFileStorageInterface
         ] = field(
             default_factory=list,
@@ -4220,7 +4220,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_key_value_storage: List[PersistencyKeyValueStorage] = (
+        persistency_key_value_storage: list[PersistencyKeyValueStorage] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4230,7 +4230,7 @@ class ArPackage:
                 },
             )
         )
-        persistency_key_value_storage_interface: List[
+        persistency_key_value_storage_interface: list[
             PersistencyKeyValueStorageInterface
         ] = field(
             default_factory=list,
@@ -4240,7 +4240,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_port_prototype_to_file_storage_mapping: List[
+        persistency_port_prototype_to_file_storage_mapping: list[
             PersistencyPortPrototypeToFileStorageMapping
         ] = field(
             default_factory=list,
@@ -4250,7 +4250,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_port_prototype_to_key_value_storage_mapping: List[
+        persistency_port_prototype_to_key_value_storage_mapping: list[
             PersistencyPortPrototypeToKeyValueStorageMapping
         ] = field(
             default_factory=list,
@@ -4260,7 +4260,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        phm_contribution_to_machine_mapping: List[
+        phm_contribution_to_machine_mapping: list[
             PhmContributionToMachineMapping
         ] = field(
             default_factory=list,
@@ -4270,7 +4270,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        phm_health_channel_interface: List[PhmHealthChannelInterface] = field(
+        phm_health_channel_interface: list[PhmHealthChannelInterface] = field(
             default_factory=list,
             metadata={
                 "name": "PHM-HEALTH-CHANNEL-INTERFACE",
@@ -4278,7 +4278,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        phm_health_channel_recovery_notification_interface: List[
+        phm_health_channel_recovery_notification_interface: list[
             PhmHealthChannelRecoveryNotificationInterface
         ] = field(
             default_factory=list,
@@ -4288,7 +4288,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        phm_recovery_action_interface: List[PhmRecoveryActionInterface] = (
+        phm_recovery_action_interface: list[PhmRecoveryActionInterface] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4298,7 +4298,7 @@ class ArPackage:
                 },
             )
         )
-        phm_supervised_entity_interface: List[PhmSupervisedEntityInterface] = (
+        phm_supervised_entity_interface: list[PhmSupervisedEntityInterface] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4308,7 +4308,7 @@ class ArPackage:
                 },
             )
         )
-        phm_supervision_recovery_notification_interface: List[
+        phm_supervision_recovery_notification_interface: list[
             PhmSupervisionRecoveryNotificationInterface
         ] = field(
             default_factory=list,
@@ -4318,7 +4318,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        physical_dimension: List[PhysicalDimension] = field(
+        physical_dimension: list[PhysicalDimension] = field(
             default_factory=list,
             metadata={
                 "name": "PHYSICAL-DIMENSION",
@@ -4326,7 +4326,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        physical_dimension_mapping_set: List[PhysicalDimensionMappingSet] = (
+        physical_dimension_mapping_set: list[PhysicalDimensionMappingSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4336,7 +4336,7 @@ class ArPackage:
                 },
             )
         )
-        platform_health_management_contribution: List[
+        platform_health_management_contribution: list[
             PlatformHealthManagementContribution
         ] = field(
             default_factory=list,
@@ -4346,7 +4346,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        platform_module_ethernet_endpoint_configuration: List[
+        platform_module_ethernet_endpoint_configuration: list[
             PlatformModuleEthernetEndpointConfiguration
         ] = field(
             default_factory=list,
@@ -4356,7 +4356,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        port_interface_mapping_set: List[PortInterfaceMappingSet] = field(
+        port_interface_mapping_set: list[PortInterfaceMappingSet] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-INTERFACE-MAPPING-SET",
@@ -4364,7 +4364,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        port_interface_to_data_type_mapping: List[
+        port_interface_to_data_type_mapping: list[
             PortInterfaceToDataTypeMapping
         ] = field(
             default_factory=list,
@@ -4374,7 +4374,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        port_prototype_blueprint: List[PortPrototypeBlueprint] = field(
+        port_prototype_blueprint: list[PortPrototypeBlueprint] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-PROTOTYPE-BLUEPRINT",
@@ -4382,7 +4382,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        post_build_variant_criterion: List[PostBuildVariantCriterion] = field(
+        post_build_variant_criterion: list[PostBuildVariantCriterion] = field(
             default_factory=list,
             metadata={
                 "name": "POST-BUILD-VARIANT-CRITERION",
@@ -4390,7 +4390,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        post_build_variant_criterion_value_set: List[
+        post_build_variant_criterion_value_set: list[
             PostBuildVariantCriterionValueSet
         ] = field(
             default_factory=list,
@@ -4400,7 +4400,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        predefined_variant: List[PredefinedVariant] = field(
+        predefined_variant: list[PredefinedVariant] = field(
             default_factory=list,
             metadata={
                 "name": "PREDEFINED-VARIANT",
@@ -4408,7 +4408,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        process: List[Process] = field(
+        process: list[Process] = field(
             default_factory=list,
             metadata={
                 "name": "PROCESS",
@@ -4416,7 +4416,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        process_design: List[ProcessDesign] = field(
+        process_design: list[ProcessDesign] = field(
             default_factory=list,
             metadata={
                 "name": "PROCESS-DESIGN",
@@ -4424,7 +4424,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        process_design_to_machine_design_mapping_set: List[
+        process_design_to_machine_design_mapping_set: list[
             ProcessDesignToMachineDesignMappingSet
         ] = field(
             default_factory=list,
@@ -4434,7 +4434,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        process_execution_error: List[ProcessExecutionError] = field(
+        process_execution_error: list[ProcessExecutionError] = field(
             default_factory=list,
             metadata={
                 "name": "PROCESS-EXECUTION-ERROR",
@@ -4442,7 +4442,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        process_to_machine_mapping_set: List[ProcessToMachineMappingSet] = (
+        process_to_machine_mapping_set: list[ProcessToMachineMappingSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4452,7 +4452,7 @@ class ArPackage:
                 },
             )
         )
-        provided_service_instance_to_sw_cluster_design_p_port_prototype_mapping: List[
+        provided_service_instance_to_sw_cluster_design_p_port_prototype_mapping: list[
             ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -4462,7 +4462,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        provided_someip_service_instance: List[
+        provided_someip_service_instance: list[
             ProvidedSomeipServiceInstance
         ] = field(
             default_factory=list,
@@ -4472,7 +4472,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        provided_user_defined_service_instance: List[
+        provided_user_defined_service_instance: list[
             ProvidedUserDefinedServiceInstance
         ] = field(
             default_factory=list,
@@ -4482,7 +4482,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rapid_prototyping_scenario: List[RapidPrototypingScenario] = field(
+        rapid_prototyping_scenario: list[RapidPrototypingScenario] = field(
             default_factory=list,
             metadata={
                 "name": "RAPID-PROTOTYPING-SCENARIO",
@@ -4490,7 +4490,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        raw_data_stream_client_interface: List[
+        raw_data_stream_client_interface: list[
             RawDataStreamClientInterface
         ] = field(
             default_factory=list,
@@ -4500,7 +4500,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        raw_data_stream_deployment: List[RawDataStreamDeployment] = field(
+        raw_data_stream_deployment: list[RawDataStreamDeployment] = field(
             default_factory=list,
             metadata={
                 "name": "RAW-DATA-STREAM-DEPLOYMENT",
@@ -4508,7 +4508,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        raw_data_stream_grant_design: List[RawDataStreamGrantDesign] = field(
+        raw_data_stream_grant_design: list[RawDataStreamGrantDesign] = field(
             default_factory=list,
             metadata={
                 "name": "RAW-DATA-STREAM-GRANT-DESIGN",
@@ -4516,7 +4516,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        raw_data_stream_server_interface: List[
+        raw_data_stream_server_interface: list[
             RawDataStreamServerInterface
         ] = field(
             default_factory=list,
@@ -4526,7 +4526,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        recovery_notification_to_p_port_prototype_mapping: List[
+        recovery_notification_to_p_port_prototype_mapping: list[
             RecoveryNotificationToPPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -4536,7 +4536,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        required_service_instance_to_sw_cluster_design_r_port_prototype_mapping: List[
+        required_service_instance_to_sw_cluster_design_r_port_prototype_mapping: list[
             RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -4546,7 +4546,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        required_someip_service_instance: List[
+        required_someip_service_instance: list[
             RequiredSomeipServiceInstance
         ] = field(
             default_factory=list,
@@ -4556,7 +4556,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        required_user_defined_service_instance: List[
+        required_user_defined_service_instance: list[
             RequiredUserDefinedServiceInstance
         ] = field(
             default_factory=list,
@@ -4566,7 +4566,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_http_port_prototype_mapping: List[
+        rest_http_port_prototype_mapping: list[
             RestHttpPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -4576,7 +4576,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_service_interface: List[RestServiceInterface] = field(
+        rest_service_interface: list[RestServiceInterface] = field(
             default_factory=list,
             metadata={
                 "name": "REST-SERVICE-INTERFACE",
@@ -4584,7 +4584,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sdg_def: List[SdgDef] = field(
+        sdg_def: list[SdgDef] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-DEF",
@@ -4592,7 +4592,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        secure_com_props_set: List[SecureComPropsSet] = field(
+        secure_com_props_set: list[SecureComPropsSet] = field(
             default_factory=list,
             metadata={
                 "name": "SECURE-COM-PROPS-SET",
@@ -4600,7 +4600,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        secure_communication_props_set: List[SecureCommunicationPropsSet] = (
+        secure_communication_props_set: list[SecureCommunicationPropsSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4610,7 +4610,7 @@ class ArPackage:
                 },
             )
         )
-        secured_i_pdu: List[SecuredIPdu] = field(
+        secured_i_pdu: list[SecuredIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "SECURED-I-PDU",
@@ -4618,7 +4618,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        security_event_context_mapping_application: List[
+        security_event_context_mapping_application: list[
             SecurityEventContextMappingApplication
         ] = field(
             default_factory=list,
@@ -4628,7 +4628,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        security_event_context_mapping_bsw_module: List[
+        security_event_context_mapping_bsw_module: list[
             SecurityEventContextMappingBswModule
         ] = field(
             default_factory=list,
@@ -4638,7 +4638,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        security_event_context_mapping_comm_connector: List[
+        security_event_context_mapping_comm_connector: list[
             SecurityEventContextMappingCommConnector
         ] = field(
             default_factory=list,
@@ -4648,7 +4648,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        security_event_context_mapping_functional_cluster: List[
+        security_event_context_mapping_functional_cluster: list[
             SecurityEventContextMappingFunctionalCluster
         ] = field(
             default_factory=list,
@@ -4658,7 +4658,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        security_event_definition: List[SecurityEventDefinition] = field(
+        security_event_definition: list[SecurityEventDefinition] = field(
             default_factory=list,
             metadata={
                 "name": "SECURITY-EVENT-DEFINITION",
@@ -4666,7 +4666,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        security_event_filter_chain: List[SecurityEventFilterChain] = field(
+        security_event_filter_chain: list[SecurityEventFilterChain] = field(
             default_factory=list,
             metadata={
                 "name": "SECURITY-EVENT-FILTER-CHAIN",
@@ -4674,7 +4674,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        security_event_mapping: List[SecurityEventMapping] = field(
+        security_event_mapping: list[SecurityEventMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SECURITY-EVENT-MAPPING",
@@ -4682,7 +4682,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        security_event_report_interface: List[SecurityEventReportInterface] = (
+        security_event_report_interface: list[SecurityEventReportInterface] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4692,7 +4692,7 @@ class ArPackage:
                 },
             )
         )
-        security_event_report_to_security_event_definition_mapping: List[
+        security_event_report_to_security_event_definition_mapping: list[
             SecurityEventReportToSecurityEventDefinitionMapping
         ] = field(
             default_factory=list,
@@ -4702,7 +4702,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sender_receiver_interface: List[SenderReceiverInterface] = field(
+        sender_receiver_interface: list[SenderReceiverInterface] = field(
             default_factory=list,
             metadata={
                 "name": "SENDER-RECEIVER-INTERFACE",
@@ -4710,7 +4710,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sensor_actuator_sw_component_type: List[
+        sensor_actuator_sw_component_type: list[
             SensorActuatorSwComponentType
         ] = field(
             default_factory=list,
@@ -4720,7 +4720,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        serialization_technology: List[SerializationTechnology] = field(
+        serialization_technology: list[SerializationTechnology] = field(
             default_factory=list,
             metadata={
                 "name": "SERIALIZATION-TECHNOLOGY",
@@ -4728,7 +4728,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        service_instance_collection_set: List[ServiceInstanceCollectionSet] = (
+        service_instance_collection_set: list[ServiceInstanceCollectionSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4738,7 +4738,7 @@ class ArPackage:
                 },
             )
         )
-        service_instance_to_port_prototype_mapping: List[
+        service_instance_to_port_prototype_mapping: list[
             ServiceInstanceToPortPrototypeMapping
         ] = field(
             default_factory=list,
@@ -4748,7 +4748,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        service_instance_to_signal_mapping_set: List[
+        service_instance_to_signal_mapping_set: list[
             ServiceInstanceToSignalMappingSet
         ] = field(
             default_factory=list,
@@ -4758,7 +4758,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        service_interface: List[ServiceInterface] = field(
+        service_interface: list[ServiceInterface] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INTERFACE",
@@ -4766,7 +4766,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        service_interface_mapping_set: List[ServiceInterfaceMappingSet] = (
+        service_interface_mapping_set: list[ServiceInterfaceMappingSet] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4776,7 +4776,7 @@ class ArPackage:
                 },
             )
         )
-        service_interface_pedigree: List[ServiceInterfacePedigree] = field(
+        service_interface_pedigree: list[ServiceInterfacePedigree] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INTERFACE-PEDIGREE",
@@ -4784,7 +4784,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        service_proxy_sw_component_type: List[ServiceProxySwComponentType] = (
+        service_proxy_sw_component_type: list[ServiceProxySwComponentType] = (
             field(
                 default_factory=list,
                 metadata={
@@ -4794,7 +4794,7 @@ class ArPackage:
                 },
             )
         )
-        service_sw_component_type: List[ServiceSwComponentType] = field(
+        service_sw_component_type: list[ServiceSwComponentType] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-SW-COMPONENT-TYPE",
@@ -4802,7 +4802,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        service_timing: List[ServiceTiming] = field(
+        service_timing: list[ServiceTiming] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-TIMING",
@@ -4810,7 +4810,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        signal_service_translation_props_set: List[
+        signal_service_translation_props_set: list[
             SignalServiceTranslationPropsSet
         ] = field(
             default_factory=list,
@@ -4820,7 +4820,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        so_ad_routing_group: List[SoAdRoutingGroup] = field(
+        so_ad_routing_group: list[SoAdRoutingGroup] = field(
             default_factory=list,
             metadata={
                 "name": "SO-AD-ROUTING-GROUP",
@@ -4828,7 +4828,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        socket_connection_ipdu_identifier_set: List[
+        socket_connection_ipdu_identifier_set: list[
             SocketConnectionIpduIdentifierSet
         ] = field(
             default_factory=list,
@@ -4838,7 +4838,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        software_cluster: List[SoftwareCluster] = field(
+        software_cluster: list[SoftwareCluster] = field(
             default_factory=list,
             metadata={
                 "name": "SOFTWARE-CLUSTER",
@@ -4846,7 +4846,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        software_cluster_design: List[SoftwareClusterDesign] = field(
+        software_cluster_design: list[SoftwareClusterDesign] = field(
             default_factory=list,
             metadata={
                 "name": "SOFTWARE-CLUSTER-DESIGN",
@@ -4854,7 +4854,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        software_package: List[SoftwarePackage] = field(
+        software_package: list[SoftwarePackage] = field(
             default_factory=list,
             metadata={
                 "name": "SOFTWARE-PACKAGE",
@@ -4862,7 +4862,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_data_prototype_transformation_props: List[
+        someip_data_prototype_transformation_props: list[
             SomeipDataPrototypeTransformationProps
         ] = field(
             default_factory=list,
@@ -4872,7 +4872,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_sd_client_event_group_timing_config: List[
+        someip_sd_client_event_group_timing_config: list[
             SomeipSdClientEventGroupTimingConfig
         ] = field(
             default_factory=list,
@@ -4882,7 +4882,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_sd_client_service_instance_config: List[
+        someip_sd_client_service_instance_config: list[
             SomeipSdClientServiceInstanceConfig
         ] = field(
             default_factory=list,
@@ -4892,7 +4892,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_sd_server_event_group_timing_config: List[
+        someip_sd_server_event_group_timing_config: list[
             SomeipSdServerEventGroupTimingConfig
         ] = field(
             default_factory=list,
@@ -4902,7 +4902,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_sd_server_service_instance_config: List[
+        someip_sd_server_service_instance_config: list[
             SomeipSdServerServiceInstanceConfig
         ] = field(
             default_factory=list,
@@ -4912,7 +4912,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_service_instance_to_machine_mapping: List[
+        someip_service_instance_to_machine_mapping: list[
             SomeipServiceInstanceToMachineMapping
         ] = field(
             default_factory=list,
@@ -4922,7 +4922,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_service_interface_deployment: List[
+        someip_service_interface_deployment: list[
             SomeipServiceInterfaceDeployment
         ] = field(
             default_factory=list,
@@ -4932,7 +4932,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_tp_config: List[SomeipTpConfig] = field(
+        someip_tp_config: list[SomeipTpConfig] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-TP-CONFIG",
@@ -4940,7 +4940,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        startup_config_set: List[StartupConfigSet] = field(
+        startup_config_set: list[StartupConfigSet] = field(
             default_factory=list,
             metadata={
                 "name": "STARTUP-CONFIG-SET",
@@ -4948,7 +4948,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        std_cpp_implementation_data_type: List[
+        std_cpp_implementation_data_type: list[
             StdCppImplementationDataType
         ] = field(
             default_factory=list,
@@ -4958,7 +4958,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sw_addr_method: List[SwAddrMethod] = field(
+        sw_addr_method: list[SwAddrMethod] = field(
             default_factory=list,
             metadata={
                 "name": "SW-ADDR-METHOD",
@@ -4966,7 +4966,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sw_axis_type: List[SwAxisType] = field(
+        sw_axis_type: list[SwAxisType] = field(
             default_factory=list,
             metadata={
                 "name": "SW-AXIS-TYPE",
@@ -4974,7 +4974,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sw_base_type: List[SwBaseType] = field(
+        sw_base_type: list[SwBaseType] = field(
             default_factory=list,
             metadata={
                 "name": "SW-BASE-TYPE",
@@ -4982,7 +4982,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sw_record_layout: List[SwRecordLayout] = field(
+        sw_record_layout: list[SwRecordLayout] = field(
             default_factory=list,
             metadata={
                 "name": "SW-RECORD-LAYOUT",
@@ -4990,7 +4990,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sw_systemconst: List[SwSystemconst] = field(
+        sw_systemconst: list[SwSystemconst] = field(
             default_factory=list,
             metadata={
                 "name": "SW-SYSTEMCONST",
@@ -4998,7 +4998,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sw_systemconstant_value_set: List[SwSystemconstantValueSet] = field(
+        sw_systemconstant_value_set: list[SwSystemconstantValueSet] = field(
             default_factory=list,
             metadata={
                 "name": "SW-SYSTEMCONSTANT-VALUE-SET",
@@ -5006,7 +5006,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        swc_bsw_mapping: List[SwcBswMapping] = field(
+        swc_bsw_mapping: list[SwcBswMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-BSW-MAPPING",
@@ -5014,7 +5014,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        swc_implementation: List[SwcImplementation] = field(
+        swc_implementation: list[SwcImplementation] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-IMPLEMENTATION",
@@ -5022,7 +5022,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        swc_timing: List[SwcTiming] = field(
+        swc_timing: list[SwcTiming] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-TIMING",
@@ -5030,7 +5030,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        synchronized_time_base_consumer_interface: List[
+        synchronized_time_base_consumer_interface: list[
             SynchronizedTimeBaseConsumerInterface
         ] = field(
             default_factory=list,
@@ -5040,7 +5040,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        synchronized_time_base_provider_interface: List[
+        synchronized_time_base_provider_interface: list[
             SynchronizedTimeBaseProviderInterface
         ] = field(
             default_factory=list,
@@ -5050,7 +5050,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        system: List[System] = field(
+        system: list[System] = field(
             default_factory=list,
             metadata={
                 "name": "SYSTEM",
@@ -5058,7 +5058,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        system_signal: List[SystemSignal] = field(
+        system_signal: list[SystemSignal] = field(
             default_factory=list,
             metadata={
                 "name": "SYSTEM-SIGNAL",
@@ -5066,7 +5066,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        system_signal_group: List[SystemSignalGroup] = field(
+        system_signal_group: list[SystemSignalGroup] = field(
             default_factory=list,
             metadata={
                 "name": "SYSTEM-SIGNAL-GROUP",
@@ -5074,7 +5074,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        system_timing: List[SystemTiming] = field(
+        system_timing: list[SystemTiming] = field(
             default_factory=list,
             metadata={
                 "name": "SYSTEM-TIMING",
@@ -5082,7 +5082,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        tcp_option_filter_set: List[TcpOptionFilterSet] = field(
+        tcp_option_filter_set: list[TcpOptionFilterSet] = field(
             default_factory=list,
             metadata={
                 "name": "TCP-OPTION-FILTER-SET",
@@ -5090,7 +5090,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_cp_software_cluster_mapping_set: List[
+        td_cp_software_cluster_mapping_set: list[
             TdCpSoftwareClusterMappingSet
         ] = field(
             default_factory=list,
@@ -5100,7 +5100,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        time_base_provider_to_persistency_mapping: List[
+        time_base_provider_to_persistency_mapping: list[
             TimeBaseProviderToPersistencyMapping
         ] = field(
             default_factory=list,
@@ -5110,7 +5110,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        time_sync_port_prototype_to_time_base_mapping: List[
+        time_sync_port_prototype_to_time_base_mapping: list[
             TimeSyncPortPrototypeToTimeBaseMapping
         ] = field(
             default_factory=list,
@@ -5120,7 +5120,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        tls_iam_remote_subject: List[TlsIamRemoteSubject] = field(
+        tls_iam_remote_subject: list[TlsIamRemoteSubject] = field(
             default_factory=list,
             metadata={
                 "name": "TLS-IAM-REMOTE-SUBJECT",
@@ -5128,7 +5128,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        tlv_data_id_definition_set: List[TlvDataIdDefinitionSet] = field(
+        tlv_data_id_definition_set: list[TlvDataIdDefinitionSet] = field(
             default_factory=list,
             metadata={
                 "name": "TLV-DATA-ID-DEFINITION-SET",
@@ -5136,7 +5136,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        transformation_props_set: List[TransformationPropsSet] = field(
+        transformation_props_set: list[TransformationPropsSet] = field(
             default_factory=list,
             metadata={
                 "name": "TRANSFORMATION-PROPS-SET",
@@ -5144,7 +5144,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        transformation_props_to_service_interface_element_mapping_set: List[
+        transformation_props_to_service_interface_element_mapping_set: list[
             TransformationPropsToServiceInterfaceElementMappingSet
         ] = field(
             default_factory=list,
@@ -5154,7 +5154,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        trigger_interface: List[TriggerInterface] = field(
+        trigger_interface: list[TriggerInterface] = field(
             default_factory=list,
             metadata={
                 "name": "TRIGGER-INTERFACE",
@@ -5162,7 +5162,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_cluster: List[TtcanCluster] = field(
+        ttcan_cluster: list[TtcanCluster] = field(
             default_factory=list,
             metadata={
                 "name": "TTCAN-CLUSTER",
@@ -5170,7 +5170,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        unit: List[Unit] = field(
+        unit: list[Unit] = field(
             default_factory=list,
             metadata={
                 "name": "UNIT",
@@ -5178,7 +5178,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        unit_group: List[UnitGroup] = field(
+        unit_group: list[UnitGroup] = field(
             default_factory=list,
             metadata={
                 "name": "UNIT-GROUP",
@@ -5186,7 +5186,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_cluster: List[UserDefinedCluster] = field(
+        user_defined_cluster: list[UserDefinedCluster] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-CLUSTER",
@@ -5194,7 +5194,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_ethernet_frame: List[UserDefinedEthernetFrame] = field(
+        user_defined_ethernet_frame: list[UserDefinedEthernetFrame] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-ETHERNET-FRAME",
@@ -5202,7 +5202,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_i_pdu: List[UserDefinedIPdu] = field(
+        user_defined_i_pdu: list[UserDefinedIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-I-PDU",
@@ -5210,7 +5210,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_pdu: List[UserDefinedPdu] = field(
+        user_defined_pdu: list[UserDefinedPdu] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-PDU",
@@ -5218,7 +5218,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_service_instance_to_machine_mapping: List[
+        user_defined_service_instance_to_machine_mapping: list[
             UserDefinedServiceInstanceToMachineMapping
         ] = field(
             default_factory=list,
@@ -5228,7 +5228,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_service_interface_deployment: List[
+        user_defined_service_interface_deployment: list[
             UserDefinedServiceInterfaceDeployment
         ] = field(
             default_factory=list,
@@ -5238,7 +5238,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        vehicle_package: List[VehiclePackage] = field(
+        vehicle_package: list[VehiclePackage] = field(
             default_factory=list,
             metadata={
                 "name": "VEHICLE-PACKAGE",
@@ -5246,7 +5246,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        vfb_timing: List[VfbTiming] = field(
+        vfb_timing: list[VfbTiming] = field(
             default_factory=list,
             metadata={
                 "name": "VFB-TIMING",
@@ -5254,7 +5254,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        view_map_set: List[ViewMapSet] = field(
+        view_map_set: list[ViewMapSet] = field(
             default_factory=list,
             metadata={
                 "name": "VIEW-MAP-SET",
@@ -5262,7 +5262,7 @@ class ArPackage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        xcp_pdu: List[XcpPdu] = field(
+        xcp_pdu: list[XcpPdu] = field(
             default_factory=list,
             metadata={
                 "name": "XCP-PDU",
@@ -5273,7 +5273,7 @@ class ArPackage:
 
     @dataclass
     class ArPackages:
-        ar_package: List["ArPackage"] = field(
+        ar_package: list["ArPackage"] = field(
             default_factory=list,
             metadata={
                 "name": "AR-PACKAGE",

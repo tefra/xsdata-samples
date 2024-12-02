@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -211,7 +211,7 @@ class LogicalSupervision:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -222,7 +222,7 @@ class LogicalSupervision:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -233,7 +233,7 @@ class LogicalSupervision:
 
     @dataclass
     class InitialCheckpointRefs:
-        initial_checkpoint_ref: List[
+        initial_checkpoint_ref: list[
             "LogicalSupervision.InitialCheckpointRefs.InitialCheckpointRef"
         ] = field(
             default_factory=list,
@@ -257,7 +257,7 @@ class LogicalSupervision:
 
     @dataclass
     class FinalCheckpointRefs:
-        final_checkpoint_ref: List[
+        final_checkpoint_ref: list[
             "LogicalSupervision.FinalCheckpointRefs.FinalCheckpointRef"
         ] = field(
             default_factory=list,
@@ -281,7 +281,7 @@ class LogicalSupervision:
 
     @dataclass
     class TransitionRefs:
-        transition_ref: List[
+        transition_ref: list[
             "LogicalSupervision.TransitionRefs.TransitionRef"
         ] = field(
             default_factory=list,

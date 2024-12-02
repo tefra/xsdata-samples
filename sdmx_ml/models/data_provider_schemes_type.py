@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.data_provider_scheme_type import DataProviderSchemeType
 
@@ -20,7 +19,7 @@ class DataProviderSchemesType:
         described.
     """
 
-    data_provider_scheme: Tuple[DataProviderSchemeType, ...] = field(
+    data_provider_scheme: tuple[DataProviderSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DataProviderScheme",

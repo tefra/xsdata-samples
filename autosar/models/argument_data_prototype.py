@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -244,7 +244,7 @@ class ArgumentDataPrototype:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -255,7 +255,7 @@ class ArgumentDataPrototype:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -277,7 +277,7 @@ class ArgumentDataPrototype:
 
     @dataclass
     class TypeBlueprints:
-        autosar_data_type_ref_conditional: List[
+        autosar_data_type_ref_conditional: list[
             AutosarDataTypeRefConditional
         ] = field(
             default_factory=list,

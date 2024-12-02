@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
@@ -133,7 +133,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_name: Tuple[ContractName, ...] = field(
+    contract_name: tuple[ContractName, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContractName",
@@ -141,7 +141,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -157,7 +157,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -165,7 +165,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -192,7 +192,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    subcontractor_party: Tuple[SubcontractorParty, ...] = field(
+    subcontractor_party: tuple[SubcontractorParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubcontractorParty",
@@ -216,7 +216,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tendered_project: Tuple[TenderedProject, ...] = field(
+    tendered_project: tuple[TenderedProject, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TenderedProject",

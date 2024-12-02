@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -294,7 +294,7 @@ class AnalyzedExecutionTime:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -305,7 +305,7 @@ class AnalyzedExecutionTime:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -349,7 +349,7 @@ class AnalyzedExecutionTime:
 
     @dataclass
     class IncludedLibraryRefs:
-        included_library_ref: List[
+        included_library_ref: list[
             "AnalyzedExecutionTime.IncludedLibraryRefs.IncludedLibraryRef"
         ] = field(
             default_factory=list,
@@ -373,7 +373,7 @@ class AnalyzedExecutionTime:
 
     @dataclass
     class MemorySectionLocations:
-        memory_section_location: List[MemorySectionLocation] = field(
+        memory_section_location: list[MemorySectionLocation] = field(
             default_factory=list,
             metadata={
                 "name": "MEMORY-SECTION-LOCATION",

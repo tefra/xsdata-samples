@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
@@ -24,7 +23,7 @@ class Xhtmltype:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",

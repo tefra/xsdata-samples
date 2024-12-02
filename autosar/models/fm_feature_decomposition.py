@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .category_string import CategoryString
 from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum
@@ -93,7 +93,7 @@ class FmFeatureDecomposition:
 
     @dataclass
     class FeatureRefs:
-        feature_ref: List["FmFeatureDecomposition.FeatureRefs.FeatureRef"] = (
+        feature_ref: list["FmFeatureDecomposition.FeatureRefs.FeatureRef"] = (
             field(
                 default_factory=list,
                 metadata={

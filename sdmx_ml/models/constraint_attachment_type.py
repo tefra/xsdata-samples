@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.queryable_data_source_type_1 import (
     QueryableDataSourceType1,
@@ -15,7 +15,7 @@ class ConstraintAttachmentType:
     artefacts.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             "ConstraintAttachmentType.DataProvider",
             "ConstraintAttachmentType.MetadataProvider",
@@ -65,7 +65,7 @@ class ConstraintAttachmentType:
             ),
         },
     )
-    choice_1: Tuple[
+    choice_1: tuple[
         Union[
             QueryableDataSourceType1,
             "ConstraintAttachmentType.MetadataStructure",

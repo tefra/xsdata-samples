@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.description import Description
 from sdmx_ml.models.name import Name
@@ -20,7 +20,7 @@ class SentinelValueType:
     :ivar value: The sentinel value being described.
     """
 
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class SentinelValueType:
             "min_occurs": 1,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.shipping_schedule_response import (
     CommitmentLevelCoded,
@@ -473,7 +473,7 @@ class ChangedPlanningScheduleHeader:
 
 @dataclass(kw_only=True)
 class ListOfScheduleDetail:
-    schedule_detail: List[ScheduleDetail] = field(
+    schedule_detail: list[ScheduleDetail] = field(
         default_factory=list,
         metadata={
             "name": "ScheduleDetail",
@@ -672,7 +672,7 @@ class PlanningScheduleResponseHeader:
 
 @dataclass(kw_only=True)
 class ListOfLocationPlanningItemDetail:
-    location_planning_item_detail: List[LocationPlanningItemDetail] = field(
+    location_planning_item_detail: list[LocationPlanningItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "LocationPlanningItemDetail",
@@ -684,7 +684,7 @@ class ListOfLocationPlanningItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfLocationSchedule:
-    location_schedule: List[LocationSchedule] = field(
+    location_schedule: list[LocationSchedule] = field(
         default_factory=list,
         metadata={
             "name": "LocationSchedule",
@@ -913,7 +913,7 @@ class MaterialGroupedPlanningResponse:
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedPlanningResponse:
-    location_grouped_planning_response: List[
+    location_grouped_planning_response: list[
         LocationGroupedPlanningResponse
     ] = field(
         default_factory=list,
@@ -927,7 +927,7 @@ class ListOfLocationGroupedPlanningResponse:
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedPlanningResponse:
-    material_grouped_planning_response: List[
+    material_grouped_planning_response: list[
         MaterialGroupedPlanningResponse
     ] = field(
         default_factory=list,

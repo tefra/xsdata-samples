@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.carriageway_enum import CarriagewayEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -36,7 +36,7 @@ class AffectedCarriagewayAndLanes:
             "required": True,
         },
     )
-    lane: List[LaneEnum] = field(
+    lane: list[LaneEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",

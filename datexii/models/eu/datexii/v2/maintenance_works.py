@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.road_maintenance_type_enum import (
@@ -20,7 +20,7 @@ class MaintenanceWorks(Roadworks):
     :ivar maintenance_works_extension:
     """
 
-    road_maintenance_type: List[RoadMaintenanceTypeEnum] = field(
+    road_maintenance_type: list[RoadMaintenanceTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "roadMaintenanceType",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -40,7 +40,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
     class Meta:
         name = "PRPA_IN201305UV02.QUQI_MT021001UV01.ControlActProcess"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -56,7 +56,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -64,7 +64,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -93,7 +93,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    priority_code: List[Ce] = field(
+    priority_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "priorityCode",
@@ -101,7 +101,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reason_code: List[Ce] = field(
+    reason_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "reasonCode",
@@ -117,7 +117,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    overseer: List[QuqiMt021001Uv01Overseer] = field(
+    overseer: list[QuqiMt021001Uv01Overseer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -125,7 +125,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    author_or_performer: List[QuqiMt021001Uv01AuthorOrPerformer] = field(
+    author_or_performer: list[QuqiMt021001Uv01AuthorOrPerformer] = field(
         default_factory=list,
         metadata={
             "name": "authorOrPerformer",
@@ -134,7 +134,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    data_enterer: List[QuqiMt021001Uv01DataEnterer] = field(
+    data_enterer: list[QuqiMt021001Uv01DataEnterer] = field(
         default_factory=list,
         metadata={
             "name": "dataEnterer",
@@ -143,7 +143,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    information_recipient: List[QuqiMt021001Uv01InformationRecipient] = field(
+    information_recipient: list[QuqiMt021001Uv01InformationRecipient] = field(
         default_factory=list,
         metadata={
             "name": "informationRecipient",
@@ -152,7 +152,7 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    reason_of: List[QuqiMt021001Uv01Reason] = field(
+    reason_of: list[QuqiMt021001Uv01Reason] = field(
         default_factory=list,
         metadata={
             "name": "reasonOf",
@@ -200,7 +200,7 @@ class PrpaIn201305Uv02McciMt000100Uv01Message:
     class Meta:
         name = "PRPA_IN201305UV02.MCCI_MT000100UV01.Message"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -216,7 +216,7 @@ class PrpaIn201305Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -266,7 +266,7 @@ class PrpaIn201305Uv02McciMt000100Uv01Message:
             "required": True,
         },
     )
-    profile_id: List[Ii] = field(
+    profile_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "profileId",
@@ -309,7 +309,7 @@ class PrpaIn201305Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    attachment_text: List[EdExplicit] = field(
+    attachment_text: list[EdExplicit] = field(
         default_factory=list,
         metadata={
             "name": "attachmentText",
@@ -317,7 +317,7 @@ class PrpaIn201305Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    receiver: List[McciMt000100Uv01Receiver] = field(
+    receiver: list[McciMt000100Uv01Receiver] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -325,7 +325,7 @@ class PrpaIn201305Uv02McciMt000100Uv01Message:
             "min_occurs": 1,
         },
     )
-    respond_to: List[McciMt000100Uv01RespondTo] = field(
+    respond_to: list[McciMt000100Uv01RespondTo] = field(
         default_factory=list,
         metadata={
             "name": "respondTo",
@@ -342,7 +342,7 @@ class PrpaIn201305Uv02McciMt000100Uv01Message:
             "required": True,
         },
     )
-    attention_line: List[McciMt000100Uv01AttentionLine] = field(
+    attention_line: list[McciMt000100Uv01AttentionLine] = field(
         default_factory=list,
         metadata={
             "name": "attentionLine",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.submission_result_type import SubmissionResultType
 
@@ -20,7 +19,7 @@ class SubmitStructureResponseType1:
     class Meta:
         name = "SubmitStructureResponseType"
 
-    submission_result: Tuple[SubmissionResultType, ...] = field(
+    submission_result: tuple[SubmissionResultType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubmissionResult",

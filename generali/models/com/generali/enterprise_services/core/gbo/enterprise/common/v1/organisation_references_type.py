@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_reference_type import (
     OrganisationReferenceType,
@@ -18,7 +17,7 @@ class OrganisationReferencesType:
         be D&amp;B number
     """
 
-    organisation_reference: List[OrganisationReferenceType] = field(
+    organisation_reference: list[OrganisationReferenceType] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationReference",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -133,7 +133,7 @@ class ReceiptAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -149,7 +149,7 @@ class ReceiptAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_reference: Tuple[OrderReference, ...] = field(
+    order_reference: tuple[OrderReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrderReference",
@@ -157,7 +157,7 @@ class ReceiptAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_document_reference: Tuple[DespatchDocumentReference, ...] = field(
+    despatch_document_reference: tuple[DespatchDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DespatchDocumentReference",
@@ -165,7 +165,7 @@ class ReceiptAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -175,7 +175,7 @@ class ReceiptAdviceType:
             },
         )
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -225,7 +225,7 @@ class ReceiptAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receipt_line: Tuple[ReceiptLine, ...] = field(
+    receipt_line: tuple[ReceiptLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReceiptLine",

@@ -1,19 +1,18 @@
 from dataclasses import dataclass, field
-from typing import Dict, List
 
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 
 @dataclass
 class MetadataType:
-    any_element: List[object] = field(
+    any_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

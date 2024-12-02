@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -206,7 +206,7 @@ class PrpaMt201302Uv02CoveredParty:
     class Meta:
         name = "PRPA_MT201302UV02.CoveredParty"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -222,7 +222,7 @@ class PrpaMt201302Uv02CoveredParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -291,7 +291,7 @@ class PrpaMt201302Uv02Group:
     class Meta:
         name = "PRPA_MT201302UV02.Group"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -307,7 +307,7 @@ class PrpaMt201302Uv02Group:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -315,7 +315,7 @@ class PrpaMt201302Uv02Group:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -329,7 +329,7 @@ class PrpaMt201302Uv02Group:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -359,7 +359,7 @@ class PrpaMt201302Uv02Group:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -417,7 +417,7 @@ class PrpaMt201302Uv02LanguageCommunication:
     class Meta:
         name = "PRPA_MT201302UV02.LanguageCommunication"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -433,7 +433,7 @@ class PrpaMt201302Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -502,7 +502,7 @@ class PrpaMt201302Uv02Nation:
     class Meta:
         name = "PRPA_MT201302UV02.Nation"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -518,7 +518,7 @@ class PrpaMt201302Uv02Nation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -673,7 +673,7 @@ class PrpaMt201302Uv02Subject2:
     class Meta:
         name = "PRPA_MT201302UV02.Subject2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -689,7 +689,7 @@ class PrpaMt201302Uv02Subject2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -727,7 +727,7 @@ class PrpaMt201302Uv02Subject3:
     class Meta:
         name = "PRPA_MT201302UV02.Subject3"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -743,7 +743,7 @@ class PrpaMt201302Uv02Subject3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -782,7 +782,7 @@ class PrpaMt201302Uv02AdministrativeObservation:
     class Meta:
         name = "PRPA_MT201302UV02.AdministrativeObservation"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -798,7 +798,7 @@ class PrpaMt201302Uv02AdministrativeObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -806,7 +806,7 @@ class PrpaMt201302Uv02AdministrativeObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02AdministrativeObservationId] = field(
+    id: list[PrpaMt201302Uv02AdministrativeObservationId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -829,7 +829,7 @@ class PrpaMt201302Uv02AdministrativeObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -875,7 +875,7 @@ class PrpaMt201302Uv02BirthPlace:
     class Meta:
         name = "PRPA_MT201302UV02.BirthPlace"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -891,7 +891,7 @@ class PrpaMt201302Uv02BirthPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -962,7 +962,7 @@ class PrpaMt201302Uv02CareGiver:
     class Meta:
         name = "PRPA_MT201302UV02.CareGiver"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -978,7 +978,7 @@ class PrpaMt201302Uv02CareGiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -986,7 +986,7 @@ class PrpaMt201302Uv02CareGiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02CareGiverId] = field(
+    id: list[PrpaMt201302Uv02CareGiverId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1000,14 +1000,14 @@ class PrpaMt201302Uv02CareGiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1078,7 +1078,7 @@ class PrpaMt201302Uv02Citizen:
     class Meta:
         name = "PRPA_MT201302UV02.Citizen"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1094,7 +1094,7 @@ class PrpaMt201302Uv02Citizen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1102,7 +1102,7 @@ class PrpaMt201302Uv02Citizen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02CitizenId] = field(
+    id: list[PrpaMt201302Uv02CitizenId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1165,7 +1165,7 @@ class PrpaMt201302Uv02ContactParty:
     class Meta:
         name = "PRPA_MT201302UV02.ContactParty"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1181,7 +1181,7 @@ class PrpaMt201302Uv02ContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1189,7 +1189,7 @@ class PrpaMt201302Uv02ContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02ContactPartyId] = field(
+    id: list[PrpaMt201302Uv02ContactPartyId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1203,14 +1203,14 @@ class PrpaMt201302Uv02ContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1282,7 +1282,7 @@ class PrpaMt201302Uv02Employee:
     class Meta:
         name = "PRPA_MT201302UV02.Employee"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1298,7 +1298,7 @@ class PrpaMt201302Uv02Employee:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1306,21 +1306,21 @@ class PrpaMt201302Uv02Employee:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02EmployeeId] = field(
+    id: list[PrpaMt201302Uv02EmployeeId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1406,7 +1406,7 @@ class PrpaMt201302Uv02Guardian:
     class Meta:
         name = "PRPA_MT201302UV02.Guardian"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1422,7 +1422,7 @@ class PrpaMt201302Uv02Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1430,21 +1430,21 @@ class PrpaMt201302Uv02Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02GuardianId] = field(
+    id: list[PrpaMt201302Uv02GuardianId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1540,7 +1540,7 @@ class PrpaMt201302Uv02Member:
     class Meta:
         name = "PRPA_MT201302UV02.Member"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1556,7 +1556,7 @@ class PrpaMt201302Uv02Member:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1564,7 +1564,7 @@ class PrpaMt201302Uv02Member:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02MemberId] = field(
+    id: list[PrpaMt201302Uv02MemberId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1642,7 +1642,7 @@ class PrpaMt201302Uv02OtherIds:
     class Meta:
         name = "PRPA_MT201302UV02.OtherIDs"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1658,7 +1658,7 @@ class PrpaMt201302Uv02OtherIds:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1666,7 +1666,7 @@ class PrpaMt201302Uv02OtherIds:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02OtherIdsId] = field(
+    id: list[PrpaMt201302Uv02OtherIdsId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1731,7 +1731,7 @@ class PrpaMt201302Uv02PatientOfOtherProvider:
     class Meta:
         name = "PRPA_MT201302UV02.PatientOfOtherProvider"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1747,7 +1747,7 @@ class PrpaMt201302Uv02PatientOfOtherProvider:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1804,7 +1804,7 @@ class PrpaMt201302Uv02PersonalRelationship:
     class Meta:
         name = "PRPA_MT201302UV02.PersonalRelationship"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1820,7 +1820,7 @@ class PrpaMt201302Uv02PersonalRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1828,7 +1828,7 @@ class PrpaMt201302Uv02PersonalRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02PersonalRelationshipId] = field(
+    id: list[PrpaMt201302Uv02PersonalRelationshipId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1843,14 +1843,14 @@ class PrpaMt201302Uv02PersonalRelationship:
             "required": True,
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1940,7 +1940,7 @@ class PrpaMt201302Uv02Student:
     class Meta:
         name = "PRPA_MT201302UV02.Student"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1956,7 +1956,7 @@ class PrpaMt201302Uv02Student:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1964,21 +1964,21 @@ class PrpaMt201302Uv02Student:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02StudentId] = field(
+    id: list[PrpaMt201302Uv02StudentId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2049,7 +2049,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
     class Meta:
         name = "PRPA_MT201302UV02.NonPersonLivingSubject"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2065,7 +2065,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2073,7 +2073,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02NonPersonLivingSubjectId] = field(
+    id: list[PrpaMt201302Uv02NonPersonLivingSubjectId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2087,7 +2087,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2109,14 +2109,14 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    risk_code: List[Ce] = field(
+    risk_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "riskCode",
@@ -2124,7 +2124,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    handling_code: List[Ce] = field(
+    handling_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "handlingCode",
@@ -2204,7 +2204,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_patient_of_other_provider: List[
+    as_patient_of_other_provider: list[
         PrpaMt201302Uv02PatientOfOtherProvider
     ] = field(
         default_factory=list,
@@ -2215,7 +2215,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_member: List[PrpaMt201302Uv02Member] = field(
+    as_member: list[PrpaMt201302Uv02Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -2224,7 +2224,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_other_ids: List[PrpaMt201302Uv02OtherIds] = field(
+    as_other_ids: list[PrpaMt201302Uv02OtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -2233,7 +2233,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    contact_party: List[PrpaMt201302Uv02ContactParty] = field(
+    contact_party: list[PrpaMt201302Uv02ContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -2242,7 +2242,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    guardian: List[PrpaMt201302Uv02Guardian] = field(
+    guardian: list[PrpaMt201302Uv02Guardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2250,7 +2250,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    personal_relationship: List[PrpaMt201302Uv02PersonalRelationship] = field(
+    personal_relationship: list[PrpaMt201302Uv02PersonalRelationship] = field(
         default_factory=list,
         metadata={
             "name": "personalRelationship",
@@ -2259,7 +2259,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    care_giver: List[PrpaMt201302Uv02CareGiver] = field(
+    care_giver: list[PrpaMt201302Uv02CareGiver] = field(
         default_factory=list,
         metadata={
             "name": "careGiver",
@@ -2277,7 +2277,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    guarantor_role: List[CoctMt670000Uv04GuarantorRole] = field(
+    guarantor_role: list[CoctMt670000Uv04GuarantorRole] = field(
         default_factory=list,
         metadata={
             "name": "guarantorRole",
@@ -2316,7 +2316,7 @@ class PrpaMt201302Uv02Person:
     class Meta:
         name = "PRPA_MT201302UV02.Person"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2332,7 +2332,7 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2340,14 +2340,14 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02PersonId] = field(
+    id: list[PrpaMt201302Uv02PersonId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[PnExplicit] = field(
+    name: list[PnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2362,7 +2362,7 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2425,7 +2425,7 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2448,7 +2448,7 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    disability_code: List[Ce] = field(
+    disability_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "disabilityCode",
@@ -2472,7 +2472,7 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    race_code: List[Ce] = field(
+    race_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "raceCode",
@@ -2480,7 +2480,7 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    ethnic_group_code: List[Ce] = field(
+    ethnic_group_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "ethnicGroupCode",
@@ -2488,7 +2488,7 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_patient_of_other_provider: List[
+    as_patient_of_other_provider: list[
         PrpaMt201302Uv02PatientOfOtherProvider
     ] = field(
         default_factory=list,
@@ -2499,7 +2499,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    as_employee: List[PrpaMt201302Uv02Employee] = field(
+    as_employee: list[PrpaMt201302Uv02Employee] = field(
         default_factory=list,
         metadata={
             "name": "asEmployee",
@@ -2508,7 +2508,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    as_citizen: List[PrpaMt201302Uv02Citizen] = field(
+    as_citizen: list[PrpaMt201302Uv02Citizen] = field(
         default_factory=list,
         metadata={
             "name": "asCitizen",
@@ -2517,7 +2517,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    as_student: List[PrpaMt201302Uv02Student] = field(
+    as_student: list[PrpaMt201302Uv02Student] = field(
         default_factory=list,
         metadata={
             "name": "asStudent",
@@ -2526,7 +2526,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    as_member: List[PrpaMt201302Uv02Member] = field(
+    as_member: list[PrpaMt201302Uv02Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -2535,7 +2535,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    as_other_ids: List[PrpaMt201302Uv02OtherIds] = field(
+    as_other_ids: list[PrpaMt201302Uv02OtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -2544,7 +2544,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    contact_party: List[PrpaMt201302Uv02ContactParty] = field(
+    contact_party: list[PrpaMt201302Uv02ContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -2553,7 +2553,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    guardian: List[PrpaMt201302Uv02Guardian] = field(
+    guardian: list[PrpaMt201302Uv02Guardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2561,7 +2561,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    personal_relationship: List[PrpaMt201302Uv02PersonalRelationship] = field(
+    personal_relationship: list[PrpaMt201302Uv02PersonalRelationship] = field(
         default_factory=list,
         metadata={
             "name": "personalRelationship",
@@ -2570,7 +2570,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    care_giver: List[PrpaMt201302Uv02CareGiver] = field(
+    care_giver: list[PrpaMt201302Uv02CareGiver] = field(
         default_factory=list,
         metadata={
             "name": "careGiver",
@@ -2588,7 +2588,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    guarantor_role: List[CoctMt670000Uv04GuarantorRole] = field(
+    guarantor_role: list[CoctMt670000Uv04GuarantorRole] = field(
         default_factory=list,
         metadata={
             "name": "guarantorRole",
@@ -2597,7 +2597,7 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    language_communication: List[PrpaMt201302Uv02LanguageCommunication] = (
+    language_communication: list[PrpaMt201302Uv02LanguageCommunication] = (
         field(
             default_factory=list,
             metadata={
@@ -2638,7 +2638,7 @@ class PrpaMt201302Uv02Subject4:
     class Meta:
         name = "PRPA_MT201302UV02.Subject4"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2654,7 +2654,7 @@ class PrpaMt201302Uv02Subject4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2728,7 +2728,7 @@ class PrpaMt201302Uv02Patient:
     class Meta:
         name = "PRPA_MT201302UV02.Patient"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2744,7 +2744,7 @@ class PrpaMt201302Uv02Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2752,7 +2752,7 @@ class PrpaMt201302Uv02Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[PrpaMt201302Uv02PatientId] = field(
+    id: list[PrpaMt201302Uv02PatientId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2760,14 +2760,14 @@ class PrpaMt201302Uv02Patient:
             "min_occurs": 1,
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2791,7 +2791,7 @@ class PrpaMt201302Uv02Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -2836,7 +2836,7 @@ class PrpaMt201302Uv02Patient:
             "nillable": True,
         },
     )
-    subject_of: List[PrpaMt201302Uv02Subject4] = field(
+    subject_of: list[PrpaMt201302Uv02Subject4] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf",
@@ -2845,7 +2845,7 @@ class PrpaMt201302Uv02Patient:
             "nillable": True,
         },
     )
-    covered_party_of: List[PrpaMt201302Uv02CoveredParty] = field(
+    covered_party_of: list[PrpaMt201302Uv02CoveredParty] = field(
         default_factory=list,
         metadata={
             "name": "coveredPartyOf",

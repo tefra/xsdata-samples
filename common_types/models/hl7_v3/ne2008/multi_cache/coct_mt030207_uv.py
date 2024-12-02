@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -25,7 +25,7 @@ class CoctMt030207UvLanguageCommunication:
     class Meta:
         name = "COCT_MT030207UV.LanguageCommunication"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -41,7 +41,7 @@ class CoctMt030207UvLanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -96,7 +96,7 @@ class CoctMt030207UvPerson:
     class Meta:
         name = "COCT_MT030207UV.Person"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -112,7 +112,7 @@ class CoctMt030207UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -120,14 +120,14 @@ class CoctMt030207UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[PnExplicit] = field(
+    name: list[PnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -135,7 +135,7 @@ class CoctMt030207UvPerson:
             "min_occurs": 1,
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -158,14 +158,14 @@ class CoctMt030207UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_communication: List[CoctMt030207UvLanguageCommunication] = field(
+    language_communication: list[CoctMt030207UvLanguageCommunication] = field(
         default_factory=list,
         metadata={
             "name": "languageCommunication",

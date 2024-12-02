@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.event_selector_type import EventSelectorType
 from sdmx_ml.models.notification_urltype import NotificationUrltype
@@ -60,7 +60,7 @@ class SubscriptionType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
         },
     )
-    notification_mail_to: Tuple[NotificationUrltype, ...] = field(
+    notification_mail_to: tuple[NotificationUrltype, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NotificationMailTo",
@@ -68,7 +68,7 @@ class SubscriptionType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
         },
     )
-    notification_http: Tuple[NotificationUrltype, ...] = field(
+    notification_http: tuple[NotificationUrltype, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NotificationHTTP",

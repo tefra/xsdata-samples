@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.attribute_2 import Attribute2
 from sdmx_ml.models.attribute_list_base_type import AttributeListBaseType
@@ -15,7 +15,7 @@ class AttributeListType(AttributeListBaseType):
     definition.
     """
 
-    attribute_or_metadata_attribute_usage: Tuple[
+    attribute_or_metadata_attribute_usage: tuple[
         Union[Attribute2, MetadataAttributeUsage], ...
     ] = field(
         default_factory=tuple,

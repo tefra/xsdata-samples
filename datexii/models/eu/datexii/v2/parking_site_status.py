@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.opening_status_enum import OpeningStatusEnum
@@ -60,7 +60,7 @@ class ParkingSiteStatus(ParkingRecordStatus):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_site_full_at_floor: List[int] = field(
+    parking_site_full_at_floor: list[int] = field(
         default_factory=list,
         metadata={
             "name": "parkingSiteFullAtFloor",

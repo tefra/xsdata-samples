@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.parking_occupancy_enum import (
@@ -149,7 +149,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_count_and_rate: List[VehicleCountAndRate] = field(
+    vehicle_count_and_rate: list[VehicleCountAndRate] = field(
         default_factory=list,
         metadata={
             "name": "vehicleCountAndRate",

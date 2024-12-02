@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
@@ -157,7 +157,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_pictogram_display_characteristics: List[
+    vms_pictogram_display_characteristics: list[
         VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics
     ] = field(
         default_factory=list,

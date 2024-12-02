@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
@@ -26,7 +26,7 @@ class MeasurementSiteTablePublication(PayloadPublication):
             "required": True,
         },
     )
-    measurement_site_table: List[MeasurementSiteTable] = field(
+    measurement_site_table: list[MeasurementSiteTable] = field(
         default_factory=list,
         metadata={
             "name": "measurementSiteTable",

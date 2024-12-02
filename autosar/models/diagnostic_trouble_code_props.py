@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -381,7 +381,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -392,7 +392,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -414,7 +414,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class ExtendedDataRecords:
-        diagnostic_extended_data_record_ref_conditional: List[
+        diagnostic_extended_data_record_ref_conditional: list[
             DiagnosticExtendedDataRecordRefConditional
         ] = field(
             default_factory=list,
@@ -427,7 +427,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class FreezeFrames:
-        diagnostic_freeze_frame_ref_conditional: List[
+        diagnostic_freeze_frame_ref_conditional: list[
             DiagnosticFreezeFrameRefConditional
         ] = field(
             default_factory=list,
@@ -462,7 +462,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class LegislatedFreezeFrameContentWwhObds:
-        diagnostic_data_identifier_set_ref_conditional: List[
+        diagnostic_data_identifier_set_ref_conditional: list[
             DiagnosticDataIdentifierSetRefConditional
         ] = field(
             default_factory=list,
@@ -475,7 +475,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class MemoryDestinationRefs:
-        memory_destination_ref: List[
+        memory_destination_ref: list[
             "DiagnosticTroubleCodeProps.MemoryDestinationRefs.MemoryDestinationRef"
         ] = field(
             default_factory=list,
@@ -499,7 +499,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class SnapshotRecordContents:
-        diagnostic_data_identifier_set_ref_conditional: List[
+        diagnostic_data_identifier_set_ref_conditional: list[
             DiagnosticDataIdentifierSetRefConditional
         ] = field(
             default_factory=list,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     Sdg,
@@ -104,7 +104,7 @@ class RptHook:
 
     @dataclass
     class Sdgs:
-        sdg: List[Sdg] = field(
+        sdg: list[Sdg] = field(
             default_factory=list,
             metadata={
                 "name": "SDG",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.clinicaltrials.clinical_trial_number import (
     ClinicalTrialNumber,
@@ -23,7 +22,7 @@ class Program:
         name = "program"
         namespace = "http://www.crossref.org/clinicaltrials.xsd"
 
-    clinical_trial_number: List[ClinicalTrialNumber] = field(
+    clinical_trial_number: list[ClinicalTrialNumber] = field(
         default_factory=list,
         metadata={
             "name": "clinical-trial-number",

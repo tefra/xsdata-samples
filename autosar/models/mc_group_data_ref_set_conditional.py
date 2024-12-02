@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .flat_instance_descriptor_subtypes_enum import (
@@ -85,7 +85,7 @@ class McGroupDataRefSetConditional:
 
     @dataclass
     class FlatMapEntryRefs:
-        flat_map_entry_ref: List[
+        flat_map_entry_ref: list[
             "McGroupDataRefSetConditional.FlatMapEntryRefs.FlatMapEntryRef"
         ] = field(
             default_factory=list,
@@ -109,7 +109,7 @@ class McGroupDataRefSetConditional:
 
     @dataclass
     class McDataInstanceRefs:
-        mc_data_instance_ref: List[
+        mc_data_instance_ref: list[
             "McGroupDataRefSetConditional.McDataInstanceRefs.McDataInstanceRef"
         ] = field(
             default_factory=list,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.multilingual_string_value import (
     MultilingualStringValue,
@@ -21,7 +21,7 @@ class MultilingualString:
 
     @dataclass
     class Values:
-        value: List[MultilingualStringValue] = field(
+        value: list[MultilingualStringValue] = field(
             default_factory=list,
             metadata={
                 "type": "Element",

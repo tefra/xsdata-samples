@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .interpolation_routine import InterpolationRoutine
 from .ref import Ref
@@ -77,7 +77,7 @@ class InterpolationRoutineMapping:
 
     @dataclass
     class InterpolationRoutines:
-        interpolation_routine: List[InterpolationRoutine] = field(
+        interpolation_routine: list[InterpolationRoutine] = field(
             default_factory=list,
             metadata={
                 "name": "INTERPOLATION-ROUTINE",

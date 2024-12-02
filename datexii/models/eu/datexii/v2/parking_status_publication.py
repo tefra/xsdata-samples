@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
 from datexii.models.eu.datexii.v2.parking_record_status import (
@@ -25,7 +25,7 @@ class ParkingStatusPublication:
     :ivar parking_record_status:
     """
 
-    parking_table_reference: List[ParkingTableVersionedReference] = field(
+    parking_table_reference: list[ParkingTableVersionedReference] = field(
         default_factory=list,
         metadata={
             "name": "parkingTableReference",
@@ -41,7 +41,7 @@ class ParkingStatusPublication:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_record_status: List[ParkingRecordStatus] = field(
+    parking_record_status: list[ParkingRecordStatus] = field(
         default_factory=list,
         metadata={
             "name": "parkingRecordStatus",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.maintainable_event_type import MaintainableEventType
@@ -23,7 +23,7 @@ class DataRegistrationEventsType:
         referenced in a uniqueness constraint.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             EmptyType,
             "DataRegistrationEventsType.RegistrationId",

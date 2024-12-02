@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .t_base_element import TBaseElement
@@ -12,7 +12,7 @@ class TCorrelationKey(TBaseElement):
     class Meta:
         name = "tCorrelationKey"
 
-    correlation_property_ref: List[QName] = field(
+    correlation_property_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "correlationPropertyRef",

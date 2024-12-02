@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .application_rule_based_value_specification import (
@@ -387,7 +387,7 @@ class ApplicationAssocMapValueSpecification:
 
     @dataclass
     class MapElementTuples:
-        application_assoc_map_element_value_specification: List[
+        application_assoc_map_element_value_specification: list[
             ApplicationAssocMapElementValueSpecification
         ] = field(
             default_factory=list,
@@ -485,7 +485,7 @@ class ArrayValueSpecification:
 
     @dataclass
     class Elements:
-        application_assoc_map_value_specification: List[
+        application_assoc_map_value_specification: list[
             ApplicationAssocMapValueSpecification
         ] = field(
             default_factory=list,
@@ -495,7 +495,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: List[
+        application_rule_based_value_specification: list[
             ApplicationRuleBasedValueSpecification
         ] = field(
             default_factory=list,
@@ -505,7 +505,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: List[
+        application_value_specification: list[
             ApplicationValueSpecification
         ] = field(
             default_factory=list,
@@ -515,7 +515,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: List["ArrayValueSpecification"] = field(
+        array_value_specification: list["ArrayValueSpecification"] = field(
             default_factory=list,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -523,7 +523,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: List[
+        composite_rule_based_value_specification: list[
             "CompositeRuleBasedValueSpecification"
         ] = field(
             default_factory=list,
@@ -533,7 +533,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: List[ConstantReference] = field(
+        constant_reference: list[ConstantReference] = field(
             default_factory=list,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -541,7 +541,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: List[
+        not_available_value_specification: list[
             NotAvailableValueSpecification
         ] = field(
             default_factory=list,
@@ -551,7 +551,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: List[
+        numerical_rule_based_value_specification: list[
             NumericalRuleBasedValueSpecification
         ] = field(
             default_factory=list,
@@ -561,7 +561,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: List[NumericalValueSpecification] = (
+        numerical_value_specification: list[NumericalValueSpecification] = (
             field(
                 default_factory=list,
                 metadata={
@@ -571,7 +571,7 @@ class ArrayValueSpecification:
                 },
             )
         )
-        record_value_specification: List["RecordValueSpecification"] = field(
+        record_value_specification: list["RecordValueSpecification"] = field(
             default_factory=list,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -579,7 +579,7 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: List[ReferenceValueSpecification] = (
+        reference_value_specification: list[ReferenceValueSpecification] = (
             field(
                 default_factory=list,
                 metadata={
@@ -589,7 +589,7 @@ class ArrayValueSpecification:
                 },
             )
         )
-        text_value_specification: List[TextValueSpecification] = field(
+        text_value_specification: list[TextValueSpecification] = field(
             default_factory=list,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",
@@ -695,7 +695,7 @@ class CompositeRuleBasedValueSpecification:
 
     @dataclass
     class Arguments:
-        application_assoc_map_value_specification: List[
+        application_assoc_map_value_specification: list[
             ApplicationAssocMapValueSpecification
         ] = field(
             default_factory=list,
@@ -705,7 +705,7 @@ class CompositeRuleBasedValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: List[ArrayValueSpecification] = field(
+        array_value_specification: list[ArrayValueSpecification] = field(
             default_factory=list,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -713,7 +713,7 @@ class CompositeRuleBasedValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: List["RecordValueSpecification"] = field(
+        record_value_specification: list["RecordValueSpecification"] = field(
             default_factory=list,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -799,7 +799,7 @@ class RecordValueSpecification:
 
     @dataclass
     class Fields:
-        application_assoc_map_value_specification: List[
+        application_assoc_map_value_specification: list[
             ApplicationAssocMapValueSpecification
         ] = field(
             default_factory=list,
@@ -809,7 +809,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: List[
+        application_rule_based_value_specification: list[
             ApplicationRuleBasedValueSpecification
         ] = field(
             default_factory=list,
@@ -819,7 +819,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: List[
+        application_value_specification: list[
             ApplicationValueSpecification
         ] = field(
             default_factory=list,
@@ -829,7 +829,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: List[ArrayValueSpecification] = field(
+        array_value_specification: list[ArrayValueSpecification] = field(
             default_factory=list,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -837,7 +837,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: List[
+        composite_rule_based_value_specification: list[
             CompositeRuleBasedValueSpecification
         ] = field(
             default_factory=list,
@@ -847,7 +847,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: List[ConstantReference] = field(
+        constant_reference: list[ConstantReference] = field(
             default_factory=list,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -855,7 +855,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: List[
+        not_available_value_specification: list[
             NotAvailableValueSpecification
         ] = field(
             default_factory=list,
@@ -865,7 +865,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: List[
+        numerical_rule_based_value_specification: list[
             NumericalRuleBasedValueSpecification
         ] = field(
             default_factory=list,
@@ -875,7 +875,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: List[NumericalValueSpecification] = (
+        numerical_value_specification: list[NumericalValueSpecification] = (
             field(
                 default_factory=list,
                 metadata={
@@ -885,7 +885,7 @@ class RecordValueSpecification:
                 },
             )
         )
-        record_value_specification: List["RecordValueSpecification"] = field(
+        record_value_specification: list["RecordValueSpecification"] = field(
             default_factory=list,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -893,7 +893,7 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: List[ReferenceValueSpecification] = (
+        reference_value_specification: list[ReferenceValueSpecification] = (
             field(
                 default_factory=list,
                 metadata={
@@ -903,7 +903,7 @@ class RecordValueSpecification:
                 },
             )
         )
-        text_value_specification: List[TextValueSpecification] = field(
+        text_value_specification: list[TextValueSpecification] = field(
             default_factory=list,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",

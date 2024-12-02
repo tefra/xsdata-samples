@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_paper import (
     ConferencePaper,
@@ -57,7 +57,7 @@ class Conference:
             "type": "Element",
         },
     )
-    conference_paper: List[ConferencePaper] = field(
+    conference_paper: list[ConferencePaper] = field(
         default_factory=list,
         metadata={
             "type": "Element",

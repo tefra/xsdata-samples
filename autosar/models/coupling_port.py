@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -363,7 +363,7 @@ class CouplingPort:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -374,7 +374,7 @@ class CouplingPort:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -396,7 +396,7 @@ class CouplingPort:
 
     @dataclass
     class MacMulticastAddressRefs:
-        mac_multicast_address_ref: List[
+        mac_multicast_address_ref: list[
             "CouplingPort.MacMulticastAddressRefs.MacMulticastAddressRef"
         ] = field(
             default_factory=list,
@@ -420,7 +420,7 @@ class CouplingPort:
 
     @dataclass
     class PncMappingRefs:
-        pnc_mapping_ref: List["CouplingPort.PncMappingRefs.PncMappingRef"] = (
+        pnc_mapping_ref: list["CouplingPort.PncMappingRefs.PncMappingRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -444,7 +444,7 @@ class CouplingPort:
 
     @dataclass
     class VlanMemberships:
-        vlan_membership: List[VlanMembership] = field(
+        vlan_membership: list[VlanMembership] = field(
             default_factory=list,
             metadata={
                 "name": "VLAN-MEMBERSHIP",

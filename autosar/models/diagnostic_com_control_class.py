@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -267,7 +267,7 @@ class DiagnosticComControlClass:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -278,7 +278,7 @@ class DiagnosticComControlClass:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -300,7 +300,7 @@ class DiagnosticComControlClass:
 
     @dataclass
     class AllChannelsRefs:
-        all_channels_ref: List[
+        all_channels_ref: list[
             "DiagnosticComControlClass.AllChannelsRefs.AllChannelsRef"
         ] = field(
             default_factory=list,
@@ -324,7 +324,7 @@ class DiagnosticComControlClass:
 
     @dataclass
     class SpecificChannels:
-        diagnostic_com_control_specific_channel: List[
+        diagnostic_com_control_specific_channel: list[
             DiagnosticComControlSpecificChannel
         ] = field(
             default_factory=list,
@@ -337,7 +337,7 @@ class DiagnosticComControlClass:
 
     @dataclass
     class SubNodeChannels:
-        diagnostic_com_control_sub_node_channel: List[
+        diagnostic_com_control_sub_node_channel: list[
             DiagnosticComControlSubNodeChannel
         ] = field(
             default_factory=list,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.vtl_mapping_scheme_type import VtlMappingSchemeType
 
@@ -19,7 +18,7 @@ class VtlMappingSchemesType:
         VTL mapping scheme, in which VTL mappings are described.
     """
 
-    vtl_mapping_scheme: Tuple[VtlMappingSchemeType, ...] = field(
+    vtl_mapping_scheme: tuple[VtlMappingSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "VtlMappingScheme",

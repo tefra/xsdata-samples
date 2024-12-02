@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.process_base_type import ProcessBaseType
 from sdmx_ml.models.process_step_type import ProcessStepType
@@ -21,7 +20,7 @@ class ProcessType(ProcessBaseType):
         derive new information according to a given set of rules.
     """
 
-    process_step: Tuple[ProcessStepType, ...] = field(
+    process_step: tuple[ProcessStepType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcessStep",

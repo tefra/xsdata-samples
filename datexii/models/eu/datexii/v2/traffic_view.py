@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -50,7 +50,7 @@ class TrafficView:
             "required": True,
         },
     )
-    linear_traffic_view: List[LinearTrafficView] = field(
+    linear_traffic_view: list[LinearTrafficView] = field(
         default_factory=list,
         metadata={
             "name": "linearTrafficView",

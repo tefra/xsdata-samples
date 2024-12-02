@@ -3,7 +3,7 @@ from typing import Optional
 
 
 @dataclass
-class TypeType:
+class Type:
     class Meta:
         name = "$"
 

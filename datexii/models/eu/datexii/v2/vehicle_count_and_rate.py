@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -95,7 +95,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_count_within_interval: List[VehicleCountWithinInterval] = field(
+    vehicle_count_within_interval: list[VehicleCountWithinInterval] = field(
         default_factory=list,
         metadata={
             "name": "vehicleCountWithinInterval",
@@ -103,7 +103,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_rate: List[VehicleRate] = field(
+    vehicle_rate: list[VehicleRate] = field(
         default_factory=list,
         metadata={
             "name": "vehicleRate",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -243,7 +243,7 @@ class UserDefinedServiceInterfaceDeployment:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -254,7 +254,7 @@ class UserDefinedServiceInterfaceDeployment:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -265,7 +265,7 @@ class UserDefinedServiceInterfaceDeployment:
 
     @dataclass
     class EventDeployments:
-        dds_event_deployment: List[DdsEventDeployment] = field(
+        dds_event_deployment: list[DdsEventDeployment] = field(
             default_factory=list,
             metadata={
                 "name": "DDS-EVENT-DEPLOYMENT",
@@ -273,7 +273,7 @@ class UserDefinedServiceInterfaceDeployment:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_event_deployment: List[SomeipEventDeployment] = field(
+        someip_event_deployment: list[SomeipEventDeployment] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-EVENT-DEPLOYMENT",
@@ -281,7 +281,7 @@ class UserDefinedServiceInterfaceDeployment:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_event_deployment: List[UserDefinedEventDeployment] = (
+        user_defined_event_deployment: list[UserDefinedEventDeployment] = (
             field(
                 default_factory=list,
                 metadata={
@@ -294,7 +294,7 @@ class UserDefinedServiceInterfaceDeployment:
 
     @dataclass
     class FieldDeployments:
-        dds_field_deployment: List[DdsFieldDeployment] = field(
+        dds_field_deployment: list[DdsFieldDeployment] = field(
             default_factory=list,
             metadata={
                 "name": "DDS-FIELD-DEPLOYMENT",
@@ -302,7 +302,7 @@ class UserDefinedServiceInterfaceDeployment:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_field_deployment: List[SomeipFieldDeployment] = field(
+        someip_field_deployment: list[SomeipFieldDeployment] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-FIELD-DEPLOYMENT",
@@ -310,7 +310,7 @@ class UserDefinedServiceInterfaceDeployment:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_field_deployment: List[UserDefinedFieldDeployment] = (
+        user_defined_field_deployment: list[UserDefinedFieldDeployment] = (
             field(
                 default_factory=list,
                 metadata={
@@ -323,7 +323,7 @@ class UserDefinedServiceInterfaceDeployment:
 
     @dataclass
     class MethodDeployments:
-        someip_method_deployment: List[SomeipMethodDeployment] = field(
+        someip_method_deployment: list[SomeipMethodDeployment] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-METHOD-DEPLOYMENT",
@@ -331,7 +331,7 @@ class UserDefinedServiceInterfaceDeployment:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_method_deployment: List[UserDefinedMethodDeployment] = (
+        user_defined_method_deployment: list[UserDefinedMethodDeployment] = (
             field(
                 default_factory=list,
                 metadata={

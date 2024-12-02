@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -161,7 +161,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -235,7 +235,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoice_period: Tuple[InvoicePeriod, ...] = field(
+    invoice_period: tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
@@ -251,7 +251,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Tuple[BillingReference, ...] = field(
+    billing_reference: tuple[BillingReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReference",
@@ -259,7 +259,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_document_reference: Tuple[ContractDocumentReference, ...] = field(
+    contract_document_reference: tuple[ContractDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContractDocumentReference",
@@ -267,7 +267,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_document_reference: Tuple[DespatchDocumentReference, ...] = field(
+    despatch_document_reference: tuple[DespatchDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DespatchDocumentReference",
@@ -275,7 +275,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receipt_document_reference: Tuple[ReceiptDocumentReference, ...] = field(
+    receipt_document_reference: tuple[ReceiptDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReceiptDocumentReference",
@@ -283,7 +283,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    statement_document_reference: Tuple[StatementDocumentReference, ...] = (
+    statement_document_reference: tuple[StatementDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -293,7 +293,7 @@ class SelfBilledInvoiceType:
             },
         )
     )
-    originator_document_reference: Tuple[OriginatorDocumentReference, ...] = (
+    originator_document_reference: tuple[OriginatorDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -303,7 +303,7 @@ class SelfBilledInvoiceType:
             },
         )
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -313,7 +313,7 @@ class SelfBilledInvoiceType:
             },
         )
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -371,7 +371,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -379,7 +379,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+    delivery_terms: tuple[DeliveryTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
@@ -395,7 +395,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -403,7 +403,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    prepaid_payment: Tuple[PrepaidPayment, ...] = field(
+    prepaid_payment: tuple[PrepaidPayment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PrepaidPayment",
@@ -411,7 +411,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -453,7 +453,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -470,7 +470,7 @@ class SelfBilledInvoiceType:
             "required": True,
         },
     )
-    invoice_line: Tuple[InvoiceLine, ...] = field(
+    invoice_line: tuple[InvoiceLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoiceLine",

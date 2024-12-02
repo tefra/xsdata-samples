@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional
+from typing import ForwardRef, Optional
 
 from .ecuc_definition_element_subtypes_enum import (
     EcucDefinitionElementSubtypesEnum,
@@ -48,7 +48,7 @@ class EcucQueryExpression:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

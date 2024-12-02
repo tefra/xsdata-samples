@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (
     B,
@@ -29,7 +28,7 @@ class Subtitle:
         name = "subtitle"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

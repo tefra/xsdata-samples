@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import OpenAccess
 from crossref.models.gov.nih.nlm.ncbi.jats1.award_group import AwardGroup
@@ -21,21 +21,21 @@ class FundingGroup:
         name = "funding-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    award_group: List[AwardGroup] = field(
+    award_group: list[AwardGroup] = field(
         default_factory=list,
         metadata={
             "name": "award-group",
             "type": "Element",
         },
     )
-    funding_statement: List[FundingStatement] = field(
+    funding_statement: list[FundingStatement] = field(
         default_factory=list,
         metadata={
             "name": "funding-statement",
             "type": "Element",
         },
     )
-    open_access: List[OpenAccess] = field(
+    open_access: list[OpenAccess] = field(
         default_factory=list,
         metadata={
             "name": "open-access",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.availability_to_promise_response import (
     AtpcheckType,
@@ -272,7 +272,7 @@ class AvailabilityToPromiseItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfAvailabilityToPromiseItemDetail:
-    availability_to_promise_item_detail: List[
+    availability_to_promise_item_detail: list[
         AvailabilityToPromiseItemDetail
     ] = field(
         default_factory=list,

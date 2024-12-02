@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from tpdb.models.condition import Condition
 
@@ -9,7 +8,7 @@ class Conditions:
     class Meta:
         name = "conditions"
 
-    condition: List[Condition] = field(
+    condition: list[Condition] = field(
         default_factory=list,
         metadata={
             "type": "Element",

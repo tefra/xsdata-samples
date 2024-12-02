@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -316,7 +316,7 @@ class DdsRequiredServiceInstance:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -327,7 +327,7 @@ class DdsRequiredServiceInstance:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -338,7 +338,7 @@ class DdsRequiredServiceInstance:
 
     @dataclass
     class E2EEventProtectionPropss:
-        end_2_end_event_protection_props: List[End2EndEventProtectionProps] = (
+        end_2_end_event_protection_props: list[End2EndEventProtectionProps] = (
             field(
                 default_factory=list,
                 metadata={
@@ -351,7 +351,7 @@ class DdsRequiredServiceInstance:
 
     @dataclass
     class E2EMethodProtectionPropss:
-        end_2_end_method_protection_props: List[
+        end_2_end_method_protection_props: list[
             End2EndMethodProtectionProps
         ] = field(
             default_factory=list,
@@ -364,7 +364,7 @@ class DdsRequiredServiceInstance:
 
     @dataclass
     class SecureComConfigs:
-        service_interface_element_secure_com_config: List[
+        service_interface_element_secure_com_config: list[
             ServiceInterfaceElementSecureComConfig
         ] = field(
             default_factory=list,
@@ -388,7 +388,7 @@ class DdsRequiredServiceInstance:
 
     @dataclass
     class BlacklistedVersions:
-        dds_service_version: List[DdsServiceVersion] = field(
+        dds_service_version: list[DdsServiceVersion] = field(
             default_factory=list,
             metadata={
                 "name": "DDS-SERVICE-VERSION",
@@ -399,7 +399,7 @@ class DdsRequiredServiceInstance:
 
     @dataclass
     class EventQosPropss:
-        dds_event_qos_props: List[DdsEventQosProps] = field(
+        dds_event_qos_props: list[DdsEventQosProps] = field(
             default_factory=list,
             metadata={
                 "name": "DDS-EVENT-QOS-PROPS",
@@ -410,7 +410,7 @@ class DdsRequiredServiceInstance:
 
     @dataclass
     class FieldNotifierQosPropss:
-        dds_field_qos_props: List[DdsFieldQosProps] = field(
+        dds_field_qos_props: list[DdsFieldQosProps] = field(
             default_factory=list,
             metadata={
                 "name": "DDS-FIELD-QOS-PROPS",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import P
 from crossref.models.xml.lang_value import LangValue
@@ -17,7 +17,7 @@ class SupportDescription:
         name = "support-description"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -30,7 +30,7 @@ class SupportDescription:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",

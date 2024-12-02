@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -129,7 +129,7 @@ class RequestForQuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -169,7 +169,7 @@ class RequestForQuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -179,7 +179,7 @@ class RequestForQuotationType:
             },
         )
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -212,7 +212,7 @@ class RequestForQuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -220,7 +220,7 @@ class RequestForQuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+    delivery_terms: tuple[DeliveryTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
@@ -236,7 +236,7 @@ class RequestForQuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract: Tuple[Contract, ...] = field(
+    contract: tuple[Contract, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Contract",
@@ -244,7 +244,7 @@ class RequestForQuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    request_for_quotation_line: Tuple[RequestForQuotationLine, ...] = field(
+    request_for_quotation_line: tuple[RequestForQuotationLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RequestForQuotationLine",

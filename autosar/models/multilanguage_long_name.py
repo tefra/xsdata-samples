@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .l_long_name import LLongName
 
@@ -30,7 +30,7 @@ class MultilanguageLongName:
     class Meta:
         name = "MULTILANGUAGE-LONG-NAME"
 
-    l_4: List[LLongName] = field(
+    l_4: list[LLongName] = field(
         default_factory=list,
         metadata={
             "name": "L-4",

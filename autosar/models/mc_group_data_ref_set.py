@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .mc_group_data_ref_set_conditional import McGroupDataRefSetConditional
 
@@ -62,7 +62,7 @@ class McGroupDataRefSet:
 
     @dataclass
     class McGroupDataRefSetVariants:
-        mc_group_data_ref_set_conditional: List[
+        mc_group_data_ref_set_conditional: list[
             McGroupDataRefSetConditional
         ] = field(
             default_factory=list,

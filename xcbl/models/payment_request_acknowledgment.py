@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.payment_status_response import (
     ConfirmationId,
@@ -202,7 +202,7 @@ class ListOfFiaccount:
     class Meta:
         name = "ListOfFIAccount"
 
-    fiaccount_data: List[FiaccountData] = field(
+    fiaccount_data: list[FiaccountData] = field(
         default_factory=list,
         metadata={
             "name": "FIAccountData",
@@ -418,7 +418,7 @@ class PaymentRequestAcknDetail:
 
 @dataclass(kw_only=True)
 class ListOfPaymentRequestAcknDetail:
-    payment_request_ackn_detail: List[PaymentRequestAcknDetail] = field(
+    payment_request_ackn_detail: list[PaymentRequestAcknDetail] = field(
         default_factory=list,
         metadata={
             "name": "PaymentRequestAcknDetail",

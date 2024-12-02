@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .can_physical_channel import CanPhysicalChannel
@@ -168,7 +168,7 @@ class EthernetClusterConditional:
 
     @dataclass
     class PhysicalChannels:
-        can_physical_channel: List[CanPhysicalChannel] = field(
+        can_physical_channel: list[CanPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-PHYSICAL-CHANNEL",
@@ -176,7 +176,7 @@ class EthernetClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_physical_channel: List[EthernetPhysicalChannel] = field(
+        ethernet_physical_channel: list[EthernetPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-PHYSICAL-CHANNEL",
@@ -184,7 +184,7 @@ class EthernetClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_physical_channel: List[FlexrayPhysicalChannel] = field(
+        flexray_physical_channel: list[FlexrayPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-PHYSICAL-CHANNEL",
@@ -192,7 +192,7 @@ class EthernetClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_physical_channel: List[LinPhysicalChannel] = field(
+        lin_physical_channel: list[LinPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-PHYSICAL-CHANNEL",
@@ -200,7 +200,7 @@ class EthernetClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_physical_channel: List[TtcanPhysicalChannel] = field(
+        ttcan_physical_channel: list[TtcanPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "TTCAN-PHYSICAL-CHANNEL",
@@ -208,7 +208,7 @@ class EthernetClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_physical_channel: List[UserDefinedPhysicalChannel] = (
+        user_defined_physical_channel: list[UserDefinedPhysicalChannel] = (
             field(
                 default_factory=list,
                 metadata={
@@ -221,7 +221,7 @@ class EthernetClusterConditional:
 
     @dataclass
     class CouplingPortConnections:
-        coupling_port_connection: List[CouplingPortConnection] = field(
+        coupling_port_connection: list[CouplingPortConnection] = field(
             default_factory=list,
             metadata={
                 "name": "COUPLING-PORT-CONNECTION",
@@ -232,7 +232,7 @@ class EthernetClusterConditional:
 
     @dataclass
     class MacMulticastGroups:
-        mac_multicast_group: List[MacMulticastGroup] = field(
+        mac_multicast_group: list[MacMulticastGroup] = field(
             default_factory=list,
             metadata={
                 "name": "MAC-MULTICAST-GROUP",

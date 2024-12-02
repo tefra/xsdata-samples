@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_extension_type import (
     PricingExtensionType,
@@ -15,7 +14,7 @@ class PricingTypeExtensions:
     class Meta:
         global_type = False
 
-    extension: List[PricingExtensionType] = field(
+    extension: list[PricingExtensionType] = field(
         default_factory=list,
         metadata={
             "name": "Extension",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.risk_type import (
     RiskType,
@@ -15,7 +14,7 @@ class CoverGbotypeRisks:
     class Meta:
         global_type = False
 
-    risk: List[RiskType] = field(
+    risk: list[RiskType] = field(
         default_factory=list,
         metadata={
             "name": "Risk",

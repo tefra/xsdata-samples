@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.remittance_advice import (
@@ -501,7 +501,7 @@ class SellerOrderConfirmationReference:
 
 @dataclass(kw_only=True)
 class ListOfAccountAssignment:
-    account_assignment: List[AccountAssignment] = field(
+    account_assignment: list[AccountAssignment] = field(
         default_factory=list,
         metadata={
             "name": "AccountAssignment",
@@ -680,7 +680,7 @@ class OrderConfirmationResponseDetail:
 
 @dataclass(kw_only=True)
 class ListOfOrderConfirmationResponseDetail:
-    order_confirmation_response_detail: List[
+    order_confirmation_response_detail: list[
         OrderConfirmationResponseDetail
     ] = field(
         default_factory=list,

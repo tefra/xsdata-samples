@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -207,7 +207,7 @@ class FlexrayTpConnection:
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: List["FlexrayTpConnection.ReceiverRefs.ReceiverRef"] = (
+        receiver_ref: list["FlexrayTpConnection.ReceiverRefs.ReceiverRef"] = (
             field(
                 default_factory=list,
                 metadata={

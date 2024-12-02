@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .sw_calprm_axis import SwCalprmAxis
 
@@ -28,7 +28,7 @@ class SwCalprmAxisSet:
     class Meta:
         name = "SW-CALPRM-AXIS-SET"
 
-    sw_calprm_axis: List[SwCalprmAxis] = field(
+    sw_calprm_axis: list[SwCalprmAxis] = field(
         default_factory=list,
         metadata={
             "name": "SW-CALPRM-AXIS",

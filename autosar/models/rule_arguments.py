@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .numerical_or_text import NumericalOrText
@@ -45,7 +45,7 @@ class RuleArguments:
     class Meta:
         name = "RULE-ARGUMENTS"
 
-    v: List[NumericalValue] = field(
+    v: list[NumericalValue] = field(
         default_factory=list,
         metadata={
             "name": "V",
@@ -53,7 +53,7 @@ class RuleArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vf: List[NumericalValueVariationPoint] = field(
+    vf: list[NumericalValueVariationPoint] = field(
         default_factory=list,
         metadata={
             "name": "VF",
@@ -61,7 +61,7 @@ class RuleArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vt: List[VerbatimString] = field(
+    vt: list[VerbatimString] = field(
         default_factory=list,
         metadata={
             "name": "VT",
@@ -69,7 +69,7 @@ class RuleArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vtf: List[NumericalOrText] = field(
+    vtf: list[NumericalOrText] = field(
         default_factory=list,
         metadata={
             "name": "VTF",
@@ -77,7 +77,7 @@ class RuleArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: List[VariationPoint] = field(
+    variation_point: list[VariationPoint] = field(
         default_factory=list,
         metadata={
             "name": "VARIATION-POINT",

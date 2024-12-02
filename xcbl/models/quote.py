@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.request_for_quotation import (
     PaymentInstructions,
@@ -768,7 +768,7 @@ class QuoteHeader:
             "type": "Element",
         },
     )
-    quote_tax: List[QuoteTax] = field(
+    quote_tax: list[QuoteTax] = field(
         default_factory=list,
         metadata={
             "name": "QuoteTax",
@@ -807,7 +807,7 @@ class QuoteHeader:
 
 @dataclass(kw_only=True)
 class ListOfQuoteDetails:
-    quote_details: List[QuoteDetails] = field(
+    quote_details: list[QuoteDetails] = field(
         default_factory=list,
         metadata={
             "name": "QuoteDetails",

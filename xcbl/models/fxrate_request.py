@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.fxrate_response import (
     ComputationalMethodCoded,
@@ -274,7 +274,7 @@ class ListOfFxrateRequestDetail:
     class Meta:
         name = "ListOfFXRateRequestDetail"
 
-    fxrate_request_detail: List[FxrateRequestDetail] = field(
+    fxrate_request_detail: list[FxrateRequestDetail] = field(
         default_factory=list,
         metadata={
             "name": "FXRateRequestDetail",

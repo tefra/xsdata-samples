@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
@@ -128,7 +128,7 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -136,7 +136,7 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    regulatory_domain: Tuple[RegulatoryDomain, ...] = field(
+    regulatory_domain: tuple[RegulatoryDomain, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RegulatoryDomain",
@@ -152,7 +152,7 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    previous_document_reference: Tuple[PreviousDocumentReference, ...] = field(
+    previous_document_reference: tuple[PreviousDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PreviousDocumentReference",
@@ -160,7 +160,7 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    minutes_document_reference: Tuple[MinutesDocumentReference, ...] = field(
+    minutes_document_reference: tuple[MinutesDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MinutesDocumentReference",
@@ -168,7 +168,7 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -225,7 +225,7 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    procurement_project_lot: Tuple[ProcurementProjectLot, ...] = field(
+    procurement_project_lot: tuple[ProcurementProjectLot, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcurementProjectLot",
@@ -233,7 +233,7 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tender_result: Tuple[TenderResult, ...] = field(
+    tender_result: tuple[TenderResult, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TenderResult",

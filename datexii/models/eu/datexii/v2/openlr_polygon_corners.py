@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
@@ -15,7 +15,7 @@ class OpenlrPolygonCorners:
     geometrical polygon.
     """
 
-    openlr_coordinate: List[PointCoordinates] = field(
+    openlr_coordinate: list[PointCoordinates] = field(
         default_factory=list,
         metadata={
             "name": "openlrCoordinate",

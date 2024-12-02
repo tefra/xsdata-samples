@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.trading_partner_user_information import (
     City,
@@ -473,7 +473,7 @@ class BankDetail:
 
 @dataclass(kw_only=True)
 class ListOfTradingPartnerType:
-    trading_partner_type: List[TradingPartnerType] = field(
+    trading_partner_type: list[TradingPartnerType] = field(
         default_factory=list,
         metadata={
             "name": "TradingPartnerType",
@@ -609,7 +609,7 @@ class ListOfBankDetail:
 
 @dataclass(kw_only=True)
 class ListOfOrganizationAddress:
-    organization_address: List[OrganizationAddress] = field(
+    organization_address: list[OrganizationAddress] = field(
         default_factory=list,
         metadata={
             "name": "OrganizationAddress",
@@ -753,7 +753,7 @@ class TradingPartnerOrganization:
             "required": True,
         }
     )
-    list_of_bank_detail: List[ListOfBankDetail] = field(
+    list_of_bank_detail: list[ListOfBankDetail] = field(
         default_factory=list,
         metadata={
             "name": "ListOfBankDetail",
@@ -764,7 +764,7 @@ class TradingPartnerOrganization:
 
 @dataclass(kw_only=True)
 class ListOfTradingPartnerOrganization:
-    trading_partner_organization: List[TradingPartnerOrganization] = field(
+    trading_partner_organization: list[TradingPartnerOrganization] = field(
         default_factory=list,
         metadata={
             "name": "TradingPartnerOrganization",

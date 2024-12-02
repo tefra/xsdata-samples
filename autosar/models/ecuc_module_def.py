@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -368,7 +368,7 @@ class EcucModuleDef:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -379,7 +379,7 @@ class EcucModuleDef:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -390,7 +390,7 @@ class EcucModuleDef:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -398,7 +398,7 @@ class EcucModuleDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -408,7 +408,7 @@ class EcucModuleDef:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -430,7 +430,7 @@ class EcucModuleDef:
 
     @dataclass
     class EcucValidationConds:
-        ecuc_validation_condition: List[EcucValidationCondition] = field(
+        ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-VALIDATION-CONDITION",
@@ -462,7 +462,7 @@ class EcucModuleDef:
             mandatory.
         """
 
-        supported_config_variant: List[EcucConfigurationVariantEnum] = field(
+        supported_config_variant: list[EcucConfigurationVariantEnum] = field(
             default_factory=list,
             metadata={
                 "name": "SUPPORTED-CONFIG-VARIANT",
@@ -473,7 +473,7 @@ class EcucModuleDef:
 
     @dataclass
     class Containers:
-        ecuc_choice_container_def: List[EcucChoiceContainerDef] = field(
+        ecuc_choice_container_def: list[EcucChoiceContainerDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-CHOICE-CONTAINER-DEF",
@@ -481,7 +481,7 @@ class EcucModuleDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_param_conf_container_def: List[EcucParamConfContainerDef] = field(
+        ecuc_param_conf_container_def: list[EcucParamConfContainerDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-PARAM-CONF-CONTAINER-DEF",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from .datatypes_base import (
     AnyType,
@@ -506,7 +506,7 @@ class SlistPq(AnyType):
             "required": True,
         },
     )
-    digits: List[int] = field(
+    digits: list[int] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -547,7 +547,7 @@ class SlistTs(AnyType):
             "required": True,
         },
     )
-    digits: List[int] = field(
+    digits: list[int] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -667,7 +667,7 @@ class SxprTs(SxcmTs):
     class Meta:
         name = "SXPR_TS"
 
-    comp: List[SxcmTs] = field(
+    comp: list[SxcmTs] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -723,7 +723,7 @@ class IvlInt(SxcmInt):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: List[Int] = field(
+    width: list[Int] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -731,7 +731,7 @@ class IvlInt(SxcmInt):
             "max_occurs": 3,
         },
     )
-    high: List[IvxbInt] = field(
+    high: list[IvxbInt] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -774,7 +774,7 @@ class IvlMo(SxcmMo):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: List[Mo] = field(
+    width: list[Mo] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -782,7 +782,7 @@ class IvlMo(SxcmMo):
             "max_occurs": 3,
         },
     )
-    high: List[IvxbMo] = field(
+    high: list[IvxbMo] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -825,7 +825,7 @@ class IvlPq(SxcmPq):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: List[Pq] = field(
+    width: list[Pq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -833,7 +833,7 @@ class IvlPq(SxcmPq):
             "max_occurs": 3,
         },
     )
-    high: List[IvxbPq] = field(
+    high: list[IvxbPq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -876,7 +876,7 @@ class IvlReal(SxcmReal):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: List[Real] = field(
+    width: list[Real] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -884,7 +884,7 @@ class IvlReal(SxcmReal):
             "max_occurs": 3,
         },
     )
-    high: List[IvxbReal] = field(
+    high: list[IvxbReal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1066,7 +1066,7 @@ class IvlPpdPq(SxcmPpdPq):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: List[PpdPq] = field(
+    width: list[PpdPq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1074,7 +1074,7 @@ class IvlPpdPq(SxcmPpdPq):
             "max_occurs": 3,
         },
     )
-    high: List[IvxbPpdPq] = field(
+    high: list[IvxbPpdPq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1117,7 +1117,7 @@ class IvlPpdTs(SxcmPpdTs):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: List[PpdPq] = field(
+    width: list[PpdPq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1125,7 +1125,7 @@ class IvlPpdTs(SxcmPpdTs):
             "max_occurs": 3,
         },
     )
-    high: List[IvxbPpdTs] = field(
+    high: list[IvxbPpdTs] = field(
         default_factory=list,
         metadata={
             "type": "Element",

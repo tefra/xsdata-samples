@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .correlation_key import CorrelationKey
@@ -13,7 +13,7 @@ class TConversationNode(TBaseElement):
     class Meta:
         name = "tConversationNode"
 
-    participant_ref: List[QName] = field(
+    participant_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "participantRef",
@@ -21,7 +21,7 @@ class TConversationNode(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    message_flow_ref: List[QName] = field(
+    message_flow_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "messageFlowRef",
@@ -29,7 +29,7 @@ class TConversationNode(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    correlation_key: List[CorrelationKey] = field(
+    correlation_key: list[CorrelationKey] = field(
         default_factory=list,
         metadata={
             "name": "correlationKey",

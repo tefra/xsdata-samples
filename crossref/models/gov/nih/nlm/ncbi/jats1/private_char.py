@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.glyph_data import GlyphData
 from crossref.models.gov.nih.nlm.ncbi.jats1.glyph_ref import GlyphRef
@@ -32,7 +32,7 @@ class PrivateChar:
             "type": "Element",
         },
     )
-    inline_graphic: List[InlineGraphic] = field(
+    inline_graphic: list[InlineGraphic] = field(
         default_factory=list,
         metadata={
             "name": "inline-graphic",

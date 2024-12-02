@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
 from .ref import Ref
@@ -62,7 +62,7 @@ class ModeDrivenTransmissionModeCondition:
 
     @dataclass
     class ModeDeclarationRefs:
-        mode_declaration_ref: List[
+        mode_declaration_ref: list[
             "ModeDrivenTransmissionModeCondition.ModeDeclarationRefs.ModeDeclarationRef"
         ] = field(
             default_factory=list,

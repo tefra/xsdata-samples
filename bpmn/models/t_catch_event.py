@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .cancel_event_definition import CancelEventDefinition
@@ -26,7 +26,7 @@ class TCatchEvent(TEvent):
     class Meta:
         name = "tCatchEvent"
 
-    data_output: List[DataOutput] = field(
+    data_output: list[DataOutput] = field(
         default_factory=list,
         metadata={
             "name": "dataOutput",
@@ -34,7 +34,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    data_output_association: List[DataOutputAssociation] = field(
+    data_output_association: list[DataOutputAssociation] = field(
         default_factory=list,
         metadata={
             "name": "dataOutputAssociation",
@@ -50,7 +50,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    timer_event_definition: List[TimerEventDefinition] = field(
+    timer_event_definition: list[TimerEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "timerEventDefinition",
@@ -58,7 +58,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    terminate_event_definition: List[TerminateEventDefinition] = field(
+    terminate_event_definition: list[TerminateEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "terminateEventDefinition",
@@ -66,7 +66,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    signal_event_definition: List[SignalEventDefinition] = field(
+    signal_event_definition: list[SignalEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "signalEventDefinition",
@@ -74,7 +74,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    message_event_definition: List[MessageEventDefinition] = field(
+    message_event_definition: list[MessageEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "messageEventDefinition",
@@ -82,7 +82,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    link_event_definition: List[LinkEventDefinition] = field(
+    link_event_definition: list[LinkEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "linkEventDefinition",
@@ -90,7 +90,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    escalation_event_definition: List[EscalationEventDefinition] = field(
+    escalation_event_definition: list[EscalationEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "escalationEventDefinition",
@@ -98,7 +98,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    error_event_definition: List[ErrorEventDefinition] = field(
+    error_event_definition: list[ErrorEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "errorEventDefinition",
@@ -106,7 +106,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    conditional_event_definition: List[ConditionalEventDefinition] = field(
+    conditional_event_definition: list[ConditionalEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "conditionalEventDefinition",
@@ -114,7 +114,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    compensate_event_definition: List[CompensateEventDefinition] = field(
+    compensate_event_definition: list[CompensateEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "compensateEventDefinition",
@@ -122,7 +122,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    cancel_event_definition: List[CancelEventDefinition] = field(
+    cancel_event_definition: list[CancelEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "cancelEventDefinition",
@@ -130,7 +130,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    event_definition: List[EventDefinition] = field(
+    event_definition: list[EventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "eventDefinition",
@@ -138,7 +138,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    event_definition_ref: List[QName] = field(
+    event_definition_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "eventDefinitionRef",

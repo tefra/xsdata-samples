@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_acronym import (
     ConferenceAcronym,
@@ -57,7 +57,7 @@ class EventMetadata:
             "type": "Element",
         },
     )
-    conference_sponsor: List[ConferenceSponsor] = field(
+    conference_sponsor: list[ConferenceSponsor] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -225,7 +225,7 @@ class LifeCycleStateDefinitionGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -236,7 +236,7 @@ class LifeCycleStateDefinitionGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -247,7 +247,7 @@ class LifeCycleStateDefinitionGroup:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -255,7 +255,7 @@ class LifeCycleStateDefinitionGroup:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -265,7 +265,7 @@ class LifeCycleStateDefinitionGroup:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -276,7 +276,7 @@ class LifeCycleStateDefinitionGroup:
 
     @dataclass
     class LcStates:
-        life_cycle_state: List[LifeCycleState] = field(
+        life_cycle_state: list[LifeCycleState] = field(
             default_factory=list,
             metadata={
                 "name": "LIFE-CYCLE-STATE",

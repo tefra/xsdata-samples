@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from voko.models.adm import Adm
 from voko.models.bld import Bld
@@ -44,115 +43,115 @@ class Art:
             "required": True,
         }
     )
-    subart: List[Subart] = field(
+    subart: list[Subart] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    drv: List[Drv] = field(
+    drv: list[Drv] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    snc: List[Snc] = field(
+    snc: list[Snc] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fnt: List[Fnt] = field(
+    fnt: list[Fnt] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    gra: List[Gra] = field(
+    gra: list[Gra] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    uzo: List[Uzo] = field(
+    uzo: list[Uzo] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    dif: List[Dif] = field(
+    dif: list[Dif] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ekz: List[Ekz] = field(
+    ekz: list[Ekz] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    rim: List[Rim] = field(
+    rim: list[Rim] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref: List[Ref] = field(
+    ref: list[Ref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    refgrp: List[Refgrp] = field(
+    refgrp: list[Refgrp] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    trd: List[Trd] = field(
+    trd: list[Trd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    trdgrp: List[Trdgrp] = field(
+    trdgrp: list[Trdgrp] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    bld: List[Bld] = field(
+    bld: list[Bld] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    adm: List[Adm] = field(
+    adm: list[Adm] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    url: List[Url] = field(
+    url: list[Url] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    mlg: List[Mlg] = field(
+    mlg: list[Mlg] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    lstref: List[Lstref] = field(
+    lstref: list[Lstref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    tezrad: List[Tezrad] = field(
+    tezrad: list[Tezrad] = field(
         default_factory=list,
         metadata={
             "type": "Element",

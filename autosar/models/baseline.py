@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .documentation_subtypes_enum import DocumentationSubtypesEnum
 from .ref import Ref
@@ -93,7 +93,7 @@ class Baseline:
             that belong to the defined AUTOSAR standards.
         """
 
-        standard_revision: List[String] = field(
+        standard_revision: list[String] = field(
             default_factory=list,
             metadata={
                 "name": "STANDARD-REVISION",
@@ -104,7 +104,7 @@ class Baseline:
 
     @dataclass
     class CustomSpecificationRefs:
-        custom_specification_ref: List[
+        custom_specification_ref: list[
             "Baseline.CustomSpecificationRefs.CustomSpecificationRef"
         ] = field(
             default_factory=list,
@@ -128,7 +128,7 @@ class Baseline:
 
     @dataclass
     class CustomSdgDefRefs:
-        custom_sdg_def_ref: List[
+        custom_sdg_def_ref: list[
             "Baseline.CustomSdgDefRefs.CustomSdgDefRef"
         ] = field(
             default_factory=list,

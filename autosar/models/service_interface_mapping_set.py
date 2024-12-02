@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -211,7 +211,7 @@ class ServiceInterfaceMappingSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -222,7 +222,7 @@ class ServiceInterfaceMappingSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -233,7 +233,7 @@ class ServiceInterfaceMappingSet:
 
     @dataclass
     class ElementMappings:
-        service_interface_event_mapping: List[ServiceInterfaceEventMapping] = (
+        service_interface_event_mapping: list[ServiceInterfaceEventMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -243,7 +243,7 @@ class ServiceInterfaceMappingSet:
                 },
             )
         )
-        service_interface_field_mapping: List[ServiceInterfaceFieldMapping] = (
+        service_interface_field_mapping: list[ServiceInterfaceFieldMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -253,7 +253,7 @@ class ServiceInterfaceMappingSet:
                 },
             )
         )
-        service_interface_method_mapping: List[
+        service_interface_method_mapping: list[
             ServiceInterfaceMethodMapping
         ] = field(
             default_factory=list,
@@ -266,7 +266,7 @@ class ServiceInterfaceMappingSet:
 
     @dataclass
     class InterfaceMappings:
-        service_interface_mapping: List[ServiceInterfaceMapping] = field(
+        service_interface_mapping: list[ServiceInterfaceMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INTERFACE-MAPPING",

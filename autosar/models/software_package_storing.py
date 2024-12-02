@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ref import Ref
 from .software_package_storing_enum import SoftwarePackageStoringEnum
@@ -68,7 +68,7 @@ class SoftwarePackageStoring:
 
     @dataclass
     class TransferRefs:
-        transfer_ref: List[
+        transfer_ref: list[
             "SoftwarePackageStoring.TransferRefs.TransferRef"
         ] = field(
             default_factory=list,

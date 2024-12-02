@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.shipping_schedule import ListOfPackageDetail
 from xcbl.models.shipping_schedule_response import (
@@ -1375,7 +1375,7 @@ class Fiaccount:
 
 @dataclass(kw_only=True)
 class ListOfRequestQuoteDetails:
-    request_quote_details: List[RequestQuoteDetails] = field(
+    request_quote_details: list[RequestQuoteDetails] = field(
         default_factory=list,
         metadata={
             "name": "RequestQuoteDetails",
@@ -1518,7 +1518,7 @@ class PaymentMethod:
 
 @dataclass(kw_only=True)
 class PaymentTerms:
-    payment_term: List[PaymentTerm] = field(
+    payment_term: list[PaymentTerm] = field(
         default_factory=list,
         metadata={
             "name": "PaymentTerm",
@@ -1526,7 +1526,7 @@ class PaymentTerms:
             "min_occurs": 1,
         },
     )
-    discounts: List[Discounts] = field(
+    discounts: list[Discounts] = field(
         default_factory=list,
         metadata={
             "name": "Discounts",
@@ -1544,7 +1544,7 @@ class PaymentTerms:
 
 @dataclass(kw_only=True)
 class PaymentInstructions:
-    payment_terms: List[PaymentTerms] = field(
+    payment_terms: list[PaymentTerms] = field(
         default_factory=list,
         metadata={
             "name": "PaymentTerms",
@@ -1552,7 +1552,7 @@ class PaymentInstructions:
             "min_occurs": 1,
         },
     )
-    payment_method: List[PaymentMethod] = field(
+    payment_method: list[PaymentMethod] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethod",

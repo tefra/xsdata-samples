@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.queryable_data_source_type_1 import (
     QueryableDataSourceType1,
@@ -15,7 +15,7 @@ class DataConstraintAttachmentType:
     only allow artefacts related to data.
     """
 
-    data_provider_or_simple_data_source_or_data_structure: Tuple[
+    data_provider_or_simple_data_source_or_data_structure: tuple[
         Union[
             "DataConstraintAttachmentType.DataProvider",
             "DataConstraintAttachmentType.SimpleDataSource",
@@ -51,7 +51,7 @@ class DataConstraintAttachmentType:
             ),
         },
     )
-    queryable_data_source_or_dataflow_or_provision_agreement: Tuple[
+    queryable_data_source_or_dataflow_or_provision_agreement: tuple[
         Union[
             QueryableDataSourceType1,
             "DataConstraintAttachmentType.Dataflow",

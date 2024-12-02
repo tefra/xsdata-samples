@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .adaptive_module_instantiation_subtypes_enum import (
     AdaptiveModuleInstantiationSubtypesEnum,
@@ -416,7 +416,7 @@ class SoftwareCluster:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -427,7 +427,7 @@ class SoftwareCluster:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -438,7 +438,7 @@ class SoftwareCluster:
 
     @dataclass
     class ClaimedFunctionGroupRefs:
-        claimed_function_group_ref: List[
+        claimed_function_group_ref: list[
             "SoftwareCluster.ClaimedFunctionGroupRefs.ClaimedFunctionGroupRef"
         ] = field(
             default_factory=list,
@@ -462,7 +462,7 @@ class SoftwareCluster:
 
     @dataclass
     class ContainedArElementRefs:
-        contained_ar_element_ref: List[
+        contained_ar_element_ref: list[
             "SoftwareCluster.ContainedArElementRefs.ContainedArElementRef"
         ] = field(
             default_factory=list,
@@ -486,7 +486,7 @@ class SoftwareCluster:
 
     @dataclass
     class ContainedFibexElementRefs:
-        contained_fibex_element_ref: List[
+        contained_fibex_element_ref: list[
             "SoftwareCluster.ContainedFibexElementRefs.ContainedFibexElementRef"
         ] = field(
             default_factory=list,
@@ -510,7 +510,7 @@ class SoftwareCluster:
 
     @dataclass
     class ContainedPackageElementRefs:
-        contained_package_element_ref: List[
+        contained_package_element_ref: list[
             "SoftwareCluster.ContainedPackageElementRefs.ContainedPackageElementRef"
         ] = field(
             default_factory=list,
@@ -534,7 +534,7 @@ class SoftwareCluster:
 
     @dataclass
     class ContainedProcessRefs:
-        contained_process_ref: List[
+        contained_process_ref: list[
             "SoftwareCluster.ContainedProcessRefs.ContainedProcessRef"
         ] = field(
             default_factory=list,
@@ -558,7 +558,7 @@ class SoftwareCluster:
 
     @dataclass
     class DesignRefs:
-        design_ref: List["SoftwareCluster.DesignRefs.DesignRef"] = field(
+        design_ref: list["SoftwareCluster.DesignRefs.DesignRef"] = field(
             default_factory=list,
             metadata={
                 "name": "DESIGN-REF",
@@ -580,7 +580,7 @@ class SoftwareCluster:
 
     @dataclass
     class DiagnosticAddresss:
-        software_cluster_doip_diagnostic_address: List[
+        software_cluster_doip_diagnostic_address: list[
             SoftwareClusterDoipDiagnosticAddress
         ] = field(
             default_factory=list,
@@ -604,7 +604,7 @@ class SoftwareCluster:
 
     @dataclass
     class LicenseRefs:
-        license_ref: List["SoftwareCluster.LicenseRefs.LicenseRef"] = field(
+        license_ref: list["SoftwareCluster.LicenseRefs.LicenseRef"] = field(
             default_factory=list,
             metadata={
                 "name": "LICENSE-REF",
@@ -626,7 +626,7 @@ class SoftwareCluster:
 
     @dataclass
     class ModuleInstantiationRefs:
-        module_instantiation_ref: List[
+        module_instantiation_ref: list[
             "SoftwareCluster.ModuleInstantiationRefs.ModuleInstantiationRef"
         ] = field(
             default_factory=list,

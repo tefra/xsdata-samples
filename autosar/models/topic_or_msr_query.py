@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .msr_query_topic_1 import MsrQueryTopic1
 from .topic_1 import Topic1
@@ -36,7 +36,7 @@ class TopicOrMsrQuery:
     class Meta:
         name = "TOPIC-OR-MSR-QUERY"
 
-    topic_1: List[Topic1] = field(
+    topic_1: list[Topic1] = field(
         default_factory=list,
         metadata={
             "name": "TOPIC-1",
@@ -44,7 +44,7 @@ class TopicOrMsrQuery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_topic_1: List[MsrQueryTopic1] = field(
+    msr_query_topic_1: list[MsrQueryTopic1] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-TOPIC-1",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -129,7 +129,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_alias: List[MultilingualString] = field(
+    parking_alias: list[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "parkingAlias",
@@ -194,7 +194,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupany_detection_type: List[OccupancyDetectionTypeEnum] = field(
+    parking_occupany_detection_type: list[OccupancyDetectionTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingOccupanyDetectionType",
@@ -202,7 +202,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    emergency_contact: List[Contact] = field(
+    emergency_contact: list[Contact] = field(
         default_factory=list,
         metadata={
             "name": "emergencyContact",
@@ -210,14 +210,14 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    owner: List[Contact] = field(
+    owner: list[Contact] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    responisble_authority: List[Contact] = field(
+    responisble_authority: list[Contact] = field(
         default_factory=list,
         metadata={
             "name": "responisbleAuthority",
@@ -225,7 +225,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    security_service: List[Contact] = field(
+    security_service: list[Contact] = field(
         default_factory=list,
         metadata={
             "name": "securityService",
@@ -233,14 +233,14 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    operator: List[Contact] = field(
+    operator: list[Contact] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    service_partner: List[Contact] = field(
+    service_partner: list[Contact] = field(
         default_factory=list,
         metadata={
             "name": "servicePartner",
@@ -248,7 +248,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_vms: List[ParkingVMS] = field(
+    parking_vms: list[ParkingVMS] = field(
         default_factory=list,
         metadata={
             "name": "parkingVMS",
@@ -265,7 +265,7 @@ class ParkingRecord:
             "required": True,
         },
     )
-    parking_route: List[ParkingRoute] = field(
+    parking_route: list[ParkingRoute] = field(
         default_factory=list,
         metadata={
             "name": "parkingRoute",
@@ -313,7 +313,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_equipment_or_service_facility: List[
+    parking_equipment_or_service_facility: list[
         ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility
     ] = field(
         default_factory=list,
@@ -323,7 +323,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space: List[ParkingSpace2] = field(
+    parking_space: list[ParkingSpace2] = field(
         default_factory=list,
         metadata={
             "name": "parkingSpace",
@@ -331,7 +331,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_parking_spaces: List[GroupOfParkingSpaces2] = field(
+    group_of_parking_spaces: list[GroupOfParkingSpaces2] = field(
         default_factory=list,
         metadata={
             "name": "groupOfParkingSpaces",
@@ -347,7 +347,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    permits_and_prohibitions: List[PermitsAndProhibitions] = field(
+    permits_and_prohibitions: list[PermitsAndProhibitions] = field(
         default_factory=list,
         metadata={
             "name": "permitsAndProhibitions",

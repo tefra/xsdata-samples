@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ApplicableTerritoryAddress,
@@ -124,7 +124,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -132,7 +132,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -168,7 +168,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_period: Tuple[ValidityPeriod, ...] = field(
+    validity_period: tuple[ValidityPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
@@ -176,7 +176,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -228,7 +228,7 @@ class CatalogueRequestType:
             },
         )
     )
-    referenced_contract: Tuple[ReferencedContract, ...] = field(
+    referenced_contract: tuple[ReferencedContract, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReferencedContract",
@@ -244,7 +244,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -252,7 +252,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    applicable_territory_address: Tuple[ApplicableTerritoryAddress, ...] = (
+    applicable_territory_address: tuple[ApplicableTerritoryAddress, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -270,7 +270,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_classification_scheme: Tuple[
+    requested_classification_scheme: tuple[
         RequestedClassificationScheme, ...
     ] = field(
         default_factory=tuple,
@@ -280,7 +280,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    catalogue_request_line: Tuple[CatalogueRequestLine, ...] = field(
+    catalogue_request_line: tuple[CatalogueRequestLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CatalogueRequestLine",

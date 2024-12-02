@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -112,7 +112,7 @@ class SwcToEcuMappingConstraint:
 
     @dataclass
     class EcuInstanceRefs:
-        ecu_instance_ref: List[
+        ecu_instance_ref: list[
             "SwcToEcuMappingConstraint.EcuInstanceRefs.EcuInstanceRef"
         ] = field(
             default_factory=list,

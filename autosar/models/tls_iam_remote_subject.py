@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -247,7 +247,7 @@ class TlsIamRemoteSubject:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -258,7 +258,7 @@ class TlsIamRemoteSubject:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -269,7 +269,7 @@ class TlsIamRemoteSubject:
 
     @dataclass
     class AcceptedCryptoCipherSuiteWithPskRefs:
-        accepted_crypto_cipher_suite_with_psk_ref: List[
+        accepted_crypto_cipher_suite_with_psk_ref: list[
             "TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs.AcceptedCryptoCipherSuiteWithPskRef"
         ] = field(
             default_factory=list,
@@ -293,7 +293,7 @@ class TlsIamRemoteSubject:
 
     @dataclass
     class AcceptedRemoteCertificateRefs:
-        accepted_remote_certificate_ref: List[
+        accepted_remote_certificate_ref: list[
             "TlsIamRemoteSubject.AcceptedRemoteCertificateRefs.AcceptedRemoteCertificateRef"
         ] = field(
             default_factory=list,
@@ -317,7 +317,7 @@ class TlsIamRemoteSubject:
 
     @dataclass
     class IamRelevantTlsSecureComPropsRefs:
-        iam_relevant_tls_secure_com_props_ref: List[
+        iam_relevant_tls_secure_com_props_ref: list[
             "TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs.IamRelevantTlsSecureComPropsRef"
         ] = field(
             default_factory=list,

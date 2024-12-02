@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.name import Name
 from sdmx_ml.models.text_type import TextType
@@ -24,7 +24,7 @@ class ContactType2:
     class Meta:
         name = "ContactType"
 
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -32,7 +32,7 @@ class ContactType2:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    department: Tuple[TextType, ...] = field(
+    department: tuple[TextType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Department",
@@ -40,7 +40,7 @@ class ContactType2:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    role: Tuple[TextType, ...] = field(
+    role: tuple[TextType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Role",
@@ -48,7 +48,7 @@ class ContactType2:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    choice: Tuple[
+    choice: tuple[
         Union[
             "ContactType2.Telephone",
             "ContactType2.Fax",

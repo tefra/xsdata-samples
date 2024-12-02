@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.order_status_result import (
     BuyerReferenceNumber,
@@ -317,7 +317,7 @@ class OrderStatusRequestHeader:
 
 @dataclass(kw_only=True)
 class ListOfOrderStatusItem:
-    order_status_item: List[OrderStatusItem] = field(
+    order_status_item: list[OrderStatusItem] = field(
         default_factory=list,
         metadata={
             "name": "OrderStatusItem",
@@ -400,7 +400,7 @@ class OrderStatusDetailRequest:
 
 @dataclass(kw_only=True)
 class ListOfOrderStatusRequestDetail:
-    order_status_detail_request: List[OrderStatusDetailRequest] = field(
+    order_status_detail_request: list[OrderStatusDetailRequest] = field(
         default_factory=list,
         metadata={
             "name": "OrderStatusDetailRequest",

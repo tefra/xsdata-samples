@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .rpt_component import RptComponent
 from .rpt_execution_context import RptExecutionContext
@@ -84,7 +84,7 @@ class RptSupportData:
 
     @dataclass
     class ExecutionContexts:
-        rpt_execution_context: List[RptExecutionContext] = field(
+        rpt_execution_context: list[RptExecutionContext] = field(
             default_factory=list,
             metadata={
                 "name": "RPT-EXECUTION-CONTEXT",
@@ -95,7 +95,7 @@ class RptSupportData:
 
     @dataclass
     class RptComponents:
-        rpt_component: List[RptComponent] = field(
+        rpt_component: list[RptComponent] = field(
             default_factory=list,
             metadata={
                 "name": "RPT-COMPONENT",
@@ -106,7 +106,7 @@ class RptSupportData:
 
     @dataclass
     class RptServicePoints:
-        rpt_service_point: List[RptServicePoint] = field(
+        rpt_service_point: list[RptServicePoint] = field(
             default_factory=list,
             metadata={
                 "name": "RPT-SERVICE-POINT",

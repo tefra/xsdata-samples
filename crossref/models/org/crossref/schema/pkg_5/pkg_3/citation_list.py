@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.citation import Citation
 
@@ -17,7 +16,7 @@ class CitationList:
         name = "citation_list"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    citation: List[Citation] = field(
+    citation: list[Citation] = field(
         default_factory=list,
         metadata={
             "type": "Element",

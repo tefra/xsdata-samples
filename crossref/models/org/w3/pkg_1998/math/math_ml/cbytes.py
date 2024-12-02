@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Optional
 
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
@@ -29,7 +29,7 @@ class Cbytes:
             "type": "Attribute",
         },
     )
-    class_value: List[str] = field(
+    class_value: list[str] = field(
         default_factory=list,
         metadata={
             "name": "class",
@@ -55,7 +55,7 @@ class Cbytes:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.accessibility_enum import AccessibilityEnum
 from datexii.models.eu.datexii.v2.dedicated_access import DedicatedAccess
@@ -100,14 +100,14 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accessibility: List[AccessibilityEnum] = field(
+    accessibility: list[AccessibilityEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space_accessibility: List[ParkingSpaceAccessibilityEnum] = field(
+    parking_space_accessibility: list[ParkingSpaceAccessibilityEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingSpaceAccessibility",
@@ -115,7 +115,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space_physics: List[ParkingSpacePhysicsEnum] = field(
+    parking_space_physics: list[ParkingSpacePhysicsEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingSpacePhysics",
@@ -156,7 +156,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupany_detection_type: List[OccupancyDetectionTypeEnum] = field(
+    parking_occupany_detection_type: list[OccupancyDetectionTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingOccupanyDetectionType",
@@ -164,7 +164,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_security: List[ParkingSecurityEnum] = field(
+    parking_security: list[ParkingSecurityEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingSecurity",
@@ -172,7 +172,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dedicated_access: List[DedicatedAccess] = field(
+    dedicated_access: list[DedicatedAccess] = field(
         default_factory=list,
         metadata={
             "name": "dedicatedAccess",
@@ -204,7 +204,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_equipment_or_service_facility: List[
+    parking_equipment_or_service_facility: list[
         ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility
     ] = field(
         default_factory=list,
@@ -214,7 +214,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_usage_scenario: List[
+    parking_usage_scenario: list[
         ParkingSpaceBasicsScenarioIndexParkingUsageScenario
     ] = field(
         default_factory=list,

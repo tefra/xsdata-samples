@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -315,7 +315,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -326,7 +326,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -337,7 +337,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -345,7 +345,7 @@ class ApplicationSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -355,7 +355,7 @@ class ApplicationSwComponentType:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -366,7 +366,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class SwComponentDocumentations:
-        sw_component_documentation: List[SwComponentDocumentation] = field(
+        sw_component_documentation: list[SwComponentDocumentation] = field(
             default_factory=list,
             metadata={
                 "name": "SW-COMPONENT-DOCUMENTATION",
@@ -377,7 +377,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class ConsistencyNeedss:
-        consistency_needs: List[ConsistencyNeeds] = field(
+        consistency_needs: list[ConsistencyNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "CONSISTENCY-NEEDS",
@@ -388,7 +388,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class Ports:
-        p_port_prototype: List[PPortPrototype] = field(
+        p_port_prototype: list[PPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "P-PORT-PROTOTYPE",
@@ -396,7 +396,7 @@ class ApplicationSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        pr_port_prototype: List[PrPortPrototype] = field(
+        pr_port_prototype: list[PrPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "PR-PORT-PROTOTYPE",
@@ -404,7 +404,7 @@ class ApplicationSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        r_port_prototype: List[RPortPrototype] = field(
+        r_port_prototype: list[RPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "R-PORT-PROTOTYPE",
@@ -415,7 +415,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class PortGroups:
-        port_group: List[PortGroup] = field(
+        port_group: list[PortGroup] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-GROUP",
@@ -426,7 +426,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class UnitGroupRefs:
-        unit_group_ref: List[
+        unit_group_ref: list[
             "ApplicationSwComponentType.UnitGroupRefs.UnitGroupRef"
         ] = field(
             default_factory=list,
@@ -450,7 +450,7 @@ class ApplicationSwComponentType:
 
     @dataclass
     class InternalBehaviors:
-        swc_internal_behavior: List[SwcInternalBehavior] = field(
+        swc_internal_behavior: list[SwcInternalBehavior] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-INTERNAL-BEHAVIOR",

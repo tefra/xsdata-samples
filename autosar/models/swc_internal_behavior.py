@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -609,7 +609,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -620,7 +620,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -631,7 +631,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ConstantMemorys:
-        parameter_data_prototype: List[ParameterDataPrototype] = field(
+        parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-DATA-PROTOTYPE",
@@ -642,7 +642,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ConstantValueMappingRefs:
-        constant_value_mapping_ref: List[
+        constant_value_mapping_ref: list[
             "SwcInternalBehavior.ConstantValueMappingRefs.ConstantValueMappingRef"
         ] = field(
             default_factory=list,
@@ -668,7 +668,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class DataTypeMappingRefs:
-        data_type_mapping_ref: List[
+        data_type_mapping_ref: list[
             "SwcInternalBehavior.DataTypeMappingRefs.DataTypeMappingRef"
         ] = field(
             default_factory=list,
@@ -692,7 +692,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ExclusiveAreas:
-        exclusive_area: List[ExclusiveArea] = field(
+        exclusive_area: list[ExclusiveArea] = field(
             default_factory=list,
             metadata={
                 "name": "EXCLUSIVE-AREA",
@@ -703,7 +703,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ExclusiveAreaNestingOrders:
-        exclusive_area_nesting_order: List[ExclusiveAreaNestingOrder] = field(
+        exclusive_area_nesting_order: list[ExclusiveAreaNestingOrder] = field(
             default_factory=list,
             metadata={
                 "name": "EXCLUSIVE-AREA-NESTING-ORDER",
@@ -714,7 +714,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class StaticMemorys:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -725,7 +725,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ArTypedPerInstanceMemorys:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -736,7 +736,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class Events:
-        asynchronous_server_call_returns_event: List[
+        asynchronous_server_call_returns_event: list[
             AsynchronousServerCallReturnsEvent
         ] = field(
             default_factory=list,
@@ -746,7 +746,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        background_event: List[BackgroundEvent] = field(
+        background_event: list[BackgroundEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BACKGROUND-EVENT",
@@ -754,7 +754,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_receive_error_event: List[DataReceiveErrorEvent] = field(
+        data_receive_error_event: list[DataReceiveErrorEvent] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-RECEIVE-ERROR-EVENT",
@@ -762,7 +762,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_received_event: List[DataReceivedEvent] = field(
+        data_received_event: list[DataReceivedEvent] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-RECEIVED-EVENT",
@@ -770,7 +770,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_send_completed_event: List[DataSendCompletedEvent] = field(
+        data_send_completed_event: list[DataSendCompletedEvent] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-SEND-COMPLETED-EVENT",
@@ -778,7 +778,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_write_completed_event: List[DataWriteCompletedEvent] = field(
+        data_write_completed_event: list[DataWriteCompletedEvent] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-WRITE-COMPLETED-EVENT",
@@ -786,7 +786,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        external_trigger_occurred_event: List[ExternalTriggerOccurredEvent] = (
+        external_trigger_occurred_event: list[ExternalTriggerOccurredEvent] = (
             field(
                 default_factory=list,
                 metadata={
@@ -796,7 +796,7 @@ class SwcInternalBehavior:
                 },
             )
         )
-        init_event: List[InitEvent] = field(
+        init_event: list[InitEvent] = field(
             default_factory=list,
             metadata={
                 "name": "INIT-EVENT",
@@ -804,7 +804,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        internal_trigger_occurred_event: List[InternalTriggerOccurredEvent] = (
+        internal_trigger_occurred_event: list[InternalTriggerOccurredEvent] = (
             field(
                 default_factory=list,
                 metadata={
@@ -814,7 +814,7 @@ class SwcInternalBehavior:
                 },
             )
         )
-        mode_switched_ack_event: List[ModeSwitchedAckEvent] = field(
+        mode_switched_ack_event: list[ModeSwitchedAckEvent] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-SWITCHED-ACK-EVENT",
@@ -822,7 +822,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        operation_invoked_event: List[OperationInvokedEvent] = field(
+        operation_invoked_event: list[OperationInvokedEvent] = field(
             default_factory=list,
             metadata={
                 "name": "OPERATION-INVOKED-EVENT",
@@ -830,7 +830,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        os_task_execution_event: List[OsTaskExecutionEvent] = field(
+        os_task_execution_event: list[OsTaskExecutionEvent] = field(
             default_factory=list,
             metadata={
                 "name": "OS-TASK-EXECUTION-EVENT",
@@ -838,7 +838,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        swc_mode_manager_error_event: List[SwcModeManagerErrorEvent] = field(
+        swc_mode_manager_error_event: list[SwcModeManagerErrorEvent] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-MODE-MANAGER-ERROR-EVENT",
@@ -846,7 +846,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        swc_mode_switch_event: List[SwcModeSwitchEvent] = field(
+        swc_mode_switch_event: list[SwcModeSwitchEvent] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-MODE-SWITCH-EVENT",
@@ -854,7 +854,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        timing_event: List[TimingEvent] = field(
+        timing_event: list[TimingEvent] = field(
             default_factory=list,
             metadata={
                 "name": "TIMING-EVENT",
@@ -862,7 +862,7 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        transformer_hard_error_event: List[TransformerHardErrorEvent] = field(
+        transformer_hard_error_event: list[TransformerHardErrorEvent] = field(
             default_factory=list,
             metadata={
                 "name": "TRANSFORMER-HARD-ERROR-EVENT",
@@ -873,7 +873,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ExclusiveAreaPolicys:
-        swc_exclusive_area_policy: List[SwcExclusiveAreaPolicy] = field(
+        swc_exclusive_area_policy: list[SwcExclusiveAreaPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-EXCLUSIVE-AREA-POLICY",
@@ -884,7 +884,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ExplicitInterRunnableVariables:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -895,7 +895,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ImplicitInterRunnableVariables:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -906,7 +906,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class IncludedDataTypeSets:
-        included_data_type_set: List[IncludedDataTypeSet] = field(
+        included_data_type_set: list[IncludedDataTypeSet] = field(
             default_factory=list,
             metadata={
                 "name": "INCLUDED-DATA-TYPE-SET",
@@ -917,7 +917,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class IncludedModeDeclarationGroupSets:
-        included_mode_declaration_group_set: List[
+        included_mode_declaration_group_set: list[
             IncludedModeDeclarationGroupSet
         ] = field(
             default_factory=list,
@@ -930,7 +930,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class InstantiationDataDefPropss:
-        instantiation_data_def_props: List[InstantiationDataDefProps] = field(
+        instantiation_data_def_props: list[InstantiationDataDefProps] = field(
             default_factory=list,
             metadata={
                 "name": "INSTANTIATION-DATA-DEF-PROPS",
@@ -941,7 +941,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class PerInstanceMemorys:
-        per_instance_memory: List[PerInstanceMemory] = field(
+        per_instance_memory: list[PerInstanceMemory] = field(
             default_factory=list,
             metadata={
                 "name": "PER-INSTANCE-MEMORY",
@@ -952,7 +952,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class PerInstanceParameters:
-        parameter_data_prototype: List[ParameterDataPrototype] = field(
+        parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-DATA-PROTOTYPE",
@@ -963,7 +963,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class PortApiOptions:
-        port_api_option: List[PortApiOption] = field(
+        port_api_option: list[PortApiOption] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-API-OPTION",
@@ -974,7 +974,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class Runnables:
-        runnable_entity: List[RunnableEntity] = field(
+        runnable_entity: list[RunnableEntity] = field(
             default_factory=list,
             metadata={
                 "name": "RUNNABLE-ENTITY",
@@ -985,7 +985,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class ServiceDependencys:
-        swc_service_dependency: List[SwcServiceDependency] = field(
+        swc_service_dependency: list[SwcServiceDependency] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-SERVICE-DEPENDENCY",
@@ -996,7 +996,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class SharedParameters:
-        parameter_data_prototype: List[ParameterDataPrototype] = field(
+        parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-DATA-PROTOTYPE",
@@ -1007,7 +1007,7 @@ class SwcInternalBehavior:
 
     @dataclass
     class VariationPointProxys:
-        variation_point_proxy: List[VariationPointProxy] = field(
+        variation_point_proxy: list[VariationPointProxy] = field(
             default_factory=list,
             metadata={
                 "name": "VARIATION-POINT-PROXY",

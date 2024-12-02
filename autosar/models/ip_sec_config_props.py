@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -314,7 +314,7 @@ class IpSecConfigProps:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -325,7 +325,7 @@ class IpSecConfigProps:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -341,7 +341,7 @@ class IpSecConfigProps:
             to be used for the connection, e.g. HMAC/SHA2-256
         """
 
-        ah_cipher_suite_name: List[String] = field(
+        ah_cipher_suite_name: list[String] = field(
             default_factory=list,
             metadata={
                 "name": "AH-CIPHER-SUITE-NAME",
@@ -358,7 +358,7 @@ class IpSecConfigProps:
             authentication for the connection, e.g. AES-128+SHA2-256.
         """
 
-        esp_cipher_suite_name: List[String] = field(
+        esp_cipher_suite_name: list[String] = field(
             default_factory=list,
             metadata={
                 "name": "ESP-CIPHER-SUITE-NAME",

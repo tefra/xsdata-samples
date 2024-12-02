@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Tuple, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -35,7 +35,7 @@ class SeriesType(AnnotableType):
     :ivar local_attributes:
     """
 
-    comp: Tuple[CompType, ...] = field(
+    comp: tuple[CompType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Comp",
@@ -43,7 +43,7 @@ class SeriesType(AnnotableType):
             "namespace": "",
         },
     )
-    obs: Tuple[ObsType, ...] = field(
+    obs: tuple[ObsType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Obs",
@@ -67,7 +67,7 @@ class SeriesType(AnnotableType):
             "pattern": r".{5}A1.*",
         },
     )
-    local_attributes: Dict[str, str] = field(
+    local_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

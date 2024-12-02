@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes import (
     IvlInt,
@@ -154,7 +154,7 @@ class PocdMt000040Component5:
     class Meta:
         name = "POCD_MT000040.Component5"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -170,7 +170,7 @@ class PocdMt000040Component5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -217,7 +217,7 @@ class PocdMt000040Consent:
     class Meta:
         name = "POCD_MT000040.Consent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -233,7 +233,7 @@ class PocdMt000040Consent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -241,7 +241,7 @@ class PocdMt000040Consent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -294,7 +294,7 @@ class PocdMt000040Criterion:
     class Meta:
         name = "POCD_MT000040.Criterion"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -310,7 +310,7 @@ class PocdMt000040Criterion:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -368,7 +368,7 @@ class PocdMt000040CustodianOrganization:
     class Meta:
         name = "POCD_MT000040.CustodianOrganization"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -384,7 +384,7 @@ class PocdMt000040CustodianOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -392,7 +392,7 @@ class PocdMt000040CustodianOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -451,7 +451,7 @@ class PocdMt000040Device:
     class Meta:
         name = "POCD_MT000040.Device"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -467,7 +467,7 @@ class PocdMt000040Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -527,7 +527,7 @@ class PocdMt000040Entity:
     class Meta:
         name = "POCD_MT000040.Entity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -543,7 +543,7 @@ class PocdMt000040Entity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -551,7 +551,7 @@ class PocdMt000040Entity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -601,7 +601,7 @@ class PocdMt000040ExternalAct:
     class Meta:
         name = "POCD_MT000040.ExternalAct"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -617,7 +617,7 @@ class PocdMt000040ExternalAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -625,7 +625,7 @@ class PocdMt000040ExternalAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -675,7 +675,7 @@ class PocdMt000040ExternalDocument:
     class Meta:
         name = "POCD_MT000040.ExternalDocument"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -691,7 +691,7 @@ class PocdMt000040ExternalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -699,7 +699,7 @@ class PocdMt000040ExternalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -765,7 +765,7 @@ class PocdMt000040ExternalObservation:
     class Meta:
         name = "POCD_MT000040.ExternalObservation"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -781,7 +781,7 @@ class PocdMt000040ExternalObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -789,7 +789,7 @@ class PocdMt000040ExternalObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -839,7 +839,7 @@ class PocdMt000040ExternalProcedure:
     class Meta:
         name = "POCD_MT000040.ExternalProcedure"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -855,7 +855,7 @@ class PocdMt000040ExternalProcedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -863,7 +863,7 @@ class PocdMt000040ExternalProcedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -914,7 +914,7 @@ class PocdMt000040LabeledDrug:
     class Meta:
         name = "POCD_MT000040.LabeledDrug"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -930,7 +930,7 @@ class PocdMt000040LabeledDrug:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -982,7 +982,7 @@ class PocdMt000040LanguageCommunication:
     class Meta:
         name = "POCD_MT000040.LanguageCommunication"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -998,7 +998,7 @@ class PocdMt000040LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1052,7 +1052,7 @@ class PocdMt000040Material:
     class Meta:
         name = "POCD_MT000040.Material"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1068,7 +1068,7 @@ class PocdMt000040Material:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1128,7 +1128,7 @@ class PocdMt000040NonXmlbody:
     class Meta:
         name = "POCD_MT000040.NonXMLBody"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1144,7 +1144,7 @@ class PocdMt000040NonXmlbody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1206,7 +1206,7 @@ class PocdMt000040ObservationRange:
     class Meta:
         name = "POCD_MT000040.ObservationRange"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1222,7 +1222,7 @@ class PocdMt000040ObservationRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1288,7 +1288,7 @@ class PocdMt000040Order:
     class Meta:
         name = "POCD_MT000040.Order"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1304,7 +1304,7 @@ class PocdMt000040Order:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1312,7 +1312,7 @@ class PocdMt000040Order:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1364,7 +1364,7 @@ class PocdMt000040Organization:
     class Meta:
         name = "POCD_MT000040.Organization"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1380,7 +1380,7 @@ class PocdMt000040Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1388,28 +1388,28 @@ class PocdMt000040Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[OnExplicit] = field(
+    name: list[OnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1464,7 +1464,7 @@ class PocdMt000040ParentDocument:
     class Meta:
         name = "POCD_MT000040.ParentDocument"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1480,7 +1480,7 @@ class PocdMt000040ParentDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1488,7 +1488,7 @@ class PocdMt000040ParentDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1556,7 +1556,7 @@ class PocdMt000040Person:
     class Meta:
         name = "POCD_MT000040.Person"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1572,7 +1572,7 @@ class PocdMt000040Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1580,7 +1580,7 @@ class PocdMt000040Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[PnExplicit] = field(
+    name: list[PnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1617,7 +1617,7 @@ class PocdMt000040Place:
     class Meta:
         name = "POCD_MT000040.Place"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1633,7 +1633,7 @@ class PocdMt000040Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1685,7 +1685,7 @@ class PocdMt000040PlayingEntity:
     class Meta:
         name = "POCD_MT000040.PlayingEntity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1701,7 +1701,7 @@ class PocdMt000040PlayingEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1716,14 +1716,14 @@ class PocdMt000040PlayingEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    quantity: List[PqExplicit] = field(
+    quantity: list[PqExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[PnExplicit] = field(
+    name: list[PnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1774,7 +1774,7 @@ class PocdMt000040SubjectPerson:
     class Meta:
         name = "POCD_MT000040.SubjectPerson"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1790,7 +1790,7 @@ class PocdMt000040SubjectPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1798,14 +1798,14 @@ class PocdMt000040SubjectPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Id] = field(
+    id: list[Id] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:sdtc",
         },
     )
-    name: List[PnExplicit] = field(
+    name: list[PnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1874,7 +1874,7 @@ class PocdMt000040AssignedCustodian:
     class Meta:
         name = "POCD_MT000040.AssignedCustodian"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1890,7 +1890,7 @@ class PocdMt000040AssignedCustodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1931,7 +1931,7 @@ class PocdMt000040AssignedEntity:
     class Meta:
         name = "POCD_MT000040.AssignedEntity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1947,7 +1947,7 @@ class PocdMt000040AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1955,7 +1955,7 @@ class PocdMt000040AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1970,14 +1970,14 @@ class PocdMt000040AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2022,7 +2022,7 @@ class PocdMt000040AssociatedEntity:
     class Meta:
         name = "POCD_MT000040.AssociatedEntity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2038,7 +2038,7 @@ class PocdMt000040AssociatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2046,7 +2046,7 @@ class PocdMt000040AssociatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2060,14 +2060,14 @@ class PocdMt000040AssociatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2115,7 +2115,7 @@ class PocdMt000040Authorization:
     class Meta:
         name = "POCD_MT000040.Authorization"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2131,7 +2131,7 @@ class PocdMt000040Authorization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2190,7 +2190,7 @@ class PocdMt000040Birthplace:
     class Meta:
         name = "POCD_MT000040.Birthplace"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2206,7 +2206,7 @@ class PocdMt000040Birthplace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2261,7 +2261,7 @@ class PocdMt000040Guardian:
     class Meta:
         name = "POCD_MT000040.Guardian"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2277,7 +2277,7 @@ class PocdMt000040Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2285,7 +2285,7 @@ class PocdMt000040Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2299,14 +2299,14 @@ class PocdMt000040Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2368,7 +2368,7 @@ class PocdMt000040HealthCareFacility:
     class Meta:
         name = "POCD_MT000040.HealthCareFacility"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2384,7 +2384,7 @@ class PocdMt000040HealthCareFacility:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2392,7 +2392,7 @@ class PocdMt000040HealthCareFacility:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2442,7 +2442,7 @@ class PocdMt000040InFulfillmentOf:
     class Meta:
         name = "POCD_MT000040.InFulfillmentOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2458,7 +2458,7 @@ class PocdMt000040InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2496,7 +2496,7 @@ class PocdMt000040IntendedRecipient:
     class Meta:
         name = "POCD_MT000040.IntendedRecipient"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2512,7 +2512,7 @@ class PocdMt000040IntendedRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2520,21 +2520,21 @@ class PocdMt000040IntendedRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2578,7 +2578,7 @@ class PocdMt000040MaintainedEntity:
     class Meta:
         name = "POCD_MT000040.MaintainedEntity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2594,7 +2594,7 @@ class PocdMt000040MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2658,7 +2658,7 @@ class PocdMt000040ManufacturedProduct:
     class Meta:
         name = "POCD_MT000040.ManufacturedProduct"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2674,7 +2674,7 @@ class PocdMt000040ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2682,7 +2682,7 @@ class PocdMt000040ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2735,7 +2735,7 @@ class PocdMt000040OrganizationPartOf:
     class Meta:
         name = "POCD_MT000040.OrganizationPartOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2751,7 +2751,7 @@ class PocdMt000040OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2759,7 +2759,7 @@ class PocdMt000040OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2836,7 +2836,7 @@ class PocdMt000040ParticipantRole:
     class Meta:
         name = "POCD_MT000040.ParticipantRole"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2852,7 +2852,7 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2860,7 +2860,7 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2874,14 +2874,14 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2941,7 +2941,7 @@ class PocdMt000040Precondition:
     class Meta:
         name = "POCD_MT000040.Precondition"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2957,7 +2957,7 @@ class PocdMt000040Precondition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3016,7 +3016,7 @@ class PocdMt000040Reference:
     class Meta:
         name = "POCD_MT000040.Reference"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3032,7 +3032,7 @@ class PocdMt000040Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3102,7 +3102,7 @@ class PocdMt000040ReferenceRange:
     class Meta:
         name = "POCD_MT000040.ReferenceRange"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3118,7 +3118,7 @@ class PocdMt000040ReferenceRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3178,7 +3178,7 @@ class PocdMt000040RelatedDocument:
     class Meta:
         name = "POCD_MT000040.RelatedDocument"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3194,7 +3194,7 @@ class PocdMt000040RelatedDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3233,7 +3233,7 @@ class PocdMt000040RelatedEntity:
     class Meta:
         name = "POCD_MT000040.RelatedEntity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3249,7 +3249,7 @@ class PocdMt000040RelatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3264,14 +3264,14 @@ class PocdMt000040RelatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3316,7 +3316,7 @@ class PocdMt000040RelatedSubject:
     class Meta:
         name = "POCD_MT000040.RelatedSubject"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3332,7 +3332,7 @@ class PocdMt000040RelatedSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3347,14 +3347,14 @@ class PocdMt000040RelatedSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3389,7 +3389,7 @@ class PocdMt000040SpecimenRole:
     class Meta:
         name = "POCD_MT000040.SpecimenRole"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3405,7 +3405,7 @@ class PocdMt000040SpecimenRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3413,7 +3413,7 @@ class PocdMt000040SpecimenRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3450,7 +3450,7 @@ class PocdMt000040Authenticator:
     class Meta:
         name = "POCD_MT000040.Authenticator"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3466,7 +3466,7 @@ class PocdMt000040Authenticator:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3522,7 +3522,7 @@ class PocdMt000040AuthoringDevice:
     class Meta:
         name = "POCD_MT000040.AuthoringDevice"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3538,7 +3538,7 @@ class PocdMt000040AuthoringDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3569,7 +3569,7 @@ class PocdMt000040AuthoringDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_maintained_entity: List[PocdMt000040MaintainedEntity] = field(
+    as_maintained_entity: list[PocdMt000040MaintainedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asMaintainedEntity",
@@ -3607,7 +3607,7 @@ class PocdMt000040Consumable:
     class Meta:
         name = "POCD_MT000040.Consumable"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3623,7 +3623,7 @@ class PocdMt000040Consumable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3662,7 +3662,7 @@ class PocdMt000040Custodian:
     class Meta:
         name = "POCD_MT000040.Custodian"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3678,7 +3678,7 @@ class PocdMt000040Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3717,7 +3717,7 @@ class PocdMt000040DataEnterer:
     class Meta:
         name = "POCD_MT000040.DataEnterer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3733,7 +3733,7 @@ class PocdMt000040DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3787,7 +3787,7 @@ class PocdMt000040EncounterParticipant:
     class Meta:
         name = "POCD_MT000040.EncounterParticipant"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3803,7 +3803,7 @@ class PocdMt000040EncounterParticipant:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3849,7 +3849,7 @@ class PocdMt000040Informant12:
     class Meta:
         name = "POCD_MT000040.Informant12"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3865,7 +3865,7 @@ class PocdMt000040Informant12:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3919,7 +3919,7 @@ class PocdMt000040InformationRecipient:
     class Meta:
         name = "POCD_MT000040.InformationRecipient"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3935,7 +3935,7 @@ class PocdMt000040InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3973,7 +3973,7 @@ class PocdMt000040LegalAuthenticator:
     class Meta:
         name = "POCD_MT000040.LegalAuthenticator"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3989,7 +3989,7 @@ class PocdMt000040LegalAuthenticator:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4053,7 +4053,7 @@ class PocdMt000040Location:
     class Meta:
         name = "POCD_MT000040.Location"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4069,7 +4069,7 @@ class PocdMt000040Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4108,7 +4108,7 @@ class PocdMt000040Participant1:
     class Meta:
         name = "POCD_MT000040.Participant1"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4124,7 +4124,7 @@ class PocdMt000040Participant1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4186,7 +4186,7 @@ class PocdMt000040Participant2:
     class Meta:
         name = "POCD_MT000040.Participant2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4202,7 +4202,7 @@ class PocdMt000040Participant2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4264,7 +4264,7 @@ class PocdMt000040Patient:
     class Meta:
         name = "POCD_MT000040.Patient"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4280,7 +4280,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4295,7 +4295,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[PnExplicit] = field(
+    name: list[PnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4350,7 +4350,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    guardian: List[PocdMt000040Guardian] = field(
+    guardian: list[PocdMt000040Guardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4364,7 +4364,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_communication: List[PocdMt000040LanguageCommunication] = field(
+    language_communication: list[PocdMt000040LanguageCommunication] = field(
         default_factory=list,
         metadata={
             "name": "languageCommunication",
@@ -4402,7 +4402,7 @@ class PocdMt000040Performer1:
     class Meta:
         name = "POCD_MT000040.Performer1"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4418,7 +4418,7 @@ class PocdMt000040Performer1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4472,7 +4472,7 @@ class PocdMt000040Performer2:
     class Meta:
         name = "POCD_MT000040.Performer2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4488,7 +4488,7 @@ class PocdMt000040Performer2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4542,7 +4542,7 @@ class PocdMt000040Product:
     class Meta:
         name = "POCD_MT000040.Product"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4558,7 +4558,7 @@ class PocdMt000040Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4597,7 +4597,7 @@ class PocdMt000040ResponsibleParty:
     class Meta:
         name = "POCD_MT000040.ResponsibleParty"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4613,7 +4613,7 @@ class PocdMt000040ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4652,7 +4652,7 @@ class PocdMt000040Specimen:
     class Meta:
         name = "POCD_MT000040.Specimen"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4668,7 +4668,7 @@ class PocdMt000040Specimen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4707,7 +4707,7 @@ class PocdMt000040Subject:
     class Meta:
         name = "POCD_MT000040.Subject"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4723,7 +4723,7 @@ class PocdMt000040Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4778,7 +4778,7 @@ class PocdMt000040AssignedAuthor:
     class Meta:
         name = "POCD_MT000040.AssignedAuthor"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4794,7 +4794,7 @@ class PocdMt000040AssignedAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4802,7 +4802,7 @@ class PocdMt000040AssignedAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4817,14 +4817,14 @@ class PocdMt000040AssignedAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4877,7 +4877,7 @@ class PocdMt000040EncompassingEncounter:
     class Meta:
         name = "POCD_MT000040.EncompassingEncounter"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4893,7 +4893,7 @@ class PocdMt000040EncompassingEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4901,7 +4901,7 @@ class PocdMt000040EncompassingEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4940,7 +4940,7 @@ class PocdMt000040EncompassingEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encounter_participant: List[PocdMt000040EncounterParticipant] = field(
+    encounter_participant: list[PocdMt000040EncounterParticipant] = field(
         default_factory=list,
         metadata={
             "name": "encounterParticipant",
@@ -4985,7 +4985,7 @@ class PocdMt000040PatientRole:
     class Meta:
         name = "POCD_MT000040.PatientRole"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5001,7 +5001,7 @@ class PocdMt000040PatientRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5009,7 +5009,7 @@ class PocdMt000040PatientRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5017,14 +5017,14 @@ class PocdMt000040PatientRole:
             "min_occurs": 1,
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5085,7 +5085,7 @@ class PocdMt000040ServiceEvent:
     class Meta:
         name = "POCD_MT000040.ServiceEvent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5101,7 +5101,7 @@ class PocdMt000040ServiceEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5109,7 +5109,7 @@ class PocdMt000040ServiceEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5131,7 +5131,7 @@ class PocdMt000040ServiceEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer1] = field(
+    performer: list[PocdMt000040Performer1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5167,7 +5167,7 @@ class PocdMt000040Author:
     class Meta:
         name = "POCD_MT000040.Author"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5183,7 +5183,7 @@ class PocdMt000040Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5246,7 +5246,7 @@ class PocdMt000040Component1:
     class Meta:
         name = "POCD_MT000040.Component1"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5262,7 +5262,7 @@ class PocdMt000040Component1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5303,7 +5303,7 @@ class PocdMt000040DocumentationOf:
     class Meta:
         name = "POCD_MT000040.DocumentationOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5319,7 +5319,7 @@ class PocdMt000040DocumentationOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5379,7 +5379,7 @@ class PocdMt000040RecordTarget:
     class Meta:
         name = "POCD_MT000040.RecordTarget"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5395,7 +5395,7 @@ class PocdMt000040RecordTarget:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5442,7 +5442,7 @@ class PocdMt000040Act:
     class Meta:
         name = "POCD_MT000040.Act"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5458,7 +5458,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5466,7 +5466,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5527,42 +5527,42 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: list["PocdMt000040EntryRelationship"] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -5570,14 +5570,14 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5622,7 +5622,7 @@ class PocdMt000040Encounter:
     class Meta:
         name = "POCD_MT000040.Encounter"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5638,7 +5638,7 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5646,7 +5646,7 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5706,42 +5706,42 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: list["PocdMt000040EntryRelationship"] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -5749,14 +5749,14 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5793,7 +5793,7 @@ class PocdMt000040Component4:
     class Meta:
         name = "POCD_MT000040.Component4"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5809,7 +5809,7 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5932,7 +5932,7 @@ class PocdMt000040Organizer:
     class Meta:
         name = "POCD_MT000040.Organizer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5948,7 +5948,7 @@ class PocdMt000040Organizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5956,7 +5956,7 @@ class PocdMt000040Organizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5994,56 +5994,56 @@ class PocdMt000040Organizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    component: List[PocdMt000040Component4] = field(
+    component: list[PocdMt000040Component4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6080,7 +6080,7 @@ class PocdMt000040EntryRelationship:
     class Meta:
         name = "POCD_MT000040.EntryRelationship"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -6096,7 +6096,7 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -6234,7 +6234,7 @@ class PocdMt000040Observation:
     class Meta:
         name = "POCD_MT000040.Observation"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -6250,7 +6250,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -6258,7 +6258,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6328,14 +6328,14 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: List[AnyType] = field(
+    value: list[AnyType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    interpretation_code: List[Ce] = field(
+    interpretation_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "interpretationCode",
@@ -6343,7 +6343,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    method_code: List[Ce] = field(
+    method_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "methodCode",
@@ -6351,7 +6351,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    target_site_code: List[Cd] = field(
+    target_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "targetSiteCode",
@@ -6366,42 +6366,42 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List[PocdMt000040EntryRelationship] = field(
+    entry_relationship: list[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6409,21 +6409,21 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference_range: List[PocdMt000040ReferenceRange] = field(
+    reference_range: list[PocdMt000040ReferenceRange] = field(
         default_factory=list,
         metadata={
             "name": "referenceRange",
@@ -6469,7 +6469,7 @@ class PocdMt000040ObservationMedia:
     class Meta:
         name = "POCD_MT000040.ObservationMedia"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -6485,7 +6485,7 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -6493,7 +6493,7 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6523,42 +6523,42 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List[PocdMt000040EntryRelationship] = field(
+    entry_relationship: list[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6566,14 +6566,14 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6617,7 +6617,7 @@ class PocdMt000040Procedure:
     class Meta:
         name = "POCD_MT000040.Procedure"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -6633,7 +6633,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -6641,7 +6641,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6694,7 +6694,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    method_code: List[Ce] = field(
+    method_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "methodCode",
@@ -6702,7 +6702,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    approach_site_code: List[Cd] = field(
+    approach_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "approachSiteCode",
@@ -6710,7 +6710,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    target_site_code: List[Cd] = field(
+    target_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "targetSiteCode",
@@ -6725,42 +6725,42 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List[PocdMt000040EntryRelationship] = field(
+    entry_relationship: list[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6768,14 +6768,14 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6820,7 +6820,7 @@ class PocdMt000040RegionOfInterest:
     class Meta:
         name = "POCD_MT000040.RegionOfInterest"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -6836,7 +6836,7 @@ class PocdMt000040RegionOfInterest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -6844,7 +6844,7 @@ class PocdMt000040RegionOfInterest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6860,7 +6860,7 @@ class PocdMt000040RegionOfInterest:
             "required": True,
         },
     )
-    value: List[PocdMt000040RegionOfInterestValue] = field(
+    value: list[PocdMt000040RegionOfInterestValue] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6875,42 +6875,42 @@ class PocdMt000040RegionOfInterest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List[PocdMt000040EntryRelationship] = field(
+    entry_relationship: list[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -6918,14 +6918,14 @@ class PocdMt000040RegionOfInterest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6971,7 +6971,7 @@ class PocdMt000040SubstanceAdministration:
     class Meta:
         name = "POCD_MT000040.SubstanceAdministration"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -6987,7 +6987,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -6995,7 +6995,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7024,7 +7024,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[Ts] = field(
+    effective_time: list[Ts] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -7056,7 +7056,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    approach_site_code: List[Cd] = field(
+    approach_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "approachSiteCode",
@@ -7103,7 +7103,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7118,35 +7118,35 @@ class PocdMt000040SubstanceAdministration:
             "required": True,
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List[PocdMt000040EntryRelationship] = field(
+    entry_relationship: list[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -7154,14 +7154,14 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7207,7 +7207,7 @@ class PocdMt000040Supply:
     class Meta:
         name = "POCD_MT000040.Supply"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -7223,7 +7223,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -7231,7 +7231,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7260,7 +7260,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -7268,7 +7268,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    priority_code: List[Ce] = field(
+    priority_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "priorityCode",
@@ -7314,7 +7314,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen: List[PocdMt000040Specimen] = field(
+    specimen: list[PocdMt000040Specimen] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7328,35 +7328,35 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[PocdMt000040Performer2] = field(
+    performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant2] = field(
+    participant: list[PocdMt000040Participant2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: List[PocdMt000040EntryRelationship] = field(
+    entry_relationship: list[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -7364,14 +7364,14 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: List[PocdMt000040Reference] = field(
+    reference: list[PocdMt000040Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    precondition: List[PocdMt000040Precondition] = field(
+    precondition: list[PocdMt000040Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7409,7 +7409,7 @@ class PocdMt000040Entry:
     class Meta:
         name = "POCD_MT000040.Entry"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -7425,7 +7425,7 @@ class PocdMt000040Entry:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -7531,7 +7531,7 @@ class PocdMt000040Section:
     class Meta:
         name = "POCD_MT000040.Section"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -7547,7 +7547,7 @@ class PocdMt000040Section:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -7606,28 +7606,28 @@ class PocdMt000040Section:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry: List[PocdMt000040Entry] = field(
+    entry: list[PocdMt000040Entry] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    component: List[PocdMt000040Component5] = field(
+    component: list[PocdMt000040Component5] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7671,7 +7671,7 @@ class PocdMt000040Component3:
     class Meta:
         name = "POCD_MT000040.Component3"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -7687,7 +7687,7 @@ class PocdMt000040Component3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -7734,7 +7734,7 @@ class PocdMt000040StructuredBody:
     class Meta:
         name = "POCD_MT000040.StructuredBody"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -7750,7 +7750,7 @@ class PocdMt000040StructuredBody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -7774,7 +7774,7 @@ class PocdMt000040StructuredBody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    component: List[PocdMt000040Component3] = field(
+    component: list[PocdMt000040Component3] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7812,7 +7812,7 @@ class PocdMt000040Component2:
     class Meta:
         name = "POCD_MT000040.Component2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -7828,7 +7828,7 @@ class PocdMt000040Component2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -7883,7 +7883,7 @@ class PocdMt000040ClinicalDocument:
     class Meta:
         name = "POCD_MT000040.ClinicalDocument"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -7900,7 +7900,7 @@ class PocdMt000040ClinicalDocument:
             "required": True,
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -7981,7 +7981,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    record_target: List[PocdMt000040RecordTarget] = field(
+    record_target: list[PocdMt000040RecordTarget] = field(
         default_factory=list,
         metadata={
             "name": "recordTarget",
@@ -7990,7 +7990,7 @@ class PocdMt000040ClinicalDocument:
             "min_occurs": 1,
         },
     )
-    author: List[PocdMt000040Author] = field(
+    author: list[PocdMt000040Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -8006,7 +8006,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    informant: List[PocdMt000040Informant12] = field(
+    informant: list[PocdMt000040Informant12] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -8021,7 +8021,7 @@ class PocdMt000040ClinicalDocument:
             "required": True,
         },
     )
-    information_recipient: List[PocdMt000040InformationRecipient] = field(
+    information_recipient: list[PocdMt000040InformationRecipient] = field(
         default_factory=list,
         metadata={
             "name": "informationRecipient",
@@ -8037,21 +8037,21 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    authenticator: List[PocdMt000040Authenticator] = field(
+    authenticator: list[PocdMt000040Authenticator] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant: List[PocdMt000040Participant1] = field(
+    participant: list[PocdMt000040Participant1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    in_fulfillment_of: List[PocdMt000040InFulfillmentOf] = field(
+    in_fulfillment_of: list[PocdMt000040InFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "name": "inFulfillmentOf",
@@ -8059,7 +8059,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    documentation_of: List[PocdMt000040DocumentationOf] = field(
+    documentation_of: list[PocdMt000040DocumentationOf] = field(
         default_factory=list,
         metadata={
             "name": "documentationOf",
@@ -8067,7 +8067,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    related_document: List[PocdMt000040RelatedDocument] = field(
+    related_document: list[PocdMt000040RelatedDocument] = field(
         default_factory=list,
         metadata={
             "name": "relatedDocument",
@@ -8075,7 +8075,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    authorization: List[PocdMt000040Authorization] = field(
+    authorization: list[PocdMt000040Authorization] = field(
         default_factory=list,
         metadata={
             "type": "Element",

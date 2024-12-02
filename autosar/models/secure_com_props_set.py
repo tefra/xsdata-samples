@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -193,7 +193,7 @@ class SecureComPropsSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -204,7 +204,7 @@ class SecureComPropsSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -215,7 +215,7 @@ class SecureComPropsSet:
 
     @dataclass
     class SecureComPropss:
-        sec_oc_secure_com_props: List[SecOcSecureComProps] = field(
+        sec_oc_secure_com_props: list[SecOcSecureComProps] = field(
             default_factory=list,
             metadata={
                 "name": "SEC-OC-SECURE-COM-PROPS",
@@ -223,7 +223,7 @@ class SecureComPropsSet:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        tls_secure_com_props: List[TlsSecureComProps] = field(
+        tls_secure_com_props: list[TlsSecureComProps] = field(
             default_factory=list,
             metadata={
                 "name": "TLS-SECURE-COM-PROPS",

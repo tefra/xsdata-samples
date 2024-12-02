@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Tuple
+from typing import Any
 
 from sdmx_ml.models.component_list_type import ComponentListType
 from sdmx_ml.models.measure import Measure
@@ -21,7 +21,7 @@ class MeasureListType(ComponentListType):
             "type": "Ignore",
         },
     )
-    measure: Tuple[Measure, ...] = field(
+    measure: tuple[Measure, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Measure",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.metadataflow_type import MetadataflowType
 
@@ -19,7 +18,7 @@ class MetadataflowsType:
         that will be provided for different reference periods
     """
 
-    metadataflow: Tuple[MetadataflowType, ...] = field(
+    metadataflow: tuple[MetadataflowType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Metadataflow",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -195,7 +195,7 @@ class TlvDataIdDefinitionSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -206,7 +206,7 @@ class TlvDataIdDefinitionSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -217,7 +217,7 @@ class TlvDataIdDefinitionSet:
 
     @dataclass
     class TlvDataIdDefinitions:
-        tlv_data_id_definition: List[TlvDataIdDefinition] = field(
+        tlv_data_id_definition: list[TlvDataIdDefinition] = field(
             default_factory=list,
             metadata={
                 "name": "TLV-DATA-ID-DEFINITION",

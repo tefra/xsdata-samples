@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -210,7 +210,7 @@ class SecureCommunicationPropsSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -221,7 +221,7 @@ class SecureCommunicationPropsSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -232,7 +232,7 @@ class SecureCommunicationPropsSet:
 
     @dataclass
     class AuthenticationPropss:
-        secure_communication_authentication_props: List[
+        secure_communication_authentication_props: list[
             SecureCommunicationAuthenticationProps
         ] = field(
             default_factory=list,
@@ -245,7 +245,7 @@ class SecureCommunicationPropsSet:
 
     @dataclass
     class FreshnessPropss:
-        secure_communication_freshness_props: List[
+        secure_communication_freshness_props: list[
             SecureCommunicationFreshnessProps
         ] = field(
             default_factory=list,

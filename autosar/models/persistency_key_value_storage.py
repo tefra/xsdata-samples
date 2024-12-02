@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -260,7 +260,7 @@ class PersistencyKeyValueStorage:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -271,7 +271,7 @@ class PersistencyKeyValueStorage:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -282,7 +282,7 @@ class PersistencyKeyValueStorage:
 
     @dataclass
     class RedundancyHandlings:
-        persistency_redundancy_crc: List[PersistencyRedundancyCrc] = field(
+        persistency_redundancy_crc: list[PersistencyRedundancyCrc] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-CRC",
@@ -290,7 +290,7 @@ class PersistencyKeyValueStorage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_redundancy_hash: List[PersistencyRedundancyHash] = field(
+        persistency_redundancy_hash: list[PersistencyRedundancyHash] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-HASH",
@@ -298,7 +298,7 @@ class PersistencyKeyValueStorage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_redundancy_m_out_of_n: List[
+        persistency_redundancy_m_out_of_n: list[
             PersistencyRedundancyMOutOfN
         ] = field(
             default_factory=list,
@@ -311,7 +311,7 @@ class PersistencyKeyValueStorage:
 
     @dataclass
     class KeyValuePairs:
-        persistency_key_value_pair: List[PersistencyKeyValuePair] = field(
+        persistency_key_value_pair: list[PersistencyKeyValuePair] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-KEY-VALUE-PAIR",

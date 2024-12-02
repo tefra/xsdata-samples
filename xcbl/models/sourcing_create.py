@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.sourcing_create_response import (
     ItemNumber,
@@ -636,7 +636,7 @@ class Bundle:
             "required": True,
         }
     )
-    line_item_number: List[LineItemNumber] = field(
+    line_item_number: list[LineItemNumber] = field(
         default_factory=list,
         metadata={
             "name": "LineItemNumber",
@@ -709,7 +709,7 @@ class KeyVal:
 
 @dataclass(kw_only=True)
 class ListOfParty:
-    party: List[Party] = field(
+    party: list[Party] = field(
         default_factory=list,
         metadata={
             "name": "Party",
@@ -949,7 +949,7 @@ class AdditionalAttribute:
 
 @dataclass(kw_only=True)
 class ListOfBundle:
-    bundle: List[Bundle] = field(
+    bundle: list[Bundle] = field(
         default_factory=list,
         metadata={
             "name": "Bundle",
@@ -961,7 +961,7 @@ class ListOfBundle:
 
 @dataclass(kw_only=True)
 class ListOfDropDownMenuValue:
-    drop_down_menu_value: List[DropDownMenuValue] = field(
+    drop_down_menu_value: list[DropDownMenuValue] = field(
         default_factory=list,
         metadata={
             "name": "DropDownMenuValue",
@@ -973,7 +973,7 @@ class ListOfDropDownMenuValue:
 
 @dataclass(kw_only=True)
 class ListOfKeyVal:
-    key_val: List[KeyVal] = field(
+    key_val: list[KeyVal] = field(
         default_factory=list,
         metadata={
             "name": "KeyVal",
@@ -1074,7 +1074,7 @@ class Formula:
             "required": True,
         }
     )
-    additional_attribute: List[AdditionalAttribute] = field(
+    additional_attribute: list[AdditionalAttribute] = field(
         default_factory=list,
         metadata={
             "name": "AdditionalAttribute",
@@ -1092,7 +1092,7 @@ class Formula:
 
 @dataclass(kw_only=True)
 class ListOfValidQuoteCurrency:
-    valid_quote_currency: List[ValidQuoteCurrency] = field(
+    valid_quote_currency: list[ValidQuoteCurrency] = field(
         default_factory=list,
         metadata={
             "name": "ValidQuoteCurrency",
@@ -1304,7 +1304,7 @@ class SourcingRulesProfile:
 
 @dataclass(kw_only=True)
 class ListOfSourcingPartners:
-    sourcing_partners: List[SourcingPartners] = field(
+    sourcing_partners: list[SourcingPartners] = field(
         default_factory=list,
         metadata={
             "name": "SourcingPartners",
@@ -1376,14 +1376,14 @@ class SourcingItem:
             "type": "Element",
         },
     )
-    sourcing_attribute: List[SourcingAttribute] = field(
+    sourcing_attribute: list[SourcingAttribute] = field(
         default_factory=list,
         metadata={
             "name": "SourcingAttribute",
             "type": "Element",
         },
     )
-    formula: List[Formula] = field(
+    formula: list[Formula] = field(
         default_factory=list,
         metadata={
             "name": "Formula",
@@ -1464,7 +1464,7 @@ class SourcingSpecifications:
             "type": "Element",
         },
     )
-    sourcing_attribute: List[SourcingAttribute] = field(
+    sourcing_attribute: list[SourcingAttribute] = field(
         default_factory=list,
         metadata={
             "name": "SourcingAttribute",
@@ -1549,7 +1549,7 @@ class SourcingParticipants:
 
 @dataclass(kw_only=True)
 class ListOfSourcingCreateDetail:
-    sourcing_create_detail: List[SourcingCreateDetail] = field(
+    sourcing_create_detail: list[SourcingCreateDetail] = field(
         default_factory=list,
         metadata={
             "name": "SourcingCreateDetail",
@@ -1692,7 +1692,7 @@ class SourcingItemComponent:
 
 @dataclass(kw_only=True)
 class ListOfSourcingItemComponent:
-    sourcing_item_component: List[SourcingItemComponent] = field(
+    sourcing_item_component: list[SourcingItemComponent] = field(
         default_factory=list,
         metadata={
             "name": "SourcingItemComponent",

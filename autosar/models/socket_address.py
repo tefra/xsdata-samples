@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -365,7 +365,7 @@ class SocketAddress:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -376,7 +376,7 @@ class SocketAddress:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -420,7 +420,7 @@ class SocketAddress:
 
     @dataclass
     class MulticastConnectorRefs:
-        multicast_connector_ref: List[
+        multicast_connector_ref: list[
             "SocketAddress.MulticastConnectorRefs.MulticastConnectorRef"
         ] = field(
             default_factory=list,
@@ -444,7 +444,7 @@ class SocketAddress:
 
     @dataclass
     class StaticSocketConnections:
-        static_socket_connection: List[StaticSocketConnection] = field(
+        static_socket_connection: list[StaticSocketConnection] = field(
             default_factory=list,
             metadata={
                 "name": "STATIC-SOCKET-CONNECTION",

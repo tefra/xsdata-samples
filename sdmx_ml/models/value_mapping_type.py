@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
@@ -25,7 +25,7 @@ class ValueMappingType(AnnotableType):
     :ivar valid_to:
     """
 
-    source_value: Tuple[MappedValueType, ...] = field(
+    source_value: tuple[MappedValueType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SourceValue",
@@ -34,7 +34,7 @@ class ValueMappingType(AnnotableType):
             "min_occurs": 1,
         },
     )
-    target_value: Tuple[str, ...] = field(
+    target_value: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TargetValue",

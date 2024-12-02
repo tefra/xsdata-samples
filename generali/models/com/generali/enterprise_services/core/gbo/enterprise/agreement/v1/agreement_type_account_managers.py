@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.account_manager_involvement_type import (
     AccountManagerInvolvementType,
@@ -15,7 +14,7 @@ class AgreementTypeAccountManagers:
     class Meta:
         global_type = False
 
-    account_manager: List[AccountManagerInvolvementType] = field(
+    account_manager: list[AccountManagerInvolvementType] = field(
         default_factory=list,
         metadata={
             "name": "AccountManager",

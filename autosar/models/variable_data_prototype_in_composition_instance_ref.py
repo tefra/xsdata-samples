@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
@@ -43,7 +43,7 @@ class VariableDataPrototypeInCompositionInstanceRef:
     class Meta:
         name = "VARIABLE-DATA-PROTOTYPE-IN-COMPOSITION-INSTANCE-REF"
 
-    context_sw_component_prototype_ref: List[
+    context_sw_component_prototype_ref: list[
         "VariableDataPrototypeInCompositionInstanceRef.ContextSwComponentPrototypeRef"
     ] = field(
         default_factory=list,

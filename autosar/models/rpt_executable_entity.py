@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -229,7 +229,7 @@ class RptExecutableEntity:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -240,7 +240,7 @@ class RptExecutableEntity:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -251,7 +251,7 @@ class RptExecutableEntity:
 
     @dataclass
     class RptExecutableEntityEvents:
-        rpt_executable_entity_event: List[RptExecutableEntityEvent] = field(
+        rpt_executable_entity_event: list[RptExecutableEntityEvent] = field(
             default_factory=list,
             metadata={
                 "name": "RPT-EXECUTABLE-ENTITY-EVENT",
@@ -262,7 +262,7 @@ class RptExecutableEntity:
 
     @dataclass
     class RptReads:
-        role_based_mc_data_assignment: List[RoleBasedMcDataAssignment] = field(
+        role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-MC-DATA-ASSIGNMENT",
@@ -273,7 +273,7 @@ class RptExecutableEntity:
 
     @dataclass
     class RptWrites:
-        role_based_mc_data_assignment: List[RoleBasedMcDataAssignment] = field(
+        role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-MC-DATA-ASSIGNMENT",

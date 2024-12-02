@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from .data_input import DataInput
 from .data_output import DataOutput
@@ -15,7 +14,7 @@ class TInputOutputSpecification(TBaseElement):
     class Meta:
         name = "tInputOutputSpecification"
 
-    data_input: List[DataInput] = field(
+    data_input: list[DataInput] = field(
         default_factory=list,
         metadata={
             "name": "dataInput",
@@ -23,7 +22,7 @@ class TInputOutputSpecification(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    data_output: List[DataOutput] = field(
+    data_output: list[DataOutput] = field(
         default_factory=list,
         metadata={
             "name": "dataOutput",
@@ -31,7 +30,7 @@ class TInputOutputSpecification(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    input_set: List[InputSet] = field(
+    input_set: list[InputSet] = field(
         default_factory=list,
         metadata={
             "name": "inputSet",
@@ -40,7 +39,7 @@ class TInputOutputSpecification(TBaseElement):
             "min_occurs": 1,
         },
     )
-    output_set: List[OutputSet] = field(
+    output_set: list[OutputSet] = field(
         default_factory=list,
         metadata={
             "name": "outputSet",

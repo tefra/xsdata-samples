@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .boolean import Boolean
 from .mapping_direction_enum import MappingDirectionEnum
@@ -110,7 +110,7 @@ class TextTableMapping:
 
     @dataclass
     class ValuePairs:
-        text_table_value_pair: List[TextTableValuePair] = field(
+        text_table_value_pair: list[TextTableValuePair] = field(
             default_factory=list,
             metadata={
                 "name": "TEXT-TABLE-VALUE-PAIR",

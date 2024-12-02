@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AnyType,
@@ -51,7 +51,7 @@ class McaiMt900001Uv01DetectedIssueManagement:
     class Meta:
         name = "MCAI_MT900001UV01.DetectedIssueManagement"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -67,7 +67,7 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -119,7 +119,7 @@ class McaiMt900001Uv01Role:
     class Meta:
         name = "MCAI_MT900001UV01.Role"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -135,7 +135,7 @@ class McaiMt900001Uv01Role:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -182,7 +182,7 @@ class McaiMt900001Uv01SourceOf:
     class Meta:
         name = "MCAI_MT900001UV01.SourceOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -198,7 +198,7 @@ class McaiMt900001Uv01SourceOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -247,7 +247,7 @@ class McaiMt900001Uv01Subject:
     class Meta:
         name = "MCAI_MT900001UV01.Subject"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -263,7 +263,7 @@ class McaiMt900001Uv01Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -301,7 +301,7 @@ class McaiMt900001Uv01ActOrderRequired:
     class Meta:
         name = "MCAI_MT900001UV01.ActOrderRequired"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -317,7 +317,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -332,7 +332,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -340,7 +340,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: List[McaiMt900001Uv01Subject] = field(
+    subject: list[McaiMt900001Uv01Subject] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -379,7 +379,7 @@ class McaiMt900001Uv01Requires:
     class Meta:
         name = "MCAI_MT900001UV01.Requires"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -395,7 +395,7 @@ class McaiMt900001Uv01Requires:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -472,7 +472,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
     class Meta:
         name = "MCAI_MT900001UV01.DetectedIssueEvent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -488,7 +488,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -496,7 +496,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -525,7 +525,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mitigated_by: List[McaiMt900001Uv01SourceOf] = field(
+    mitigated_by: list[McaiMt900001Uv01SourceOf] = field(
         default_factory=list,
         metadata={
             "name": "mitigatedBy",
@@ -534,7 +534,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "nillable": True,
         },
     )
-    trigger_for: List[McaiMt900001Uv01Requires] = field(
+    trigger_for: list[McaiMt900001Uv01Requires] = field(
         default_factory=list,
         metadata={
             "name": "triggerFor",

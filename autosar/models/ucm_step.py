@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -192,7 +192,7 @@ class UcmStep:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -203,7 +203,7 @@ class UcmStep:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -214,7 +214,7 @@ class UcmStep:
 
     @dataclass
     class SoftwarePackageSteps:
-        software_package_step: List[SoftwarePackageStep] = field(
+        software_package_step: list[SoftwarePackageStep] = field(
             default_factory=list,
             metadata={
                 "name": "SOFTWARE-PACKAGE-STEP",

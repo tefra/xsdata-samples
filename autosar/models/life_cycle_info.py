@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .life_cycle_period import LifeCyclePeriod
@@ -139,7 +139,7 @@ class LifeCycleInfo:
 
     @dataclass
     class UseInsteadRefs:
-        use_instead_ref: List["LifeCycleInfo.UseInsteadRefs.UseInsteadRef"] = (
+        use_instead_ref: list["LifeCycleInfo.UseInsteadRefs.UseInsteadRef"] = (
             field(
                 default_factory=list,
                 metadata={

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -226,7 +226,7 @@ class McGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -237,7 +237,7 @@ class McGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -248,7 +248,7 @@ class McGroup:
 
     @dataclass
     class SubGroupRefs:
-        sub_group_ref: List["McGroup.SubGroupRefs.SubGroupRef"] = field(
+        sub_group_ref: list["McGroup.SubGroupRefs.SubGroupRef"] = field(
             default_factory=list,
             metadata={
                 "name": "SUB-GROUP-REF",
@@ -270,7 +270,7 @@ class McGroup:
 
     @dataclass
     class McFunctionRefs:
-        mc_function_ref: List["McGroup.McFunctionRefs.McFunctionRef"] = field(
+        mc_function_ref: list["McGroup.McFunctionRefs.McFunctionRef"] = field(
             default_factory=list,
             metadata={
                 "name": "MC-FUNCTION-REF",

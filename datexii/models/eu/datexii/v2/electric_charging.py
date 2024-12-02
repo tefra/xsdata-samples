@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.charging_station_usage_type_enum import (
     ChargingStationUsageTypeEnum,
@@ -37,7 +37,7 @@ class ElectricCharging:
     :ivar electric_charging_extension:
     """
 
-    charging_station_usage_type: List[ChargingStationUsageTypeEnum] = field(
+    charging_station_usage_type: list[ChargingStationUsageTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "chargingStationUsageType",
@@ -62,14 +62,14 @@ class ElectricCharging:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    voltage: List[float] = field(
+    voltage: list[float] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charging_station_connector_type: List[MultilingualString] = field(
+    charging_station_connector_type: list[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "chargingStationConnectorType",

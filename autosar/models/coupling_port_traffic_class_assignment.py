@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .identifier import Identifier
 from .positive_integer import PositiveInteger
@@ -91,7 +91,7 @@ class CouplingPortTrafficClassAssignment:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -107,7 +107,7 @@ class CouplingPortTrafficClassAssignment:
             Traffic Class.
         """
 
-        priority: List[PositiveInteger] = field(
+        priority: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "PRIORITY",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.vessel_type import (
     VesselType,
@@ -15,7 +14,7 @@ class CoverGbotypeVessels:
     class Meta:
         global_type = False
 
-    vessel: List[VesselType] = field(
+    vessel: list[VesselType] = field(
         default_factory=list,
         metadata={
             "name": "Vessel",

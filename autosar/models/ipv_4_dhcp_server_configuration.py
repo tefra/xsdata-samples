@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -164,7 +164,7 @@ class Ipv4DhcpServerConfiguration:
             servers. Notation 255.255.255.255
         """
 
-        dns_server_address: List[Ip4AddressString] = field(
+        dns_server_address: list[Ip4AddressString] = field(
             default_factory=list,
             metadata={
                 "name": "DNS-SERVER-ADDRESS",

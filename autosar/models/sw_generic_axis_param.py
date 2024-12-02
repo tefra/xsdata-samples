@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .numerical_value_variation_point import NumericalValueVariationPoint
 from .ref import Ref
@@ -50,7 +50,7 @@ class SwGenericAxisParam:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vf: List[NumericalValueVariationPoint] = field(
+    vf: list[NumericalValueVariationPoint] = field(
         default_factory=list,
         metadata={
             "name": "VF",

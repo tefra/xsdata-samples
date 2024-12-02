@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -260,7 +260,7 @@ class PduTriggering:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -271,7 +271,7 @@ class PduTriggering:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -282,7 +282,7 @@ class PduTriggering:
 
     @dataclass
     class IPduPortRefs:
-        i_pdu_port_ref: List["PduTriggering.IPduPortRefs.IPduPortRef"] = field(
+        i_pdu_port_ref: list["PduTriggering.IPduPortRefs.IPduPortRef"] = field(
             default_factory=list,
             metadata={
                 "name": "I-PDU-PORT-REF",
@@ -315,7 +315,7 @@ class PduTriggering:
 
     @dataclass
     class ISignalTriggerings:
-        i_signal_triggering_ref_conditional: List[
+        i_signal_triggering_ref_conditional: list[
             ISignalTriggeringRefConditional
         ] = field(
             default_factory=list,
@@ -339,7 +339,7 @@ class PduTriggering:
 
     @dataclass
     class TriggerIPduSendConditions:
-        trigger_i_pdu_send_condition: List[TriggerIPduSendCondition] = field(
+        trigger_i_pdu_send_condition: list[TriggerIPduSendCondition] = field(
             default_factory=list,
             metadata={
                 "name": "TRIGGER-I-PDU-SEND-CONDITION",

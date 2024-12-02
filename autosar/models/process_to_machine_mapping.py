@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -248,7 +248,7 @@ class ProcessToMachineMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -259,7 +259,7 @@ class ProcessToMachineMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -316,7 +316,7 @@ class ProcessToMachineMapping:
 
     @dataclass
     class ShallNotRunOnRefs:
-        shall_not_run_on_ref: List[
+        shall_not_run_on_ref: list[
             "ProcessToMachineMapping.ShallNotRunOnRefs.ShallNotRunOnRef"
         ] = field(
             default_factory=list,
@@ -340,7 +340,7 @@ class ProcessToMachineMapping:
 
     @dataclass
     class ShallRunOnRefs:
-        shall_run_on_ref: List[
+        shall_run_on_ref: list[
             "ProcessToMachineMapping.ShallRunOnRefs.ShallRunOnRef"
         ] = field(
             default_factory=list,

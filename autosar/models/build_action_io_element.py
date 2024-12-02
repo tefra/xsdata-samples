@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import Sdg
 from .build_engineering_object import BuildEngineeringObject
@@ -137,7 +137,7 @@ class BuildActionIoElement:
 
     @dataclass
     class Sdgs:
-        sdg: List[Sdg] = field(
+        sdg: list[Sdg] = field(
             default_factory=list,
             metadata={
                 "name": "SDG",

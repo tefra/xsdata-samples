@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -101,7 +101,7 @@ class RoleBasedMcDataAssignment:
 
     @dataclass
     class ExecutionContextRefs:
-        execution_context_ref: List[
+        execution_context_ref: list[
             "RoleBasedMcDataAssignment.ExecutionContextRefs.ExecutionContextRef"
         ] = field(
             default_factory=list,
@@ -125,7 +125,7 @@ class RoleBasedMcDataAssignment:
 
     @dataclass
     class McDataInstanceRefs:
-        mc_data_instance_ref: List[
+        mc_data_instance_ref: list[
             "RoleBasedMcDataAssignment.McDataInstanceRefs.McDataInstanceRef"
         ] = field(
             default_factory=list,

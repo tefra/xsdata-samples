@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.data_constraint_type import DataConstraintType
 
@@ -22,7 +21,7 @@ class DataConstraintsType:
         combinations.
     """
 
-    data_constraint: Tuple[DataConstraintType, ...] = field(
+    data_constraint: tuple[DataConstraintType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DataConstraint",

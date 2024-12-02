@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.subscription_status_type import SubscriptionStatusType
 
@@ -25,7 +24,7 @@ class SubmitSubscriptionsResponseType:
         subscription.
     """
 
-    subscription_status: Tuple[SubscriptionStatusType, ...] = field(
+    subscription_status: tuple[SubscriptionStatusType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubscriptionStatus",

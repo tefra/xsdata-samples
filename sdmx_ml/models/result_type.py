@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.registration_type import RegistrationType
 
@@ -35,7 +35,7 @@ class ResultType:
             "required": True,
         },
     )
-    constraint: Tuple[str, ...] = field(
+    constraint: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Constraint",

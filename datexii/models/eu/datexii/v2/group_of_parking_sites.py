@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.group_of_parking_sites_type_enum import (
@@ -37,7 +37,7 @@ class GroupOfParkingSites(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_site_by_reference: List[ParkingRecordVersionedReference] = field(
+    parking_site_by_reference: list[ParkingRecordVersionedReference] = field(
         default_factory=list,
         metadata={
             "name": "parkingSiteByReference",
@@ -45,7 +45,7 @@ class GroupOfParkingSites(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_site: List[ParkingSite] = field(
+    parking_site: list[ParkingSite] = field(
         default_factory=list,
         metadata={
             "name": "parkingSite",

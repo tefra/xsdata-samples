@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -156,7 +156,7 @@ class OrderChangeType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -230,7 +230,7 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_period: Tuple[ValidityPeriod, ...] = field(
+    validity_period: tuple[ValidityPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
@@ -265,7 +265,7 @@ class OrderChangeType:
             },
         )
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -275,7 +275,7 @@ class OrderChangeType:
             },
         )
     )
-    contract: Tuple[Contract, ...] = field(
+    contract: tuple[Contract, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Contract",
@@ -283,7 +283,7 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -341,7 +341,7 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -357,7 +357,7 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_means: Tuple[PaymentMeans, ...] = field(
+    payment_means: tuple[PaymentMeans, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentMeans",
@@ -365,7 +365,7 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -381,7 +381,7 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -421,7 +421,7 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -437,7 +437,7 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    order_line: Tuple[OrderLine, ...] = field(
+    order_line: tuple[OrderLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrderLine",

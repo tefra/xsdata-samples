@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -101,7 +101,7 @@ class BaseHeaderType:
             "required": True,
         },
     )
-    receiver: Tuple[PartyType, ...] = field(
+    receiver: tuple[PartyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Receiver",
@@ -109,7 +109,7 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -117,7 +117,7 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    structure: Tuple[PayloadStructureType, ...] = field(
+    structure: tuple[PayloadStructureType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Structure",
@@ -151,7 +151,7 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    data_set_id: Tuple[str, ...] = field(
+    data_set_id: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DataSetID",
@@ -198,7 +198,7 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    source: Tuple[TextType, ...] = field(
+    source: tuple[TextType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Source",

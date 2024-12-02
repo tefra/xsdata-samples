@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .boolean import Boolean
 from .full_binding_time_enum import FullBindingTimeEnum
@@ -81,7 +81,7 @@ class VariationRestrictionWithSeverity:
         :ivar valid_binding_time: List of valid binding times.
         """
 
-        valid_binding_time: List[FullBindingTimeEnum] = field(
+        valid_binding_time: list[FullBindingTimeEnum] = field(
             default_factory=list,
             metadata={
                 "name": "VALID-BINDING-TIME",

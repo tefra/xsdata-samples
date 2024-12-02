@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.metadataflow_base_type import MetadataflowBaseType
 
@@ -21,7 +20,7 @@ class MetadataflowType(MetadataflowBaseType):
         wildcards for parts of the reference.
     """
 
-    target: Tuple[str, ...] = field(
+    target: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Target",

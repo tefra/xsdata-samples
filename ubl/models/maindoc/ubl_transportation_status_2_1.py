@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Consignment,
@@ -131,7 +131,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -139,7 +139,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -183,7 +183,7 @@ class TransportationStatusType:
             },
         )
     )
-    consignment: Tuple[Consignment, ...] = field(
+    consignment: tuple[Consignment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Consignment",
@@ -191,7 +191,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_event: Tuple[TransportEvent, ...] = field(
+    transport_event: tuple[TransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEvent",
@@ -199,7 +199,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -207,7 +207,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -271,7 +271,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    status_location: Tuple[StatusLocation, ...] = field(
+    status_location: tuple[StatusLocation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "StatusLocation",
@@ -279,7 +279,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    status_period: Tuple[StatusPeriod, ...] = field(
+    status_period: tuple[StatusPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "StatusPeriod",

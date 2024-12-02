@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -331,7 +331,7 @@ class ContainerIPdu:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -342,7 +342,7 @@ class ContainerIPdu:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -353,7 +353,7 @@ class ContainerIPdu:
 
     @dataclass
     class ContainedPduTriggeringRefs:
-        contained_pdu_triggering_ref: List[
+        contained_pdu_triggering_ref: list[
             "ContainerIPdu.ContainedPduTriggeringRefs.ContainedPduTriggeringRef"
         ] = field(
             default_factory=list,

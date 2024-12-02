@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -272,7 +272,7 @@ class LinPhysicalChannel:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -283,7 +283,7 @@ class LinPhysicalChannel:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -294,7 +294,7 @@ class LinPhysicalChannel:
 
     @dataclass
     class CommConnectors:
-        communication_connector_ref_conditional: List[
+        communication_connector_ref_conditional: list[
             CommunicationConnectorRefConditional
         ] = field(
             default_factory=list,
@@ -307,7 +307,7 @@ class LinPhysicalChannel:
 
     @dataclass
     class FrameTriggerings:
-        can_frame_triggering: List[CanFrameTriggering] = field(
+        can_frame_triggering: list[CanFrameTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-FRAME-TRIGGERING",
@@ -315,7 +315,7 @@ class LinPhysicalChannel:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_frame_triggering: List[EthernetFrameTriggering] = field(
+        ethernet_frame_triggering: list[EthernetFrameTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-FRAME-TRIGGERING",
@@ -323,7 +323,7 @@ class LinPhysicalChannel:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_frame_triggering: List[FlexrayFrameTriggering] = field(
+        flexray_frame_triggering: list[FlexrayFrameTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-FRAME-TRIGGERING",
@@ -331,7 +331,7 @@ class LinPhysicalChannel:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_frame_triggering: List[LinFrameTriggering] = field(
+        lin_frame_triggering: list[LinFrameTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-FRAME-TRIGGERING",
@@ -342,7 +342,7 @@ class LinPhysicalChannel:
 
     @dataclass
     class ISignalTriggerings:
-        i_signal_triggering: List[ISignalTriggering] = field(
+        i_signal_triggering: list[ISignalTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-TRIGGERING",
@@ -353,7 +353,7 @@ class LinPhysicalChannel:
 
     @dataclass
     class ManagedPhysicalChannelRefs:
-        managed_physical_channel_ref: List[
+        managed_physical_channel_ref: list[
             "LinPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef"
         ] = field(
             default_factory=list,
@@ -377,7 +377,7 @@ class LinPhysicalChannel:
 
     @dataclass
     class PduTriggerings:
-        pdu_triggering: List[PduTriggering] = field(
+        pdu_triggering: list[PduTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-TRIGGERING",
@@ -388,7 +388,7 @@ class LinPhysicalChannel:
 
     @dataclass
     class ScheduleTables:
-        lin_schedule_table: List[LinScheduleTable] = field(
+        lin_schedule_table: list[LinScheduleTable] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-SCHEDULE-TABLE",

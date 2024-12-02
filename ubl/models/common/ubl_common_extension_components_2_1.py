@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     Id,
@@ -210,7 +210,7 @@ class UblextensionsType:
     class Meta:
         name = "UBLExtensionsType"
 
-    ublextension: Tuple[Ublextension, ...] = field(
+    ublextension: tuple[Ublextension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "UBLExtension",

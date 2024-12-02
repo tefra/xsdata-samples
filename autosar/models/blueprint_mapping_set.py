@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -194,7 +194,7 @@ class BlueprintMappingSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -205,7 +205,7 @@ class BlueprintMappingSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -216,7 +216,7 @@ class BlueprintMappingSet:
 
     @dataclass
     class BlueprintMaps:
-        blueprint_mapping: List[BlueprintMapping] = field(
+        blueprint_mapping: list[BlueprintMapping] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-MAPPING",
@@ -224,7 +224,7 @@ class BlueprintMappingSet:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        port_interface_blueprint_mapping: List[
+        port_interface_blueprint_mapping: list[
             PortInterfaceBlueprintMapping
         ] = field(
             default_factory=list,
@@ -234,7 +234,7 @@ class BlueprintMappingSet:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        port_prototype_blueprint_mapping: List[
+        port_prototype_blueprint_mapping: list[
             PortPrototypeBlueprintMapping
         ] = field(
             default_factory=list,

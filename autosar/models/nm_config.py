@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -220,7 +220,7 @@ class NmConfig:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -231,7 +231,7 @@ class NmConfig:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -242,7 +242,7 @@ class NmConfig:
 
     @dataclass
     class NmClusters:
-        can_nm_cluster: List[CanNmCluster] = field(
+        can_nm_cluster: list[CanNmCluster] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-NM-CLUSTER",
@@ -250,7 +250,7 @@ class NmConfig:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_nm_cluster: List[FlexrayNmCluster] = field(
+        flexray_nm_cluster: list[FlexrayNmCluster] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-NM-CLUSTER",
@@ -258,7 +258,7 @@ class NmConfig:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_nm_cluster: List[J1939NmCluster] = field(
+        j_1939_nm_cluster: list[J1939NmCluster] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-NM-CLUSTER",
@@ -266,7 +266,7 @@ class NmConfig:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_nm_cluster: List[LinNmCluster] = field(
+        lin_nm_cluster: list[LinNmCluster] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-NM-CLUSTER",
@@ -274,7 +274,7 @@ class NmConfig:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        udp_nm_cluster: List[UdpNmCluster] = field(
+        udp_nm_cluster: list[UdpNmCluster] = field(
             default_factory=list,
             metadata={
                 "name": "UDP-NM-CLUSTER",
@@ -285,7 +285,7 @@ class NmConfig:
 
     @dataclass
     class NmClusterCouplings:
-        can_nm_cluster_coupling: List[CanNmClusterCoupling] = field(
+        can_nm_cluster_coupling: list[CanNmClusterCoupling] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-NM-CLUSTER-COUPLING",
@@ -293,7 +293,7 @@ class NmConfig:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_nm_cluster_coupling: List[FlexrayNmClusterCoupling] = field(
+        flexray_nm_cluster_coupling: list[FlexrayNmClusterCoupling] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-NM-CLUSTER-COUPLING",
@@ -301,7 +301,7 @@ class NmConfig:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        udp_nm_cluster_coupling: List[UdpNmClusterCoupling] = field(
+        udp_nm_cluster_coupling: list[UdpNmClusterCoupling] = field(
             default_factory=list,
             metadata={
                 "name": "UDP-NM-CLUSTER-COUPLING",
@@ -312,7 +312,7 @@ class NmConfig:
 
     @dataclass
     class NmIfEcus:
-        nm_ecu: List[NmEcu] = field(
+        nm_ecu: list[NmEcu] = field(
             default_factory=list,
             metadata={
                 "name": "NM-ECU",

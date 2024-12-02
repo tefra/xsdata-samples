@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -219,7 +219,7 @@ class ConsumedProvidedServiceInstanceGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -230,7 +230,7 @@ class ConsumedProvidedServiceInstanceGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -241,7 +241,7 @@ class ConsumedProvidedServiceInstanceGroup:
 
     @dataclass
     class ConsumedServiceInstances:
-        consumed_service_instance_ref_conditional: List[
+        consumed_service_instance_ref_conditional: list[
             ConsumedServiceInstanceRefConditional
         ] = field(
             default_factory=list,
@@ -254,7 +254,7 @@ class ConsumedProvidedServiceInstanceGroup:
 
     @dataclass
     class ProvidedServiceInstances:
-        provided_service_instance_ref_conditional: List[
+        provided_service_instance_ref_conditional: list[
             ProvidedServiceInstanceRefConditional
         ] = field(
             default_factory=list,

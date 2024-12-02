@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -445,7 +445,7 @@ class FlexrayCommunicationControllerConditional:
 
     @dataclass
     class FlexrayFifos:
-        flexray_fifo_configuration: List[FlexrayFifoConfiguration] = field(
+        flexray_fifo_configuration: list[FlexrayFifoConfiguration] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-FIFO-CONFIGURATION",

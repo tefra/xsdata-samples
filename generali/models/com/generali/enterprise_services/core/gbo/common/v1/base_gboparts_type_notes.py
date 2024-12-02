@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.note_type import (
     NoteType,
@@ -18,7 +17,7 @@ class BaseGbopartsTypeNotes:
     class Meta:
         global_type = False
 
-    note: List[NoteType] = field(
+    note: list[NoteType] = field(
         default_factory=list,
         metadata={
             "name": "Note",

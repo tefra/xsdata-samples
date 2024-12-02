@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     AltTitle,
@@ -32,20 +32,20 @@ class TitleGroup:
             "required": True,
         },
     )
-    subtitle: List[Subtitle] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    trans_title_group: List[TransTitleGroup] = field(
+    trans_title_group: list[TransTitleGroup] = field(
         default_factory=list,
         metadata={
             "name": "trans-title-group",
             "type": "Element",
         },
     )
-    alt_title: List[AltTitle] = field(
+    alt_title: list[AltTitle] = field(
         default_factory=list,
         metadata={
             "name": "alt-title",

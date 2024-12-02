@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -303,7 +303,7 @@ class BuildAction:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -314,7 +314,7 @@ class BuildAction:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -325,7 +325,7 @@ class BuildAction:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -333,7 +333,7 @@ class BuildAction:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -343,7 +343,7 @@ class BuildAction:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -354,7 +354,7 @@ class BuildAction:
 
     @dataclass
     class DeliveryArtifacts:
-        autosar_engineering_object: List[AutosarEngineeringObject] = field(
+        autosar_engineering_object: list[AutosarEngineeringObject] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-ENGINEERING-OBJECT",
@@ -365,7 +365,7 @@ class BuildAction:
 
     @dataclass
     class PredecessorActionRefs:
-        predecessor_action_ref: List[
+        predecessor_action_ref: list[
             "BuildAction.PredecessorActionRefs.PredecessorActionRef"
         ] = field(
             default_factory=list,
@@ -389,7 +389,7 @@ class BuildAction:
 
     @dataclass
     class FollowUpActionRefs:
-        follow_up_action_ref: List[
+        follow_up_action_ref: list[
             "BuildAction.FollowUpActionRefs.FollowUpActionRef"
         ] = field(
             default_factory=list,
@@ -413,7 +413,7 @@ class BuildAction:
 
     @dataclass
     class CreatedDatas:
-        build_action_io_element: List[BuildActionIoElement] = field(
+        build_action_io_element: list[BuildActionIoElement] = field(
             default_factory=list,
             metadata={
                 "name": "BUILD-ACTION-IO-ELEMENT",
@@ -424,7 +424,7 @@ class BuildAction:
 
     @dataclass
     class InputDatas:
-        build_action_io_element: List[BuildActionIoElement] = field(
+        build_action_io_element: list[BuildActionIoElement] = field(
             default_factory=list,
             metadata={
                 "name": "BUILD-ACTION-IO-ELEMENT",
@@ -435,7 +435,7 @@ class BuildAction:
 
     @dataclass
     class ModifiedDatas:
-        build_action_io_element: List[BuildActionIoElement] = field(
+        build_action_io_element: list[BuildActionIoElement] = field(
             default_factory=list,
             metadata={
                 "name": "BUILD-ACTION-IO-ELEMENT",

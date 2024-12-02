@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.payload_publication import PayloadPublication
@@ -14,7 +14,7 @@ class SituationPublication(PayloadPublication):
     A publication containing zero or more traffic/travel situations.
     """
 
-    situation: List[Situation] = field(
+    situation: list[Situation] = field(
         default_factory=list,
         metadata={
             "type": "Element",

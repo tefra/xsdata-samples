@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.obstruction import Obstruction
@@ -31,7 +31,7 @@ class VehicleObstruction(Obstruction):
             "required": True,
         },
     )
-    obstructing_vehicle: List[Vehicle] = field(
+    obstructing_vehicle: list[Vehicle] = field(
         default_factory=list,
         metadata={
             "name": "obstructingVehicle",

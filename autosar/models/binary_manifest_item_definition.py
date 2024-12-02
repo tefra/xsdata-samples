@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -193,7 +193,7 @@ class BinaryManifestItemDefinition:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -204,7 +204,7 @@ class BinaryManifestItemDefinition:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -215,7 +215,7 @@ class BinaryManifestItemDefinition:
 
     @dataclass
     class AuxiliaryFieldDefinitions:
-        binary_manifest_item_definition: List[
+        binary_manifest_item_definition: list[
             "BinaryManifestItemDefinition"
         ] = field(
             default_factory=list,

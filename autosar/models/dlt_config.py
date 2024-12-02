@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .boolean import Boolean
 from .dlt_log_channel import DltLogChannel
@@ -86,7 +86,7 @@ class DltConfig:
 
     @dataclass
     class DltLogChannels:
-        dlt_log_channel: List[DltLogChannel] = field(
+        dlt_log_channel: list[DltLogChannel] = field(
             default_factory=list,
             metadata={
                 "name": "DLT-LOG-CHANNEL",

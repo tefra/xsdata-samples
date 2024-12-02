@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.relations.program import Program
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import (
@@ -62,7 +62,7 @@ class DatabaseMetadata:
             "type": "Element",
         },
     )
-    database_date: List[DatabaseDate] = field(
+    database_date: list[DatabaseDate] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -75,7 +75,7 @@ class DatabaseMetadata:
             "type": "Element",
         },
     )
-    institution: List[Institution] = field(
+    institution: list[Institution] = field(
         default_factory=list,
         metadata={
             "type": "Element",

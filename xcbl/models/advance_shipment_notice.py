@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.goods_receipt import (
     ItemShipFromParty,
@@ -713,7 +713,7 @@ class AsnbaseItemDetail:
             "type": "Element",
         },
     )
-    reference_to_package: List[ReferenceToPackage] = field(
+    reference_to_package: list[ReferenceToPackage] = field(
         default_factory=list,
         metadata={
             "name": "ReferenceToPackage",
@@ -783,7 +783,7 @@ class Asnheader:
             "required": True,
         }
     )
-    asnorder_number: List[AsnorderNumber] = field(
+    asnorder_number: list[AsnorderNumber] = field(
         default_factory=list,
         metadata={
             "name": "ASNOrderNumber",
@@ -910,7 +910,7 @@ class ListOfAsnpackageDetail:
     class Meta:
         name = "ListOfASNPackageDetail"
 
-    asnpackage_detail: List[AsnpackageDetail] = field(
+    asnpackage_detail: list[AsnpackageDetail] = field(
         default_factory=list,
         metadata={
             "name": "ASNPackageDetail",
@@ -976,7 +976,7 @@ class ListOfAsnitemDetail:
     class Meta:
         name = "ListOfASNItemDetail"
 
-    asnitem_detail: List[AsnitemDetail] = field(
+    asnitem_detail: list[AsnitemDetail] = field(
         default_factory=list,
         metadata={
             "name": "ASNItemDetail",

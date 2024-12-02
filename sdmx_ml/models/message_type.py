@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.base_header_type import BaseHeaderType
 from sdmx_ml.models.footer import Footer
@@ -27,7 +27,7 @@ class MessageType:
             "required": True,
         },
     )
-    target_namespace_element: Tuple[object, ...] = field(
+    target_namespace_element: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",

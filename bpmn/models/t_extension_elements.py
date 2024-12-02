@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
@@ -9,7 +8,7 @@ class TExtensionElements:
     class Meta:
         name = "tExtensionElements"
 
-    other_element: List[object] = field(
+    other_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

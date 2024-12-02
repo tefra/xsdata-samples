@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .boolean import Boolean
 from .i_pdu_subtypes_enum import IPduSubtypesEnum
@@ -122,7 +122,7 @@ class J1939TpPg:
 
     @dataclass
     class SduRefs:
-        sdu_ref: List["J1939TpPg.SduRefs.SduRef"] = field(
+        sdu_ref: list["J1939TpPg.SduRefs.SduRef"] = field(
             default_factory=list,
             metadata={
                 "name": "SDU-REF",

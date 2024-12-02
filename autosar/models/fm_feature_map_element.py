@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -225,7 +225,7 @@ class FmFeatureMapElement:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -236,7 +236,7 @@ class FmFeatureMapElement:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -247,7 +247,7 @@ class FmFeatureMapElement:
 
     @dataclass
     class Assertions:
-        fm_feature_map_assertion: List[FmFeatureMapAssertion] = field(
+        fm_feature_map_assertion: list[FmFeatureMapAssertion] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-MAP-ASSERTION",
@@ -258,7 +258,7 @@ class FmFeatureMapElement:
 
     @dataclass
     class Conditions:
-        fm_feature_map_condition: List[FmFeatureMapCondition] = field(
+        fm_feature_map_condition: list[FmFeatureMapCondition] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-MAP-CONDITION",
@@ -269,7 +269,7 @@ class FmFeatureMapElement:
 
     @dataclass
     class PostBuildVariantCriterionValueSetRefs:
-        post_build_variant_criterion_value_set_ref: List[
+        post_build_variant_criterion_value_set_ref: list[
             "FmFeatureMapElement.PostBuildVariantCriterionValueSetRefs.PostBuildVariantCriterionValueSetRef"
         ] = field(
             default_factory=list,
@@ -295,7 +295,7 @@ class FmFeatureMapElement:
 
     @dataclass
     class SwSystemconstantValueSetRefs:
-        sw_systemconstant_value_set_ref: List[
+        sw_systemconstant_value_set_ref: list[
             "FmFeatureMapElement.SwSystemconstantValueSetRefs.SwSystemconstantValueSetRef"
         ] = field(
             default_factory=list,

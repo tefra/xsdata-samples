@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .category_string import CategoryString
 from .software_cluster_dependency_compare_condition import (
@@ -81,7 +81,7 @@ class SoftwareClusterDependencyFormula:
 
     @dataclass
     class Parts:
-        software_cluster_dependency_compare_condition: List[
+        software_cluster_dependency_compare_condition: list[
             SoftwareClusterDependencyCompareCondition
         ] = field(
             default_factory=list,
@@ -91,7 +91,7 @@ class SoftwareClusterDependencyFormula:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        software_cluster_dependency_formula: List[
+        software_cluster_dependency_formula: list[
             "SoftwareClusterDependencyFormula"
         ] = field(
             default_factory=list,

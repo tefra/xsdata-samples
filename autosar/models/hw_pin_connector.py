@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -117,7 +117,7 @@ class HwPinConnector:
 
     @dataclass
     class HwPinRefs:
-        hw_pin_ref: List["HwPinConnector.HwPinRefs.HwPinRef"] = field(
+        hw_pin_ref: list["HwPinConnector.HwPinRefs.HwPinRef"] = field(
             default_factory=list,
             metadata={
                 "name": "HW-PIN-REF",

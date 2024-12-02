@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .correlation_key import CorrelationKey
@@ -14,7 +14,7 @@ class TChoreographyActivity(TFlowNode):
     class Meta:
         name = "tChoreographyActivity"
 
-    participant_ref: List[QName] = field(
+    participant_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "participantRef",
@@ -23,7 +23,7 @@ class TChoreographyActivity(TFlowNode):
             "min_occurs": 2,
         },
     )
-    correlation_key: List[CorrelationKey] = field(
+    correlation_key: list[CorrelationKey] = field(
         default_factory=list,
         metadata={
             "name": "correlationKey",

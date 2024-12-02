@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.resource_id import ResourceId
 from crossref.models.gov.nih.nlm.ncbi.jats1.resource_name import ResourceName
@@ -25,7 +25,7 @@ class ResourceWrap:
             "required": True,
         },
     )
-    resource_id: List[ResourceId] = field(
+    resource_id: list[ResourceId] = field(
         default_factory=list,
         metadata={
             "name": "resource-id",

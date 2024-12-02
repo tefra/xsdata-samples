@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     DocumentReference,
@@ -114,7 +114,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -138,7 +138,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -146,7 +146,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -180,7 +180,7 @@ class StockAvailabilityReportType:
             "required": True,
         },
     )
-    stock_availability_report_line: Tuple[StockAvailabilityReportLine, ...] = (
+    stock_availability_report_line: tuple[StockAvailabilityReportLine, ...] = (
         field(
             default_factory=tuple,
             metadata={

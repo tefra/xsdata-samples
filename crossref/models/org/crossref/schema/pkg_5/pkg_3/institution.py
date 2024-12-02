@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution_acronym import (
     InstitutionAcronym,
@@ -38,7 +38,7 @@ class Institution:
             "required": True,
         },
     )
-    institution_id: List[InstitutionId] = field(
+    institution_id: list[InstitutionId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -46,21 +46,21 @@ class Institution:
             "sequence": 1,
         },
     )
-    institution_acronym: List[InstitutionAcronym] = field(
+    institution_acronym: list[InstitutionAcronym] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 6,
         },
     )
-    institution_place: List[InstitutionPlace] = field(
+    institution_place: list[InstitutionPlace] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 6,
         },
     )
-    institution_department: List[InstitutionDepartment] = field(
+    institution_department: list[InstitutionDepartment] = field(
         default_factory=list,
         metadata={
             "type": "Element",

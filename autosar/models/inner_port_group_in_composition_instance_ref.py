@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .port_group_subtypes_enum import PortGroupSubtypesEnum
 from .ref import Ref
@@ -33,7 +33,7 @@ class InnerPortGroupInCompositionInstanceRef:
     class Meta:
         name = "INNER-PORT-GROUP-IN-COMPOSITION-INSTANCE-REF"
 
-    context_ref: List["InnerPortGroupInCompositionInstanceRef.ContextRef"] = (
+    context_ref: list["InnerPortGroupInCompositionInstanceRef.ContextRef"] = (
         field(
             default_factory=list,
             metadata={

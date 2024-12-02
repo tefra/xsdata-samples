@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
@@ -56,7 +56,7 @@ class SpecialDay:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    public_holiday: List[PublicHoliday] = field(
+    public_holiday: list[PublicHoliday] = field(
         default_factory=list,
         metadata={
             "name": "publicHoliday",

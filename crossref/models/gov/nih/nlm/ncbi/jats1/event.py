@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Permissions
 from crossref.models.gov.nih.nlm.ncbi.jats1.article_id import ArticleId
@@ -42,7 +42,7 @@ class Event:
             "type": "Element",
         },
     )
-    article_id: List[ArticleId] = field(
+    article_id: list[ArticleId] = field(
         default_factory=list,
         metadata={
             "name": "article-id",
@@ -63,7 +63,7 @@ class Event:
             "type": "Element",
         },
     )
-    pub_date: List[PubDate] = field(
+    pub_date: list[PubDate] = field(
         default_factory=list,
         metadata={
             "name": "pub-date",
@@ -77,13 +77,13 @@ class Event:
             "type": "Element",
         },
     )
-    date: List[Date] = field(
+    date: list[Date] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    issn: List[Issn] = field(
+    issn: list[Issn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -96,7 +96,7 @@ class Event:
             "type": "Element",
         },
     )
-    isbn: List[Isbn] = field(
+    isbn: list[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -108,13 +108,13 @@ class Event:
             "type": "Element",
         },
     )
-    notes: List[Notes] = field(
+    notes: list[Notes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    self_uri: List[SelfUri] = field(
+    self_uri: list[SelfUri] = field(
         default_factory=list,
         metadata={
             "name": "self-uri",

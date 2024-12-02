@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
@@ -124,7 +124,7 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -140,7 +140,7 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -148,7 +148,7 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -165,7 +165,7 @@ class PriorInformationNoticeType:
             "required": True,
         },
     )
-    originator_customer_party: Tuple[OriginatorCustomerParty, ...] = field(
+    originator_customer_party: tuple[OriginatorCustomerParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OriginatorCustomerParty",
@@ -205,7 +205,7 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    procurement_project_lot: Tuple[ProcurementProjectLot, ...] = field(
+    procurement_project_lot: tuple[ProcurementProjectLot, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcurementProjectLot",

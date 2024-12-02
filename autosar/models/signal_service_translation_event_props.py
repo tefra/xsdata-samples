@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_signal_based_to_i_signal_triggering_mapping_subtypes_enum import (
     AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum,
@@ -240,7 +240,7 @@ class SignalServiceTranslationEventProps:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -251,7 +251,7 @@ class SignalServiceTranslationEventProps:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -262,7 +262,7 @@ class SignalServiceTranslationEventProps:
 
     @dataclass
     class ElementPropss:
-        signal_service_translation_element_props: List[
+        signal_service_translation_element_props: list[
             SignalServiceTranslationElementProps
         ] = field(
             default_factory=list,
@@ -275,7 +275,7 @@ class SignalServiceTranslationEventProps:
 
     @dataclass
     class ServiceElementMappingRefs:
-        service_element_mapping_ref: List[
+        service_element_mapping_ref: list[
             "SignalServiceTranslationEventProps.ServiceElementMappingRefs.ServiceElementMappingRef"
         ] = field(
             default_factory=list,

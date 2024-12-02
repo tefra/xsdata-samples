@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.access_date import AccessDate
 from crossref.models.gov.nih.nlm.ncbi.jats1.alt_text import AltText
@@ -219,7 +219,7 @@ class CompoundKwd:
         name = "compound-kwd"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    compound_kwd_part: List["CompoundKwdPart"] = field(
+    compound_kwd_part: list["CompoundKwdPart"] = field(
         default_factory=list,
         metadata={
             "name": "compound-kwd-part",
@@ -293,7 +293,7 @@ class CompoundSubject:
         name = "compound-subject"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    compound_subject_part: List["CompoundSubjectPart"] = field(
+    compound_subject_part: list["CompoundSubjectPart"] = field(
         default_factory=list,
         metadata={
             "name": "compound-subject-part",
@@ -458,7 +458,7 @@ class Abbrev:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -484,7 +484,7 @@ class Abstract:
         name = "abstract"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -503,13 +503,13 @@ class Abstract:
             "type": "Element",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -561,106 +561,106 @@ class Alternatives:
         name = "alternatives"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    array: List["Array"] = field(
+    array: list["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    chem_struct: List["ChemStruct"] = field(
+    chem_struct: list["ChemStruct"] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct",
             "type": "Element",
         },
     )
-    code: List["Code"] = field(
+    code: list["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    inline_graphic: List[InlineGraphic] = field(
+    inline_graphic: list[InlineGraphic] = field(
         default_factory=list,
         metadata={
             "name": "inline-graphic",
             "type": "Element",
         },
     )
-    inline_media: List["InlineMedia"] = field(
+    inline_media: list["InlineMedia"] = field(
         default_factory=list,
         metadata={
             "name": "inline-media",
             "type": "Element",
         },
     )
-    inline_supplementary_material: List["InlineSupplementaryMaterial"] = field(
+    inline_supplementary_material: list["InlineSupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "inline-supplementary-material",
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    private_char: List[PrivateChar] = field(
+    private_char: list[PrivateChar] = field(
         default_factory=list,
         metadata={
             "name": "private-char",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table: List["Table"] = field(
+    table: list["Table"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    textual_form: List["TextualForm"] = field(
+    textual_form: list["TextualForm"] = field(
         default_factory=list,
         metadata={
             "name": "textual-form",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -692,7 +692,7 @@ class Annotation:
         name = "annotation"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -751,7 +751,7 @@ class AuthorComment:
             "type": "Element",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -804,41 +804,41 @@ class BlockAlternatives:
         name = "block-alternatives"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    boxed_text: List["BoxedText"] = field(
+    boxed_text: list["BoxedText"] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    fig: List["Fig"] = field(
+    fig: list["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List["FigGroup"] = field(
+    fig_group: list["FigGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
@@ -876,7 +876,7 @@ class Caption:
             "type": "Element",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -934,28 +934,28 @@ class CitationAlternatives:
         name = "citation-alternatives"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    element_citation: List["ElementCitation"] = field(
+    element_citation: list["ElementCitation"] = field(
         default_factory=list,
         metadata={
             "name": "element-citation",
             "type": "Element",
         },
     )
-    mixed_citation: List["MixedCitation"] = field(
+    mixed_citation: list["MixedCitation"] = field(
         default_factory=list,
         metadata={
             "name": "mixed-citation",
             "type": "Element",
         },
     )
-    nlm_citation: List["NlmCitation"] = field(
+    nlm_citation: list["NlmCitation"] = field(
         default_factory=list,
         metadata={
             "name": "nlm-citation",
@@ -1021,7 +1021,7 @@ class ConfSponsor:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1085,7 +1085,7 @@ class CopyrightHolder:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1123,7 +1123,7 @@ class Def:
         name = "def"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1136,7 +1136,7 @@ class Def:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -1216,7 +1216,7 @@ class Edition:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1252,7 +1252,7 @@ class Fn:
             "type": "Element",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1332,13 +1332,13 @@ class IndexTerm:
             "type": "Element",
         },
     )
-    see: List["See"] = field(
+    see: list["See"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    see_also: List["SeeAlso"] = field(
+    see_also: list["SeeAlso"] = field(
         default_factory=list,
         metadata={
             "name": "see-also",
@@ -1358,7 +1358,7 @@ class IndexTerm:
             "type": "Attribute",
         },
     )
-    index_type: List[str] = field(
+    index_type: list[str] = field(
         default_factory=list,
         metadata={
             "name": "index-type",
@@ -1511,7 +1511,7 @@ class Institution:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1541,14 +1541,14 @@ class License:
         name = "license"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    license_ref: List[LicenseRef] = field(
+    license_ref: list[LicenseRef] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.niso.org/schemas/ali/1.0/",
         },
     )
-    license_p: List["LicenseP"] = field(
+    license_p: list["LicenseP"] = field(
         default_factory=list,
         metadata={
             "name": "license-p",
@@ -1652,7 +1652,7 @@ class OpenAccess:
         name = "open-access"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1732,7 +1732,7 @@ class AddrLine:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1924,7 +1924,7 @@ class AltTitle:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2099,52 +2099,52 @@ class Array:
         name = "array"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List["ExtLink"] = field(
+    ext_link: list["ExtLink"] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2156,13 +2156,13 @@ class Array:
             "type": "Element",
         },
     )
-    attrib: List["Attrib"] = field(
+    attrib: list["Attrib"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List["Permissions"] = field(
+    permissions: list["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2240,7 +2240,7 @@ class ArticleTitle:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2442,7 +2442,7 @@ class Attrib:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2646,7 +2646,7 @@ class AwardId:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -2719,7 +2719,7 @@ class AwardId:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2871,7 +2871,7 @@ class Bold:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3049,7 +3049,7 @@ class DefItem:
             "required": True,
         },
     )
-    def_value: List[Def] = field(
+    def_value: list[Def] = field(
         default_factory=list,
         metadata={
             "name": "def",
@@ -3107,7 +3107,7 @@ class FnGroup:
             "type": "Element",
         },
     )
-    fn: List[Fn] = field(
+    fn: list[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3160,13 +3160,13 @@ class InstitutionWrap:
         name = "institution-wrap"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    institution: List[Institution] = field(
+    institution: list[Institution] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    institution_id: List[InstitutionId] = field(
+    institution_id: list[InstitutionId] = field(
         default_factory=list,
         metadata={
             "name": "institution-id",
@@ -3232,7 +3232,7 @@ class Speaker:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3286,77 +3286,77 @@ class Address:
         name = "address"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    addr_line: List[AddrLine] = field(
+    addr_line: list[AddrLine] = field(
         default_factory=list,
         metadata={
             "name": "addr-line",
             "type": "Element",
         },
     )
-    city: List[City] = field(
+    city: list[City] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    country: List[Country] = field(
+    country: list[Country] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fax: List[Fax] = field(
+    fax: list[Fax] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    institution: List["Institution"] = field(
+    institution: list["Institution"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    institution_wrap: List["InstitutionWrap"] = field(
+    institution_wrap: list["InstitutionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "institution-wrap",
             "type": "Element",
         },
     )
-    phone: List[Phone] = field(
+    phone: list[Phone] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    postal_code: List[PostalCode] = field(
+    postal_code: list[PostalCode] = field(
         default_factory=list,
         metadata={
             "name": "postal-code",
             "type": "Element",
         },
     )
-    state: List[State] = field(
+    state: list[State] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List["ExtLink"] = field(
+    ext_link: list["ExtLink"] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3421,7 +3421,7 @@ class Aff:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -3449,7 +3449,7 @@ class Aff:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3630,7 +3630,7 @@ class ChapterTitle:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3858,7 +3858,7 @@ class ChemStruct:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3943,7 +3943,7 @@ class ChemStruct:
                 },
                 {
                     "name": "list",
-                    "type": ForwardRef("ListType"),
+                    "type": ForwardRef("List"),
                 },
                 {
                     "name": "tex-math",
@@ -4107,7 +4107,7 @@ class Code:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4279,7 +4279,7 @@ class ConfLoc:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4371,7 +4371,7 @@ class CopyrightStatement:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4499,7 +4499,7 @@ class DataTitle:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4697,7 +4697,7 @@ class ExtLink:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4806,7 +4806,7 @@ class PublisherName:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4836,7 +4836,7 @@ class AffAlternatives:
         name = "aff-alternatives"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    aff: List[Aff] = field(
+    aff: list[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4868,7 +4868,7 @@ class Answer:
         name = "answer"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -4887,264 +4887,264 @@ class Answer:
             "type": "Element",
         },
     )
-    subtitle: List["Subtitle"] = field(
+    subtitle: list["Subtitle"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alt_title: List[AltTitle] = field(
+    alt_title: list[AltTitle] = field(
         default_factory=list,
         metadata={
             "name": "alt-title",
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List["Answer"] = field(
+    answer: list["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List["AnswerSet"] = field(
+    answer_set: list["AnswerSet"] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List["Array"] = field(
+    array: list["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List["BlockAlternatives"] = field(
+    block_alternatives: list["BlockAlternatives"] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List["BoxedText"] = field(
+    boxed_text: list["BoxedText"] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List["ChemStructWrap"] = field(
+    chem_struct_wrap: list["ChemStructWrap"] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List["Code"] = field(
+    code: list["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List["Fig"] = field(
+    fig: list["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List["FigGroup"] = field(
+    fig_group: list["FigGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List["Question"] = field(
+    question: list["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List["QuestionWrap"] = field(
+    question_wrap: list["QuestionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List["DispFormula"] = field(
+    disp_formula: list["DispFormula"] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List["DispFormulaGroup"] = field(
+    disp_formula_group: list["DispFormulaGroup"] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List["DefList"] = field(
+    def_list: list["DefList"] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List["DispQuote"] = field(
+    disp_quote: list["DispQuote"] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    fn_group: List["FnGroup"] = field(
+    fn_group: list["FnGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: List["Glossary"] = field(
+    glossary: list["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List["RefList"] = field(
+    ref_list: list["RefList"] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
             "type": "Element",
         },
     )
-    explanation: List["Explanation"] = field(
+    explanation: list["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5163,7 +5163,7 @@ class Answer:
             "type": "Attribute",
         },
     )
-    pointer_to_question: List[str] = field(
+    pointer_to_question: list[str] = field(
         default_factory=list,
         metadata={
             "name": "pointer-to-question",
@@ -5204,7 +5204,7 @@ class ChemStructWrap:
         name = "chem-struct-wrap"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -5223,110 +5223,110 @@ class ChemStructWrap:
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List["KwdGroup"] = field(
+    kwd_group: list["KwdGroup"] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List["SubjGroup"] = field(
+    subj_group: list["SubjGroup"] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List["ExtLink"] = field(
+    ext_link: list["ExtLink"] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    chem_struct: List[ChemStruct] = field(
+    chem_struct: list[ChemStruct] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct",
             "type": "Element",
         },
     )
-    code: List["Code"] = field(
+    code: list["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    textual_form: List["TextualForm"] = field(
+    textual_form: list["TextualForm"] = field(
         default_factory=list,
         metadata={
             "name": "textual-form",
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List["Permissions"] = field(
+    permissions: list["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5424,7 +5424,7 @@ class Comment:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -5608,7 +5608,7 @@ class DefHead:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -5813,7 +5813,7 @@ class DispFormula:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -6023,7 +6023,7 @@ class FixedCase:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -6194,91 +6194,91 @@ class Graphic:
         name = "graphic"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List[ExtLink] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    caption: List[Caption] = field(
+    caption: list[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List["Permissions"] = field(
+    permissions: list["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    label: List["Label"] = field(
+    label: list["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List["KwdGroup"] = field(
+    kwd_group: list["KwdGroup"] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List["SubjGroup"] = field(
+    subj_group: list["SubjGroup"] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    xref: List["Xref"] = field(
+    xref: list["Xref"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6407,35 +6407,35 @@ class Permissions:
         name = "permissions"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    copyright_statement: List[CopyrightStatement] = field(
+    copyright_statement: list[CopyrightStatement] = field(
         default_factory=list,
         metadata={
             "name": "copyright-statement",
             "type": "Element",
         },
     )
-    copyright_year: List[CopyrightYear] = field(
+    copyright_year: list[CopyrightYear] = field(
         default_factory=list,
         metadata={
             "name": "copyright-year",
             "type": "Element",
         },
     )
-    copyright_holder: List[CopyrightHolder] = field(
+    copyright_holder: list[CopyrightHolder] = field(
         default_factory=list,
         metadata={
             "name": "copyright-holder",
             "type": "Element",
         },
     )
-    free_to_read: List[FreeToRead] = field(
+    free_to_read: list[FreeToRead] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.niso.org/schemas/ali/1.0/",
         },
     )
-    license: List[License] = field(
+    license: list[License] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6493,7 +6493,7 @@ class PublisherLoc:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -6563,7 +6563,7 @@ class AnswerSet:
         name = "answer-set"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -6582,32 +6582,32 @@ class AnswerSet:
             "type": "Element",
         },
     )
-    subtitle: List["Subtitle"] = field(
+    subtitle: list["Subtitle"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alt_title: List[AltTitle] = field(
+    alt_title: list[AltTitle] = field(
         default_factory=list,
         metadata={
             "name": "alt-title",
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List["Explanation"] = field(
+    explanation: list["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6685,14 +6685,14 @@ class DefList:
             "type": "Element",
         },
     )
-    def_item: List[DefItem] = field(
+    def_item: list[DefItem] = field(
         default_factory=list,
         metadata={
             "name": "def-item",
             "type": "Element",
         },
     )
-    def_list: List["DefList"] = field(
+    def_list: list["DefList"] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
@@ -6766,7 +6766,7 @@ class DispFormulaGroup:
         name = "disp-formula-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -6785,67 +6785,67 @@ class DispFormulaGroup:
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List["KwdGroup"] = field(
+    kwd_group: list["KwdGroup"] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List["SubjGroup"] = field(
+    subj_group: list["SubjGroup"] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List["ExtLink"] = field(
+    ext_link: list["ExtLink"] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List["DispFormulaGroup"] = field(
+    disp_formula_group: list["DispFormulaGroup"] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
@@ -6916,7 +6916,7 @@ class FundingSource:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -6996,7 +6996,7 @@ class FundingSource:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7164,7 +7164,7 @@ class Gov:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7280,7 +7280,7 @@ class InlineFormula:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7529,7 +7529,7 @@ class InlineMedia:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7729,7 +7729,7 @@ class InlineSupplementaryMaterial:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7850,250 +7850,250 @@ class Bio:
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List["BlockAlternatives"] = field(
+    block_alternatives: list["BlockAlternatives"] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List["BoxedText"] = field(
+    boxed_text: list["BoxedText"] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List["ChemStructWrap"] = field(
+    chem_struct_wrap: list["ChemStructWrap"] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List["Code"] = field(
+    code: list["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List["Explanation"] = field(
+    explanation: list["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List["Fig"] = field(
+    fig: list["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List["FigGroup"] = field(
+    fig_group: list["FigGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List["Question"] = field(
+    question: list["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List["QuestionWrap"] = field(
+    question_wrap: list["QuestionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List["DispFormula"] = field(
+    disp_formula: list["DispFormula"] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List["DispFormulaGroup"] = field(
+    disp_formula_group: list["DispFormulaGroup"] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List["DefList"] = field(
+    def_list: list["DefList"] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List["DispQuote"] = field(
+    disp_quote: list["DispQuote"] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn_group: List["FnGroup"] = field(
+    fn_group: list["FnGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: List["Glossary"] = field(
+    glossary: list["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List["RefList"] = field(
+    ref_list: list["RefList"] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
@@ -8119,7 +8119,7 @@ class Bio:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -8205,7 +8205,7 @@ class BoxedText:
         name = "boxed-text"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -8231,263 +8231,263 @@ class BoxedText:
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List["BoxedText"] = field(
+    boxed_text: list["BoxedText"] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List["ChemStructWrap"] = field(
+    chem_struct_wrap: list["ChemStructWrap"] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List["Code"] = field(
+    code: list["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List["Explanation"] = field(
+    explanation: list["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List["Fig"] = field(
+    fig: list["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List["FigGroup"] = field(
+    fig_group: list["FigGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List["Question"] = field(
+    question: list["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List["QuestionWrap"] = field(
+    question_wrap: list["QuestionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List["DispFormula"] = field(
+    disp_formula: list["DispFormula"] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List["DispFormulaGroup"] = field(
+    disp_formula_group: list["DispFormulaGroup"] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List["DefList"] = field(
+    def_list: list["DefList"] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List["DispQuote"] = field(
+    disp_quote: list["DispQuote"] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn_group: List["FnGroup"] = field(
+    fn_group: list["FnGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: List["Glossary"] = field(
+    glossary: list["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List["RefList"] = field(
+    ref_list: list["RefList"] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List["Permissions"] = field(
+    permissions: list["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -8577,7 +8577,7 @@ class Italic:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -8839,7 +8839,7 @@ class Collab:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -9065,237 +9065,237 @@ class DispQuote:
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List["Explanation"] = field(
+    explanation: list["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List["Fig"] = field(
+    fig: list["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List["FigGroup"] = field(
+    fig_group: list["FigGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List["Question"] = field(
+    question: list["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List["QuestionWrap"] = field(
+    question_wrap: list["QuestionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List["DispQuote"] = field(
+    disp_quote: list["DispQuote"] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List["Permissions"] = field(
+    permissions: list["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -9401,7 +9401,7 @@ class Kwd:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -9509,7 +9509,7 @@ class Label:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -9633,7 +9633,7 @@ class Monospace:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -9804,7 +9804,7 @@ class CollabAlternatives:
         name = "collab-alternatives"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    collab: List[Collab] = field(
+    collab: list[Collab] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -9836,7 +9836,7 @@ class Explanation:
         name = "explanation"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -9855,257 +9855,257 @@ class Explanation:
             "type": "Element",
         },
     )
-    subtitle: List["Subtitle"] = field(
+    subtitle: list["Subtitle"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alt_title: List[AltTitle] = field(
+    alt_title: list[AltTitle] = field(
         default_factory=list,
         metadata={
             "name": "alt-title",
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List["Fig"] = field(
+    fig: list["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List["FigGroup"] = field(
+    fig_group: list["FigGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List["Question"] = field(
+    question: list["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List["QuestionWrap"] = field(
+    question_wrap: list["QuestionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    fn_group: List["FnGroup"] = field(
+    fn_group: list["FnGroup"] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: List["Glossary"] = field(
+    glossary: list["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List["RefList"] = field(
+    ref_list: list["RefList"] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
@@ -10125,7 +10125,7 @@ class Explanation:
             "type": "Attribute",
         },
     )
-    pointer_to_explained: List[str] = field(
+    pointer_to_explained: list[str] = field(
         default_factory=list,
         metadata={
             "name": "pointer-to-explained",
@@ -10166,201 +10166,201 @@ class Fig:
         name = "fig"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    label: List["Label"] = field(
+    label: list["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    caption: List[Caption] = field(
+    caption: list[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List["KwdGroup"] = field(
+    kwd_group: list["KwdGroup"] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List["SubjGroup"] = field(
+    subj_group: list["SubjGroup"] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List[ExtLink] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    xref: List["Xref"] = field(
+    xref: list["Xref"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List["Permissions"] = field(
+    permissions: list["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -10415,7 +10415,7 @@ class Fig:
 
 
 @dataclass
-class ListType:
+class List:
     """
     <div> <h3>List</h3> </div>
     """
@@ -10424,7 +10424,7 @@ class ListType:
         name = "list"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -10443,7 +10443,7 @@ class ListType:
             "type": "Element",
         },
     )
-    list_item: List["ListItem"] = field(
+    list_item: list["ListItem"] = field(
         default_factory=list,
         metadata={
             "name": "list-item",
@@ -10518,20 +10518,20 @@ class NestedKwd:
         name = "nested-kwd"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    kwd: List[Kwd] = field(
+    kwd: list[Kwd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    compound_kwd: List[CompoundKwd] = field(
+    compound_kwd: list[CompoundKwd] = field(
         default_factory=list,
         metadata={
             "name": "compound-kwd",
             "type": "Element",
         },
     )
-    nested_kwd: List["NestedKwd"] = field(
+    nested_kwd: list["NestedKwd"] = field(
         default_factory=list,
         metadata={
             "name": "nested-kwd",
@@ -10604,27 +10604,27 @@ class NlmCitation:
         name = "nlm-citation"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    person_group: List["PersonGroup"] = field(
+    person_group: list["PersonGroup"] = field(
         default_factory=list,
         metadata={
             "name": "person-group",
             "type": "Element",
         },
     )
-    collab: List[Collab] = field(
+    collab: list[Collab] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    article_title: List[ArticleTitle] = field(
+    article_title: list[ArticleTitle] = field(
         default_factory=list,
         metadata={
             "name": "article-title",
             "type": "Element",
         },
     )
-    trans_title: List["TransTitle"] = field(
+    trans_title: list["TransTitle"] = field(
         default_factory=list,
         metadata={
             "name": "trans-title",
@@ -10721,13 +10721,13 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    issue: List[Issue] = field(
+    issue: list[Issue] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    supplement: List["Supplement"] = field(
+    supplement: list["Supplement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -10747,13 +10747,13 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    fpage: List[Fpage] = field(
+    fpage: list[Fpage] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    lpage: List[Lpage] = field(
+    lpage: list[Lpage] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -10772,13 +10772,13 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    comment: List[Comment] = field(
+    comment: list[Comment] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    pub_id: List[PubId] = field(
+    pub_id: list[PubId] = field(
         default_factory=list,
         metadata={
             "name": "pub-id",
@@ -10908,13 +10908,13 @@ class Note:
             "type": "Element",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    product: List["Product"] = field(
+    product: list["Product"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -10966,123 +10966,123 @@ class Contrib:
         name = "contrib"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    contrib_id: List[ContribId] = field(
+    contrib_id: list[ContribId] = field(
         default_factory=list,
         metadata={
             "name": "contrib-id",
             "type": "Element",
         },
     )
-    anonymous: List[Anonymous] = field(
+    anonymous: list[Anonymous] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    collab: List[Collab] = field(
+    collab: list[Collab] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    collab_alternatives: List[CollabAlternatives] = field(
+    collab_alternatives: list[CollabAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "collab-alternatives",
             "type": "Element",
         },
     )
-    name: List[Name] = field(
+    name: list[Name] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    name_alternatives: List[NameAlternatives] = field(
+    name_alternatives: list[NameAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "name-alternatives",
             "type": "Element",
         },
     )
-    string_name: List[StringName] = field(
+    string_name: list[StringName] = field(
         default_factory=list,
         metadata={
             "name": "string-name",
             "type": "Element",
         },
     )
-    degrees: List[Degrees] = field(
+    degrees: list[Degrees] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    aff: List[Aff] = field(
+    aff: list[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    aff_alternatives: List[AffAlternatives] = field(
+    aff_alternatives: list[AffAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
         },
     )
-    author_comment: List[AuthorComment] = field(
+    author_comment: list[AuthorComment] = field(
         default_factory=list,
         metadata={
             "name": "author-comment",
             "type": "Element",
         },
     )
-    bio: List[Bio] = field(
+    bio: list[Bio] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List["ExtLink"] = field(
+    ext_link: list["ExtLink"] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    on_behalf_of: List["OnBehalfOf"] = field(
+    on_behalf_of: list["OnBehalfOf"] = field(
         default_factory=list,
         metadata={
             "name": "on-behalf-of",
             "type": "Element",
         },
     )
-    role: List["Role"] = field(
+    role: list["Role"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    xref: List["Xref"] = field(
+    xref: list["Xref"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11126,7 +11126,7 @@ class Contrib:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -11205,567 +11205,567 @@ class ElementCitation:
         name = "element-citation"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    bold: List[Bold] = field(
+    bold: list[Bold] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fixed_case: List["FixedCase"] = field(
+    fixed_case: list["FixedCase"] = field(
         default_factory=list,
         metadata={
             "name": "fixed-case",
             "type": "Element",
         },
     )
-    italic: List["Italic"] = field(
+    italic: list["Italic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    monospace: List["Monospace"] = field(
+    monospace: list["Monospace"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    overline: List["Overline"] = field(
+    overline: list["Overline"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    roman: List["Roman"] = field(
+    roman: list["Roman"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sans_serif: List["SansSerif"] = field(
+    sans_serif: list["SansSerif"] = field(
         default_factory=list,
         metadata={
             "name": "sans-serif",
             "type": "Element",
         },
     )
-    sc: List["Sc"] = field(
+    sc: list["Sc"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    strike: List["Strike"] = field(
+    strike: list["Strike"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    underline: List["Underline"] = field(
+    underline: list["Underline"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ruby: List["Ruby"] = field(
+    ruby: list["Ruby"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    inline_graphic: List[InlineGraphic] = field(
+    inline_graphic: list[InlineGraphic] = field(
         default_factory=list,
         metadata={
             "name": "inline-graphic",
             "type": "Element",
         },
     )
-    inline_media: List["InlineMedia"] = field(
+    inline_media: list["InlineMedia"] = field(
         default_factory=list,
         metadata={
             "name": "inline-media",
             "type": "Element",
         },
     )
-    private_char: List[PrivateChar] = field(
+    private_char: list[PrivateChar] = field(
         default_factory=list,
         metadata={
             "name": "private-char",
             "type": "Element",
         },
     )
-    chem_struct: List[ChemStruct] = field(
+    chem_struct: list[ChemStruct] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct",
             "type": "Element",
         },
     )
-    inline_formula: List["InlineFormula"] = field(
+    inline_formula: list["InlineFormula"] = field(
         default_factory=list,
         metadata={
             "name": "inline-formula",
             "type": "Element",
         },
     )
-    label: List["Label"] = field(
+    label: list["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    abbrev: List[Abbrev] = field(
+    abbrev: list[Abbrev] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    index_term: List["IndexTerm"] = field(
+    index_term: list["IndexTerm"] = field(
         default_factory=list,
         metadata={
             "name": "index-term",
             "type": "Element",
         },
     )
-    index_term_range_end: List[IndexTermRangeEnd] = field(
+    index_term_range_end: list[IndexTermRangeEnd] = field(
         default_factory=list,
         metadata={
             "name": "index-term-range-end",
             "type": "Element",
         },
     )
-    milestone_end: List[MilestoneEnd] = field(
+    milestone_end: list[MilestoneEnd] = field(
         default_factory=list,
         metadata={
             "name": "milestone-end",
             "type": "Element",
         },
     )
-    milestone_start: List[MilestoneStart] = field(
+    milestone_start: list[MilestoneStart] = field(
         default_factory=list,
         metadata={
             "name": "milestone-start",
             "type": "Element",
         },
     )
-    named_content: List["NamedContent"] = field(
+    named_content: list["NamedContent"] = field(
         default_factory=list,
         metadata={
             "name": "named-content",
             "type": "Element",
         },
     )
-    styled_content: List["StyledContent"] = field(
+    styled_content: list["StyledContent"] = field(
         default_factory=list,
         metadata={
             "name": "styled-content",
             "type": "Element",
         },
     )
-    annotation: List[Annotation] = field(
+    annotation: list[Annotation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    article_title: List[ArticleTitle] = field(
+    article_title: list[ArticleTitle] = field(
         default_factory=list,
         metadata={
             "name": "article-title",
             "type": "Element",
         },
     )
-    chapter_title: List[ChapterTitle] = field(
+    chapter_title: list[ChapterTitle] = field(
         default_factory=list,
         metadata={
             "name": "chapter-title",
             "type": "Element",
         },
     )
-    collab: List[Collab] = field(
+    collab: list[Collab] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    collab_alternatives: List[CollabAlternatives] = field(
+    collab_alternatives: list[CollabAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "collab-alternatives",
             "type": "Element",
         },
     )
-    comment: List[Comment] = field(
+    comment: list[Comment] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    conf_acronym: List[ConfAcronym] = field(
+    conf_acronym: list[ConfAcronym] = field(
         default_factory=list,
         metadata={
             "name": "conf-acronym",
             "type": "Element",
         },
     )
-    conf_date: List[ConfDate] = field(
+    conf_date: list[ConfDate] = field(
         default_factory=list,
         metadata={
             "name": "conf-date",
             "type": "Element",
         },
     )
-    conf_loc: List[ConfLoc] = field(
+    conf_loc: list[ConfLoc] = field(
         default_factory=list,
         metadata={
             "name": "conf-loc",
             "type": "Element",
         },
     )
-    conf_name: List[ConfName] = field(
+    conf_name: list[ConfName] = field(
         default_factory=list,
         metadata={
             "name": "conf-name",
             "type": "Element",
         },
     )
-    conf_sponsor: List[ConfSponsor] = field(
+    conf_sponsor: list[ConfSponsor] = field(
         default_factory=list,
         metadata={
             "name": "conf-sponsor",
             "type": "Element",
         },
     )
-    data_title: List[DataTitle] = field(
+    data_title: list[DataTitle] = field(
         default_factory=list,
         metadata={
             "name": "data-title",
             "type": "Element",
         },
     )
-    date: List[Date] = field(
+    date: list[Date] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    date_in_citation: List[DateInCitation] = field(
+    date_in_citation: list[DateInCitation] = field(
         default_factory=list,
         metadata={
             "name": "date-in-citation",
             "type": "Element",
         },
     )
-    day: List[Day] = field(
+    day: list[Day] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    edition: List[Edition] = field(
+    edition: list[Edition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    elocation_id: List[ElocationId] = field(
+    elocation_id: list[ElocationId] = field(
         default_factory=list,
         metadata={
             "name": "elocation-id",
             "type": "Element",
         },
     )
-    etal: List[Etal] = field(
+    etal: list[Etal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List["ExtLink"] = field(
+    ext_link: list["ExtLink"] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    fpage: List[Fpage] = field(
+    fpage: list[Fpage] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    gov: List["Gov"] = field(
+    gov: list["Gov"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    institution: List["Institution"] = field(
+    institution: list["Institution"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    institution_wrap: List["InstitutionWrap"] = field(
+    institution_wrap: list["InstitutionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "institution-wrap",
             "type": "Element",
         },
     )
-    isbn: List[Isbn] = field(
+    isbn: list[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    issn: List[Issn] = field(
+    issn: list[Issn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    issn_l: List[IssnL] = field(
+    issn_l: list[IssnL] = field(
         default_factory=list,
         metadata={
             "name": "issn-l",
             "type": "Element",
         },
     )
-    issue: List[Issue] = field(
+    issue: list[Issue] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    issue_id: List[IssueId] = field(
+    issue_id: list[IssueId] = field(
         default_factory=list,
         metadata={
             "name": "issue-id",
             "type": "Element",
         },
     )
-    issue_part: List[IssuePart] = field(
+    issue_part: list[IssuePart] = field(
         default_factory=list,
         metadata={
             "name": "issue-part",
             "type": "Element",
         },
     )
-    issue_title: List[IssueTitle] = field(
+    issue_title: list[IssueTitle] = field(
         default_factory=list,
         metadata={
             "name": "issue-title",
             "type": "Element",
         },
     )
-    lpage: List[Lpage] = field(
+    lpage: list[Lpage] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    month: List[Month] = field(
+    month: list[Month] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    name: List[Name] = field(
+    name: list[Name] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    name_alternatives: List[NameAlternatives] = field(
+    name_alternatives: list[NameAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "name-alternatives",
             "type": "Element",
         },
     )
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    page_range: List[PageRange] = field(
+    page_range: list[PageRange] = field(
         default_factory=list,
         metadata={
             "name": "page-range",
             "type": "Element",
         },
     )
-    part_title: List["PartTitle"] = field(
+    part_title: list["PartTitle"] = field(
         default_factory=list,
         metadata={
             "name": "part-title",
             "type": "Element",
         },
     )
-    patent: List[Patent] = field(
+    patent: list[Patent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    person_group: List["PersonGroup"] = field(
+    person_group: list["PersonGroup"] = field(
         default_factory=list,
         metadata={
             "name": "person-group",
             "type": "Element",
         },
     )
-    pub_id: List[PubId] = field(
+    pub_id: list[PubId] = field(
         default_factory=list,
         metadata={
             "name": "pub-id",
             "type": "Element",
         },
     )
-    publisher_loc: List["PublisherLoc"] = field(
+    publisher_loc: list["PublisherLoc"] = field(
         default_factory=list,
         metadata={
             "name": "publisher-loc",
             "type": "Element",
         },
     )
-    publisher_name: List["PublisherName"] = field(
+    publisher_name: list["PublisherName"] = field(
         default_factory=list,
         metadata={
             "name": "publisher-name",
             "type": "Element",
         },
     )
-    role: List["Role"] = field(
+    role: list["Role"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    season: List[Season] = field(
+    season: list[Season] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    series: List["Series"] = field(
+    series: list["Series"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    size: List[Size] = field(
+    size: list[Size] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    source: List["Source"] = field(
+    source: list["Source"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    std: List["Std"] = field(
+    std: list["Std"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    string_date: List[StringDate] = field(
+    string_date: list[StringDate] = field(
         default_factory=list,
         metadata={
             "name": "string-date",
             "type": "Element",
         },
     )
-    string_name: List[StringName] = field(
+    string_name: list[StringName] = field(
         default_factory=list,
         metadata={
             "name": "string-name",
             "type": "Element",
         },
     )
-    supplement: List["Supplement"] = field(
+    supplement: list["Supplement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    trans_source: List["TransSource"] = field(
+    trans_source: list["TransSource"] = field(
         default_factory=list,
         metadata={
             "name": "trans-source",
             "type": "Element",
         },
     )
-    trans_title: List["TransTitle"] = field(
+    trans_title: list["TransTitle"] = field(
         default_factory=list,
         metadata={
             "name": "trans-title",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    version: List["Version"] = field(
+    version: list["Version"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    volume: List[Volume] = field(
+    volume: list[Volume] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    volume_id: List[VolumeId] = field(
+    volume_id: list[VolumeId] = field(
         default_factory=list,
         metadata={
             "name": "volume-id",
             "type": "Element",
         },
     )
-    volume_series: List[VolumeSeries] = field(
+    volume_series: list[VolumeSeries] = field(
         default_factory=list,
         metadata={
             "name": "volume-series",
             "type": "Element",
         },
     )
-    year: List[Year] = field(
+    year: list[Year] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sub: List["Sub"] = field(
+    sub: list["Sub"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sup: List["Sup"] = field(
+    sup: list["Sup"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11890,110 +11890,110 @@ class FigGroup:
         name = "fig-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    label: List["Label"] = field(
+    label: list["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    caption: List[Caption] = field(
+    caption: list[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List["KwdGroup"] = field(
+    kwd_group: list["KwdGroup"] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List["SubjGroup"] = field(
+    subj_group: list["SubjGroup"] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List[ExtLink] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List[Fig] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    xref: List["Xref"] = field(
+    xref: list["Xref"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -12069,20 +12069,20 @@ class KwdGroup:
             "type": "Element",
         },
     )
-    kwd: List[Kwd] = field(
+    kwd: list[Kwd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    compound_kwd: List[CompoundKwd] = field(
+    compound_kwd: list[CompoundKwd] = field(
         default_factory=list,
         metadata={
             "name": "compound-kwd",
             "type": "Element",
         },
     )
-    nested_kwd: List[NestedKwd] = field(
+    nested_kwd: list[NestedKwd] = field(
         default_factory=list,
         metadata={
             "name": "nested-kwd",
@@ -12261,7 +12261,7 @@ class MixedCitation:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -12672,7 +12672,7 @@ class PersonGroup:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -12734,78 +12734,78 @@ class ContribGroup:
         name = "contrib-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    contrib: List[Contrib] = field(
+    contrib: list[Contrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    aff: List[Aff] = field(
+    aff: list[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    aff_alternatives: List[AffAlternatives] = field(
+    aff_alternatives: list[AffAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
         },
     )
-    author_comment: List[AuthorComment] = field(
+    author_comment: list[AuthorComment] = field(
         default_factory=list,
         metadata={
             "name": "author-comment",
             "type": "Element",
         },
     )
-    bio: List[Bio] = field(
+    bio: list[Bio] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List["ExtLink"] = field(
+    ext_link: list["ExtLink"] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    on_behalf_of: List["OnBehalfOf"] = field(
+    on_behalf_of: list["OnBehalfOf"] = field(
         default_factory=list,
         metadata={
             "name": "on-behalf-of",
             "type": "Element",
         },
     )
-    role: List["Role"] = field(
+    role: list["Role"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    xref: List["Xref"] = field(
+    xref: list["Xref"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -12850,7 +12850,7 @@ class Glossary:
         name = "glossary"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -12869,231 +12869,231 @@ class Glossary:
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List[Explanation] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List[Fig] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List[FigGroup] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List["Graphic"] = field(
+    graphic: list["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List["Media"] = field(
+    media: list["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List["Question"] = field(
+    question: list["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List["QuestionWrap"] = field(
+    question_wrap: list["QuestionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    glossary: List["Glossary"] = field(
+    glossary: list["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -13145,91 +13145,91 @@ class Media:
         name = "media"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List[ExtLink] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    caption: List[Caption] = field(
+    caption: list[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List[Permissions] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    label: List[Label] = field(
+    label: list[Label] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List[KwdGroup] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List["SubjGroup"] = field(
+    subj_group: list["SubjGroup"] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    xref: List["Xref"] = field(
+    xref: list["Xref"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -13364,35 +13364,35 @@ class Ref:
             "type": "Element",
         },
     )
-    citation_alternatives: List[CitationAlternatives] = field(
+    citation_alternatives: list[CitationAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "citation-alternatives",
             "type": "Element",
         },
     )
-    element_citation: List[ElementCitation] = field(
+    element_citation: list[ElementCitation] = field(
         default_factory=list,
         metadata={
             "name": "element-citation",
             "type": "Element",
         },
     )
-    mixed_citation: List[MixedCitation] = field(
+    mixed_citation: list[MixedCitation] = field(
         default_factory=list,
         metadata={
             "name": "mixed-citation",
             "type": "Element",
         },
     )
-    nlm_citation: List[NlmCitation] = field(
+    nlm_citation: list[NlmCitation] = field(
         default_factory=list,
         metadata={
             "name": "nlm-citation",
             "type": "Element",
         },
     )
-    note: List[Note] = field(
+    note: list[Note] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -13470,7 +13470,7 @@ class NamedContent:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -13570,7 +13570,7 @@ class NamedContent:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -13763,7 +13763,7 @@ class NamedContent:
                 },
                 {
                     "name": "list",
-                    "type": ListType,
+                    "type": List,
                 },
                 {
                     "name": "tex-math",
@@ -13853,7 +13853,7 @@ class Option:
         name = "option"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -13872,264 +13872,264 @@ class Option:
             "type": "Element",
         },
     )
-    subtitle: List["Subtitle"] = field(
+    subtitle: list["Subtitle"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alt_title: List[AltTitle] = field(
+    alt_title: list[AltTitle] = field(
         default_factory=list,
         metadata={
             "name": "alt-title",
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List[Fig] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List[FigGroup] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List[Graphic] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List[Media] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List["Preformat"] = field(
+    preformat: list["Preformat"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List["Question"] = field(
+    question: list["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List["QuestionWrap"] = field(
+    question_wrap: list["QuestionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List["P"] = field(
+    p: list["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    fn_group: List[FnGroup] = field(
+    fn_group: list[FnGroup] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: List[Glossary] = field(
+    glossary: list[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List["RefList"] = field(
+    ref_list: list["RefList"] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
             "type": "Element",
         },
     )
-    explanation: List[Explanation] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -14213,7 +14213,7 @@ class Overline:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -14418,7 +14418,7 @@ class P:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -14639,7 +14639,7 @@ class P:
                 },
                 {
                     "name": "list",
-                    "type": ListType,
+                    "type": List,
                 },
                 {
                     "name": "tex-math",
@@ -14756,7 +14756,7 @@ class PartTitle:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -14953,7 +14953,7 @@ class Preformat:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -15117,7 +15117,7 @@ class Rb:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -15179,7 +15179,7 @@ class Question:
         name = "question"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -15205,269 +15205,269 @@ class Question:
             "type": "Element",
         },
     )
-    subtitle: List["Subtitle"] = field(
+    subtitle: list["Subtitle"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alt_title: List[AltTitle] = field(
+    alt_title: list[AltTitle] = field(
         default_factory=list,
         metadata={
             "name": "alt-title",
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List[Explanation] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List[Fig] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List[FigGroup] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List[Graphic] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List[Media] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List[Preformat] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List["Question"] = field(
+    question: list["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List["QuestionWrap"] = field(
+    question_wrap: list["QuestionWrap"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    option: List[Option] = field(
+    option: list[Option] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn_group: List[FnGroup] = field(
+    fn_group: list[FnGroup] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: List[Glossary] = field(
+    glossary: list[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List["RefList"] = field(
+    ref_list: list["RefList"] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
@@ -15580,7 +15580,7 @@ class Speech:
         name = "speech"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -15594,7 +15594,7 @@ class Speech:
             "required": True,
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -15659,45 +15659,45 @@ class Statement:
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List[KwdGroup] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List["SubjGroup"] = field(
+    subj_group: list["SubjGroup"] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List[Permissions] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -15749,7 +15749,7 @@ class QuestionWrap:
         name = "question-wrap"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -15776,7 +15776,7 @@ class QuestionWrap:
             "type": "Element",
         },
     )
-    explanation: List[Explanation] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -15966,7 +15966,7 @@ class RelatedArticle:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -16454,7 +16454,7 @@ class RelatedObject:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -16776,7 +16776,7 @@ class QuestionPreamble:
         name = "question-preamble"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -16795,244 +16795,244 @@ class QuestionPreamble:
             "type": "Element",
         },
     )
-    subtitle: List["Subtitle"] = field(
+    subtitle: list["Subtitle"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alt_title: List[AltTitle] = field(
+    alt_title: list[AltTitle] = field(
         default_factory=list,
         metadata={
             "name": "alt-title",
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List[Explanation] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List[Fig] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List[FigGroup] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List[Graphic] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List[Media] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List[Preformat] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List[Question] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List[QuestionWrap] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List["QuestionWrapGroup"] = field(
+    question_wrap_group: list["QuestionWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List["SupplementaryMaterial"] = field(
+    supplementary_material: list["SupplementaryMaterial"] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List["TableWrap"] = field(
+    table_wrap: list["TableWrap"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List["TableWrapGroup"] = field(
+    table_wrap_group: list["TableWrapGroup"] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List["RelatedArticle"] = field(
+    related_article: list["RelatedArticle"] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List["RelatedObject"] = field(
+    related_object: list["RelatedObject"] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List["Speech"] = field(
+    speech: list["Speech"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List["Statement"] = field(
+    statement: list["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -17110,7 +17110,7 @@ class Roman:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -17281,7 +17281,7 @@ class QuestionWrapGroup:
         name = "question-wrap-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -17300,13 +17300,13 @@ class QuestionWrapGroup:
             "type": "Element",
         },
     )
-    subtitle: List["Subtitle"] = field(
+    subtitle: list["Subtitle"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alt_title: List[AltTitle] = field(
+    alt_title: list[AltTitle] = field(
         default_factory=list,
         metadata={
             "name": "alt-title",
@@ -17320,7 +17320,7 @@ class QuestionWrapGroup:
             "type": "Element",
         },
     )
-    question_wrap: List[QuestionWrap] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
@@ -17406,7 +17406,7 @@ class SansSerif:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -17603,7 +17603,7 @@ class Sc:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -17800,7 +17800,7 @@ class Strike:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -18030,7 +18030,7 @@ class StyledContent:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -18223,7 +18223,7 @@ class StyledContent:
                 },
                 {
                     "name": "list",
-                    "type": ListType,
+                    "type": List,
                 },
                 {
                     "name": "tex-math",
@@ -18339,7 +18339,7 @@ class Sub:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -18536,7 +18536,7 @@ class Sup:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -18741,7 +18741,7 @@ class StdOrganization:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -18814,7 +18814,7 @@ class Target:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -18936,7 +18936,7 @@ class Version:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -18999,7 +18999,7 @@ class Underline:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -19190,7 +19190,7 @@ class CompoundSubjectPart:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -19336,7 +19336,7 @@ class Price:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -19477,7 +19477,7 @@ class Role:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -19593,7 +19593,7 @@ class Series:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -19729,7 +19729,7 @@ class Subject:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -19862,7 +19862,7 @@ class TextualForm:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -19991,7 +19991,7 @@ class Xref:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -20019,7 +20019,7 @@ class Xref:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -20121,7 +20121,7 @@ class CompoundKwdPart:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -20266,7 +20266,7 @@ class OnBehalfOf:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -20381,7 +20381,7 @@ class See:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -20409,7 +20409,7 @@ class See:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -20621,7 +20621,7 @@ class SeeAlso:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -20676,7 +20676,7 @@ class SeeAlso:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -20909,7 +20909,7 @@ class Source:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -21048,20 +21048,20 @@ class SubjGroup:
         name = "subj-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    subject: List[Subject] = field(
+    subject: list[Subject] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    compound_subject: List[CompoundSubject] = field(
+    compound_subject: list[CompoundSubject] = field(
         default_factory=list,
         metadata={
             "name": "compound-subject",
             "type": "Element",
         },
     )
-    subj_group: List["SubjGroup"] = field(
+    subj_group: list["SubjGroup"] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
@@ -21168,7 +21168,7 @@ class Subtitle:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -21349,7 +21349,7 @@ class Term:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -21418,7 +21418,7 @@ class Term:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -21630,7 +21630,7 @@ class TermHead:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -21828,7 +21828,7 @@ class Title:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -22053,7 +22053,7 @@ class TransSource:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -22230,7 +22230,7 @@ class TransTitle:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -22466,7 +22466,7 @@ class VerseLine:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -22616,20 +22616,20 @@ class ListItem:
             "type": "Element",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
@@ -22675,34 +22675,34 @@ class SecMeta:
         name = "sec-meta"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    contrib_group: List[ContribGroup] = field(
+    contrib_group: list[ContribGroup] = field(
         default_factory=list,
         metadata={
             "name": "contrib-group",
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List[KwdGroup] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List[SubjGroup] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
@@ -22774,7 +22774,7 @@ class Std:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -22926,7 +22926,7 @@ class Supplement:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -23066,32 +23066,32 @@ class TableWrapFoot:
             "type": "Element",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn_group: List[FnGroup] = field(
+    fn_group: list[FnGroup] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    fn: List[Fn] = field(
+    fn: list[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List[Permissions] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -23140,27 +23140,27 @@ class VerseGroup:
             "type": "Element",
         },
     )
-    verse_line: List[VerseLine] = field(
+    verse_line: list[VerseLine] = field(
         default_factory=list,
         metadata={
             "name": "verse-line",
             "type": "Element",
         },
     )
-    verse_group: List["VerseGroup"] = field(
+    verse_group: list["VerseGroup"] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List[Permissions] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -23317,7 +23317,7 @@ class Product:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -23754,7 +23754,7 @@ class Td:
             "type": "Attribute",
         },
     )
-    headers: List[str] = field(
+    headers: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -23798,7 +23798,7 @@ class Td:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -23947,7 +23947,7 @@ class Td:
                 },
                 {
                     "name": "list",
-                    "type": ListType,
+                    "type": List,
                 },
                 {
                     "name": "tex-math",
@@ -24112,7 +24112,7 @@ class Th:
             "type": "Attribute",
         },
     )
-    headers: List[str] = field(
+    headers: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -24156,7 +24156,7 @@ class Th:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -24305,7 +24305,7 @@ class Th:
                 },
                 {
                     "name": "list",
-                    "type": ListType,
+                    "type": List,
                 },
                 {
                     "name": "tex-math",
@@ -24427,13 +24427,13 @@ class Tr:
         name = "tr"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    th: List[Th] = field(
+    th: list[Th] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    td: List[Td] = field(
+    td: list[Td] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -24497,7 +24497,7 @@ class Tbody:
         name = "tbody"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    tr: List[Tr] = field(
+    tr: list[Tr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -24562,7 +24562,7 @@ class Tfoot:
         name = "tfoot"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    tr: List[Tr] = field(
+    tr: list[Tr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -24627,7 +24627,7 @@ class Thead:
         name = "thead"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    tr: List[Tr] = field(
+    tr: list[Tr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -24696,13 +24696,13 @@ class Table:
         name = "table"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    col: List[Col] = field(
+    col: list[Col] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    colgroup: List[Colgroup] = field(
+    colgroup: list[Colgroup] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -24720,13 +24720,13 @@ class Table:
             "type": "Element",
         },
     )
-    tbody: List[Tbody] = field(
+    tbody: list[Tbody] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    tr: List[Tr] = field(
+    tr: list[Tr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -24819,188 +24819,188 @@ class TableWrap:
         name = "table-wrap"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    label: List[Label] = field(
+    label: list[Label] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    caption: List[Caption] = field(
+    caption: list[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List[KwdGroup] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List[SubjGroup] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List[ExtLink] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List[Speech] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List[Statement] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List[VerseGroup] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    graphic: List[Graphic] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List[Media] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List[Preformat] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    table: List[Table] = field(
+    table: list[Table] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    xref: List[Xref] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    table_wrap_foot: List[TableWrapFoot] = field(
+    table_wrap_foot: list[TableWrapFoot] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-foot",
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List[Permissions] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -25064,201 +25064,201 @@ class SupplementaryMaterial:
         name = "supplementary-material"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    label: List[Label] = field(
+    label: list[Label] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    caption: List[Caption] = field(
+    caption: list[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List[KwdGroup] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List[SubjGroup] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List[ExtLink] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List[Speech] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List[Statement] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List[VerseGroup] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    table_wrap: List[TableWrap] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    graphic: List[Graphic] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List[Media] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List[Preformat] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    xref: List[Xref] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    attrib: List[Attrib] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: List[Permissions] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -25386,86 +25386,86 @@ class TableWrapGroup:
         name = "table-wrap-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
             "type": "Element",
         },
     )
-    label: List[Label] = field(
+    label: list[Label] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    caption: List[Caption] = field(
+    caption: list[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List[KwdGroup] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List[SubjGroup] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List[ExtLink] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    table_wrap: List[TableWrap] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    xref: List[Xref] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -25556,7 +25556,7 @@ class LicenseP:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -25777,7 +25777,7 @@ class LicenseP:
                 },
                 {
                     "name": "list",
-                    "type": ListType,
+                    "type": List,
                 },
                 {
                     "name": "tex-math",
@@ -25871,7 +25871,7 @@ class RefList:
         name = "ref-list"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -25890,237 +25890,237 @@ class RefList:
             "type": "Element",
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List[Explanation] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List[Fig] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List[FigGroup] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List[Graphic] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List[Media] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List[Preformat] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List[Question] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List[QuestionWrap] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List[QuestionWrapGroup] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List[SupplementaryMaterial] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List[TableWrap] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List[TableWrapGroup] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List[RelatedArticle] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List[RelatedObject] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List[Speech] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List[Statement] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List[VerseGroup] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    ref: List[Ref] = field(
+    ref: list[Ref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List["RefList"] = field(
+    ref_list: list["RefList"] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
@@ -26187,7 +26187,7 @@ class Sec:
             "required": True,
         },
     )
-    title: List[Title] = field(
+    title: list[Title] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -26196,250 +26196,250 @@ class Sec:
             "sequence": 1,
         },
     )
-    address: List[Address] = field(
+    address: list[Address] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer: List[Answer] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: List[AnswerSet] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: List[Array] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: List[Explanation] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List[Fig] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List[FigGroup] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List[Graphic] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List[Media] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List[Preformat] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: List[Question] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: List[QuestionWrap] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: List[QuestionWrapGroup] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: List[SupplementaryMaterial] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List[TableWrap] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List[TableWrapGroup] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: List[DispFormula] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: List[DispFormulaGroup] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    tex_math: List[TexMath] = field(
+    tex_math: list[TexMath] = field(
         default_factory=list,
         metadata={
             "name": "tex-math",
             "type": "Element",
         },
     )
-    math: List[Math] = field(
+    math: list[Math] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: List[RelatedArticle] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List[RelatedObject] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: List[DispQuote] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: List[Speech] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: List[Statement] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: List[VerseGroup] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    sec: List["Sec"] = field(
+    sec: list["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn_group: List[FnGroup] = field(
+    fn_group: list[FnGroup] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: List[Glossary] = field(
+    glossary: list[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List[RefList] = field(
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",

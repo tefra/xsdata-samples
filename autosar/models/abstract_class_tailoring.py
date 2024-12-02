@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -232,7 +232,7 @@ class AbstractClassTailoring:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -243,7 +243,7 @@ class AbstractClassTailoring:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -254,7 +254,7 @@ class AbstractClassTailoring:
 
     @dataclass
     class ClassContents:
-        class_content_conditional: List["ClassContentConditional"] = field(
+        class_content_conditional: list["ClassContentConditional"] = field(
             default_factory=list,
             metadata={
                 "name": "CLASS-CONTENT-CONDITIONAL",
@@ -472,7 +472,7 @@ class AggregationTailoring:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -483,7 +483,7 @@ class AggregationTailoring:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -494,7 +494,7 @@ class AggregationTailoring:
 
     @dataclass
     class TypeTailorings:
-        abstract_class_tailoring: List[AbstractClassTailoring] = field(
+        abstract_class_tailoring: list[AbstractClassTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "ABSTRACT-CLASS-TAILORING",
@@ -502,7 +502,7 @@ class AggregationTailoring:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        concrete_class_tailoring: List["ConcreteClassTailoring"] = field(
+        concrete_class_tailoring: list["ConcreteClassTailoring"] = field(
             default_factory=list,
             metadata={
                 "name": "CONCRETE-CLASS-TAILORING",
@@ -712,7 +712,7 @@ class ClassContentConditional:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -723,7 +723,7 @@ class ClassContentConditional:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -779,7 +779,7 @@ class ClassContentConditional:
 
     @dataclass
     class AttributeTailorings:
-        aggregation_tailoring: List[AggregationTailoring] = field(
+        aggregation_tailoring: list[AggregationTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "AGGREGATION-TAILORING",
@@ -787,7 +787,7 @@ class ClassContentConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        primitive_attribute_tailoring: List[PrimitiveAttributeTailoring] = (
+        primitive_attribute_tailoring: list[PrimitiveAttributeTailoring] = (
             field(
                 default_factory=list,
                 metadata={
@@ -797,7 +797,7 @@ class ClassContentConditional:
                 },
             )
         )
-        reference_tailoring: List["ReferenceTailoring"] = field(
+        reference_tailoring: list["ReferenceTailoring"] = field(
             default_factory=list,
             metadata={
                 "name": "REFERENCE-TAILORING",
@@ -808,7 +808,7 @@ class ClassContentConditional:
 
     @dataclass
     class ConstraintTailorings:
-        constraint_tailoring: List[ConstraintTailoring] = field(
+        constraint_tailoring: list[ConstraintTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "CONSTRAINT-TAILORING",
@@ -819,7 +819,7 @@ class ClassContentConditional:
 
     @dataclass
     class SdgTailorings:
-        sdg_tailoring: List[SdgTailoring] = field(
+        sdg_tailoring: list[SdgTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-TAILORING",
@@ -1051,7 +1051,7 @@ class ConcreteClassTailoring:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -1062,7 +1062,7 @@ class ConcreteClassTailoring:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -1073,7 +1073,7 @@ class ConcreteClassTailoring:
 
     @dataclass
     class ClassContents:
-        class_content_conditional: List[ClassContentConditional] = field(
+        class_content_conditional: list[ClassContentConditional] = field(
             default_factory=list,
             metadata={
                 "name": "CLASS-CONTENT-CONDITIONAL",
@@ -1303,7 +1303,7 @@ class ReferenceTailoring:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -1314,7 +1314,7 @@ class ReferenceTailoring:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -1325,7 +1325,7 @@ class ReferenceTailoring:
 
     @dataclass
     class TypeTailorings:
-        abstract_class_tailoring: List[AbstractClassTailoring] = field(
+        abstract_class_tailoring: list[AbstractClassTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "ABSTRACT-CLASS-TAILORING",
@@ -1333,7 +1333,7 @@ class ReferenceTailoring:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        concrete_class_tailoring: List[ConcreteClassTailoring] = field(
+        concrete_class_tailoring: list[ConcreteClassTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "CONCRETE-CLASS-TAILORING",

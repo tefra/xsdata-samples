@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -90,7 +90,7 @@ class Autosar:
 
     @dataclass
     class ArPackages:
-        ar_package: List[ArPackage] = field(
+        ar_package: list[ArPackage] = field(
             default_factory=list,
             metadata={
                 "name": "AR-PACKAGE",

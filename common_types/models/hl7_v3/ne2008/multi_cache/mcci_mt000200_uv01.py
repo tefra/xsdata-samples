@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     AnyType,
@@ -37,7 +37,7 @@ class McciMt000200Uv01AcknowledgementDetail:
     class Meta:
         name = "MCCI_MT000200UV01.AcknowledgementDetail"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -53,7 +53,7 @@ class McciMt000200Uv01AcknowledgementDetail:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -75,7 +75,7 @@ class McciMt000200Uv01AcknowledgementDetail:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: List[St] = field(
+    location: list[St] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -103,7 +103,7 @@ class McciMt000200Uv01AttentionLine:
     class Meta:
         name = "MCCI_MT000200UV01.AttentionLine"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -119,7 +119,7 @@ class McciMt000200Uv01AttentionLine:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -156,7 +156,7 @@ class McciMt000200Uv01EntityRsp:
     class Meta:
         name = "MCCI_MT000200UV01.EntityRsp"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -172,7 +172,7 @@ class McciMt000200Uv01EntityRsp:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -188,14 +188,14 @@ class McciMt000200Uv01EntityRsp:
             "required": True,
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -233,7 +233,7 @@ class McciMt000200Uv01Organization:
     class Meta:
         name = "MCCI_MT000200UV01.Organization"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -249,7 +249,7 @@ class McciMt000200Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -257,7 +257,7 @@ class McciMt000200Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -265,14 +265,14 @@ class McciMt000200Uv01Organization:
             "min_occurs": 1,
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -319,7 +319,7 @@ class McciMt000200Uv01Place:
     class Meta:
         name = "MCCI_MT000200UV01.Place"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -335,7 +335,7 @@ class McciMt000200Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -343,7 +343,7 @@ class McciMt000200Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -351,14 +351,14 @@ class McciMt000200Uv01Place:
             "min_occurs": 1,
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -396,7 +396,7 @@ class McciMt000200Uv01TargetMessage:
     class Meta:
         name = "MCCI_MT000200UV01.TargetMessage"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -412,7 +412,7 @@ class McciMt000200Uv01TargetMessage:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -442,7 +442,7 @@ class McciMt000200Uv01Acknowledgement:
     class Meta:
         name = "MCCI_MT000200UV01.Acknowledgement"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -458,7 +458,7 @@ class McciMt000200Uv01Acknowledgement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -508,7 +508,7 @@ class McciMt000200Uv01Acknowledgement:
             "nillable": True,
         },
     )
-    acknowledgement_detail: List[McciMt000200Uv01AcknowledgementDetail] = (
+    acknowledgement_detail: list[McciMt000200Uv01AcknowledgementDetail] = (
         field(
             default_factory=list,
             metadata={
@@ -533,7 +533,7 @@ class McciMt000200Uv01Agent:
     class Meta:
         name = "MCCI_MT000200UV01.Agent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -549,7 +549,7 @@ class McciMt000200Uv01Agent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -588,7 +588,7 @@ class McciMt000200Uv01LocatedEntity:
     class Meta:
         name = "MCCI_MT000200UV01.LocatedEntity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -604,7 +604,7 @@ class McciMt000200Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -642,7 +642,7 @@ class McciMt000200Uv01RespondTo:
     class Meta:
         name = "MCCI_MT000200UV01.RespondTo"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -658,7 +658,7 @@ class McciMt000200Uv01RespondTo:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -673,7 +673,7 @@ class McciMt000200Uv01RespondTo:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entity_rsp: List[McciMt000200Uv01EntityRsp] = field(
+    entity_rsp: list[McciMt000200Uv01EntityRsp] = field(
         default_factory=list,
         metadata={
             "name": "entityRsp",
@@ -705,7 +705,7 @@ class McciMt000200Uv01Device:
     class Meta:
         name = "MCCI_MT000200UV01.Device"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -721,7 +721,7 @@ class McciMt000200Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -729,7 +729,7 @@ class McciMt000200Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -737,7 +737,7 @@ class McciMt000200Uv01Device:
             "min_occurs": 1,
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -759,7 +759,7 @@ class McciMt000200Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -791,7 +791,7 @@ class McciMt000200Uv01Device:
             "nillable": True,
         },
     )
-    as_located_entity: List[McciMt000200Uv01LocatedEntity] = field(
+    as_located_entity: list[McciMt000200Uv01LocatedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLocatedEntity",
@@ -831,7 +831,7 @@ class McciMt000200Uv01Receiver:
     class Meta:
         name = "MCCI_MT000200UV01.Receiver"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -847,7 +847,7 @@ class McciMt000200Uv01Receiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -892,7 +892,7 @@ class McciMt000200Uv01Sender:
     class Meta:
         name = "MCCI_MT000200UV01.Sender"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -908,7 +908,7 @@ class McciMt000200Uv01Sender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -953,7 +953,7 @@ class McciMt000200Uv01Message:
     class Meta:
         name = "MCCI_MT000200UV01.Message"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -969,7 +969,7 @@ class McciMt000200Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1019,7 +1019,7 @@ class McciMt000200Uv01Message:
             "required": True,
         },
     )
-    profile_id: List[Ii] = field(
+    profile_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "profileId",
@@ -1054,7 +1054,7 @@ class McciMt000200Uv01Message:
             "required": True,
         },
     )
-    attachment_text: List[EdExplicit] = field(
+    attachment_text: list[EdExplicit] = field(
         default_factory=list,
         metadata={
             "name": "attachmentText",
@@ -1062,7 +1062,7 @@ class McciMt000200Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    receiver: List[McciMt000200Uv01Receiver] = field(
+    receiver: list[McciMt000200Uv01Receiver] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1070,7 +1070,7 @@ class McciMt000200Uv01Message:
             "min_occurs": 1,
         },
     )
-    respond_to: List[McciMt000200Uv01RespondTo] = field(
+    respond_to: list[McciMt000200Uv01RespondTo] = field(
         default_factory=list,
         metadata={
             "name": "respondTo",
@@ -1087,7 +1087,7 @@ class McciMt000200Uv01Message:
             "required": True,
         },
     )
-    attention_line: List[McciMt000200Uv01AttentionLine] = field(
+    attention_line: list[McciMt000200Uv01AttentionLine] = field(
         default_factory=list,
         metadata={
             "name": "attentionLine",
@@ -1096,7 +1096,7 @@ class McciMt000200Uv01Message:
             "nillable": True,
         },
     )
-    acknowledgement: List[McciMt000200Uv01Acknowledgement] = field(
+    acknowledgement: list[McciMt000200Uv01Acknowledgement] = field(
         default_factory=list,
         metadata={
             "type": "Element",

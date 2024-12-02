@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from .call_conversation import CallConversation
 from .conversation import Conversation
@@ -14,7 +13,7 @@ class TSubConversation(TConversationNode):
     class Meta:
         name = "tSubConversation"
 
-    sub_conversation: List["SubConversation"] = field(
+    sub_conversation: list["SubConversation"] = field(
         default_factory=list,
         metadata={
             "name": "subConversation",
@@ -22,14 +21,14 @@ class TSubConversation(TConversationNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    conversation: List[Conversation] = field(
+    conversation: list[Conversation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    call_conversation: List[CallConversation] = field(
+    call_conversation: list[CallConversation] = field(
         default_factory=list,
         metadata={
             "name": "callConversation",
@@ -37,7 +36,7 @@ class TSubConversation(TConversationNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    conversation_node: List[ConversationNode] = field(
+    conversation_node: list[ConversationNode] = field(
         default_factory=list,
         metadata={
             "name": "conversationNode",

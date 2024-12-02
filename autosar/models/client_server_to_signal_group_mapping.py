@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
@@ -245,7 +245,7 @@ class ClientServerToSignalGroupMapping:
 
     @dataclass
     class EventGroupRefs:
-        event_group_ref: List[
+        event_group_ref: list[
             "ClientServerToSignalGroupMapping.EventGroupRefs.EventGroupRef"
         ] = field(
             default_factory=list,
@@ -269,7 +269,7 @@ class ClientServerToSignalGroupMapping:
 
     @dataclass
     class EventHandlerRefs:
-        event_handler_ref: List[
+        event_handler_ref: list[
             "ClientServerToSignalGroupMapping.EventHandlerRefs.EventHandlerRef"
         ] = field(
             default_factory=list,
@@ -293,7 +293,7 @@ class ClientServerToSignalGroupMapping:
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List[
+        service_instance_ref: list[
             "ClientServerToSignalGroupMapping.ServiceInstanceRefs.ServiceInstanceRef"
         ] = field(
             default_factory=list,
@@ -317,7 +317,7 @@ class ClientServerToSignalGroupMapping:
 
     @dataclass
     class CompositeTypeMappings:
-        client_server_array_type_mapping: List[
+        client_server_array_type_mapping: list[
             ClientServerArrayTypeMapping
         ] = field(
             default_factory=list,
@@ -327,7 +327,7 @@ class ClientServerToSignalGroupMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        client_server_record_type_mapping: List[
+        client_server_record_type_mapping: list[
             ClientServerRecordTypeMapping
         ] = field(
             default_factory=list,
@@ -340,7 +340,7 @@ class ClientServerToSignalGroupMapping:
 
     @dataclass
     class PrimitiveTypeMappings:
-        client_server_primitive_type_mapping: List[
+        client_server_primitive_type_mapping: list[
             ClientServerPrimitiveTypeMapping
         ] = field(
             default_factory=list,

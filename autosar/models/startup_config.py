@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -253,7 +253,7 @@ class StartupConfig:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -264,7 +264,7 @@ class StartupConfig:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -275,7 +275,7 @@ class StartupConfig:
 
     @dataclass
     class EnvironmentVariables:
-        tag_with_optional_value: List[TagWithOptionalValue] = field(
+        tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
             metadata={
                 "name": "TAG-WITH-OPTIONAL-VALUE",
@@ -297,7 +297,7 @@ class StartupConfig:
 
     @dataclass
     class ProcessArguments:
-        process_argument: List[ProcessArgument] = field(
+        process_argument: list[ProcessArgument] = field(
             default_factory=list,
             metadata={
                 "name": "PROCESS-ARGUMENT",

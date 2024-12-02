@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -259,7 +259,7 @@ class SecurityEventContextProps:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -270,7 +270,7 @@ class SecurityEventContextProps:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -281,7 +281,7 @@ class SecurityEventContextProps:
 
     @dataclass
     class ContextDatas:
-        security_event_context_data: List[SecurityEventContextData] = field(
+        security_event_context_data: list[SecurityEventContextData] = field(
             default_factory=list,
             metadata={
                 "name": "SECURITY-EVENT-CONTEXT-DATA",
@@ -292,7 +292,7 @@ class SecurityEventContextProps:
 
     @dataclass
     class SecurityEvents:
-        security_event_definition_ref_conditional: List[
+        security_event_definition_ref_conditional: list[
             SecurityEventDefinitionRefConditional
         ] = field(
             default_factory=list,

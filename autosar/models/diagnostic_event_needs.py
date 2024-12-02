@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -375,7 +375,7 @@ class DiagnosticEventNeeds:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -386,7 +386,7 @@ class DiagnosticEventNeeds:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -404,7 +404,7 @@ class DiagnosticEventNeeds:
             implementation.
         """
 
-        audience: List[DiagnosticAudienceEnum] = field(
+        audience: list[DiagnosticAudienceEnum] = field(
             default_factory=list,
             metadata={
                 "name": "AUDIENCE",
@@ -415,7 +415,7 @@ class DiagnosticEventNeeds:
 
     @dataclass
     class DeferringFidRefs:
-        deferring_fid_ref: List[
+        deferring_fid_ref: list[
             "DiagnosticEventNeeds.DeferringFidRefs.DeferringFidRef"
         ] = field(
             default_factory=list,
@@ -483,7 +483,7 @@ class DiagnosticEventNeeds:
 
     @dataclass
     class InhibitingSecondaryFidRefs:
-        inhibiting_secondary_fid_ref: List[
+        inhibiting_secondary_fid_ref: list[
             "DiagnosticEventNeeds.InhibitingSecondaryFidRefs.InhibitingSecondaryFidRef"
         ] = field(
             default_factory=list,

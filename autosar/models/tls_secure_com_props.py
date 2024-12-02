@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -197,7 +197,7 @@ class TlsSecureComProps:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -208,7 +208,7 @@ class TlsSecureComProps:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -219,7 +219,7 @@ class TlsSecureComProps:
 
     @dataclass
     class KeyExchangeRefs:
-        key_exchange_ref: List[
+        key_exchange_ref: list[
             "TlsSecureComProps.KeyExchangeRefs.KeyExchangeRef"
         ] = field(
             default_factory=list,
@@ -243,7 +243,7 @@ class TlsSecureComProps:
 
     @dataclass
     class TlsCipherSuites:
-        tls_crypto_cipher_suite: List[TlsCryptoCipherSuite] = field(
+        tls_crypto_cipher_suite: list[TlsCryptoCipherSuite] = field(
             default_factory=list,
             metadata={
                 "name": "TLS-CRYPTO-CIPHER-SUITE",

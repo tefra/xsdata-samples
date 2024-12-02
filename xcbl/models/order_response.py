@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.order_status_result import (
     ItemStatusEvent,
@@ -464,7 +464,7 @@ class ItemDetailChanges:
 
 @dataclass(kw_only=True)
 class ListOfErrorInfo:
-    error_info: List[ErrorInfo] = field(
+    error_info: list[ErrorInfo] = field(
         default_factory=list,
         metadata={
             "name": "ErrorInfo",
@@ -476,7 +476,7 @@ class ListOfErrorInfo:
 
 @dataclass(kw_only=True)
 class ListOfTransport:
-    transport: List[Transport] = field(
+    transport: list[Transport] = field(
         default_factory=list,
         metadata={
             "name": "Transport",
@@ -948,7 +948,7 @@ class OrderHeader:
             "type": "Element",
         },
     )
-    order_terms_of_delivery: List[OrderTermsOfDelivery] = field(
+    order_terms_of_delivery: list[OrderTermsOfDelivery] = field(
         default_factory=list,
         metadata={
             "name": "OrderTermsOfDelivery",
@@ -1404,7 +1404,7 @@ class ChangeOrderHeader:
 
 @dataclass(kw_only=True)
 class ListOfOrderResponseItemDetail:
-    order_response_item_detail: List[OrderResponseItemDetail] = field(
+    order_response_item_detail: list[OrderResponseItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "OrderResponseItemDetail",
@@ -1416,7 +1416,7 @@ class ListOfOrderResponseItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfOrderResponsePackageDetail:
-    order_response_package_detail: List[OrderResponsePackageDetail] = field(
+    order_response_package_detail: list[OrderResponsePackageDetail] = field(
         default_factory=list,
         metadata={
             "name": "OrderResponsePackageDetail",

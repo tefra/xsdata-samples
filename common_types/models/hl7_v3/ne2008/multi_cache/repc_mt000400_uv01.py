@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -40,7 +40,7 @@ class RepcMt000400Uv01Author5:
     class Meta:
         name = "REPC_MT000400UV01.Author5"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -56,7 +56,7 @@ class RepcMt000400Uv01Author5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -146,7 +146,7 @@ class RepcMt000400Uv01Component4:
     class Meta:
         name = "REPC_MT000400UV01.Component4"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -162,7 +162,7 @@ class RepcMt000400Uv01Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -284,7 +284,7 @@ class RepcMt000400Uv01Custodian:
     class Meta:
         name = "REPC_MT000400UV01.Custodian"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -300,7 +300,7 @@ class RepcMt000400Uv01Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -347,7 +347,7 @@ class RepcMt000400Uv01ActCategory:
     class Meta:
         name = "REPC_MT000400UV01.ActCategory"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -363,7 +363,7 @@ class RepcMt000400Uv01ActCategory:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -379,7 +379,7 @@ class RepcMt000400Uv01ActCategory:
             "required": True,
         },
     )
-    author: List[RepcMt000400Uv01Author5] = field(
+    author: list[RepcMt000400Uv01Author5] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -387,7 +387,7 @@ class RepcMt000400Uv01ActCategory:
             "nillable": True,
         },
     )
-    component: List[RepcMt000400Uv01Component4] = field(
+    component: list[RepcMt000400Uv01Component4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -427,7 +427,7 @@ class RepcMt000400Uv01ActList:
     class Meta:
         name = "REPC_MT000400UV01.ActList"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -443,7 +443,7 @@ class RepcMt000400Uv01ActList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -467,7 +467,7 @@ class RepcMt000400Uv01ActList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[RepcMt000400Uv01Author5] = field(
+    author: list[RepcMt000400Uv01Author5] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -475,7 +475,7 @@ class RepcMt000400Uv01ActList:
             "nillable": True,
         },
     )
-    custodian: List[RepcMt000400Uv01Custodian] = field(
+    custodian: list[RepcMt000400Uv01Custodian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -483,7 +483,7 @@ class RepcMt000400Uv01ActList:
             "nillable": True,
         },
     )
-    component: List[RepcMt000400Uv01Component4] = field(
+    component: list[RepcMt000400Uv01Component4] = field(
         default_factory=list,
         metadata={
             "type": "Element",

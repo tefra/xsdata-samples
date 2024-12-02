@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.trading_partner_organization_information import (
     ExternalAddressId,
@@ -1415,7 +1415,7 @@ class KeyFigure:
 
 @dataclass(kw_only=True)
 class ListOfIdentifier:
-    identifier: List[Identifier] = field(
+    identifier: list[Identifier] = field(
         default_factory=list,
         metadata={
             "name": "Identifier",
@@ -1891,7 +1891,7 @@ class UnitOfMeasurement:
 
 @dataclass(kw_only=True)
 class ListOfContactNumber:
-    contact_number: List[ContactNumber] = field(
+    contact_number: list[ContactNumber] = field(
         default_factory=list,
         metadata={
             "name": "ContactNumber",
@@ -2196,7 +2196,7 @@ class Dimension:
 
 @dataclass(kw_only=True)
 class ListOfContact:
-    contact: List[Contact] = field(
+    contact: list[Contact] = field(
         default_factory=list,
         metadata={
             "name": "Contact",
@@ -2298,7 +2298,7 @@ class TimeSeriesKeyFigureData:
             "required": True,
         }
     )
-    time_series_data: List[TimeSeriesData] = field(
+    time_series_data: list[TimeSeriesData] = field(
         default_factory=list,
         metadata={
             "name": "TimeSeriesData",
@@ -2310,7 +2310,7 @@ class TimeSeriesKeyFigureData:
 
 @dataclass(kw_only=True)
 class ListOfDimension:
-    dimension: List[Dimension] = field(
+    dimension: list[Dimension] = field(
         default_factory=list,
         metadata={
             "name": "Dimension",
@@ -2322,7 +2322,7 @@ class ListOfDimension:
 
 @dataclass(kw_only=True)
 class ListOfTimeSeriesKeyFigureData:
-    time_series_key_figure_data: List[TimeSeriesKeyFigureData] = field(
+    time_series_key_figure_data: list[TimeSeriesKeyFigureData] = field(
         default_factory=list,
         metadata={
             "name": "TimeSeriesKeyFigureData",
@@ -2359,7 +2359,7 @@ class CharacteristicAttribute:
             "required": True,
         }
     )
-    characteristic_attribute_name: List[CharacteristicAttributeName] = field(
+    characteristic_attribute_name: list[CharacteristicAttributeName] = field(
         default_factory=list,
         metadata={
             "name": "CharacteristicAttributeName",
@@ -2391,7 +2391,7 @@ class CharacteristicAttribute:
             },
         )
     )
-    other_characteristic_attribute: List["OtherCharacteristicAttribute"] = (
+    other_characteristic_attribute: list["OtherCharacteristicAttribute"] = (
         field(
             default_factory=list,
             metadata={
@@ -2563,7 +2563,7 @@ class PartyCoded:
 
 @dataclass(kw_only=True)
 class ListOfPartyCoded:
-    party_coded: List[PartyCoded] = field(
+    party_coded: list[PartyCoded] = field(
         default_factory=list,
         metadata={
             "name": "PartyCoded",
@@ -2659,7 +2659,7 @@ class BaseCharacteristicLocation:
             "required": True,
         }
     )
-    location_attribute_name: List[LocationAttributeName] = field(
+    location_attribute_name: list[LocationAttributeName] = field(
         default_factory=list,
         metadata={
             "name": "LocationAttributeName",
@@ -2707,7 +2707,7 @@ class BaseCharacteristicProduct:
             "required": True,
         }
     )
-    product_attribute_name: List[ProductAttributeName] = field(
+    product_attribute_name: list[ProductAttributeName] = field(
         default_factory=list,
         metadata={
             "name": "ProductAttributeName",
@@ -3087,7 +3087,7 @@ class CharacteristicCombination:
             "type": "Element",
         },
     )
-    characteristic_other: List[CharacteristicOther] = field(
+    characteristic_other: list[CharacteristicOther] = field(
         default_factory=list,
         metadata={
             "name": "CharacteristicOther",
@@ -3174,7 +3174,7 @@ class TimeSeriesResponseHeader:
 
 @dataclass(kw_only=True)
 class ListOfCharacteristicCombinations:
-    characteristic_combination: List[CharacteristicCombination] = field(
+    characteristic_combination: list[CharacteristicCombination] = field(
         default_factory=list,
         metadata={
             "name": "CharacteristicCombination",

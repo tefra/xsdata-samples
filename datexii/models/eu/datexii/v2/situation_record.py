@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -174,7 +174,7 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    general_public_comment: List[Comment] = field(
+    general_public_comment: list[Comment] = field(
         default_factory=list,
         metadata={
             "name": "generalPublicComment",
@@ -182,7 +182,7 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    non_general_public_comment: List[Comment] = field(
+    non_general_public_comment: list[Comment] = field(
         default_factory=list,
         metadata={
             "name": "nonGeneralPublicComment",
@@ -190,7 +190,7 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    url_link: List[UrlLink] = field(
+    url_link: list[UrlLink] = field(
         default_factory=list,
         metadata={
             "name": "urlLink",

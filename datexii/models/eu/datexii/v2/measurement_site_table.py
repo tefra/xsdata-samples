@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.measurement_site_record import (
@@ -35,7 +35,7 @@ class MeasurementSiteTable:
             "max_length": 1024,
         },
     )
-    measurement_site_record: List[MeasurementSiteRecord] = field(
+    measurement_site_record: list[MeasurementSiteRecord] = field(
         default_factory=list,
         metadata={
             "name": "measurementSiteRecord",

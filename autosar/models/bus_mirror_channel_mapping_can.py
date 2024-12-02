@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -283,7 +283,7 @@ class BusMirrorChannelMappingCan:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -294,7 +294,7 @@ class BusMirrorChannelMappingCan:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -305,7 +305,7 @@ class BusMirrorChannelMappingCan:
 
     @dataclass
     class TargetPduTriggerings:
-        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = (
+        pdu_triggering_ref_conditional: list[PduTriggeringRefConditional] = (
             field(
                 default_factory=list,
                 metadata={
@@ -318,7 +318,7 @@ class BusMirrorChannelMappingCan:
 
     @dataclass
     class CanIdRangeMappings:
-        bus_mirror_can_id_range_mapping: List[BusMirrorCanIdRangeMapping] = (
+        bus_mirror_can_id_range_mapping: list[BusMirrorCanIdRangeMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -331,7 +331,7 @@ class BusMirrorChannelMappingCan:
 
     @dataclass
     class CanIdToCanIdMappings:
-        bus_mirror_can_id_to_can_id_mapping: List[
+        bus_mirror_can_id_to_can_id_mapping: list[
             BusMirrorCanIdToCanIdMapping
         ] = field(
             default_factory=list,
@@ -344,7 +344,7 @@ class BusMirrorChannelMappingCan:
 
     @dataclass
     class LinPidToCanIdMappings:
-        bus_mirror_lin_pid_to_can_id_mapping: List[
+        bus_mirror_lin_pid_to_can_id_mapping: list[
             BusMirrorLinPidToCanIdMapping
         ] = field(
             default_factory=list,

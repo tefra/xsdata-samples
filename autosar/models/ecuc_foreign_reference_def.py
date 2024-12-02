@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -388,7 +388,7 @@ class EcucForeignReferenceDef:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -399,7 +399,7 @@ class EcucForeignReferenceDef:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -421,7 +421,7 @@ class EcucForeignReferenceDef:
 
     @dataclass
     class EcucValidationConds:
-        ecuc_validation_condition: List[EcucValidationCondition] = field(
+        ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-VALIDATION-CONDITION",
@@ -432,7 +432,7 @@ class EcucForeignReferenceDef:
 
     @dataclass
     class ImplementationConfigClasses:
-        ecuc_implementation_configuration_class: List[
+        ecuc_implementation_configuration_class: list[
             EcucImplementationConfigurationClass
         ] = field(
             default_factory=list,
@@ -445,7 +445,7 @@ class EcucForeignReferenceDef:
 
     @dataclass
     class MultiplicityConfigClasses:
-        ecuc_multiplicity_configuration_class: List[
+        ecuc_multiplicity_configuration_class: list[
             EcucMultiplicityConfigurationClass
         ] = field(
             default_factory=list,
@@ -458,7 +458,7 @@ class EcucForeignReferenceDef:
 
     @dataclass
     class ValueConfigClasses:
-        ecuc_value_configuration_class: List[EcucValueConfigurationClass] = (
+        ecuc_value_configuration_class: list[EcucValueConfigurationClass] = (
             field(
                 default_factory=list,
                 metadata={

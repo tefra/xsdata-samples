@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_distinguished_partition_subtypes_enum import (
@@ -115,7 +115,7 @@ class BswVariableAccess:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -137,7 +137,7 @@ class BswVariableAccess:
 
     @dataclass
     class ContextLimitationRefs:
-        context_limitation_ref: List[
+        context_limitation_ref: list[
             "BswVariableAccess.ContextLimitationRefs.ContextLimitationRef"
         ] = field(
             default_factory=list,

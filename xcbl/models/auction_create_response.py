@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.auction_result import ListOfMvbvariables
 from xcbl.models.auction_result_response import AuctionCreateReference
@@ -866,7 +866,7 @@ class AuctionCreateResponseSummary:
 
 @dataclass(kw_only=True)
 class ListOfAuctionCategory:
-    auction_category: List[AuctionCategory] = field(
+    auction_category: list[AuctionCategory] = field(
         default_factory=list,
         metadata={
             "name": "AuctionCategory",
@@ -877,7 +877,7 @@ class ListOfAuctionCategory:
 
 @dataclass(kw_only=True)
 class ListOfAuctionItemAttribute:
-    auction_item_attribute: List[AuctionItemAttribute] = field(
+    auction_item_attribute: list[AuctionItemAttribute] = field(
         default_factory=list,
         metadata={
             "name": "AuctionItemAttribute",
@@ -889,7 +889,7 @@ class ListOfAuctionItemAttribute:
 
 @dataclass(kw_only=True)
 class ListOfAuctionPartners:
-    auction_partners: List[AuctionPartners] = field(
+    auction_partners: list[AuctionPartners] = field(
         default_factory=list,
         metadata={
             "name": "AuctionPartners",
@@ -901,7 +901,7 @@ class ListOfAuctionPartners:
 
 @dataclass(kw_only=True)
 class ListOfRules:
-    rule: List[Rule] = field(
+    rule: list[Rule] = field(
         default_factory=list,
         metadata={
             "name": "Rule",
@@ -1039,7 +1039,7 @@ class AuctionParticipants:
 
 @dataclass(kw_only=True)
 class ListOfValidBidCurrency:
-    valid_bid_currency: List[ValidBidCurrency] = field(
+    valid_bid_currency: list[ValidBidCurrency] = field(
         default_factory=list,
         metadata={
             "name": "ValidBidCurrency",
@@ -1454,7 +1454,7 @@ class AuctionItemComponentResponse:
 
 @dataclass(kw_only=True)
 class ListOfAuctionCreateResponseDetail:
-    auction_create_response_detail: List[AuctionCreateResponseDetail] = field(
+    auction_create_response_detail: list[AuctionCreateResponseDetail] = field(
         default_factory=list,
         metadata={
             "name": "AuctionCreateResponseDetail",
@@ -1493,7 +1493,7 @@ class AuctionCreateResponse:
 
 @dataclass(kw_only=True)
 class ListOfAuctionItemComponentResponse:
-    auction_item_component_response: List[AuctionItemComponentResponse] = (
+    auction_item_component_response: list[AuctionItemComponentResponse] = (
         field(
             default_factory=list,
             metadata={

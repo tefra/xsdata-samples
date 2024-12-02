@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .operation_in_system_instance_ref import OperationInSystemInstanceRef
 from .swc_to_swc_operation_arguments_direction_enum import (
@@ -78,7 +78,7 @@ class SwcToSwcOperationArguments:
 
     @dataclass
     class OperationIrefs:
-        operation_iref: List[OperationInSystemInstanceRef] = field(
+        operation_iref: list[OperationInSystemInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "OPERATION-IREF",

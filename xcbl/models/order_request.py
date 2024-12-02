@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.order_response import (
     ListOfTransport,
@@ -76,7 +76,7 @@ class SellerOrderRequestNumber:
 
 @dataclass(kw_only=True)
 class ListOfItemDetail:
-    item_detail: List[ItemDetail] = field(
+    item_detail: list[ItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "ItemDetail",
@@ -373,7 +373,7 @@ class OrderRequestHeader:
             "type": "Element",
         },
     )
-    order_terms_of_delivery: List[OrderTermsOfDelivery] = field(
+    order_terms_of_delivery: list[OrderTermsOfDelivery] = field(
         default_factory=list,
         metadata={
             "name": "OrderTermsOfDelivery",

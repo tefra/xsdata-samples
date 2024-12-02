@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition_reasons_reason_code import (
     StatusHistoryTypeStateTransitionReasonsReasonCode,
@@ -18,7 +17,7 @@ class StatusHistoryTypeStateTransitionReasons:
     class Meta:
         global_type = False
 
-    reason_code: List[StatusHistoryTypeStateTransitionReasonsReasonCode] = (
+    reason_code: list[StatusHistoryTypeStateTransitionReasonsReasonCode] = (
         field(
             default_factory=list,
             metadata={

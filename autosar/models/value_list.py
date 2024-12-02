@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .numerical_value import NumericalValue
 from .numerical_value_variation_point import NumericalValueVariationPoint
@@ -29,7 +29,7 @@ class ValueList:
     class Meta:
         name = "VALUE-LIST"
 
-    vf: List[NumericalValueVariationPoint] = field(
+    vf: list[NumericalValueVariationPoint] = field(
         default_factory=list,
         metadata={
             "name": "VF",
@@ -37,7 +37,7 @@ class ValueList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    v: List[NumericalValue] = field(
+    v: list[NumericalValue] = field(
         default_factory=list,
         metadata={
             "name": "V",

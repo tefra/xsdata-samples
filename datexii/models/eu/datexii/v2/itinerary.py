@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.destination import Destination
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -19,7 +19,7 @@ class Itinerary(GroupOfLocations):
     :ivar itinerary_extension:
     """
 
-    route_destination: List[Destination] = field(
+    route_destination: list[Destination] = field(
         default_factory=list,
         metadata={
             "name": "routeDestination",

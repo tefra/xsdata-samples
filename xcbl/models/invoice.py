@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.order_response import (
     NumberOfLines,
@@ -507,7 +507,7 @@ class InvoiceTermsOfDelivery:
 
 @dataclass(kw_only=True)
 class ListOfInvoiceItemDetail:
-    invoice_item_detail: List[InvoiceItemDetail] = field(
+    invoice_item_detail: list[InvoiceItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "InvoiceItemDetail",
@@ -943,7 +943,7 @@ class InvoiceTotals:
 
 @dataclass(kw_only=True)
 class ListOfTaxSummary:
-    tax_summary: List[TaxSummary] = field(
+    tax_summary: list[TaxSummary] = field(
         default_factory=list,
         metadata={
             "name": "TaxSummary",
@@ -1039,7 +1039,7 @@ class TotalAllowOrCharge:
 
 @dataclass(kw_only=True)
 class AllowOrChargeSummary:
-    total_allow_or_charge: List[TotalAllowOrCharge] = field(
+    total_allow_or_charge: list[TotalAllowOrCharge] = field(
         default_factory=list,
         metadata={
             "name": "TotalAllowOrCharge",
@@ -1051,7 +1051,7 @@ class AllowOrChargeSummary:
 
 @dataclass(kw_only=True)
 class ListOfSpecificRequirement:
-    specific_requirement: List[SpecificRequirement] = field(
+    specific_requirement: list[SpecificRequirement] = field(
         default_factory=list,
         metadata={
             "name": "SpecificRequirement",
@@ -1116,7 +1116,7 @@ class ActualPayment:
             "type": "Element",
         },
     )
-    other_payment_info: List[OtherPaymentInfo] = field(
+    other_payment_info: list[OtherPaymentInfo] = field(
         default_factory=list,
         metadata={
             "name": "OtherPaymentInfo",
@@ -1145,7 +1145,7 @@ class CountryRequirement:
 
 @dataclass(kw_only=True)
 class ListOfActualPayment:
-    actual_payment: List[ActualPayment] = field(
+    actual_payment: list[ActualPayment] = field(
         default_factory=list,
         metadata={
             "name": "ActualPayment",
@@ -1157,7 +1157,7 @@ class ListOfActualPayment:
 
 @dataclass(kw_only=True)
 class ListOfCountryRequirement:
-    country_requirement: List[CountryRequirement] = field(
+    country_requirement: list[CountryRequirement] = field(
         default_factory=list,
         metadata={
             "name": "CountryRequirement",
@@ -1279,7 +1279,7 @@ class InvoiceHeader:
             "type": "Element",
         },
     )
-    invoice_references: List[InvoiceReferences] = field(
+    invoice_references: list[InvoiceReferences] = field(
         default_factory=list,
         metadata={
             "name": "InvoiceReferences",

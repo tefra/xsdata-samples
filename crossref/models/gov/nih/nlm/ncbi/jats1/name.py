@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.given_names import GivenNames
 from crossref.models.gov.nih.nlm.ncbi.jats1.name_name_style import (
@@ -30,7 +30,7 @@ class Name:
             "required": True,
         },
     )
-    given_names: List[GivenNames] = field(
+    given_names: list[GivenNames] = field(
         default_factory=list,
         metadata={
             "name": "given-names",

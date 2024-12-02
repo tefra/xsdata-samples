@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.basic_data import BasicData
 from datexii.models.eu.datexii.v2.duration_value import DurationValue
@@ -58,7 +58,7 @@ class TravelTimeData(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_type: List[VehicleTypeEnum] = field(
+    vehicle_type: list[VehicleTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "vehicleType",

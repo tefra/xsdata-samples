@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -239,7 +239,7 @@ class EvaluatedVariantSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -250,7 +250,7 @@ class EvaluatedVariantSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -261,7 +261,7 @@ class EvaluatedVariantSet:
 
     @dataclass
     class EvaluatedElementRefs:
-        evaluated_element_ref: List[
+        evaluated_element_ref: list[
             "EvaluatedVariantSet.EvaluatedElementRefs.EvaluatedElementRef"
         ] = field(
             default_factory=list,
@@ -285,7 +285,7 @@ class EvaluatedVariantSet:
 
     @dataclass
     class EvaluatedVariantRefs:
-        evaluated_variant_ref: List[
+        evaluated_variant_ref: list[
             "EvaluatedVariantSet.EvaluatedVariantRefs.EvaluatedVariantRef"
         ] = field(
             default_factory=list,

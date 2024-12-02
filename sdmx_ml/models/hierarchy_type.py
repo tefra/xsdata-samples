@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.hierarchical_code_type import HierarchicalCodeType
 from sdmx_ml.models.hierarchy_base_type import HierarchyBaseType
@@ -40,7 +40,7 @@ class HierarchyType(HierarchyBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    hierarchical_code: Tuple[HierarchicalCodeType, ...] = field(
+    hierarchical_code: tuple[HierarchicalCodeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HierarchicalCode",

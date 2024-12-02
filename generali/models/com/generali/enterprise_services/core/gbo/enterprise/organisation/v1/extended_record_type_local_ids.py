@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
@@ -9,7 +8,7 @@ class ExtendedRecordTypeLocalIds:
     class Meta:
         global_type = False
 
-    local_id: List[str] = field(
+    local_id: list[str] = field(
         default_factory=list,
         metadata={
             "name": "LocalId",

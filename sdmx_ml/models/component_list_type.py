@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.attribute_2 import Attribute2
 from sdmx_ml.models.dimension import Dimension
@@ -21,7 +21,7 @@ class ComponentListType(IdentifiableType):
     restrict this to specific concrete components.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             MetadataAttribute,
             Measure,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.article_version import (
     ArticleVersion,
@@ -18,7 +18,7 @@ class ArticleVersionAlternatives:
         name = "article-version-alternatives"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    article_version: List[ArticleVersion] = field(
+    article_version: list[ArticleVersion] = field(
         default_factory=list,
         metadata={
             "name": "article-version",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
@@ -70,7 +70,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_message: List[VmsMessageIndexVmsMessage] = field(
+    vms_message: list[VmsMessageIndexVmsMessage] = field(
         default_factory=list,
         metadata={
             "name": "vmsMessage",
@@ -86,7 +86,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_display_area_settings: List[
+    pictogram_display_area_settings: list[
         VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings
     ] = field(
         default_factory=list,
@@ -122,7 +122,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_fault: List[VmsFault] = field(
+    vms_fault: list[VmsFault] = field(
         default_factory=list,
         metadata={
             "name": "vmsFault",

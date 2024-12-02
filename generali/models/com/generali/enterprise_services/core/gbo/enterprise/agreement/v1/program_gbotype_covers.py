@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype import (
     CoverGbotype,
@@ -15,7 +14,7 @@ class ProgramGbotypeCovers:
     class Meta:
         global_type = False
 
-    cover: List[CoverGbotype] = field(
+    cover: list[CoverGbotype] = field(
         default_factory=list,
         metadata={
             "name": "Cover",

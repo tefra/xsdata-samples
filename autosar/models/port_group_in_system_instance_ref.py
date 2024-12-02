@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .port_group_subtypes_enum import PortGroupSubtypesEnum
 from .ref import Ref
@@ -45,7 +45,7 @@ class PortGroupInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_component_ref: List[
+    context_component_ref: list[
         "PortGroupInSystemInstanceRef.ContextComponentRef"
     ] = field(
         default_factory=list,

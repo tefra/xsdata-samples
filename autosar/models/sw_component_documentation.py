@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .chapter import Chapter
@@ -111,7 +111,7 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    chapter: List[Chapter] = field(
+    chapter: list[Chapter] = field(
         default_factory=list,
         metadata={
             "name": "CHAPTER",

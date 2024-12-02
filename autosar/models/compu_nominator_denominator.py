@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .numerical_value_variation_point import NumericalValueVariationPoint
 
@@ -30,7 +30,7 @@ class CompuNominatorDenominator:
     class Meta:
         name = "COMPU-NOMINATOR-DENOMINATOR"
 
-    v: List[NumericalValueVariationPoint] = field(
+    v: list[NumericalValueVariationPoint] = field(
         default_factory=list,
         metadata={
             "name": "V",

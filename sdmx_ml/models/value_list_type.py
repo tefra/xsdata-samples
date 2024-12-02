@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.value_item_type import ValueItemType
 from sdmx_ml.models.value_list_base_type import ValueListBaseType
@@ -16,7 +15,7 @@ class ValueListType(ValueListBaseType):
     with names and descriptions (similar to a codelist).
     """
 
-    value_item: Tuple[ValueItemType, ...] = field(
+    value_item: tuple[ValueItemType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValueItem",

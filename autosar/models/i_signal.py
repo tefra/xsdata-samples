@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -369,7 +369,7 @@ class ISignal:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -380,7 +380,7 @@ class ISignal:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -391,7 +391,7 @@ class ISignal:
 
     @dataclass
     class DataTransformations:
-        data_transformation_ref_conditional: List[
+        data_transformation_ref_conditional: list[
             DataTransformationRefConditional
         ] = field(
             default_factory=list,
@@ -645,7 +645,7 @@ class ISignal:
 
     @dataclass
     class TransformationISignalPropss:
-        end_to_end_transformation_i_signal_props: List[
+        end_to_end_transformation_i_signal_props: list[
             EndToEndTransformationISignalProps
         ] = field(
             default_factory=list,
@@ -655,7 +655,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_transformation_i_signal_props: List[
+        someip_transformation_i_signal_props: list[
             SomeipTransformationISignalProps
         ] = field(
             default_factory=list,
@@ -665,7 +665,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_transformation_i_signal_props: List[
+        user_defined_transformation_i_signal_props: list[
             UserDefinedTransformationISignalProps
         ] = field(
             default_factory=list,

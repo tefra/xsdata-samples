@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .client_server_operation_subtypes_enum import (
     ClientServerOperationSubtypesEnum,
@@ -150,7 +150,7 @@ class ServerComSpec:
 
     @dataclass
     class TransformationComSpecPropss:
-        end_to_end_transformation_com_spec_props: List[
+        end_to_end_transformation_com_spec_props: list[
             EndToEndTransformationComSpecProps
         ] = field(
             default_factory=list,
@@ -160,7 +160,7 @@ class ServerComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_transformation_com_spec_props: List[
+        user_defined_transformation_com_spec_props: list[
             UserDefinedTransformationComSpecProps
         ] = field(
             default_factory=list,

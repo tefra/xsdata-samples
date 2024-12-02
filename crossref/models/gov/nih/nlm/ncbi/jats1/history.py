@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.date import Date
 
@@ -16,7 +16,7 @@ class History:
         name = "history"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    date: List[Date] = field(
+    date: list[Date] = field(
         default_factory=list,
         metadata={
             "type": "Element",

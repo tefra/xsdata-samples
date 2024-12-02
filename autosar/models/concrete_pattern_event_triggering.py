@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -266,7 +266,7 @@ class ConcretePatternEventTriggering:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -277,7 +277,7 @@ class ConcretePatternEventTriggering:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -288,7 +288,7 @@ class ConcretePatternEventTriggering:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List[
+        trace_ref: list[
             "ConcretePatternEventTriggering.TraceRefs.TraceRef"
         ] = field(
             default_factory=list,
@@ -334,7 +334,7 @@ class ConcretePatternEventTriggering:
 
     @dataclass
     class Offsets:
-        time_value: List[MultidimensionalTime] = field(
+        time_value: list[MultidimensionalTime] = field(
             default_factory=list,
             metadata={
                 "name": "TIME-VALUE",

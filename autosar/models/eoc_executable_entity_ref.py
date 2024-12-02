@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -236,7 +236,7 @@ class EocExecutableEntityRef:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -247,7 +247,7 @@ class EocExecutableEntityRef:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -258,7 +258,7 @@ class EocExecutableEntityRef:
 
     @dataclass
     class DirectSuccessorRefs:
-        direct_successor_ref: List[
+        direct_successor_ref: list[
             "EocExecutableEntityRef.DirectSuccessorRefs.DirectSuccessorRef"
         ] = field(
             default_factory=list,
@@ -304,7 +304,7 @@ class EocExecutableEntityRef:
 
     @dataclass
     class SuccessorRefs:
-        successor_ref: List[
+        successor_ref: list[
             "EocExecutableEntityRef.SuccessorRefs.SuccessorRef"
         ] = field(
             default_factory=list,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -296,7 +296,7 @@ class ISignalIPdu:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -307,7 +307,7 @@ class ISignalIPdu:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -318,7 +318,7 @@ class ISignalIPdu:
 
     @dataclass
     class IPduTimingSpecifications:
-        i_pdu_timing: List[IPduTiming] = field(
+        i_pdu_timing: list[IPduTiming] = field(
             default_factory=list,
             metadata={
                 "name": "I-PDU-TIMING",
@@ -329,7 +329,7 @@ class ISignalIPdu:
 
     @dataclass
     class ISignalToPduMappings:
-        i_signal_to_i_pdu_mapping: List[ISignalToIPduMapping] = field(
+        i_signal_to_i_pdu_mapping: list[ISignalToIPduMapping] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-TO-I-PDU-MAPPING",
@@ -340,7 +340,7 @@ class ISignalIPdu:
 
     @dataclass
     class PduCounters:
-        signal_i_pdu_counter: List[SignalIPduCounter] = field(
+        signal_i_pdu_counter: list[SignalIPduCounter] = field(
             default_factory=list,
             metadata={
                 "name": "SIGNAL-I-PDU-COUNTER",
@@ -351,7 +351,7 @@ class ISignalIPdu:
 
     @dataclass
     class PduReplications:
-        signal_i_pdu_replication: List[SignalIPduReplication] = field(
+        signal_i_pdu_replication: list[SignalIPduReplication] = field(
             default_factory=list,
             metadata={
                 "name": "SIGNAL-I-PDU-REPLICATION",

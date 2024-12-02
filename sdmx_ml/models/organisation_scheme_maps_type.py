@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.organisation_scheme_map_type import (
     OrganisationSchemeMapType,
@@ -22,7 +21,7 @@ class OrganisationSchemeMapsType:
         between organisations in different schemes.
     """
 
-    organisation_scheme_map: Tuple[OrganisationSchemeMapType, ...] = field(
+    organisation_scheme_map: tuple[OrganisationSchemeMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrganisationSchemeMap",

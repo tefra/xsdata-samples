@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ecuc_affection_enum import EcucAffectionEnum
 from .ecuc_common_attributes_subtypes_enum import (
@@ -74,7 +74,7 @@ class EcucConfigurationClassAffection:
 
     @dataclass
     class AffectedRefs:
-        affected_ref: List[
+        affected_ref: list[
             "EcucConfigurationClassAffection.AffectedRefs.AffectedRef"
         ] = field(
             default_factory=list,

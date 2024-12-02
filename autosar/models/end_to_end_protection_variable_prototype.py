@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -93,7 +93,7 @@ class EndToEndProtectionVariablePrototype:
 
     @dataclass
     class ReceiverIrefs:
-        receiver_iref: List[VariableDataPrototypeInSystemInstanceRef] = field(
+        receiver_iref: list[VariableDataPrototypeInSystemInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "RECEIVER-IREF",

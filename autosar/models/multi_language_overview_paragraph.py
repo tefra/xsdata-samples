@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .l_overview_paragraph import LOverviewParagraph
 
@@ -27,7 +27,7 @@ class MultiLanguageOverviewParagraph:
     class Meta:
         name = "MULTI-LANGUAGE-OVERVIEW-PARAGRAPH"
 
-    l_2: List[LOverviewParagraph] = field(
+    l_2: list[LOverviewParagraph] = field(
         default_factory=list,
         metadata={
             "name": "L-2",

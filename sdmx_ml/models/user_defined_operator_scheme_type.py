@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.user_defined_operator_scheme_base_type import (
     UserDefinedOperatorSchemeBaseType,
@@ -36,7 +36,7 @@ class UserDefinedOperatorSchemeType(UserDefinedOperatorSchemeBaseType):
             "pattern": r".+\.transformation\.VtlMappingScheme=.+",
         },
     )
-    ruleset_scheme: Tuple[str, ...] = field(
+    ruleset_scheme: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RulesetScheme",

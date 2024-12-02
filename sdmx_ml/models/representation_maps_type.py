@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.representation_map_type import RepresentationMapType
 
@@ -20,7 +19,7 @@ class RepresentationMapsType:
         component represenations.
     """
 
-    representation_map: Tuple[RepresentationMapType, ...] = field(
+    representation_map: tuple[RepresentationMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RepresentationMap",

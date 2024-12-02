@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.data_consumer_scheme_type import DataConsumerSchemeType
 
@@ -20,7 +19,7 @@ class DataConsumerSchemesType:
         described.
     """
 
-    data_consumer_scheme: Tuple[DataConsumerSchemeType, ...] = field(
+    data_consumer_scheme: tuple[DataConsumerSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DataConsumerScheme",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -244,7 +244,7 @@ class EcucContainerValue:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -255,7 +255,7 @@ class EcucContainerValue:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -277,7 +277,7 @@ class EcucContainerValue:
 
     @dataclass
     class ParameterValues:
-        ecuc_add_info_param_value: List[EcucAddInfoParamValue] = field(
+        ecuc_add_info_param_value: list[EcucAddInfoParamValue] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-ADD-INFO-PARAM-VALUE",
@@ -285,7 +285,7 @@ class EcucContainerValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_numerical_param_value: List[EcucNumericalParamValue] = field(
+        ecuc_numerical_param_value: list[EcucNumericalParamValue] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-NUMERICAL-PARAM-VALUE",
@@ -293,7 +293,7 @@ class EcucContainerValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_textual_param_value: List[EcucTextualParamValue] = field(
+        ecuc_textual_param_value: list[EcucTextualParamValue] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-TEXTUAL-PARAM-VALUE",
@@ -304,7 +304,7 @@ class EcucContainerValue:
 
     @dataclass
     class ReferenceValues:
-        ecuc_instance_reference_value: List[EcucInstanceReferenceValue] = (
+        ecuc_instance_reference_value: list[EcucInstanceReferenceValue] = (
             field(
                 default_factory=list,
                 metadata={
@@ -314,7 +314,7 @@ class EcucContainerValue:
                 },
             )
         )
-        ecuc_reference_value: List[EcucReferenceValue] = field(
+        ecuc_reference_value: list[EcucReferenceValue] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-REFERENCE-VALUE",
@@ -325,7 +325,7 @@ class EcucContainerValue:
 
     @dataclass
     class SubContainers:
-        ecuc_container_value: List["EcucContainerValue"] = field(
+        ecuc_container_value: list["EcucContainerValue"] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-CONTAINER-VALUE",

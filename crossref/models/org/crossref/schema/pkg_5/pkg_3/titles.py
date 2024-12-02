@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.original_language_title import (
     OriginalLanguageTitle,
@@ -27,7 +27,7 @@ class Titles:
             "required": True,
         },
     )
-    subtitle: List[Subtitle] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",

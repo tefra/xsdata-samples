@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .initial_sd_delay_config import InitialSdDelayConfig
 from .positive_integer import PositiveInteger
@@ -109,7 +109,7 @@ class SdClientConfig:
 
     @dataclass
     class CapabilityRecords:
-        tag_with_optional_value: List[TagWithOptionalValue] = field(
+        tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
             metadata={
                 "name": "TAG-WITH-OPTIONAL-VALUE",

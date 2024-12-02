@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -18,14 +18,14 @@ __NAMESPACE__ = "http://uri.etsi.org/01903/v1.3.2#"
 
 @dataclass(frozen=True)
 class AnyType:
-    any_attributes: Dict[str, str] = field(
+    any_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##any",
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -77,7 +77,7 @@ class CrlidentifierType:
 
 @dataclass(frozen=True)
 class DocumentationReferencesType:
-    documentation_reference: Tuple[str, ...] = field(
+    documentation_reference: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentationReference",
@@ -137,7 +137,7 @@ class IncludeType:
 
 @dataclass(frozen=True)
 class IntegerListType:
-    int_value: Tuple[int, ...] = field(
+    int_value: tuple[int, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "int",
@@ -270,7 +270,7 @@ class CrlvaluesType:
     class Meta:
         name = "CRLValuesType"
 
-    encapsulated_crlvalue: Tuple[EncapsulatedPkidataType, ...] = field(
+    encapsulated_crlvalue: tuple[EncapsulatedPkidataType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EncapsulatedCRLValue",
@@ -283,7 +283,7 @@ class CrlvaluesType:
 
 @dataclass(frozen=True)
 class CertificateValuesType:
-    encapsulated_x509_certificate: Tuple[EncapsulatedPkidataType, ...] = field(
+    encapsulated_x509_certificate: tuple[EncapsulatedPkidataType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EncapsulatedX509Certificate",
@@ -291,7 +291,7 @@ class CertificateValuesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    other_certificate: Tuple[AnyType, ...] = field(
+    other_certificate: tuple[AnyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OtherCertificate",
@@ -310,7 +310,7 @@ class CertificateValuesType:
 
 @dataclass(frozen=True)
 class CertifiedRolesListType:
-    certified_role: Tuple[EncapsulatedPkidataType, ...] = field(
+    certified_role: tuple[EncapsulatedPkidataType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CertifiedRole",
@@ -323,7 +323,7 @@ class CertifiedRolesListType:
 
 @dataclass(frozen=True)
 class ClaimedRolesListType:
-    claimed_role: Tuple[AnyType, ...] = field(
+    claimed_role: tuple[AnyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ClaimedRole",
@@ -336,7 +336,7 @@ class ClaimedRolesListType:
 
 @dataclass(frozen=True)
 class CommitmentTypeQualifiersListType:
-    commitment_type_qualifier: Tuple[AnyType, ...] = field(
+    commitment_type_qualifier: tuple[AnyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CommitmentTypeQualifier",
@@ -470,7 +470,7 @@ class OcspvaluesType:
     class Meta:
         name = "OCSPValuesType"
 
-    encapsulated_ocspvalue: Tuple[EncapsulatedPkidataType, ...] = field(
+    encapsulated_ocspvalue: tuple[EncapsulatedPkidataType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EncapsulatedOCSPValue",
@@ -483,7 +483,7 @@ class OcspvaluesType:
 
 @dataclass(frozen=True)
 class OtherCertStatusRefsType:
-    other_ref: Tuple[AnyType, ...] = field(
+    other_ref: tuple[AnyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OtherRef",
@@ -496,7 +496,7 @@ class OtherCertStatusRefsType:
 
 @dataclass(frozen=True)
 class OtherCertStatusValuesType:
-    other_value: Tuple[AnyType, ...] = field(
+    other_value: tuple[AnyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OtherValue",
@@ -551,7 +551,7 @@ class ReferenceInfoType:
 
 @dataclass(frozen=True)
 class SigPolicyQualifiersListType:
-    sig_policy_qualifier: Tuple[AnyType, ...] = field(
+    sig_policy_qualifier: tuple[AnyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SigPolicyQualifier",
@@ -570,7 +570,7 @@ class SignatureProductionPlace(SignatureProductionPlaceType):
 
 @dataclass(frozen=True)
 class UnsignedDataObjectPropertiesType:
-    unsigned_data_object_property: Tuple[AnyType, ...] = field(
+    unsigned_data_object_property: tuple[AnyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "UnsignedDataObjectProperty",
@@ -816,7 +816,7 @@ class CrlrefsType:
     class Meta:
         name = "CRLRefsType"
 
-    crlref: Tuple[CrlrefType, ...] = field(
+    crlref: tuple[CrlrefType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CRLRef",
@@ -832,7 +832,7 @@ class CertIdlistType:
     class Meta:
         name = "CertIDListType"
 
-    cert: Tuple[CertIdtype, ...] = field(
+    cert: tuple[CertIdtype, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Cert",
@@ -854,7 +854,7 @@ class CommitmentTypeIndicationType:
             "required": True,
         },
     )
-    object_reference: Tuple[str, ...] = field(
+    object_reference: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ObjectReference",
@@ -928,7 +928,7 @@ class DataObjectFormatType:
 
 @dataclass(frozen=True)
 class GenericTimeStampType:
-    include: Tuple[Include, ...] = field(
+    include: tuple[Include, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Include",
@@ -936,7 +936,7 @@ class GenericTimeStampType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    reference_info: Tuple[ReferenceInfo, ...] = field(
+    reference_info: tuple[ReferenceInfo, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReferenceInfo",
@@ -952,7 +952,7 @@ class GenericTimeStampType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         },
     )
-    encapsulated_time_stamp: Tuple[EncapsulatedPkidataType, ...] = field(
+    encapsulated_time_stamp: tuple[EncapsulatedPkidataType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EncapsulatedTimeStamp",
@@ -960,7 +960,7 @@ class GenericTimeStampType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    xmltime_stamp: Tuple[AnyType, ...] = field(
+    xmltime_stamp: tuple[AnyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "XMLTimeStamp",
@@ -982,7 +982,7 @@ class OcsprefsType:
     class Meta:
         name = "OCSPRefsType"
 
-    ocspref: Tuple[OcsprefType, ...] = field(
+    ocspref: tuple[OcsprefType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OCSPRef",
@@ -1132,7 +1132,7 @@ class OtherTimeStampType(GenericTimeStampType):
             "type": "Ignore",
         },
     )
-    reference_info: Tuple[ReferenceInfo, ...] = field(
+    reference_info: tuple[ReferenceInfo, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReferenceInfo",
@@ -1257,7 +1257,7 @@ class SignatureTimeStamp(XadEstimeStampType):
 
 @dataclass(frozen=True)
 class SignedDataObjectPropertiesType:
-    data_object_format: Tuple[DataObjectFormatType, ...] = field(
+    data_object_format: tuple[DataObjectFormatType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DataObjectFormat",
@@ -1265,7 +1265,7 @@ class SignedDataObjectPropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    commitment_type_indication: Tuple[CommitmentTypeIndicationType, ...] = (
+    commitment_type_indication: tuple[CommitmentTypeIndicationType, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -1275,7 +1275,7 @@ class SignedDataObjectPropertiesType:
             },
         )
     )
-    all_data_objects_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+    all_data_objects_time_stamp: tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllDataObjectsTimeStamp",
@@ -1283,7 +1283,7 @@ class SignedDataObjectPropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    individual_data_objects_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+    individual_data_objects_time_stamp: tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "IndividualDataObjectsTimeStamp",
@@ -1355,7 +1355,7 @@ class SignedSignaturePropertiesType:
 
 @dataclass(frozen=True)
 class UnsignedSignaturePropertiesType:
-    counter_signature: Tuple[CounterSignatureType, ...] = field(
+    counter_signature: tuple[CounterSignatureType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CounterSignature",
@@ -1363,7 +1363,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    signature_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+    signature_time_stamp: tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SignatureTimeStamp",
@@ -1371,7 +1371,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    complete_certificate_refs: Tuple[CompleteCertificateRefsType, ...] = field(
+    complete_certificate_refs: tuple[CompleteCertificateRefsType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CompleteCertificateRefs",
@@ -1379,7 +1379,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    complete_revocation_refs: Tuple[CompleteRevocationRefsType, ...] = field(
+    complete_revocation_refs: tuple[CompleteRevocationRefsType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CompleteRevocationRefs",
@@ -1387,7 +1387,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    attribute_certificate_refs: Tuple[CompleteCertificateRefsType, ...] = (
+    attribute_certificate_refs: tuple[CompleteCertificateRefsType, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -1397,7 +1397,7 @@ class UnsignedSignaturePropertiesType:
             },
         )
     )
-    attribute_revocation_refs: Tuple[CompleteRevocationRefsType, ...] = field(
+    attribute_revocation_refs: tuple[CompleteRevocationRefsType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AttributeRevocationRefs",
@@ -1405,7 +1405,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    sig_and_refs_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+    sig_and_refs_time_stamp: tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SigAndRefsTimeStamp",
@@ -1413,7 +1413,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    refs_only_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+    refs_only_time_stamp: tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RefsOnlyTimeStamp",
@@ -1421,7 +1421,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    certificate_values: Tuple[CertificateValuesType, ...] = field(
+    certificate_values: tuple[CertificateValuesType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CertificateValues",
@@ -1429,7 +1429,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    revocation_values: Tuple[RevocationValuesType, ...] = field(
+    revocation_values: tuple[RevocationValuesType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RevocationValues",
@@ -1437,7 +1437,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    attr_authorities_cert_values: Tuple[CertificateValuesType, ...] = field(
+    attr_authorities_cert_values: tuple[CertificateValuesType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AttrAuthoritiesCertValues",
@@ -1445,7 +1445,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    attribute_revocation_values: Tuple[RevocationValuesType, ...] = field(
+    attribute_revocation_values: tuple[RevocationValuesType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AttributeRevocationValues",
@@ -1453,7 +1453,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    archive_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+    archive_time_stamp: tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ArchiveTimeStamp",
@@ -1461,7 +1461,7 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    other_element: Tuple[object, ...] = field(
+    other_element: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",

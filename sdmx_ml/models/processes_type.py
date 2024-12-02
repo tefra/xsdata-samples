@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.process_type import ProcessType
 
@@ -26,7 +25,7 @@ class ProcessesType:
         structure document or registry service.
     """
 
-    process: Tuple[ProcessType, ...] = field(
+    process: tuple[ProcessType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Process",

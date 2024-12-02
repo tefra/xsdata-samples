@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -331,7 +331,7 @@ class UdpNmNode:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -342,7 +342,7 @@ class UdpNmNode:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -386,7 +386,7 @@ class UdpNmNode:
 
     @dataclass
     class RxNmPduRefs:
-        rx_nm_pdu_ref: List["UdpNmNode.RxNmPduRefs.RxNmPduRef"] = field(
+        rx_nm_pdu_ref: list["UdpNmNode.RxNmPduRefs.RxNmPduRef"] = field(
             default_factory=list,
             metadata={
                 "name": "RX-NM-PDU-REF",
@@ -408,7 +408,7 @@ class UdpNmNode:
 
     @dataclass
     class TxNmPduRefs:
-        tx_nm_pdu_ref: List["UdpNmNode.TxNmPduRefs.TxNmPduRef"] = field(
+        tx_nm_pdu_ref: list["UdpNmNode.TxNmPduRefs.TxNmPduRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TX-NM-PDU-REF",

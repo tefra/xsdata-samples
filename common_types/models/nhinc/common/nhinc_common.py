@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ...www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import (
     EndpointReferenceType,
@@ -110,7 +110,7 @@ class CeType:
             "required": True,
         },
     )
-    translation: List["CeType"] = field(
+    translation: list["CeType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -403,7 +403,7 @@ class UrlInfoType:
 
 @dataclass
 class UrlSetType:
-    url: List[str] = field(
+    url: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -475,7 +475,7 @@ class AddressType:
 
 @dataclass
 class AssigningAuthoritiesType:
-    assigning_authority: List[AssigningAuthorityType] = field(
+    assigning_authority: list[AssigningAuthorityType] = field(
         default_factory=list,
         metadata={
             "name": "assigningAuthority",
@@ -520,7 +520,7 @@ class Epr(EndpointReferenceType):
 
 @dataclass
 class HomeCommunitiesType:
-    home_community: List[HomeCommunityType] = field(
+    home_community: list[HomeCommunityType] = field(
         default_factory=list,
         metadata={
             "name": "homeCommunity",
@@ -727,7 +727,7 @@ class QualifiedSubjectIdentifier(QualifiedSubjectIdentifierType):
 
 @dataclass
 class QualifiedSubjectIdentifiersType:
-    qualified_subject_identifier: List[QualifiedSubjectIdentifierType] = field(
+    qualified_subject_identifier: list[QualifiedSubjectIdentifierType] = field(
         default_factory=list,
         metadata={
             "name": "QualifiedSubjectIdentifier",
@@ -804,7 +804,7 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             },
         )
     )
-    access_consent_policy: List[str] = field(
+    access_consent_policy: list[str] = field(
         default_factory=list,
         metadata={
             "name": "accessConsentPolicy",
@@ -812,7 +812,7 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    instance_access_consent_policy: List[str] = field(
+    instance_access_consent_policy: list[str] = field(
         default_factory=list,
         metadata={
             "name": "instanceAccessConsentPolicy",
@@ -937,7 +937,7 @@ class Address(AddressType):
 
 @dataclass
 class AddressesType:
-    address: List[AddressType] = field(
+    address: list[AddressType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -955,7 +955,7 @@ class HomeCommunities(HomeCommunitiesType):
 
 @dataclass
 class NhinTargetCommunitiesType:
-    nhin_target_community: List[NhinTargetCommunityType] = field(
+    nhin_target_community: list[NhinTargetCommunityType] = field(
         default_factory=list,
         metadata={
             "name": "nhinTargetCommunity",
@@ -1288,7 +1288,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    unique_patient_id: List[str] = field(
+    unique_patient_id: list[str] = field(
         default_factory=list,
         metadata={
             "name": "uniquePatientId",
@@ -1404,7 +1404,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    saml_subject_confirmations: List[SamlSubjectConfirmationType] = field(
+    saml_subject_confirmations: list[SamlSubjectConfirmationType] = field(
         default_factory=list,
         metadata={
             "name": "samlSubjectConfirmations",
@@ -1420,7 +1420,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    relates_to_list: List[str] = field(
+    relates_to_list: list[str] = field(
         default_factory=list,
         metadata={
             "name": "relatesToList",
@@ -1452,7 +1452,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    connectcustom_http_headers: List[ConnectcustomHttpHeadersType] = field(
+    connectcustom_http_headers: list[ConnectcustomHttpHeadersType] = field(
         default_factory=list,
         metadata={
             "name": "CONNECTCustomHttpHeaders",

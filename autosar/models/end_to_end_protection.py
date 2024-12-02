@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -239,7 +239,7 @@ class EndToEndProtection:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -250,7 +250,7 @@ class EndToEndProtection:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -261,7 +261,7 @@ class EndToEndProtection:
 
     @dataclass
     class EndToEndProtectionISignalIPdus:
-        end_to_end_protection_i_signal_i_pdu: List[
+        end_to_end_protection_i_signal_i_pdu: list[
             EndToEndProtectionISignalIPdu
         ] = field(
             default_factory=list,
@@ -274,7 +274,7 @@ class EndToEndProtection:
 
     @dataclass
     class EndToEndProtectionVariablePrototypes:
-        end_to_end_protection_variable_prototype: List[
+        end_to_end_protection_variable_prototype: list[
             EndToEndProtectionVariablePrototype
         ] = field(
             default_factory=list,

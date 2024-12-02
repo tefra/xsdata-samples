@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.remittance_advice import InvoiceType
@@ -178,7 +178,7 @@ class InvoiceResponseParty:
 
 @dataclass(kw_only=True)
 class ListOfInvoiceResponseDetail:
-    invoice_response_detail: List[InvoiceResponseDetail] = field(
+    invoice_response_detail: list[InvoiceResponseDetail] = field(
         default_factory=list,
         metadata={
             "name": "InvoiceResponseDetail",

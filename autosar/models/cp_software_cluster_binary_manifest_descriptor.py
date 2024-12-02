@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -273,7 +273,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -284,7 +284,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -306,7 +306,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
 
     @dataclass
     class MetaDataFields:
-        binary_manifest_meta_data_field: List[BinaryManifestMetaDataField] = (
+        binary_manifest_meta_data_field: list[BinaryManifestMetaDataField] = (
             field(
                 default_factory=list,
                 metadata={
@@ -319,7 +319,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
 
     @dataclass
     class ProvideResources:
-        binary_manifest_provide_resource: List[
+        binary_manifest_provide_resource: list[
             BinaryManifestProvideResource
         ] = field(
             default_factory=list,
@@ -332,7 +332,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
 
     @dataclass
     class RequireResources:
-        binary_manifest_require_resource: List[
+        binary_manifest_require_resource: list[
             BinaryManifestRequireResource
         ] = field(
             default_factory=list,
@@ -345,7 +345,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
 
     @dataclass
     class ResourceDefinitions:
-        binary_manifest_resource_definition: List[
+        binary_manifest_resource_definition: list[
             BinaryManifestResourceDefinition
         ] = field(
             default_factory=list,

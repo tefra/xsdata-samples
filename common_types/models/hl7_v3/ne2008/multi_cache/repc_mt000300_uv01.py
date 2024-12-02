@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -80,7 +80,7 @@ class RepcMt000300Uv01Author:
     class Meta:
         name = "REPC_MT000300UV01.Author"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -96,7 +96,7 @@ class RepcMt000300Uv01Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -235,7 +235,7 @@ class RepcMt000300Uv01Component:
     class Meta:
         name = "REPC_MT000300UV01.Component"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -251,7 +251,7 @@ class RepcMt000300Uv01Component:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -305,7 +305,7 @@ class RepcMt000300Uv01DataEnterer:
     class Meta:
         name = "REPC_MT000300UV01.DataEnterer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -321,7 +321,7 @@ class RepcMt000300Uv01DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -398,7 +398,7 @@ class RepcMt000300Uv01Informant:
     class Meta:
         name = "REPC_MT000300UV01.Informant"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -414,7 +414,7 @@ class RepcMt000300Uv01Informant:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -528,7 +528,7 @@ class RepcMt000300Uv01Organization:
     class Meta:
         name = "REPC_MT000300UV01.Organization"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -544,7 +544,7 @@ class RepcMt000300Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -552,28 +552,28 @@ class RepcMt000300Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[OnExplicit] = field(
+    name: list[OnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -611,7 +611,7 @@ class RepcMt000300Uv01Performer:
     class Meta:
         name = "REPC_MT000300UV01.Performer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -627,7 +627,7 @@ class RepcMt000300Uv01Performer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -741,7 +741,7 @@ class RepcMt000300Uv01Place:
     class Meta:
         name = "REPC_MT000300UV01.Place"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -757,7 +757,7 @@ class RepcMt000300Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -765,7 +765,7 @@ class RepcMt000300Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -810,7 +810,7 @@ class RepcMt000300Uv01Reason:
     class Meta:
         name = "REPC_MT000300UV01.Reason"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -826,7 +826,7 @@ class RepcMt000300Uv01Reason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -939,7 +939,7 @@ class RepcMt000300Uv01RecordTarget:
     class Meta:
         name = "REPC_MT000300UV01.RecordTarget"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -955,7 +955,7 @@ class RepcMt000300Uv01RecordTarget:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1010,7 +1010,7 @@ class RepcMt000300Uv01Reference:
     class Meta:
         name = "REPC_MT000300UV01.Reference"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1026,7 +1026,7 @@ class RepcMt000300Uv01Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1161,7 +1161,7 @@ class RepcMt000300Uv01ResponsibleParty:
     class Meta:
         name = "REPC_MT000300UV01.ResponsibleParty"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1177,7 +1177,7 @@ class RepcMt000300Uv01ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1217,7 +1217,7 @@ class RepcMt000300Uv01ResponsibleParty2:
     class Meta:
         name = "REPC_MT000300UV01.ResponsibleParty2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1233,7 +1233,7 @@ class RepcMt000300Uv01ResponsibleParty2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1280,7 +1280,7 @@ class RepcMt000300Uv01Subject2:
     class Meta:
         name = "REPC_MT000300UV01.Subject2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1296,7 +1296,7 @@ class RepcMt000300Uv01Subject2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1403,7 +1403,7 @@ class RepcMt000300Uv01Subject4:
     class Meta:
         name = "REPC_MT000300UV01.Subject4"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1419,7 +1419,7 @@ class RepcMt000300Uv01Subject4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1561,7 +1561,7 @@ class RepcMt000300Uv01Verifier:
     class Meta:
         name = "REPC_MT000300UV01.Verifier"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1577,7 +1577,7 @@ class RepcMt000300Uv01Verifier:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1662,7 +1662,7 @@ class RepcMt000300Uv01Annotation:
     class Meta:
         name = "REPC_MT000300UV01.Annotation"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1678,7 +1678,7 @@ class RepcMt000300Uv01Annotation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1711,7 +1711,7 @@ class RepcMt000300Uv01Annotation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[RepcMt000300Uv01Author] = field(
+    author: list[RepcMt000300Uv01Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1749,7 +1749,7 @@ class RepcMt000300Uv01ControlActEvent:
     class Meta:
         name = "REPC_MT000300UV01.ControlActEvent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1765,7 +1765,7 @@ class RepcMt000300Uv01ControlActEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1823,7 +1823,7 @@ class RepcMt000300Uv01ControlActEvent:
             "nillable": True,
         },
     )
-    author: List[RepcMt000300Uv01Author] = field(
+    author: list[RepcMt000300Uv01Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1862,7 +1862,7 @@ class RepcMt000300Uv01HealthCareFacility:
     class Meta:
         name = "REPC_MT000300UV01.HealthCareFacility"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1878,7 +1878,7 @@ class RepcMt000300Uv01HealthCareFacility:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1941,7 +1941,7 @@ class RepcMt000300Uv01Location:
     class Meta:
         name = "REPC_MT000300UV01.Location"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1957,7 +1957,7 @@ class RepcMt000300Uv01Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2003,7 +2003,7 @@ class RepcMt000300Uv01Subject3:
     class Meta:
         name = "REPC_MT000300UV01.Subject3"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2019,7 +2019,7 @@ class RepcMt000300Uv01Subject3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2095,7 +2095,7 @@ class RepcMt000300Uv01Subject5:
     class Meta:
         name = "REPC_MT000300UV01.Subject5"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2111,7 +2111,7 @@ class RepcMt000300Uv01Subject5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2188,7 +2188,7 @@ class RepcMt000300Uv01Concern:
     class Meta:
         name = "REPC_MT000300UV01.Concern"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2204,7 +2204,7 @@ class RepcMt000300Uv01Concern:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2212,7 +2212,7 @@ class RepcMt000300Uv01Concern:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2270,7 +2270,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    performer: List[RepcMt000300Uv01Performer] = field(
+    performer: list[RepcMt000300Uv01Performer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2278,7 +2278,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    author: List[RepcMt000300Uv01Author] = field(
+    author: list[RepcMt000300Uv01Author] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2295,7 +2295,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    informant: List[RepcMt000300Uv01Informant] = field(
+    informant: list[RepcMt000300Uv01Informant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2303,7 +2303,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    verifier: List[RepcMt000300Uv01Verifier] = field(
+    verifier: list[RepcMt000300Uv01Verifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2311,7 +2311,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    location: List[RepcMt000300Uv01Location] = field(
+    location: list[RepcMt000300Uv01Location] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2319,7 +2319,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    links: List["RepcMt000300Uv01Links"] = field(
+    links: list["RepcMt000300Uv01Links"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2336,7 +2336,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    sequel_to: List["RepcMt000300Uv01SequelTo"] = field(
+    sequel_to: list["RepcMt000300Uv01SequelTo"] = field(
         default_factory=list,
         metadata={
             "name": "sequelTo",
@@ -2345,7 +2345,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    subject2: List[RepcMt000300Uv01Subject4] = field(
+    subject2: list[RepcMt000300Uv01Subject4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2353,7 +2353,7 @@ class RepcMt000300Uv01Concern:
             "min_occurs": 1,
         },
     )
-    reference: List[RepcMt000300Uv01Reference] = field(
+    reference: list[RepcMt000300Uv01Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2361,7 +2361,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    component: List[RepcMt000300Uv01Component] = field(
+    component: list[RepcMt000300Uv01Component] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2369,7 +2369,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    reason_of: List[RepcMt000300Uv01Reason] = field(
+    reason_of: list[RepcMt000300Uv01Reason] = field(
         default_factory=list,
         metadata={
             "name": "reasonOf",
@@ -2387,7 +2387,7 @@ class RepcMt000300Uv01Concern:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000300Uv01Subject3] = field(
+    subject_of2: list[RepcMt000300Uv01Subject3] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -2426,7 +2426,7 @@ class RepcMt000300Uv01Links:
     class Meta:
         name = "REPC_MT000300UV01.Links"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2442,7 +2442,7 @@ class RepcMt000300Uv01Links:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2516,7 +2516,7 @@ class RepcMt000300Uv01ReplacementOf:
     class Meta:
         name = "REPC_MT000300UV01.ReplacementOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2532,7 +2532,7 @@ class RepcMt000300Uv01ReplacementOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2606,7 +2606,7 @@ class RepcMt000300Uv01SequelTo:
     class Meta:
         name = "REPC_MT000300UV01.SequelTo"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2622,7 +2622,7 @@ class RepcMt000300Uv01SequelTo:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",

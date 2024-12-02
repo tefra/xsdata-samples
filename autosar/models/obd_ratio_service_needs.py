@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -289,7 +289,7 @@ class ObdRatioServiceNeeds:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -300,7 +300,7 @@ class ObdRatioServiceNeeds:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -318,7 +318,7 @@ class ObdRatioServiceNeeds:
             implementation.
         """
 
-        audience: List[DiagnosticAudienceEnum] = field(
+        audience: list[DiagnosticAudienceEnum] = field(
             default_factory=list,
             metadata={
                 "name": "AUDIENCE",
@@ -351,7 +351,7 @@ class ObdRatioServiceNeeds:
 
     @dataclass
     class UsedSecondaryFidRefs:
-        used_secondary_fid_ref: List[
+        used_secondary_fid_ref: list[
             "ObdRatioServiceNeeds.UsedSecondaryFidRefs.UsedSecondaryFidRef"
         ] = field(
             default_factory=list,

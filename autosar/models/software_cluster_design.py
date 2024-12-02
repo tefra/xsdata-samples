@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -323,7 +323,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -334,7 +334,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -345,7 +345,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class ContainedProcessRefs:
-        contained_process_ref: List[
+        contained_process_ref: list[
             "SoftwareClusterDesign.ContainedProcessRefs.ContainedProcessRef"
         ] = field(
             default_factory=list,
@@ -369,7 +369,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class DependsOnRefs:
-        depends_on_ref: List[
+        depends_on_ref: list[
             "SoftwareClusterDesign.DependsOnRefs.DependsOnRef"
         ] = field(
             default_factory=list,
@@ -393,7 +393,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class DiagnosticAddresss:
-        software_cluster_doip_diagnostic_address: List[
+        software_cluster_doip_diagnostic_address: list[
             SoftwareClusterDoipDiagnosticAddress
         ] = field(
             default_factory=list,
@@ -406,7 +406,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class DiagnosticContributionRefs:
-        diagnostic_contribution_ref: List[
+        diagnostic_contribution_ref: list[
             "SoftwareClusterDesign.DiagnosticContributionRefs.DiagnosticContributionRef"
         ] = field(
             default_factory=list,
@@ -441,7 +441,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class RequiredArElementRefs:
-        required_ar_element_ref: List[
+        required_ar_element_ref: list[
             "SoftwareClusterDesign.RequiredArElementRefs.RequiredArElementRef"
         ] = field(
             default_factory=list,
@@ -465,7 +465,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class RequiredFibexElementRefs:
-        required_fibex_element_ref: List[
+        required_fibex_element_ref: list[
             "SoftwareClusterDesign.RequiredFibexElementRefs.RequiredFibexElementRef"
         ] = field(
             default_factory=list,
@@ -489,7 +489,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class RequiredPackageElementRefs:
-        required_package_element_ref: List[
+        required_package_element_ref: list[
             "SoftwareClusterDesign.RequiredPackageElementRefs.RequiredPackageElementRef"
         ] = field(
             default_factory=list,
@@ -513,7 +513,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class SubSoftwareClusterRefs:
-        sub_software_cluster_ref: List[
+        sub_software_cluster_ref: list[
             "SoftwareClusterDesign.SubSoftwareClusterRefs.SubSoftwareClusterRef"
         ] = field(
             default_factory=list,

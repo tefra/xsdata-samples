@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -214,7 +214,7 @@ class IdsmModuleInstantiation:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -225,7 +225,7 @@ class IdsmModuleInstantiation:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -249,7 +249,7 @@ class IdsmModuleInstantiation:
 
     @dataclass
     class TimeBases:
-        time_base_resource_ref_conditional: List[
+        time_base_resource_ref_conditional: list[
             TimeBaseResourceRefConditional
         ] = field(
             default_factory=list,
@@ -262,7 +262,7 @@ class IdsmModuleInstantiation:
 
     @dataclass
     class ReportableSecurityEventRefs:
-        reportable_security_event_ref: List[
+        reportable_security_event_ref: list[
             "IdsmModuleInstantiation.ReportableSecurityEventRefs.ReportableSecurityEventRef"
         ] = field(
             default_factory=list,

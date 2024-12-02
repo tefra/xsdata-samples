@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from voko.models.g import G
 from voko.models.k import K
@@ -10,7 +9,7 @@ class Sup:
     class Meta:
         name = "sup"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

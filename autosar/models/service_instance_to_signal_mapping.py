@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -233,7 +233,7 @@ class ServiceInstanceToSignalMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -244,7 +244,7 @@ class ServiceInstanceToSignalMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -255,7 +255,7 @@ class ServiceInstanceToSignalMapping:
 
     @dataclass
     class EventElementMappings:
-        signal_based_event_element_to_i_signal_triggering_mapping: List[
+        signal_based_event_element_to_i_signal_triggering_mapping: list[
             SignalBasedEventElementToISignalTriggeringMapping
         ] = field(
             default_factory=list,
@@ -268,7 +268,7 @@ class ServiceInstanceToSignalMapping:
 
     @dataclass
     class FieldMappings:
-        signal_based_field_to_i_signal_triggering_mapping: List[
+        signal_based_field_to_i_signal_triggering_mapping: list[
             SignalBasedFieldToISignalTriggeringMapping
         ] = field(
             default_factory=list,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -314,7 +314,7 @@ class LinCommunicationConnector:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -325,7 +325,7 @@ class LinCommunicationConnector:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -347,7 +347,7 @@ class LinCommunicationConnector:
 
     @dataclass
     class EcuCommPortInstances:
-        frame_port: List[FramePort] = field(
+        frame_port: list[FramePort] = field(
             default_factory=list,
             metadata={
                 "name": "FRAME-PORT",
@@ -355,7 +355,7 @@ class LinCommunicationConnector:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_pdu_port: List[IPduPort] = field(
+        i_pdu_port: list[IPduPort] = field(
             default_factory=list,
             metadata={
                 "name": "I-PDU-PORT",
@@ -363,7 +363,7 @@ class LinCommunicationConnector:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_signal_port: List[ISignalPort] = field(
+        i_signal_port: list[ISignalPort] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-PORT",
@@ -374,7 +374,7 @@ class LinCommunicationConnector:
 
     @dataclass
     class LinConfigurableFrames:
-        lin_configurable_frame: List[LinConfigurableFrame] = field(
+        lin_configurable_frame: list[LinConfigurableFrame] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-CONFIGURABLE-FRAME",
@@ -385,7 +385,7 @@ class LinCommunicationConnector:
 
     @dataclass
     class LinOrderedConfigurableFrames:
-        lin_ordered_configurable_frame: List[LinOrderedConfigurableFrame] = (
+        lin_ordered_configurable_frame: list[LinOrderedConfigurableFrame] = (
             field(
                 default_factory=list,
                 metadata={

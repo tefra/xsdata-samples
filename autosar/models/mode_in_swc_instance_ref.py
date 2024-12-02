@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .mode_declaration_group_prototype_subtypes_enum import (
     ModeDeclarationGroupPrototypeSubtypesEnum,
@@ -43,7 +43,7 @@ class ModeInSwcInstanceRef:
     class Meta:
         name = "MODE-IN-SWC-INSTANCE-REF"
 
-    context_component_ref: List["ModeInSwcInstanceRef.ContextComponentRef"] = (
+    context_component_ref: list["ModeInSwcInstanceRef.ContextComponentRef"] = (
         field(
             default_factory=list,
             metadata={

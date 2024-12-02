@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.transformation_scheme_type import TransformationSchemeType
 
@@ -20,7 +19,7 @@ class TransformationSchemesType:
         described.
     """
 
-    transformation_scheme: Tuple[TransformationSchemeType, ...] = field(
+    transformation_scheme: tuple[TransformationSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransformationScheme",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.anonymous import Anonymous
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.organization import (
@@ -22,19 +21,19 @@ class Contributors:
         name = "contributors"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    organization: List[Organization] = field(
+    organization: list[Organization] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    person_name: List[PersonName] = field(
+    person_name: list[PersonName] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    anonymous: List[Anonymous] = field(
+    anonymous: list[Anonymous] = field(
         default_factory=list,
         metadata={
             "type": "Element",

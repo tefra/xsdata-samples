@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.queryable_data_source_type_2 import (
     QueryableDataSourceType2,
@@ -16,7 +16,7 @@ class DataSourceType:
     be specified.
     """
 
-    simple_data_source_or_queryable_data_source: Tuple[
+    simple_data_source_or_queryable_data_source: tuple[
         Union[str, QueryableDataSourceType2], ...
     ] = field(
         default_factory=tuple,

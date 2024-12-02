@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.wild_card_value_type import WildCardValueType
@@ -18,7 +18,7 @@ class VersionableObjectEventType:
     selected.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             EmptyType,
             "VersionableObjectEventType.Urn",

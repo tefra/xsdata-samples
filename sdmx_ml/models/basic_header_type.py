@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Tuple
+from typing import Any
 
 from sdmx_ml.models.base_header_type import BaseHeaderType
 from sdmx_ml.models.party_type import PartyType
@@ -126,7 +126,7 @@ class BasicHeaderType(BaseHeaderType):
             "type": "Ignore",
         },
     )
-    receiver: Tuple[PartyType, ...] = field(
+    receiver: tuple[PartyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Receiver",

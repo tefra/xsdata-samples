@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.peril_structure_type import (
     PerilStructureType,
@@ -12,7 +11,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PerilsStructureType:
-    peril_structure: List[PerilStructureType] = field(
+    peril_structure: list[PerilStructureType] = field(
         default_factory=list,
         metadata={
             "name": "PerilStructure",

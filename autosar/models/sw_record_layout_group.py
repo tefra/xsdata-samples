@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .asam_record_layout_semantics import AsamRecordLayoutSemantics
 from .axis_index_type import AxisIndexType
@@ -189,7 +189,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_ref: List["SwRecordLayoutGroup.SwRecordLayoutRef"] = (
+    sw_record_layout_ref: list["SwRecordLayoutGroup.SwRecordLayoutRef"] = (
         field(
             default_factory=list,
             metadata={
@@ -199,7 +199,7 @@ class SwRecordLayoutGroup:
             },
         )
     )
-    sw_record_layout_v: List[SwRecordLayoutV] = field(
+    sw_record_layout_v: list[SwRecordLayoutV] = field(
         default_factory=list,
         metadata={
             "name": "SW-RECORD-LAYOUT-V",
@@ -207,7 +207,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group: List["SwRecordLayoutGroup"] = field(
+    sw_record_layout_group: list["SwRecordLayoutGroup"] = field(
         default_factory=list,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -289,7 +289,7 @@ class Process:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -300,7 +300,7 @@ class Process:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -344,7 +344,7 @@ class Process:
 
     @dataclass
     class SecurityEventRefs:
-        security_event_ref: List[
+        security_event_ref: list[
             "Process.SecurityEventRefs.SecurityEventRef"
         ] = field(
             default_factory=list,
@@ -368,7 +368,7 @@ class Process:
 
     @dataclass
     class StateDependentStartupConfigs:
-        state_dependent_startup_config: List[StateDependentStartupConfig] = (
+        state_dependent_startup_config: list[StateDependentStartupConfig] = (
             field(
                 default_factory=list,
                 metadata={

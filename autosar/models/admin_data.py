@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional
+from typing import ForwardRef, Optional
 
 from .caption import Caption
 from .category_string import CategoryString
@@ -141,7 +141,7 @@ class AdminData:
 
     @dataclass
     class DocRevisions:
-        doc_revision: List[DocRevision] = field(
+        doc_revision: list[DocRevision] = field(
             default_factory=list,
             metadata={
                 "name": "DOC-REVISION",
@@ -152,7 +152,7 @@ class AdminData:
 
     @dataclass
     class Sdgs:
-        sdg: List["Sdg"] = field(
+        sdg: list["Sdg"] = field(
             default_factory=list,
             metadata={
                 "name": "SDG",
@@ -267,7 +267,7 @@ class BlueprintFormula:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -510,7 +510,7 @@ class DefItem:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -550,7 +550,7 @@ class DefItem:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -666,7 +666,7 @@ class DefList:
     class Meta:
         name = "DEF-LIST"
 
-    def_item: List[DefItem] = field(
+    def_item: list[DefItem] = field(
         default_factory=list,
         metadata={
             "name": "DEF-ITEM",
@@ -697,7 +697,7 @@ class DefList:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -794,7 +794,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdx_ref: List["Sdg.SdxRef"] = field(
+    sdx_ref: list["Sdg.SdxRef"] = field(
         default_factory=list,
         metadata={
             "name": "SDX-REF",
@@ -802,7 +802,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdxf: List[ReferrableRefConditional] = field(
+    sdxf: list[ReferrableRefConditional] = field(
         default_factory=list,
         metadata={
             "name": "SDXF",
@@ -810,7 +810,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd: List[Sd] = field(
+    sd: list[Sd] = field(
         default_factory=list,
         metadata={
             "name": "SD",
@@ -818,7 +818,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdg: List["Sdg"] = field(
+    sdg: list["Sdg"] = field(
         default_factory=list,
         metadata={
             "name": "SDG",
@@ -826,7 +826,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdf: List[Sdf] = field(
+    sdf: list[Sdf] = field(
         default_factory=list,
         metadata={
             "name": "SDF",
@@ -949,7 +949,7 @@ class DocumentationBlock:
     class Meta:
         name = "DOCUMENTATION-BLOCK"
 
-    msr_query_p_2: List["MsrQueryP2"] = field(
+    msr_query_p_2: list["MsrQueryP2"] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-P-2",
@@ -957,7 +957,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p: List["MultiLanguageParagraph"] = field(
+    p: list["MultiLanguageParagraph"] = field(
         default_factory=list,
         metadata={
             "name": "P",
@@ -965,7 +965,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: List["MultiLanguageVerbatim"] = field(
+    verbatim: list["MultiLanguageVerbatim"] = field(
         default_factory=list,
         metadata={
             "name": "VERBATIM",
@@ -973,7 +973,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "LIST",
@@ -981,7 +981,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "DEF-LIST",
@@ -989,7 +989,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: List["LabeledList"] = field(
+    labeled_list: list["LabeledList"] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -997,7 +997,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: List["MlFormula"] = field(
+    formula: list["MlFormula"] = field(
         default_factory=list,
         metadata={
             "name": "FORMULA",
@@ -1005,7 +1005,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    figure: List["MlFigure"] = field(
+    figure: list["MlFigure"] = field(
         default_factory=list,
         metadata={
             "name": "FIGURE",
@@ -1013,7 +1013,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: List["Note"] = field(
+    note: list["Note"] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -1021,7 +1021,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: List["TraceableText"] = field(
+    trace: list["TraceableText"] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -1029,7 +1029,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    structured_req: List["StructuredReq"] = field(
+    structured_req: list["StructuredReq"] = field(
         default_factory=list,
         metadata={
             "name": "STRUCTURED-REQ",
@@ -1251,7 +1251,7 @@ class VariationPoint:
 
     @dataclass
     class PostBuildVariantConditions:
-        post_build_variant_condition: List[PostBuildVariantCondition] = field(
+        post_build_variant_condition: list[PostBuildVariantCondition] = field(
             default_factory=list,
             metadata={
                 "name": "POST-BUILD-VARIANT-CONDITION",
@@ -1301,7 +1301,7 @@ class MultiLanguageParagraph:
     class Meta:
         name = "MULTI-LANGUAGE-PARAGRAPH"
 
-    l_1: List[LParagraph] = field(
+    l_1: list[LParagraph] = field(
         default_factory=list,
         metadata={
             "name": "L-1",
@@ -1332,7 +1332,7 @@ class MultiLanguageParagraph:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -1420,7 +1420,7 @@ class MultiLanguageVerbatim:
     class Meta:
         name = "MULTI-LANGUAGE-VERBATIM"
 
-    l_5: List[LVerbatim] = field(
+    l_5: list[LVerbatim] = field(
         default_factory=list,
         metadata={
             "name": "L-5",
@@ -1451,7 +1451,7 @@ class MultiLanguageVerbatim:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -1831,7 +1831,7 @@ class StructuredReq:
             "type": "Attribute",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -1864,7 +1864,7 @@ class StructuredReq:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -1875,7 +1875,7 @@ class StructuredReq:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -1886,7 +1886,7 @@ class StructuredReq:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["StructuredReq.TraceRefs.TraceRef"] = field(
+        trace_ref: list["StructuredReq.TraceRefs.TraceRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -1913,7 +1913,7 @@ class StructuredReq:
             requirement is assigned to.
         """
 
-        applies_to: List[StandardNameEnum] = field(
+        applies_to: list[StandardNameEnum] = field(
             default_factory=list,
             metadata={
                 "name": "APPLIES-TO",
@@ -1924,7 +1924,7 @@ class StructuredReq:
 
     @dataclass
     class TestedItemRefs:
-        tested_item_ref: List["StructuredReq.TestedItemRefs.TestedItemRef"] = (
+        tested_item_ref: list["StructuredReq.TestedItemRefs.TestedItemRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -2010,7 +2010,7 @@ class MlFigure:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    l_graphic: List[LGraphic] = field(
+    l_graphic: list[LGraphic] = field(
         default_factory=list,
         metadata={
             "name": "L-GRAPHIC",
@@ -2049,7 +2049,7 @@ class MlFigure:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -2159,7 +2159,7 @@ class MlFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    l_graphic: List[LGraphic] = field(
+    l_graphic: list[LGraphic] = field(
         default_factory=list,
         metadata={
             "name": "L-GRAPHIC",
@@ -2214,7 +2214,7 @@ class MlFormula:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -2319,7 +2319,7 @@ class Item:
     class Meta:
         name = "ITEM"
 
-    msr_query_p_2: List[MsrQueryP2] = field(
+    msr_query_p_2: list[MsrQueryP2] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-P-2",
@@ -2327,7 +2327,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p: List[MultiLanguageParagraph] = field(
+    p: list[MultiLanguageParagraph] = field(
         default_factory=list,
         metadata={
             "name": "P",
@@ -2335,7 +2335,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: List[MultiLanguageVerbatim] = field(
+    verbatim: list[MultiLanguageVerbatim] = field(
         default_factory=list,
         metadata={
             "name": "VERBATIM",
@@ -2343,7 +2343,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    list_value: List["ListType"] = field(
+    list_value: list["List"] = field(
         default_factory=list,
         metadata={
             "name": "LIST",
@@ -2351,7 +2351,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "DEF-LIST",
@@ -2359,7 +2359,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: List["LabeledList"] = field(
+    labeled_list: list["LabeledList"] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -2367,7 +2367,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: List[MlFormula] = field(
+    formula: list[MlFormula] = field(
         default_factory=list,
         metadata={
             "name": "FORMULA",
@@ -2375,7 +2375,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    figure: List[MlFigure] = field(
+    figure: list[MlFigure] = field(
         default_factory=list,
         metadata={
             "name": "FIGURE",
@@ -2383,7 +2383,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: List["Note"] = field(
+    note: list["Note"] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -2391,7 +2391,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: List["TraceableText"] = field(
+    trace: list["TraceableText"] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -2399,7 +2399,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    structured_req: List[StructuredReq] = field(
+    structured_req: list[StructuredReq] = field(
         default_factory=list,
         metadata={
             "name": "STRUCTURED-REQ",
@@ -2430,7 +2430,7 @@ class Item:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -2463,7 +2463,7 @@ class Item:
 
 
 @dataclass
-class ListType:
+class List:
     """This meta-class represents the ability to express a list.
 
     The kind of list is specified in the attribute.
@@ -2504,7 +2504,7 @@ class ListType:
     class Meta:
         name = "LIST"
 
-    item: List[Item] = field(
+    item: list[Item] = field(
         default_factory=list,
         metadata={
             "name": "ITEM",
@@ -2535,7 +2535,7 @@ class ListType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -2660,7 +2660,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_p_2: List[MsrQueryP2] = field(
+    msr_query_p_2: list[MsrQueryP2] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-P-2",
@@ -2668,7 +2668,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p: List[MultiLanguageParagraph] = field(
+    p: list[MultiLanguageParagraph] = field(
         default_factory=list,
         metadata={
             "name": "P",
@@ -2676,7 +2676,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: List[MultiLanguageVerbatim] = field(
+    verbatim: list[MultiLanguageVerbatim] = field(
         default_factory=list,
         metadata={
             "name": "VERBATIM",
@@ -2684,7 +2684,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "LIST",
@@ -2692,7 +2692,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "DEF-LIST",
@@ -2700,7 +2700,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: List["LabeledList"] = field(
+    labeled_list: list["LabeledList"] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -2708,7 +2708,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: List[MlFormula] = field(
+    formula: list[MlFormula] = field(
         default_factory=list,
         metadata={
             "name": "FORMULA",
@@ -2716,7 +2716,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    figure: List[MlFigure] = field(
+    figure: list[MlFigure] = field(
         default_factory=list,
         metadata={
             "name": "FIGURE",
@@ -2724,7 +2724,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: List["Note"] = field(
+    note: list["Note"] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -2732,7 +2732,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: List["TraceableText"] = field(
+    trace: list["TraceableText"] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -2740,7 +2740,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    structured_req: List[StructuredReq] = field(
+    structured_req: list[StructuredReq] = field(
         default_factory=list,
         metadata={
             "name": "STRUCTURED-REQ",
@@ -2771,7 +2771,7 @@ class LabeledItem:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -2863,7 +2863,7 @@ class LabeledList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_item: List[LabeledItem] = field(
+    labeled_item: list[LabeledItem] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-ITEM",
@@ -2894,7 +2894,7 @@ class LabeledList:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -3015,7 +3015,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_p_2: List[MsrQueryP2] = field(
+    msr_query_p_2: list[MsrQueryP2] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-P-2",
@@ -3023,7 +3023,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p: List[MultiLanguageParagraph] = field(
+    p: list[MultiLanguageParagraph] = field(
         default_factory=list,
         metadata={
             "name": "P",
@@ -3031,7 +3031,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: List[MultiLanguageVerbatim] = field(
+    verbatim: list[MultiLanguageVerbatim] = field(
         default_factory=list,
         metadata={
             "name": "VERBATIM",
@@ -3039,7 +3039,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "LIST",
@@ -3047,7 +3047,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "DEF-LIST",
@@ -3055,7 +3055,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: List[LabeledList] = field(
+    labeled_list: list[LabeledList] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -3063,7 +3063,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: List[MlFormula] = field(
+    formula: list[MlFormula] = field(
         default_factory=list,
         metadata={
             "name": "FORMULA",
@@ -3071,7 +3071,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    figure: List[MlFigure] = field(
+    figure: list[MlFigure] = field(
         default_factory=list,
         metadata={
             "name": "FIGURE",
@@ -3079,7 +3079,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: List["Note"] = field(
+    note: list["Note"] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -3087,7 +3087,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: List["TraceableText"] = field(
+    trace: list["TraceableText"] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -3095,7 +3095,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    structured_req: List[StructuredReq] = field(
+    structured_req: list[StructuredReq] = field(
         default_factory=list,
         metadata={
             "name": "STRUCTURED-REQ",
@@ -3126,7 +3126,7 @@ class Note:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -3362,7 +3362,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_p_2: List[MsrQueryP2] = field(
+    msr_query_p_2: list[MsrQueryP2] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-P-2",
@@ -3370,7 +3370,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p: List[MultiLanguageParagraph] = field(
+    p: list[MultiLanguageParagraph] = field(
         default_factory=list,
         metadata={
             "name": "P",
@@ -3378,7 +3378,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: List[MultiLanguageVerbatim] = field(
+    verbatim: list[MultiLanguageVerbatim] = field(
         default_factory=list,
         metadata={
             "name": "VERBATIM",
@@ -3386,7 +3386,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "LIST",
@@ -3394,7 +3394,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "DEF-LIST",
@@ -3402,7 +3402,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: List[LabeledList] = field(
+    labeled_list: list[LabeledList] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -3410,7 +3410,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: List[MlFormula] = field(
+    formula: list[MlFormula] = field(
         default_factory=list,
         metadata={
             "name": "FORMULA",
@@ -3418,7 +3418,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    figure: List[MlFigure] = field(
+    figure: list[MlFigure] = field(
         default_factory=list,
         metadata={
             "name": "FIGURE",
@@ -3426,7 +3426,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: List[Note] = field(
+    note: list[Note] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -3434,7 +3434,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: List["TraceableText"] = field(
+    trace: list["TraceableText"] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -3442,7 +3442,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    structured_req: List[StructuredReq] = field(
+    structured_req: list[StructuredReq] = field(
         default_factory=list,
         metadata={
             "name": "STRUCTURED-REQ",
@@ -3480,7 +3480,7 @@ class TraceableText:
             "type": "Attribute",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -3513,7 +3513,7 @@ class TraceableText:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -3524,7 +3524,7 @@ class TraceableText:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -3535,7 +3535,7 @@ class TraceableText:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["TraceableText.TraceRefs.TraceRef"] = field(
+        trace_ref: list["TraceableText.TraceRefs.TraceRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",

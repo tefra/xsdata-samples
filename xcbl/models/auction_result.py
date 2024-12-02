@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.auction_result_response import AuctionCreateReference
 from xcbl.models.sourcing_result import (
@@ -384,7 +384,7 @@ class ListOfMvbvariables:
     class Meta:
         name = "ListOfMVBVariables"
 
-    mvbvariable: List[Mvbvariable] = field(
+    mvbvariable: list[Mvbvariable] = field(
         default_factory=list,
         metadata={
             "name": "MVBVariable",
@@ -463,7 +463,7 @@ class AuctionResultItem:
 
 @dataclass(kw_only=True)
 class ListOfAuctionResultItem:
-    auction_result_item: List[AuctionResultItem] = field(
+    auction_result_item: list[AuctionResultItem] = field(
         default_factory=list,
         metadata={
             "name": "AuctionResultItem",
@@ -537,7 +537,7 @@ class AuctionResultDetail:
 
 @dataclass(kw_only=True)
 class ListOfAuctionResultDetail:
-    auction_result_detail: List[AuctionResultDetail] = field(
+    auction_result_detail: list[AuctionResultDetail] = field(
         default_factory=list,
         metadata={
             "name": "AuctionResultDetail",

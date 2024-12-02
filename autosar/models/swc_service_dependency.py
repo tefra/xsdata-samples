@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -348,7 +348,7 @@ class SwcServiceDependency:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -359,7 +359,7 @@ class SwcServiceDependency:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -370,7 +370,7 @@ class SwcServiceDependency:
 
     @dataclass
     class AssignedDataTypes:
-        role_based_data_type_assignment: List[RoleBasedDataTypeAssignment] = (
+        role_based_data_type_assignment: list[RoleBasedDataTypeAssignment] = (
             field(
                 default_factory=list,
                 metadata={
@@ -383,7 +383,7 @@ class SwcServiceDependency:
 
     @dataclass
     class AssignedDatas:
-        role_based_data_assignment: List[RoleBasedDataAssignment] = field(
+        role_based_data_assignment: list[RoleBasedDataAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-DATA-ASSIGNMENT",
@@ -394,7 +394,7 @@ class SwcServiceDependency:
 
     @dataclass
     class AssignedPorts:
-        role_based_port_assignment: List[RoleBasedPortAssignment] = field(
+        role_based_port_assignment: list[RoleBasedPortAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-PORT-ASSIGNMENT",

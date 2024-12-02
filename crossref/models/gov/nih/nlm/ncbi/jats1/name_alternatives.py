@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.name import Name
 from crossref.models.gov.nih.nlm.ncbi.jats1.string_name import StringName
@@ -17,13 +17,13 @@ class NameAlternatives:
         name = "name-alternatives"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    name: List[Name] = field(
+    name: list[Name] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    string_name: List[StringName] = field(
+    string_name: list[StringName] = field(
         default_factory=list,
         metadata={
             "name": "string-name",

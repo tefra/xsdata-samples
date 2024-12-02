@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.dataflow_type import DataflowType
 
@@ -19,7 +18,7 @@ class DataflowsType:
         different reference periods.
     """
 
-    dataflow: Tuple[DataflowType, ...] = field(
+    dataflow: tuple[DataflowType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Dataflow",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.measure_base_type import MeasureBaseType
 from sdmx_ml.models.usage_type import UsageType
@@ -20,7 +19,7 @@ class MeasureType(MeasureBaseType):
         must be available for any corresponding existing observation.
     """
 
-    concept_role: Tuple[str, ...] = field(
+    concept_role: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConceptRole",

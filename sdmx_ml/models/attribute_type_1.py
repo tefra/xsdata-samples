@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Union
+from typing import Optional, Union
 
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.structured_text import StructuredText
@@ -30,7 +30,7 @@ class AttributeType1(AnnotableType):
     class Meta:
         name = "AttributeType"
 
-    value_or_text_or_structured_text: Tuple[
+    value_or_text_or_structured_text: tuple[
         Union[object, Text, StructuredText], ...
     ] = field(
         default_factory=tuple,
@@ -55,7 +55,7 @@ class AttributeType1(AnnotableType):
             ),
         },
     )
-    attribute: Tuple["Attribute1", ...] = field(
+    attribute: tuple["Attribute1", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Attribute",

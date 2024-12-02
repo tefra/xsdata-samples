@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.category_scheme_type import CategorySchemeType
 
@@ -22,7 +21,7 @@ class CategorySchemesType:
         for a simple, leveled hierarchy or categories.
     """
 
-    category_scheme: Tuple[CategorySchemeType, ...] = field(
+    category_scheme: tuple[CategorySchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CategoryScheme",

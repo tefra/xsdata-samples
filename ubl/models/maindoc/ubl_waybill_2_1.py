@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CarrierParty,
@@ -125,7 +125,7 @@ class WaybillType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -133,7 +133,7 @@ class WaybillType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -167,7 +167,7 @@ class WaybillType:
             },
         )
     )
-    other_instruction: Tuple[OtherInstruction, ...] = field(
+    other_instruction: tuple[OtherInstruction, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OtherInstruction",
@@ -208,7 +208,7 @@ class WaybillType:
             "required": True,
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -216,7 +216,7 @@ class WaybillType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exchange_rate: Tuple[ExchangeRate, ...] = field(
+    exchange_rate: tuple[ExchangeRate, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ExchangeRate",
@@ -224,7 +224,7 @@ class WaybillType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_distribution: Tuple[DocumentDistribution, ...] = field(
+    document_distribution: tuple[DocumentDistribution, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentDistribution",
@@ -232,7 +232,7 @@ class WaybillType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",

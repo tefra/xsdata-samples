@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Optional
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.abs import Abs
 from crossref.models.org.w3.pkg_1998.math.math_ml.and_mod import And
@@ -35,7 +35,7 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.cerror import (
     Declare,
     Domainofapplication,
     Fn,
-    ListType,
+    List,
     Lowlimit,
     Piecewise,
     Reln,
@@ -174,866 +174,866 @@ class NaryConstructorType:
         name = "nary-constructor.class"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    bvar: List[Bvar] = field(
+    bvar: list[Bvar] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    domainofapplication: List[Domainofapplication] = field(
+    domainofapplication: list[Domainofapplication] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    condition: List[Condition] = field(
+    condition: list[Condition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    lowlimit: List[Lowlimit] = field(
+    lowlimit: list[Lowlimit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    uplimit: List[Uplimit] = field(
+    uplimit: list[Uplimit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    apply: List[Apply] = field(
+    apply: list[Apply] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    bind: List[Bind] = field(
+    bind: list[Bind] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ci: List[Ci] = field(
+    ci: list[Ci] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cn: List[Cn] = field(
+    cn: list[Cn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: List[Csymbol] = field(
+    csymbol: list[Csymbol] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: List[Cbytes] = field(
+    cbytes: list[Cbytes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cerror: List[Cerror] = field(
+    cerror: list[Cerror] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cs: List[Cs] = field(
+    cs: list[Cs] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    share: List[Share] = field(
+    share: list[Share] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: List[Piecewise] = field(
+    piecewise: list[Piecewise] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    declare: List[Declare] = field(
+    declare: list[Declare] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn: List[Fn] = field(
+    fn: list[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    reln: List[Reln] = field(
+    reln: list[Reln] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    interval: List[Interval] = field(
+    interval: list[Interval] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    moment: List[Moment] = field(
+    moment: list[Moment] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    log: List[Log] = field(
+    log: list[Log] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ln: List[Ln] = field(
+    ln: list[Ln] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    image: List[Image] = field(
+    image: list[Image] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    codomain: List[Codomain] = field(
+    codomain: list[Codomain] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    domain: List[Domain] = field(
+    domain: list[Domain] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ident: List[Ident] = field(
+    ident: list[Ident] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    inverse: List[Inverse] = field(
+    inverse: list[Inverse] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: List[Lambda] = field(
+    lambda_value: list[Lambda] = field(
         default_factory=list,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: List[Compose] = field(
+    compose: list[Compose] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    quotient: List[Quotient] = field(
+    quotient: list[Quotient] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    divide: List[Divide] = field(
+    divide: list[Divide] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    minus: List[Minus] = field(
+    minus: list[Minus] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    power: List[Power] = field(
+    power: list[Power] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    rem: List[Rem] = field(
+    rem: list[Rem] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    root: List[Root] = field(
+    root: list[Root] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    factorial: List[Factorial] = field(
+    factorial: list[Factorial] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    abs: List[Abs] = field(
+    abs: list[Abs] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: List[Conjugate] = field(
+    conjugate: list[Conjugate] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arg: List[Arg] = field(
+    arg: list[Arg] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    real: List[Real] = field(
+    real: list[Real] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: List[Imaginary] = field(
+    imaginary: list[Imaginary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    floor: List[Floor] = field(
+    floor: list[Floor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: List[Ceiling] = field(
+    ceiling: list[Ceiling] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    exp: List[Exp] = field(
+    exp: list[Exp] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    min: List[Min] = field(
+    min: list[Min] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    max: List[Max] = field(
+    max: list[Max] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    lcm: List[Lcm] = field(
+    lcm: list[Lcm] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    gcd: List[Gcd] = field(
+    gcd: list[Gcd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    times: List[Times] = field(
+    times: list[Times] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    plus: List[Plus] = field(
+    plus: list[Plus] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    xor: List[Xor] = field(
+    xor: list[Xor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    or_value: List[Or] = field(
+    or_value: list[Or] = field(
         default_factory=list,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: List[And] = field(
+    and_value: list[And] = field(
         default_factory=list,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: List[Not] = field(
+    not_value: list[Not] = field(
         default_factory=list,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: List[Equivalent] = field(
+    equivalent: list[Equivalent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    implies: List[Implies] = field(
+    implies: list[Implies] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    exists: List[Exists] = field(
+    exists: list[Exists] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    forall: List[Forall] = field(
+    forall: list[Forall] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    leq: List[Leq] = field(
+    leq: list[Leq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    geq: List[Geq] = field(
+    geq: list[Geq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    lt: List[Lt] = field(
+    lt: list[Lt] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    gt: List[Gt] = field(
+    gt: list[Gt] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    eq: List[Eq] = field(
+    eq: list[Eq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: List[Tendsto] = field(
+    tendsto: list[Tendsto] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    factorof: List[Factorof] = field(
+    factorof: list[Factorof] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    approx: List[Approx] = field(
+    approx: list[Approx] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    neq: List[Neq] = field(
+    neq: list[Neq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    int_value: List[Int] = field(
+    int_value: list[Int] = field(
         default_factory=list,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: List[Diff] = field(
+    diff: list[Diff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: List[Partialdiff] = field(
+    partialdiff: list[Partialdiff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: List[Laplacian] = field(
+    laplacian: list[Laplacian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    curl: List[Curl] = field(
+    curl: list[Curl] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    grad: List[Grad] = field(
+    grad: list[Grad] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    divergence: List[Divergence] = field(
+    divergence: list[Divergence] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: List[Set] = field(
+    set: list[Set] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: List[Cartesianproduct] = field(
+    cartesianproduct: list[Cartesianproduct] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    intersect: List[Intersect] = field(
+    intersect: list[Intersect] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    union: List[UnionType] = field(
+    union: list[UnionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: List[Setdiff] = field(
+    setdiff: list[Setdiff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: List[Notprsubset] = field(
+    notprsubset: list[Notprsubset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: List[Notsubset] = field(
+    notsubset: list[Notsubset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    notin: List[Notin] = field(
+    notin: list[Notin] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    in_value: List[In] = field(
+    in_value: list[In] = field(
         default_factory=list,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: List[Prsubset] = field(
+    prsubset: list[Prsubset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    subset: List[Subset] = field(
+    subset: list[Subset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    card: List[Card] = field(
+    card: list[Card] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sum: List[Sum] = field(
+    sum: list[Sum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    product: List[Product] = field(
+    product: list[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    limit: List[Limit] = field(
+    limit: list[Limit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: List[Arctanh] = field(
+    arctanh: list[Arctanh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: List[Arcsinh] = field(
+    arcsinh: list[Arcsinh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: List[Arcsech] = field(
+    arcsech: list[Arcsech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: List[Arcsec] = field(
+    arcsec: list[Arcsec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: List[Arccsch] = field(
+    arccsch: list[Arccsch] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: List[Arccsc] = field(
+    arccsc: list[Arccsc] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: List[Arccoth] = field(
+    arccoth: list[Arccoth] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arccot: List[Arccot] = field(
+    arccot: list[Arccot] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: List[Arccosh] = field(
+    arccosh: list[Arccosh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arctan: List[Arctan] = field(
+    arctan: list[Arctan] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arccos: List[Arccos] = field(
+    arccos: list[Arccos] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: List[Arcsin] = field(
+    arcsin: list[Arcsin] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    coth: List[Coth] = field(
+    coth: list[Coth] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    csch: List[Csch] = field(
+    csch: list[Csch] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sech: List[Sech] = field(
+    sech: list[Sech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    tanh: List[Tanh] = field(
+    tanh: list[Tanh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cosh: List[Cosh] = field(
+    cosh: list[Cosh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sinh: List[Sinh] = field(
+    sinh: list[Sinh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cot: List[Cot] = field(
+    cot: list[Cot] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    csc: List[Csc] = field(
+    csc: list[Csc] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sec: List[Sec] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    tan: List[Tan] = field(
+    tan: list[Tan] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    cos: List[Cos] = field(
+    cos: list[Cos] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sin: List[Sin] = field(
+    sin: list[Sin] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    mode: List[Mode] = field(
+    mode: list[Mode] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    median: List[Median] = field(
+    median: list[Median] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    variance: List[Variance] = field(
+    variance: list[Variance] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sdev: List[Sdev] = field(
+    sdev: list[Sdev] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    mean: List[Mean] = field(
+    mean: list[Mean] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: List[Matrixrow] = field(
+    matrixrow: list[Matrixrow] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    matrix: List[Matrix] = field(
+    matrix: list[Matrix] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    vector: List[Vector] = field(
+    vector: list[Vector] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    transpose: List[Transpose] = field(
+    transpose: list[Transpose] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    determinant: List[Determinant] = field(
+    determinant: list[Determinant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    selector: List[Selector] = field(
+    selector: list[Selector] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: List[Outerproduct] = field(
+    outerproduct: list[Outerproduct] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: List[Scalarproduct] = field(
+    scalarproduct: list[Scalarproduct] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: List[Vectorproduct] = field(
+    vectorproduct: list[Vectorproduct] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: List[Emptyset] = field(
+    emptyset: list[Emptyset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    primes: List[Primes] = field(
+    primes: list[Primes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    complexes: List[Complexes] = field(
+    complexes: list[Complexes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: List[Naturalnumbers] = field(
+    naturalnumbers: list[Naturalnumbers] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    rationals: List[Rationals] = field(
+    rationals: list[Rationals] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    reals: List[Reals] = field(
+    reals: list[Reals] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    integers: List[Integers] = field(
+    integers: list[Integers] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    infinity: List[Infinity] = field(
+    infinity: list[Infinity] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: List[Eulergamma] = field(
+    eulergamma: list[Eulergamma] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    pi: List[Pi] = field(
+    pi: list[Pi] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    false: List[FalseType] = field(
+    false: list[FalseType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    true: List[TrueType] = field(
+    true: list[TrueType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: List[Notanumber] = field(
+    notanumber: list[Notanumber] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: List[Imaginaryi] = field(
+    imaginaryi: list[Imaginaryi] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: List[Exponentiale] = field(
+    exponentiale: list[Exponentiale] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1051,7 +1051,7 @@ class NaryConstructorType:
             "type": "Attribute",
         },
     )
-    class_value: List[str] = field(
+    class_value: list[str] = field(
         default_factory=list,
         metadata={
             "name": "class",
@@ -1077,7 +1077,7 @@ class NaryConstructorType:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

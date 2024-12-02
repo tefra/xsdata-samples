@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
 from .ref import Ref
@@ -67,7 +67,7 @@ class EthTpConnection:
 
     @dataclass
     class TpSduRefs:
-        tp_sdu_ref: List["EthTpConnection.TpSduRefs.TpSduRef"] = field(
+        tp_sdu_ref: list["EthTpConnection.TpSduRefs.TpSduRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TP-SDU-REF",

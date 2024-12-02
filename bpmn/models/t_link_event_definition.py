@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .t_event_definition import TEventDefinition
@@ -12,7 +12,7 @@ class TLinkEventDefinition(TEventDefinition):
     class Meta:
         name = "tLinkEventDefinition"
 
-    source: List[QName] = field(
+    source: list[QName] = field(
         default_factory=list,
         metadata={
             "type": "Element",

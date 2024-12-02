@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .coupling_port_rate_policy_action_enum import (
     CouplingPortRatePolicyActionEnum,
@@ -104,7 +104,7 @@ class CouplingPortRatePolicy:
 
     @dataclass
     class VLanRefs:
-        v_lan_ref: List["CouplingPortRatePolicy.VLanRefs.VLanRef"] = field(
+        v_lan_ref: list["CouplingPortRatePolicy.VLanRefs.VLanRef"] = field(
             default_factory=list,
             metadata={
                 "name": "V-LAN-REF",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
@@ -50,7 +50,7 @@ class Row:
     class Meta:
         name = "ROW"
 
-    entry: List[Entry] = field(
+    entry: list[Entry] = field(
         default_factory=list,
         metadata={
             "name": "ENTRY",
@@ -81,7 +81,7 @@ class Row:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",

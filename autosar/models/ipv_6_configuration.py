@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .boolean import Boolean
 from .ip6_address_string import Ip6AddressString
@@ -147,7 +147,7 @@ class Ipv6Configuration:
             servers.
         """
 
-        dns_server_address: List[Ip6AddressString] = field(
+        dns_server_address: list[Ip6AddressString] = field(
             default_factory=list,
             metadata={
                 "name": "DNS-SERVER-ADDRESS",

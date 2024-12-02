@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.annotable_type import AnnotableType
 
@@ -13,7 +13,7 @@ class ComponentMapType(AnnotableType):
     structure to a component in a target structure.
     """
 
-    source: Tuple[str, ...] = field(
+    source: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Source",
@@ -23,7 +23,7 @@ class ComponentMapType(AnnotableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    target: Tuple[str, ...] = field(
+    target: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Target",

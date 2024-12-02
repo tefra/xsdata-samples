@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -73,7 +73,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    elaborated_data: List[ElaboratedData] = field(
+    elaborated_data: list[ElaboratedData] = field(
         default_factory=list,
         metadata={
             "name": "elaboratedData",

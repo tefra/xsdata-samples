@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .graphic_fit_enum_simple import GraphicFitEnumSimple
 from .graphic_notation_enum_simple import GraphicNotationEnumSimple
@@ -252,7 +252,7 @@ class Graphic:
             particular version of the engineering object.
         """
 
-        revision_label: List[RevisionLabelString] = field(
+        revision_label: list[RevisionLabelString] = field(
             default_factory=list,
             metadata={
                 "name": "REVISION-LABEL",

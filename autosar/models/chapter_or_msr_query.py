@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .chapter import (
     Chapter,
@@ -35,7 +35,7 @@ class ChapterOrMsrQuery:
     class Meta:
         name = "CHAPTER-OR-MSR-QUERY"
 
-    chapter: List[Chapter] = field(
+    chapter: list[Chapter] = field(
         default_factory=list,
         metadata={
             "name": "CHAPTER",
@@ -43,7 +43,7 @@ class ChapterOrMsrQuery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_chapter: List[MsrQueryChapter] = field(
+    msr_query_chapter: list[MsrQueryChapter] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-CHAPTER",

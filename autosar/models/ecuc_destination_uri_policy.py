@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ecuc_add_info_param_def import EcucAddInfoParamDef
 from .ecuc_boolean_param_def import EcucBooleanParamDef
@@ -112,7 +112,7 @@ class EcucDestinationUriPolicy:
 
     @dataclass
     class Containers:
-        ecuc_choice_container_def: List[EcucChoiceContainerDef] = field(
+        ecuc_choice_container_def: list[EcucChoiceContainerDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-CHOICE-CONTAINER-DEF",
@@ -120,7 +120,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_param_conf_container_def: List[EcucParamConfContainerDef] = field(
+        ecuc_param_conf_container_def: list[EcucParamConfContainerDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
@@ -131,7 +131,7 @@ class EcucDestinationUriPolicy:
 
     @dataclass
     class Parameters:
-        ecuc_add_info_param_def: List[EcucAddInfoParamDef] = field(
+        ecuc_add_info_param_def: list[EcucAddInfoParamDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-ADD-INFO-PARAM-DEF",
@@ -139,7 +139,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_boolean_param_def: List[EcucBooleanParamDef] = field(
+        ecuc_boolean_param_def: list[EcucBooleanParamDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-BOOLEAN-PARAM-DEF",
@@ -147,7 +147,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_enumeration_param_def: List[EcucEnumerationParamDef] = field(
+        ecuc_enumeration_param_def: list[EcucEnumerationParamDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-ENUMERATION-PARAM-DEF",
@@ -155,7 +155,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_float_param_def: List[EcucFloatParamDef] = field(
+        ecuc_float_param_def: list[EcucFloatParamDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-FLOAT-PARAM-DEF",
@@ -163,7 +163,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_function_name_def: List[EcucFunctionNameDef] = field(
+        ecuc_function_name_def: list[EcucFunctionNameDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-FUNCTION-NAME-DEF",
@@ -171,7 +171,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_integer_param_def: List[EcucIntegerParamDef] = field(
+        ecuc_integer_param_def: list[EcucIntegerParamDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-INTEGER-PARAM-DEF",
@@ -179,7 +179,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_linker_symbol_def: List[EcucLinkerSymbolDef] = field(
+        ecuc_linker_symbol_def: list[EcucLinkerSymbolDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-LINKER-SYMBOL-DEF",
@@ -187,7 +187,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_multiline_string_param_def: List[EcucMultilineStringParamDef] = (
+        ecuc_multiline_string_param_def: list[EcucMultilineStringParamDef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -197,7 +197,7 @@ class EcucDestinationUriPolicy:
                 },
             )
         )
-        ecuc_string_param_def: List[EcucStringParamDef] = field(
+        ecuc_string_param_def: list[EcucStringParamDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-STRING-PARAM-DEF",
@@ -208,7 +208,7 @@ class EcucDestinationUriPolicy:
 
     @dataclass
     class References:
-        ecuc_choice_reference_def: List[EcucChoiceReferenceDef] = field(
+        ecuc_choice_reference_def: list[EcucChoiceReferenceDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-CHOICE-REFERENCE-DEF",
@@ -216,7 +216,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_foreign_reference_def: List[EcucForeignReferenceDef] = field(
+        ecuc_foreign_reference_def: list[EcucForeignReferenceDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-FOREIGN-REFERENCE-DEF",
@@ -224,7 +224,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_instance_reference_def: List[EcucInstanceReferenceDef] = field(
+        ecuc_instance_reference_def: list[EcucInstanceReferenceDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-INSTANCE-REFERENCE-DEF",
@@ -232,7 +232,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_reference_def: List[EcucReferenceDef] = field(
+        ecuc_reference_def: list[EcucReferenceDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-REFERENCE-DEF",
@@ -240,7 +240,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_symbolic_name_reference_def: List[
+        ecuc_symbolic_name_reference_def: list[
             EcucSymbolicNameReferenceDef
         ] = field(
             default_factory=list,
@@ -250,7 +250,7 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_uri_reference_def: List[EcucUriReferenceDef] = field(
+        ecuc_uri_reference_def: list[EcucUriReferenceDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-URI-REFERENCE-DEF",

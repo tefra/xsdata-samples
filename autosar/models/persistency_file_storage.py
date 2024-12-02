@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -259,7 +259,7 @@ class PersistencyFileStorage:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -270,7 +270,7 @@ class PersistencyFileStorage:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -281,7 +281,7 @@ class PersistencyFileStorage:
 
     @dataclass
     class RedundancyHandlings:
-        persistency_redundancy_crc: List[PersistencyRedundancyCrc] = field(
+        persistency_redundancy_crc: list[PersistencyRedundancyCrc] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-CRC",
@@ -289,7 +289,7 @@ class PersistencyFileStorage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_redundancy_hash: List[PersistencyRedundancyHash] = field(
+        persistency_redundancy_hash: list[PersistencyRedundancyHash] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-HASH",
@@ -297,7 +297,7 @@ class PersistencyFileStorage:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_redundancy_m_out_of_n: List[
+        persistency_redundancy_m_out_of_n: list[
             PersistencyRedundancyMOutOfN
         ] = field(
             default_factory=list,
@@ -310,7 +310,7 @@ class PersistencyFileStorage:
 
     @dataclass
     class Files:
-        persistency_file: List[PersistencyFile] = field(
+        persistency_file: list[PersistencyFile] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-FILE",

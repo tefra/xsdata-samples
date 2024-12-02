@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 __NAMESPACE__ = "http://www.w3.org/2000/09/xmldsig#"
 
@@ -14,7 +14,7 @@ class CanonicalizationMethodType:
             "required": True,
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -105,7 +105,7 @@ class DigestMethodType:
             "required": True,
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -178,7 +178,7 @@ class ObjectType:
             "type": "Attribute",
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -203,7 +203,7 @@ class PgpdataType:
             "format": "base64",
         },
     )
-    pgpkey_packet: Tuple[bytes, ...] = field(
+    pgpkey_packet: tuple[bytes, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PGPKeyPacket",
@@ -213,7 +213,7 @@ class PgpdataType:
             "format": "base64",
         },
     )
-    other_element: Tuple[object, ...] = field(
+    other_element: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -254,7 +254,7 @@ class SpkidataType:
     class Meta:
         name = "SPKIDataType"
 
-    spkisexp: Tuple[bytes, ...] = field(
+    spkisexp: tuple[bytes, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SPKISexp",
@@ -265,7 +265,7 @@ class SpkidataType:
             "format": "base64",
         },
     )
-    other_element: Tuple[object, ...] = field(
+    other_element: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -285,7 +285,7 @@ class SignatureMethodType:
             "required": True,
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -319,7 +319,7 @@ class SignaturePropertyType:
             "type": "Attribute",
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -357,7 +357,7 @@ class TransformType:
             "required": True,
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -468,7 +468,7 @@ class Transform(TransformType):
 
 @dataclass(frozen=True)
 class X509DataType:
-    x509_issuer_serial: Tuple[X509IssuerSerialType, ...] = field(
+    x509_issuer_serial: tuple[X509IssuerSerialType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "X509IssuerSerial",
@@ -477,7 +477,7 @@ class X509DataType:
             "sequence": 1,
         },
     )
-    x509_ski: Tuple[bytes, ...] = field(
+    x509_ski: tuple[bytes, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "X509SKI",
@@ -487,7 +487,7 @@ class X509DataType:
             "format": "base64",
         },
     )
-    x509_subject_name: Tuple[str, ...] = field(
+    x509_subject_name: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "X509SubjectName",
@@ -496,7 +496,7 @@ class X509DataType:
             "sequence": 1,
         },
     )
-    x509_certificate: Tuple[bytes, ...] = field(
+    x509_certificate: tuple[bytes, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "X509Certificate",
@@ -506,7 +506,7 @@ class X509DataType:
             "format": "base64",
         },
     )
-    x509_crl: Tuple[bytes, ...] = field(
+    x509_crl: tuple[bytes, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "X509CRL",
@@ -516,7 +516,7 @@ class X509DataType:
             "format": "base64",
         },
     )
-    other_element: Tuple[object, ...] = field(
+    other_element: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -528,7 +528,7 @@ class X509DataType:
 
 @dataclass(frozen=True)
 class KeyValueType:
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -552,7 +552,7 @@ class KeyValueType:
 
 @dataclass(frozen=True)
 class SignaturePropertiesType:
-    signature_property: Tuple[SignatureProperty, ...] = field(
+    signature_property: tuple[SignatureProperty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SignatureProperty",
@@ -572,7 +572,7 @@ class SignaturePropertiesType:
 
 @dataclass(frozen=True)
 class TransformsType:
-    transform: Tuple[Transform, ...] = field(
+    transform: tuple[Transform, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Transform",
@@ -705,7 +705,7 @@ class KeyInfoType:
             "type": "Attribute",
         },
     )
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
@@ -754,7 +754,7 @@ class KeyInfoType:
 
 @dataclass(frozen=True)
 class ManifestType:
-    reference: Tuple[Reference, ...] = field(
+    reference: tuple[Reference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Reference",
@@ -792,7 +792,7 @@ class SignedInfoType:
             "required": True,
         },
     )
-    reference: Tuple[Reference, ...] = field(
+    reference: tuple[Reference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Reference",
@@ -856,7 +856,7 @@ class SignatureType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         },
     )
-    object_value: Tuple[Object, ...] = field(
+    object_value: tuple[Object, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Object",

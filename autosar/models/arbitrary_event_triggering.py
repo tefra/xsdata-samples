@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -265,7 +265,7 @@ class ArbitraryEventTriggering:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -276,7 +276,7 @@ class ArbitraryEventTriggering:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -287,7 +287,7 @@ class ArbitraryEventTriggering:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["ArbitraryEventTriggering.TraceRefs.TraceRef"] = field(
+        trace_ref: list["ArbitraryEventTriggering.TraceRefs.TraceRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -331,7 +331,7 @@ class ArbitraryEventTriggering:
 
     @dataclass
     class MinimumDistances:
-        time_value: List[MultidimensionalTime] = field(
+        time_value: list[MultidimensionalTime] = field(
             default_factory=list,
             metadata={
                 "name": "TIME-VALUE",
@@ -342,7 +342,7 @@ class ArbitraryEventTriggering:
 
     @dataclass
     class MaximumDistances:
-        time_value: List[MultidimensionalTime] = field(
+        time_value: list[MultidimensionalTime] = field(
             default_factory=list,
             metadata={
                 "name": "TIME-VALUE",
@@ -353,7 +353,7 @@ class ArbitraryEventTriggering:
 
     @dataclass
     class ConfidenceIntervals:
-        confidence_interval: List[ConfidenceInterval] = field(
+        confidence_interval: list[ConfidenceInterval] = field(
             default_factory=list,
             metadata={
                 "name": "CONFIDENCE-INTERVAL",

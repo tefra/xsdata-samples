@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -30,7 +30,7 @@ class CoctMt810000UvPerformer:
     class Meta:
         name = "COCT_MT810000UV.Performer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -46,7 +46,7 @@ class CoctMt810000UvPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -84,7 +84,7 @@ class CoctMt810000UvPrimaryPerformer:
     class Meta:
         name = "COCT_MT810000UV.PrimaryPerformer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -100,7 +100,7 @@ class CoctMt810000UvPrimaryPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -156,7 +156,7 @@ class CoctMt810000UvVerificationRequest:
     class Meta:
         name = "COCT_MT810000UV.VerificationRequest"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -172,7 +172,7 @@ class CoctMt810000UvVerificationRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -180,7 +180,7 @@ class CoctMt810000UvVerificationRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -219,7 +219,7 @@ class CoctMt810000UvInFulfillmentOf:
     class Meta:
         name = "COCT_MT810000UV.InFulfillmentOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -235,7 +235,7 @@ class CoctMt810000UvInFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -274,7 +274,7 @@ class CoctMt810000UvInformationProvision:
     class Meta:
         name = "COCT_MT810000UV.InformationProvision"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -290,7 +290,7 @@ class CoctMt810000UvInformationProvision:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -338,7 +338,7 @@ class CoctMt810000UvSupport:
     class Meta:
         name = "COCT_MT810000UV.Support"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -354,7 +354,7 @@ class CoctMt810000UvSupport:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -395,7 +395,7 @@ class CoctMt810000UvVerification:
     class Meta:
         name = "COCT_MT810000UV.Verification"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -411,7 +411,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -419,7 +419,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -464,7 +464,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    method_code: List[Ce] = field(
+    method_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "methodCode",
@@ -472,7 +472,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    primary_performer: List[CoctMt810000UvPrimaryPerformer] = field(
+    primary_performer: list[CoctMt810000UvPrimaryPerformer] = field(
         default_factory=list,
         metadata={
             "name": "primaryPerformer",
@@ -481,7 +481,7 @@ class CoctMt810000UvVerification:
             "nillable": True,
         },
     )
-    in_fulfillment_of: List[CoctMt810000UvInFulfillmentOf] = field(
+    in_fulfillment_of: list[CoctMt810000UvInFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "name": "inFulfillmentOf",
@@ -490,7 +490,7 @@ class CoctMt810000UvVerification:
             "nillable": True,
         },
     )
-    support: List[CoctMt810000UvSupport] = field(
+    support: list[CoctMt810000UvSupport] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.itinerary import Itinerary
@@ -23,7 +23,7 @@ class ItineraryByIndexedLocations(Itinerary):
     :ivar itinerary_by_indexed_locations_extension:
     """
 
-    location_contained_in_itinerary: List[LocationContainedInItinerary] = (
+    location_contained_in_itinerary: list[LocationContainedInItinerary] = (
         field(
             default_factory=list,
             metadata={

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     Cd,
@@ -39,7 +39,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
     class Meta:
         name = "COCT_MT020000UV01.ActAppointmentRequest"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -55,7 +55,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -102,7 +102,7 @@ class CoctMt020000Uv01ActRequest:
     class Meta:
         name = "COCT_MT020000UV01.ActRequest"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -118,7 +118,7 @@ class CoctMt020000Uv01ActRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -165,7 +165,7 @@ class CoctMt020000Uv01ReferencedOrder:
     class Meta:
         name = "COCT_MT020000UV01.ReferencedOrder"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -181,7 +181,7 @@ class CoctMt020000Uv01ReferencedOrder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -242,7 +242,7 @@ class CoctMt020000Uv01ScheduleRequest:
     class Meta:
         name = "COCT_MT020000UV01.ScheduleRequest"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -258,7 +258,7 @@ class CoctMt020000Uv01ScheduleRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -321,7 +321,7 @@ class CoctMt020000Uv01Appointment:
     class Meta:
         name = "COCT_MT020000UV01.Appointment"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -337,7 +337,7 @@ class CoctMt020000Uv01Appointment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -360,7 +360,7 @@ class CoctMt020000Uv01Appointment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -368,7 +368,7 @@ class CoctMt020000Uv01Appointment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    referenced_order: List[CoctMt020000Uv01ReferencedOrder] = field(
+    referenced_order: list[CoctMt020000Uv01ReferencedOrder] = field(
         default_factory=list,
         metadata={
             "name": "referencedOrder",
@@ -377,7 +377,7 @@ class CoctMt020000Uv01Appointment:
             "nillable": True,
         },
     )
-    schedule_request: List[CoctMt020000Uv01ScheduleRequest] = field(
+    schedule_request: list[CoctMt020000Uv01ScheduleRequest] = field(
         default_factory=list,
         metadata={
             "name": "scheduleRequest",

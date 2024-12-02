@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.risk_type import (
     RiskType,
@@ -15,7 +14,7 @@ class LocalPoliciesTypeLocalPolicyRisks:
     class Meta:
         global_type = False
 
-    risk: List[RiskType] = field(
+    risk: list[RiskType] = field(
         default_factory=list,
         metadata={
             "name": "Risk",

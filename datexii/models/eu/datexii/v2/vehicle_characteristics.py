@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.fuel_type_enum import FuelTypeEnum
 from datexii.models.eu.datexii.v2.gross_weight_characteristic import (
@@ -80,7 +80,7 @@ class VehicleCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_type: List[VehicleTypeEnum] = field(
+    vehicle_type: list[VehicleTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "vehicleType",
@@ -96,7 +96,7 @@ class VehicleCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    gross_weight_characteristic: List[GrossWeightCharacteristic] = field(
+    gross_weight_characteristic: list[GrossWeightCharacteristic] = field(
         default_factory=list,
         metadata={
             "name": "grossWeightCharacteristic",
@@ -105,7 +105,7 @@ class VehicleCharacteristics:
             "max_occurs": 2,
         },
     )
-    height_characteristic: List[HeightCharacteristic] = field(
+    height_characteristic: list[HeightCharacteristic] = field(
         default_factory=list,
         metadata={
             "name": "heightCharacteristic",
@@ -114,7 +114,7 @@ class VehicleCharacteristics:
             "max_occurs": 2,
         },
     )
-    length_characteristic: List[LengthCharacteristic] = field(
+    length_characteristic: list[LengthCharacteristic] = field(
         default_factory=list,
         metadata={
             "name": "lengthCharacteristic",
@@ -123,7 +123,7 @@ class VehicleCharacteristics:
             "max_occurs": 2,
         },
     )
-    width_characteristic: List[WidthCharacteristic] = field(
+    width_characteristic: list[WidthCharacteristic] = field(
         default_factory=list,
         metadata={
             "name": "widthCharacteristic",
@@ -132,7 +132,7 @@ class VehicleCharacteristics:
             "max_occurs": 2,
         },
     )
-    heaviest_axle_weight_characteristic: List[
+    heaviest_axle_weight_characteristic: list[
         HeaviestAxleWeightCharacteristic
     ] = field(
         default_factory=list,
@@ -143,7 +143,7 @@ class VehicleCharacteristics:
             "max_occurs": 2,
         },
     )
-    number_of_axles_characteristic: List[NumberOfAxlesCharacteristic] = field(
+    number_of_axles_characteristic: list[NumberOfAxlesCharacteristic] = field(
         default_factory=list,
         metadata={
             "name": "numberOfAxlesCharacteristic",

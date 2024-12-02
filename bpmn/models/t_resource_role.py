@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .resource_assignment_expression import ResourceAssignmentExpression
@@ -22,7 +22,7 @@ class TResourceRole(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    resource_parameter_binding: List[ResourceParameterBinding] = field(
+    resource_parameter_binding: list[ResourceParameterBinding] = field(
         default_factory=list,
         metadata={
             "name": "resourceParameterBinding",

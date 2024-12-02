@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -205,7 +205,7 @@ class TraceableTable:
             "type": "Attribute",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",
@@ -238,7 +238,7 @@ class TraceableTable:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -249,7 +249,7 @@ class TraceableTable:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -260,7 +260,7 @@ class TraceableTable:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["TraceableTable.TraceRefs.TraceRef"] = field(
+        trace_ref: list["TraceableTable.TraceRefs.TraceRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",

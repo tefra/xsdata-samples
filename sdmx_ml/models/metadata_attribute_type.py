@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.metadata_attribute_base_type import (
     MetadataAttributeBaseType,
@@ -47,7 +47,7 @@ class MetadataAttributeType(MetadataAttributeBaseType):
         the concept from which it takes its identity.
     """
 
-    metadata_attribute: Tuple["MetadataAttribute", ...] = field(
+    metadata_attribute: tuple["MetadataAttribute", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MetadataAttribute",

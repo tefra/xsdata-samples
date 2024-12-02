@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -200,7 +200,7 @@ class RestElementDef:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -211,7 +211,7 @@ class RestElementDef:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -222,7 +222,7 @@ class RestElementDef:
 
     @dataclass
     class Endpoints:
-        rest_endpoint_delete: List[RestEndpointDelete] = field(
+        rest_endpoint_delete: list[RestEndpointDelete] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ENDPOINT-DELETE",
@@ -230,7 +230,7 @@ class RestElementDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_endpoint_get: List[RestEndpointGet] = field(
+        rest_endpoint_get: list[RestEndpointGet] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ENDPOINT-GET",
@@ -238,7 +238,7 @@ class RestElementDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_endpoint_post: List[RestEndpointPost] = field(
+        rest_endpoint_post: list[RestEndpointPost] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ENDPOINT-POST",
@@ -246,7 +246,7 @@ class RestElementDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_endpoint_put: List[RestEndpointPut] = field(
+        rest_endpoint_put: list[RestEndpointPut] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ENDPOINT-PUT",
@@ -257,7 +257,7 @@ class RestElementDef:
 
     @dataclass
     class Propertys:
-        rest_array_property_def: List[RestArrayPropertyDef] = field(
+        rest_array_property_def: list[RestArrayPropertyDef] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ARRAY-PROPERTY-DEF",
@@ -265,7 +265,7 @@ class RestElementDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_boolean_property_def: List[RestBooleanPropertyDef] = field(
+        rest_boolean_property_def: list[RestBooleanPropertyDef] = field(
             default_factory=list,
             metadata={
                 "name": "REST-BOOLEAN-PROPERTY-DEF",
@@ -273,7 +273,7 @@ class RestElementDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_integer_property_def: List[RestIntegerPropertyDef] = field(
+        rest_integer_property_def: list[RestIntegerPropertyDef] = field(
             default_factory=list,
             metadata={
                 "name": "REST-INTEGER-PROPERTY-DEF",
@@ -281,7 +281,7 @@ class RestElementDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_number_property_def: List[RestNumberPropertyDef] = field(
+        rest_number_property_def: list[RestNumberPropertyDef] = field(
             default_factory=list,
             metadata={
                 "name": "REST-NUMBER-PROPERTY-DEF",
@@ -289,7 +289,7 @@ class RestElementDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_object_ref: List[RestObjectRef] = field(
+        rest_object_ref: list[RestObjectRef] = field(
             default_factory=list,
             metadata={
                 "name": "REST-OBJECT-REF",
@@ -297,7 +297,7 @@ class RestElementDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_string_property_def: List[RestStringPropertyDef] = field(
+        rest_string_property_def: list[RestStringPropertyDef] = field(
             default_factory=list,
             metadata={
                 "name": "REST-STRING-PROPERTY-DEF",

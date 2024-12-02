@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -38,7 +38,7 @@ class RunnableEntityInCompositionInstanceRef:
     class Meta:
         name = "RUNNABLE-ENTITY-IN-COMPOSITION-INSTANCE-REF"
 
-    context_sw_component_prototype_ref: List[
+    context_sw_component_prototype_ref: list[
         "RunnableEntityInCompositionInstanceRef.ContextSwComponentPrototypeRef"
     ] = field(
         default_factory=list,

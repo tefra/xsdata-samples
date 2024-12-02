@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -97,7 +97,7 @@ class ComponentClustering:
 
     @dataclass
     class ClusteredComponentIrefs:
-        clustered_component_iref: List[ComponentInSystemInstanceRef] = field(
+        clustered_component_iref: list[ComponentInSystemInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "CLUSTERED-COMPONENT-IREF",

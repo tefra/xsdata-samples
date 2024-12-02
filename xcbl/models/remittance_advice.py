@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.request_for_quotation import (
     AccountNumber,
@@ -903,7 +903,7 @@ class ListOfOtherInvoiceDates:
 
 @dataclass(kw_only=True)
 class ListOfRateOfExchangeDetail:
-    rate_of_exchange_detail: List[RateOfExchangeDetail] = field(
+    rate_of_exchange_detail: list[RateOfExchangeDetail] = field(
         default_factory=list,
         metadata={
             "name": "RateOfExchangeDetail",
@@ -926,7 +926,7 @@ class ListOfRemittanceAdviceReference:
 
 @dataclass(kw_only=True)
 class ListOfValues:
-    name_value_pair: List[NameValuePair] = field(
+    name_value_pair: list[NameValuePair] = field(
         default_factory=list,
         metadata={
             "name": "NameValuePair",
@@ -1558,7 +1558,7 @@ class InvoicePricingDetail:
             "required": True,
         }
     )
-    tax: List[Tax] = field(
+    tax: list[Tax] = field(
         default_factory=list,
         metadata={
             "name": "Tax",
@@ -1620,7 +1620,7 @@ class InvoicePricingDetail:
 
 @dataclass(kw_only=True)
 class ListOfEncryptedField:
-    encrypted_field: List[EncryptedField] = field(
+    encrypted_field: list[EncryptedField] = field(
         default_factory=list,
         metadata={
             "name": "EncryptedField",
@@ -1632,7 +1632,7 @@ class ListOfEncryptedField:
 
 @dataclass(kw_only=True)
 class ListOfFinancialInstitutionCoded:
-    financial_institution_coded: List[FinancialInstitutionCoded] = field(
+    financial_institution_coded: list[FinancialInstitutionCoded] = field(
         default_factory=list,
         metadata={
             "name": "FinancialInstitutionCoded",
@@ -1825,7 +1825,7 @@ class LineItemDates:
 
 @dataclass(kw_only=True)
 class ListOfAdjustments:
-    adjustment: List[Adjustment] = field(
+    adjustment: list[Adjustment] = field(
         default_factory=list,
         metadata={
             "name": "Adjustment",
@@ -1837,7 +1837,7 @@ class ListOfAdjustments:
 
 @dataclass(kw_only=True)
 class ListOfCarrierReference:
-    carrier_reference: List[CarrierReference] = field(
+    carrier_reference: list[CarrierReference] = field(
         default_factory=list,
         metadata={
             "name": "CarrierReference",
@@ -2149,7 +2149,7 @@ class Asnreferences:
 
 @dataclass(kw_only=True)
 class ListOfRelatedInvoiceRef:
-    related_invoice_ref: List[RelatedInvoiceRef] = field(
+    related_invoice_ref: list[RelatedInvoiceRef] = field(
         default_factory=list,
         metadata={
             "name": "RelatedInvoiceRef",
@@ -2662,7 +2662,7 @@ class InvoicingDetail:
 
 @dataclass(kw_only=True)
 class ListOfInvoicingDetail:
-    invoicing_detail: List[InvoicingDetail] = field(
+    invoicing_detail: list[InvoicingDetail] = field(
         default_factory=list,
         metadata={
             "name": "InvoicingDetail",
@@ -2748,7 +2748,7 @@ class Subsidiary:
 
 @dataclass(kw_only=True)
 class ListOfSubsidiary:
-    subsidiary: List[Subsidiary] = field(
+    subsidiary: list[Subsidiary] = field(
         default_factory=list,
         metadata={
             "name": "Subsidiary",
@@ -2806,7 +2806,7 @@ class RemittanceAdviceDetail:
 
 @dataclass(kw_only=True)
 class ListOfRemittanceAdviceDetail:
-    remittance_advice_detail: List[RemittanceAdviceDetail] = field(
+    remittance_advice_detail: list[RemittanceAdviceDetail] = field(
         default_factory=list,
         metadata={
             "name": "RemittanceAdviceDetail",

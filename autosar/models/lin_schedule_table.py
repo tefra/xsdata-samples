@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -226,7 +226,7 @@ class LinScheduleTable:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -237,7 +237,7 @@ class LinScheduleTable:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -248,7 +248,7 @@ class LinScheduleTable:
 
     @dataclass
     class TableEntrys:
-        application_entry: List[ApplicationEntry] = field(
+        application_entry: list[ApplicationEntry] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-ENTRY",
@@ -256,7 +256,7 @@ class LinScheduleTable:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        assign_frame_id: List[AssignFrameId] = field(
+        assign_frame_id: list[AssignFrameId] = field(
             default_factory=list,
             metadata={
                 "name": "ASSIGN-FRAME-ID",
@@ -264,7 +264,7 @@ class LinScheduleTable:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        assign_frame_id_range: List[AssignFrameIdRange] = field(
+        assign_frame_id_range: list[AssignFrameIdRange] = field(
             default_factory=list,
             metadata={
                 "name": "ASSIGN-FRAME-ID-RANGE",
@@ -272,7 +272,7 @@ class LinScheduleTable:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        assign_nad: List[AssignNad] = field(
+        assign_nad: list[AssignNad] = field(
             default_factory=list,
             metadata={
                 "name": "ASSIGN-NAD",
@@ -280,7 +280,7 @@ class LinScheduleTable:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        conditional_change_nad: List[ConditionalChangeNad] = field(
+        conditional_change_nad: list[ConditionalChangeNad] = field(
             default_factory=list,
             metadata={
                 "name": "CONDITIONAL-CHANGE-NAD",
@@ -288,7 +288,7 @@ class LinScheduleTable:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        data_dump_entry: List[DataDumpEntry] = field(
+        data_dump_entry: list[DataDumpEntry] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-DUMP-ENTRY",
@@ -296,7 +296,7 @@ class LinScheduleTable:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        free_format: List[FreeFormat] = field(
+        free_format: list[FreeFormat] = field(
             default_factory=list,
             metadata={
                 "name": "FREE-FORMAT",
@@ -304,7 +304,7 @@ class LinScheduleTable:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        save_configuration_entry: List[SaveConfigurationEntry] = field(
+        save_configuration_entry: list[SaveConfigurationEntry] = field(
             default_factory=list,
             metadata={
                 "name": "SAVE-CONFIGURATION-ENTRY",
@@ -312,7 +312,7 @@ class LinScheduleTable:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        unassign_frame_id: List[UnassignFrameId] = field(
+        unassign_frame_id: list[UnassignFrameId] = field(
             default_factory=list,
             metadata={
                 "name": "UNASSIGN-FRAME-ID",

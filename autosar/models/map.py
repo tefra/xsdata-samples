@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .area import Area
 
@@ -86,7 +86,7 @@ class Map:
     class Meta:
         name = "MAP"
 
-    area: List[Area] = field(
+    area: list[Area] = field(
         default_factory=list,
         metadata={
             "name": "AREA",

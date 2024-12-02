@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .acl_object_set_subtypes_enum import AclObjectSetSubtypesEnum
 from .acl_operation_subtypes_enum import AclOperationSubtypesEnum
@@ -265,7 +265,7 @@ class AclPermission:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -276,7 +276,7 @@ class AclPermission:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -287,7 +287,7 @@ class AclPermission:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -295,7 +295,7 @@ class AclPermission:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -305,7 +305,7 @@ class AclPermission:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -324,7 +324,7 @@ class AclPermission:
             binding times.
         """
 
-        acl_context: List[NmtokenString] = field(
+        acl_context: list[NmtokenString] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-CONTEXT",
@@ -335,7 +335,7 @@ class AclPermission:
 
     @dataclass
     class AclObjectRefs:
-        acl_object_ref: List["AclPermission.AclObjectRefs.AclObjectRef"] = (
+        acl_object_ref: list["AclPermission.AclObjectRefs.AclObjectRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -359,7 +359,7 @@ class AclPermission:
 
     @dataclass
     class AclOperationRefs:
-        acl_operation_ref: List[
+        acl_operation_ref: list[
             "AclPermission.AclOperationRefs.AclOperationRef"
         ] = field(
             default_factory=list,
@@ -383,7 +383,7 @@ class AclPermission:
 
     @dataclass
     class AclRoleRefs:
-        acl_role_ref: List["AclPermission.AclRoleRefs.AclRoleRef"] = field(
+        acl_role_ref: list["AclPermission.AclRoleRefs.AclRoleRef"] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-ROLE-REF",

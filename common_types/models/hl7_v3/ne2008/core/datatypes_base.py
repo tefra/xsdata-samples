@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
-from typing import Any, List, Optional, Union
+from typing import Any, Optional, Union
 
 from .voc import (
     AddressPartType,
@@ -53,7 +53,7 @@ class AdxpExplicit:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -116,14 +116,14 @@ class EnxpExplicit:
             "type": "Attribute",
         },
     )
-    qualifier: List[EntityNamePartQualifier] = field(
+    qualifier: list[EntityNamePartQualifier] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -281,7 +281,7 @@ class Bin(AnyType):
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -411,7 +411,7 @@ class TelExplicit:
     class Meta:
         name = "TEL_explicit"
 
-    useable_period: List[SxcmTsExplicit] = field(
+    useable_period: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "useablePeriod",
@@ -432,7 +432,7 @@ class TelExplicit:
             "type": "Attribute",
         },
     )
-    use: List[TelecommunicationAddressUse] = field(
+    use: list[TelecommunicationAddressUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -973,7 +973,7 @@ class AdExplicit:
             "type": "Attribute",
         },
     )
-    use: List[PostalAddressUse] = field(
+    use: list[PostalAddressUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -988,7 +988,7 @@ class AdExplicit:
             "pattern": r"true|false",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1446,7 +1446,7 @@ class ThumbnailExplicit:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1507,14 +1507,14 @@ class Cd(AnyType):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    qualifier: List["Cr"] = field(
+    qualifier: list["Cr"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    translation: List["Cd"] = field(
+    translation: list["Cd"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1666,7 +1666,7 @@ class EdExplicit:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1855,7 +1855,7 @@ class ScExplicit:
             "min_length": 1,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1999,7 +1999,7 @@ class StExplicit:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2134,7 +2134,7 @@ class Enxp(St):
             "type": "Attribute",
         },
     )
-    qualifier: List[EntityNamePartQualifier] = field(
+    qualifier: list[EntityNamePartQualifier] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -2317,7 +2317,7 @@ class Tel(Url):
     class Meta:
         name = "TEL"
 
-    useable_period: List[SxcmTs] = field(
+    useable_period: list[SxcmTs] = field(
         default_factory=list,
         metadata={
             "name": "useablePeriod",
@@ -2325,7 +2325,7 @@ class Tel(Url):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    use: List[TelecommunicationAddressUse] = field(
+    use: list[TelecommunicationAddressUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -2440,7 +2440,7 @@ class PqExplicit:
     class Meta:
         name = "PQ_explicit"
 
-    translation: List[PqrExplicit] = field(
+    translation: list[PqrExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2969,7 +2969,7 @@ class Ad(AnyType):
     class Meta:
         name = "AD"
 
-    use: List[PostalAddressUse] = field(
+    use: list[PostalAddressUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -2984,7 +2984,7 @@ class Ad(AnyType):
             "pattern": r"true|false",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3311,7 +3311,7 @@ class IvlTsExplicit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: List[PqExplicit] = field(
+    width: list[PqExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3319,7 +3319,7 @@ class IvlTsExplicit:
             "max_occurs": 3,
         },
     )
-    high: List[IvxbTsExplicit] = field(
+    high: list[IvxbTsExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3421,14 +3421,14 @@ class CdExplicit(AnyType):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    qualifier: List[Cr] = field(
+    qualifier: list[Cr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    translation: List[Cd] = field(
+    translation: list[Cd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3523,14 +3523,14 @@ class EnExplicit:
             "type": "Attribute",
         },
     )
-    use: List[EntityNameUse] = field(
+    use: list[EntityNameUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3601,14 +3601,14 @@ class OnExplicit:
             "type": "Attribute",
         },
     )
-    use: List[EntityNameUse] = field(
+    use: list[EntityNameUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3669,14 +3669,14 @@ class PnExplicit:
             "type": "Attribute",
         },
     )
-    use: List[EntityNameUse] = field(
+    use: list[EntityNameUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3735,7 +3735,7 @@ class Pq(Qty):
     class Meta:
         name = "PQ"
 
-    translation: List[Pqr] = field(
+    translation: list[Pqr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3803,7 +3803,7 @@ class IvlTs(SxcmTs):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: List[Pq] = field(
+    width: list[Pq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3811,7 +3811,7 @@ class IvlTs(SxcmTs):
             "max_occurs": 3,
         },
     )
-    high: List[IvxbTs] = field(
+    high: list[IvxbTs] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3850,14 +3850,14 @@ class En(AnyType):
     class Meta:
         name = "EN"
 
-    use: List[EntityNameUse] = field(
+    use: list[EntityNameUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

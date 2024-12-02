@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.order_confirmation_response import (
     ListOfAccountAssignment,
@@ -396,7 +396,7 @@ class OrderConfirmationItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfOrderConfirmationItemDetail:
-    order_confirmation_item_detail: List[OrderConfirmationItemDetail] = field(
+    order_confirmation_item_detail: list[OrderConfirmationItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "OrderConfirmationItemDetail",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -148,7 +148,7 @@ class PortApiOption:
 
     @dataclass
     class PortArgValues:
-        port_defined_argument_value: List[PortDefinedArgumentValue] = field(
+        port_defined_argument_value: list[PortDefinedArgumentValue] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-DEFINED-ARGUMENT-VALUE",
@@ -170,7 +170,7 @@ class PortApiOption:
 
     @dataclass
     class SupportedFeatures:
-        communication_buffer_locking: List[CommunicationBufferLocking] = field(
+        communication_buffer_locking: list[CommunicationBufferLocking] = field(
             default_factory=list,
             metadata={
                 "name": "COMMUNICATION-BUFFER-LOCKING",

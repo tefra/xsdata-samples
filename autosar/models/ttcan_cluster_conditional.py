@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -169,7 +169,7 @@ class TtcanClusterConditional:
 
     @dataclass
     class PhysicalChannels:
-        can_physical_channel: List[CanPhysicalChannel] = field(
+        can_physical_channel: list[CanPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-PHYSICAL-CHANNEL",
@@ -177,7 +177,7 @@ class TtcanClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_physical_channel: List[EthernetPhysicalChannel] = field(
+        ethernet_physical_channel: list[EthernetPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-PHYSICAL-CHANNEL",
@@ -185,7 +185,7 @@ class TtcanClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_physical_channel: List[FlexrayPhysicalChannel] = field(
+        flexray_physical_channel: list[FlexrayPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-PHYSICAL-CHANNEL",
@@ -193,7 +193,7 @@ class TtcanClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_physical_channel: List[LinPhysicalChannel] = field(
+        lin_physical_channel: list[LinPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-PHYSICAL-CHANNEL",
@@ -201,7 +201,7 @@ class TtcanClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_physical_channel: List[TtcanPhysicalChannel] = field(
+        ttcan_physical_channel: list[TtcanPhysicalChannel] = field(
             default_factory=list,
             metadata={
                 "name": "TTCAN-PHYSICAL-CHANNEL",
@@ -209,7 +209,7 @@ class TtcanClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_physical_channel: List[UserDefinedPhysicalChannel] = (
+        user_defined_physical_channel: list[UserDefinedPhysicalChannel] = (
             field(
                 default_factory=list,
                 metadata={

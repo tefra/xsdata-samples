@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ordered_master import OrderedMaster
 from .time_sync_technology_enum import TimeSyncTechnologyEnum
@@ -67,7 +67,7 @@ class TimeSyncClientConfiguration:
 
     @dataclass
     class OrderedMasterList:
-        ordered_master: List[OrderedMaster] = field(
+        ordered_master: list[OrderedMaster] = field(
             default_factory=list,
             metadata={
                 "name": "ORDERED-MASTER",

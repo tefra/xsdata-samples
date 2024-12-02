@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.custom_meta import CustomMeta
 from crossref.models.xml.lang_value import LangValue
@@ -17,7 +17,7 @@ class CustomMetaGroup:
         name = "custom-meta-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    custom_meta: List[CustomMeta] = field(
+    custom_meta: list[CustomMeta] = field(
         default_factory=list,
         metadata={
             "name": "custom-meta",

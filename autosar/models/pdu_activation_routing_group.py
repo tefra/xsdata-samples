@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .event_group_control_type_enum import EventGroupControlTypeEnum
@@ -129,7 +129,7 @@ class PduActivationRoutingGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -140,7 +140,7 @@ class PduActivationRoutingGroup:
 
     @dataclass
     class IPduIdentifierTcpRefs:
-        i_pdu_identifier_tcp_ref: List[
+        i_pdu_identifier_tcp_ref: list[
             "PduActivationRoutingGroup.IPduIdentifierTcpRefs.IPduIdentifierTcpRef"
         ] = field(
             default_factory=list,
@@ -164,7 +164,7 @@ class PduActivationRoutingGroup:
 
     @dataclass
     class IPduIdentifierUdpRefs:
-        i_pdu_identifier_udp_ref: List[
+        i_pdu_identifier_udp_ref: list[
             "PduActivationRoutingGroup.IPduIdentifierUdpRefs.IPduIdentifierUdpRef"
         ] = field(
             default_factory=list,

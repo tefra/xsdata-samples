@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -170,7 +170,7 @@ class SocketConnectionBundle:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -181,7 +181,7 @@ class SocketConnectionBundle:
 
     @dataclass
     class BundledConnections:
-        socket_connection: List[SocketConnection] = field(
+        socket_connection: list[SocketConnection] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-CONNECTION",
@@ -192,7 +192,7 @@ class SocketConnectionBundle:
 
     @dataclass
     class Pdus:
-        socket_connection_ipdu_identifier: List[
+        socket_connection_ipdu_identifier: list[
             SocketConnectionIpduIdentifier
         ] = field(
             default_factory=list,

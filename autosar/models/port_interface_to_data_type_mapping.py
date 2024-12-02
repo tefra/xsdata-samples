@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -215,7 +215,7 @@ class PortInterfaceToDataTypeMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -226,7 +226,7 @@ class PortInterfaceToDataTypeMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -237,7 +237,7 @@ class PortInterfaceToDataTypeMapping:
 
     @dataclass
     class DataTypeMappingSetRefs:
-        data_type_mapping_set_ref: List[
+        data_type_mapping_set_ref: list[
             "PortInterfaceToDataTypeMapping.DataTypeMappingSetRefs.DataTypeMappingSetRef"
         ] = field(
             default_factory=list,

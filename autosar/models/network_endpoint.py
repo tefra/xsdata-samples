@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -228,7 +228,7 @@ class NetworkEndpoint:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -239,7 +239,7 @@ class NetworkEndpoint:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -250,7 +250,7 @@ class NetworkEndpoint:
 
     @dataclass
     class NetworkEndpointAddresses:
-        ipv_4_configuration: List[Ipv4Configuration] = field(
+        ipv_4_configuration: list[Ipv4Configuration] = field(
             default_factory=list,
             metadata={
                 "name": "IPV-4-CONFIGURATION",
@@ -258,7 +258,7 @@ class NetworkEndpoint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ipv_6_configuration: List[Ipv6Configuration] = field(
+        ipv_6_configuration: list[Ipv6Configuration] = field(
             default_factory=list,
             metadata={
                 "name": "IPV-6-CONFIGURATION",
@@ -266,7 +266,7 @@ class NetworkEndpoint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mac_multicast_configuration: List[MacMulticastConfiguration] = field(
+        mac_multicast_configuration: list[MacMulticastConfiguration] = field(
             default_factory=list,
             metadata={
                 "name": "MAC-MULTICAST-CONFIGURATION",

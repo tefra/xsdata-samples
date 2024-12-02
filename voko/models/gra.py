@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from voko.models.vspec import Vspec
 
@@ -9,7 +8,7 @@ class Gra:
     class Meta:
         name = "gra"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

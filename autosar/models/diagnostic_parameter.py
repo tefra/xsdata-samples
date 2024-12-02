@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_data_element import DiagnosticDataElement
@@ -92,7 +92,7 @@ class DiagnosticParameter:
 
     @dataclass
     class DataElements:
-        diagnostic_data_element: List[DiagnosticDataElement] = field(
+        diagnostic_data_element: list[DiagnosticDataElement] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-DATA-ELEMENT",

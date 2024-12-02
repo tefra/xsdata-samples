@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -468,7 +468,7 @@ class BswModuleDescription:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -479,7 +479,7 @@ class BswModuleDescription:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -490,7 +490,7 @@ class BswModuleDescription:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -498,7 +498,7 @@ class BswModuleDescription:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -508,7 +508,7 @@ class BswModuleDescription:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -519,7 +519,7 @@ class BswModuleDescription:
 
     @dataclass
     class ExpectedEntrys:
-        bsw_module_entry_ref_conditional: List[
+        bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
         ] = field(
             default_factory=list,
@@ -532,7 +532,7 @@ class BswModuleDescription:
 
     @dataclass
     class ImplementedEntrys:
-        bsw_module_entry_ref_conditional: List[
+        bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
         ] = field(
             default_factory=list,
@@ -545,7 +545,7 @@ class BswModuleDescription:
 
     @dataclass
     class BswModuleDocumentations:
-        sw_component_documentation: List[SwComponentDocumentation] = field(
+        sw_component_documentation: list[SwComponentDocumentation] = field(
             default_factory=list,
             metadata={
                 "name": "SW-COMPONENT-DOCUMENTATION",
@@ -556,7 +556,7 @@ class BswModuleDescription:
 
     @dataclass
     class ProvidedEntrys:
-        bsw_module_entry_ref_conditional: List[
+        bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
         ] = field(
             default_factory=list,
@@ -569,7 +569,7 @@ class BswModuleDescription:
 
     @dataclass
     class OutgoingCallbacks:
-        bsw_module_entry_ref_conditional: List[
+        bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
         ] = field(
             default_factory=list,
@@ -582,7 +582,7 @@ class BswModuleDescription:
 
     @dataclass
     class BswModuleDependencys:
-        bsw_module_dependency: List[BswModuleDependency] = field(
+        bsw_module_dependency: list[BswModuleDependency] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODULE-DEPENDENCY",
@@ -593,7 +593,7 @@ class BswModuleDescription:
 
     @dataclass
     class ProvidedModeGroups:
-        mode_declaration_group_prototype: List[
+        mode_declaration_group_prototype: list[
             ModeDeclarationGroupPrototype
         ] = field(
             default_factory=list,
@@ -606,7 +606,7 @@ class BswModuleDescription:
 
     @dataclass
     class RequiredModeGroups:
-        mode_declaration_group_prototype: List[
+        mode_declaration_group_prototype: list[
             ModeDeclarationGroupPrototype
         ] = field(
             default_factory=list,
@@ -619,7 +619,7 @@ class BswModuleDescription:
 
     @dataclass
     class ReleasedTriggers:
-        trigger: List[Trigger] = field(
+        trigger: list[Trigger] = field(
             default_factory=list,
             metadata={
                 "name": "TRIGGER",
@@ -630,7 +630,7 @@ class BswModuleDescription:
 
     @dataclass
     class RequiredTriggers:
-        trigger: List[Trigger] = field(
+        trigger: list[Trigger] = field(
             default_factory=list,
             metadata={
                 "name": "TRIGGER",
@@ -641,7 +641,7 @@ class BswModuleDescription:
 
     @dataclass
     class ProvidedClientServerEntrys:
-        bsw_module_client_server_entry: List[BswModuleClientServerEntry] = (
+        bsw_module_client_server_entry: list[BswModuleClientServerEntry] = (
             field(
                 default_factory=list,
                 metadata={
@@ -654,7 +654,7 @@ class BswModuleDescription:
 
     @dataclass
     class RequiredClientServerEntrys:
-        bsw_module_client_server_entry: List[BswModuleClientServerEntry] = (
+        bsw_module_client_server_entry: list[BswModuleClientServerEntry] = (
             field(
                 default_factory=list,
                 metadata={
@@ -667,7 +667,7 @@ class BswModuleDescription:
 
     @dataclass
     class ProvidedDatas:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -678,7 +678,7 @@ class BswModuleDescription:
 
     @dataclass
     class RequiredDatas:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -689,7 +689,7 @@ class BswModuleDescription:
 
     @dataclass
     class InternalBehaviors:
-        bsw_internal_behavior: List[BswInternalBehavior] = field(
+        bsw_internal_behavior: list[BswInternalBehavior] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-INTERNAL-BEHAVIOR",

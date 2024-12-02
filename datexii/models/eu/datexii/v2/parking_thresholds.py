@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.parking_status_colour_mapping import (
@@ -130,7 +130,7 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_status_colour_mapping: List[ParkingStatusColourMapping] = field(
+    parking_status_colour_mapping: list[ParkingStatusColourMapping] = field(
         default_factory=list,
         metadata={
             "name": "parkingStatusColourMapping",

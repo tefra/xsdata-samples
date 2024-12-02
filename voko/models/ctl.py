@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from voko.models.em import Em
 from voko.models.esc import Esc
@@ -15,7 +14,7 @@ class Ctl:
     class Meta:
         name = "ctl"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

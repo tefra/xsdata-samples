@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.journal_article import (
     JournalArticle,
@@ -42,7 +42,7 @@ class Journal:
             "type": "Element",
         },
     )
-    journal_article: List[JournalArticle] = field(
+    journal_article: list[JournalArticle] = field(
         default_factory=list,
         metadata={
             "type": "Element",

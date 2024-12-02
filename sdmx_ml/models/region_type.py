@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -58,7 +58,7 @@ class RegionType(AnnotableType):
     :ivar valid_to:
     """
 
-    key_value: Tuple[MemberSelectionType, ...] = field(
+    key_value: tuple[MemberSelectionType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "KeyValue",
@@ -66,7 +66,7 @@ class RegionType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    component: Tuple[MemberSelectionType, ...] = field(
+    component: tuple[MemberSelectionType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Component",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 
 @dataclass(kw_only=True)
@@ -1141,7 +1141,7 @@ class Identifier:
 
 @dataclass(kw_only=True)
 class ListOfCertificatePurpose:
-    certificate_purpose: List[CertificatePurpose] = field(
+    certificate_purpose: list[CertificatePurpose] = field(
         default_factory=list,
         metadata={
             "name": "CertificatePurpose",
@@ -1163,7 +1163,7 @@ class ListOfContactRelationType:
 
 @dataclass(kw_only=True)
 class ListOfUserRole:
-    user_role: List[UserRole] = field(
+    user_role: list[UserRole] = field(
         default_factory=list,
         metadata={
             "name": "UserRole",
@@ -1239,7 +1239,7 @@ class UserAdministration:
 
 @dataclass(kw_only=True)
 class ListOfCommunicationDetail:
-    communication_detail: List[CommunicationDetail] = field(
+    communication_detail: list[CommunicationDetail] = field(
         default_factory=list,
         metadata={
             "name": "CommunicationDetail",
@@ -1265,7 +1265,7 @@ class TradingPartnerId:
 
 @dataclass(kw_only=True)
 class X509Certificate:
-    list_of_certificate_purpose: List[ListOfCertificatePurpose] = field(
+    list_of_certificate_purpose: list[ListOfCertificatePurpose] = field(
         default_factory=list,
         metadata={
             "name": "ListOfCertificatePurpose",
@@ -1293,7 +1293,7 @@ class ListOfTradingPartnerId:
     class Meta:
         name = "ListOfTradingPartnerID"
 
-    trading_partner_id: List[TradingPartnerId] = field(
+    trading_partner_id: list[TradingPartnerId] = field(
         default_factory=list,
         metadata={
             "name": "TradingPartnerID",
@@ -1305,7 +1305,7 @@ class ListOfTradingPartnerId:
 
 @dataclass(kw_only=True)
 class ListOfX509Certificate:
-    x509_certificate: List[X509Certificate] = field(
+    x509_certificate: list[X509Certificate] = field(
         default_factory=list,
         metadata={
             "name": "X509Certificate",
@@ -1623,7 +1623,7 @@ class TradingPartnerUser:
 
 @dataclass(kw_only=True)
 class ListOfTradingPartnerUser:
-    trading_partner_user: List[TradingPartnerUser] = field(
+    trading_partner_user: list[TradingPartnerUser] = field(
         default_factory=list,
         metadata={
             "name": "TradingPartnerUser",

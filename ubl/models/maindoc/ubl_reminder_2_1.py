@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -149,7 +149,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -231,7 +231,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reminder_period: Tuple[ReminderPeriod, ...] = field(
+    reminder_period: tuple[ReminderPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReminderPeriod",
@@ -239,7 +239,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -249,7 +249,7 @@ class ReminderType:
             },
         )
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -291,7 +291,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_means: Tuple[PaymentMeans, ...] = field(
+    payment_means: tuple[PaymentMeans, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentMeans",
@@ -299,7 +299,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -307,7 +307,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    prepaid_payment: Tuple[PrepaidPayment, ...] = field(
+    prepaid_payment: tuple[PrepaidPayment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PrepaidPayment",
@@ -315,7 +315,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -357,7 +357,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -374,7 +374,7 @@ class ReminderType:
             "required": True,
         },
     )
-    reminder_line: Tuple[ReminderLine, ...] = field(
+    reminder_line: tuple[ReminderLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReminderLine",

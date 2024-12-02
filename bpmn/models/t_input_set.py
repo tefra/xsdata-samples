@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .t_base_element import TBaseElement
 
@@ -11,7 +11,7 @@ class TInputSet(TBaseElement):
     class Meta:
         name = "tInputSet"
 
-    data_input_refs: List[str] = field(
+    data_input_refs: list[str] = field(
         default_factory=list,
         metadata={
             "name": "dataInputRefs",
@@ -19,7 +19,7 @@ class TInputSet(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    optional_input_refs: List[str] = field(
+    optional_input_refs: list[str] = field(
         default_factory=list,
         metadata={
             "name": "optionalInputRefs",
@@ -27,7 +27,7 @@ class TInputSet(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    while_executing_input_refs: List[str] = field(
+    while_executing_input_refs: list[str] = field(
         default_factory=list,
         metadata={
             "name": "whileExecutingInputRefs",
@@ -35,7 +35,7 @@ class TInputSet(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    output_set_refs: List[str] = field(
+    output_set_refs: list[str] = field(
         default_factory=list,
         metadata={
             "name": "outputSetRefs",

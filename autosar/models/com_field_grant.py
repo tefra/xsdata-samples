@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_iam_remote_subject_subtypes_enum import (
     AbstractIamRemoteSubjectSubtypesEnum,
@@ -247,7 +247,7 @@ class ComFieldGrant:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -258,7 +258,7 @@ class ComFieldGrant:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -269,7 +269,7 @@ class ComFieldGrant:
 
     @dataclass
     class RemoteSubjectRefs:
-        remote_subject_ref: List[
+        remote_subject_ref: list[
             "ComFieldGrant.RemoteSubjectRefs.RemoteSubjectRef"
         ] = field(
             default_factory=list,

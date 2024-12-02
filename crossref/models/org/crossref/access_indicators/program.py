@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.access_indicators.free_to_read import (
     FreeToRead,
@@ -31,7 +31,7 @@ class Program:
             "type": "Element",
         },
     )
-    license_ref: List[LicenseRef] = field(
+    license_ref: list[LicenseRef] = field(
         default_factory=list,
         metadata={
             "type": "Element",

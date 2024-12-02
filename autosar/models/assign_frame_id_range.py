@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .frame_pid import FramePid
@@ -153,7 +153,7 @@ class AssignFrameIdRange:
 
     @dataclass
     class FramePids:
-        frame_pid: List[FramePid] = field(
+        frame_pid: list[FramePid] = field(
             default_factory=list,
             metadata={
                 "name": "FRAME-PID",

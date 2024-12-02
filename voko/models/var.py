@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from voko.models.ekz import (
     Ekz,
@@ -24,25 +23,25 @@ class Var:
             "required": True,
         }
     )
-    uzo: List[Uzo] = field(
+    uzo: list[Uzo] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    klr: List[Klr] = field(
+    klr: list[Klr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ekz: List[Ekz] = field(
+    ekz: list[Ekz] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    rim: List[Rim] = field(
+    rim: list[Rim] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -55,7 +54,7 @@ class Kap:
     class Meta:
         name = "kap"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

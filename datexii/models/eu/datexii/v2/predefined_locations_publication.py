@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
@@ -27,7 +27,7 @@ class PredefinedLocationsPublication(PayloadPublication):
             "required": True,
         },
     )
-    predefined_location_container: List[PredefinedLocationContainer] = field(
+    predefined_location_container: list[PredefinedLocationContainer] = field(
         default_factory=list,
         metadata={
             "name": "predefinedLocationContainer",

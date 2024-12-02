@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -269,7 +269,7 @@ class CryptoKeySlot:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -280,7 +280,7 @@ class CryptoKeySlot:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -291,7 +291,7 @@ class CryptoKeySlot:
 
     @dataclass
     class KeySlotContentAllowedUsages:
-        crypto_key_slot_content_allowed_usage: List[
+        crypto_key_slot_content_allowed_usage: list[
             CryptoKeySlotContentAllowedUsage
         ] = field(
             default_factory=list,

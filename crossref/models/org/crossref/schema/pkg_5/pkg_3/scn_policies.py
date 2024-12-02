@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.scn_policy_set import (
     ScnPolicySet,
@@ -18,7 +17,7 @@ class ScnPolicies:
         name = "scn_policies"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    scn_policy_set: List[ScnPolicySet] = field(
+    scn_policy_set: list[ScnPolicySet] = field(
         default_factory=list,
         metadata={
             "type": "Element",

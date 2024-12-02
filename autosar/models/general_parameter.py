@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -147,7 +147,7 @@ class GeneralParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prm_char: List[PrmChar] = field(
+    prm_char: list[PrmChar] = field(
         default_factory=list,
         metadata={
             "name": "PRM-CHAR",
@@ -180,7 +180,7 @@ class GeneralParameter:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -191,7 +191,7 @@ class GeneralParameter:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",

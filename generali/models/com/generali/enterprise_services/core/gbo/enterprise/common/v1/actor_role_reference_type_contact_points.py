@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.contact_point_type import (
     ContactPointType,
@@ -19,7 +18,7 @@ class ActorRoleReferenceTypeContactPoints:
     class Meta:
         global_type = False
 
-    contact_point: List[ContactPointType] = field(
+    contact_point: list[ContactPointType] = field(
         default_factory=list,
         metadata={
             "name": "ContactPoint",

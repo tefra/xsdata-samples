@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -183,7 +183,7 @@ class ErrorTracerNeeds:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -194,7 +194,7 @@ class ErrorTracerNeeds:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -205,7 +205,7 @@ class ErrorTracerNeeds:
 
     @dataclass
     class TracedFailures:
-        development_error: List[DevelopmentError] = field(
+        development_error: list[DevelopmentError] = field(
             default_factory=list,
             metadata={
                 "name": "DEVELOPMENT-ERROR",
@@ -213,7 +213,7 @@ class ErrorTracerNeeds:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        runtime_error: List[RuntimeError] = field(
+        runtime_error: list[RuntimeError] = field(
             default_factory=list,
             metadata={
                 "name": "RUNTIME-ERROR",
@@ -221,7 +221,7 @@ class ErrorTracerNeeds:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        transient_fault: List[TransientFault] = field(
+        transient_fault: list[TransientFault] = field(
             default_factory=list,
             metadata={
                 "name": "TRANSIENT-FAULT",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.named_area import NamedArea
 from datexii.models.eu.datexii.v2.polygon_area import PolygonArea
@@ -21,7 +21,7 @@ class AreaExtended:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    polygon_area: List[PolygonArea] = field(
+    polygon_area: list[PolygonArea] = field(
         default_factory=list,
         metadata={
             "name": "polygonArea",

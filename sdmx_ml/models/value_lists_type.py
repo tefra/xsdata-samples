@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.value_list_type import ValueListType
 
@@ -21,7 +20,7 @@ class ValueListsType:
         codelist).
     """
 
-    value_list: Tuple[ValueListType, ...] = field(
+    value_list: tuple[ValueListType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValueList",

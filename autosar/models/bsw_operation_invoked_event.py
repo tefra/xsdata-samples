@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -260,7 +260,7 @@ class BswOperationInvokedEvent:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -271,7 +271,7 @@ class BswOperationInvokedEvent:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -293,7 +293,7 @@ class BswOperationInvokedEvent:
 
     @dataclass
     class ContextLimitationRefs:
-        context_limitation_ref: List[
+        context_limitation_ref: list[
             "BswOperationInvokedEvent.ContextLimitationRefs.ContextLimitationRef"
         ] = field(
             default_factory=list,
@@ -317,7 +317,7 @@ class BswOperationInvokedEvent:
 
     @dataclass
     class DisabledInModeIrefs:
-        disabled_in_mode_iref: List[ModeInBswModuleDescriptionInstanceRef] = (
+        disabled_in_mode_iref: list[ModeInBswModuleDescriptionInstanceRef] = (
             field(
                 default_factory=list,
                 metadata={

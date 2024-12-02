@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from tpdb.models.author import Author
 from tpdb.models.comment import Comment
@@ -12,7 +12,7 @@ class Metainformation:
     class Meta:
         name = "metainformation"
 
-    originalfilename: List[Originalfilename] = field(
+    originalfilename: list[Originalfilename] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,7 +111,7 @@ class EndToEndTransformationISignalProps:
 
     @dataclass
     class EndToEndTransformationISignalPropsVariants:
-        end_to_end_transformation_i_signal_props_conditional: List[
+        end_to_end_transformation_i_signal_props_conditional: list[
             EndToEndTransformationISignalPropsConditional
         ] = field(
             default_factory=list,

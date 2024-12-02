@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -47,7 +47,7 @@ class OverallPeriod:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    valid_period: List[Period] = field(
+    valid_period: list[Period] = field(
         default_factory=list,
         metadata={
             "name": "validPeriod",
@@ -55,7 +55,7 @@ class OverallPeriod:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    exception_period: List[Period] = field(
+    exception_period: list[Period] = field(
         default_factory=list,
         metadata={
             "name": "exceptionPeriod",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     AcceptedVariantsDescription,
@@ -888,7 +888,7 @@ class AuctionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    justification_description: Tuple[JustificationDescription, ...] = field(
+    justification_description: tuple[JustificationDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "JustificationDescription",
@@ -896,7 +896,7 @@ class AuctionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -904,7 +904,7 @@ class AuctionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    process_description: Tuple[ProcessDescription, ...] = field(
+    process_description: tuple[ProcessDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcessDescription",
@@ -912,7 +912,7 @@ class AuctionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    conditions_description: Tuple[ConditionsDescription, ...] = field(
+    conditions_description: tuple[ConditionsDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConditionsDescription",
@@ -920,7 +920,7 @@ class AuctionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    electronic_device_description: Tuple[ElectronicDeviceDescription, ...] = (
+    electronic_device_description: tuple[ElectronicDeviceDescription, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -958,7 +958,7 @@ class AwardingCriterionResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    awarding_criterion_description: Tuple[
+    awarding_criterion_description: tuple[
         AwardingCriterionDescription, ...
     ] = field(
         default_factory=tuple,
@@ -968,7 +968,7 @@ class AwardingCriterionResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -992,7 +992,7 @@ class AwardingCriterionResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subordinate_awarding_criterion_response: Tuple[
+    subordinate_awarding_criterion_response: tuple[
         "SubordinateAwardingCriterionResponse", ...
     ] = field(
         default_factory=tuple,
@@ -1022,7 +1022,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -1038,7 +1038,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    weight: Tuple[Weight, ...] = field(
+    weight: tuple[Weight, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Weight",
@@ -1046,7 +1046,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    calculation_expression: Tuple[CalculationExpression, ...] = field(
+    calculation_expression: tuple[CalculationExpression, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CalculationExpression",
@@ -1094,7 +1094,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_improvement_bid: Tuple[MinimumImprovementBid, ...] = field(
+    minimum_improvement_bid: tuple[MinimumImprovementBid, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MinimumImprovementBid",
@@ -1102,7 +1102,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subordinate_awarding_criterion: Tuple[
+    subordinate_awarding_criterion: tuple[
         "SubordinateAwardingCriterion", ...
     ] = field(
         default_factory=tuple,
@@ -1259,7 +1259,7 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -1267,7 +1267,7 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -1311,7 +1311,7 @@ class ClassificationCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -1319,7 +1319,7 @@ class ClassificationCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    categorizes_classification_category: Tuple[
+    categorizes_classification_category: tuple[
         "CategorizesClassificationCategory", ...
     ] = field(
         default_factory=tuple,
@@ -1341,7 +1341,7 @@ class ClauseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    content: Tuple[Content, ...] = field(
+    content: tuple[Content, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Content",
@@ -1434,7 +1434,7 @@ class ConditionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -1470,7 +1470,7 @@ class ConsumptionAverageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -1544,7 +1544,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -1588,7 +1588,7 @@ class ConsumptionCorrectionType:
 
 @dataclass(frozen=True)
 class ContractExecutionRequirementType:
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -1604,7 +1604,7 @@ class ContractExecutionRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -1735,7 +1735,7 @@ class DimensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -1771,7 +1771,7 @@ class EconomicOperatorRoleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    role_description: Tuple[RoleDescription, ...] = field(
+    role_description: tuple[RoleDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RoleDescription",
@@ -1945,7 +1945,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -2277,7 +2277,7 @@ class MeterPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value_qualifier: Tuple[ValueQualifier, ...] = field(
+    value_qualifier: tuple[ValueQualifier, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValueQualifier",
@@ -2389,7 +2389,7 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_reading_comments: Tuple[MeterReadingComments, ...] = field(
+    meter_reading_comments: tuple[MeterReadingComments, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeterReadingComments",
@@ -2605,7 +2605,7 @@ class PeriodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description_code: Tuple[DescriptionCode, ...] = field(
+    description_code: tuple[DescriptionCode, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DescriptionCode",
@@ -2613,7 +2613,7 @@ class PeriodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -2650,7 +2650,7 @@ class PhysicalAttributeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -2680,7 +2680,7 @@ class ProcessJustificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    process_reason: Tuple[ProcessReason, ...] = field(
+    process_reason: tuple[ProcessReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcessReason",
@@ -2688,7 +2688,7 @@ class ProcessJustificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -2766,7 +2766,7 @@ class RelatedItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -2823,7 +2823,7 @@ class SecondaryHazardType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    extension: Tuple[Extension, ...] = field(
+    extension: tuple[Extension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Extension",
@@ -2864,7 +2864,7 @@ class SubcontractTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -2928,7 +2928,7 @@ class TemperatureType:
             "required": True,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -4145,7 +4145,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    address_line: Tuple[AddressLine, ...] = field(
+    address_line: tuple[AddressLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AddressLine",
@@ -4161,7 +4161,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    location_coordinate: Tuple[LocationCoordinate, ...] = field(
+    location_coordinate: tuple[LocationCoordinate, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "LocationCoordinate",
@@ -4203,7 +4203,7 @@ class CapabilityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -4227,7 +4227,7 @@ class CapabilityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    evidence_supplied: Tuple[EvidenceSupplied, ...] = field(
+    evidence_supplied: tuple[EvidenceSupplied, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EvidenceSupplied",
@@ -4280,7 +4280,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -4296,7 +4296,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -4352,7 +4352,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    classification_category: Tuple[ClassificationCategory, ...] = field(
+    classification_category: tuple[ClassificationCategory, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ClassificationCategory",
@@ -4406,7 +4406,7 @@ class ConsumptionHistoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -4516,7 +4516,7 @@ class ContactType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -4524,7 +4524,7 @@ class ContactType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    other_communication: Tuple[OtherCommunication, ...] = field(
+    other_communication: tuple[OtherCommunication, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OtherCommunication",
@@ -4536,7 +4536,7 @@ class ContactType:
 
 @dataclass(frozen=True)
 class DeclarationType:
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -4552,7 +4552,7 @@ class DeclarationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -4560,7 +4560,7 @@ class DeclarationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    evidence_supplied: Tuple[EvidenceSupplied, ...] = field(
+    evidence_supplied: tuple[EvidenceSupplied, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EvidenceSupplied",
@@ -4618,7 +4618,7 @@ class FinancialGuaranteeType:
             "required": True,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -4767,7 +4767,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value_qualifier: Tuple[ValueQualifier, ...] = field(
+    value_qualifier: tuple[ValueQualifier, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValueQualifier",
@@ -4783,7 +4783,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    list_value: Tuple[ListValue, ...] = field(
+    list_value: tuple[ListValue, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ListValue",
@@ -4799,7 +4799,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_property_group: Tuple[ItemPropertyGroup, ...] = field(
+    item_property_group: tuple[ItemPropertyGroup, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ItemPropertyGroup",
@@ -4867,7 +4867,7 @@ class MeterType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_reading: Tuple[MeterReading, ...] = field(
+    meter_reading: tuple[MeterReading, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeterReading",
@@ -4875,7 +4875,7 @@ class MeterType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    meter_property: Tuple[MeterProperty, ...] = field(
+    meter_property: tuple[MeterProperty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeterProperty",
@@ -4903,7 +4903,7 @@ class PriceListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_period: Tuple[ValidityPeriod, ...] = field(
+    validity_period: tuple[ValidityPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
@@ -5006,7 +5006,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -5022,7 +5022,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    status_reason: Tuple[StatusReason, ...] = field(
+    status_reason: tuple[StatusReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "StatusReason",
@@ -5038,7 +5038,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    text: Tuple[Text, ...] = field(
+    text: tuple[Text, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Text",
@@ -5070,7 +5070,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    condition: Tuple[Condition, ...] = field(
+    condition: tuple[Condition, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Condition",
@@ -5090,7 +5090,7 @@ class StowageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    location: Tuple[UblCommonBasicComponents21Location, ...] = field(
+    location: tuple[UblCommonBasicComponents21Location, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Location",
@@ -5098,7 +5098,7 @@ class StowageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+    measurement_dimension: tuple[MeasurementDimension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
@@ -5443,7 +5443,7 @@ class ConsumptionPointType:
             "required": True,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -5499,7 +5499,7 @@ class ConsumptionPointType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    utility_meter: Tuple[UtilityMeter, ...] = field(
+    utility_meter: tuple[UtilityMeter, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "UtilityMeter",
@@ -5511,7 +5511,7 @@ class ConsumptionPointType:
 
 @dataclass(frozen=True)
 class ContractExtensionType:
-    options_description: Tuple[OptionsDescription, ...] = field(
+    options_description: tuple[OptionsDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OptionsDescription",
@@ -5543,7 +5543,7 @@ class ContractExtensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    renewal: Tuple[Renewal, ...] = field(
+    renewal: tuple[Renewal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Renewal",
@@ -5581,7 +5581,7 @@ class CorporateRegistrationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    jurisdiction_region_address: Tuple[JurisdictionRegionAddress, ...] = field(
+    jurisdiction_region_address: tuple[JurisdictionRegionAddress, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "JurisdictionRegionAddress",
@@ -5650,7 +5650,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    xpath: Tuple[Xpath, ...] = field(
+    xpath: tuple[Xpath, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "XPath",
@@ -5690,7 +5690,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_description: Tuple[DocumentDescription, ...] = field(
+    document_description: tuple[DocumentDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentDescription",
@@ -5770,7 +5770,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -5778,7 +5778,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    conditions: Tuple[Conditions, ...] = field(
+    conditions: tuple[Conditions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Conditions",
@@ -5826,7 +5826,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_period: Tuple[ValidityPeriod, ...] = field(
+    validity_period: tuple[ValidityPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
@@ -5842,7 +5842,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    subsidiary_location: Tuple["SubsidiaryLocation", ...] = field(
+    subsidiary_location: tuple["SubsidiaryLocation", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubsidiaryLocation",
@@ -5850,7 +5850,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    location_coordinate: Tuple[LocationCoordinate, ...] = field(
+    location_coordinate: tuple[LocationCoordinate, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "LocationCoordinate",
@@ -5878,7 +5878,7 @@ class LotIdentificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    additional_item_property: Tuple[AdditionalItemProperty, ...] = field(
+    additional_item_property: tuple[AdditionalItemProperty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalItemProperty",
@@ -5906,7 +5906,7 @@ class ResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -5930,7 +5930,7 @@ class ResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    status: Tuple[Status, ...] = field(
+    status: tuple[Status, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Status",
@@ -5974,7 +5974,7 @@ class TaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    jurisdiction_region_address: Tuple[JurisdictionRegionAddress, ...] = field(
+    jurisdiction_region_address: tuple[JurisdictionRegionAddress, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "JurisdictionRegionAddress",
@@ -5986,7 +5986,7 @@ class TaxSchemeType:
 
 @dataclass(frozen=True)
 class TradingTermsType:
-    information: Tuple[Information, ...] = field(
+    information: tuple[Information, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Information",
@@ -6638,7 +6638,7 @@ class BudgetAccountLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    budget_account: Tuple[BudgetAccount, ...] = field(
+    budget_account: tuple[BudgetAccount, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BudgetAccount",
@@ -6677,7 +6677,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -6781,7 +6781,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    consumption_report_reference: Tuple[ConsumptionReportReference, ...] = (
+    consumption_report_reference: tuple[ConsumptionReportReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -6791,7 +6791,7 @@ class ConsumptionReportType:
             },
         )
     )
-    consumption_history: Tuple[ConsumptionHistory, ...] = field(
+    consumption_history: tuple[ConsumptionHistory, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConsumptionHistory",
@@ -6859,7 +6859,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -6875,7 +6875,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -6891,7 +6891,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_document_reference: Tuple[ContractDocumentReference, ...] = field(
+    contract_document_reference: tuple[ContractDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContractDocumentReference",
@@ -7024,7 +7024,7 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -7040,7 +7040,7 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    current_status: Tuple[CurrentStatus, ...] = field(
+    current_status: tuple[CurrentStatus, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CurrentStatus",
@@ -7048,7 +7048,7 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contact: Tuple[Contact, ...] = field(
+    contact: tuple[Contact, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Contact",
@@ -7116,7 +7116,7 @@ class ItemInstanceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    additional_item_property: Tuple[AdditionalItemProperty, ...] = field(
+    additional_item_property: tuple[AdditionalItemProperty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalItemProperty",
@@ -7197,7 +7197,7 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    ships_requirements: Tuple[ShipsRequirements, ...] = field(
+    ships_requirements: tuple[ShipsRequirements, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShipsRequirements",
@@ -7352,7 +7352,7 @@ class PartyTaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    exemption_reason: Tuple[ExemptionReason, ...] = field(
+    exemption_reason: tuple[ExemptionReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ExemptionReason",
@@ -7429,7 +7429,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_exemption_reason: Tuple[TaxExemptionReason, ...] = field(
+    tax_exemption_reason: tuple[TaxExemptionReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxExemptionReason",
@@ -7475,7 +7475,7 @@ class TenderRequirementType:
             "required": True,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -7511,7 +7511,7 @@ class TransactionConditionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -7519,7 +7519,7 @@ class TransactionConditionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -7547,7 +7547,7 @@ class WorkPhaseReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    work_phase: Tuple[WorkPhase, ...] = field(
+    work_phase: tuple[WorkPhase, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "WorkPhase",
@@ -7579,7 +7579,7 @@ class WorkPhaseReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    work_order_document_reference: Tuple[WorkOrderDocumentReference, ...] = (
+    work_order_document_reference: tuple[WorkOrderDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -7856,7 +7856,7 @@ class DutyType:
 
 @dataclass(frozen=True)
 class EnergyWaterSupplyType:
-    consumption_report: Tuple[ConsumptionReport, ...] = field(
+    consumption_report: tuple[ConsumptionReport, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConsumptionReport",
@@ -7864,7 +7864,7 @@ class EnergyWaterSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    energy_tax_report: Tuple[EnergyTaxReport, ...] = field(
+    energy_tax_report: tuple[EnergyTaxReport, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EnergyTaxReport",
@@ -7872,7 +7872,7 @@ class EnergyWaterSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    consumption_average: Tuple[ConsumptionAverage, ...] = field(
+    consumption_average: tuple[ConsumptionAverage, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConsumptionAverage",
@@ -7880,7 +7880,7 @@ class EnergyWaterSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    energy_water_consumption_correction: Tuple[
+    energy_water_consumption_correction: tuple[
         EnergyWaterConsumptionCorrection, ...
     ] = field(
         default_factory=tuple,
@@ -7914,7 +7914,7 @@ class EnvironmentalEmissionType:
             "required": True,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -7922,7 +7922,7 @@ class EnvironmentalEmissionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    emission_calculation_method: Tuple[EmissionCalculationMethod, ...] = field(
+    emission_calculation_method: tuple[EmissionCalculationMethod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EmissionCalculationMethod",
@@ -8060,7 +8060,7 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_note: Tuple[PaymentNote, ...] = field(
+    payment_note: tuple[PaymentNote, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentNote",
@@ -8104,7 +8104,7 @@ class FrameworkAgreementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    justification: Tuple[Justification, ...] = field(
+    justification: tuple[Justification, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Justification",
@@ -8112,7 +8112,7 @@ class FrameworkAgreementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    frequency: Tuple[Frequency, ...] = field(
+    frequency: tuple[Frequency, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Frequency",
@@ -8128,7 +8128,7 @@ class FrameworkAgreementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    subsequent_process_tender_requirement: Tuple[
+    subsequent_process_tender_requirement: tuple[
         SubsequentProcessTenderRequirement, ...
     ] = field(
         default_factory=tuple,
@@ -8151,7 +8151,7 @@ class LineResponseType:
             "required": True,
         },
     )
-    response: Tuple[Response, ...] = field(
+    response: tuple[Response, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Response",
@@ -8234,7 +8234,7 @@ class ProjectReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    work_phase_reference: Tuple[WorkPhaseReference, ...] = field(
+    work_phase_reference: tuple[WorkPhaseReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "WorkPhaseReference",
@@ -8288,7 +8288,7 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    monetary_scope: Tuple[MonetaryScope, ...] = field(
+    monetary_scope: tuple[MonetaryScope, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MonetaryScope",
@@ -8306,7 +8306,7 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    applicable_tax_category: Tuple[ApplicableTaxCategory, ...] = field(
+    applicable_tax_category: tuple[ApplicableTaxCategory, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ApplicableTaxCategory",
@@ -8439,7 +8439,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -8673,7 +8673,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_means_id: Tuple[PaymentMeansId, ...] = field(
+    payment_means_id: tuple[PaymentMeansId, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentMeansID",
@@ -8689,7 +8689,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -8941,7 +8941,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    identity_document_reference: Tuple[IdentityDocumentReference, ...] = field(
+    identity_document_reference: tuple[IdentityDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "IdentityDocumentReference",
@@ -8994,7 +8994,7 @@ class TaxTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_subtotal: Tuple[TaxSubtotal, ...] = field(
+    tax_subtotal: tuple[TaxSubtotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxSubtotal",
@@ -9128,7 +9128,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -9136,7 +9136,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    technical_committee_description: Tuple[
+    technical_committee_description: tuple[
         TechnicalCommitteeDescription, ...
     ] = field(
         default_factory=tuple,
@@ -9146,7 +9146,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    low_tenders_description: Tuple[LowTendersDescription, ...] = field(
+    low_tenders_description: tuple[LowTendersDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "LowTendersDescription",
@@ -9162,7 +9162,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    prize_description: Tuple[PrizeDescription, ...] = field(
+    prize_description: tuple[PrizeDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PrizeDescription",
@@ -9170,7 +9170,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_description: Tuple[PaymentDescription, ...] = field(
+    payment_description: tuple[PaymentDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentDescription",
@@ -9194,7 +9194,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    awarding_criterion: Tuple[AwardingCriterion, ...] = field(
+    awarding_criterion: tuple[AwardingCriterion, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AwardingCriterion",
@@ -9202,7 +9202,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    technical_committee_person: Tuple[TechnicalCommitteePerson, ...] = field(
+    technical_committee_person: tuple[TechnicalCommitteePerson, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TechnicalCommitteePerson",
@@ -9223,7 +9223,7 @@ class OnAccountPaymentType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -9231,7 +9231,7 @@ class OnAccountPaymentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -9292,7 +9292,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    party_identification: Tuple[PartyIdentification, ...] = field(
+    party_identification: tuple[PartyIdentification, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PartyIdentification",
@@ -9300,7 +9300,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    party_name: Tuple[PartyName, ...] = field(
+    party_name: tuple[PartyName, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PartyName",
@@ -9332,7 +9332,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    party_tax_scheme: Tuple[PartyTaxScheme, ...] = field(
+    party_tax_scheme: tuple[PartyTaxScheme, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PartyTaxScheme",
@@ -9340,7 +9340,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    party_legal_entity: Tuple["PartyLegalEntity", ...] = field(
+    party_legal_entity: tuple["PartyLegalEntity", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PartyLegalEntity",
@@ -9356,7 +9356,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    person: Tuple[Person, ...] = field(
+    person: tuple[Person, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Person",
@@ -9372,7 +9372,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    service_provider_party: Tuple["ServiceProviderParty", ...] = field(
+    service_provider_party: tuple["ServiceProviderParty", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ServiceProviderParty",
@@ -9380,7 +9380,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    power_of_attorney: Tuple["PowerOfAttorney", ...] = field(
+    power_of_attorney: tuple["PowerOfAttorney", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PowerOfAttorney",
@@ -9409,7 +9409,7 @@ class PriceExtensionType:
             "required": True,
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -9871,7 +9871,7 @@ class WitnessParty(PartyType):
 
 @dataclass(frozen=True)
 class AppealTermsType:
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -9926,7 +9926,7 @@ class ContractingPartyType1:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contracting_party_type: Tuple[ContractingPartyType, ...] = field(
+    contracting_party_type: tuple[ContractingPartyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContractingPartyType",
@@ -9934,7 +9934,7 @@ class ContractingPartyType1:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contracting_activity: Tuple[ContractingActivity, ...] = field(
+    contracting_activity: tuple[ContractingActivity, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContractingActivity",
@@ -9971,7 +9971,7 @@ class CustomerPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    additional_account_id: Tuple[AdditionalAccountId, ...] = field(
+    additional_account_id: tuple[AdditionalAccountId, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalAccountID",
@@ -10116,7 +10116,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    instructions: Tuple[Instructions, ...] = field(
+    instructions: tuple[Instructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Instructions",
@@ -10156,7 +10156,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    notify_party: Tuple[NotifyParty, ...] = field(
+    notify_party: tuple[NotifyParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NotifyParty",
@@ -10232,7 +10232,7 @@ class DocumentResponseType:
             "required": True,
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -10257,7 +10257,7 @@ class DocumentResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    line_response: Tuple[LineResponse, ...] = field(
+    line_response: tuple[LineResponse, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "LineResponse",
@@ -10269,7 +10269,7 @@ class DocumentResponseType:
 
 @dataclass(frozen=True)
 class EconomicOperatorShortListType:
-    limitation_description: Tuple[LimitationDescription, ...] = field(
+    limitation_description: tuple[LimitationDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "LimitationDescription",
@@ -10301,7 +10301,7 @@ class EconomicOperatorShortListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pre_selected_party: Tuple[PreSelectedParty, ...] = field(
+    pre_selected_party: tuple[PreSelectedParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PreSelectedParty",
@@ -10369,7 +10369,7 @@ class EvidenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -10377,7 +10377,7 @@ class EvidenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    candidate_statement: Tuple[CandidateStatement, ...] = field(
+    candidate_statement: tuple[CandidateStatement, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CandidateStatement",
@@ -10437,7 +10437,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    additional_information: Tuple[AdditionalInformation, ...] = field(
+    additional_information: tuple[AdditionalInformation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalInformation",
@@ -10561,7 +10561,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    secondary_hazard: Tuple[SecondaryHazard, ...] = field(
+    secondary_hazard: tuple[SecondaryHazard, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SecondaryHazard",
@@ -10569,7 +10569,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    hazardous_goods_transit: Tuple[HazardousGoodsTransit, ...] = field(
+    hazardous_goods_transit: tuple[HazardousGoodsTransit, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HazardousGoodsTransit",
@@ -10593,7 +10593,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_temperature: Tuple[AdditionalTemperature, ...] = field(
+    additional_temperature: tuple[AdditionalTemperature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalTemperature",
@@ -10692,7 +10692,7 @@ class ItemIdentificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    physical_attribute: Tuple[PhysicalAttribute, ...] = field(
+    physical_attribute: tuple[PhysicalAttribute, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PhysicalAttribute",
@@ -10700,7 +10700,7 @@ class ItemIdentificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+    measurement_dimension: tuple[MeasurementDimension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
@@ -10749,7 +10749,7 @@ class NotificationRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    notify_party: Tuple[NotifyParty, ...] = field(
+    notify_party: tuple[NotifyParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NotifyParty",
@@ -10757,7 +10757,7 @@ class NotificationRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    notification_period: Tuple[NotificationPeriod, ...] = field(
+    notification_period: tuple[NotificationPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NotificationPeriod",
@@ -10765,7 +10765,7 @@ class NotificationRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    notification_location: Tuple[NotificationLocation, ...] = field(
+    notification_location: tuple[NotificationLocation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NotificationLocation",
@@ -10851,7 +10851,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    clause: Tuple[Clause, ...] = field(
+    clause: tuple[Clause, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Clause",
@@ -10963,7 +10963,7 @@ class PowerOfAttorneyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -10988,7 +10988,7 @@ class PowerOfAttorneyType:
             "required": True,
         },
     )
-    witness_party: Tuple[WitnessParty, ...] = field(
+    witness_party: tuple[WitnessParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "WitnessParty",
@@ -10996,7 +10996,7 @@ class PowerOfAttorneyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    mandate_document_reference: Tuple[MandateDocumentReference, ...] = field(
+    mandate_document_reference: tuple[MandateDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MandateDocumentReference",
@@ -11092,7 +11092,7 @@ class ServiceProviderPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    service_type: Tuple[ServiceType, ...] = field(
+    service_type: tuple[ServiceType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ServiceType",
@@ -11150,7 +11150,7 @@ class SignatureType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -11234,7 +11234,7 @@ class SupplierPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    additional_account_id: Tuple[AdditionalAccountId, ...] = field(
+    additional_account_id: tuple[AdditionalAccountId, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalAccountID",
@@ -11310,7 +11310,7 @@ class TradeFinancingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -11335,7 +11335,7 @@ class TradeFinancingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    clause: Tuple[Clause, ...] = field(
+    clause: tuple[Clause, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Clause",
@@ -11363,7 +11363,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registration_nationality: Tuple[RegistrationNationality, ...] = field(
+    registration_nationality: tuple[RegistrationNationality, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RegistrationNationality",
@@ -11443,7 +11443,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+    measurement_dimension: tuple[MeasurementDimension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
@@ -11769,7 +11769,7 @@ class CertificateType:
             },
         )
     )
-    remarks: Tuple[Remarks, ...] = field(
+    remarks: tuple[Remarks, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Remarks",
@@ -11786,7 +11786,7 @@ class CertificateType:
             "required": True,
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -11794,7 +11794,7 @@ class CertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -11830,7 +11830,7 @@ class CompletedTaskType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -11838,7 +11838,7 @@ class CompletedTaskType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    evidence_supplied: Tuple[EvidenceSupplied, ...] = field(
+    evidence_supplied: tuple[EvidenceSupplied, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EvidenceSupplied",
@@ -11884,7 +11884,7 @@ class EndorsementType:
             "required": True,
         },
     )
-    remarks: Tuple[Remarks, ...] = field(
+    remarks: tuple[Remarks, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Remarks",
@@ -11901,7 +11901,7 @@ class EndorsementType:
             "required": True,
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -11923,7 +11923,7 @@ class EvaluationCriterionType:
             },
         )
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -11955,7 +11955,7 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    expression: Tuple[Expression, ...] = field(
+    expression: tuple[Expression, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Expression",
@@ -11971,7 +11971,7 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    suggested_evidence: Tuple[SuggestedEvidence, ...] = field(
+    suggested_evidence: tuple[SuggestedEvidence, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SuggestedEvidence",
@@ -12093,7 +12093,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shareholder_party: Tuple[ShareholderParty, ...] = field(
+    shareholder_party: tuple[ShareholderParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShareholderParty",
@@ -12146,7 +12146,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    instruction_note: Tuple[InstructionNote, ...] = field(
+    instruction_note: tuple[InstructionNote, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InstructionNote",
@@ -12154,7 +12154,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_id: Tuple[PaymentId, ...] = field(
+    payment_id: tuple[PaymentId, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentID",
@@ -12214,7 +12214,7 @@ class PaymentMeansType:
 
 @dataclass(frozen=True)
 class TendererRequirementType:
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -12232,7 +12232,7 @@ class TendererRequirementType:
             },
         )
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -12248,7 +12248,7 @@ class TendererRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    suggested_evidence: Tuple[SuggestedEvidence, ...] = field(
+    suggested_evidence: tuple[SuggestedEvidence, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SuggestedEvidence",
@@ -12278,7 +12278,7 @@ class TenderingProcessType:
             },
         )
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -12286,7 +12286,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    negotiation_description: Tuple[NegotiationDescription, ...] = field(
+    negotiation_description: tuple[NegotiationDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NegotiationDescription",
@@ -12398,7 +12398,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    notice_document_reference: Tuple[NoticeDocumentReference, ...] = field(
+    notice_document_reference: tuple[NoticeDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NoticeDocumentReference",
@@ -12406,7 +12406,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -12416,7 +12416,7 @@ class TenderingProcessType:
             },
         )
     )
-    process_justification: Tuple[ProcessJustification, ...] = field(
+    process_justification: tuple[ProcessJustification, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcessJustification",
@@ -12432,7 +12432,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    open_tender_event: Tuple[OpenTenderEvent, ...] = field(
+    open_tender_event: tuple[OpenTenderEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OpenTenderEvent",
@@ -12569,7 +12569,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    allowance_charge_reason: Tuple[AllowanceChargeReason, ...] = field(
+    allowance_charge_reason: tuple[AllowanceChargeReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceChargeReason",
@@ -12642,7 +12642,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_category: Tuple[TaxCategory, ...] = field(
+    tax_category: tuple[TaxCategory, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxCategory",
@@ -12658,7 +12658,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_means: Tuple[PaymentMeans, ...] = field(
+    payment_means: tuple[PaymentMeans, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentMeans",
@@ -12670,7 +12670,7 @@ class AllowanceChargeType:
 
 @dataclass(frozen=True)
 class ItemType:
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -12718,7 +12718,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    additional_information: Tuple[AdditionalInformation, ...] = field(
+    additional_information: tuple[AdditionalInformation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalInformation",
@@ -12726,7 +12726,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    keyword: Tuple[Keyword, ...] = field(
+    keyword: tuple[Keyword, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Keyword",
@@ -12734,7 +12734,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    brand_name: Tuple[BrandName, ...] = field(
+    brand_name: tuple[BrandName, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BrandName",
@@ -12742,7 +12742,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    model_name: Tuple[ModelName, ...] = field(
+    model_name: tuple[ModelName, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ModelName",
@@ -12766,7 +12766,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    manufacturers_item_identification: Tuple[
+    manufacturers_item_identification: tuple[
         ManufacturersItemIdentification, ...
     ] = field(
         default_factory=tuple,
@@ -12794,7 +12794,7 @@ class ItemType:
             },
         )
     )
-    additional_item_identification: Tuple[
+    additional_item_identification: tuple[
         AdditionalItemIdentification, ...
     ] = field(
         default_factory=tuple,
@@ -12812,7 +12812,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_specification_document_reference: Tuple[
+    item_specification_document_reference: tuple[
         ItemSpecificationDocumentReference, ...
     ] = field(
         default_factory=tuple,
@@ -12830,7 +12830,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    commodity_classification: Tuple[CommodityClassification, ...] = field(
+    commodity_classification: tuple[CommodityClassification, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CommodityClassification",
@@ -12838,7 +12838,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transaction_conditions: Tuple[TransactionConditions, ...] = field(
+    transaction_conditions: tuple[TransactionConditions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransactionConditions",
@@ -12846,7 +12846,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    hazardous_item: Tuple[HazardousItem, ...] = field(
+    hazardous_item: tuple[HazardousItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HazardousItem",
@@ -12854,7 +12854,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    classified_tax_category: Tuple[ClassifiedTaxCategory, ...] = field(
+    classified_tax_category: tuple[ClassifiedTaxCategory, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ClassifiedTaxCategory",
@@ -12862,7 +12862,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_item_property: Tuple[AdditionalItemProperty, ...] = field(
+    additional_item_property: tuple[AdditionalItemProperty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalItemProperty",
@@ -12870,7 +12870,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    manufacturer_party: Tuple[ManufacturerParty, ...] = field(
+    manufacturer_party: tuple[ManufacturerParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ManufacturerParty",
@@ -12888,7 +12888,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    origin_address: Tuple[OriginAddress, ...] = field(
+    origin_address: tuple[OriginAddress, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OriginAddress",
@@ -12896,7 +12896,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_instance: Tuple[ItemInstance, ...] = field(
+    item_instance: tuple[ItemInstance, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ItemInstance",
@@ -12904,7 +12904,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    certificate: Tuple[Certificate, ...] = field(
+    certificate: tuple[Certificate, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Certificate",
@@ -12912,7 +12912,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    dimension: Tuple[Dimension, ...] = field(
+    dimension: tuple[Dimension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Dimension",
@@ -12932,7 +12932,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    personal_situation: Tuple[PersonalSituation, ...] = field(
+    personal_situation: tuple[PersonalSituation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PersonalSituation",
@@ -12994,7 +12994,7 @@ class QualifyingPartyType:
             },
         )
     )
-    technical_capability: Tuple[TechnicalCapability, ...] = field(
+    technical_capability: tuple[TechnicalCapability, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TechnicalCapability",
@@ -13002,7 +13002,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    financial_capability: Tuple[FinancialCapability, ...] = field(
+    financial_capability: tuple[FinancialCapability, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FinancialCapability",
@@ -13010,7 +13010,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    completed_task: Tuple[CompletedTask, ...] = field(
+    completed_task: tuple[CompletedTask, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CompletedTask",
@@ -13018,7 +13018,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    declaration: Tuple[Declaration, ...] = field(
+    declaration: tuple[Declaration, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Declaration",
@@ -13062,7 +13062,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    personal_situation: Tuple[PersonalSituation, ...] = field(
+    personal_situation: tuple[PersonalSituation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PersonalSituation",
@@ -13086,7 +13086,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -13094,7 +13094,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    required_business_classification_scheme: Tuple[
+    required_business_classification_scheme: tuple[
         RequiredBusinessClassificationScheme, ...
     ] = field(
         default_factory=tuple,
@@ -13104,7 +13104,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    technical_evaluation_criterion: Tuple[
+    technical_evaluation_criterion: tuple[
         TechnicalEvaluationCriterion, ...
     ] = field(
         default_factory=tuple,
@@ -13114,7 +13114,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    financial_evaluation_criterion: Tuple[
+    financial_evaluation_criterion: tuple[
         FinancialEvaluationCriterion, ...
     ] = field(
         default_factory=tuple,
@@ -13124,7 +13124,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    specific_tenderer_requirement: Tuple[SpecificTendererRequirement, ...] = (
+    specific_tenderer_requirement: tuple[SpecificTendererRequirement, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -13134,7 +13134,7 @@ class TendererQualificationRequestType:
             },
         )
     )
-    economic_operator_role: Tuple[EconomicOperatorRole, ...] = field(
+    economic_operator_role: tuple[EconomicOperatorRole, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EconomicOperatorRole",
@@ -13223,7 +13223,7 @@ class BillingReferenceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -13281,7 +13281,7 @@ class DeliveryTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    special_terms: Tuple[SpecialTerms, ...] = field(
+    special_terms: tuple[SpecialTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SpecialTerms",
@@ -13299,7 +13299,7 @@ class DeliveryTermsType:
             },
         )
     )
-    loss_risk: Tuple[LossRisk, ...] = field(
+    loss_risk: tuple[LossRisk, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "LossRisk",
@@ -13352,7 +13352,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -13384,7 +13384,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    backorder_reason: Tuple[BackorderReason, ...] = field(
+    backorder_reason: tuple[BackorderReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BackorderReason",
@@ -13400,7 +13400,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    outstanding_reason: Tuple[OutstandingReason, ...] = field(
+    outstanding_reason: tuple[OutstandingReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OutstandingReason",
@@ -13416,7 +13416,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_line_reference: Tuple[OrderLineReference, ...] = field(
+    order_line_reference: tuple[OrderLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrderLineReference",
@@ -13425,7 +13425,7 @@ class DespatchLineType:
             "min_occurs": 1,
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -13442,7 +13442,7 @@ class DespatchLineType:
             "required": True,
         },
     )
-    shipment: Tuple["Shipment", ...] = field(
+    shipment: tuple["Shipment", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Shipment",
@@ -13472,7 +13472,7 @@ class EventLineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    retail_planned_impact: Tuple[RetailPlannedImpact, ...] = field(
+    retail_planned_impact: tuple[RetailPlannedImpact, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RetailPlannedImpact",
@@ -13502,7 +13502,7 @@ class ExceptionCriteriaLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -13580,7 +13580,7 @@ class ExceptionCriteriaLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    supply_item: Tuple[SupplyItem, ...] = field(
+    supply_item: tuple[SupplyItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SupplyItem",
@@ -13612,7 +13612,7 @@ class ExceptionNotificationLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -13620,7 +13620,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -13704,7 +13704,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -13742,7 +13742,7 @@ class InstructionForReturnsLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -13789,7 +13789,7 @@ class InventoryReportLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -13860,7 +13860,7 @@ class PerformanceDataLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -13923,7 +13923,7 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    price_change_reason: Tuple[PriceChangeReason, ...] = field(
+    price_change_reason: tuple[PriceChangeReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PriceChangeReason",
@@ -13955,7 +13955,7 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_period: Tuple[ValidityPeriod, ...] = field(
+    validity_period: tuple[ValidityPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
@@ -13971,7 +13971,7 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -14008,7 +14008,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -14056,7 +14056,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reject_reason: Tuple[RejectReason, ...] = field(
+    reject_reason: tuple[RejectReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RejectReason",
@@ -14120,7 +14120,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_line_reference: Tuple[DespatchLineReference, ...] = field(
+    despatch_line_reference: tuple[DespatchLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DespatchLineReference",
@@ -14128,7 +14128,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -14136,7 +14136,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Tuple[Item, ...] = field(
+    item: tuple[Item, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Item",
@@ -14144,7 +14144,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment: Tuple["Shipment", ...] = field(
+    shipment: tuple["Shipment", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Shipment",
@@ -14165,7 +14165,7 @@ class StockAvailabilityReportLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -14395,7 +14395,7 @@ class BillingReferenceType:
             },
         )
     )
-    billing_reference_line: Tuple[BillingReferenceLine, ...] = field(
+    billing_reference_line: tuple[BillingReferenceLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReferenceLine",
@@ -14478,7 +14478,7 @@ class ConsignmentType:
             },
         )
     )
-    summary_description: Tuple[SummaryDescription, ...] = field(
+    summary_description: tuple[SummaryDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SummaryDescription",
@@ -14504,7 +14504,7 @@ class ConsignmentType:
             },
         )
     )
-    tariff_description: Tuple[TariffDescription, ...] = field(
+    tariff_description: tuple[TariffDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TariffDescription",
@@ -14584,7 +14584,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    remarks: Tuple[Remarks, ...] = field(
+    remarks: tuple[Remarks, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Remarks",
@@ -14664,7 +14664,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    carrier_service_instructions: Tuple[CarrierServiceInstructions, ...] = (
+    carrier_service_instructions: tuple[CarrierServiceInstructions, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -14674,7 +14674,7 @@ class ConsignmentType:
             },
         )
     )
-    customs_clearance_service_instructions: Tuple[
+    customs_clearance_service_instructions: tuple[
         CustomsClearanceServiceInstructions, ...
     ] = field(
         default_factory=tuple,
@@ -14684,7 +14684,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    forwarder_service_instructions: Tuple[
+    forwarder_service_instructions: tuple[
         ForwarderServiceInstructions, ...
     ] = field(
         default_factory=tuple,
@@ -14694,7 +14694,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    special_service_instructions: Tuple[SpecialServiceInstructions, ...] = (
+    special_service_instructions: tuple[SpecialServiceInstructions, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -14728,7 +14728,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    handling_instructions: Tuple[HandlingInstructions, ...] = field(
+    handling_instructions: tuple[HandlingInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HandlingInstructions",
@@ -14736,7 +14736,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    information: Tuple[Information, ...] = field(
+    information: tuple[Information, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Information",
@@ -14798,7 +14798,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    special_instructions: Tuple[SpecialInstructions, ...] = field(
+    special_instructions: tuple[SpecialInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SpecialInstructions",
@@ -14814,7 +14814,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    delivery_instructions: Tuple[DeliveryInstructions, ...] = field(
+    delivery_instructions: tuple[DeliveryInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryInstructions",
@@ -14838,7 +14838,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    haulage_instructions: Tuple[HaulageInstructions, ...] = field(
+    haulage_instructions: tuple[HaulageInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HaulageInstructions",
@@ -14870,7 +14870,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consolidated_shipment: Tuple["ConsolidatedShipment", ...] = field(
+    consolidated_shipment: tuple["ConsolidatedShipment", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConsolidatedShipment",
@@ -14878,7 +14878,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    customs_declaration: Tuple[CustomsDeclaration, ...] = field(
+    customs_declaration: tuple[CustomsDeclaration, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CustomsDeclaration",
@@ -14926,7 +14926,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    status: Tuple[Status, ...] = field(
+    status: tuple[Status, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Status",
@@ -14934,7 +14934,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    child_consignment: Tuple["ChildConsignment", ...] = field(
+    child_consignment: tuple["ChildConsignment", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ChildConsignment",
@@ -15096,7 +15096,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transit_country: Tuple[TransitCountry, ...] = field(
+    transit_country: tuple[TransitCountry, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransitCountry",
@@ -15112,7 +15112,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_event: Tuple["TransportEvent", ...] = field(
+    transport_event: tuple["TransportEvent", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEvent",
@@ -15180,7 +15180,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+    freight_allowance_charge: tuple[FreightAllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
@@ -15188,7 +15188,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    extra_allowance_charge: Tuple[ExtraAllowanceCharge, ...] = field(
+    extra_allowance_charge: tuple[ExtraAllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ExtraAllowanceCharge",
@@ -15196,7 +15196,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    main_carriage_shipment_stage: Tuple["MainCarriageShipmentStage", ...] = (
+    main_carriage_shipment_stage: tuple["MainCarriageShipmentStage", ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -15206,7 +15206,7 @@ class ConsignmentType:
             },
         )
     )
-    pre_carriage_shipment_stage: Tuple["PreCarriageShipmentStage", ...] = (
+    pre_carriage_shipment_stage: tuple["PreCarriageShipmentStage", ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -15216,7 +15216,7 @@ class ConsignmentType:
             },
         )
     )
-    on_carriage_shipment_stage: Tuple["OnCarriageShipmentStage", ...] = field(
+    on_carriage_shipment_stage: tuple["OnCarriageShipmentStage", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OnCarriageShipmentStage",
@@ -15224,7 +15224,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_handling_unit: Tuple["TransportHandlingUnit", ...] = field(
+    transport_handling_unit: tuple["TransportHandlingUnit", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportHandlingUnit",
@@ -15398,7 +15398,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    notify_party: Tuple[NotifyParty, ...] = field(
+    notify_party: tuple[NotifyParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NotifyParty",
@@ -15414,7 +15414,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+    delivery_terms: tuple[DeliveryTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
@@ -15461,7 +15461,7 @@ class MiscellaneousEventType:
             },
         )
     )
-    event_line_item: Tuple[EventLineItem, ...] = field(
+    event_line_item: tuple[EventLineItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EventLineItem",
@@ -15505,7 +15505,7 @@ class SalesItemType:
             "required": True,
         },
     )
-    activity_property: Tuple[ActivityProperty, ...] = field(
+    activity_property: tuple[ActivityProperty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ActivityProperty",
@@ -15513,7 +15513,7 @@ class SalesItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_exclusive_price: Tuple[TaxExclusivePrice, ...] = field(
+    tax_exclusive_price: tuple[TaxExclusivePrice, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxExclusivePrice",
@@ -15521,7 +15521,7 @@ class SalesItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_inclusive_price: Tuple[TaxInclusivePrice, ...] = field(
+    tax_inclusive_price: tuple[TaxInclusivePrice, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxInclusivePrice",
@@ -15681,7 +15681,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exchange_rate: Tuple[ExchangeRate, ...] = field(
+    exchange_rate: tuple[ExchangeRate, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ExchangeRate",
@@ -15689,7 +15689,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -15697,7 +15697,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -15705,7 +15705,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    call_duty: Tuple[CallDuty, ...] = field(
+    call_duty: tuple[CallDuty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CallDuty",
@@ -15713,7 +15713,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    time_duty: Tuple[TimeDuty, ...] = field(
+    time_duty: tuple[TimeDuty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TimeDuty",
@@ -15725,7 +15725,7 @@ class TelecommunicationsServiceType:
 
 @dataclass(frozen=True)
 class TransportExecutionTermsType:
-    transport_user_special_terms: Tuple[TransportUserSpecialTerms, ...] = (
+    transport_user_special_terms: tuple[TransportUserSpecialTerms, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -15735,7 +15735,7 @@ class TransportExecutionTermsType:
             },
         )
     )
-    transport_service_provider_special_terms: Tuple[
+    transport_service_provider_special_terms: tuple[
         TransportServiceProviderSpecialTerms, ...
     ] = field(
         default_factory=tuple,
@@ -15745,7 +15745,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    change_conditions: Tuple[ChangeConditions, ...] = field(
+    change_conditions: tuple[ChangeConditions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ChangeConditions",
@@ -15753,7 +15753,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -15761,7 +15761,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+    delivery_terms: tuple[DeliveryTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
@@ -15793,7 +15793,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    environmental_emission: Tuple[EnvironmentalEmission, ...] = field(
+    environmental_emission: tuple[EnvironmentalEmission, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EnvironmentalEmission",
@@ -15801,7 +15801,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    notification_requirement: Tuple[NotificationRequirement, ...] = field(
+    notification_requirement: tuple[NotificationRequirement, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "NotificationRequirement",
@@ -15948,7 +15948,7 @@ class ActivityDataLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sales_item: Tuple[SalesItem, ...] = field(
+    sales_item: tuple[SalesItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SalesItem",
@@ -16006,7 +16006,7 @@ class ConsumptionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -16014,7 +16014,7 @@ class ConsumptionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -16022,7 +16022,7 @@ class ConsumptionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -16068,7 +16068,7 @@ class ForecastLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -16122,7 +16122,7 @@ class ForecastRevisionLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -16130,7 +16130,7 @@ class ForecastRevisionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -16209,7 +16209,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -16401,7 +16401,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    item: Tuple[Item, ...] = field(
+    item: tuple[Item, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Item",
@@ -16409,7 +16409,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    goods_item_container: Tuple["GoodsItemContainer", ...] = field(
+    goods_item_container: tuple["GoodsItemContainer", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "GoodsItemContainer",
@@ -16417,7 +16417,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+    freight_allowance_charge: tuple[FreightAllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
@@ -16425,7 +16425,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    invoice_line: Tuple["InvoiceLine", ...] = field(
+    invoice_line: tuple["InvoiceLine", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoiceLine",
@@ -16433,7 +16433,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    temperature: Tuple[Temperature, ...] = field(
+    temperature: tuple[Temperature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Temperature",
@@ -16441,7 +16441,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contained_goods_item: Tuple["ContainedGoodsItem", ...] = field(
+    contained_goods_item: tuple["ContainedGoodsItem", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContainedGoodsItem",
@@ -16481,7 +16481,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+    measurement_dimension: tuple[MeasurementDimension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
@@ -16489,7 +16489,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    containing_package: Tuple["ContainingPackage", ...] = field(
+    containing_package: tuple["ContainingPackage", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContainingPackage",
@@ -16559,7 +16559,7 @@ class ItemInformationRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    period: Tuple[Period, ...] = field(
+    period: tuple[Period, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Period",
@@ -16568,7 +16568,7 @@ class ItemInformationRequestLineType:
             "min_occurs": 1,
         },
     )
-    sales_item: Tuple[SalesItem, ...] = field(
+    sales_item: tuple[SalesItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SalesItem",
@@ -16589,7 +16589,7 @@ class PromotionalSpecificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    promotional_event_line_item: Tuple[PromotionalEventLineItem, ...] = field(
+    promotional_event_line_item: tuple[PromotionalEventLineItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PromotionalEventLineItem",
@@ -16598,7 +16598,7 @@ class PromotionalSpecificationType:
             "min_occurs": 1,
         },
     )
-    event_tactic: Tuple[EventTactic, ...] = field(
+    event_tactic: tuple[EventTactic, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EventTactic",
@@ -16619,7 +16619,7 @@ class ReminderLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -16701,7 +16701,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reminder_period: Tuple[ReminderPeriod, ...] = field(
+    reminder_period: tuple[ReminderPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReminderPeriod",
@@ -16709,7 +16709,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Tuple[BillingReference, ...] = field(
+    billing_reference: tuple[BillingReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReference",
@@ -16738,7 +16738,7 @@ class RemittanceAdviceLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -16842,7 +16842,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    invoice_period: Tuple[InvoicePeriod, ...] = field(
+    invoice_period: tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
@@ -16850,7 +16850,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Tuple[BillingReference, ...] = field(
+    billing_reference: tuple[BillingReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReference",
@@ -16858,7 +16858,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -16887,7 +16887,7 @@ class StatementLineType:
             "required": True,
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -16953,7 +16953,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -17009,7 +17009,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    invoice_period: Tuple[InvoicePeriod, ...] = field(
+    invoice_period: tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
@@ -17017,7 +17017,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Tuple[BillingReference, ...] = field(
+    billing_reference: tuple[BillingReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReference",
@@ -17025,7 +17025,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -17041,7 +17041,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -17049,7 +17049,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    collected_payment: Tuple[CollectedPayment, ...] = field(
+    collected_payment: tuple[CollectedPayment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CollectedPayment",
@@ -17079,7 +17079,7 @@ class TelecommunicationsSupplyLineType:
             "required": True,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -17095,7 +17095,7 @@ class TelecommunicationsSupplyLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    exchange_rate: Tuple[ExchangeRate, ...] = field(
+    exchange_rate: tuple[ExchangeRate, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ExchangeRate",
@@ -17103,7 +17103,7 @@ class TelecommunicationsSupplyLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -17111,7 +17111,7 @@ class TelecommunicationsSupplyLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -17119,7 +17119,7 @@ class TelecommunicationsSupplyLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    telecommunications_service: Tuple[TelecommunicationsService, ...] = field(
+    telecommunications_service: tuple[TelecommunicationsService, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TelecommunicationsService",
@@ -17258,7 +17258,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    packing_material: Tuple[PackingMaterial, ...] = field(
+    packing_material: tuple[PackingMaterial, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PackingMaterial",
@@ -17274,7 +17274,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contained_package: Tuple["ContainedPackage", ...] = field(
+    contained_package: tuple["ContainedPackage", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContainedPackage",
@@ -17292,7 +17292,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    goods_item: Tuple[GoodsItem, ...] = field(
+    goods_item: tuple[GoodsItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "GoodsItem",
@@ -17300,7 +17300,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+    measurement_dimension: tuple[MeasurementDimension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
@@ -17308,7 +17308,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_unit: Tuple[DeliveryUnit, ...] = field(
+    delivery_unit: tuple[DeliveryUnit, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryUnit",
@@ -17381,7 +17381,7 @@ class PromotionalEventType:
             },
         )
     )
-    promotional_specification: Tuple[PromotionalSpecification, ...] = field(
+    promotional_specification: tuple[PromotionalSpecification, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PromotionalSpecification",
@@ -17419,7 +17419,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    handling_instructions: Tuple[HandlingInstructions, ...] = field(
+    handling_instructions: tuple[HandlingInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HandlingInstructions",
@@ -17427,7 +17427,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    information: Tuple[Information, ...] = field(
+    information: tuple[Information, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Information",
@@ -17539,7 +17539,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    special_instructions: Tuple[SpecialInstructions, ...] = field(
+    special_instructions: tuple[SpecialInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SpecialInstructions",
@@ -17547,7 +17547,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    delivery_instructions: Tuple[DeliveryInstructions, ...] = field(
+    delivery_instructions: tuple[DeliveryInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryInstructions",
@@ -17571,7 +17571,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consignment: Tuple[Consignment, ...] = field(
+    consignment: tuple[Consignment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Consignment",
@@ -17579,7 +17579,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    goods_item: Tuple[GoodsItem, ...] = field(
+    goods_item: tuple[GoodsItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "GoodsItem",
@@ -17587,7 +17587,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment_stage: Tuple["ShipmentStage", ...] = field(
+    shipment_stage: tuple["ShipmentStage", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShipmentStage",
@@ -17603,7 +17603,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_handling_unit: Tuple["TransportHandlingUnit", ...] = field(
+    transport_handling_unit: tuple["TransportHandlingUnit", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportHandlingUnit",
@@ -17651,7 +17651,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+    freight_allowance_charge: tuple[FreightAllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
@@ -17692,7 +17692,7 @@ class TelecommunicationsSupplyType:
             "required": True,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -17708,7 +17708,7 @@ class TelecommunicationsSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telecommunications_supply_line: Tuple[
+    telecommunications_supply_line: tuple[
         TelecommunicationsSupplyLine, ...
     ] = field(
         default_factory=tuple,
@@ -17834,7 +17834,7 @@ class CertificateOfOriginApplicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    remarks: Tuple[Remarks, ...] = field(
+    remarks: tuple[Remarks, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Remarks",
@@ -17851,7 +17851,7 @@ class CertificateOfOriginApplicationType:
             "required": True,
         },
     )
-    endorser_party: Tuple[EndorserParty, ...] = field(
+    endorser_party: tuple[EndorserParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EndorserParty",
@@ -17903,7 +17903,7 @@ class CertificateOfOriginApplicationType:
             "required": True,
         },
     )
-    document_distribution: Tuple[DocumentDistribution, ...] = field(
+    document_distribution: tuple[DocumentDistribution, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentDistribution",
@@ -17911,7 +17911,7 @@ class CertificateOfOriginApplicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    supporting_document_reference: Tuple[SupportingDocumentReference, ...] = (
+    supporting_document_reference: tuple[SupportingDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -17921,7 +17921,7 @@ class CertificateOfOriginApplicationType:
             },
         )
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -17949,7 +17949,7 @@ class ConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -17957,7 +17957,7 @@ class ConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -18026,7 +18026,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    trading_restrictions: Tuple[TradingRestrictions, ...] = field(
+    trading_restrictions: tuple[TradingRestrictions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TradingRestrictions",
@@ -18034,7 +18034,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    applicable_territory_address: Tuple[ApplicableTerritoryAddress, ...] = (
+    applicable_territory_address: tuple[ApplicableTerritoryAddress, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -18052,7 +18052,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_unit: Tuple[DeliveryUnit, ...] = field(
+    delivery_unit: tuple[DeliveryUnit, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryUnit",
@@ -18060,7 +18060,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    applicable_tax_category: Tuple[ApplicableTaxCategory, ...] = field(
+    applicable_tax_category: tuple[ApplicableTaxCategory, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ApplicableTaxCategory",
@@ -18076,7 +18076,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -18105,7 +18105,7 @@ class OrderedShipmentType:
             "required": True,
         },
     )
-    package: Tuple[Package, ...] = field(
+    package: tuple[Package, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Package",
@@ -18149,7 +18149,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -18173,7 +18173,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    current_status: Tuple[CurrentStatus, ...] = field(
+    current_status: tuple[CurrentStatus, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CurrentStatus",
@@ -18181,7 +18181,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contact: Tuple[Contact, ...] = field(
+    contact: tuple[Contact, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Contact",
@@ -18205,7 +18205,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    period: Tuple[Period, ...] = field(
+    period: tuple[Period, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Period",
@@ -18514,7 +18514,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -18572,7 +18572,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    warranty_information: Tuple[WarrantyInformation, ...] = field(
+    warranty_information: tuple[WarrantyInformation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "WarrantyInformation",
@@ -18628,7 +18628,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_comparison: Tuple[ItemComparison, ...] = field(
+    item_comparison: tuple[ItemComparison, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ItemComparison",
@@ -18636,7 +18636,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    component_related_item: Tuple[ComponentRelatedItem, ...] = field(
+    component_related_item: tuple[ComponentRelatedItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ComponentRelatedItem",
@@ -18644,7 +18644,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accessory_related_item: Tuple[AccessoryRelatedItem, ...] = field(
+    accessory_related_item: tuple[AccessoryRelatedItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AccessoryRelatedItem",
@@ -18652,7 +18652,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    required_related_item: Tuple[RequiredRelatedItem, ...] = field(
+    required_related_item: tuple[RequiredRelatedItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RequiredRelatedItem",
@@ -18660,7 +18660,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    replacement_related_item: Tuple[ReplacementRelatedItem, ...] = field(
+    replacement_related_item: tuple[ReplacementRelatedItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReplacementRelatedItem",
@@ -18668,7 +18668,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    complementary_related_item: Tuple[ComplementaryRelatedItem, ...] = field(
+    complementary_related_item: tuple[ComplementaryRelatedItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ComplementaryRelatedItem",
@@ -18676,7 +18676,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    replaced_related_item: Tuple[ReplacedRelatedItem, ...] = field(
+    replaced_related_item: tuple[ReplacedRelatedItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReplacedRelatedItem",
@@ -18684,7 +18684,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    required_item_location_quantity: Tuple[
+    required_item_location_quantity: tuple[
         RequiredItemLocationQuantity, ...
     ] = field(
         default_factory=tuple,
@@ -18694,7 +18694,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -18711,7 +18711,7 @@ class CatalogueLineType:
             "required": True,
         },
     )
-    keyword_item_property: Tuple[KeywordItemProperty, ...] = field(
+    keyword_item_property: tuple[KeywordItemProperty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "KeywordItemProperty",
@@ -18768,7 +18768,7 @@ class CataloguePricingUpdateLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    required_item_location_quantity: Tuple[
+    required_item_location_quantity: tuple[
         RequiredItemLocationQuantity, ...
     ] = field(
         default_factory=tuple,
@@ -18799,7 +18799,7 @@ class CatalogueRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -18815,7 +18815,7 @@ class CatalogueRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    required_item_location_quantity: Tuple[
+    required_item_location_quantity: tuple[
         RequiredItemLocationQuantity, ...
     ] = field(
         default_factory=tuple,
@@ -18870,7 +18870,7 @@ class ItemManagementProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    replenishment_owner_description: Tuple[
+    replenishment_owner_description: tuple[
         ReplenishmentOwnerDescription, ...
     ] = field(
         default_factory=tuple,
@@ -18936,7 +18936,7 @@ class PricingReferenceType:
             },
         )
     )
-    alternative_condition_price: Tuple[AlternativeConditionPrice, ...] = field(
+    alternative_condition_price: tuple[AlternativeConditionPrice, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AlternativeConditionPrice",
@@ -18964,7 +18964,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -19028,7 +19028,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -19036,7 +19036,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_period: Tuple[DeliveryPeriod, ...] = field(
+    delivery_period: tuple[DeliveryPeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryPeriod",
@@ -19044,7 +19044,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    required_item_location_quantity: Tuple[
+    required_item_location_quantity: tuple[
         RequiredItemLocationQuantity, ...
     ] = field(
         default_factory=tuple,
@@ -19071,7 +19071,7 @@ class RequestForTenderLineType:
             "required": True,
         },
     )
-    sub_request_for_tender_line: Tuple["SubRequestForTenderLine", ...] = field(
+    sub_request_for_tender_line: tuple["SubRequestForTenderLine", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubRequestForTenderLine",
@@ -19179,7 +19179,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    instructions: Tuple[Instructions, ...] = field(
+    instructions: tuple[Instructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Instructions",
@@ -19187,7 +19187,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    demurrage_instructions: Tuple[DemurrageInstructions, ...] = field(
+    demurrage_instructions: tuple[DemurrageInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DemurrageInstructions",
@@ -19219,7 +19219,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    carrier_party: Tuple[CarrierParty, ...] = field(
+    carrier_party: tuple[CarrierParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CarrierParty",
@@ -19399,7 +19399,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+    freight_allowance_charge: tuple[FreightAllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
@@ -19415,7 +19415,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    detention_transport_event: Tuple[DetentionTransportEvent, ...] = field(
+    detention_transport_event: tuple[DetentionTransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DetentionTransportEvent",
@@ -19443,7 +19443,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_waypoint_transport_event: Tuple[
+    requested_waypoint_transport_event: tuple[
         RequestedWaypointTransportEvent, ...
     ] = field(
         default_factory=tuple,
@@ -19473,7 +19473,7 @@ class ShipmentStageType:
             },
         )
     )
-    planned_waypoint_transport_event: Tuple[
+    planned_waypoint_transport_event: tuple[
         PlannedWaypointTransportEvent, ...
     ] = field(
         default_factory=tuple,
@@ -19513,7 +19513,7 @@ class ShipmentStageType:
             },
         )
     )
-    transport_event: Tuple[TransportEvent, ...] = field(
+    transport_event: tuple[TransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEvent",
@@ -19541,7 +19541,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    passenger_person: Tuple[PassengerPerson, ...] = field(
+    passenger_person: tuple[PassengerPerson, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PassengerPerson",
@@ -19549,7 +19549,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    driver_person: Tuple[DriverPerson, ...] = field(
+    driver_person: tuple[DriverPerson, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DriverPerson",
@@ -19565,7 +19565,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    crew_member_person: Tuple[CrewMemberPerson, ...] = field(
+    crew_member_person: tuple[CrewMemberPerson, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CrewMemberPerson",
@@ -19601,7 +19601,7 @@ class ShipmentStageType:
 
 @dataclass(frozen=True)
 class SupplierConsumptionType:
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -19642,7 +19642,7 @@ class SupplierConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    consumption_line: Tuple[ConsumptionLine, ...] = field(
+    consumption_line: tuple[ConsumptionLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConsumptionLine",
@@ -19663,7 +19663,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -19737,7 +19737,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    warranty_information: Tuple[WarrantyInformation, ...] = field(
+    warranty_information: tuple[WarrantyInformation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "WarrantyInformation",
@@ -19753,7 +19753,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -19769,7 +19769,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    offered_item_location_quantity: Tuple[OfferedItemLocationQuantity, ...] = (
+    offered_item_location_quantity: tuple[OfferedItemLocationQuantity, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -19779,7 +19779,7 @@ class TenderLineType:
             },
         )
     )
-    replacement_related_item: Tuple[ReplacementRelatedItem, ...] = field(
+    replacement_related_item: tuple[ReplacementRelatedItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReplacementRelatedItem",
@@ -19803,7 +19803,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sub_tender_line: Tuple["SubTenderLine", ...] = field(
+    sub_tender_line: tuple["SubTenderLine", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubTenderLine",
@@ -19843,7 +19843,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    referenced_consignment_id: Tuple[ReferencedConsignmentId, ...] = field(
+    referenced_consignment_id: tuple[ReferencedConsignmentId, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReferencedConsignmentID",
@@ -19909,7 +19909,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    information: Tuple[Information, ...] = field(
+    information: tuple[Information, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Information",
@@ -19995,7 +19995,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    damage_remarks: Tuple[DamageRemarks, ...] = field(
+    damage_remarks: tuple[DamageRemarks, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DamageRemarks",
@@ -20003,7 +20003,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -20011,7 +20011,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    special_transport_requirements: Tuple[
+    special_transport_requirements: tuple[
         SpecialTransportRequirements, ...
     ] = field(
         default_factory=tuple,
@@ -20069,7 +20069,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+    measurement_dimension: tuple[MeasurementDimension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
@@ -20077,7 +20077,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_equipment_seal: Tuple[TransportEquipmentSeal, ...] = field(
+    transport_equipment_seal: tuple[TransportEquipmentSeal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEquipmentSeal",
@@ -20165,7 +20165,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    positioning_transport_event: Tuple[PositioningTransportEvent, ...] = field(
+    positioning_transport_event: tuple[PositioningTransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PositioningTransportEvent",
@@ -20173,7 +20173,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    quarantine_transport_event: Tuple[QuarantineTransportEvent, ...] = field(
+    quarantine_transport_event: tuple[QuarantineTransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "QuarantineTransportEvent",
@@ -20181,7 +20181,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_transport_event: Tuple[DeliveryTransportEvent, ...] = field(
+    delivery_transport_event: tuple[DeliveryTransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryTransportEvent",
@@ -20189,7 +20189,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pickup_transport_event: Tuple[PickupTransportEvent, ...] = field(
+    pickup_transport_event: tuple[PickupTransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PickupTransportEvent",
@@ -20197,7 +20197,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    handling_transport_event: Tuple[HandlingTransportEvent, ...] = field(
+    handling_transport_event: tuple[HandlingTransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HandlingTransportEvent",
@@ -20205,7 +20205,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    loading_transport_event: Tuple[LoadingTransportEvent, ...] = field(
+    loading_transport_event: tuple[LoadingTransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "LoadingTransportEvent",
@@ -20213,7 +20213,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_event: Tuple[TransportEvent, ...] = field(
+    transport_event: tuple[TransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEvent",
@@ -20229,7 +20229,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    haulage_trading_terms: Tuple[HaulageTradingTerms, ...] = field(
+    haulage_trading_terms: tuple[HaulageTradingTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HaulageTradingTerms",
@@ -20237,7 +20237,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    hazardous_goods_transit: Tuple[HazardousGoodsTransit, ...] = field(
+    hazardous_goods_transit: tuple[HazardousGoodsTransit, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HazardousGoodsTransit",
@@ -20245,7 +20245,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    packaged_transport_handling_unit: Tuple[
+    packaged_transport_handling_unit: tuple[
         "PackagedTransportHandlingUnit", ...
     ] = field(
         default_factory=tuple,
@@ -20255,7 +20255,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    service_allowance_charge: Tuple[ServiceAllowanceCharge, ...] = field(
+    service_allowance_charge: tuple[ServiceAllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ServiceAllowanceCharge",
@@ -20263,7 +20263,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+    freight_allowance_charge: tuple[FreightAllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
@@ -20271,7 +20271,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    attached_transport_equipment: Tuple["AttachedTransportEquipment", ...] = (
+    attached_transport_equipment: tuple["AttachedTransportEquipment", ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -20305,7 +20305,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment_document_reference: Tuple[ShipmentDocumentReference, ...] = field(
+    shipment_document_reference: tuple[ShipmentDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShipmentDocumentReference",
@@ -20313,7 +20313,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contained_in_transport_equipment: Tuple[
+    contained_in_transport_equipment: tuple[
         "ContainedInTransportEquipment", ...
     ] = field(
         default_factory=tuple,
@@ -20323,7 +20323,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    package: Tuple[Package, ...] = field(
+    package: tuple[Package, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Package",
@@ -20331,7 +20331,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    goods_item: Tuple[GoodsItem, ...] = field(
+    goods_item: tuple[GoodsItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "GoodsItem",
@@ -20376,7 +20376,7 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    remarks: Tuple[Remarks, ...] = field(
+    remarks: tuple[Remarks, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Remarks",
@@ -20606,7 +20606,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -20670,7 +20670,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoice_period: Tuple[InvoicePeriod, ...] = field(
+    invoice_period: tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
@@ -20678,7 +20678,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    order_line_reference: Tuple[OrderLineReference, ...] = field(
+    order_line_reference: tuple[OrderLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrderLineReference",
@@ -20686,7 +20686,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    discrepancy_response: Tuple[DiscrepancyResponse, ...] = field(
+    discrepancy_response: tuple[DiscrepancyResponse, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DiscrepancyResponse",
@@ -20694,7 +20694,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_line_reference: Tuple[DespatchLineReference, ...] = field(
+    despatch_line_reference: tuple[DespatchLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DespatchLineReference",
@@ -20702,7 +20702,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receipt_line_reference: Tuple[ReceiptLineReference, ...] = field(
+    receipt_line_reference: tuple[ReceiptLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReceiptLineReference",
@@ -20710,7 +20710,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Tuple[BillingReference, ...] = field(
+    billing_reference: tuple[BillingReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReference",
@@ -20718,7 +20718,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -20742,7 +20742,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -20750,7 +20750,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -20758,7 +20758,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -20766,7 +20766,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -20790,7 +20790,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+    delivery_terms: tuple[DeliveryTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
@@ -20798,7 +20798,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sub_credit_note_line: Tuple["SubCreditNoteLine", ...] = field(
+    sub_credit_note_line: tuple["SubCreditNoteLine", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubCreditNoteLine",
@@ -20835,7 +20835,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -20892,7 +20892,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    discrepancy_response: Tuple[DiscrepancyResponse, ...] = field(
+    discrepancy_response: tuple[DiscrepancyResponse, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DiscrepancyResponse",
@@ -20900,7 +20900,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_line_reference: Tuple[DespatchLineReference, ...] = field(
+    despatch_line_reference: tuple[DespatchLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DespatchLineReference",
@@ -20908,7 +20908,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receipt_line_reference: Tuple[ReceiptLineReference, ...] = field(
+    receipt_line_reference: tuple[ReceiptLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReceiptLineReference",
@@ -20916,7 +20916,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Tuple[BillingReference, ...] = field(
+    billing_reference: tuple[BillingReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReference",
@@ -20924,7 +20924,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -20940,7 +20940,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -20948,7 +20948,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -20956,7 +20956,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -20980,7 +20980,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sub_debit_note_line: Tuple["SubDebitNoteLine", ...] = field(
+    sub_debit_note_line: tuple["SubDebitNoteLine", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubDebitNoteLine",
@@ -21009,7 +21009,7 @@ class GoodsItemContainerType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_equipment: Tuple[TransportEquipment, ...] = field(
+    transport_equipment: tuple[TransportEquipment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEquipment",
@@ -21038,7 +21038,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -21103,7 +21103,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoice_period: Tuple[InvoicePeriod, ...] = field(
+    invoice_period: tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
@@ -21111,7 +21111,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    order_line_reference: Tuple[OrderLineReference, ...] = field(
+    order_line_reference: tuple[OrderLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrderLineReference",
@@ -21119,7 +21119,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_line_reference: Tuple[DespatchLineReference, ...] = field(
+    despatch_line_reference: tuple[DespatchLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DespatchLineReference",
@@ -21127,7 +21127,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receipt_line_reference: Tuple[ReceiptLineReference, ...] = field(
+    receipt_line_reference: tuple[ReceiptLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReceiptLineReference",
@@ -21135,7 +21135,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Tuple[BillingReference, ...] = field(
+    billing_reference: tuple[BillingReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReference",
@@ -21143,7 +21143,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -21167,7 +21167,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -21175,7 +21175,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -21183,7 +21183,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -21191,7 +21191,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -21199,7 +21199,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    withholding_tax_total: Tuple[WithholdingTaxTotal, ...] = field(
+    withholding_tax_total: tuple[WithholdingTaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "WithholdingTaxTotal",
@@ -21232,7 +21232,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sub_invoice_line: Tuple["SubInvoiceLine", ...] = field(
+    sub_invoice_line: tuple["SubInvoiceLine", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubInvoiceLine",
@@ -21277,7 +21277,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -21389,7 +21389,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    warranty_information: Tuple[WarrantyInformation, ...] = field(
+    warranty_information: tuple[WarrantyInformation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "WarrantyInformation",
@@ -21397,7 +21397,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -21421,7 +21421,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    ordered_shipment: Tuple[OrderedShipment, ...] = field(
+    ordered_shipment: tuple[OrderedShipment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrderedShipment",
@@ -21437,7 +21437,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -21462,7 +21462,7 @@ class LineItemType:
             "required": True,
         },
     )
-    sub_line_item: Tuple["SubLineItem", ...] = field(
+    sub_line_item: tuple["SubLineItem", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubLineItem",
@@ -21486,7 +21486,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -21502,7 +21502,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    line_reference: Tuple[LineReference, ...] = field(
+    line_reference: tuple[LineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "LineReference",
@@ -21522,7 +21522,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -21531,7 +21531,7 @@ class ProcurementProjectType:
             "min_occurs": 1,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -21571,7 +21571,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    fee_description: Tuple[FeeDescription, ...] = field(
+    fee_description: tuple[FeeDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FeeDescription",
@@ -21597,7 +21597,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -21623,7 +21623,7 @@ class ProcurementProjectType:
             },
         )
     )
-    additional_commodity_classification: Tuple[
+    additional_commodity_classification: tuple[
         AdditionalCommodityClassification, ...
     ] = field(
         default_factory=tuple,
@@ -21633,7 +21633,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    realized_location: Tuple[RealizedLocation, ...] = field(
+    realized_location: tuple[RealizedLocation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RealizedLocation",
@@ -21657,7 +21657,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    request_for_tender_line: Tuple[RequestForTenderLine, ...] = field(
+    request_for_tender_line: tuple[RequestForTenderLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RequestForTenderLine",
@@ -21685,7 +21685,7 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -21718,7 +21718,7 @@ class SubscriberConsumptionType:
             "required": True,
         },
     )
-    on_account_payment: Tuple[OnAccountPayment, ...] = field(
+    on_account_payment: tuple[OnAccountPayment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OnAccountPayment",
@@ -21734,7 +21734,7 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    supplier_consumption: Tuple[SupplierConsumption, ...] = field(
+    supplier_consumption: tuple[SupplierConsumption, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SupplierConsumption",
@@ -21772,7 +21772,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    handling_instructions: Tuple[HandlingInstructions, ...] = field(
+    handling_instructions: tuple[HandlingInstructions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HandlingInstructions",
@@ -21804,7 +21804,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    damage_remarks: Tuple[DamageRemarks, ...] = field(
+    damage_remarks: tuple[DamageRemarks, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DamageRemarks",
@@ -21812,7 +21812,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    shipping_marks: Tuple[ShippingMarks, ...] = field(
+    shipping_marks: tuple[ShippingMarks, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShippingMarks",
@@ -21828,7 +21828,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    handling_unit_despatch_line: Tuple[HandlingUnitDespatchLine, ...] = field(
+    handling_unit_despatch_line: tuple[HandlingUnitDespatchLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HandlingUnitDespatchLine",
@@ -21836,7 +21836,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    actual_package: Tuple[ActualPackage, ...] = field(
+    actual_package: tuple[ActualPackage, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ActualPackage",
@@ -21844,7 +21844,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    received_handling_unit_receipt_line: Tuple[
+    received_handling_unit_receipt_line: tuple[
         ReceivedHandlingUnitReceiptLine, ...
     ] = field(
         default_factory=tuple,
@@ -21854,7 +21854,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_equipment: Tuple[TransportEquipment, ...] = field(
+    transport_equipment: tuple[TransportEquipment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEquipment",
@@ -21862,7 +21862,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_means: Tuple[TransportMeans, ...] = field(
+    transport_means: tuple[TransportMeans, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportMeans",
@@ -21870,7 +21870,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    hazardous_goods_transit: Tuple[HazardousGoodsTransit, ...] = field(
+    hazardous_goods_transit: tuple[HazardousGoodsTransit, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HazardousGoodsTransit",
@@ -21878,7 +21878,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+    measurement_dimension: tuple[MeasurementDimension, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
@@ -21902,7 +21902,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    goods_item: Tuple[GoodsItem, ...] = field(
+    goods_item: tuple[GoodsItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "GoodsItem",
@@ -21930,7 +21930,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment_document_reference: Tuple[ShipmentDocumentReference, ...] = field(
+    shipment_document_reference: tuple[ShipmentDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShipmentDocumentReference",
@@ -21938,7 +21938,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    status: Tuple[Status, ...] = field(
+    status: tuple[Status, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Status",
@@ -21946,7 +21946,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    customs_declaration: Tuple[CustomsDeclaration, ...] = field(
+    customs_declaration: tuple[CustomsDeclaration, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CustomsDeclaration",
@@ -21954,7 +21954,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    referenced_shipment: Tuple[ReferencedShipment, ...] = field(
+    referenced_shipment: tuple[ReferencedShipment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReferencedShipment",
@@ -21962,7 +21962,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    package: Tuple[Package, ...] = field(
+    package: tuple[Package, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Package",
@@ -22007,7 +22007,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transportation_service_description: Tuple[
+    transportation_service_description: tuple[
         TransportationServiceDescription, ...
     ] = field(
         default_factory=tuple,
@@ -22059,7 +22059,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_equipment: Tuple[TransportEquipment, ...] = field(
+    transport_equipment: tuple[TransportEquipment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEquipment",
@@ -22067,7 +22067,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    supported_transport_equipment: Tuple[SupportedTransportEquipment, ...] = (
+    supported_transport_equipment: tuple[SupportedTransportEquipment, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -22077,7 +22077,7 @@ class TransportationServiceType:
             },
         )
     )
-    unsupported_transport_equipment: Tuple[
+    unsupported_transport_equipment: tuple[
         UnsupportedTransportEquipment, ...
     ] = field(
         default_factory=tuple,
@@ -22087,7 +22087,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    commodity_classification: Tuple[CommodityClassification, ...] = field(
+    commodity_classification: tuple[CommodityClassification, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CommodityClassification",
@@ -22095,7 +22095,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    supported_commodity_classification: Tuple[
+    supported_commodity_classification: tuple[
         SupportedCommodityClassification, ...
     ] = field(
         default_factory=tuple,
@@ -22105,7 +22105,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    unsupported_commodity_classification: Tuple[
+    unsupported_commodity_classification: tuple[
         UnsupportedCommodityClassification, ...
     ] = field(
         default_factory=tuple,
@@ -22123,7 +22123,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment_stage: Tuple[ShipmentStage, ...] = field(
+    shipment_stage: tuple[ShipmentStage, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShipmentStage",
@@ -22131,7 +22131,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_event: Tuple[TransportEvent, ...] = field(
+    transport_event: tuple[TransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEvent",
@@ -22149,7 +22149,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    environmental_emission: Tuple[EnvironmentalEmission, ...] = field(
+    environmental_emission: tuple[EnvironmentalEmission, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EnvironmentalEmission",
@@ -22165,7 +22165,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    scheduled_service_frequency: Tuple[ScheduledServiceFrequency, ...] = field(
+    scheduled_service_frequency: tuple[ScheduledServiceFrequency, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ScheduledServiceFrequency",
@@ -22317,7 +22317,7 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -22334,7 +22334,7 @@ class OrderLineType:
             "required": True,
         },
     )
-    seller_proposed_substitute_line_item: Tuple[
+    seller_proposed_substitute_line_item: tuple[
         SellerProposedSubstituteLineItem, ...
     ] = field(
         default_factory=tuple,
@@ -22344,7 +22344,7 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_substituted_line_item: Tuple[SellerSubstitutedLineItem, ...] = (
+    seller_substituted_line_item: tuple[SellerSubstitutedLineItem, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -22354,7 +22354,7 @@ class OrderLineType:
             },
         )
     )
-    buyer_proposed_substitute_line_item: Tuple[
+    buyer_proposed_substitute_line_item: tuple[
         BuyerProposedSubstituteLineItem, ...
     ] = field(
         default_factory=tuple,
@@ -22380,7 +22380,7 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    order_line_reference: Tuple[OrderLineReference, ...] = field(
+    order_line_reference: tuple[OrderLineReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrderLineReference",
@@ -22388,7 +22388,7 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -22437,7 +22437,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -22477,7 +22477,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -22494,7 +22494,7 @@ class QuotationLineType:
             "required": True,
         },
     )
-    seller_proposed_substitute_line_item: Tuple[
+    seller_proposed_substitute_line_item: tuple[
         SellerProposedSubstituteLineItem, ...
     ] = field(
         default_factory=tuple,
@@ -22504,7 +22504,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    alternative_line_item: Tuple[AlternativeLineItem, ...] = field(
+    alternative_line_item: tuple[AlternativeLineItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AlternativeLineItem",
@@ -22540,7 +22540,7 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -22572,7 +22572,7 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -22640,7 +22640,7 @@ class TransportationSegmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment_stage: Tuple[ShipmentStage, ...] = field(
+    shipment_stage: tuple[ShipmentStage, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShipmentStage",
@@ -22697,7 +22697,7 @@ class QualificationResolutionType:
             "required": True,
         },
     )
-    exclusion_reason: Tuple[ExclusionReason, ...] = field(
+    exclusion_reason: tuple[ExclusionReason, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ExclusionReason",
@@ -22705,7 +22705,7 @@ class QualificationResolutionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    resolution: Tuple[Resolution, ...] = field(
+    resolution: tuple[Resolution, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Resolution",
@@ -22759,7 +22759,7 @@ class TenderPreparationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -22775,7 +22775,7 @@ class TenderPreparationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    procurement_project_lot: Tuple[ProcurementProjectLot, ...] = field(
+    procurement_project_lot: tuple[ProcurementProjectLot, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcurementProjectLot",
@@ -22783,7 +22783,7 @@ class TenderPreparationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_tender_requirement: Tuple[DocumentTenderRequirement, ...] = field(
+    document_tender_requirement: tuple[DocumentTenderRequirement, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentTenderRequirement",
@@ -22811,7 +22811,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    fee_description: Tuple[FeeDescription, ...] = field(
+    fee_description: tuple[FeeDescription, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FeeDescription",
@@ -22843,7 +22843,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    evidence_document_reference: Tuple[EvidenceDocumentReference, ...] = field(
+    evidence_document_reference: tuple[EvidenceDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EvidenceDocumentReference",
@@ -22851,7 +22851,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -22867,7 +22867,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tender_line: Tuple[TenderLine, ...] = field(
+    tender_line: tuple[TenderLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TenderLine",
@@ -22875,7 +22875,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    awarding_criterion_response: Tuple[AwardingCriterionResponse, ...] = field(
+    awarding_criterion_response: tuple[AwardingCriterionResponse, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AwardingCriterionResponse",
@@ -22887,7 +22887,7 @@ class TenderedProjectType:
 
 @dataclass(frozen=True)
 class TendererPartyQualificationType:
-    interested_procurement_project_lot: Tuple[
+    interested_procurement_project_lot: tuple[
         InterestedProcurementProjectLot, ...
     ] = field(
         default_factory=tuple,
@@ -22906,7 +22906,7 @@ class TendererPartyQualificationType:
             "required": True,
         },
     )
-    additional_qualifying_party: Tuple[AdditionalQualifyingParty, ...] = field(
+    additional_qualifying_party: tuple[AdditionalQualifyingParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalQualifyingParty",
@@ -22956,7 +22956,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -23067,7 +23067,7 @@ class TenderResultType:
             },
         )
     )
-    subcontract_terms: Tuple[SubcontractTerms, ...] = field(
+    subcontract_terms: tuple[SubcontractTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubcontractTerms",
@@ -23075,7 +23075,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    winning_party: Tuple[WinningParty, ...] = field(
+    winning_party: tuple[WinningParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "WinningParty",
@@ -23119,7 +23119,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accepted_variants_description: Tuple[AcceptedVariantsDescription, ...] = (
+    accepted_variants_description: tuple[AcceptedVariantsDescription, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -23129,7 +23129,7 @@ class TenderingTermsType:
             },
         )
     )
-    price_revision_formula_description: Tuple[
+    price_revision_formula_description: tuple[
         PriceRevisionFormulaDescription, ...
     ] = field(
         default_factory=tuple,
@@ -23147,7 +23147,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    funding_program: Tuple[FundingProgram, ...] = field(
+    funding_program: tuple[FundingProgram, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "FundingProgram",
@@ -23163,7 +23163,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -23205,7 +23205,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    additional_conditions: Tuple[AdditionalConditions, ...] = field(
+    additional_conditions: tuple[AdditionalConditions, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalConditions",
@@ -23231,7 +23231,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    penalty_clause: Tuple[PenaltyClause, ...] = field(
+    penalty_clause: tuple[PenaltyClause, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PenaltyClause",
@@ -23239,7 +23239,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    required_financial_guarantee: Tuple[RequiredFinancialGuarantee, ...] = (
+    required_financial_guarantee: tuple[RequiredFinancialGuarantee, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -23289,7 +23289,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contractual_document_reference: Tuple[
+    contractual_document_reference: tuple[
         ContractualDocumentReference, ...
     ] = field(
         default_factory=tuple,
@@ -23317,7 +23317,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -23325,7 +23325,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tenderer_qualification_request: Tuple[
+    tenderer_qualification_request: tuple[
         TendererQualificationRequest, ...
     ] = field(
         default_factory=tuple,
@@ -23335,7 +23335,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowed_subcontract_terms: Tuple[AllowedSubcontractTerms, ...] = field(
+    allowed_subcontract_terms: tuple[AllowedSubcontractTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowedSubcontractTerms",
@@ -23343,7 +23343,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tender_preparation: Tuple[TenderPreparation, ...] = field(
+    tender_preparation: tuple[TenderPreparation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TenderPreparation",
@@ -23351,7 +23351,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_execution_requirement: Tuple[
+    contract_execution_requirement: tuple[
         ContractExecutionRequirement, ...
     ] = field(
         default_factory=tuple,
@@ -23401,7 +23401,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tender_evaluation_party: Tuple[TenderEvaluationParty, ...] = field(
+    tender_evaluation_party: tuple[TenderEvaluationParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TenderEvaluationParty",
@@ -23433,7 +23433,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    language: Tuple[Language, ...] = field(
+    language: tuple[Language, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Language",
@@ -23441,7 +23441,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    budget_account_line: Tuple[BudgetAccountLine, ...] = field(
+    budget_account_line: tuple[BudgetAccountLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BudgetAccountLine",

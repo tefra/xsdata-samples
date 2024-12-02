@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -27,7 +27,7 @@ class PrpaMt900350Uv02Admitter:
     class Meta:
         name = "PRPA_MT900350UV02.Admitter"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -43,7 +43,7 @@ class PrpaMt900350Uv02Admitter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -91,7 +91,7 @@ class PrpaMt900350Uv02Attender:
     class Meta:
         name = "PRPA_MT900350UV02.Attender"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -107,7 +107,7 @@ class PrpaMt900350Uv02Attender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -171,7 +171,7 @@ class PrpaMt900350Uv02ResponsibleParty:
     class Meta:
         name = "PRPA_MT900350UV02.ResponsibleParty"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -187,7 +187,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -245,7 +245,7 @@ class PrpaMt900350Uv02Subject:
     class Meta:
         name = "PRPA_MT900350UV02.Subject"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -261,7 +261,7 @@ class PrpaMt900350Uv02Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -299,7 +299,7 @@ class PrpaMt900350Uv02EncounterEvent:
     class Meta:
         name = "PRPA_MT900350UV02.EncounterEvent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -315,7 +315,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -323,7 +323,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -365,7 +365,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "required": True,
         },
     )
-    responsible_party: List[PrpaMt900350Uv02ResponsibleParty] = field(
+    responsible_party: list[PrpaMt900350Uv02ResponsibleParty] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -382,7 +382,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "nillable": True,
         },
     )
-    attender: List[PrpaMt900350Uv02Attender] = field(
+    attender: list[PrpaMt900350Uv02Attender] = field(
         default_factory=list,
         metadata={
             "type": "Element",

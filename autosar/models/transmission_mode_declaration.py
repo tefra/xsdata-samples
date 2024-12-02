@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .mode_driven_transmission_mode_condition import (
     ModeDrivenTransmissionModeCondition,
@@ -129,7 +129,7 @@ class TransmissionModeDeclaration:
 
     @dataclass
     class ModeDrivenFalseConditions:
-        mode_driven_transmission_mode_condition: List[
+        mode_driven_transmission_mode_condition: list[
             ModeDrivenTransmissionModeCondition
         ] = field(
             default_factory=list,
@@ -142,7 +142,7 @@ class TransmissionModeDeclaration:
 
     @dataclass
     class ModeDrivenTrueConditions:
-        mode_driven_transmission_mode_condition: List[
+        mode_driven_transmission_mode_condition: list[
             ModeDrivenTransmissionModeCondition
         ] = field(
             default_factory=list,
@@ -155,7 +155,7 @@ class TransmissionModeDeclaration:
 
     @dataclass
     class TransmissionModeConditions:
-        transmission_mode_condition: List[TransmissionModeCondition] = field(
+        transmission_mode_condition: list[TransmissionModeCondition] = field(
             default_factory=list,
             metadata={
                 "name": "TRANSMISSION-MODE-CONDITION",

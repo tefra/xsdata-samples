@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_expression_type import (
     QueryExpressionType,
@@ -27,7 +27,7 @@ class QueryCriteriaTypeQueryExpression:
     class Meta:
         global_type = False
 
-    value_expression: List[ValueExpressionType] = field(
+    value_expression: list[ValueExpressionType] = field(
         default_factory=list,
         metadata={
             "name": "ValueExpression",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.relations.intra_work_relation_identifier_type import (
     IntraWorkRelationIdentifierType,
@@ -55,7 +55,7 @@ class IntraWorkRelation:
             "max_length": 1024,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

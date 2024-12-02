@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -44,7 +44,7 @@ class CoctMt910000UvOtherIds:
     class Meta:
         name = "COCT_MT910000UV.OtherIDs"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -60,7 +60,7 @@ class CoctMt910000UvOtherIds:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -68,7 +68,7 @@ class CoctMt910000UvOtherIds:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -133,7 +133,7 @@ class CoctMt910000UvSubjectPerson:
     class Meta:
         name = "COCT_MT910000UV.SubjectPerson"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -149,7 +149,7 @@ class CoctMt910000UvSubjectPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -165,7 +165,7 @@ class CoctMt910000UvSubjectPerson:
             "required": True,
         },
     )
-    name: List[Pn] = field(
+    name: list[Pn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -204,7 +204,7 @@ class CoctMt910000UvEmployee:
     class Meta:
         name = "COCT_MT910000UV.Employee"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -220,7 +220,7 @@ class CoctMt910000UvEmployee:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -228,7 +228,7 @@ class CoctMt910000UvEmployee:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -299,7 +299,7 @@ class CoctMt910000UvRelatedPerson:
     class Meta:
         name = "COCT_MT910000UV.RelatedPerson"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -315,7 +315,7 @@ class CoctMt910000UvRelatedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -323,14 +323,14 @@ class CoctMt910000UvRelatedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[PnExplicit] = field(
+    name: list[PnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -361,14 +361,14 @@ class CoctMt910000UvRelatedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_other_ids: List[CoctMt910000UvOtherIds] = field(
+    as_other_ids: list[CoctMt910000UvOtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -409,7 +409,7 @@ class CoctMt910000UvStudent:
     class Meta:
         name = "COCT_MT910000UV.Student"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -425,7 +425,7 @@ class CoctMt910000UvStudent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -433,7 +433,7 @@ class CoctMt910000UvStudent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -513,7 +513,7 @@ class CoctMt910000UvCareGiver:
     class Meta:
         name = "COCT_MT910000UV.CareGiver"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -529,7 +529,7 @@ class CoctMt910000UvCareGiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -537,7 +537,7 @@ class CoctMt910000UvCareGiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -625,7 +625,7 @@ class CoctMt910000UvPersonalRelationship:
     class Meta:
         name = "COCT_MT910000UV.PersonalRelationship"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -641,7 +641,7 @@ class CoctMt910000UvPersonalRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -649,7 +649,7 @@ class CoctMt910000UvPersonalRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",

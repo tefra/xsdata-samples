@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -197,7 +197,7 @@ class PostBuildVariantCriterionValueSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -208,7 +208,7 @@ class PostBuildVariantCriterionValueSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -219,7 +219,7 @@ class PostBuildVariantCriterionValueSet:
 
     @dataclass
     class PostBuildVariantCriterionValues:
-        post_build_variant_criterion_value: List[
+        post_build_variant_criterion_value: list[
             PostBuildVariantCriterionValue
         ] = field(
             default_factory=list,

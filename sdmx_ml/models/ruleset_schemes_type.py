@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.ruleset_scheme_type import RulesetSchemeType
 
@@ -18,7 +17,7 @@ class RulesetSchemesType:
         ruleset scheme, in which rulesets are described.
     """
 
-    ruleset_scheme: Tuple[RulesetSchemeType, ...] = field(
+    ruleset_scheme: tuple[RulesetSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RulesetScheme",

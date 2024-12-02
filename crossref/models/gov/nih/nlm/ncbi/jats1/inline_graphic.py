@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.alt_text import AltText
 from crossref.models.gov.nih.nlm.ncbi.jats1.long_desc import LongDesc
@@ -21,14 +21,14 @@ class InlineGraphic:
         name = "inline-graphic"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt_text: List[AltText] = field(
+    alt_text: list[AltText] = field(
         default_factory=list,
         metadata={
             "name": "alt-text",
             "type": "Element",
         },
     )
-    long_desc: List[LongDesc] = field(
+    long_desc: list[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",

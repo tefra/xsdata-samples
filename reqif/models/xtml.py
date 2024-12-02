@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -427,7 +427,7 @@ class XhtmlInlPresType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -604,7 +604,7 @@ class XhtmlAddressType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -741,7 +741,7 @@ class XhtmlColgroupType:
     class Meta:
         name = "xhtml.colgroup.type"
 
-    col: List[XhtmlColType] = field(
+    col: list[XhtmlColType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -928,7 +928,7 @@ class XhtmlEditType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1225,7 +1225,7 @@ class XhtmlAbbrType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1398,126 +1398,126 @@ class XhtmlBlockquoteType:
     class Meta:
         name = "xhtml.blockquote.type"
 
-    h1: List["XhtmlH1Type"] = field(
+    h1: list["XhtmlH1Type"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h2: List["XhtmlH2Type"] = field(
+    h2: list["XhtmlH2Type"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h3: List["XhtmlH3Type"] = field(
+    h3: list["XhtmlH3Type"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h4: List["XhtmlH4Type"] = field(
+    h4: list["XhtmlH4Type"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h5: List["XhtmlH5Type"] = field(
+    h5: list["XhtmlH5Type"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h6: List["XhtmlH6Type"] = field(
+    h6: list["XhtmlH6Type"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    ul: List["XhtmlUlType"] = field(
+    ul: list["XhtmlUlType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    ol: List["XhtmlOlType"] = field(
+    ol: list["XhtmlOlType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    dl: List["XhtmlDlType"] = field(
+    dl: list["XhtmlDlType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    p: List["XhtmlPType"] = field(
+    p: list["XhtmlPType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    div: List["XhtmlDivType"] = field(
+    div: list["XhtmlDivType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    pre: List["XhtmlPreType"] = field(
+    pre: list["XhtmlPreType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    blockquote: List["XhtmlBlockquoteType"] = field(
+    blockquote: list["XhtmlBlockquoteType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    address: List[XhtmlAddressType] = field(
+    address: list[XhtmlAddressType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    hr: List[XhtmlHrType] = field(
+    hr: list[XhtmlHrType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    table: List["XhtmlTableType"] = field(
+    table: list["XhtmlTableType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    ins: List[XhtmlEditType] = field(
+    ins: list[XhtmlEditType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    del_value: List[XhtmlEditType] = field(
+    del_value: list[XhtmlEditType] = field(
         default_factory=list,
         metadata={
             "name": "del",
@@ -1618,7 +1618,7 @@ class XhtmlH1Type:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1831,7 +1831,7 @@ class XhtmlH2Type:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2044,7 +2044,7 @@ class XhtmlH3Type:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2257,7 +2257,7 @@ class XhtmlH4Type:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2470,7 +2470,7 @@ class XhtmlH5Type:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2683,7 +2683,7 @@ class XhtmlH6Type:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -2896,7 +2896,7 @@ class XhtmlPType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3109,7 +3109,7 @@ class XhtmlPreType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3281,7 +3281,7 @@ class XhtmlAcronymType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3494,7 +3494,7 @@ class XhtmlDivType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -3787,7 +3787,7 @@ class XhtmlCiteType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4000,7 +4000,7 @@ class XhtmlCodeType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4213,7 +4213,7 @@ class XhtmlDfnType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4426,7 +4426,7 @@ class XhtmlEmType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4639,7 +4639,7 @@ class XhtmlKbdType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -4852,7 +4852,7 @@ class XhtmlSampType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -5065,7 +5065,7 @@ class XhtmlStrongType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -5278,7 +5278,7 @@ class XhtmlVarType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -5497,7 +5497,7 @@ class XhtmlQType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -5710,7 +5710,7 @@ class XhtmlSpanType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -5948,14 +5948,14 @@ class XhtmlAType:
             "type": "Attribute",
         },
     )
-    rel: List[str] = field(
+    rel: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    rev: List[str] = field(
+    rev: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -5975,7 +5975,7 @@ class XhtmlAType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -6183,7 +6183,7 @@ class XhtmlDdType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -6476,7 +6476,7 @@ class XhtmlDtType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -6649,14 +6649,14 @@ class XhtmlDlType:
     class Meta:
         name = "xhtml.dl.type"
 
-    dt: List[XhtmlDtType] = field(
+    dt: list[XhtmlDtType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    dd: List[XhtmlDdType] = field(
+    dd: list[XhtmlDdType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6750,7 +6750,7 @@ class XhtmlLiType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7003,7 +7003,7 @@ class XhtmlOlType:
     class Meta:
         name = "xhtml.ol.type"
 
-    li: List[XhtmlLiType] = field(
+    li: list[XhtmlLiType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7058,7 +7058,7 @@ class XhtmlUlType:
     class Meta:
         name = "xhtml.ul.type"
 
-    li: List[XhtmlLiType] = field(
+    li: list[XhtmlLiType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -7190,7 +7190,7 @@ class XhtmlObjectType:
             "type": "Attribute",
         },
     )
-    archive: List[str] = field(
+    archive: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -7229,7 +7229,7 @@ class XhtmlObjectType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7527,7 +7527,7 @@ class XhtmlCaptionType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7740,7 +7740,7 @@ class XhtmlHeadingType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -7965,7 +7965,7 @@ class XhtmlTdType:
             "type": "Attribute",
         },
     )
-    headers: List[str] = field(
+    headers: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -8016,7 +8016,7 @@ class XhtmlTdType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -8321,7 +8321,7 @@ class XhtmlThType:
             "type": "Attribute",
         },
     )
-    headers: List[str] = field(
+    headers: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -8372,7 +8372,7 @@ class XhtmlThType:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -8625,14 +8625,14 @@ class XhtmlTrType:
     class Meta:
         name = "xhtml.tr.type"
 
-    th: List[XhtmlThType] = field(
+    th: list[XhtmlThType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    td: List[XhtmlTdType] = field(
+    td: list[XhtmlTdType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -8712,7 +8712,7 @@ class XhtmlTbodyType:
     class Meta:
         name = "xhtml.tbody.type"
 
-    tr: List[XhtmlTrType] = field(
+    tr: list[XhtmlTrType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -8793,7 +8793,7 @@ class XhtmlTfootType:
     class Meta:
         name = "xhtml.tfoot.type"
 
-    tr: List[XhtmlTrType] = field(
+    tr: list[XhtmlTrType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -8874,7 +8874,7 @@ class XhtmlTheadType:
     class Meta:
         name = "xhtml.thead.type"
 
-    tr: List[XhtmlTrType] = field(
+    tr: list[XhtmlTrType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -8962,14 +8962,14 @@ class XhtmlTableType:
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    col: List[XhtmlColType] = field(
+    col: list[XhtmlColType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    colgroup: List[XhtmlColgroupType] = field(
+    colgroup: list[XhtmlColgroupType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -8990,14 +8990,14 @@ class XhtmlTableType:
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    tbody: List[XhtmlTbodyType] = field(
+    tbody: list[XhtmlTbodyType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    tr: List[XhtmlTrType] = field(
+    tr: list[XhtmlTrType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

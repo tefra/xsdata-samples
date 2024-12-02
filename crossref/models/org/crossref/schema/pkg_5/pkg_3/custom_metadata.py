@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.access_indicators.program import (
     Program as AccessIndicatorsProgram,
@@ -30,14 +29,14 @@ class CustomMetadata:
         name = "custom_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    assertion: List[Assertion] = field(
+    assertion: list[Assertion] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
         },
     )
-    program: List[FundrefProgram] = field(
+    program: list[FundrefProgram] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -45,7 +44,7 @@ class CustomMetadata:
             "max_occurs": 2,
         },
     )
-    program_1: List[AccessIndicatorsProgram] = field(
+    program_1: list[AccessIndicatorsProgram] = field(
         default_factory=list,
         metadata={
             "name": "program",
@@ -54,7 +53,7 @@ class CustomMetadata:
             "max_occurs": 3,
         },
     )
-    program_2: List[ClinicaltrialsProgram] = field(
+    program_2: list[ClinicaltrialsProgram] = field(
         default_factory=list,
         metadata={
             "name": "program",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -212,7 +212,7 @@ class SecurityEventStateFilter:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -223,7 +223,7 @@ class SecurityEventStateFilter:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -234,7 +234,7 @@ class SecurityEventStateFilter:
 
     @dataclass
     class BlockIfStateActiveApIrefs:
-        block_if_state_active_ap_iref: List[
+        block_if_state_active_ap_iref: list[
             FunctionGroupStateInFunctionGroupSetInstanceRef
         ] = field(
             default_factory=list,
@@ -247,7 +247,7 @@ class SecurityEventStateFilter:
 
     @dataclass
     class BlockIfStateActiveCpRefs:
-        block_if_state_active_cp_ref: List[
+        block_if_state_active_cp_ref: list[
             "SecurityEventStateFilter.BlockIfStateActiveCpRefs.BlockIfStateActiveCpRef"
         ] = field(
             default_factory=list,

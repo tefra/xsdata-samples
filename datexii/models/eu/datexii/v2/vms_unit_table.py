@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.vms_unit_record import VmsUnitRecord
@@ -30,7 +30,7 @@ class VmsUnitTable:
             "max_length": 1024,
         },
     )
-    vms_unit_record: List[VmsUnitRecord] = field(
+    vms_unit_record: list[VmsUnitRecord] = field(
         default_factory=list,
         metadata={
             "name": "vmsUnitRecord",

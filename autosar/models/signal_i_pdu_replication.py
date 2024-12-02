@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
@@ -82,7 +82,7 @@ class SignalIPduReplication:
 
     @dataclass
     class ReplicaPdusRefs:
-        replica_pdus_ref: List[
+        replica_pdus_ref: list[
             "SignalIPduReplication.ReplicaPdusRefs.ReplicaPdusRef"
         ] = field(
             default_factory=list,

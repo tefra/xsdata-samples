@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.collation_algorithm_code_type import (
     CollationAlgorithmCodeType,
@@ -24,7 +24,7 @@ class SortExpressionType:
         use in the sorting to the result set
     """
 
-    path_text: List[str] = field(
+    path_text: list[str] = field(
         default_factory=list,
         metadata={
             "name": "PathText",

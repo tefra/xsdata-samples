@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.price_check_result import (
     BuyerIdreferenceDate,
@@ -401,7 +401,7 @@ class PriceCheckRequestItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfPriceCheckRequestItemDetail:
-    price_check_request_item_detail: List[PriceCheckRequestItemDetail] = field(
+    price_check_request_item_detail: list[PriceCheckRequestItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "PriceCheckRequestItemDetail",

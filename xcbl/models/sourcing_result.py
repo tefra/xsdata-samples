@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.sourcing_result_response import (
     GeneralNote,
@@ -2865,7 +2865,7 @@ class ListOfEquipmentMeasurements:
 
 @dataclass(kw_only=True)
 class ListOfReference:
-    reference: List[Reference] = field(
+    reference: list[Reference] = field(
         default_factory=list,
         metadata={
             "name": "Reference",
@@ -3953,7 +3953,7 @@ class Conditions:
 
 @dataclass(kw_only=True)
 class ConditionsOfSale:
-    sales_requirement: List[SalesRequirement] = field(
+    sales_requirement: list[SalesRequirement] = field(
         default_factory=list,
         metadata={
             "name": "SalesRequirement",
@@ -4036,7 +4036,7 @@ class DateCoded:
 
 @dataclass(kw_only=True)
 class ListOfAttachment:
-    attachment: List[Attachment] = field(
+    attachment: list[Attachment] = field(
         default_factory=list,
         metadata={
             "name": "Attachment",
@@ -4048,7 +4048,7 @@ class ListOfAttachment:
 
 @dataclass(kw_only=True)
 class ListOfDescription:
-    description: List[Description] = field(
+    description: list[Description] = field(
         default_factory=list,
         metadata={
             "name": "Description",
@@ -4060,7 +4060,7 @@ class ListOfDescription:
 
 @dataclass(kw_only=True)
 class ListOfHazardousIdentifiers:
-    hazardous_identifiers: List[HazardousIdentifiers] = field(
+    hazardous_identifiers: list[HazardousIdentifiers] = field(
         default_factory=list,
         metadata={
             "name": "HazardousIdentifiers",
@@ -4072,7 +4072,7 @@ class ListOfHazardousIdentifiers:
 
 @dataclass(kw_only=True)
 class ListOfItemCharacteristic:
-    item_characteristic: List[ItemCharacteristic] = field(
+    item_characteristic: list[ItemCharacteristic] = field(
         default_factory=list,
         metadata={
             "name": "ItemCharacteristic",
@@ -4084,7 +4084,7 @@ class ListOfItemCharacteristic:
 
 @dataclass(kw_only=True)
 class ListOfNameValuePair:
-    name_value_pair: List[NameValuePair] = field(
+    name_value_pair: list[NameValuePair] = field(
         default_factory=list,
         metadata={
             "name": "NameValuePair",
@@ -4096,7 +4096,7 @@ class ListOfNameValuePair:
 
 @dataclass(kw_only=True)
 class ListOfProductIdentifierCoded:
-    product_identifier_coded: List[ProductIdentifierCoded] = field(
+    product_identifier_coded: list[ProductIdentifierCoded] = field(
         default_factory=list,
         metadata={
             "name": "ProductIdentifierCoded",
@@ -4119,7 +4119,7 @@ class ListOfRateOfExchangeReference:
 
 @dataclass(kw_only=True)
 class ListOfStatusReason:
-    status_reason: List[StatusReason] = field(
+    status_reason: list[StatusReason] = field(
         default_factory=list,
         metadata={
             "name": "StatusReason",
@@ -4131,7 +4131,7 @@ class ListOfStatusReason:
 
 @dataclass(kw_only=True)
 class ListOfStructuredNote:
-    structured_note: List[StructuredNote] = field(
+    structured_note: list[StructuredNote] = field(
         default_factory=list,
         metadata={
             "name": "StructuredNote",
@@ -4405,7 +4405,7 @@ class SourcingResultSummary:
             "type": "Element",
         },
     )
-    quote_award_details: List[QuoteAwardDetails] = field(
+    quote_award_details: list[QuoteAwardDetails] = field(
         default_factory=list,
         metadata={
             "name": "QuoteAwardDetails",
@@ -4685,7 +4685,7 @@ class LineItemAttachments:
 
 @dataclass(kw_only=True)
 class ListOfDateCoded:
-    date_coded: List[DateCoded] = field(
+    date_coded: list[DateCoded] = field(
         default_factory=list,
         metadata={
             "name": "DateCoded",
@@ -4697,7 +4697,7 @@ class ListOfDateCoded:
 
 @dataclass(kw_only=True)
 class ListOfQuantityCoded:
-    quantity_coded: List[QuantityCoded] = field(
+    quantity_coded: list[QuantityCoded] = field(
         default_factory=list,
         metadata={
             "name": "QuantityCoded",
@@ -4709,7 +4709,7 @@ class ListOfQuantityCoded:
 
 @dataclass(kw_only=True)
 class ListOfReferenceCoded:
-    reference_coded: List[ReferenceCoded] = field(
+    reference_coded: list[ReferenceCoded] = field(
         default_factory=list,
         metadata={
             "name": "ReferenceCoded",
@@ -4721,7 +4721,7 @@ class ListOfReferenceCoded:
 
 @dataclass(kw_only=True)
 class ListOfSealInfo:
-    seal_info: List[SealInfo] = field(
+    seal_info: list[SealInfo] = field(
         default_factory=list,
         metadata={
             "name": "SealInfo",
@@ -5031,7 +5031,7 @@ class HazardousTemperatures:
 
 @dataclass(kw_only=True)
 class ItemPackagingReference:
-    package_reference: List[PackageReference] = field(
+    package_reference: list[PackageReference] = field(
         default_factory=list,
         metadata={
             "name": "PackageReference",
@@ -5043,7 +5043,7 @@ class ItemPackagingReference:
 
 @dataclass(kw_only=True)
 class ListOfContractItem:
-    contract_item: List[ContractItem] = field(
+    contract_item: list[ContractItem] = field(
         default_factory=list,
         metadata={
             "name": "ContractItem",
@@ -5066,7 +5066,7 @@ class ListOfItemReferences:
 
 @dataclass(kw_only=True)
 class ListOfNameValueSet:
-    name_value_set: List[NameValueSet] = field(
+    name_value_set: list[NameValueSet] = field(
         default_factory=list,
         metadata={
             "name": "NameValueSet",
@@ -5698,7 +5698,7 @@ class ItemIdentifiers:
 
 @dataclass(kw_only=True)
 class ListOfPrice:
-    price: List[Price] = field(
+    price: list[Price] = field(
         default_factory=list,
         metadata={
             "name": "Price",
@@ -5710,7 +5710,7 @@ class ListOfPrice:
 
 @dataclass(kw_only=True)
 class ListOfTransportEquipment:
-    transport_equipment: List[TransportEquipment] = field(
+    transport_equipment: list[TransportEquipment] = field(
         default_factory=list,
         metadata={
             "name": "TransportEquipment",
@@ -6108,7 +6108,7 @@ class BaseItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfShipToSubInformation:
-    ship_to_sub_information: List[ShipToSubInformation] = field(
+    ship_to_sub_information: list[ShipToSubInformation] = field(
         default_factory=list,
         metadata={
             "name": "ShipToSubInformation",
@@ -6234,7 +6234,7 @@ class AllowOrCharge:
             "required": True,
         }
     )
-    tax: List[Tax] = field(
+    tax: list[Tax] = field(
         default_factory=list,
         metadata={
             "name": "Tax",
@@ -6330,7 +6330,7 @@ class ScheduleLine:
 
 @dataclass(kw_only=True)
 class ListOfAllowOrCharge:
-    allow_or_charge: List[AllowOrCharge] = field(
+    allow_or_charge: list[AllowOrCharge] = field(
         default_factory=list,
         metadata={
             "name": "AllowOrCharge",
@@ -6342,7 +6342,7 @@ class ListOfAllowOrCharge:
 
 @dataclass(kw_only=True)
 class ListOfScheduleLine:
-    schedule_line: List[ScheduleLine] = field(
+    schedule_line: list[ScheduleLine] = field(
         default_factory=list,
         metadata={
             "name": "ScheduleLine",
@@ -6389,7 +6389,7 @@ class DeliveryDetail:
             "type": "Element",
         },
     )
-    terms_of_delivery: List[TermsOfDelivery] = field(
+    terms_of_delivery: list[TermsOfDelivery] = field(
         default_factory=list,
         metadata={
             "name": "TermsOfDelivery",
@@ -6425,7 +6425,7 @@ class PricingDetail:
             "required": True,
         }
     )
-    tax: List[Tax] = field(
+    tax: list[Tax] = field(
         default_factory=list,
         metadata={
             "name": "Tax",
@@ -6521,7 +6521,7 @@ class SourcingResultItem:
 
 @dataclass(kw_only=True)
 class ListOfSourcingResultItem:
-    sourcing_result_item: List[SourcingResultItem] = field(
+    sourcing_result_item: list[SourcingResultItem] = field(
         default_factory=list,
         metadata={
             "name": "SourcingResultItem",
@@ -6595,7 +6595,7 @@ class SourcingResultDetail:
 
 @dataclass(kw_only=True)
 class ListOfSourcingResultDetail:
-    sourcing_result_detail: List[SourcingResultDetail] = field(
+    sourcing_result_detail: list[SourcingResultDetail] = field(
         default_factory=list,
         metadata={
             "name": "SourcingResultDetail",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     BuyerCustomerParty,
@@ -117,7 +117,7 @@ class ForecastRevisionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -159,7 +159,7 @@ class ForecastRevisionType:
             "required": True,
         },
     )
-    original_document_reference: Tuple[OriginalDocumentReference, ...] = field(
+    original_document_reference: tuple[OriginalDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OriginalDocumentReference",
@@ -167,7 +167,7 @@ class ForecastRevisionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -209,7 +209,7 @@ class ForecastRevisionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    forecast_revision_line: Tuple[ForecastRevisionLine, ...] = field(
+    forecast_revision_line: tuple[ForecastRevisionLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ForecastRevisionLine",

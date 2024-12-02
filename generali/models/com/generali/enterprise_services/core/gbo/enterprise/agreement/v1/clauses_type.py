@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.clause_type import (
     ClauseType,
@@ -12,7 +11,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ClausesType:
-    clause: List[ClauseType] = field(
+    clause: list[ClauseType] = field(
         default_factory=list,
         metadata={
             "name": "Clause",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -352,7 +352,7 @@ class System:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -363,7 +363,7 @@ class System:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -374,7 +374,7 @@ class System:
 
     @dataclass
     class SystemDocumentations:
-        chapter: List[Chapter] = field(
+        chapter: list[Chapter] = field(
             default_factory=list,
             metadata={
                 "name": "CHAPTER",
@@ -385,7 +385,7 @@ class System:
 
     @dataclass
     class ClientIdDefinitionSetRefs:
-        client_id_definition_set_ref: List[
+        client_id_definition_set_ref: list[
             "System.ClientIdDefinitionSetRefs.ClientIdDefinitionSetRef"
         ] = field(
             default_factory=list,
@@ -409,7 +409,7 @@ class System:
 
     @dataclass
     class FibexElements:
-        fibex_element_ref_conditional: List[FibexElementRefConditional] = (
+        fibex_element_ref_conditional: list[FibexElementRefConditional] = (
             field(
                 default_factory=list,
                 metadata={
@@ -422,7 +422,7 @@ class System:
 
     @dataclass
     class InterpolationRoutineMappingSetRefs:
-        interpolation_routine_mapping_set_ref: List[
+        interpolation_routine_mapping_set_ref: list[
             "System.InterpolationRoutineMappingSetRefs.InterpolationRoutineMappingSetRef"
         ] = field(
             default_factory=list,
@@ -446,7 +446,7 @@ class System:
 
     @dataclass
     class J1939SharedAddressClusters:
-        j_1939_shared_address_cluster: List[J1939SharedAddressCluster] = field(
+        j_1939_shared_address_cluster: list[J1939SharedAddressCluster] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-SHARED-ADDRESS-CLUSTER",
@@ -457,7 +457,7 @@ class System:
 
     @dataclass
     class Mappings:
-        system_mapping: List[SystemMapping] = field(
+        system_mapping: list[SystemMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SYSTEM-MAPPING",
@@ -468,7 +468,7 @@ class System:
 
     @dataclass
     class RootSoftwareCompositions:
-        root_sw_composition_prototype: List[RootSwCompositionPrototype] = (
+        root_sw_composition_prototype: list[RootSwCompositionPrototype] = (
             field(
                 default_factory=list,
                 metadata={
@@ -481,7 +481,7 @@ class System:
 
     @dataclass
     class SwClusters:
-        cp_software_cluster_ref_conditional: List[
+        cp_software_cluster_ref_conditional: list[
             CpSoftwareClusterRefConditional
         ] = field(
             default_factory=list,

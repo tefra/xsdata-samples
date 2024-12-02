@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Union
+from typing import Optional, Union
 
 from sdmx_ml.models.coded_text_format_type import CodedTextFormatType
 from sdmx_ml.models.text_format_type import TextFormatType
@@ -24,7 +24,7 @@ class RepresentationType:
         number of values that can be reported for the component.
     """
 
-    text_format_or_enumeration_or_enumeration_format: Tuple[
+    text_format_or_enumeration_or_enumeration_format: tuple[
         Union[TextFormatType, str, CodedTextFormatType], ...
     ] = field(
         default_factory=tuple,

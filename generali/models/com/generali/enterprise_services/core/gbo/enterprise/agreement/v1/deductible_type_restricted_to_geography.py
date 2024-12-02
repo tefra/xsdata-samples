@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geography_type import (
     GeographyType,
@@ -15,7 +14,7 @@ class DeductibleTypeRestrictedToGeography:
     class Meta:
         global_type = False
 
-    geography: List[GeographyType] = field(
+    geography: list[GeographyType] = field(
         default_factory=list,
         metadata={
             "name": "Geography",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.columnalignstyle import (
     Columnalignstyle,
@@ -33,13 +33,13 @@ class Mtable:
         name = "mtable"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    mtr: List[Mtr] = field(
+    mtr: list[Mtr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    mlabeledtr: List[Mlabeledtr] = field(
+    mlabeledtr: list[Mlabeledtr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -57,7 +57,7 @@ class Mtable:
             "type": "Attribute",
         },
     )
-    class_value: List[str] = field(
+    class_value: list[str] = field(
         default_factory=list,
         metadata={
             "name": "class",
@@ -83,7 +83,7 @@ class Mtable:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -111,14 +111,14 @@ class Mtable:
             "pattern": r"\s*(top|bottom|center|baseline|axis)(\s+-?[0-9]+)?\s*",
         },
     )
-    rowalign: List[Verticalalign] = field(
+    rowalign: list[Verticalalign] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    columnalign: List[Columnalignstyle] = field(
+    columnalign: list[Columnalignstyle] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -132,14 +132,14 @@ class Mtable:
             "pattern": r"(\s*\{\s*(left|center|right|decimalpoint)(\s+(left|center|right|decimalpoint))*\})*\s*",
         },
     )
-    alignmentscope: List[MtableValue] = field(
+    alignmentscope: list[MtableValue] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    columnwidth: List[MtableValue] = field(
+    columnwidth: list[MtableValue] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -153,7 +153,7 @@ class Mtable:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    rowspacing: List[str] = field(
+    rowspacing: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -162,7 +162,7 @@ class Mtable:
             "tokens": True,
         },
     )
-    columnspacing: List[str] = field(
+    columnspacing: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -171,14 +171,14 @@ class Mtable:
             "tokens": True,
         },
     )
-    rowlines: List[Linestyle] = field(
+    rowlines: list[Linestyle] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         },
     )
-    columnlines: List[Linestyle] = field(
+    columnlines: list[Linestyle] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -191,7 +191,7 @@ class Mtable:
             "type": "Attribute",
         },
     )
-    framespacing: List[object] = field(
+    framespacing: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",

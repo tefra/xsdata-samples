@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .autosar_parameter_ref import AutosarParameterRef
 from .autosar_variable_ref import AutosarVariableRef
@@ -46,7 +46,7 @@ class SwDataDependencyArgs:
     class Meta:
         name = "SW-DATA-DEPENDENCY-ARGS"
 
-    ar_parameter: List[AutosarParameterRef] = field(
+    ar_parameter: list[AutosarParameterRef] = field(
         default_factory=list,
         metadata={
             "name": "AR-PARAMETER",
@@ -55,7 +55,7 @@ class SwDataDependencyArgs:
             "sequence": 1,
         },
     )
-    mc_data_instance_ref: List["SwDataDependencyArgs.McDataInstanceRef"] = (
+    mc_data_instance_ref: list["SwDataDependencyArgs.McDataInstanceRef"] = (
         field(
             default_factory=list,
             metadata={
@@ -66,7 +66,7 @@ class SwDataDependencyArgs:
             },
         )
     )
-    autosar_variable: List[AutosarVariableRef] = field(
+    autosar_variable: list[AutosarVariableRef] = field(
         default_factory=list,
         metadata={
             "name": "AUTOSAR-VARIABLE",
@@ -75,7 +75,7 @@ class SwDataDependencyArgs:
             "sequence": 2,
         },
     )
-    mc_data_instance_var_ref: List[
+    mc_data_instance_var_ref: list[
         "SwDataDependencyArgs.McDataInstanceVarRef"
     ] = field(
         default_factory=list,

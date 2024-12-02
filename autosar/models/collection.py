@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -257,7 +257,7 @@ class Collection:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -268,7 +268,7 @@ class Collection:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -279,7 +279,7 @@ class Collection:
 
     @dataclass
     class ElementRefs:
-        element_ref: List["Collection.ElementRefs.ElementRef"] = field(
+        element_ref: list["Collection.ElementRefs.ElementRef"] = field(
             default_factory=list,
             metadata={
                 "name": "ELEMENT-REF",
@@ -301,7 +301,7 @@ class Collection:
 
     @dataclass
     class SourceElementRefs:
-        source_element_ref: List[
+        source_element_ref: list[
             "Collection.SourceElementRefs.SourceElementRef"
         ] = field(
             default_factory=list,
@@ -325,7 +325,7 @@ class Collection:
 
     @dataclass
     class CollectedInstanceIrefs:
-        collected_instance_iref: List[AnyInstanceRef] = field(
+        collected_instance_iref: list[AnyInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "COLLECTED-INSTANCE-IREF",
@@ -336,7 +336,7 @@ class Collection:
 
     @dataclass
     class SourceInstanceIrefs:
-        source_instance_iref: List[AnyInstanceRef] = field(
+        source_instance_iref: list[AnyInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "SOURCE-INSTANCE-IREF",

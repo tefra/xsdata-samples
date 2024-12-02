@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from tpdb.models.relrules import Relrules
 from tpdb.models.rule import Rule
@@ -10,7 +10,7 @@ class Rules:
     class Meta:
         name = "rules"
 
-    rule: List[Rule] = field(
+    rule: list[Rule] = field(
         default_factory=list,
         metadata={
             "type": "Element",

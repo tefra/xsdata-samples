@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.metadata_structure_type import MetadataStructureType
 
@@ -30,7 +29,7 @@ class MetadataStructuresType:
         structure.
     """
 
-    metadata_structure: Tuple[MetadataStructureType, ...] = field(
+    metadata_structure: tuple[MetadataStructureType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MetadataStructure",

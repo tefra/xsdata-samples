@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -314,7 +314,7 @@ class IdsmInstance:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -325,7 +325,7 @@ class IdsmInstance:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -336,7 +336,7 @@ class IdsmInstance:
 
     @dataclass
     class BlockStates:
-        block_state: List[BlockState] = field(
+        block_state: list[BlockState] = field(
             default_factory=list,
             metadata={
                 "name": "BLOCK-STATE",
@@ -347,7 +347,7 @@ class IdsmInstance:
 
     @dataclass
     class EcuInstances:
-        ecu_instance_ref_conditional: List[EcuInstanceRefConditional] = field(
+        ecu_instance_ref_conditional: list[EcuInstanceRefConditional] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-INSTANCE-REF-CONDITIONAL",
@@ -369,7 +369,7 @@ class IdsmInstance:
 
     @dataclass
     class RateLimitationFilters:
-        idsm_rate_limitation_ref_conditional: List[
+        idsm_rate_limitation_ref_conditional: list[
             IdsmRateLimitationRefConditional
         ] = field(
             default_factory=list,
@@ -382,7 +382,7 @@ class IdsmInstance:
 
     @dataclass
     class TrafficLimitationFilters:
-        idsm_traffic_limitation_ref_conditional: List[
+        idsm_traffic_limitation_ref_conditional: list[
             IdsmTrafficLimitationRefConditional
         ] = field(
             default_factory=list,

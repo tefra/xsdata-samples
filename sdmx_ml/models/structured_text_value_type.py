@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Tuple
+from typing import Any
 
 from sdmx_ml.models.structured_text import StructuredText
 from sdmx_ml.models.text import Text
@@ -26,7 +26,7 @@ class StructuredTextValueType(ValueType):
             "type": "Ignore",
         },
     )
-    structured_text: Tuple[StructuredText, ...] = field(
+    structured_text: tuple[StructuredText, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "StructuredText",

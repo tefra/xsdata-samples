@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Optional
 
 __NAMESPACE__ = "http://www.omg.org/spec/DD/20100524/DI"
 
@@ -21,7 +21,7 @@ class DiagramElement:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -31,7 +31,7 @@ class DiagramElement:
 
     @dataclass
     class Extension:
-        other_element: List[object] = field(
+        other_element: list[object] = field(
             default_factory=list,
             metadata={
                 "type": "Wildcard",

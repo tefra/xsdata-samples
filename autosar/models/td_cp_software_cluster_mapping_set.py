@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -213,7 +213,7 @@ class TdCpSoftwareClusterMappingSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -224,7 +224,7 @@ class TdCpSoftwareClusterMappingSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -235,7 +235,7 @@ class TdCpSoftwareClusterMappingSet:
 
     @dataclass
     class TdCpSoftwareClusterResourceToTdMappings:
-        td_cp_software_cluster_resource_mapping: List[
+        td_cp_software_cluster_resource_mapping: list[
             TdCpSoftwareClusterResourceMapping
         ] = field(
             default_factory=list,
@@ -248,7 +248,7 @@ class TdCpSoftwareClusterMappingSet:
 
     @dataclass
     class TdCpSoftwareClusterToTdMappings:
-        td_cp_software_cluster_mapping: List[TdCpSoftwareClusterMapping] = (
+        td_cp_software_cluster_mapping: list[TdCpSoftwareClusterMapping] = (
             field(
                 default_factory=list,
                 metadata={

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cedant_involvement_type import (
     CedantInvolvementType,
@@ -15,7 +14,7 @@ class CoverGbotypeCedants:
     class Meta:
         global_type = False
 
-    cedant: List[CedantInvolvementType] = field(
+    cedant: list[CedantInvolvementType] = field(
         default_factory=list,
         metadata={
             "name": "Cedant",

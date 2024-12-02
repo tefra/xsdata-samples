@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .identifier import Identifier
 from .integer import Integer
@@ -84,7 +84,7 @@ class RuleBasedValueSpecification:
 
     @dataclass
     class Argumentss:
-        rule_arguments: List[RuleArguments] = field(
+        rule_arguments: list[RuleArguments] = field(
             default_factory=list,
             metadata={
                 "name": "RULE-ARGUMENTS",

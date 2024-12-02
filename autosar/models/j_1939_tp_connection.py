@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -252,7 +252,7 @@ class J1939TpConnection:
 
     @dataclass
     class FlowControlPduRefs:
-        flow_control_pdu_ref: List[
+        flow_control_pdu_ref: list[
             "J1939TpConnection.FlowControlPduRefs.FlowControlPduRef"
         ] = field(
             default_factory=list,
@@ -277,7 +277,7 @@ class J1939TpConnection:
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: List["J1939TpConnection.ReceiverRefs.ReceiverRef"] = (
+        receiver_ref: list["J1939TpConnection.ReceiverRefs.ReceiverRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -301,7 +301,7 @@ class J1939TpConnection:
 
     @dataclass
     class TpPgs:
-        j_1939_tp_pg: List[J1939TpPg] = field(
+        j_1939_tp_pg: list[J1939TpPg] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-TP-PG",
@@ -312,7 +312,7 @@ class J1939TpConnection:
 
     @dataclass
     class TpSduRefs:
-        tp_sdu_ref: List["J1939TpConnection.TpSduRefs.TpSduRef"] = field(
+        tp_sdu_ref: list["J1939TpConnection.TpSduRefs.TpSduRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TP-SDU-REF",

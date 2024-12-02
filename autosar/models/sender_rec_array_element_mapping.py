@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .application_record_element_subtypes_enum import (
     ApplicationRecordElementSubtypesEnum,
@@ -209,7 +209,7 @@ class SenderRecArrayTypeMapping:
 
     @dataclass
     class ArrayElementMappings:
-        sender_rec_array_element_mapping: List[
+        sender_rec_array_element_mapping: list[
             SenderRecArrayElementMapping
         ] = field(
             default_factory=list,
@@ -450,7 +450,7 @@ class SenderRecRecordTypeMapping:
 
     @dataclass
     class RecordElementMappings:
-        sender_rec_record_element_mapping: List[
+        sender_rec_record_element_mapping: list[
             SenderRecRecordElementMapping
         ] = field(
             default_factory=list,

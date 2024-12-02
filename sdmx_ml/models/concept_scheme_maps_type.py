@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.concept_scheme_map_type import ConceptSchemeMapType
 
@@ -20,7 +19,7 @@ class ConceptSchemeMapsType:
         different schemes.
     """
 
-    concept_scheme_map: Tuple[ConceptSchemeMapType, ...] = field(
+    concept_scheme_map: tuple[ConceptSchemeMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConceptSchemeMap",

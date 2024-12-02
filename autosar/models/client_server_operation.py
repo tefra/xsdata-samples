@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -271,7 +271,7 @@ class ClientServerOperation:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -282,7 +282,7 @@ class ClientServerOperation:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -293,7 +293,7 @@ class ClientServerOperation:
 
     @dataclass
     class Arguments:
-        argument_data_prototype: List[ArgumentDataPrototype] = field(
+        argument_data_prototype: list[ArgumentDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "ARGUMENT-DATA-PROTOTYPE",
@@ -304,7 +304,7 @@ class ClientServerOperation:
 
     @dataclass
     class PossibleApErrorRefs:
-        possible_ap_error_ref: List[
+        possible_ap_error_ref: list[
             "ClientServerOperation.PossibleApErrorRefs.PossibleApErrorRef"
         ] = field(
             default_factory=list,
@@ -328,7 +328,7 @@ class ClientServerOperation:
 
     @dataclass
     class PossibleApErrorSetRefs:
-        possible_ap_error_set_ref: List[
+        possible_ap_error_set_ref: list[
             "ClientServerOperation.PossibleApErrorSetRefs.PossibleApErrorSetRef"
         ] = field(
             default_factory=list,
@@ -352,7 +352,7 @@ class ClientServerOperation:
 
     @dataclass
     class PossibleErrorRefs:
-        possible_error_ref: List[
+        possible_error_ref: list[
             "ClientServerOperation.PossibleErrorRefs.PossibleErrorRef"
         ] = field(
             default_factory=list,

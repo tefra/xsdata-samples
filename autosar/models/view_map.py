@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -232,7 +232,7 @@ class ViewMap:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -243,7 +243,7 @@ class ViewMap:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -254,7 +254,7 @@ class ViewMap:
 
     @dataclass
     class FirstElementRefs:
-        first_element_ref: List["ViewMap.FirstElementRefs.FirstElementRef"] = (
+        first_element_ref: list["ViewMap.FirstElementRefs.FirstElementRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -278,7 +278,7 @@ class ViewMap:
 
     @dataclass
     class SecondElementRefs:
-        second_element_ref: List[
+        second_element_ref: list[
             "ViewMap.SecondElementRefs.SecondElementRef"
         ] = field(
             default_factory=list,
@@ -302,7 +302,7 @@ class ViewMap:
 
     @dataclass
     class FirstElementInstanceIrefs:
-        first_element_instance_iref: List[AnyInstanceRef] = field(
+        first_element_instance_iref: list[AnyInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "FIRST-ELEMENT-INSTANCE-IREF",
@@ -313,7 +313,7 @@ class ViewMap:
 
     @dataclass
     class SecondElementInstanceIrefs:
-        second_element_instance_iref: List[AnyInstanceRef] = field(
+        second_element_instance_iref: list[AnyInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "SECOND-ELEMENT-INSTANCE-IREF",

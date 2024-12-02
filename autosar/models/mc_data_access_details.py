@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .rte_event_in_ecu_instance_ref import RteEventInEcuInstanceRef
 from .variable_access_in_ecu_instance_ref import VariableAccessInEcuInstanceRef
@@ -70,7 +70,7 @@ class McDataAccessDetails:
 
     @dataclass
     class RteEventIrefs:
-        rte_event_iref: List[RteEventInEcuInstanceRef] = field(
+        rte_event_iref: list[RteEventInEcuInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "RTE-EVENT-IREF",
@@ -81,7 +81,7 @@ class McDataAccessDetails:
 
     @dataclass
     class VariableAccessIrefs:
-        variable_access_iref: List[VariableAccessInEcuInstanceRef] = field(
+        variable_access_iref: list[VariableAccessInEcuInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-ACCESS-IREF",

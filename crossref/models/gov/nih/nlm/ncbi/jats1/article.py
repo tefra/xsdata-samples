@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.article_dtd_version import (
     ArticleDtdVersion,
@@ -61,14 +61,14 @@ class Article:
             "type": "Element",
         },
     )
-    sub_article: List[SubArticle] = field(
+    sub_article: list[SubArticle] = field(
         default_factory=list,
         metadata={
             "name": "sub-article",
             "type": "Element",
         },
     )
-    response: List[Response] = field(
+    response: list[Response] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -274,7 +274,7 @@ class RptExecutableEntityEvent:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -285,7 +285,7 @@ class RptExecutableEntityEvent:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -296,7 +296,7 @@ class RptExecutableEntityEvent:
 
     @dataclass
     class ExecutionContextRefs:
-        execution_context_ref: List[
+        execution_context_ref: list[
             "RptExecutableEntityEvent.ExecutionContextRefs.ExecutionContextRef"
         ] = field(
             default_factory=list,
@@ -320,7 +320,7 @@ class RptExecutableEntityEvent:
 
     @dataclass
     class McDataAssignments:
-        role_based_mc_data_assignment: List[RoleBasedMcDataAssignment] = field(
+        role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-MC-DATA-ASSIGNMENT",
@@ -331,7 +331,7 @@ class RptExecutableEntityEvent:
 
     @dataclass
     class RptServicePointPostRefs:
-        rpt_service_point_post_ref: List[
+        rpt_service_point_post_ref: list[
             "RptExecutableEntityEvent.RptServicePointPostRefs.RptServicePointPostRef"
         ] = field(
             default_factory=list,
@@ -355,7 +355,7 @@ class RptExecutableEntityEvent:
 
     @dataclass
     class RptServicePointPreRefs:
-        rpt_service_point_pre_ref: List[
+        rpt_service_point_pre_ref: list[
             "RptExecutableEntityEvent.RptServicePointPreRefs.RptServicePointPreRef"
         ] = field(
             default_factory=list,

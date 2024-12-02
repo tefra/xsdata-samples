@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -383,7 +383,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -394,7 +394,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -405,7 +405,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class CapabilityRecords:
-        tag_with_optional_value: List[TagWithOptionalValue] = field(
+        tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
             metadata={
                 "name": "TAG-WITH-OPTIONAL-VALUE",
@@ -416,7 +416,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class MethodActivationRoutingGroups:
-        pdu_activation_routing_group: List[PduActivationRoutingGroup] = field(
+        pdu_activation_routing_group: list[PduActivationRoutingGroup] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-ACTIVATION-ROUTING-GROUP",
@@ -427,7 +427,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class RoutingGroupRefs:
-        routing_group_ref: List[
+        routing_group_ref: list[
             "ProvidedServiceInstance.RoutingGroupRefs.RoutingGroupRef"
         ] = field(
             default_factory=list,
@@ -451,7 +451,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class EventHandlers:
-        event_handler: List[EventHandler] = field(
+        event_handler: list[EventHandler] = field(
             default_factory=list,
             metadata={
                 "name": "EVENT-HANDLER",
@@ -462,7 +462,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class LocalUnicastAddresss:
-        application_endpoint_ref_conditional: List[
+        application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
         ] = field(
             default_factory=list,
@@ -475,7 +475,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class RemoteUnicastAddresss:
-        application_endpoint_ref_conditional: List[
+        application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
         ] = field(
             default_factory=list,
@@ -488,7 +488,7 @@ class ProvidedServiceInstance:
 
     @dataclass
     class SdServerTimerConfigs:
-        someip_sd_server_service_instance_config_ref_conditional: List[
+        someip_sd_server_service_instance_config_ref_conditional: list[
             SomeipSdServerServiceInstanceConfigRefConditional
         ] = field(
             default_factory=list,

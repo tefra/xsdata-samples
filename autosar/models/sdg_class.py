@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -232,7 +232,7 @@ class SdgClass:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -243,7 +243,7 @@ class SdgClass:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -254,7 +254,7 @@ class SdgClass:
 
     @dataclass
     class Attributes:
-        sdg_aggregation_with_variation: List[SdgAggregationWithVariation] = (
+        sdg_aggregation_with_variation: list[SdgAggregationWithVariation] = (
             field(
                 default_factory=list,
                 metadata={
@@ -264,7 +264,7 @@ class SdgClass:
                 },
             )
         )
-        sdg_foreign_reference: List[SdgForeignReference] = field(
+        sdg_foreign_reference: list[SdgForeignReference] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-FOREIGN-REFERENCE",
@@ -272,7 +272,7 @@ class SdgClass:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sdg_foreign_reference_with_variation: List[
+        sdg_foreign_reference_with_variation: list[
             SdgForeignReferenceWithVariation
         ] = field(
             default_factory=list,
@@ -282,7 +282,7 @@ class SdgClass:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sdg_primitive_attribute: List[SdgPrimitiveAttribute] = field(
+        sdg_primitive_attribute: list[SdgPrimitiveAttribute] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-PRIMITIVE-ATTRIBUTE",
@@ -290,7 +290,7 @@ class SdgClass:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sdg_primitive_attribute_with_variation: List[
+        sdg_primitive_attribute_with_variation: list[
             SdgPrimitiveAttributeWithVariation
         ] = field(
             default_factory=list,
@@ -300,7 +300,7 @@ class SdgClass:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sdg_reference: List[SdgReference] = field(
+        sdg_reference: list[SdgReference] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-REFERENCE",
@@ -311,7 +311,7 @@ class SdgClass:
 
     @dataclass
     class SdgConstraintRefs:
-        sdg_constraint_ref: List[
+        sdg_constraint_ref: list[
             "SdgClass.SdgConstraintRefs.SdgConstraintRef"
         ] = field(
             default_factory=list,

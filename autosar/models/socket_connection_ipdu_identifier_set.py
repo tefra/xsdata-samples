@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -196,7 +196,7 @@ class SocketConnectionIpduIdentifierSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -207,7 +207,7 @@ class SocketConnectionIpduIdentifierSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -218,7 +218,7 @@ class SocketConnectionIpduIdentifierSet:
 
     @dataclass
     class IPduIdentifiers:
-        so_con_i_pdu_identifier: List[SoConIPduIdentifier] = field(
+        so_con_i_pdu_identifier: list[SoConIPduIdentifier] = field(
             default_factory=list,
             metadata={
                 "name": "SO-CON-I-PDU-IDENTIFIER",

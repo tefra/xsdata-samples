@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
@@ -35,7 +35,7 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    predefined_location: List[PredefinedLocation] = field(
+    predefined_location: list[PredefinedLocation] = field(
         default_factory=list,
         metadata={
             "name": "predefinedLocation",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -159,7 +159,7 @@ class QueuedSenderComSpec:
 
     @dataclass
     class CompositeNetworkRepresentations:
-        composite_network_representation: List[
+        composite_network_representation: list[
             CompositeNetworkRepresentation
         ] = field(
             default_factory=list,

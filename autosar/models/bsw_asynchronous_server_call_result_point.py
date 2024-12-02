@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_asynchronous_server_call_point_subtypes_enum import (
@@ -113,7 +113,7 @@ class BswAsynchronousServerCallResultPoint:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -124,7 +124,7 @@ class BswAsynchronousServerCallResultPoint:
 
     @dataclass
     class ContextLimitationRefs:
-        context_limitation_ref: List[
+        context_limitation_ref: list[
             "BswAsynchronousServerCallResultPoint.ContextLimitationRefs.ContextLimitationRef"
         ] = field(
             default_factory=list,

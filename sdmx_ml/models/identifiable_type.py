@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.link import Link
@@ -21,7 +21,7 @@ class IdentifiableType(AnnotableType):
         web page. This uri is not a SDMX message.
     """
 
-    link: Tuple[Link, ...] = field(
+    link: tuple[Link, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Link",

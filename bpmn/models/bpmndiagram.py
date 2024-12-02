@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .bpmnlabel_style import BpmnlabelStyle
 from .bpmnplane import Bpmnplane
@@ -22,7 +22,7 @@ class Bpmndiagram(Diagram):
             "required": True,
         },
     )
-    bpmnlabel_style: List[BpmnlabelStyle] = field(
+    bpmnlabel_style: list[BpmnlabelStyle] = field(
         default_factory=list,
         metadata={
             "name": "BPMNLabelStyle",

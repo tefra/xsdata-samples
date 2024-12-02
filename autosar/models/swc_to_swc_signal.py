@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .variable_data_prototype_in_system_instance_ref import (
     VariableDataPrototypeInSystemInstanceRef,
@@ -63,7 +63,7 @@ class SwcToSwcSignal:
 
     @dataclass
     class DataElementIrefs:
-        data_element_iref: List[VariableDataPrototypeInSystemInstanceRef] = (
+        data_element_iref: list[VariableDataPrototypeInSystemInstanceRef] = (
             field(
                 default_factory=list,
                 metadata={

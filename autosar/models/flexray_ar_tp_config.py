@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -234,7 +234,7 @@ class FlexrayArTpConfig:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -245,7 +245,7 @@ class FlexrayArTpConfig:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -267,7 +267,7 @@ class FlexrayArTpConfig:
 
     @dataclass
     class TpAddresss:
-        tp_address: List[TpAddress] = field(
+        tp_address: list[TpAddress] = field(
             default_factory=list,
             metadata={
                 "name": "TP-ADDRESS",
@@ -278,7 +278,7 @@ class FlexrayArTpConfig:
 
     @dataclass
     class TpChannels:
-        flexray_ar_tp_channel: List[FlexrayArTpChannel] = field(
+        flexray_ar_tp_channel: list[FlexrayArTpChannel] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-AR-TP-CHANNEL",
@@ -289,7 +289,7 @@ class FlexrayArTpConfig:
 
     @dataclass
     class TpNodes:
-        flexray_ar_tp_node: List[FlexrayArTpNode] = field(
+        flexray_ar_tp_node: list[FlexrayArTpNode] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-AR-TP-NODE",

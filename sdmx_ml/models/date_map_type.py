@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.identifiable_type import IdentifiableType
 from sdmx_ml.models.resolve_period_type import ResolvePeriodType
@@ -18,7 +18,7 @@ class DateMapType(IdentifiableType):
         mapping from low fequency periods to higher frequency periods.
     """
 
-    source: Tuple[str, ...] = field(
+    source: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Source",
@@ -28,7 +28,7 @@ class DateMapType(IdentifiableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    target: Tuple[str, ...] = field(
+    target: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Target",
@@ -38,7 +38,7 @@ class DateMapType(IdentifiableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    frequency_dimension_or_mapped_frequencies_or_target_frequency_id: Tuple[
+    frequency_dimension_or_mapped_frequencies_or_target_frequency_id: tuple[
         Union[
             "DateMapType.FrequencyDimension",
             "DateMapType.MappedFrequencies",

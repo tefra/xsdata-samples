@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.annotation_urltype import AnnotationUrltype
 from sdmx_ml.models.text_type import TextType
@@ -53,7 +53,7 @@ class AnnotationType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    annotation_url: Tuple[AnnotationUrltype, ...] = field(
+    annotation_url: tuple[AnnotationUrltype, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AnnotationURL",
@@ -61,7 +61,7 @@ class AnnotationType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    annotation_text: Tuple[TextType, ...] = field(
+    annotation_text: tuple[TextType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AnnotationText",

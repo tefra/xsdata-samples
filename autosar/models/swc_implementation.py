@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -428,7 +428,7 @@ class SwcImplementation:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -439,7 +439,7 @@ class SwcImplementation:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -450,7 +450,7 @@ class SwcImplementation:
 
     @dataclass
     class BuildActionManifests:
-        build_action_manifest_ref_conditional: List[
+        build_action_manifest_ref_conditional: list[
             BuildActionManifestRefConditional
         ] = field(
             default_factory=list,
@@ -463,7 +463,7 @@ class SwcImplementation:
 
     @dataclass
     class CodeDescriptors:
-        code: List[Code] = field(
+        code: list[Code] = field(
             default_factory=list,
             metadata={
                 "name": "CODE",
@@ -474,7 +474,7 @@ class SwcImplementation:
 
     @dataclass
     class Compilers:
-        compiler: List[Compiler] = field(
+        compiler: list[Compiler] = field(
             default_factory=list,
             metadata={
                 "name": "COMPILER",
@@ -485,7 +485,7 @@ class SwcImplementation:
 
     @dataclass
     class GeneratedArtifacts:
-        dependency_on_artifact: List[DependencyOnArtifact] = field(
+        dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
             metadata={
                 "name": "DEPENDENCY-ON-ARTIFACT",
@@ -496,7 +496,7 @@ class SwcImplementation:
 
     @dataclass
     class HwElementRefs:
-        hw_element_ref: List[
+        hw_element_ref: list[
             "SwcImplementation.HwElementRefs.HwElementRef"
         ] = field(
             default_factory=list,
@@ -520,7 +520,7 @@ class SwcImplementation:
 
     @dataclass
     class Linkers:
-        linker: List[Linker] = field(
+        linker: list[Linker] = field(
             default_factory=list,
             metadata={
                 "name": "LINKER",
@@ -531,7 +531,7 @@ class SwcImplementation:
 
     @dataclass
     class RequiredArtifacts:
-        dependency_on_artifact: List[DependencyOnArtifact] = field(
+        dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
             metadata={
                 "name": "DEPENDENCY-ON-ARTIFACT",
@@ -542,7 +542,7 @@ class SwcImplementation:
 
     @dataclass
     class RequiredGeneratorTools:
-        dependency_on_artifact: List[DependencyOnArtifact] = field(
+        dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
             metadata={
                 "name": "DEPENDENCY-ON-ARTIFACT",
@@ -575,7 +575,7 @@ class SwcImplementation:
 
     @dataclass
     class PerInstanceMemorySizes:
-        per_instance_memory_size: List[PerInstanceMemorySize] = field(
+        per_instance_memory_size: list[PerInstanceMemorySize] = field(
             default_factory=list,
             metadata={
                 "name": "PER-INSTANCE-MEMORY-SIZE",

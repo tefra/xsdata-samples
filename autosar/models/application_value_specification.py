@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -109,7 +109,7 @@ class ApplicationValueSpecification:
 
     @dataclass
     class SwAxisConts:
-        sw_axis_cont: List[SwAxisCont] = field(
+        sw_axis_cont: list[SwAxisCont] = field(
             default_factory=list,
             metadata={
                 "name": "SW-AXIS-CONT",

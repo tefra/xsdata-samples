@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ...hl7_v3.ne2008.multi_cache.prpa_in201305_uv02 import (
     PrpaIn201305Uv02McciMt000100Uv01Message,
@@ -134,7 +134,7 @@ class FindEncountersPrpaMt900350Uv02ResponseType:
     class Meta:
         name = "FindEncounters_PRPA_MT900350UV02ResponseType"
 
-    event: List[PrpaMt900350Uv02EncounterEvent] = field(
+    event: list[PrpaMt900350Uv02EncounterEvent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -190,7 +190,7 @@ class FindPatientsPrpaMt201310Uv02ResponseType:
     class Meta:
         name = "FindPatients_PRPA_MT201310UV02ResponseType"
 
-    subject: List[PrpaMt201310Uv02Patient] = field(
+    subject: list[PrpaMt201310Uv02Patient] = field(
         default_factory=list,
         metadata={
             "type": "Element",

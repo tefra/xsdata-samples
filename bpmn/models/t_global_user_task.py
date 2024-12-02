@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Union
+from typing import Union
 
 from .rendering import Rendering
 from .t_global_task import TGlobalTask
@@ -13,7 +13,7 @@ class TGlobalUserTask(TGlobalTask):
     class Meta:
         name = "tGlobalUserTask"
 
-    rendering: List[Rendering] = field(
+    rendering: list[Rendering] = field(
         default_factory=list,
         metadata={
             "type": "Element",

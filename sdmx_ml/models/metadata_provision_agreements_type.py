@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.metadata_provision_agreement_type import (
     MetadataProvisionAgreementType,
@@ -23,7 +22,7 @@ class MetadataProvisionAgreementsType:
         metadata against a flow.
     """
 
-    metadata_provision_agreement: Tuple[
+    metadata_provision_agreement: tuple[
         MetadataProvisionAgreementType, ...
     ] = field(
         default_factory=tuple,

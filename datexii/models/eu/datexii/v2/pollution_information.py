@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.pollution import Pollution
@@ -14,7 +14,7 @@ class PollutionInformation(WeatherData):
     Measurements of atmospheric pollution.
     """
 
-    pollution: List[Pollution] = field(
+    pollution: list[Pollution] = field(
         default_factory=list,
         metadata={
             "type": "Element",

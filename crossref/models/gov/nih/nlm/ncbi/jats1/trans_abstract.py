@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Label,
@@ -23,7 +23,7 @@ class TransAbstract:
         name = "trans-abstract"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -42,13 +42,13 @@ class TransAbstract:
             "type": "Element",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sec: List[Sec] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.categorisation_type import CategorisationType
 
@@ -25,7 +24,7 @@ class CategorisationsType:
         service.
     """
 
-    categorisation: Tuple[CategorisationType, ...] = field(
+    categorisation: tuple[CategorisationType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Categorisation",

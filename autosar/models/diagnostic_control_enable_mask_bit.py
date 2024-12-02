@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .diagnostic_data_element_subtypes_enum import (
     DiagnosticDataElementSubtypesEnum,
@@ -74,7 +74,7 @@ class DiagnosticControlEnableMaskBit:
 
     @dataclass
     class ControlledDataElementRefs:
-        controlled_data_element_ref: List[
+        controlled_data_element_ref: list[
             "DiagnosticControlEnableMaskBit.ControlledDataElementRefs.ControlledDataElementRef"
         ] = field(
             default_factory=list,

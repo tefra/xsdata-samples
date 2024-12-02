@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from voko.models.ekz import Klr
 from voko.models.tld import Tld
@@ -16,7 +15,7 @@ class Lstref:
             "required": True,
         }
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

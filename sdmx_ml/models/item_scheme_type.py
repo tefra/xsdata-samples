@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.item_type import (
     Agency,
@@ -39,7 +39,7 @@ class ItemSchemeType(MaintainableType):
         structure in the context of a constraint.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             CustomType,
             UserDefinedOperator,

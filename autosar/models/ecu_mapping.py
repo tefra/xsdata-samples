@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -226,7 +226,7 @@ class EcuMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -237,7 +237,7 @@ class EcuMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -248,7 +248,7 @@ class EcuMapping:
 
     @dataclass
     class CommControllerMappings:
-        communication_controller_mapping: List[
+        communication_controller_mapping: list[
             CommunicationControllerMapping
         ] = field(
             default_factory=list,
@@ -283,7 +283,7 @@ class EcuMapping:
 
     @dataclass
     class HwPortMappings:
-        hw_port_mapping: List[HwPortMapping] = field(
+        hw_port_mapping: list[HwPortMapping] = field(
             default_factory=list,
             metadata={
                 "name": "HW-PORT-MAPPING",

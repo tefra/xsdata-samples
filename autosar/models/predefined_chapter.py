@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     DefList,
     LabeledList,
-    ListType,
+    List,
     MlFigure,
     MlFormula,
     MsrQueryP2,
@@ -108,7 +108,7 @@ class PredefinedChapter:
     class Meta:
         name = "PREDEFINED-CHAPTER"
 
-    msr_query_p_1: List[MsrQueryP1] = field(
+    msr_query_p_1: list[MsrQueryP1] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-P-1",
@@ -116,7 +116,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_p_2: List[MsrQueryP2] = field(
+    msr_query_p_2: list[MsrQueryP2] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-P-2",
@@ -124,7 +124,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p: List[MultiLanguageParagraph] = field(
+    p: list[MultiLanguageParagraph] = field(
         default_factory=list,
         metadata={
             "name": "P",
@@ -132,7 +132,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: List[MultiLanguageVerbatim] = field(
+    verbatim: list[MultiLanguageVerbatim] = field(
         default_factory=list,
         metadata={
             "name": "VERBATIM",
@@ -140,7 +140,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "LIST",
@@ -148,7 +148,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    def_list: List[DefList] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "DEF-LIST",
@@ -156,7 +156,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: List[LabeledList] = field(
+    labeled_list: list[LabeledList] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -164,7 +164,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: List[MlFormula] = field(
+    formula: list[MlFormula] = field(
         default_factory=list,
         metadata={
             "name": "FORMULA",
@@ -172,7 +172,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    figure: List[MlFigure] = field(
+    figure: list[MlFigure] = field(
         default_factory=list,
         metadata={
             "name": "FIGURE",
@@ -180,7 +180,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: List[Note] = field(
+    note: list[Note] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -188,7 +188,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: List[TraceableText] = field(
+    trace: list[TraceableText] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -196,7 +196,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    structured_req: List[StructuredReq] = field(
+    structured_req: list[StructuredReq] = field(
         default_factory=list,
         metadata={
             "name": "STRUCTURED-REQ",
@@ -204,7 +204,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    table: List[Table] = field(
+    table: list[Table] = field(
         default_factory=list,
         metadata={
             "name": "TABLE",
@@ -212,7 +212,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    traceable_table: List[TraceableTable] = field(
+    traceable_table: list[TraceableTable] = field(
         default_factory=list,
         metadata={
             "name": "TRACEABLE-TABLE",
@@ -220,7 +220,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prms: List[Prms] = field(
+    prms: list[Prms] = field(
         default_factory=list,
         metadata={
             "name": "PRMS",
@@ -228,7 +228,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    topic_1: List[Topic1] = field(
+    topic_1: list[Topic1] = field(
         default_factory=list,
         metadata={
             "name": "TOPIC-1",
@@ -236,7 +236,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_topic_1: List[MsrQueryTopic1] = field(
+    msr_query_topic_1: list[MsrQueryTopic1] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-TOPIC-1",
@@ -244,7 +244,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    chapter: List[Chapter] = field(
+    chapter: list[Chapter] = field(
         default_factory=list,
         metadata={
             "name": "CHAPTER",
@@ -252,7 +252,7 @@ class PredefinedChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_chapter: List[MsrQueryChapter] = field(
+    msr_query_chapter: list[MsrQueryChapter] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-CHAPTER",

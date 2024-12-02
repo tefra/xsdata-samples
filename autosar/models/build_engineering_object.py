@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .nmtoken_string import NmtokenString
 from .regular_expression import RegularExpression
@@ -169,7 +169,7 @@ class BuildEngineeringObject:
             particular version of the engineering object.
         """
 
-        revision_label: List[RevisionLabelString] = field(
+        revision_label: list[RevisionLabelString] = field(
             default_factory=list,
             metadata={
                 "name": "REVISION-LABEL",

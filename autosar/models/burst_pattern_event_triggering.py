@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -290,7 +290,7 @@ class BurstPatternEventTriggering:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -301,7 +301,7 @@ class BurstPatternEventTriggering:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -312,7 +312,7 @@ class BurstPatternEventTriggering:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["BurstPatternEventTriggering.TraceRefs.TraceRef"] = (
+        trace_ref: list["BurstPatternEventTriggering.TraceRefs.TraceRef"] = (
             field(
                 default_factory=list,
                 metadata={

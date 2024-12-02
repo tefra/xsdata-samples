@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.sourcing_result import (
     BillToParty,
@@ -652,7 +652,7 @@ class LadingQuantity:
 
 @dataclass(kw_only=True)
 class ListOfContract:
-    contract: List[Contract] = field(
+    contract: list[Contract] = field(
         default_factory=list,
         metadata={
             "name": "Contract",
@@ -1134,7 +1134,7 @@ class ListOfMessageId:
     class Meta:
         name = "ListOfMessageID"
 
-    message_id: List[MessageId] = field(
+    message_id: list[MessageId] = field(
         default_factory=list,
         metadata={
             "name": "MessageID",
@@ -1146,7 +1146,7 @@ class ListOfMessageId:
 
 @dataclass(kw_only=True)
 class ListOfShipScheduleDetail:
-    ship_schedule_detail: List[ShipScheduleDetail] = field(
+    ship_schedule_detail: list[ShipScheduleDetail] = field(
         default_factory=list,
         metadata={
             "name": "ShipScheduleDetail",
@@ -1165,7 +1165,7 @@ class TransportLocationList:
             "required": True,
         }
     )
-    interim_transport_location: List[InterimTransportLocation] = field(
+    interim_transport_location: list[InterimTransportLocation] = field(
         default_factory=list,
         metadata={
             "name": "InterimTransportLocation",
@@ -1365,7 +1365,7 @@ class TransportRouting:
 
 @dataclass(kw_only=True)
 class ListOfLocationShipSchedule:
-    location_ship_schedule: List[LocationShipSchedule] = field(
+    location_ship_schedule: list[LocationShipSchedule] = field(
         default_factory=list,
         metadata={
             "name": "LocationShipSchedule",
@@ -1377,7 +1377,7 @@ class ListOfLocationShipSchedule:
 
 @dataclass(kw_only=True)
 class ListOfTransportRouting:
-    transport_routing: List[TransportRouting] = field(
+    transport_routing: list[TransportRouting] = field(
         default_factory=list,
         metadata={
             "name": "TransportRouting",
@@ -1770,7 +1770,7 @@ class BaseShippingDetail:
             },
         )
     )
-    item_packaging_reference: List[ItemPackagingReference] = field(
+    item_packaging_reference: list[ItemPackagingReference] = field(
         default_factory=list,
         metadata={
             "name": "ItemPackagingReference",
@@ -1986,7 +1986,7 @@ class ChangedMaterialGroupedShippingDetail:
 
 @dataclass(kw_only=True)
 class ListOfLocationShippingItemDetail:
-    location_shipping_item_detail: List[LocationShippingItemDetail] = field(
+    location_shipping_item_detail: list[LocationShippingItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "LocationShippingItemDetail",
@@ -2104,7 +2104,7 @@ class ChangedLocationGroupedShippingDetail:
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedShippingResponse:
-    material_grouped_shipping_response: List[
+    material_grouped_shipping_response: list[
         MaterialGroupedShippingResponse
     ] = field(
         default_factory=list,
@@ -2186,7 +2186,7 @@ class LocationGroupedShippingResponse:
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedShippingResponse:
-    location_grouped_shipping_response: List[
+    location_grouped_shipping_response: list[
         LocationGroupedShippingResponse
     ] = field(
         default_factory=list,

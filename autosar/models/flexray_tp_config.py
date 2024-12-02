@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -272,7 +272,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -283,7 +283,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -305,7 +305,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class PduPools:
-        flexray_tp_pdu_pool: List[FlexrayTpPduPool] = field(
+        flexray_tp_pdu_pool: list[FlexrayTpPduPool] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-TP-PDU-POOL",
@@ -316,7 +316,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class TpAddresss:
-        tp_address: List[TpAddress] = field(
+        tp_address: list[TpAddress] = field(
             default_factory=list,
             metadata={
                 "name": "TP-ADDRESS",
@@ -327,7 +327,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class TpConnections:
-        flexray_tp_connection: List[FlexrayTpConnection] = field(
+        flexray_tp_connection: list[FlexrayTpConnection] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-TP-CONNECTION",
@@ -338,7 +338,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class TpConnectionControls:
-        flexray_tp_connection_control: List[FlexrayTpConnectionControl] = (
+        flexray_tp_connection_control: list[FlexrayTpConnectionControl] = (
             field(
                 default_factory=list,
                 metadata={
@@ -351,7 +351,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class TpEcus:
-        flexray_tp_ecu: List[FlexrayTpEcu] = field(
+        flexray_tp_ecu: list[FlexrayTpEcu] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-TP-ECU",
@@ -362,7 +362,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class TpNodes:
-        flexray_tp_node: List[FlexrayTpNode] = field(
+        flexray_tp_node: list[FlexrayTpNode] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-TP-NODE",

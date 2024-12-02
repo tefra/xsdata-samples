@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -276,7 +276,7 @@ class Machine:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -287,7 +287,7 @@ class Machine:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -298,7 +298,7 @@ class Machine:
 
     @dataclass
     class EnvironmentVariables:
-        tag_with_optional_value: List[TagWithOptionalValue] = field(
+        tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
             metadata={
                 "name": "TAG-WITH-OPTIONAL-VALUE",
@@ -320,7 +320,7 @@ class Machine:
 
     @dataclass
     class ModuleInstantiations:
-        crypto_module_instantiation: List[CryptoModuleInstantiation] = field(
+        crypto_module_instantiation: list[CryptoModuleInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-MODULE-INSTANTIATION",
@@ -328,7 +328,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_instantiation: List[DoIpInstantiation] = field(
+        do_ip_instantiation: list[DoIpInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "DO-IP-INSTANTIATION",
@@ -336,7 +336,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        generic_module_instantiation: List[GenericModuleInstantiation] = field(
+        generic_module_instantiation: list[GenericModuleInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "GENERIC-MODULE-INSTANTIATION",
@@ -344,7 +344,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        iam_module_instantiation: List[IamModuleInstantiation] = field(
+        iam_module_instantiation: list[IamModuleInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "IAM-MODULE-INSTANTIATION",
@@ -352,7 +352,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        idsm_module_instantiation: List[IdsmModuleInstantiation] = field(
+        idsm_module_instantiation: list[IdsmModuleInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "IDSM-MODULE-INSTANTIATION",
@@ -360,7 +360,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        log_and_trace_instantiation: List[LogAndTraceInstantiation] = field(
+        log_and_trace_instantiation: list[LogAndTraceInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "LOG-AND-TRACE-INSTANTIATION",
@@ -368,7 +368,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nm_instantiation: List[NmInstantiation] = field(
+        nm_instantiation: list[NmInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "NM-INSTANTIATION",
@@ -376,7 +376,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        os_module_instantiation: List[OsModuleInstantiation] = field(
+        os_module_instantiation: list[OsModuleInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "OS-MODULE-INSTANTIATION",
@@ -384,7 +384,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        time_sync_module_instantiation: List[TimeSyncModuleInstantiation] = (
+        time_sync_module_instantiation: list[TimeSyncModuleInstantiation] = (
             field(
                 default_factory=list,
                 metadata={
@@ -394,7 +394,7 @@ class Machine:
                 },
             )
         )
-        ucm_module_instantiation: List[UcmModuleInstantiation] = field(
+        ucm_module_instantiation: list[UcmModuleInstantiation] = field(
             default_factory=list,
             metadata={
                 "name": "UCM-MODULE-INSTANTIATION",
@@ -405,7 +405,7 @@ class Machine:
 
     @dataclass
     class Processors:
-        processor: List[Processor] = field(
+        processor: list[Processor] = field(
             default_factory=list,
             metadata={
                 "name": "PROCESSOR",
@@ -416,7 +416,7 @@ class Machine:
 
     @dataclass
     class SecureCommunicationDeployments:
-        sec_oc_deployment: List[SecOcDeployment] = field(
+        sec_oc_deployment: list[SecOcDeployment] = field(
             default_factory=list,
             metadata={
                 "name": "SEC-OC-DEPLOYMENT",
@@ -424,7 +424,7 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        tls_deployment: List[TlsDeployment] = field(
+        tls_deployment: list[TlsDeployment] = field(
             default_factory=list,
             metadata={
                 "name": "TLS-DEPLOYMENT",

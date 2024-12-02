@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Tuple, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -68,7 +68,7 @@ class DataSetType(AnnotableType):
             "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
         },
     )
-    choice: Tuple[
+    choice: tuple[
         Union[AttsType, GroupTypeAbstract, SeriesType, ObsType], ...
     ] = field(
         default_factory=tuple,
@@ -186,7 +186,7 @@ class DataSetType(AnnotableType):
             "pattern": r".{5}A1.*",
         },
     )
-    local_attributes: Dict[str, str] = field(
+    local_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

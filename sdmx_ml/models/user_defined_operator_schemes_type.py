@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.user_defined_operator_scheme_type import (
     UserDefinedOperatorSchemeType,
@@ -22,7 +21,7 @@ class UserDefinedOperatorSchemesType:
         user defined operators are described.
     """
 
-    user_defined_operator_scheme: Tuple[UserDefinedOperatorSchemeType, ...] = (
+    user_defined_operator_scheme: tuple[UserDefinedOperatorSchemeType, ...] = (
         field(
             default_factory=tuple,
             metadata={

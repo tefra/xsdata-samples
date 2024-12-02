@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -53,7 +53,7 @@ class Period:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    recurring_time_period_of_day: List[TimePeriodOfDay] = field(
+    recurring_time_period_of_day: list[TimePeriodOfDay] = field(
         default_factory=list,
         metadata={
             "name": "recurringTimePeriodOfDay",
@@ -61,7 +61,7 @@ class Period:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    recurring_day_week_month_period: List[DayWeekMonth] = field(
+    recurring_day_week_month_period: list[DayWeekMonth] = field(
         default_factory=list,
         metadata={
             "name": "recurringDayWeekMonthPeriod",

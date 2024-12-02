@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     BuyerCustomerParty,
@@ -114,7 +114,7 @@ class ExceptionNotificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -131,7 +131,7 @@ class ExceptionNotificationType:
             "required": True,
         },
     )
-    document_reference: Tuple[DocumentReference, ...] = field(
+    document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DocumentReference",
@@ -139,7 +139,7 @@ class ExceptionNotificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -181,7 +181,7 @@ class ExceptionNotificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exception_notification_line: Tuple[ExceptionNotificationLine, ...] = field(
+    exception_notification_line: tuple[ExceptionNotificationLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ExceptionNotificationLine",

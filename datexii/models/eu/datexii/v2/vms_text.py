@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.vms_text_line_index_vms_text_line import (
@@ -42,7 +42,7 @@ class VmsText:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_line: List[VmsTextLineIndexVmsTextLine] = field(
+    vms_text_line: list[VmsTextLineIndexVmsTextLine] = field(
         default_factory=list,
         metadata={
             "name": "vmsTextLine",

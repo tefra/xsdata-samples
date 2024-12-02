@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.non_road_event_information import (
@@ -22,7 +22,7 @@ class RoadOperatorServiceDisruption(NonRoadEventInformation):
     :ivar road_operator_service_disruption_extension:
     """
 
-    road_operator_service_disruption_type: List[
+    road_operator_service_disruption_type: list[
         RoadOperatorServiceDisruptionTypeEnum
     ] = field(
         default_factory=list,

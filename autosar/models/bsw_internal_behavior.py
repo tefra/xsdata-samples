@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -623,7 +623,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -634,7 +634,7 @@ class BswInternalBehavior:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -645,7 +645,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ConstantMemorys:
-        parameter_data_prototype: List[ParameterDataPrototype] = field(
+        parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-DATA-PROTOTYPE",
@@ -656,7 +656,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ConstantValueMappingRefs:
-        constant_value_mapping_ref: List[
+        constant_value_mapping_ref: list[
             "BswInternalBehavior.ConstantValueMappingRefs.ConstantValueMappingRef"
         ] = field(
             default_factory=list,
@@ -682,7 +682,7 @@ class BswInternalBehavior:
 
     @dataclass
     class DataTypeMappingRefs:
-        data_type_mapping_ref: List[
+        data_type_mapping_ref: list[
             "BswInternalBehavior.DataTypeMappingRefs.DataTypeMappingRef"
         ] = field(
             default_factory=list,
@@ -706,7 +706,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ExclusiveAreas:
-        exclusive_area: List[ExclusiveArea] = field(
+        exclusive_area: list[ExclusiveArea] = field(
             default_factory=list,
             metadata={
                 "name": "EXCLUSIVE-AREA",
@@ -717,7 +717,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ExclusiveAreaNestingOrders:
-        exclusive_area_nesting_order: List[ExclusiveAreaNestingOrder] = field(
+        exclusive_area_nesting_order: list[ExclusiveAreaNestingOrder] = field(
             default_factory=list,
             metadata={
                 "name": "EXCLUSIVE-AREA-NESTING-ORDER",
@@ -728,7 +728,7 @@ class BswInternalBehavior:
 
     @dataclass
     class StaticMemorys:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -739,7 +739,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ArTypedPerInstanceMemorys:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -750,7 +750,7 @@ class BswInternalBehavior:
 
     @dataclass
     class BswPerInstanceMemoryPolicys:
-        bsw_per_instance_memory_policy: List[BswPerInstanceMemoryPolicy] = (
+        bsw_per_instance_memory_policy: list[BswPerInstanceMemoryPolicy] = (
             field(
                 default_factory=list,
                 metadata={
@@ -763,7 +763,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ClientPolicys:
-        bsw_client_policy: List[BswClientPolicy] = field(
+        bsw_client_policy: list[BswClientPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-CLIENT-POLICY",
@@ -774,7 +774,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ExclusiveAreaPolicys:
-        bsw_exclusive_area_policy: List[BswExclusiveAreaPolicy] = field(
+        bsw_exclusive_area_policy: list[BswExclusiveAreaPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-EXCLUSIVE-AREA-POLICY",
@@ -785,7 +785,7 @@ class BswInternalBehavior:
 
     @dataclass
     class IncludedDataTypeSets:
-        included_data_type_set: List[IncludedDataTypeSet] = field(
+        included_data_type_set: list[IncludedDataTypeSet] = field(
             default_factory=list,
             metadata={
                 "name": "INCLUDED-DATA-TYPE-SET",
@@ -796,7 +796,7 @@ class BswInternalBehavior:
 
     @dataclass
     class InternalTriggeringPointPolicys:
-        bsw_internal_triggering_point_policy: List[
+        bsw_internal_triggering_point_policy: list[
             BswInternalTriggeringPointPolicy
         ] = field(
             default_factory=list,
@@ -809,7 +809,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ParameterPolicys:
-        bsw_parameter_policy: List[BswParameterPolicy] = field(
+        bsw_parameter_policy: list[BswParameterPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-PARAMETER-POLICY",
@@ -820,7 +820,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ReleasedTriggerPolicys:
-        bsw_released_trigger_policy: List[BswReleasedTriggerPolicy] = field(
+        bsw_released_trigger_policy: list[BswReleasedTriggerPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-RELEASED-TRIGGER-POLICY",
@@ -831,7 +831,7 @@ class BswInternalBehavior:
 
     @dataclass
     class SendPolicys:
-        bsw_data_send_policy: List[BswDataSendPolicy] = field(
+        bsw_data_send_policy: list[BswDataSendPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-DATA-SEND-POLICY",
@@ -842,7 +842,7 @@ class BswInternalBehavior:
 
     @dataclass
     class VariationPointProxys:
-        variation_point_proxy: List[VariationPointProxy] = field(
+        variation_point_proxy: list[VariationPointProxy] = field(
             default_factory=list,
             metadata={
                 "name": "VARIATION-POINT-PROXY",
@@ -853,7 +853,7 @@ class BswInternalBehavior:
 
     @dataclass
     class InternalTriggeringPoints:
-        bsw_internal_triggering_point: List[BswInternalTriggeringPoint] = (
+        bsw_internal_triggering_point: list[BswInternalTriggeringPoint] = (
             field(
                 default_factory=list,
                 metadata={
@@ -866,7 +866,7 @@ class BswInternalBehavior:
 
     @dataclass
     class Entitys:
-        bsw_called_entity: List[BswCalledEntity] = field(
+        bsw_called_entity: list[BswCalledEntity] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-CALLED-ENTITY",
@@ -874,7 +874,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_interrupt_entity: List[BswInterruptEntity] = field(
+        bsw_interrupt_entity: list[BswInterruptEntity] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-INTERRUPT-ENTITY",
@@ -882,7 +882,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_schedulable_entity: List[BswSchedulableEntity] = field(
+        bsw_schedulable_entity: list[BswSchedulableEntity] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-SCHEDULABLE-ENTITY",
@@ -893,7 +893,7 @@ class BswInternalBehavior:
 
     @dataclass
     class Events:
-        bsw_asynchronous_server_call_returns_event: List[
+        bsw_asynchronous_server_call_returns_event: list[
             BswAsynchronousServerCallReturnsEvent
         ] = field(
             default_factory=list,
@@ -903,7 +903,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_background_event: List[BswBackgroundEvent] = field(
+        bsw_background_event: list[BswBackgroundEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-BACKGROUND-EVENT",
@@ -911,7 +911,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_data_received_event: List[BswDataReceivedEvent] = field(
+        bsw_data_received_event: list[BswDataReceivedEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-DATA-RECEIVED-EVENT",
@@ -919,7 +919,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_external_trigger_occurred_event: List[
+        bsw_external_trigger_occurred_event: list[
             BswExternalTriggerOccurredEvent
         ] = field(
             default_factory=list,
@@ -929,7 +929,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_internal_trigger_occurred_event: List[
+        bsw_internal_trigger_occurred_event: list[
             BswInternalTriggerOccurredEvent
         ] = field(
             default_factory=list,
@@ -939,7 +939,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_mode_manager_error_event: List[BswModeManagerErrorEvent] = field(
+        bsw_mode_manager_error_event: list[BswModeManagerErrorEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODE-MANAGER-ERROR-EVENT",
@@ -947,7 +947,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_mode_switch_event: List[BswModeSwitchEvent] = field(
+        bsw_mode_switch_event: list[BswModeSwitchEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODE-SWITCH-EVENT",
@@ -955,7 +955,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_mode_switched_ack_event: List[BswModeSwitchedAckEvent] = field(
+        bsw_mode_switched_ack_event: list[BswModeSwitchedAckEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODE-SWITCHED-ACK-EVENT",
@@ -963,7 +963,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_operation_invoked_event: List[BswOperationInvokedEvent] = field(
+        bsw_operation_invoked_event: list[BswOperationInvokedEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-OPERATION-INVOKED-EVENT",
@@ -971,7 +971,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_os_task_execution_event: List[BswOsTaskExecutionEvent] = field(
+        bsw_os_task_execution_event: list[BswOsTaskExecutionEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-OS-TASK-EXECUTION-EVENT",
@@ -979,7 +979,7 @@ class BswInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_timing_event: List[BswTimingEvent] = field(
+        bsw_timing_event: list[BswTimingEvent] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-TIMING-EVENT",
@@ -990,7 +990,7 @@ class BswInternalBehavior:
 
     @dataclass
     class TriggerDirectImplementations:
-        bsw_trigger_direct_implementation: List[
+        bsw_trigger_direct_implementation: list[
             BswTriggerDirectImplementation
         ] = field(
             default_factory=list,
@@ -1003,7 +1003,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ModeSenderPolicys:
-        bsw_mode_sender_policy: List[BswModeSenderPolicy] = field(
+        bsw_mode_sender_policy: list[BswModeSenderPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODE-SENDER-POLICY",
@@ -1014,7 +1014,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ModeReceiverPolicys:
-        bsw_mode_receiver_policy: List[BswModeReceiverPolicy] = field(
+        bsw_mode_receiver_policy: list[BswModeReceiverPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODE-RECEIVER-POLICY",
@@ -1025,7 +1025,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ServiceDependencys:
-        bsw_service_dependency: List[BswServiceDependency] = field(
+        bsw_service_dependency: list[BswServiceDependency] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-SERVICE-DEPENDENCY",
@@ -1036,7 +1036,7 @@ class BswInternalBehavior:
 
     @dataclass
     class PerInstanceParameters:
-        parameter_data_prototype: List[ParameterDataPrototype] = field(
+        parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-DATA-PROTOTYPE",
@@ -1047,7 +1047,7 @@ class BswInternalBehavior:
 
     @dataclass
     class SchedulerNamePrefixs:
-        bsw_scheduler_name_prefix: List[BswSchedulerNamePrefix] = field(
+        bsw_scheduler_name_prefix: list[BswSchedulerNamePrefix] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-SCHEDULER-NAME-PREFIX",
@@ -1058,7 +1058,7 @@ class BswInternalBehavior:
 
     @dataclass
     class ReceptionPolicys:
-        bsw_queued_data_reception_policy: List[
+        bsw_queued_data_reception_policy: list[
             BswQueuedDataReceptionPolicy
         ] = field(
             default_factory=list,
@@ -1071,7 +1071,7 @@ class BswInternalBehavior:
 
     @dataclass
     class DistinguishedPartitions:
-        bsw_distinguished_partition: List[BswDistinguishedPartition] = field(
+        bsw_distinguished_partition: list[BswDistinguishedPartition] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-DISTINGUISHED-PARTITION",

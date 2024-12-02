@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -267,7 +267,7 @@ class DiagnosticResponseOnEvent:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -278,7 +278,7 @@ class DiagnosticResponseOnEvent:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -300,7 +300,7 @@ class DiagnosticResponseOnEvent:
 
     @dataclass
     class Events:
-        diagnostic_data_change_trigger: List[DiagnosticDataChangeTrigger] = (
+        diagnostic_data_change_trigger: list[DiagnosticDataChangeTrigger] = (
             field(
                 default_factory=list,
                 metadata={
@@ -310,7 +310,7 @@ class DiagnosticResponseOnEvent:
                 },
             )
         )
-        diagnostic_dtc_change_trigger: List[DiagnosticDtcChangeTrigger] = (
+        diagnostic_dtc_change_trigger: list[DiagnosticDtcChangeTrigger] = (
             field(
                 default_factory=list,
                 metadata={
@@ -323,7 +323,7 @@ class DiagnosticResponseOnEvent:
 
     @dataclass
     class EventWindows:
-        diagnostic_event_window: List[DiagnosticEventWindow] = field(
+        diagnostic_event_window: list[DiagnosticEventWindow] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-EVENT-WINDOW",

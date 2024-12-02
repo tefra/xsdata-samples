@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.book import Book
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference import (
@@ -44,68 +43,68 @@ class Body:
         name = "body"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    journal: List[Journal] = field(
+    journal: list[Journal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    book: List[Book] = field(
+    book: list[Book] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    conference: List[Conference] = field(
+    conference: list[Conference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sa_component: List[SaComponent] = field(
+    sa_component: list[SaComponent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    dissertation: List[Dissertation] = field(
+    dissertation: list[Dissertation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    report_paper: List[ReportPaper] = field(
+    report_paper: list[ReportPaper] = field(
         default_factory=list,
         metadata={
             "name": "report-paper",
             "type": "Element",
         },
     )
-    standard: List[Standard] = field(
+    standard: list[Standard] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    database: List[Database] = field(
+    database: list[Database] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    peer_review: List[PeerReview] = field(
+    peer_review: list[PeerReview] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    pending_publication: List[PendingPublication] = field(
+    pending_publication: list[PendingPublication] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    posted_content: List[PostedContent] = field(
+    posted_content: list[PostedContent] = field(
         default_factory=list,
         metadata={
             "type": "Element",

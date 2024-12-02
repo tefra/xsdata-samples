@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -123,7 +123,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
 
     @dataclass
     class ContextImplementationDataElementRefs:
-        context_implementation_data_element_ref: List[
+        context_implementation_data_element_ref: list[
             "ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef"
         ] = field(
             default_factory=list,

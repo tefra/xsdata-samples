@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -192,7 +192,7 @@ class TlsDeployment:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -203,7 +203,7 @@ class TlsDeployment:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -214,7 +214,7 @@ class TlsDeployment:
 
     @dataclass
     class PskIdentityToKeySlotMappings:
-        psk_identity_to_key_slot_mapping: List[PskIdentityToKeySlotMapping] = (
+        psk_identity_to_key_slot_mapping: list[PskIdentityToKeySlotMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -227,7 +227,7 @@ class TlsDeployment:
 
     @dataclass
     class TlsJobMappings:
-        tls_job_mapping: List[TlsJobMapping] = field(
+        tls_job_mapping: list[TlsJobMapping] = field(
             default_factory=list,
             metadata={
                 "name": "TLS-JOB-MAPPING",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .resource_parameter import ResourceParameter
 from .t_root_element import TRootElement
@@ -12,7 +12,7 @@ class TResource(TRootElement):
     class Meta:
         name = "tResource"
 
-    resource_parameter: List[ResourceParameter] = field(
+    resource_parameter: list[ResourceParameter] = field(
         default_factory=list,
         metadata={
             "name": "resourceParameter",

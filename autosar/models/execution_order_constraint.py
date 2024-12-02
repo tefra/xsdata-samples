@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -315,7 +315,7 @@ class ExecutionOrderConstraint:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -326,7 +326,7 @@ class ExecutionOrderConstraint:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -337,7 +337,7 @@ class ExecutionOrderConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["ExecutionOrderConstraint.TraceRefs.TraceRef"] = field(
+        trace_ref: list["ExecutionOrderConstraint.TraceRefs.TraceRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -381,7 +381,7 @@ class ExecutionOrderConstraint:
 
     @dataclass
     class OrderedElements:
-        eoc_event_ref: List[EocEventRef] = field(
+        eoc_event_ref: list[EocEventRef] = field(
             default_factory=list,
             metadata={
                 "name": "EOC-EVENT-REF",
@@ -389,7 +389,7 @@ class ExecutionOrderConstraint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        eoc_executable_entity_ref: List[EocExecutableEntityRef] = field(
+        eoc_executable_entity_ref: list[EocExecutableEntityRef] = field(
             default_factory=list,
             metadata={
                 "name": "EOC-EXECUTABLE-ENTITY-REF",
@@ -397,7 +397,7 @@ class ExecutionOrderConstraint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        eoc_executable_entity_ref_group: List[EocExecutableEntityRefGroup] = (
+        eoc_executable_entity_ref_group: list[EocExecutableEntityRefGroup] = (
             field(
                 default_factory=list,
                 metadata={

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
@@ -50,7 +50,7 @@ class Road:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_destination: List[MultilingualString] = field(
+    road_destination: list[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "roadDestination",
@@ -58,7 +58,7 @@ class Road:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_origination: List[MultilingualString] = field(
+    road_origination: list[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "roadOrigination",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -113,7 +113,7 @@ class VmsMessage:
             },
         )
     )
-    vms_message_information_type: List[VmsMessageInformationTypeEnum] = field(
+    vms_message_information_type: list[VmsMessageInformationTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "vmsMessageInformationType",
@@ -190,7 +190,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_page: List[TextPage] = field(
+    text_page: list[TextPage] = field(
         default_factory=list,
         metadata={
             "name": "textPage",
@@ -198,7 +198,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_pictogram_display_area: List[
+    vms_pictogram_display_area: list[
         VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea
     ] = field(
         default_factory=list,

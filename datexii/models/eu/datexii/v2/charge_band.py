@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.charge import Charge
 from datexii.models.eu.datexii.v2.currency_enum import CurrencyEnum
@@ -65,7 +65,7 @@ class ChargeBand:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    applicable_for_user: List[UserTypeEnum] = field(
+    applicable_for_user: list[UserTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableForUser",
@@ -73,7 +73,7 @@ class ChargeBand:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge: List[Charge] = field(
+    charge: list[Charge] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -89,7 +89,7 @@ class ChargeBand:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    applicable_for_vehicles: List[VehicleCharacteristics] = field(
+    applicable_for_vehicles: list[VehicleCharacteristics] = field(
         default_factory=list,
         metadata={
             "name": "applicableForVehicles",
@@ -97,7 +97,7 @@ class ChargeBand:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_permit: List[ParkingPermit] = field(
+    parking_permit: list[ParkingPermit] = field(
         default_factory=list,
         metadata={
             "name": "parkingPermit",

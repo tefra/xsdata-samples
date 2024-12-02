@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlPeriod
 
@@ -19,7 +19,7 @@ class StdAltAsPublished(StdDesignatorT):
         name = "std_alt_as_published"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    reason: List[StdAltAsPublishedValue] = field(
+    reason: list[StdAltAsPublishedValue] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",

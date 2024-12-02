@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
@@ -123,7 +123,7 @@ class ContractNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -139,7 +139,7 @@ class ContractNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    regulatory_domain: Tuple[RegulatoryDomain, ...] = field(
+    regulatory_domain: tuple[RegulatoryDomain, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RegulatoryDomain",
@@ -155,7 +155,7 @@ class ContractNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -172,7 +172,7 @@ class ContractNoticeType:
             "required": True,
         },
     )
-    originator_customer_party: Tuple[OriginatorCustomerParty, ...] = field(
+    originator_customer_party: tuple[OriginatorCustomerParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OriginatorCustomerParty",
@@ -213,7 +213,7 @@ class ContractNoticeType:
             "required": True,
         },
     )
-    procurement_project_lot: Tuple[ProcurementProjectLot, ...] = field(
+    procurement_project_lot: tuple[ProcurementProjectLot, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcurementProjectLot",

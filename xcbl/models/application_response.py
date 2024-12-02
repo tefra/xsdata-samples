@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.sourcing_result import (
@@ -388,7 +388,7 @@ class ApplicationResponseHeader:
 
 @dataclass(kw_only=True)
 class ListOfApplicationResponseDetail:
-    application_response_detail: List[ApplicationResponseDetail] = field(
+    application_response_detail: list[ApplicationResponseDetail] = field(
         default_factory=list,
         metadata={
             "name": "ApplicationResponseDetail",

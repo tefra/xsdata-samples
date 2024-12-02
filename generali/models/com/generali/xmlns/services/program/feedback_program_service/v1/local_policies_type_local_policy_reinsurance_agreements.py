@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 __NAMESPACE__ = (
     "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
@@ -11,7 +10,7 @@ class LocalPoliciesTypeLocalPolicyReinsuranceAgreements:
     class Meta:
         global_type = False
 
-    reinsurance_agreement_id: List[str] = field(
+    reinsurance_agreement_id: list[str] = field(
         default_factory=list,
         metadata={
             "name": "ReinsuranceAgreementID",

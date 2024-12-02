@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.payment_status_response import (
     ConfirmationId,
@@ -147,7 +147,7 @@ class PaymentStatusRequestDetail:
 
 @dataclass(kw_only=True)
 class ListOfPaymentStatusRequestDetail:
-    payment_status_request_detail: List[PaymentStatusRequestDetail] = field(
+    payment_status_request_detail: list[PaymentStatusRequestDetail] = field(
         default_factory=list,
         metadata={
             "name": "PaymentStatusRequestDetail",

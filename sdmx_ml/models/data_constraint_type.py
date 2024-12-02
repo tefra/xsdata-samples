@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.cube_region_type import CubeRegionType
 from sdmx_ml.models.data_constraint_base_type import DataConstraintBaseType
@@ -30,7 +29,7 @@ class DataConstraintType(DataConstraintBaseType):
         A set of included or excluded regions can be described.
     """
 
-    data_key_set: Tuple[DataKeySetType, ...] = field(
+    data_key_set: tuple[DataKeySetType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DataKeySet",
@@ -38,7 +37,7 @@ class DataConstraintType(DataConstraintBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    cube_region: Tuple[CubeRegionType, ...] = field(
+    cube_region: tuple[CubeRegionType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CubeRegion",

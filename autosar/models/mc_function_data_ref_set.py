@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .mc_function_data_ref_set_conditional import (
     McFunctionDataRefSetConditional,
@@ -63,7 +63,7 @@ class McFunctionDataRefSet:
 
     @dataclass
     class McFunctionDataRefSetVariants:
-        mc_function_data_ref_set_conditional: List[
+        mc_function_data_ref_set_conditional: list[
             McFunctionDataRefSetConditional
         ] = field(
             default_factory=list,

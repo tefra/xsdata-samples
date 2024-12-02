@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.contact import Contact
 from datexii.models.eu.datexii.v2.country_enum import CountryEnum
@@ -92,7 +92,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_language: List[str] = field(
+    contact_details_language: list[str] = field(
         default_factory=list,
         metadata={
             "name": "contactDetailsLanguage",
@@ -117,7 +117,7 @@ class ContactDetails(Contact):
             "max_length": 1024,
         },
     )
-    contact_details_house_number: List[str] = field(
+    contact_details_house_number: list[str] = field(
         default_factory=list,
         metadata={
             "name": "contactDetailsHouseNumber",
@@ -201,7 +201,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_responsibility: List[MultilingualString] = field(
+    contact_details_responsibility: list[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "contactDetailsResponsibility",
@@ -209,7 +209,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_more_info: List[MultilingualString] = field(
+    contact_details_more_info: list[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "contactDetailsMoreInfo",

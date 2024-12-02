@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -44,7 +44,7 @@ class ParkingTable:
             "required": True,
         },
     )
-    parking_record: List[ParkingRecord] = field(
+    parking_record: list[ParkingRecord] = field(
         default_factory=list,
         metadata={
             "name": "parkingRecord",

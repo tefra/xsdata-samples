@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -350,7 +350,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -361,7 +361,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -372,7 +372,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class E2EEventProtectionPropss:
-        end_2_end_event_protection_props: List[End2EndEventProtectionProps] = (
+        end_2_end_event_protection_props: list[End2EndEventProtectionProps] = (
             field(
                 default_factory=list,
                 metadata={
@@ -385,7 +385,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class E2EMethodProtectionPropss:
-        end_2_end_method_protection_props: List[
+        end_2_end_method_protection_props: list[
             End2EndMethodProtectionProps
         ] = field(
             default_factory=list,
@@ -398,7 +398,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class SecureComConfigs:
-        service_interface_element_secure_com_config: List[
+        service_interface_element_secure_com_config: list[
             ServiceInterfaceElementSecureComConfig
         ] = field(
             default_factory=list,
@@ -422,7 +422,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class BlacklistedVersions:
-        someip_service_version: List[SomeipServiceVersion] = field(
+        someip_service_version: list[SomeipServiceVersion] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-SERVICE-VERSION",
@@ -433,7 +433,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class CapabilityRecords:
-        tag_with_optional_value: List[TagWithOptionalValue] = field(
+        tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
             metadata={
                 "name": "TAG-WITH-OPTIONAL-VALUE",
@@ -444,7 +444,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class MethodRequestPropss:
-        someip_method_props: List[SomeipMethodProps] = field(
+        someip_method_props: list[SomeipMethodProps] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-METHOD-PROPS",
@@ -455,7 +455,7 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class RequiredEventGroups:
-        someip_required_event_group: List[SomeipRequiredEventGroup] = field(
+        someip_required_event_group: list[SomeipRequiredEventGroup] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-REQUIRED-EVENT-GROUP",

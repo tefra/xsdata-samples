@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.opening_status_enum import OpeningStatusEnum
@@ -40,7 +40,7 @@ class ParkingAccessStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    access_fault: List[ParkingFaultEnum] = field(
+    access_fault: list[ParkingFaultEnum] = field(
         default_factory=list,
         metadata={
             "name": "accessFault",

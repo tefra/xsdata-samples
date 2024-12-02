@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -524,7 +524,7 @@ class EcuInstance:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -535,7 +535,7 @@ class EcuInstance:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -546,7 +546,7 @@ class EcuInstance:
 
     @dataclass
     class AssociatedComIPduGroupRefs:
-        associated_com_i_pdu_group_ref: List[
+        associated_com_i_pdu_group_ref: list[
             "EcuInstance.AssociatedComIPduGroupRefs.AssociatedComIPduGroupRef"
         ] = field(
             default_factory=list,
@@ -570,7 +570,7 @@ class EcuInstance:
 
     @dataclass
     class AssociatedConsumedProvidedServiceInstanceGroups:
-        consumed_provided_service_instance_group_ref_conditional: List[
+        consumed_provided_service_instance_group_ref_conditional: list[
             ConsumedProvidedServiceInstanceGroupRefConditional
         ] = field(
             default_factory=list,
@@ -583,7 +583,7 @@ class EcuInstance:
 
     @dataclass
     class AssociatedPdurIPduGroupRefs:
-        associated_pdur_i_pdu_group_ref: List[
+        associated_pdur_i_pdu_group_ref: list[
             "EcuInstance.AssociatedPdurIPduGroupRefs.AssociatedPdurIPduGroupRef"
         ] = field(
             default_factory=list,
@@ -607,7 +607,7 @@ class EcuInstance:
 
     @dataclass
     class CanTpAddressRefs:
-        can_tp_address_ref: List[
+        can_tp_address_ref: list[
             "EcuInstance.CanTpAddressRefs.CanTpAddressRef"
         ] = field(
             default_factory=list,
@@ -631,7 +631,7 @@ class EcuInstance:
 
     @dataclass
     class CommControllers:
-        can_communication_controller: List[CanCommunicationController] = field(
+        can_communication_controller: list[CanCommunicationController] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-COMMUNICATION-CONTROLLER",
@@ -639,7 +639,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_communication_controller: List[
+        ethernet_communication_controller: list[
             EthernetCommunicationController
         ] = field(
             default_factory=list,
@@ -649,7 +649,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_communication_controller: List[
+        flexray_communication_controller: list[
             FlexrayCommunicationController
         ] = field(
             default_factory=list,
@@ -659,7 +659,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_master: List[LinMaster] = field(
+        lin_master: list[LinMaster] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-MASTER",
@@ -667,7 +667,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_slave: List[LinSlave] = field(
+        lin_slave: list[LinSlave] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-SLAVE",
@@ -675,7 +675,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_communication_controller: List[TtcanCommunicationController] = (
+        ttcan_communication_controller: list[TtcanCommunicationController] = (
             field(
                 default_factory=list,
                 metadata={
@@ -685,7 +685,7 @@ class EcuInstance:
                 },
             )
         )
-        user_defined_communication_controller: List[
+        user_defined_communication_controller: list[
             UserDefinedCommunicationController
         ] = field(
             default_factory=list,
@@ -698,7 +698,7 @@ class EcuInstance:
 
     @dataclass
     class Connectors:
-        can_communication_connector: List[CanCommunicationConnector] = field(
+        can_communication_connector: list[CanCommunicationConnector] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-COMMUNICATION-CONNECTOR",
@@ -706,7 +706,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_communication_connector: List[
+        ethernet_communication_connector: list[
             EthernetCommunicationConnector
         ] = field(
             default_factory=list,
@@ -716,7 +716,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_communication_connector: List[
+        flexray_communication_connector: list[
             FlexrayCommunicationConnector
         ] = field(
             default_factory=list,
@@ -726,7 +726,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_communication_connector: List[LinCommunicationConnector] = field(
+        lin_communication_connector: list[LinCommunicationConnector] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-COMMUNICATION-CONNECTOR",
@@ -734,7 +734,7 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_communication_connector: List[TtcanCommunicationConnector] = (
+        ttcan_communication_connector: list[TtcanCommunicationConnector] = (
             field(
                 default_factory=list,
                 metadata={
@@ -744,7 +744,7 @@ class EcuInstance:
                 },
             )
         )
-        user_defined_communication_connector: List[
+        user_defined_communication_connector: list[
             UserDefinedCommunicationConnector
         ] = field(
             default_factory=list,
@@ -757,7 +757,7 @@ class EcuInstance:
 
     @dataclass
     class EcuInstancePropss:
-        ecu_instance_props: List[EcuInstanceProps] = field(
+        ecu_instance_props: list[EcuInstanceProps] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-INSTANCE-PROPS",
@@ -768,7 +768,7 @@ class EcuInstance:
 
     @dataclass
     class Partitions:
-        ecu_partition: List[EcuPartition] = field(
+        ecu_partition: list[EcuPartition] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-PARTITION",
@@ -801,7 +801,7 @@ class EcuInstance:
 
     @dataclass
     class TpAddressRefs:
-        tp_address_ref: List["EcuInstance.TpAddressRefs.TpAddressRef"] = field(
+        tp_address_ref: list["EcuInstance.TpAddressRefs.TpAddressRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TP-ADDRESS-REF",

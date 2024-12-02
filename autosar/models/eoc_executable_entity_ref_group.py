@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -266,7 +266,7 @@ class EocExecutableEntityRefGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -277,7 +277,7 @@ class EocExecutableEntityRefGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -288,7 +288,7 @@ class EocExecutableEntityRefGroup:
 
     @dataclass
     class DirectSuccessorRefs:
-        direct_successor_ref: List[
+        direct_successor_ref: list[
             "EocExecutableEntityRefGroup.DirectSuccessorRefs.DirectSuccessorRef"
         ] = field(
             default_factory=list,
@@ -312,7 +312,7 @@ class EocExecutableEntityRefGroup:
 
     @dataclass
     class LetIntervalRefs:
-        let_interval_ref: List[
+        let_interval_ref: list[
             "EocExecutableEntityRefGroup.LetIntervalRefs.LetIntervalRef"
         ] = field(
             default_factory=list,
@@ -336,7 +336,7 @@ class EocExecutableEntityRefGroup:
 
     @dataclass
     class NestedElementRefs:
-        nested_element_ref: List[
+        nested_element_ref: list[
             "EocExecutableEntityRefGroup.NestedElementRefs.NestedElementRef"
         ] = field(
             default_factory=list,
@@ -360,7 +360,7 @@ class EocExecutableEntityRefGroup:
 
     @dataclass
     class SuccessorRefs:
-        successor_ref: List[
+        successor_ref: list[
             "EocExecutableEntityRefGroup.SuccessorRefs.SuccessorRef"
         ] = field(
             default_factory=list,

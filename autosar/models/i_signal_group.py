@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -250,7 +250,7 @@ class ISignalGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -261,7 +261,7 @@ class ISignalGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -272,7 +272,7 @@ class ISignalGroup:
 
     @dataclass
     class ComBasedSignalGroupTransformations:
-        data_transformation_ref_conditional: List[
+        data_transformation_ref_conditional: list[
             DataTransformationRefConditional
         ] = field(
             default_factory=list,
@@ -285,7 +285,7 @@ class ISignalGroup:
 
     @dataclass
     class ISignalRefs:
-        i_signal_ref: List["ISignalGroup.ISignalRefs.ISignalRef"] = field(
+        i_signal_ref: list["ISignalGroup.ISignalRefs.ISignalRef"] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-REF",
@@ -318,7 +318,7 @@ class ISignalGroup:
 
     @dataclass
     class TransformationISignalPropss:
-        end_to_end_transformation_i_signal_props: List[
+        end_to_end_transformation_i_signal_props: list[
             EndToEndTransformationISignalProps
         ] = field(
             default_factory=list,
@@ -328,7 +328,7 @@ class ISignalGroup:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        someip_transformation_i_signal_props: List[
+        someip_transformation_i_signal_props: list[
             SomeipTransformationISignalProps
         ] = field(
             default_factory=list,
@@ -338,7 +338,7 @@ class ISignalGroup:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_transformation_i_signal_props: List[
+        user_defined_transformation_i_signal_props: list[
             UserDefinedTransformationISignalProps
         ] = field(
             default_factory=list,

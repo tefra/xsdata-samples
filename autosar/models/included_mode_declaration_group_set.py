@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .identifier import Identifier
 from .mode_declaration_group_subtypes_enum import (
@@ -74,7 +74,7 @@ class IncludedModeDeclarationGroupSet:
 
     @dataclass
     class ModeDeclarationGroupRefs:
-        mode_declaration_group_ref: List[
+        mode_declaration_group_ref: list[
             "IncludedModeDeclarationGroupSet.ModeDeclarationGroupRefs.ModeDeclarationGroupRef"
         ] = field(
             default_factory=list,

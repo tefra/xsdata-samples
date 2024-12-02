@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -286,7 +286,7 @@ class PncMapping:
 
     @dataclass
     class DynamicPncMappingPduGroupRefs:
-        dynamic_pnc_mapping_pdu_group_ref: List[
+        dynamic_pnc_mapping_pdu_group_ref: list[
             "PncMapping.DynamicPncMappingPduGroupRefs.DynamicPncMappingPduGroupRef"
         ] = field(
             default_factory=list,
@@ -310,7 +310,7 @@ class PncMapping:
 
     @dataclass
     class PhysicalChannelRefs:
-        physical_channel_ref: List[
+        physical_channel_ref: list[
             "PncMapping.PhysicalChannelRefs.PhysicalChannelRef"
         ] = field(
             default_factory=list,
@@ -334,7 +334,7 @@ class PncMapping:
 
     @dataclass
     class PncConsumedProvidedServiceInstanceGroups:
-        consumed_provided_service_instance_group_ref_conditional: List[
+        consumed_provided_service_instance_group_ref_conditional: list[
             ConsumedProvidedServiceInstanceGroupRefConditional
         ] = field(
             default_factory=list,
@@ -347,7 +347,7 @@ class PncMapping:
 
     @dataclass
     class PncGroupRefs:
-        pnc_group_ref: List["PncMapping.PncGroupRefs.PncGroupRef"] = field(
+        pnc_group_ref: list["PncMapping.PncGroupRefs.PncGroupRef"] = field(
             default_factory=list,
             metadata={
                 "name": "PNC-GROUP-REF",
@@ -369,7 +369,7 @@ class PncMapping:
 
     @dataclass
     class PncPdurGroupRefs:
-        pnc_pdur_group_ref: List[
+        pnc_pdur_group_ref: list[
             "PncMapping.PncPdurGroupRefs.PncPdurGroupRef"
         ] = field(
             default_factory=list,
@@ -393,7 +393,7 @@ class PncMapping:
 
     @dataclass
     class RelevantForDynamicPncMappingRefs:
-        relevant_for_dynamic_pnc_mapping_ref: List[
+        relevant_for_dynamic_pnc_mapping_ref: list[
             "PncMapping.RelevantForDynamicPncMappingRefs.RelevantForDynamicPncMappingRef"
         ] = field(
             default_factory=list,
@@ -417,7 +417,7 @@ class PncMapping:
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List[
+        service_instance_ref: list[
             "PncMapping.ServiceInstanceRefs.ServiceInstanceRef"
         ] = field(
             default_factory=list,
@@ -443,7 +443,7 @@ class PncMapping:
 
     @dataclass
     class VfcIrefs:
-        vfc_iref: List[PortGroupInSystemInstanceRef] = field(
+        vfc_iref: list[PortGroupInSystemInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "VFC-IREF",
@@ -454,7 +454,7 @@ class PncMapping:
 
     @dataclass
     class WakeupFrameRefs:
-        wakeup_frame_ref: List["PncMapping.WakeupFrameRefs.WakeupFrameRef"] = (
+        wakeup_frame_ref: list["PncMapping.WakeupFrameRefs.WakeupFrameRef"] = (
             field(
                 default_factory=list,
                 metadata={

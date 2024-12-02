@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Alternatives,
@@ -30,85 +30,85 @@ class FloatsGroup:
         name = "floats-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alternatives: List[Alternatives] = field(
+    alternatives: list[Alternatives] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: List[BlockAlternatives] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: List[BoxedText] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: List[ChemStructWrap] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: List[Code] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: List[Fig] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: List[FigGroup] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: List[Graphic] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: List[Media] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: List[Preformat] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    supplementary_material: List[SupplementaryMaterial] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: List[TableWrap] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: List[TableWrapGroup] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",

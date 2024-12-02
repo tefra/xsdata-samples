@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 from xml.etree.ElementTree import QName
 
 from .t_flow_element import TFlowElement
@@ -12,14 +11,14 @@ class TFlowNode(TFlowElement):
     class Meta:
         name = "tFlowNode"
 
-    incoming: List[QName] = field(
+    incoming: list[QName] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    outgoing: List[QName] = field(
+    outgoing: list[QName] = field(
         default_factory=list,
         metadata={
             "type": "Element",

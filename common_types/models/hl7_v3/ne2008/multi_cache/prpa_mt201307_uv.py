@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Cs,
@@ -17,7 +17,7 @@ class PrpaMt201307UvDataSource:
     class Meta:
         name = "PRPA_MT201307UV.DataSource"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -33,7 +33,7 @@ class PrpaMt201307UvDataSource:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -41,7 +41,7 @@ class PrpaMt201307UvDataSource:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: List[Ii] = field(
+    value: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -72,7 +72,7 @@ class PrpaMt201307UvPatientIdentifier:
     class Meta:
         name = "PRPA_MT201307UV.PatientIdentifier"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -88,7 +88,7 @@ class PrpaMt201307UvPatientIdentifier:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -96,7 +96,7 @@ class PrpaMt201307UvPatientIdentifier:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: List[Ii] = field(
+    value: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -127,7 +127,7 @@ class PrpaMt201307UvParameterList:
     class Meta:
         name = "PRPA_MT201307UV.ParameterList"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -143,7 +143,7 @@ class PrpaMt201307UvParameterList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -158,7 +158,7 @@ class PrpaMt201307UvParameterList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    data_source: List[PrpaMt201307UvDataSource] = field(
+    data_source: list[PrpaMt201307UvDataSource] = field(
         default_factory=list,
         metadata={
             "name": "dataSource",
@@ -167,7 +167,7 @@ class PrpaMt201307UvParameterList:
             "nillable": True,
         },
     )
-    patient_identifier: List[PrpaMt201307UvPatientIdentifier] = field(
+    patient_identifier: list[PrpaMt201307UvPatientIdentifier] = field(
         default_factory=list,
         metadata={
             "name": "patientIdentifier",
@@ -190,7 +190,7 @@ class PrpaMt201307UvQueryByParameter:
     class Meta:
         name = "PRPA_MT201307UV.QueryByParameter"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -206,7 +206,7 @@ class PrpaMt201307UvQueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -240,7 +240,7 @@ class PrpaMt201307UvQueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    response_element_group_id: List[Ii] = field(
+    response_element_group_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "responseElementGroupId",

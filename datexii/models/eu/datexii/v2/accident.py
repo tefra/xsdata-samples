@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.accident_cause_enum import AccidentCauseEnum
 from datexii.models.eu.datexii.v2.accident_type_enum import AccidentTypeEnum
@@ -46,7 +46,7 @@ class Accident(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accident_type: List[AccidentTypeEnum] = field(
+    accident_type: list[AccidentTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "accidentType",
@@ -71,7 +71,7 @@ class Accident(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_involved: List[Vehicle] = field(
+    vehicle_involved: list[Vehicle] = field(
         default_factory=list,
         metadata={
             "name": "vehicleInvolved",
@@ -79,7 +79,7 @@ class Accident(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_vehicles_involved: List[GroupOfVehiclesInvolved] = field(
+    group_of_vehicles_involved: list[GroupOfVehiclesInvolved] = field(
         default_factory=list,
         metadata={
             "name": "groupOfVehiclesInvolved",
@@ -87,7 +87,7 @@ class Accident(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_people_involved: List[GroupOfPeopleInvolved] = field(
+    group_of_people_involved: list[GroupOfPeopleInvolved] = field(
         default_factory=list,
         metadata={
             "name": "groupOfPeopleInvolved",

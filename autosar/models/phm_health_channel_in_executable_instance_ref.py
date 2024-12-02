@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .phm_health_channel_interface_subtypes_enum import (
     PhmHealthChannelInterfaceSubtypesEnum,
@@ -48,7 +48,7 @@ class PhmHealthChannelInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_component_prototype_ref: List[
+    context_component_prototype_ref: list[
         "PhmHealthChannelInExecutableInstanceRef.ContextComponentPrototypeRef"
     ] = field(
         default_factory=list,

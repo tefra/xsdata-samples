@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.subscription_request_type import SubscriptionRequestType
 
@@ -15,7 +14,7 @@ class SubmitSubscriptionsRequestType:
     registration and change events for specific registry resources.
     """
 
-    subscription_request: Tuple[SubscriptionRequestType, ...] = field(
+    subscription_request: tuple[SubscriptionRequestType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubscriptionRequest",

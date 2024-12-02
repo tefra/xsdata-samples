@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.shipping_schedule_response import (
     ContractReferences,
@@ -1023,7 +1023,7 @@ class HazardousPackaging:
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedShippingDetail:
-    location_grouped_shipping_detail: List[LocationGroupedShippingDetail] = (
+    location_grouped_shipping_detail: list[LocationGroupedShippingDetail] = (
         field(
             default_factory=list,
             metadata={
@@ -1037,7 +1037,7 @@ class ListOfLocationGroupedShippingDetail:
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedShippingDetail:
-    material_grouped_shipping_detail: List[MaterialGroupedShippingDetail] = (
+    material_grouped_shipping_detail: list[MaterialGroupedShippingDetail] = (
         field(
             default_factory=list,
             metadata={
@@ -1230,7 +1230,7 @@ class DocumentLoose:
 
 @dataclass(kw_only=True)
 class ListOfPackageIdentifier:
-    package_identifier: List[PackageIdentifier] = field(
+    package_identifier: list[PackageIdentifier] = field(
         default_factory=list,
         metadata={
             "name": "PackageIdentifier",
@@ -1242,7 +1242,7 @@ class ListOfPackageIdentifier:
 
 @dataclass(kw_only=True)
 class ListOfPackageMark:
-    package_mark: List[PackageMark] = field(
+    package_mark: list[PackageMark] = field(
         default_factory=list,
         metadata={
             "name": "PackageMark",
@@ -1390,7 +1390,7 @@ class ReturnableContainerInfo:
 
 @dataclass(kw_only=True)
 class ListOfDocumentAttached:
-    document_attached: List[DocumentAttached] = field(
+    document_attached: list[DocumentAttached] = field(
         default_factory=list,
         metadata={
             "name": "DocumentAttached",
@@ -1402,7 +1402,7 @@ class ListOfDocumentAttached:
 
 @dataclass(kw_only=True)
 class ListOfDocumentLoose:
-    document_loose: List[DocumentLoose] = field(
+    document_loose: list[DocumentLoose] = field(
         default_factory=list,
         metadata={
             "name": "DocumentLoose",
@@ -1414,7 +1414,7 @@ class ListOfDocumentLoose:
 
 @dataclass(kw_only=True)
 class ListOfOrderReferences:
-    order_references: List[OrderReferences] = field(
+    order_references: list[OrderReferences] = field(
         default_factory=list,
         metadata={
             "name": "OrderReferences",
@@ -1426,7 +1426,7 @@ class ListOfOrderReferences:
 
 @dataclass(kw_only=True)
 class ListOfPackageCharacteristic:
-    package_characteristic: List[PackageCharacteristic] = field(
+    package_characteristic: list[PackageCharacteristic] = field(
         default_factory=list,
         metadata={
             "name": "PackageCharacteristic",
@@ -1517,7 +1517,7 @@ class ListOfItemReference:
 
 @dataclass(kw_only=True)
 class ListOfPackageDescription:
-    package_description: List[PackageDescription] = field(
+    package_description: list[PackageDescription] = field(
         default_factory=list,
         metadata={
             "name": "PackageDescription",
@@ -1529,7 +1529,7 @@ class ListOfPackageDescription:
 
 @dataclass(kw_only=True)
 class ListOfPackageDetail:
-    package_detail: List[PackageDetail] = field(
+    package_detail: list[PackageDetail] = field(
         default_factory=list,
         metadata={
             "name": "PackageDetail",
@@ -1627,7 +1627,7 @@ class Package:
             "type": "Element",
         },
     )
-    package_detail: List[PackageDetail] = field(
+    package_detail: list[PackageDetail] = field(
         default_factory=list,
         metadata={
             "name": "PackageDetail",
@@ -1681,7 +1681,7 @@ class ShippingSchedule:
 
 @dataclass(kw_only=True)
 class ListOfPackage:
-    package: List[Package] = field(
+    package: list[Package] = field(
         default_factory=list,
         metadata={
             "name": "Package",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -310,7 +310,7 @@ class SomeipServiceInstanceToMachineMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -321,7 +321,7 @@ class SomeipServiceInstanceToMachineMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -343,7 +343,7 @@ class SomeipServiceInstanceToMachineMapping:
 
     @dataclass
     class SecOcComPropsForMulticastRefs:
-        sec_oc_com_props_for_multicast_ref: List[
+        sec_oc_com_props_for_multicast_ref: list[
             "SomeipServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs.SecOcComPropsForMulticastRef"
         ] = field(
             default_factory=list,
@@ -367,7 +367,7 @@ class SomeipServiceInstanceToMachineMapping:
 
     @dataclass
     class SecureComPropsForTcpRefs:
-        secure_com_props_for_tcp_ref: List[
+        secure_com_props_for_tcp_ref: list[
             "SomeipServiceInstanceToMachineMapping.SecureComPropsForTcpRefs.SecureComPropsForTcpRef"
         ] = field(
             default_factory=list,
@@ -391,7 +391,7 @@ class SomeipServiceInstanceToMachineMapping:
 
     @dataclass
     class SecureComPropsForUdpRefs:
-        secure_com_props_for_udp_ref: List[
+        secure_com_props_for_udp_ref: list[
             "SomeipServiceInstanceToMachineMapping.SecureComPropsForUdpRefs.SecureComPropsForUdpRef"
         ] = field(
             default_factory=list,
@@ -415,7 +415,7 @@ class SomeipServiceInstanceToMachineMapping:
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List[
+        service_instance_ref: list[
             "SomeipServiceInstanceToMachineMapping.ServiceInstanceRefs.ServiceInstanceRef"
         ] = field(
             default_factory=list,

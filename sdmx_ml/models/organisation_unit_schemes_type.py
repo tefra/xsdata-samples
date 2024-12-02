@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.organisation_unit_scheme_type import (
     OrganisationUnitSchemeType,
@@ -22,7 +21,7 @@ class OrganisationUnitSchemesType:
         units are described.
     """
 
-    organisation_unit_scheme: Tuple[OrganisationUnitSchemeType, ...] = field(
+    organisation_unit_scheme: tuple[OrganisationUnitSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrganisationUnitScheme",

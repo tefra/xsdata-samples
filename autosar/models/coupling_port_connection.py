@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .coupling_port_ref_conditional import CouplingPortRefConditional
@@ -122,7 +122,7 @@ class CouplingPortConnection:
 
     @dataclass
     class NodePorts:
-        coupling_port_ref_conditional: List[CouplingPortRefConditional] = (
+        coupling_port_ref_conditional: list[CouplingPortRefConditional] = (
             field(
                 default_factory=list,
                 metadata={

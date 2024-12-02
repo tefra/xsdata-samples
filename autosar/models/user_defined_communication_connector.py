@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -259,7 +259,7 @@ class UserDefinedCommunicationConnector:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -270,7 +270,7 @@ class UserDefinedCommunicationConnector:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -292,7 +292,7 @@ class UserDefinedCommunicationConnector:
 
     @dataclass
     class EcuCommPortInstances:
-        frame_port: List[FramePort] = field(
+        frame_port: list[FramePort] = field(
             default_factory=list,
             metadata={
                 "name": "FRAME-PORT",
@@ -300,7 +300,7 @@ class UserDefinedCommunicationConnector:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_pdu_port: List[IPduPort] = field(
+        i_pdu_port: list[IPduPort] = field(
             default_factory=list,
             metadata={
                 "name": "I-PDU-PORT",
@@ -308,7 +308,7 @@ class UserDefinedCommunicationConnector:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        i_signal_port: List[ISignalPort] = field(
+        i_signal_port: list[ISignalPort] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-PORT",

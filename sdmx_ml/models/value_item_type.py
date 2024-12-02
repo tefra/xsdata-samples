@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.description import Description
@@ -17,7 +17,7 @@ class ValueItemType(AnnotableType):
     code in a code list).
     """
 
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class ValueItemType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",

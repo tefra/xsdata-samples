@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .application_composite_data_type_sub_element_ref import (
     ApplicationCompositeDataTypeSubElementRef,
@@ -87,7 +87,7 @@ class SubElementMapping:
 
     @dataclass
     class FirstElements:
-        application_composite_data_type_sub_element_ref: List[
+        application_composite_data_type_sub_element_ref: list[
             ApplicationCompositeDataTypeSubElementRef
         ] = field(
             default_factory=list,
@@ -97,7 +97,7 @@ class SubElementMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_sub_element_ref: List[
+        implementation_data_type_sub_element_ref: list[
             ImplementationDataTypeSubElementRef
         ] = field(
             default_factory=list,
@@ -110,7 +110,7 @@ class SubElementMapping:
 
     @dataclass
     class SecondElements:
-        application_composite_data_type_sub_element_ref: List[
+        application_composite_data_type_sub_element_ref: list[
             ApplicationCompositeDataTypeSubElementRef
         ] = field(
             default_factory=list,
@@ -120,7 +120,7 @@ class SubElementMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_sub_element_ref: List[
+        implementation_data_type_sub_element_ref: list[
             ImplementationDataTypeSubElementRef
         ] = field(
             default_factory=list,
@@ -133,7 +133,7 @@ class SubElementMapping:
 
     @dataclass
     class TextTableMappings:
-        text_table_mapping: List[TextTableMapping] = field(
+        text_table_mapping: list[TextTableMapping] = field(
             default_factory=list,
             metadata={
                 "name": "TEXT-TABLE-MAPPING",

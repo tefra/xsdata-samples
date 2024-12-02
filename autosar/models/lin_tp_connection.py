@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -279,7 +279,7 @@ class LinTpConnection:
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: List["LinTpConnection.ReceiverRefs.ReceiverRef"] = field(
+        receiver_ref: list["LinTpConnection.ReceiverRefs.ReceiverRef"] = field(
             default_factory=list,
             metadata={
                 "name": "RECEIVER-REF",

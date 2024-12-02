@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Optional
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.abs import Abs
 from crossref.models.org.w3.pkg_1998.math.math_ml.and_mod import And
@@ -32,7 +32,7 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.cerror import (
     Csymbol,
     Declare,
     Fn,
-    ListType,
+    List,
     Piecewise,
     Reln,
     Set,
@@ -169,7 +169,7 @@ class IntervalType:
         name = "interval.class"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: List[Apply] = field(
+    apply: list[Apply] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -178,7 +178,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    bind: List[Bind] = field(
+    bind: list[Bind] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -187,7 +187,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    ci: List[Ci] = field(
+    ci: list[Ci] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -196,7 +196,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cn: List[Cn] = field(
+    cn: list[Cn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -205,7 +205,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    csymbol: List[Csymbol] = field(
+    csymbol: list[Csymbol] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -214,7 +214,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cbytes: List[Cbytes] = field(
+    cbytes: list[Cbytes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -223,7 +223,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cerror: List[Cerror] = field(
+    cerror: list[Cerror] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -232,7 +232,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cs: List[Cs] = field(
+    cs: list[Cs] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -241,7 +241,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    share: List[Share] = field(
+    share: list[Share] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -250,7 +250,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    piecewise: List[Piecewise] = field(
+    piecewise: list[Piecewise] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -259,7 +259,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    declare: List[Declare] = field(
+    declare: list[Declare] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -267,7 +267,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    fn: List[Fn] = field(
+    fn: list[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -275,7 +275,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    reln: List[Reln] = field(
+    reln: list[Reln] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -283,7 +283,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    interval: List[Interval] = field(
+    interval: list[Interval] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -291,7 +291,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    moment: List[Moment] = field(
+    moment: list[Moment] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -299,7 +299,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    log: List[Log] = field(
+    log: list[Log] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -307,7 +307,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    ln: List[Ln] = field(
+    ln: list[Ln] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -315,7 +315,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    image: List[Image] = field(
+    image: list[Image] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -323,7 +323,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    codomain: List[Codomain] = field(
+    codomain: list[Codomain] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -331,7 +331,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    domain: List[Domain] = field(
+    domain: list[Domain] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -339,7 +339,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    ident: List[Ident] = field(
+    ident: list[Ident] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -347,7 +347,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    inverse: List[Inverse] = field(
+    inverse: list[Inverse] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -355,7 +355,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    lambda_value: List[Lambda] = field(
+    lambda_value: list[Lambda] = field(
         default_factory=list,
         metadata={
             "name": "lambda",
@@ -364,7 +364,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    compose: List[Compose] = field(
+    compose: list[Compose] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -372,16 +372,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    quotient: List[Quotient] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "min_occurs": 2,
-            "max_occurs": 2,
-            "sequence": 1,
-        },
-    )
-    divide: List[Divide] = field(
+    quotient: list[Quotient] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -390,7 +381,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    minus: List[Minus] = field(
+    divide: list[Divide] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -399,7 +390,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    power: List[Power] = field(
+    minus: list[Minus] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -408,7 +399,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    rem: List[Rem] = field(
+    power: list[Power] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -417,7 +408,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    root: List[Root] = field(
+    rem: list[Rem] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -426,7 +417,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    factorial: List[Factorial] = field(
+    root: list[Root] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -435,7 +426,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    abs: List[Abs] = field(
+    factorial: list[Factorial] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -444,7 +435,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    conjugate: List[Conjugate] = field(
+    abs: list[Abs] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -453,7 +444,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arg: List[Arg] = field(
+    conjugate: list[Conjugate] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -462,7 +453,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    real: List[Real] = field(
+    arg: list[Arg] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -471,7 +462,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    imaginary: List[Imaginary] = field(
+    real: list[Real] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -480,7 +471,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    floor: List[Floor] = field(
+    imaginary: list[Imaginary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -489,7 +480,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    ceiling: List[Ceiling] = field(
+    floor: list[Floor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -498,7 +489,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    exp: List[Exp] = field(
+    ceiling: list[Ceiling] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -507,7 +498,16 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    min: List[Min] = field(
+    exp: list[Exp] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "min_occurs": 2,
+            "max_occurs": 2,
+            "sequence": 1,
+        },
+    )
+    min: list[Min] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -515,7 +515,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    max: List[Max] = field(
+    max: list[Max] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -523,7 +523,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    lcm: List[Lcm] = field(
+    lcm: list[Lcm] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -531,7 +531,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    gcd: List[Gcd] = field(
+    gcd: list[Gcd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -539,7 +539,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    times: List[Times] = field(
+    times: list[Times] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -547,7 +547,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    plus: List[Plus] = field(
+    plus: list[Plus] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -555,7 +555,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    xor: List[Xor] = field(
+    xor: list[Xor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -563,7 +563,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    or_value: List[Or] = field(
+    or_value: list[Or] = field(
         default_factory=list,
         metadata={
             "name": "or",
@@ -572,7 +572,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    and_value: List[And] = field(
+    and_value: list[And] = field(
         default_factory=list,
         metadata={
             "name": "and",
@@ -581,7 +581,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    not_value: List[Not] = field(
+    not_value: list[Not] = field(
         default_factory=list,
         metadata={
             "name": "not",
@@ -590,7 +590,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    equivalent: List[Equivalent] = field(
+    equivalent: list[Equivalent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -598,7 +598,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    implies: List[Implies] = field(
+    implies: list[Implies] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -606,7 +606,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    exists: List[Exists] = field(
+    exists: list[Exists] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -614,7 +614,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    forall: List[Forall] = field(
+    forall: list[Forall] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -622,7 +622,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    leq: List[Leq] = field(
+    leq: list[Leq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -630,7 +630,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    geq: List[Geq] = field(
+    geq: list[Geq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -638,7 +638,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    lt: List[Lt] = field(
+    lt: list[Lt] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -646,7 +646,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    gt: List[Gt] = field(
+    gt: list[Gt] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -654,7 +654,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    eq: List[Eq] = field(
+    eq: list[Eq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -662,7 +662,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    tendsto: List[Tendsto] = field(
+    tendsto: list[Tendsto] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -670,7 +670,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    factorof: List[Factorof] = field(
+    factorof: list[Factorof] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -678,7 +678,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    approx: List[Approx] = field(
+    approx: list[Approx] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -686,7 +686,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    neq: List[Neq] = field(
+    neq: list[Neq] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -694,7 +694,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    int_value: List[Int] = field(
+    int_value: list[Int] = field(
         default_factory=list,
         metadata={
             "name": "int",
@@ -703,7 +703,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    diff: List[Diff] = field(
+    diff: list[Diff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -711,7 +711,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    partialdiff: List[Partialdiff] = field(
+    partialdiff: list[Partialdiff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -719,7 +719,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    laplacian: List[Laplacian] = field(
+    laplacian: list[Laplacian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -727,7 +727,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    curl: List[Curl] = field(
+    curl: list[Curl] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -735,7 +735,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    grad: List[Grad] = field(
+    grad: list[Grad] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -743,7 +743,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    divergence: List[Divergence] = field(
+    divergence: list[Divergence] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -751,7 +751,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    list_value: List[ListType] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
@@ -760,7 +760,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    set: List[Set] = field(
+    set: list[Set] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -768,7 +768,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cartesianproduct: List[Cartesianproduct] = field(
+    cartesianproduct: list[Cartesianproduct] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -776,7 +776,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    intersect: List[Intersect] = field(
+    intersect: list[Intersect] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -784,7 +784,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    union: List[UnionType] = field(
+    union: list[UnionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -792,7 +792,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    setdiff: List[Setdiff] = field(
+    setdiff: list[Setdiff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -800,7 +800,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    notprsubset: List[Notprsubset] = field(
+    notprsubset: list[Notprsubset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -808,7 +808,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    notsubset: List[Notsubset] = field(
+    notsubset: list[Notsubset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -816,7 +816,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    notin: List[Notin] = field(
+    notin: list[Notin] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -824,7 +824,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    in_value: List[In] = field(
+    in_value: list[In] = field(
         default_factory=list,
         metadata={
             "name": "in",
@@ -833,7 +833,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    prsubset: List[Prsubset] = field(
+    prsubset: list[Prsubset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -841,7 +841,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    subset: List[Subset] = field(
+    subset: list[Subset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -849,7 +849,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    card: List[Card] = field(
+    card: list[Card] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -857,7 +857,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    sum: List[Sum] = field(
+    sum: list[Sum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -865,7 +865,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    product: List[Product] = field(
+    product: list[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -873,7 +873,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    limit: List[Limit] = field(
+    limit: list[Limit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -881,7 +881,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arctanh: List[Arctanh] = field(
+    arctanh: list[Arctanh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -889,7 +889,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arcsinh: List[Arcsinh] = field(
+    arcsinh: list[Arcsinh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -897,7 +897,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arcsech: List[Arcsech] = field(
+    arcsech: list[Arcsech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -905,7 +905,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arcsec: List[Arcsec] = field(
+    arcsec: list[Arcsec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -913,7 +913,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arccsch: List[Arccsch] = field(
+    arccsch: list[Arccsch] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -921,7 +921,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arccsc: List[Arccsc] = field(
+    arccsc: list[Arccsc] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -929,7 +929,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arccoth: List[Arccoth] = field(
+    arccoth: list[Arccoth] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -937,7 +937,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arccot: List[Arccot] = field(
+    arccot: list[Arccot] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -945,7 +945,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arccosh: List[Arccosh] = field(
+    arccosh: list[Arccosh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -953,7 +953,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arctan: List[Arctan] = field(
+    arctan: list[Arctan] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -961,7 +961,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arccos: List[Arccos] = field(
+    arccos: list[Arccos] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -969,7 +969,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    arcsin: List[Arcsin] = field(
+    arcsin: list[Arcsin] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -977,7 +977,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    coth: List[Coth] = field(
+    coth: list[Coth] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -985,7 +985,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    csch: List[Csch] = field(
+    csch: list[Csch] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -993,7 +993,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    sech: List[Sech] = field(
+    sech: list[Sech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1001,7 +1001,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    tanh: List[Tanh] = field(
+    tanh: list[Tanh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1009,7 +1009,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cosh: List[Cosh] = field(
+    cosh: list[Cosh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1017,7 +1017,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    sinh: List[Sinh] = field(
+    sinh: list[Sinh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1025,7 +1025,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cot: List[Cot] = field(
+    cot: list[Cot] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1033,7 +1033,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    csc: List[Csc] = field(
+    csc: list[Csc] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1041,7 +1041,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    sec: List[Sec] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1049,7 +1049,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    tan: List[Tan] = field(
+    tan: list[Tan] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1057,7 +1057,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    cos: List[Cos] = field(
+    cos: list[Cos] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1065,7 +1065,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    sin: List[Sin] = field(
+    sin: list[Sin] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1073,7 +1073,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    mode: List[Mode] = field(
+    mode: list[Mode] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1081,7 +1081,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    median: List[Median] = field(
+    median: list[Median] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1089,7 +1089,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    variance: List[Variance] = field(
+    variance: list[Variance] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1097,7 +1097,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    sdev: List[Sdev] = field(
+    sdev: list[Sdev] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1105,7 +1105,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    mean: List[Mean] = field(
+    mean: list[Mean] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1113,7 +1113,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    matrixrow: List[Matrixrow] = field(
+    matrixrow: list[Matrixrow] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1121,7 +1121,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    matrix: List[Matrix] = field(
+    matrix: list[Matrix] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1129,7 +1129,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    vector: List[Vector] = field(
+    vector: list[Vector] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1137,7 +1137,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    transpose: List[Transpose] = field(
+    transpose: list[Transpose] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1145,7 +1145,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    determinant: List[Determinant] = field(
+    determinant: list[Determinant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1153,7 +1153,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    selector: List[Selector] = field(
+    selector: list[Selector] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1161,7 +1161,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    outerproduct: List[Outerproduct] = field(
+    outerproduct: list[Outerproduct] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1169,7 +1169,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    scalarproduct: List[Scalarproduct] = field(
+    scalarproduct: list[Scalarproduct] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1177,7 +1177,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    vectorproduct: List[Vectorproduct] = field(
+    vectorproduct: list[Vectorproduct] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1185,7 +1185,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    emptyset: List[Emptyset] = field(
+    emptyset: list[Emptyset] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1193,7 +1193,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    primes: List[Primes] = field(
+    primes: list[Primes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1201,7 +1201,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    complexes: List[Complexes] = field(
+    complexes: list[Complexes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1209,7 +1209,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    naturalnumbers: List[Naturalnumbers] = field(
+    naturalnumbers: list[Naturalnumbers] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1217,7 +1217,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    rationals: List[Rationals] = field(
+    rationals: list[Rationals] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1225,7 +1225,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    reals: List[Reals] = field(
+    reals: list[Reals] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1233,7 +1233,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    integers: List[Integers] = field(
+    integers: list[Integers] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1241,7 +1241,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    infinity: List[Infinity] = field(
+    infinity: list[Infinity] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1249,7 +1249,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    eulergamma: List[Eulergamma] = field(
+    eulergamma: list[Eulergamma] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1257,7 +1257,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    pi: List[Pi] = field(
+    pi: list[Pi] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1265,7 +1265,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    false: List[FalseType] = field(
+    false: list[FalseType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1273,7 +1273,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    true: List[TrueType] = field(
+    true: list[TrueType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1281,7 +1281,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    notanumber: List[Notanumber] = field(
+    notanumber: list[Notanumber] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1289,7 +1289,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    imaginaryi: List[Imaginaryi] = field(
+    imaginaryi: list[Imaginaryi] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1297,7 +1297,7 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    exponentiale: List[Exponentiale] = field(
+    exponentiale: list[Exponentiale] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1317,7 +1317,7 @@ class IntervalType:
             "type": "Attribute",
         },
     )
-    class_value: List[str] = field(
+    class_value: list[str] = field(
         default_factory=list,
         metadata={
             "name": "class",
@@ -1343,7 +1343,7 @@ class IntervalType:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

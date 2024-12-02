@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_class_tailoring import (
     AbstractClassTailoring,
@@ -70,7 +70,7 @@ class DataFormatTailoring:
 
     @dataclass
     class ClassTailorings:
-        abstract_class_tailoring: List[AbstractClassTailoring] = field(
+        abstract_class_tailoring: list[AbstractClassTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "ABSTRACT-CLASS-TAILORING",
@@ -78,7 +78,7 @@ class DataFormatTailoring:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        concrete_class_tailoring: List[ConcreteClassTailoring] = field(
+        concrete_class_tailoring: list[ConcreteClassTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "CONCRETE-CLASS-TAILORING",
@@ -89,7 +89,7 @@ class DataFormatTailoring:
 
     @dataclass
     class ConstraintTailorings:
-        constraint_tailoring: List[ConstraintTailoring] = field(
+        constraint_tailoring: list[ConstraintTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "CONSTRAINT-TAILORING",

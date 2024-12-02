@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.day_enum import DayEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -24,7 +24,7 @@ class DayWeekMonth:
     :ivar day_week_month_extension:
     """
 
-    applicable_day: List[DayEnum] = field(
+    applicable_day: list[DayEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableDay",
@@ -33,7 +33,7 @@ class DayWeekMonth:
             "max_occurs": 7,
         },
     )
-    applicable_week: List[WeekOfMonthEnum] = field(
+    applicable_week: list[WeekOfMonthEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableWeek",
@@ -42,7 +42,7 @@ class DayWeekMonth:
             "max_occurs": 5,
         },
     )
-    applicable_month: List[MonthOfYearEnum] = field(
+    applicable_month: list[MonthOfYearEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableMonth",

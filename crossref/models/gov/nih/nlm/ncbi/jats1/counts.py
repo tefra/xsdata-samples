@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.count import Count
 from crossref.models.gov.nih.nlm.ncbi.jats1.equation_count import EquationCount
@@ -22,7 +22,7 @@ class Counts:
         name = "counts"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    count: List[Count] = field(
+    count: list[Count] = field(
         default_factory=list,
         metadata={
             "type": "Element",

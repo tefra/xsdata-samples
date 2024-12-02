@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from .property import Property
 from .t_flow_node import TFlowNode
@@ -12,7 +11,7 @@ class TEvent(TFlowNode):
     class Meta:
         name = "tEvent"
 
-    property: List[Property] = field(
+    property: list[Property] = field(
         default_factory=list,
         metadata={
             "type": "Element",

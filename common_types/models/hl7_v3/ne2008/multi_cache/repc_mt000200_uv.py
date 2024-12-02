@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes import (
     IvlInt,
@@ -98,7 +98,7 @@ class RepcMt000200UvAuthor:
     class Meta:
         name = "REPC_MT000200UV.Author"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -114,7 +114,7 @@ class RepcMt000200UvAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -211,7 +211,7 @@ class RepcMt000200UvAuthor6:
     class Meta:
         name = "REPC_MT000200UV.Author6"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -227,7 +227,7 @@ class RepcMt000200UvAuthor6:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -316,7 +316,7 @@ class RepcMt000200UvComponent2:
     class Meta:
         name = "REPC_MT000200UV.Component2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -332,7 +332,7 @@ class RepcMt000200UvComponent2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -393,7 +393,7 @@ class RepcMt000200UvCriterion:
     class Meta:
         name = "REPC_MT000200UV.Criterion"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -409,7 +409,7 @@ class RepcMt000200UvCriterion:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -448,7 +448,7 @@ class RepcMt000200UvCriterion:
             "required": True,
         },
     )
-    precondition: List["RepcMt000200UvPrecondition2"] = field(
+    precondition: list["RepcMt000200UvPrecondition2"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -495,7 +495,7 @@ class RepcMt000200UvCriterionGroup:
     class Meta:
         name = "REPC_MT000200UV.CriterionGroup"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -511,7 +511,7 @@ class RepcMt000200UvCriterionGroup:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -550,7 +550,7 @@ class RepcMt000200UvDataEnterer:
     class Meta:
         name = "REPC_MT000200UV.DataEnterer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -566,7 +566,7 @@ class RepcMt000200UvDataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -644,7 +644,7 @@ class RepcMt000200UvInFulfillmentOf:
     class Meta:
         name = "REPC_MT000200UV.InFulfillmentOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -660,7 +660,7 @@ class RepcMt000200UvInFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -773,7 +773,7 @@ class RepcMt000200UvMaterialKind2:
     class Meta:
         name = "REPC_MT000200UV.MaterialKind2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -789,7 +789,7 @@ class RepcMt000200UvMaterialKind2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -841,7 +841,7 @@ class RepcMt000200UvObservationGoal:
     class Meta:
         name = "REPC_MT000200UV.ObservationGoal"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -857,7 +857,7 @@ class RepcMt000200UvObservationGoal:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -921,7 +921,7 @@ class RepcMt000200UvParticipant:
     class Meta:
         name = "REPC_MT000200UV.Participant"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -937,7 +937,7 @@ class RepcMt000200UvParticipant:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -999,7 +999,7 @@ class RepcMt000200UvPerformer:
     class Meta:
         name = "REPC_MT000200UV.Performer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1015,7 +1015,7 @@ class RepcMt000200UvPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1084,7 +1084,7 @@ class RepcMt000200UvPerformer2:
     class Meta:
         name = "REPC_MT000200UV.Performer2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1100,7 +1100,7 @@ class RepcMt000200UvPerformer2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1153,7 +1153,7 @@ class RepcMt000200UvReason2:
     class Meta:
         name = "REPC_MT000200UV.Reason2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1169,7 +1169,7 @@ class RepcMt000200UvReason2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1222,7 +1222,7 @@ class RepcMt000200UvVerifier:
     class Meta:
         name = "REPC_MT000200UV.Verifier"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1238,7 +1238,7 @@ class RepcMt000200UvVerifier:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1323,7 +1323,7 @@ class RepcMt000200UvAnnotation:
     class Meta:
         name = "REPC_MT000200UV.Annotation"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1339,7 +1339,7 @@ class RepcMt000200UvAnnotation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1364,7 +1364,7 @@ class RepcMt000200UvAnnotation:
             "required": True,
         },
     )
-    author: List[RepcMt000200UvAuthor6] = field(
+    author: list[RepcMt000200UvAuthor6] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1403,7 +1403,7 @@ class RepcMt000200UvConditions:
     class Meta:
         name = "REPC_MT000200UV.Conditions"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1419,7 +1419,7 @@ class RepcMt000200UvConditions:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1497,7 +1497,7 @@ class RepcMt000200UvFinalGoal:
     class Meta:
         name = "REPC_MT000200UV.FinalGoal"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1513,7 +1513,7 @@ class RepcMt000200UvFinalGoal:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1589,7 +1589,7 @@ class RepcMt000200UvGoal:
     class Meta:
         name = "REPC_MT000200UV.Goal"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1605,7 +1605,7 @@ class RepcMt000200UvGoal:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1681,7 +1681,7 @@ class RepcMt000200UvMaterialPart:
     class Meta:
         name = "REPC_MT000200UV.MaterialPart"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1697,7 +1697,7 @@ class RepcMt000200UvMaterialPart:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1736,7 +1736,7 @@ class RepcMt000200UvPatientInstructions:
     class Meta:
         name = "REPC_MT000200UV.PatientInstructions"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1752,7 +1752,7 @@ class RepcMt000200UvPatientInstructions:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1760,7 +1760,7 @@ class RepcMt000200UvPatientInstructions:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1789,7 +1789,7 @@ class RepcMt000200UvPatientInstructions:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[RepcMt000200UvPerformer] = field(
+    performer: list[RepcMt000200UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1828,7 +1828,7 @@ class RepcMt000200UvPlannedReview:
     class Meta:
         name = "REPC_MT000200UV.PlannedReview"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1844,7 +1844,7 @@ class RepcMt000200UvPlannedReview:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1852,7 +1852,7 @@ class RepcMt000200UvPlannedReview:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -1860,7 +1860,7 @@ class RepcMt000200UvPlannedReview:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[RepcMt000200UvPerformer] = field(
+    performer: list[RepcMt000200UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1899,7 +1899,7 @@ class RepcMt000200UvPrecondition2:
     class Meta:
         name = "REPC_MT000200UV.Precondition2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1915,7 +1915,7 @@ class RepcMt000200UvPrecondition2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2006,7 +2006,7 @@ class RepcMt000200UvComponent:
     class Meta:
         name = "REPC_MT000200UV.Component"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2022,7 +2022,7 @@ class RepcMt000200UvComponent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2076,7 +2076,7 @@ class RepcMt000200UvMaterialKind:
     class Meta:
         name = "REPC_MT000200UV.MaterialKind"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2092,7 +2092,7 @@ class RepcMt000200UvMaterialKind:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2114,7 +2114,7 @@ class RepcMt000200UvMaterialKind:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    material_part: List[RepcMt000200UvMaterialPart] = field(
+    material_part: list[RepcMt000200UvMaterialPart] = field(
         default_factory=list,
         metadata={
             "name": "materialPart",
@@ -2153,7 +2153,7 @@ class RepcMt000200UvSubject:
     class Meta:
         name = "REPC_MT000200UV.Subject"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2169,7 +2169,7 @@ class RepcMt000200UvSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2245,7 +2245,7 @@ class RepcMt000200UvSubject2:
     class Meta:
         name = "REPC_MT000200UV.Subject2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2261,7 +2261,7 @@ class RepcMt000200UvSubject2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2336,7 +2336,7 @@ class RepcMt000200UvActDefinition:
     class Meta:
         name = "REPC_MT000200UV.ActDefinition"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2352,7 +2352,7 @@ class RepcMt000200UvActDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2360,7 +2360,7 @@ class RepcMt000200UvActDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2415,7 +2415,7 @@ class RepcMt000200UvActDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -2439,7 +2439,7 @@ class RepcMt000200UvActDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2447,7 +2447,7 @@ class RepcMt000200UvActDefinition:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2455,7 +2455,7 @@ class RepcMt000200UvActDefinition:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2463,7 +2463,7 @@ class RepcMt000200UvActDefinition:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -2472,7 +2472,7 @@ class RepcMt000200UvActDefinition:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -2520,7 +2520,7 @@ class RepcMt000200UvAdministerableMaterial:
     class Meta:
         name = "REPC_MT000200UV.AdministerableMaterial"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2536,7 +2536,7 @@ class RepcMt000200UvAdministerableMaterial:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2593,7 +2593,7 @@ class RepcMt000200UvEncounterDefinition:
     class Meta:
         name = "REPC_MT000200UV.EncounterDefinition"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2609,7 +2609,7 @@ class RepcMt000200UvEncounterDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2617,7 +2617,7 @@ class RepcMt000200UvEncounterDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2671,7 +2671,7 @@ class RepcMt000200UvEncounterDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -2679,7 +2679,7 @@ class RepcMt000200UvEncounterDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2687,7 +2687,7 @@ class RepcMt000200UvEncounterDefinition:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2695,7 +2695,7 @@ class RepcMt000200UvEncounterDefinition:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2703,7 +2703,7 @@ class RepcMt000200UvEncounterDefinition:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -2712,7 +2712,7 @@ class RepcMt000200UvEncounterDefinition:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -2753,7 +2753,7 @@ class RepcMt000200UvObservationDefinition:
     class Meta:
         name = "REPC_MT000200UV.ObservationDefinition"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2769,7 +2769,7 @@ class RepcMt000200UvObservationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2777,7 +2777,7 @@ class RepcMt000200UvObservationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2816,7 +2816,7 @@ class RepcMt000200UvObservationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -2840,7 +2840,7 @@ class RepcMt000200UvObservationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -2879,7 +2879,7 @@ class RepcMt000200UvObservationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    method_code: List[Ce] = field(
+    method_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "methodCode",
@@ -2887,7 +2887,7 @@ class RepcMt000200UvObservationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    target_site_code: List[Cd] = field(
+    target_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "targetSiteCode",
@@ -2895,7 +2895,7 @@ class RepcMt000200UvObservationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2903,7 +2903,7 @@ class RepcMt000200UvObservationDefinition:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2911,7 +2911,7 @@ class RepcMt000200UvObservationDefinition:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2919,7 +2919,7 @@ class RepcMt000200UvObservationDefinition:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -2928,7 +2928,7 @@ class RepcMt000200UvObservationDefinition:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -2968,7 +2968,7 @@ class RepcMt000200UvProcedureDefinition:
     class Meta:
         name = "REPC_MT000200UV.ProcedureDefinition"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -2984,7 +2984,7 @@ class RepcMt000200UvProcedureDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -2992,7 +2992,7 @@ class RepcMt000200UvProcedureDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3046,7 +3046,7 @@ class RepcMt000200UvProcedureDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -3070,7 +3070,7 @@ class RepcMt000200UvProcedureDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    method_code: List[Ce] = field(
+    method_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "methodCode",
@@ -3078,7 +3078,7 @@ class RepcMt000200UvProcedureDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    approach_site_code: List[Cd] = field(
+    approach_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "approachSiteCode",
@@ -3086,7 +3086,7 @@ class RepcMt000200UvProcedureDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    target_site_code: List[Cd] = field(
+    target_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "targetSiteCode",
@@ -3094,7 +3094,7 @@ class RepcMt000200UvProcedureDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3102,7 +3102,7 @@ class RepcMt000200UvProcedureDefinition:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3110,7 +3110,7 @@ class RepcMt000200UvProcedureDefinition:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3118,7 +3118,7 @@ class RepcMt000200UvProcedureDefinition:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -3127,7 +3127,7 @@ class RepcMt000200UvProcedureDefinition:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -3175,7 +3175,7 @@ class RepcMt000200UvSupplyEvent:
     class Meta:
         name = "REPC_MT000200UV.SupplyEvent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3191,7 +3191,7 @@ class RepcMt000200UvSupplyEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3214,7 +3214,7 @@ class RepcMt000200UvSupplyEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3222,7 +3222,7 @@ class RepcMt000200UvSupplyEvent:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3230,7 +3230,7 @@ class RepcMt000200UvSupplyEvent:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3238,7 +3238,7 @@ class RepcMt000200UvSupplyEvent:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -3247,7 +3247,7 @@ class RepcMt000200UvSupplyEvent:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -3295,7 +3295,7 @@ class RepcMt000200UvConsumable:
     class Meta:
         name = "REPC_MT000200UV.Consumable"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3311,7 +3311,7 @@ class RepcMt000200UvConsumable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3366,7 +3366,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
     class Meta:
         name = "REPC_MT000200UV.SubstanceAdministrationDefinition"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3382,7 +3382,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3390,7 +3390,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3420,7 +3420,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -3444,7 +3444,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -3468,7 +3468,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    approach_site_code: List[Cd] = field(
+    approach_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "approachSiteCode",
@@ -3516,7 +3516,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "required": True,
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3524,7 +3524,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3532,7 +3532,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3540,7 +3540,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -3549,7 +3549,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -3598,7 +3598,7 @@ class RepcMt000200UvComponent13:
     class Meta:
         name = "REPC_MT000200UV.Component13"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3614,7 +3614,7 @@ class RepcMt000200UvComponent13:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3725,7 +3725,7 @@ class RepcMt000200UvInFulfillmentOf2:
     class Meta:
         name = "REPC_MT000200UV.InFulfillmentOf2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3741,7 +3741,7 @@ class RepcMt000200UvInFulfillmentOf2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3844,7 +3844,7 @@ class RepcMt000200UvActIntent:
     class Meta:
         name = "REPC_MT000200UV.ActIntent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -3860,7 +3860,7 @@ class RepcMt000200UvActIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -3868,7 +3868,7 @@ class RepcMt000200UvActIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3923,7 +3923,7 @@ class RepcMt000200UvActIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -3947,7 +3947,7 @@ class RepcMt000200UvActIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[RepcMt000200UvPerformer2] = field(
+    performer: list[RepcMt000200UvPerformer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3955,7 +3955,7 @@ class RepcMt000200UvActIntent:
             "nillable": True,
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3972,7 +3972,7 @@ class RepcMt000200UvActIntent:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3980,7 +3980,7 @@ class RepcMt000200UvActIntent:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3988,7 +3988,7 @@ class RepcMt000200UvActIntent:
             "nillable": True,
         },
     )
-    component: List["RepcMt000200UvComponent4"] = field(
+    component: list["RepcMt000200UvComponent4"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3996,7 +3996,7 @@ class RepcMt000200UvActIntent:
             "nillable": True,
         },
     )
-    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
+    fulfillment: list[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4004,7 +4004,7 @@ class RepcMt000200UvActIntent:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -4013,7 +4013,7 @@ class RepcMt000200UvActIntent:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -4022,7 +4022,7 @@ class RepcMt000200UvActIntent:
             "nillable": True,
         },
     )
-    component_of: List["RepcMt000200UvComponent3"] = field(
+    component_of: list["RepcMt000200UvComponent3"] = field(
         default_factory=list,
         metadata={
             "name": "componentOf",
@@ -4069,7 +4069,7 @@ class RepcMt000200UvGuideline:
     class Meta:
         name = "REPC_MT000200UV.Guideline"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4085,7 +4085,7 @@ class RepcMt000200UvGuideline:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4093,7 +4093,7 @@ class RepcMt000200UvGuideline:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4137,7 +4137,7 @@ class RepcMt000200UvGuideline:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[RepcMt000200UvAuthor6] = field(
+    author: list[RepcMt000200UvAuthor6] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4146,7 +4146,7 @@ class RepcMt000200UvGuideline:
             "nillable": True,
         },
     )
-    final_goal: List[RepcMt000200UvFinalGoal] = field(
+    final_goal: list[RepcMt000200UvFinalGoal] = field(
         default_factory=list,
         metadata={
             "name": "finalGoal",
@@ -4155,7 +4155,7 @@ class RepcMt000200UvGuideline:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4163,7 +4163,7 @@ class RepcMt000200UvGuideline:
             "nillable": True,
         },
     )
-    component1: List[RepcMt000200UvComponent] = field(
+    component1: list[RepcMt000200UvComponent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4171,7 +4171,7 @@ class RepcMt000200UvGuideline:
             "nillable": True,
         },
     )
-    component2: List[RepcMt000200UvComponent13] = field(
+    component2: list[RepcMt000200UvComponent13] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4179,7 +4179,7 @@ class RepcMt000200UvGuideline:
             "nillable": True,
         },
     )
-    component3: List[RepcMt000200UvComponent2] = field(
+    component3: list[RepcMt000200UvComponent2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4187,7 +4187,7 @@ class RepcMt000200UvGuideline:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -4196,7 +4196,7 @@ class RepcMt000200UvGuideline:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -4236,7 +4236,7 @@ class RepcMt000200UvComponent3:
     class Meta:
         name = "REPC_MT000200UV.Component3"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4252,7 +4252,7 @@ class RepcMt000200UvComponent3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4360,7 +4360,7 @@ class RepcMt000200UvComponent4:
     class Meta:
         name = "REPC_MT000200UV.Component4"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4376,7 +4376,7 @@ class RepcMt000200UvComponent4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4484,7 +4484,7 @@ class RepcMt000200UvDefinition1:
     class Meta:
         name = "REPC_MT000200UV.Definition1"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4500,7 +4500,7 @@ class RepcMt000200UvDefinition1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4575,7 +4575,7 @@ class RepcMt000200UvEncounterIntent:
     class Meta:
         name = "REPC_MT000200UV.EncounterIntent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4591,7 +4591,7 @@ class RepcMt000200UvEncounterIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4599,7 +4599,7 @@ class RepcMt000200UvEncounterIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4653,7 +4653,7 @@ class RepcMt000200UvEncounterIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -4661,7 +4661,7 @@ class RepcMt000200UvEncounterIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[RepcMt000200UvPerformer2] = field(
+    performer: list[RepcMt000200UvPerformer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4669,7 +4669,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4686,7 +4686,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4694,7 +4694,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4702,7 +4702,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    component: List[RepcMt000200UvComponent4] = field(
+    component: list[RepcMt000200UvComponent4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4710,7 +4710,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
+    fulfillment: list[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4718,7 +4718,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -4727,7 +4727,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -4736,7 +4736,7 @@ class RepcMt000200UvEncounterIntent:
             "nillable": True,
         },
     )
-    component_of: List[RepcMt000200UvComponent3] = field(
+    component_of: list[RepcMt000200UvComponent3] = field(
         default_factory=list,
         metadata={
             "name": "componentOf",
@@ -4776,7 +4776,7 @@ class RepcMt000200UvObservationIntent:
     class Meta:
         name = "REPC_MT000200UV.ObservationIntent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -4792,7 +4792,7 @@ class RepcMt000200UvObservationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -4800,7 +4800,7 @@ class RepcMt000200UvObservationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4839,7 +4839,7 @@ class RepcMt000200UvObservationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -4863,7 +4863,7 @@ class RepcMt000200UvObservationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -4902,7 +4902,7 @@ class RepcMt000200UvObservationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    method_code: List[Ce] = field(
+    method_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "methodCode",
@@ -4910,7 +4910,7 @@ class RepcMt000200UvObservationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    target_site_code: List[Cd] = field(
+    target_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "targetSiteCode",
@@ -4918,7 +4918,7 @@ class RepcMt000200UvObservationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[RepcMt000200UvPerformer2] = field(
+    performer: list[RepcMt000200UvPerformer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4926,7 +4926,7 @@ class RepcMt000200UvObservationIntent:
             "nillable": True,
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4943,7 +4943,7 @@ class RepcMt000200UvObservationIntent:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4951,7 +4951,7 @@ class RepcMt000200UvObservationIntent:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4959,7 +4959,7 @@ class RepcMt000200UvObservationIntent:
             "nillable": True,
         },
     )
-    component: List[RepcMt000200UvComponent4] = field(
+    component: list[RepcMt000200UvComponent4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4967,7 +4967,7 @@ class RepcMt000200UvObservationIntent:
             "nillable": True,
         },
     )
-    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
+    fulfillment: list[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4975,7 +4975,7 @@ class RepcMt000200UvObservationIntent:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -4984,7 +4984,7 @@ class RepcMt000200UvObservationIntent:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -4993,7 +4993,7 @@ class RepcMt000200UvObservationIntent:
             "nillable": True,
         },
     )
-    component_of: List[RepcMt000200UvComponent3] = field(
+    component_of: list[RepcMt000200UvComponent3] = field(
         default_factory=list,
         metadata={
             "name": "componentOf",
@@ -5032,7 +5032,7 @@ class RepcMt000200UvProcedureIntent:
     class Meta:
         name = "REPC_MT000200UV.ProcedureIntent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5048,7 +5048,7 @@ class RepcMt000200UvProcedureIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5056,7 +5056,7 @@ class RepcMt000200UvProcedureIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5110,7 +5110,7 @@ class RepcMt000200UvProcedureIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -5134,7 +5134,7 @@ class RepcMt000200UvProcedureIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    method_code: List[Ce] = field(
+    method_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "methodCode",
@@ -5142,7 +5142,7 @@ class RepcMt000200UvProcedureIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    approach_site_code: List[Cd] = field(
+    approach_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "approachSiteCode",
@@ -5150,7 +5150,7 @@ class RepcMt000200UvProcedureIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    target_site_code: List[Cd] = field(
+    target_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "targetSiteCode",
@@ -5158,7 +5158,7 @@ class RepcMt000200UvProcedureIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[RepcMt000200UvPerformer2] = field(
+    performer: list[RepcMt000200UvPerformer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5166,7 +5166,7 @@ class RepcMt000200UvProcedureIntent:
             "nillable": True,
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5183,7 +5183,7 @@ class RepcMt000200UvProcedureIntent:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5191,7 +5191,7 @@ class RepcMt000200UvProcedureIntent:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5199,7 +5199,7 @@ class RepcMt000200UvProcedureIntent:
             "nillable": True,
         },
     )
-    component: List[RepcMt000200UvComponent4] = field(
+    component: list[RepcMt000200UvComponent4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5207,7 +5207,7 @@ class RepcMt000200UvProcedureIntent:
             "nillable": True,
         },
     )
-    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
+    fulfillment: list[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5215,7 +5215,7 @@ class RepcMt000200UvProcedureIntent:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -5224,7 +5224,7 @@ class RepcMt000200UvProcedureIntent:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -5233,7 +5233,7 @@ class RepcMt000200UvProcedureIntent:
             "nillable": True,
         },
     )
-    component_of: List[RepcMt000200UvComponent3] = field(
+    component_of: list[RepcMt000200UvComponent3] = field(
         default_factory=list,
         metadata={
             "name": "componentOf",
@@ -5280,7 +5280,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
     class Meta:
         name = "REPC_MT000200UV.SubstanceAdministrationIntent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5296,7 +5296,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5304,7 +5304,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5334,7 +5334,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: List[SxcmTsExplicit] = field(
+    effective_time: list[SxcmTsExplicit] = field(
         default_factory=list,
         metadata={
             "name": "effectiveTime",
@@ -5358,7 +5358,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: List[Ce] = field(
+    confidentiality_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "confidentialityCode",
@@ -5382,7 +5382,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    approach_site_code: List[Cd] = field(
+    approach_site_code: list[Cd] = field(
         default_factory=list,
         metadata={
             "name": "approachSiteCode",
@@ -5430,7 +5430,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "required": True,
         },
     )
-    performer: List[RepcMt000200UvPerformer2] = field(
+    performer: list[RepcMt000200UvPerformer2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5438,7 +5438,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    goal: List[RepcMt000200UvGoal] = field(
+    goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5455,7 +5455,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5463,7 +5463,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    conditions: List[RepcMt000200UvConditions] = field(
+    conditions: list[RepcMt000200UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5471,7 +5471,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    component: List[RepcMt000200UvComponent4] = field(
+    component: list[RepcMt000200UvComponent4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5479,7 +5479,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
+    fulfillment: list[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5487,7 +5487,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -5496,7 +5496,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -5505,7 +5505,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    component_of: List[RepcMt000200UvComponent3] = field(
+    component_of: list[RepcMt000200UvComponent3] = field(
         default_factory=list,
         metadata={
             "name": "componentOf",
@@ -5553,7 +5553,7 @@ class RepcMt000200UvComponent10:
     class Meta:
         name = "REPC_MT000200UV.Component10"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5569,7 +5569,7 @@ class RepcMt000200UvComponent10:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5678,7 +5678,7 @@ class RepcMt000200UvCarePlan:
     class Meta:
         name = "REPC_MT000200UV.CarePlan"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5694,7 +5694,7 @@ class RepcMt000200UvCarePlan:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -5702,7 +5702,7 @@ class RepcMt000200UvCarePlan:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5746,7 +5746,7 @@ class RepcMt000200UvCarePlan:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: List[RepcMt000200UvPerformer] = field(
+    performer: list[RepcMt000200UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5754,7 +5754,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    author: List[RepcMt000200UvAuthor] = field(
+    author: list[RepcMt000200UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5762,7 +5762,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    data_enterer: List[RepcMt000200UvDataEnterer] = field(
+    data_enterer: list[RepcMt000200UvDataEnterer] = field(
         default_factory=list,
         metadata={
             "name": "dataEnterer",
@@ -5771,7 +5771,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    verifier: List[RepcMt000200UvVerifier] = field(
+    verifier: list[RepcMt000200UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5787,7 +5787,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    final_goal: List[RepcMt000200UvFinalGoal] = field(
+    final_goal: list[RepcMt000200UvFinalGoal] = field(
         default_factory=list,
         metadata={
             "name": "finalGoal",
@@ -5796,7 +5796,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    definition: List[RepcMt000200UvDefinition1] = field(
+    definition: list[RepcMt000200UvDefinition1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5804,7 +5804,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    reason: List[RepcMt000200UvReason2] = field(
+    reason: list[RepcMt000200UvReason2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5812,7 +5812,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    component1: List[RepcMt000200UvComponent] = field(
+    component1: list[RepcMt000200UvComponent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5820,7 +5820,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    component2: List[RepcMt000200UvComponent10] = field(
+    component2: list[RepcMt000200UvComponent10] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5828,7 +5828,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    component3: List["RepcMt000200UvComponent7"] = field(
+    component3: list["RepcMt000200UvComponent7"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5836,7 +5836,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    subject_of1: List[RepcMt000200UvSubject2] = field(
+    subject_of1: list[RepcMt000200UvSubject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -5845,7 +5845,7 @@ class RepcMt000200UvCarePlan:
             "nillable": True,
         },
     )
-    subject_of2: List[RepcMt000200UvSubject] = field(
+    subject_of2: list[RepcMt000200UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -5884,7 +5884,7 @@ class RepcMt000200UvComponent7:
     class Meta:
         name = "REPC_MT000200UV.Component7"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -5900,7 +5900,7 @@ class RepcMt000200UvComponent7:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",

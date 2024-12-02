@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .specification_document_scope import SpecificationDocumentScope
 
@@ -57,7 +57,7 @@ class SpecificationScope:
 
     @dataclass
     class SpecificationDocumentScopes:
-        specification_document_scope: List[SpecificationDocumentScope] = field(
+        specification_document_scope: list[SpecificationDocumentScope] = field(
             default_factory=list,
             metadata={
                 "name": "SPECIFICATION-DOCUMENT-SCOPE",

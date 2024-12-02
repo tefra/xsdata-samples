@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.hierarchy_association_type import HierarchyAssociationType
 
@@ -20,7 +19,7 @@ class HierarchyAssociationsType:
         with an identifiable object in the context of another object.
     """
 
-    hierarchy_association: Tuple[HierarchyAssociationType, ...] = field(
+    hierarchy_association: tuple[HierarchyAssociationType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HierarchyAssociation",

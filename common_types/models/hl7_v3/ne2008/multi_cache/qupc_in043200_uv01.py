@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     Cd,
@@ -67,7 +67,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.Subject5"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -83,7 +83,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -152,7 +152,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.RegistrationEvent"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -168,7 +168,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -176,7 +176,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -216,7 +216,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    in_fulfillment_of: List[MfmiMt700712Uv01InFulfillmentOf] = field(
+    in_fulfillment_of: list[MfmiMt700712Uv01InFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "name": "inFulfillmentOf",
@@ -225,7 +225,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    definition: List[MfmiMt700712Uv01Definition] = field(
+    definition: list[MfmiMt700712Uv01Definition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -233,7 +233,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    replacement_of: List[MfmiMt700712Uv01ReplacementOf] = field(
+    replacement_of: list[MfmiMt700712Uv01ReplacementOf] = field(
         default_factory=list,
         metadata={
             "name": "replacementOf",
@@ -282,7 +282,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.Subject1"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -298,7 +298,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -369,7 +369,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.ControlActProcess"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -385,7 +385,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -393,7 +393,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -422,7 +422,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    priority_code: List[Ce] = field(
+    priority_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "priorityCode",
@@ -430,7 +430,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reason_code: List[Ce] = field(
+    reason_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "reasonCode",
@@ -446,7 +446,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    overseer: List[MfmiMt700712Uv01Overseer] = field(
+    overseer: list[MfmiMt700712Uv01Overseer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -454,7 +454,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    author_or_performer: List[MfmiMt700712Uv01AuthorOrPerformer] = field(
+    author_or_performer: list[MfmiMt700712Uv01AuthorOrPerformer] = field(
         default_factory=list,
         metadata={
             "name": "authorOrPerformer",
@@ -463,7 +463,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    data_enterer: List[MfmiMt700712Uv01DataEnterer] = field(
+    data_enterer: list[MfmiMt700712Uv01DataEnterer] = field(
         default_factory=list,
         metadata={
             "name": "dataEnterer",
@@ -472,7 +472,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    information_recipient: List[MfmiMt700712Uv01InformationRecipient] = field(
+    information_recipient: list[MfmiMt700712Uv01InformationRecipient] = field(
         default_factory=list,
         metadata={
             "name": "informationRecipient",
@@ -481,7 +481,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    subject: List[QupcIn043200Uv01MfmiMt700712Uv01Subject1] = field(
+    subject: list[QupcIn043200Uv01MfmiMt700712Uv01Subject1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -489,7 +489,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    reason_of: List[MfmiMt700712Uv01Reason] = field(
+    reason_of: list[MfmiMt700712Uv01Reason] = field(
         default_factory=list,
         metadata={
             "name": "reasonOf",
@@ -546,7 +546,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
     class Meta:
         name = "QUPC_IN043200UV01.MCCI_MT000300UV01.Message"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -562,7 +562,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -612,7 +612,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    profile_id: List[Ii] = field(
+    profile_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "profileId",
@@ -647,7 +647,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    attachment_text: List[EdExplicit] = field(
+    attachment_text: list[EdExplicit] = field(
         default_factory=list,
         metadata={
             "name": "attachmentText",
@@ -655,7 +655,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    receiver: List[McciMt000300Uv01Receiver] = field(
+    receiver: list[McciMt000300Uv01Receiver] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -663,7 +663,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "min_occurs": 1,
         },
     )
-    respond_to: List[McciMt000300Uv01RespondTo] = field(
+    respond_to: list[McciMt000300Uv01RespondTo] = field(
         default_factory=list,
         metadata={
             "name": "respondTo",
@@ -680,7 +680,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    attention_line: List[McciMt000300Uv01AttentionLine] = field(
+    attention_line: list[McciMt000300Uv01AttentionLine] = field(
         default_factory=list,
         metadata={
             "name": "attentionLine",
@@ -689,7 +689,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "nillable": True,
         },
     )
-    acknowledgement: List[McciMt000300Uv01Acknowledgement] = field(
+    acknowledgement: list[McciMt000300Uv01Acknowledgement] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Union
+from typing import Optional, Union
 
 from sdmx_ml.models.action_type import ActionType
 from sdmx_ml.models.structures import Structures
@@ -67,7 +67,7 @@ class SubmitStructureRequestType1:
             ),
         },
     )
-    submitted_structure: Tuple[SubmittedStructureType, ...] = field(
+    submitted_structure: tuple[SubmittedStructureType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubmittedStructure",

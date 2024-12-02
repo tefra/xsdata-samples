@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
 from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
@@ -76,7 +76,7 @@ class MsrQueryP1:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",

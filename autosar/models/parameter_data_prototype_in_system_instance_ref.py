@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .parameter_data_prototype_subtypes_enum import (
     ParameterDataPrototypeSubtypesEnum,
@@ -48,7 +48,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_component_ref: List[
+    context_component_ref: list[
         "ParameterDataPrototypeInSystemInstanceRef.ContextComponentRef"
     ] = field(
         default_factory=list,

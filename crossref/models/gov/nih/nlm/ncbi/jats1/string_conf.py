@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional, Union
+from typing import ForwardRef, Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Abbrev,
@@ -89,7 +89,7 @@ class StringConf:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

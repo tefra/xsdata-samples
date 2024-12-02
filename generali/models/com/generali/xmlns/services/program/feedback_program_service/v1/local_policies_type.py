@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy import (
     LocalPoliciesTypeLocalPolicy,
@@ -12,7 +11,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class LocalPoliciesType:
-    local_policy: List[LocalPoliciesTypeLocalPolicy] = field(
+    local_policy: list[LocalPoliciesTypeLocalPolicy] = field(
         default_factory=list,
         metadata={
             "name": "LocalPolicy",

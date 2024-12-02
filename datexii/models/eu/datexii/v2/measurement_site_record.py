@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -120,7 +120,7 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_specific_characteristics: List[
+    measurement_specific_characteristics: list[
         MeasurementSiteRecordIndexMeasurementSpecificCharacteristics
     ] = field(
         default_factory=list,

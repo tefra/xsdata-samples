@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     BuyerCustomerParty,
@@ -118,7 +118,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -159,7 +159,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",
@@ -176,7 +176,7 @@ class RetailEventType:
             "required": True,
         },
     )
-    original_document_reference: Tuple[OriginalDocumentReference, ...] = field(
+    original_document_reference: tuple[OriginalDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OriginalDocumentReference",
@@ -184,7 +184,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -226,7 +226,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    event_comment: Tuple[EventComment, ...] = field(
+    event_comment: tuple[EventComment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "EventComment",

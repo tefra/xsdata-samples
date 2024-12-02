@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .mc_data_instance import McDataInstance
 from .mc_sw_emulation_method_support import McSwEmulationMethodSupport
@@ -122,7 +122,7 @@ class McSupportData:
 
     @dataclass
     class EmulationSupports:
-        mc_sw_emulation_method_support: List[McSwEmulationMethodSupport] = (
+        mc_sw_emulation_method_support: list[McSwEmulationMethodSupport] = (
             field(
                 default_factory=list,
                 metadata={
@@ -135,7 +135,7 @@ class McSupportData:
 
     @dataclass
     class McParameterInstances:
-        mc_data_instance: List[McDataInstance] = field(
+        mc_data_instance: list[McDataInstance] = field(
             default_factory=list,
             metadata={
                 "name": "MC-DATA-INSTANCE",
@@ -146,7 +146,7 @@ class McSupportData:
 
     @dataclass
     class McVariableInstances:
-        mc_data_instance: List[McDataInstance] = field(
+        mc_data_instance: list[McDataInstance] = field(
             default_factory=list,
             metadata={
                 "name": "MC-DATA-INSTANCE",
@@ -157,7 +157,7 @@ class McSupportData:
 
     @dataclass
     class MeasurableSystemConstantValuesRefs:
-        measurable_system_constant_values_ref: List[
+        measurable_system_constant_values_ref: list[
             "McSupportData.MeasurableSystemConstantValuesRefs.MeasurableSystemConstantValuesRef"
         ] = field(
             default_factory=list,

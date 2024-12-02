@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -52,7 +52,7 @@ class CoctMt030007UvBirthPlace:
     class Meta:
         name = "COCT_MT030007UV.BirthPlace"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -68,7 +68,7 @@ class CoctMt030007UvBirthPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -124,7 +124,7 @@ class CoctMt030007UvCitizen:
     class Meta:
         name = "COCT_MT030007UV.Citizen"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -140,7 +140,7 @@ class CoctMt030007UvCitizen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -148,7 +148,7 @@ class CoctMt030007UvCitizen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -212,7 +212,7 @@ class CoctMt030007UvContactParty:
     class Meta:
         name = "COCT_MT030007UV.ContactParty"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -228,7 +228,7 @@ class CoctMt030007UvContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -236,7 +236,7 @@ class CoctMt030007UvContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -250,14 +250,14 @@ class CoctMt030007UvContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -321,7 +321,7 @@ class CoctMt030007UvEmployment:
     class Meta:
         name = "COCT_MT030007UV.Employment"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -337,7 +337,7 @@ class CoctMt030007UvEmployment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -345,21 +345,21 @@ class CoctMt030007UvEmployment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -445,7 +445,7 @@ class CoctMt030007UvEntity:
     class Meta:
         name = "COCT_MT030007UV.Entity"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -461,7 +461,7 @@ class CoctMt030007UvEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -469,7 +469,7 @@ class CoctMt030007UvEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -483,7 +483,7 @@ class CoctMt030007UvEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -544,7 +544,7 @@ class CoctMt030007UvGuarantor:
     class Meta:
         name = "COCT_MT030007UV.Guarantor"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -560,7 +560,7 @@ class CoctMt030007UvGuarantor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -568,21 +568,21 @@ class CoctMt030007UvGuarantor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -663,7 +663,7 @@ class CoctMt030007UvGuardian:
     class Meta:
         name = "COCT_MT030007UV.Guardian"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -679,7 +679,7 @@ class CoctMt030007UvGuardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -687,21 +687,21 @@ class CoctMt030007UvGuardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -790,7 +790,7 @@ class CoctMt030007UvLanguageCommunication:
     class Meta:
         name = "COCT_MT030007UV.LanguageCommunication"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -806,7 +806,7 @@ class CoctMt030007UvLanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -861,7 +861,7 @@ class CoctMt030007UvOtherIds:
     class Meta:
         name = "COCT_MT030007UV.OtherIDs"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -877,7 +877,7 @@ class CoctMt030007UvOtherIds:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -885,7 +885,7 @@ class CoctMt030007UvOtherIds:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -934,7 +934,7 @@ class CoctMt030007UvStudent:
     class Meta:
         name = "COCT_MT030007UV.Student"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -950,7 +950,7 @@ class CoctMt030007UvStudent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -958,28 +958,28 @@ class CoctMt030007UvStudent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: List[AdExplicit] = field(
+    addr: list[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: List[TelExplicit] = field(
+    telecom: list[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: List[Cs] = field(
+    status_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "statusCode",
@@ -1044,7 +1044,7 @@ class CoctMt030007UvMember:
     class Meta:
         name = "COCT_MT030007UV.Member"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1060,7 +1060,7 @@ class CoctMt030007UvMember:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1068,7 +1068,7 @@ class CoctMt030007UvMember:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1147,7 +1147,7 @@ class CoctMt030007UvNonPersonLivingSubject:
     class Meta:
         name = "COCT_MT030007UV.NonPersonLivingSubject"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1163,7 +1163,7 @@ class CoctMt030007UvNonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1171,7 +1171,7 @@ class CoctMt030007UvNonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1185,7 +1185,7 @@ class CoctMt030007UvNonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1295,7 +1295,7 @@ class CoctMt030007UvNonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_member: List[CoctMt030007UvMember] = field(
+    as_member: list[CoctMt030007UvMember] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -1304,7 +1304,7 @@ class CoctMt030007UvNonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_other_ids: List[CoctMt030007UvOtherIds] = field(
+    as_other_ids: list[CoctMt030007UvOtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -1313,7 +1313,7 @@ class CoctMt030007UvNonPersonLivingSubject:
             "nillable": True,
         },
     )
-    contact_party: List[CoctMt030007UvContactParty] = field(
+    contact_party: list[CoctMt030007UvContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -1322,7 +1322,7 @@ class CoctMt030007UvNonPersonLivingSubject:
             "nillable": True,
         },
     )
-    guardian: List[CoctMt030007UvGuardian] = field(
+    guardian: list[CoctMt030007UvGuardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1330,7 +1330,7 @@ class CoctMt030007UvNonPersonLivingSubject:
             "nillable": True,
         },
     )
-    guarantor: List[CoctMt030007UvGuarantor] = field(
+    guarantor: list[CoctMt030007UvGuarantor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1377,7 +1377,7 @@ class CoctMt030007UvPerson:
     class Meta:
         name = "COCT_MT030007UV.Person"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -1393,7 +1393,7 @@ class CoctMt030007UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -1401,14 +1401,14 @@ class CoctMt030007UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1502,7 +1502,7 @@ class CoctMt030007UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    disability_code: List[Ce] = field(
+    disability_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "disabilityCode",
@@ -1526,7 +1526,7 @@ class CoctMt030007UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    race_code: List[Ce] = field(
+    race_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "raceCode",
@@ -1534,7 +1534,7 @@ class CoctMt030007UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    ethnic_group_code: List[Ce] = field(
+    ethnic_group_code: list[Ce] = field(
         default_factory=list,
         metadata={
             "name": "ethnicGroupCode",
@@ -1542,7 +1542,7 @@ class CoctMt030007UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_employment: List[CoctMt030007UvEmployment] = field(
+    as_employment: list[CoctMt030007UvEmployment] = field(
         default_factory=list,
         metadata={
             "name": "asEmployment",
@@ -1551,7 +1551,7 @@ class CoctMt030007UvPerson:
             "nillable": True,
         },
     )
-    as_citizen: List[CoctMt030007UvCitizen] = field(
+    as_citizen: list[CoctMt030007UvCitizen] = field(
         default_factory=list,
         metadata={
             "name": "asCitizen",
@@ -1560,7 +1560,7 @@ class CoctMt030007UvPerson:
             "nillable": True,
         },
     )
-    as_student: List[CoctMt030007UvStudent] = field(
+    as_student: list[CoctMt030007UvStudent] = field(
         default_factory=list,
         metadata={
             "name": "asStudent",
@@ -1569,7 +1569,7 @@ class CoctMt030007UvPerson:
             "nillable": True,
         },
     )
-    as_member: List[CoctMt030007UvMember] = field(
+    as_member: list[CoctMt030007UvMember] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -1578,7 +1578,7 @@ class CoctMt030007UvPerson:
             "nillable": True,
         },
     )
-    as_other_ids: List[CoctMt030007UvOtherIds] = field(
+    as_other_ids: list[CoctMt030007UvOtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -1587,7 +1587,7 @@ class CoctMt030007UvPerson:
             "nillable": True,
         },
     )
-    contact_party: List[CoctMt030007UvContactParty] = field(
+    contact_party: list[CoctMt030007UvContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -1596,7 +1596,7 @@ class CoctMt030007UvPerson:
             "nillable": True,
         },
     )
-    guardian: List[CoctMt030007UvGuardian] = field(
+    guardian: list[CoctMt030007UvGuardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1604,7 +1604,7 @@ class CoctMt030007UvPerson:
             "nillable": True,
         },
     )
-    guarantor: List[CoctMt030007UvGuarantor] = field(
+    guarantor: list[CoctMt030007UvGuarantor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1621,7 +1621,7 @@ class CoctMt030007UvPerson:
             "nillable": True,
         },
     )
-    language_communication: List[CoctMt030007UvLanguageCommunication] = field(
+    language_communication: list[CoctMt030007UvLanguageCommunication] = field(
         default_factory=list,
         metadata={
             "name": "languageCommunication",

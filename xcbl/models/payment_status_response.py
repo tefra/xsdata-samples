@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.remittance_advice import (
     PayerParty,
@@ -479,7 +479,7 @@ class ReceivingFinancialInstitution:
 
 @dataclass(kw_only=True)
 class ListOfPaymentException:
-    payment_exception: List[PaymentException] = field(
+    payment_exception: list[PaymentException] = field(
         default_factory=list,
         metadata={
             "name": "PaymentException",
@@ -650,7 +650,7 @@ class PaymentStatusResponseDetail:
 
 @dataclass(kw_only=True)
 class ListOfPaymentStatusResponseDetail:
-    payment_status_response_detail: List[PaymentStatusResponseDetail] = field(
+    payment_status_response_detail: list[PaymentStatusResponseDetail] = field(
         default_factory=list,
         metadata={
             "name": "PaymentStatusResponseDetail",

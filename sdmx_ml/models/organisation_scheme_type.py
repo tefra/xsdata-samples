@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.item_type import (
     Agency,
@@ -21,7 +21,7 @@ class OrganisationSchemeType(OrganisationSchemeBaseType):
     OrganisationSchemeType describes the structure of an organisation scheme.
     """
 
-    choice_1: Tuple[
+    choice_1: tuple[
         Union[
             OrganisationUnit,
             MetadataProvider,

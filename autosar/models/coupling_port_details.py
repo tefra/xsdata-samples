@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .coupling_port_fifo import CouplingPortFifo
 from .coupling_port_rate_policy import CouplingPortRatePolicy
@@ -126,7 +126,7 @@ class CouplingPortDetails:
 
     @dataclass
     class CouplingPortStructuralElements:
-        coupling_port_fifo: List[CouplingPortFifo] = field(
+        coupling_port_fifo: list[CouplingPortFifo] = field(
             default_factory=list,
             metadata={
                 "name": "COUPLING-PORT-FIFO",
@@ -134,7 +134,7 @@ class CouplingPortDetails:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        coupling_port_scheduler: List[CouplingPortScheduler] = field(
+        coupling_port_scheduler: list[CouplingPortScheduler] = field(
             default_factory=list,
             metadata={
                 "name": "COUPLING-PORT-SCHEDULER",
@@ -142,7 +142,7 @@ class CouplingPortDetails:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        coupling_port_shaper: List[CouplingPortShaper] = field(
+        coupling_port_shaper: list[CouplingPortShaper] = field(
             default_factory=list,
             metadata={
                 "name": "COUPLING-PORT-SHAPER",
@@ -153,7 +153,7 @@ class CouplingPortDetails:
 
     @dataclass
     class EthernetPriorityRegenerations:
-        ethernet_priority_regeneration: List[EthernetPriorityRegeneration] = (
+        ethernet_priority_regeneration: list[EthernetPriorityRegeneration] = (
             field(
                 default_factory=list,
                 metadata={
@@ -167,7 +167,7 @@ class CouplingPortDetails:
 
     @dataclass
     class EthernetTrafficClassAssignments:
-        coupling_port_traffic_class_assignment: List[
+        coupling_port_traffic_class_assignment: list[
             CouplingPortTrafficClassAssignment
         ] = field(
             default_factory=list,
@@ -192,7 +192,7 @@ class CouplingPortDetails:
 
     @dataclass
     class RatePolicys:
-        coupling_port_rate_policy: List[CouplingPortRatePolicy] = field(
+        coupling_port_rate_policy: list[CouplingPortRatePolicy] = field(
             default_factory=list,
             metadata={
                 "name": "COUPLING-PORT-RATE-POLICY",

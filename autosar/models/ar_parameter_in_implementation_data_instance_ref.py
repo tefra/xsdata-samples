@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .implementation_data_type_element_subtypes_enum import (
     ImplementationDataTypeElementSubtypesEnum,
@@ -109,7 +109,7 @@ class ArParameterInImplementationDataInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRefs:
-        context_data_prototype_ref: List[
+        context_data_prototype_ref: list[
             "ArParameterInImplementationDataInstanceRef.ContextDataPrototypeRefs.ContextDataPrototypeRef"
         ] = field(
             default_factory=list,

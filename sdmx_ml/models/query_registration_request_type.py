@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.cube_region_type import CubeRegionType
 from sdmx_ml.models.data_key_set_type import DataKeySetType
@@ -104,7 +104,7 @@ class QueryRegistrationRequestType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
         },
     )
-    data_key_set_or_cube_region_or_metadata_target_region: Tuple[
+    data_key_set_or_cube_region_or_metadata_target_region: tuple[
         Union[DataKeySetType, CubeRegionType, MetadataTargetRegionType], ...
     ] = field(
         default_factory=tuple,

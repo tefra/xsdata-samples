@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_area_descriptor import (
@@ -19,7 +19,7 @@ class TpegNamedOnlyArea(TpegAreaLocation):
     :ivar tpeg_named_only_area_extension:
     """
 
-    name: List[TpegAreaDescriptor] = field(
+    name: list[TpegAreaDescriptor] = field(
         default_factory=list,
         metadata={
             "type": "Element",

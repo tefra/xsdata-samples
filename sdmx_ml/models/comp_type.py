@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.value_type import ValueType
@@ -29,7 +29,7 @@ class CompType(AnnotableType):
     the values allowed by the component.
     """
 
-    value: Tuple[ValueType, ...] = field(
+    value: tuple[ValueType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Value",

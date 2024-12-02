@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -25,7 +25,7 @@ class CoctMt120104UvAuthor:
     class Meta:
         name = "COCT_MT120104UV.Author"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -41,7 +41,7 @@ class CoctMt120104UvAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -88,7 +88,7 @@ class CoctMt120104UvObservationDx:
     class Meta:
         name = "COCT_MT120104UV.ObservationDx"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -104,7 +104,7 @@ class CoctMt120104UvObservationDx:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -160,7 +160,7 @@ class CoctMt120104UvObservationDx:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: List[CoctMt120104UvAuthor] = field(
+    author: list[CoctMt120104UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .limit import Limit
 from .monotony_enum import MonotonyEnum
@@ -120,7 +120,7 @@ class PhysConstrs:
 
     @dataclass
     class ScaleConstrs:
-        scale_constr: List[ScaleConstr] = field(
+        scale_constr: list[ScaleConstr] = field(
             default_factory=list,
             metadata={
                 "name": "SCALE-CONSTR",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.cube_key_value_type import CubeKeyValueType
 from sdmx_ml.models.member_selection_type import MemberSelectionType
@@ -17,7 +17,7 @@ class CubeRegionKeyType(MemberSelectionType):
     represented as time, and time range can be specified.
     """
 
-    value_or_time_range: Tuple[
+    value_or_time_range: tuple[
         Union[CubeKeyValueType, TimeRangeValueType], ...
     ] = field(
         default_factory=tuple,

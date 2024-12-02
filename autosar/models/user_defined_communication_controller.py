@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -197,7 +197,7 @@ class UserDefinedCommunicationController:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -208,7 +208,7 @@ class UserDefinedCommunicationController:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -219,7 +219,7 @@ class UserDefinedCommunicationController:
 
     @dataclass
     class UserDefinedCommunicationControllerVariants:
-        user_defined_communication_controller_conditional: List[
+        user_defined_communication_controller_conditional: list[
             UserDefinedCommunicationControllerConditional
         ] = field(
             default_factory=list,

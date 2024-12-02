@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.sourcing_create import AttributeName
 from xcbl.models.sourcing_result import (
@@ -784,7 +784,7 @@ class AttributeType:
             "type": "Attribute",
         },
     )
-    enumerated_value: List[EnumeratedValue] = field(
+    enumerated_value: list[EnumeratedValue] = field(
         default_factory=list,
         metadata={
             "name": "EnumeratedValue",
@@ -905,7 +905,7 @@ class ExternalItemRef:
 
 @dataclass(kw_only=True)
 class ParentCategoryRefList:
-    category_idref: List[CategoryIdref] = field(
+    category_idref: list[CategoryIdref] = field(
         default_factory=list,
         metadata={
             "name": "CategoryIDRef",
@@ -958,14 +958,14 @@ class ProductAttachment:
             "type": "Element",
         },
     )
-    short_description: List[ShortDescription] = field(
+    short_description: list[ShortDescription] = field(
         default_factory=list,
         metadata={
             "name": "ShortDescription",
             "type": "Element",
         },
     )
-    long_description: List[LongDescription] = field(
+    long_description: list[LongDescription] = field(
         default_factory=list,
         metadata={
             "name": "LongDescription",
@@ -1036,7 +1036,7 @@ class RelatedProduct:
 
 @dataclass(kw_only=True)
 class SchemaCategoryRefList:
-    category_idref: List[CategoryIdref] = field(
+    category_idref: list[CategoryIdref] = field(
         default_factory=list,
         metadata={
             "name": "CategoryIDRef",
@@ -1176,7 +1176,7 @@ class Partner:
             "type": "Element",
         },
     )
-    partner_relationship: List[PartnerRelationship] = field(
+    partner_relationship: list[PartnerRelationship] = field(
         default_factory=list,
         metadata={
             "name": "PartnerRelationship",
@@ -1321,7 +1321,7 @@ class SupplierAccount:
             "type": "Element",
         },
     )
-    price_catalog_idref: List[PriceCatalogIdref] = field(
+    price_catalog_idref: list[PriceCatalogIdref] = field(
         default_factory=list,
         metadata={
             "name": "PriceCatalogIDRef",
@@ -1339,7 +1339,7 @@ class CategoryAttribute:
             "required": True,
         }
     )
-    attribute_name: List[AttributeName] = field(
+    attribute_name: list[AttributeName] = field(
         default_factory=list,
         metadata={
             "name": "AttributeName",
@@ -1371,7 +1371,7 @@ class CategoryAttribute:
 
 @dataclass(kw_only=True)
 class ListOfPartners:
-    partner: List[Partner] = field(
+    partner: list[Partner] = field(
         default_factory=list,
         metadata={
             "name": "Partner",
@@ -1397,7 +1397,7 @@ class ObjectAttribute:
             "type": "Element",
         },
     )
-    attribute_value: List[AttributeValue] = field(
+    attribute_value: list[AttributeValue] = field(
         default_factory=list,
         metadata={
             "name": "AttributeValue",
@@ -1422,7 +1422,7 @@ class Pricing:
             "required": True,
         }
     )
-    product_price: List[ProductPrice] = field(
+    product_price: list[ProductPrice] = field(
         default_factory=list,
         metadata={
             "name": "ProductPrice",
@@ -1433,7 +1433,7 @@ class Pricing:
 
 @dataclass(kw_only=True)
 class PricingInformation:
-    price_catalog: List[PriceCatalog] = field(
+    price_catalog: list[PriceCatalog] = field(
         default_factory=list,
         metadata={
             "name": "PriceCatalog",
@@ -1494,7 +1494,7 @@ class ProductVendorData:
             "type": "Element",
         },
     )
-    product_price: List[ProductPrice] = field(
+    product_price: list[ProductPrice] = field(
         default_factory=list,
         metadata={
             "name": "ProductPrice",
@@ -1505,7 +1505,7 @@ class ProductVendorData:
 
 @dataclass(kw_only=True)
 class SupplierAccountInformation:
-    supplier_account: List[SupplierAccount] = field(
+    supplier_account: list[SupplierAccount] = field(
         default_factory=list,
         metadata={
             "name": "SupplierAccount",
@@ -1636,21 +1636,21 @@ class CatalogHeader:
             "type": "Element",
         },
     )
-    short_description: List[ShortDescription] = field(
+    short_description: list[ShortDescription] = field(
         default_factory=list,
         metadata={
             "name": "ShortDescription",
             "type": "Element",
         },
     )
-    long_description: List[LongDescription] = field(
+    long_description: list[LongDescription] = field(
         default_factory=list,
         metadata={
             "name": "LongDescription",
             "type": "Element",
         },
     )
-    object_attribute: List[ObjectAttribute] = field(
+    object_attribute: list[ObjectAttribute] = field(
         default_factory=list,
         metadata={
             "name": "ObjectAttribute",
@@ -1669,7 +1669,7 @@ class Product:
             "required": True,
         },
     )
-    schema_category_ref: List[str] = field(
+    schema_category_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SchemaCategoryRef",
@@ -1712,7 +1712,7 @@ class Product:
             "type": "Element",
         },
     )
-    external_item_ref: List[ExternalItemRef] = field(
+    external_item_ref: list[ExternalItemRef] = field(
         default_factory=list,
         metadata={
             "name": "ExternalItemRef",
@@ -1726,7 +1726,7 @@ class Product:
             "type": "Element",
         },
     )
-    product_name: List[ProductName] = field(
+    product_name: list[ProductName] = field(
         default_factory=list,
         metadata={
             "name": "ProductName",
@@ -1819,63 +1819,63 @@ class Product:
             "type": "Element",
         },
     )
-    external_category: List[ExternalCategory] = field(
+    external_category: list[ExternalCategory] = field(
         default_factory=list,
         metadata={
             "name": "ExternalCategory",
             "type": "Element",
         },
     )
-    short_description: List[ShortDescription] = field(
+    short_description: list[ShortDescription] = field(
         default_factory=list,
         metadata={
             "name": "ShortDescription",
             "type": "Element",
         },
     )
-    long_description: List[LongDescription] = field(
+    long_description: list[LongDescription] = field(
         default_factory=list,
         metadata={
             "name": "LongDescription",
             "type": "Element",
         },
     )
-    catalog_contract: List[CatalogContract] = field(
+    catalog_contract: list[CatalogContract] = field(
         default_factory=list,
         metadata={
             "name": "CatalogContract",
             "type": "Element",
         },
     )
-    product_price: List[ProductPrice] = field(
+    product_price: list[ProductPrice] = field(
         default_factory=list,
         metadata={
             "name": "ProductPrice",
             "type": "Element",
         },
     )
-    product_vendor_data: List[ProductVendorData] = field(
+    product_vendor_data: list[ProductVendorData] = field(
         default_factory=list,
         metadata={
             "name": "ProductVendorData",
             "type": "Element",
         },
     )
-    product_attachment: List[ProductAttachment] = field(
+    product_attachment: list[ProductAttachment] = field(
         default_factory=list,
         metadata={
             "name": "ProductAttachment",
             "type": "Element",
         },
     )
-    related_product: List[RelatedProduct] = field(
+    related_product: list[RelatedProduct] = field(
         default_factory=list,
         metadata={
             "name": "RelatedProduct",
             "type": "Element",
         },
     )
-    object_attribute: List[ObjectAttribute] = field(
+    object_attribute: list[ObjectAttribute] = field(
         default_factory=list,
         metadata={
             "name": "ObjectAttribute",
@@ -1893,7 +1893,7 @@ class SchemaCategory:
             "type": "Attribute",
         },
     )
-    parent_category_ref: List[str] = field(
+    parent_category_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "ParentCategoryRef",
@@ -1915,28 +1915,28 @@ class SchemaCategory:
             "type": "Element",
         },
     )
-    category_name: List[CategoryName] = field(
+    category_name: list[CategoryName] = field(
         default_factory=list,
         metadata={
             "name": "CategoryName",
             "type": "Element",
         },
     )
-    short_description: List[ShortDescription] = field(
+    short_description: list[ShortDescription] = field(
         default_factory=list,
         metadata={
             "name": "ShortDescription",
             "type": "Element",
         },
     )
-    long_description: List[LongDescription] = field(
+    long_description: list[LongDescription] = field(
         default_factory=list,
         metadata={
             "name": "LongDescription",
             "type": "Element",
         },
     )
-    category_attribute: List[CategoryAttribute] = field(
+    category_attribute: list[CategoryAttribute] = field(
         default_factory=list,
         metadata={
             "name": "CategoryAttribute",
@@ -1947,14 +1947,14 @@ class SchemaCategory:
 
 @dataclass(kw_only=True)
 class CatalogData:
-    product: List[Product] = field(
+    product: list[Product] = field(
         default_factory=list,
         metadata={
             "name": "Product",
             "type": "Element",
         },
     )
-    pricing: List[Pricing] = field(
+    pricing: list[Pricing] = field(
         default_factory=list,
         metadata={
             "name": "Pricing",
@@ -2001,14 +2001,14 @@ class CatalogSchema:
             "type": "Element",
         },
     )
-    short_description: List[ShortDescription] = field(
+    short_description: list[ShortDescription] = field(
         default_factory=list,
         metadata={
             "name": "ShortDescription",
             "type": "Element",
         },
     )
-    long_description: List[LongDescription] = field(
+    long_description: list[LongDescription] = field(
         default_factory=list,
         metadata={
             "name": "LongDescription",
@@ -2036,7 +2036,7 @@ class CatalogSchema:
             "type": "Element",
         },
     )
-    schema_category: List[SchemaCategory] = field(
+    schema_category: list[SchemaCategory] = field(
         default_factory=list,
         metadata={
             "name": "SchemaCategory",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -124,7 +124,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -196,7 +196,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoice_period: Tuple[InvoicePeriod, ...] = field(
+    invoice_period: tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
@@ -212,7 +212,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -222,7 +222,7 @@ class RemittanceAdviceType:
             },
         )
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -264,7 +264,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -272,7 +272,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    remittance_advice_line: Tuple[RemittanceAdviceLine, ...] = field(
+    remittance_advice_line: tuple[RemittanceAdviceLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RemittanceAdviceLine",

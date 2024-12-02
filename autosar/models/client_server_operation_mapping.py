@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .client_server_operation_subtypes_enum import (
     ClientServerOperationSubtypesEnum,
@@ -100,7 +100,7 @@ class ClientServerOperationMapping:
 
     @dataclass
     class ArgumentMappings:
-        data_prototype_mapping: List[DataPrototypeMapping] = field(
+        data_prototype_mapping: list[DataPrototypeMapping] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-PROTOTYPE-MAPPING",

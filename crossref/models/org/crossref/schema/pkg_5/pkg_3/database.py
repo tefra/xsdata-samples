@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_list import (
     ComponentList,
@@ -30,7 +30,7 @@ class Database:
             "required": True,
         },
     )
-    dataset: List[Dataset] = field(
+    dataset: list[Dataset] = field(
         default_factory=list,
         metadata={
             "type": "Element",

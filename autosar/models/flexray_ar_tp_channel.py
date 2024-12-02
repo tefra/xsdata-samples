@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -407,7 +407,7 @@ class FlexrayArTpChannel:
 
     @dataclass
     class NPduRefs:
-        n_pdu_ref: List["FlexrayArTpChannel.NPduRefs.NPduRef"] = field(
+        n_pdu_ref: list["FlexrayArTpChannel.NPduRefs.NPduRef"] = field(
             default_factory=list,
             metadata={
                 "name": "N-PDU-REF",
@@ -429,7 +429,7 @@ class FlexrayArTpChannel:
 
     @dataclass
     class PduPools:
-        n_pdu: List[NPdu] = field(
+        n_pdu: list[NPdu] = field(
             default_factory=list,
             metadata={
                 "name": "N-PDU",
@@ -440,7 +440,7 @@ class FlexrayArTpChannel:
 
     @dataclass
     class TpConnections:
-        flexray_ar_tp_connection: List[FlexrayArTpConnection] = field(
+        flexray_ar_tp_connection: list[FlexrayArTpConnection] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-AR-TP-CONNECTION",

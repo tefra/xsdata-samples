@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geography_type import (
     GeographyType,
@@ -15,7 +14,7 @@ class ExpansiveStructureTypeGeographicLocations:
     class Meta:
         global_type = False
 
-    geographic_location: List[GeographyType] = field(
+    geographic_location: list[GeographyType] = field(
         default_factory=list,
         metadata={
             "name": "GeographicLocation",

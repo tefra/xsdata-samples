@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -211,7 +211,7 @@ class CpSoftwareClusterResourcePool:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -222,7 +222,7 @@ class CpSoftwareClusterResourcePool:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -233,7 +233,7 @@ class CpSoftwareClusterResourcePool:
 
     @dataclass
     class EcuScopeRefs:
-        ecu_scope_ref: List[
+        ecu_scope_ref: list[
             "CpSoftwareClusterResourcePool.EcuScopeRefs.EcuScopeRef"
         ] = field(
             default_factory=list,
@@ -257,7 +257,7 @@ class CpSoftwareClusterResourcePool:
 
     @dataclass
     class Resources:
-        cp_software_cluster_communication_resource: List[
+        cp_software_cluster_communication_resource: list[
             CpSoftwareClusterCommunicationResource
         ] = field(
             default_factory=list,
@@ -267,7 +267,7 @@ class CpSoftwareClusterResourcePool:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        cp_software_cluster_service_resource: List[
+        cp_software_cluster_service_resource: list[
             CpSoftwareClusterServiceResource
         ] = field(
             default_factory=list,

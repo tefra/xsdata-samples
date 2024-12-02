@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.auction_create_response import (
     AuctionCreateHeader,
@@ -89,7 +89,7 @@ class AuctionItemComponent:
 
 @dataclass(kw_only=True)
 class ListOfAuctionCreateDetail:
-    auction_create_detail: List[AuctionCreateDetail] = field(
+    auction_create_detail: list[AuctionCreateDetail] = field(
         default_factory=list,
         metadata={
             "name": "AuctionCreateDetail",
@@ -126,7 +126,7 @@ class AuctionCreate:
 
 @dataclass(kw_only=True)
 class ListOfAuctionItemComponents:
-    auction_item_component: List[AuctionItemComponent] = field(
+    auction_item_component: list[AuctionItemComponent] = field(
         default_factory=list,
         metadata={
             "name": "AuctionItemComponent",

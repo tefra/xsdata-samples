@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .documentation import Documentation
@@ -12,7 +12,7 @@ class TExtension:
     class Meta:
         name = "tExtension"
 
-    documentation: List[Documentation] = field(
+    documentation: list[Documentation] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_factor_type import (
     PremiumFactorType,
@@ -15,7 +14,7 @@ class ProgramGbotypePremiumFactors:
     class Meta:
         global_type = False
 
-    premium_factor: List[PremiumFactorType] = field(
+    premium_factor: list[PremiumFactorType] = field(
         default_factory=list,
         metadata={
             "name": "PremiumFactor",

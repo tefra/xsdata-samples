@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.claim_type import (
     ClaimType,
@@ -15,7 +14,7 @@ class CoverGbotypeClaims:
     class Meta:
         global_type = False
 
-    claim: List[ClaimType] = field(
+    claim: list[ClaimType] = field(
         default_factory=list,
         metadata={
             "name": "Claim",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.payment_card_brands_enum import (
@@ -27,7 +27,7 @@ class AcceptedPaymentCards:
     :ivar accepted_payment_cards_extension:
     """
 
-    payment_cards: List[PaymentCardTypesEnum] = field(
+    payment_cards: list[PaymentCardTypesEnum] = field(
         default_factory=list,
         metadata={
             "name": "paymentCards",
@@ -36,7 +36,7 @@ class AcceptedPaymentCards:
             "min_occurs": 1,
         },
     )
-    other_payment_cards: List[str] = field(
+    other_payment_cards: list[str] = field(
         default_factory=list,
         metadata={
             "name": "otherPaymentCards",
@@ -45,7 +45,7 @@ class AcceptedPaymentCards:
             "max_length": 1024,
         },
     )
-    payment_card_brands: List[PaymentCardBrandsEnum] = field(
+    payment_card_brands: list[PaymentCardBrandsEnum] = field(
         default_factory=list,
         metadata={
             "name": "paymentCardBrands",
@@ -53,7 +53,7 @@ class AcceptedPaymentCards:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    other_payment_card_brands: List[str] = field(
+    other_payment_card_brands: list[str] = field(
         default_factory=list,
         metadata={
             "name": "otherPaymentCardBrands",

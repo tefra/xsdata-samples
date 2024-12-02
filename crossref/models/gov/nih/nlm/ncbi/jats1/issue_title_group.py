@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.issue_subtitle import IssueSubtitle
 from crossref.models.gov.nih.nlm.ncbi.jats1.issue_title import IssueTitle
@@ -29,14 +29,14 @@ class IssueTitleGroup:
             "required": True,
         },
     )
-    issue_subtitle: List[IssueSubtitle] = field(
+    issue_subtitle: list[IssueSubtitle] = field(
         default_factory=list,
         metadata={
             "name": "issue-subtitle",
             "type": "Element",
         },
     )
-    trans_title_group: List[TransTitleGroup] = field(
+    trans_title_group: list[TransTitleGroup] = field(
         default_factory=list,
         metadata={
             "name": "trans-title-group",

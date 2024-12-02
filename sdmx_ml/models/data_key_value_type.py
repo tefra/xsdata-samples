@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Tuple
+from typing import Any
 
 from sdmx_ml.models.member_selection_type import MemberSelectionType
 from sdmx_ml.models.simple_key_value_type import SimpleKeyValueType
@@ -33,7 +33,7 @@ class DataKeyValueType(MemberSelectionType):
             "type": "Ignore",
         },
     )
-    value: Tuple[SimpleKeyValueType, ...] = field(
+    value: tuple[SimpleKeyValueType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Value",

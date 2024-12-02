@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.group_of_people_involved import (
@@ -25,7 +25,7 @@ class GeneralObstruction(Obstruction):
     :ivar general_obstruction_extension:
     """
 
-    obstruction_type: List[ObstructionTypeEnum] = field(
+    obstruction_type: list[ObstructionTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "obstructionType",
@@ -34,7 +34,7 @@ class GeneralObstruction(Obstruction):
             "min_occurs": 1,
         },
     )
-    group_of_people_involved: List[GroupOfPeopleInvolved] = field(
+    group_of_people_involved: list[GroupOfPeopleInvolved] = field(
         default_factory=list,
         metadata={
             "name": "groupOfPeopleInvolved",

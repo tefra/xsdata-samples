@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .client_server_operation_subtypes_enum import (
     ClientServerOperationSubtypesEnum,
@@ -48,7 +48,7 @@ class RequiredMethodInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_component_prototype_ref: List[
+    context_component_prototype_ref: list[
         "RequiredMethodInExecutableInstanceRef.ContextComponentPrototypeRef"
     ] = field(
         default_factory=list,

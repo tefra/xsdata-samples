@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.footer_message_type import FooterMessageType
 
@@ -23,7 +22,7 @@ class FooterType:
         languages.
     """
 
-    message: Tuple[FooterMessageType, ...] = field(
+    message: tuple[FooterMessageType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Message",

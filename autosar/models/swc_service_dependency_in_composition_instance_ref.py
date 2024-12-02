@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .composition_sw_component_type_subtypes_enum import (
     CompositionSwComponentTypeSubtypesEnum,
@@ -61,7 +61,7 @@ class SwcServiceDependencyInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_sw_component_prototype_ref: List[
+    context_sw_component_prototype_ref: list[
         "SwcServiceDependencyInCompositionInstanceRef.ContextSwComponentPrototypeRef"
     ] = field(
         default_factory=list,

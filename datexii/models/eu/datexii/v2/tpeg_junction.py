@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
@@ -48,7 +48,7 @@ class TpegJunction(TpegPoint):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    ilc: List[TpegIlcPointDescriptor] = field(
+    ilc: list[TpegIlcPointDescriptor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -57,7 +57,7 @@ class TpegJunction(TpegPoint):
             "max_occurs": 3,
         },
     )
-    other_name: List[TpegOtherPointDescriptor] = field(
+    other_name: list[TpegOtherPointDescriptor] = field(
         default_factory=list,
         metadata={
             "name": "otherName",

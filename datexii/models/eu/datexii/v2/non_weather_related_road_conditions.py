@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.non_weather_related_road_condition_type_enum import (
@@ -21,7 +21,7 @@ class NonWeatherRelatedRoadConditions(RoadConditions):
     :ivar non_weather_related_road_conditions_extension:
     """
 
-    non_weather_related_road_condition_type: List[
+    non_weather_related_road_condition_type: list[
         NonWeatherRelatedRoadConditionTypeEnum
     ] = field(
         default_factory=list,

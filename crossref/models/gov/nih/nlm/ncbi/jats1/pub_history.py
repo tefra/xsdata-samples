@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.event import Event
 
@@ -16,7 +16,7 @@ class PubHistory:
         name = "pub-history"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    event: List[Event] = field(
+    event: list[Event] = field(
         default_factory=list,
         metadata={
             "type": "Element",

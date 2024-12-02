@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -214,7 +214,7 @@ class BulkNvDataDescriptor:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -225,7 +225,7 @@ class BulkNvDataDescriptor:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -236,7 +236,7 @@ class BulkNvDataDescriptor:
 
     @dataclass
     class NvBlockDataMappings:
-        nv_block_data_mapping: List[NvBlockDataMapping] = field(
+        nv_block_data_mapping: list[NvBlockDataMapping] = field(
             default_factory=list,
             metadata={
                 "name": "NV-BLOCK-DATA-MAPPING",

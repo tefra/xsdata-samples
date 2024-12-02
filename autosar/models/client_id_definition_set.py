@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -195,7 +195,7 @@ class ClientIdDefinitionSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -206,7 +206,7 @@ class ClientIdDefinitionSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -217,7 +217,7 @@ class ClientIdDefinitionSet:
 
     @dataclass
     class ClientIdDefinitions:
-        client_id_definition: List[ClientIdDefinition] = field(
+        client_id_definition: list[ClientIdDefinition] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-ID-DEFINITION",

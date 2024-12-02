@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.registration_status_type import RegistrationStatusType
 
@@ -21,7 +20,7 @@ class SubmitRegistrationsResponseType:
         submission and provides status information about the request.
     """
 
-    registration_status: Tuple[RegistrationStatusType, ...] = field(
+    registration_status: tuple[RegistrationStatusType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RegistrationStatus",

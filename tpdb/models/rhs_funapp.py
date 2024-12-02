@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from tpdb.models.name import Name
-from tpdb.models.type_mod import TypeType
+from tpdb.models.type_mod import Type
 from tpdb.models.var import Var
 
 
@@ -18,7 +18,7 @@ class RhsFunapp:
             "required": True,
         },
     )
-    arg: List["RhsFunappArg"] = field(
+    arg: list["RhsFunappArg"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -40,7 +40,7 @@ class RhsLambda:
     class Meta:
         global_type = False
 
-    var: List[Var] = field(
+    var: list[Var] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -48,7 +48,7 @@ class RhsLambda:
             "max_occurs": 2,
         },
     )
-    type_value: Optional[TypeType] = field(
+    type_value: Optional[Type] = field(
         default=None,
         metadata={
             "name": "type",
@@ -90,7 +90,7 @@ class RhsApplication:
     class Meta:
         global_type = False
 
-    funapp: List[RhsFunapp] = field(
+    funapp: list[RhsFunapp] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -99,7 +99,7 @@ class RhsApplication:
             "sequence": 1,
         },
     )
-    var: List[Var] = field(
+    var: list[Var] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -108,7 +108,7 @@ class RhsApplication:
             "sequence": 1,
         },
     )
-    lambda_value: List[RhsLambda] = field(
+    lambda_value: list[RhsLambda] = field(
         default_factory=list,
         metadata={
             "name": "lambda",
@@ -118,7 +118,7 @@ class RhsApplication:
             "sequence": 1,
         },
     )
-    application: List["RhsApplication"] = field(
+    application: list["RhsApplication"] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .io_binding import IoBinding
@@ -14,7 +14,7 @@ class TCallableElement(TRootElement):
     class Meta:
         name = "tCallableElement"
 
-    supported_interface_ref: List[QName] = field(
+    supported_interface_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "supportedInterfaceRef",
@@ -30,7 +30,7 @@ class TCallableElement(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    io_binding: List[IoBinding] = field(
+    io_binding: list[IoBinding] = field(
         default_factory=list,
         metadata={
             "name": "ioBinding",

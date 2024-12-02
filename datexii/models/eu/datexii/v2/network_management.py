@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.compliance_option_enum import (
     ComplianceOptionEnum,
@@ -47,7 +47,7 @@ class NetworkManagement(OperatorAction):
             "required": True,
         },
     )
-    applicable_for_traffic_direction: List[DirectionEnum] = field(
+    applicable_for_traffic_direction: list[DirectionEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableForTrafficDirection",
@@ -55,7 +55,7 @@ class NetworkManagement(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    applicable_for_traffic_type: List[TrafficTypeEnum] = field(
+    applicable_for_traffic_type: list[TrafficTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableForTrafficType",
@@ -63,7 +63,7 @@ class NetworkManagement(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    places_at_which_applicable: List[PlacesEnum] = field(
+    places_at_which_applicable: list[PlacesEnum] = field(
         default_factory=list,
         metadata={
             "name": "placesAtWhichApplicable",
@@ -79,7 +79,7 @@ class NetworkManagement(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    for_vehicles_with_characteristics_of: List[VehicleCharacteristics] = field(
+    for_vehicles_with_characteristics_of: list[VehicleCharacteristics] = field(
         default_factory=list,
         metadata={
             "name": "forVehiclesWithCharacteristicsOf",

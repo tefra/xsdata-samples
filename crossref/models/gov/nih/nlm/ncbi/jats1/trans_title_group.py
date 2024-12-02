@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import TransTitle
 from crossref.models.gov.nih.nlm.ncbi.jats1.trans_subtitle import TransSubtitle
@@ -26,7 +26,7 @@ class TransTitleGroup:
             "required": True,
         },
     )
-    trans_subtitle: List[TransSubtitle] = field(
+    trans_subtitle: list[TransSubtitle] = field(
         default_factory=list,
         metadata={
             "name": "trans-subtitle",

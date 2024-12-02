@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .dynamic_part_alternative import DynamicPartAlternative
@@ -82,7 +82,7 @@ class DynamicPart:
 
     @dataclass
     class SegmentPositions:
-        segment_position: List[SegmentPosition] = field(
+        segment_position: list[SegmentPosition] = field(
             default_factory=list,
             metadata={
                 "name": "SEGMENT-POSITION",
@@ -93,7 +93,7 @@ class DynamicPart:
 
     @dataclass
     class DynamicPartAlternatives:
-        dynamic_part_alternative: List[DynamicPartAlternative] = field(
+        dynamic_part_alternative: list[DynamicPartAlternative] = field(
             default_factory=list,
             metadata={
                 "name": "DYNAMIC-PART-ALTERNATIVE",

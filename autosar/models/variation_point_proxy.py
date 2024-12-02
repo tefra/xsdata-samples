@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -268,7 +268,7 @@ class VariationPointProxy:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -279,7 +279,7 @@ class VariationPointProxy:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -312,7 +312,7 @@ class VariationPointProxy:
 
     @dataclass
     class PostBuildVariantConditions:
-        post_build_variant_condition: List[PostBuildVariantCondition] = field(
+        post_build_variant_condition: list[PostBuildVariantCondition] = field(
             default_factory=list,
             metadata={
                 "name": "POST-BUILD-VARIANT-CONDITION",

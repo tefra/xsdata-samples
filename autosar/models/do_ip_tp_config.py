@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -219,7 +219,7 @@ class DoIpTpConfig:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -230,7 +230,7 @@ class DoIpTpConfig:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -252,7 +252,7 @@ class DoIpTpConfig:
 
     @dataclass
     class DoIpLogicAddresss:
-        do_ip_logic_address: List[DoIpLogicAddress] = field(
+        do_ip_logic_address: list[DoIpLogicAddress] = field(
             default_factory=list,
             metadata={
                 "name": "DO-IP-LOGIC-ADDRESS",
@@ -263,7 +263,7 @@ class DoIpTpConfig:
 
     @dataclass
     class TpConnections:
-        do_ip_tp_connection: List[DoIpTpConnection] = field(
+        do_ip_tp_connection: list[DoIpTpConnection] = field(
             default_factory=list,
             metadata={
                 "name": "DO-IP-TP-CONNECTION",

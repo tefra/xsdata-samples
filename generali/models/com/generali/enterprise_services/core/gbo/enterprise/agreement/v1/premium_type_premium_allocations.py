@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.premium_allocation_type import (
     PremiumAllocationType,
@@ -15,7 +14,7 @@ class PremiumTypePremiumAllocations:
     class Meta:
         global_type = False
 
-    premium_allocation: List[PremiumAllocationType] = field(
+    premium_allocation: list[PremiumAllocationType] = field(
         default_factory=list,
         metadata={
             "name": "PremiumAllocation",

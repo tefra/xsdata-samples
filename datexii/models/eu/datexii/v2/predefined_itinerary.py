@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
@@ -34,7 +34,7 @@ class PredefinedItinerary(PredefinedLocationContainer):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    predefined_location: List[PredefinedItineraryIndexPredefinedLocation] = (
+    predefined_location: list[PredefinedItineraryIndexPredefinedLocation] = (
         field(
             default_factory=list,
             metadata={

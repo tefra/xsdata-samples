@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .diagnostic_env_data_condition import DiagnosticEnvDataCondition
 from .diagnostic_env_mode_condition import DiagnosticEnvModeCondition
@@ -87,7 +87,7 @@ class DiagnosticEnvConditionFormula:
 
     @dataclass
     class Parts:
-        diagnostic_env_condition_formula: List[
+        diagnostic_env_condition_formula: list[
             "DiagnosticEnvConditionFormula"
         ] = field(
             default_factory=list,
@@ -97,7 +97,7 @@ class DiagnosticEnvConditionFormula:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_env_data_condition: List[DiagnosticEnvDataCondition] = (
+        diagnostic_env_data_condition: list[DiagnosticEnvDataCondition] = (
             field(
                 default_factory=list,
                 metadata={
@@ -107,7 +107,7 @@ class DiagnosticEnvConditionFormula:
                 },
             )
         )
-        diagnostic_env_mode_condition: List[DiagnosticEnvModeCondition] = (
+        diagnostic_env_mode_condition: list[DiagnosticEnvModeCondition] = (
             field(
                 default_factory=list,
                 metadata={

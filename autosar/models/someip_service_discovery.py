@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
 from .positive_integer import PositiveInteger
@@ -121,7 +121,7 @@ class SomeipServiceDiscovery:
 
     @dataclass
     class UnicastSecureComPropsRefs:
-        unicast_secure_com_props_ref: List[
+        unicast_secure_com_props_ref: list[
             "SomeipServiceDiscovery.UnicastSecureComPropsRefs.UnicastSecureComPropsRef"
         ] = field(
             default_factory=list,

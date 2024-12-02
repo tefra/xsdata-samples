@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.malignmark import Malignmark
 from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph import Mglyph
@@ -36,7 +36,7 @@ class Ms:
             "type": "Attribute",
         },
     )
-    class_value: List[str] = field(
+    class_value: list[str] = field(
         default_factory=list,
         metadata={
             "name": "class",
@@ -62,7 +62,7 @@ class Ms:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -153,7 +153,7 @@ class Ms:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

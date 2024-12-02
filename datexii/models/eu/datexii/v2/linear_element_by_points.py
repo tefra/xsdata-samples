@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.intermediate_point_on_linear_element import (
@@ -38,7 +38,7 @@ class LinearElementByPoints(LinearElement):
             "required": True,
         },
     )
-    intermediate_point_on_linear_element: List[
+    intermediate_point_on_linear_element: list[
         IntermediatePointOnLinearElement
     ] = field(
         default_factory=list,

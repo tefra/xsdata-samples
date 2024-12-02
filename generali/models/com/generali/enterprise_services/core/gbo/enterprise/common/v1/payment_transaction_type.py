@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
@@ -34,7 +34,7 @@ class PaymentTransactionType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    amount: List[AmountType] = field(
+    amount: list[AmountType] = field(
         default_factory=list,
         metadata={
             "name": "Amount",

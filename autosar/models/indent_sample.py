@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .item_label_pos_enum_simple import ItemLabelPosEnumSimple
 from .l_overview_paragraph import LOverviewParagraph
@@ -34,7 +34,7 @@ class IndentSample:
     class Meta:
         name = "INDENT-SAMPLE"
 
-    l_2: List[LOverviewParagraph] = field(
+    l_2: list[LOverviewParagraph] = field(
         default_factory=list,
         metadata={
             "name": "L-2",

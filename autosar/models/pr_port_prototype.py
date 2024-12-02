@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -343,7 +343,7 @@ class PrPortPrototype:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -354,7 +354,7 @@ class PrPortPrototype:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -365,7 +365,7 @@ class PrPortPrototype:
 
     @dataclass
     class ClientServerAnnotations:
-        client_server_annotation: List[ClientServerAnnotation] = field(
+        client_server_annotation: list[ClientServerAnnotation] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-ANNOTATION",
@@ -376,7 +376,7 @@ class PrPortPrototype:
 
     @dataclass
     class IoHwAbstractionServerAnnotations:
-        io_hw_abstraction_server_annotation: List[
+        io_hw_abstraction_server_annotation: list[
             IoHwAbstractionServerAnnotation
         ] = field(
             default_factory=list,
@@ -389,7 +389,7 @@ class PrPortPrototype:
 
     @dataclass
     class ModePortAnnotations:
-        mode_port_annotation: List[ModePortAnnotation] = field(
+        mode_port_annotation: list[ModePortAnnotation] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-PORT-ANNOTATION",
@@ -400,7 +400,7 @@ class PrPortPrototype:
 
     @dataclass
     class NvDataPortAnnotations:
-        nv_data_port_annotation: List[NvDataPortAnnotation] = field(
+        nv_data_port_annotation: list[NvDataPortAnnotation] = field(
             default_factory=list,
             metadata={
                 "name": "NV-DATA-PORT-ANNOTATION",
@@ -411,7 +411,7 @@ class PrPortPrototype:
 
     @dataclass
     class ParameterPortAnnotations:
-        parameter_port_annotation: List[ParameterPortAnnotation] = field(
+        parameter_port_annotation: list[ParameterPortAnnotation] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-PORT-ANNOTATION",
@@ -422,7 +422,7 @@ class PrPortPrototype:
 
     @dataclass
     class SenderReceiverAnnotations:
-        receiver_annotation: List[ReceiverAnnotation] = field(
+        receiver_annotation: list[ReceiverAnnotation] = field(
             default_factory=list,
             metadata={
                 "name": "RECEIVER-ANNOTATION",
@@ -430,7 +430,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sender_annotation: List[SenderAnnotation] = field(
+        sender_annotation: list[SenderAnnotation] = field(
             default_factory=list,
             metadata={
                 "name": "SENDER-ANNOTATION",
@@ -441,7 +441,7 @@ class PrPortPrototype:
 
     @dataclass
     class TriggerPortAnnotations:
-        trigger_port_annotation: List[TriggerPortAnnotation] = field(
+        trigger_port_annotation: list[TriggerPortAnnotation] = field(
             default_factory=list,
             metadata={
                 "name": "TRIGGER-PORT-ANNOTATION",
@@ -452,7 +452,7 @@ class PrPortPrototype:
 
     @dataclass
     class ProvidedComSpecs:
-        field_sender_com_spec: List[FieldSenderComSpec] = field(
+        field_sender_com_spec: list[FieldSenderComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "FIELD-SENDER-COM-SPEC",
@@ -460,7 +460,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mode_switch_sender_com_spec: List[ModeSwitchSenderComSpec] = field(
+        mode_switch_sender_com_spec: list[ModeSwitchSenderComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-SWITCH-SENDER-COM-SPEC",
@@ -468,7 +468,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nonqueued_sender_com_spec: List[NonqueuedSenderComSpec] = field(
+        nonqueued_sender_com_spec: list[NonqueuedSenderComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "NONQUEUED-SENDER-COM-SPEC",
@@ -476,7 +476,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nv_provide_com_spec: List[NvProvideComSpec] = field(
+        nv_provide_com_spec: list[NvProvideComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "NV-PROVIDE-COM-SPEC",
@@ -484,7 +484,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        parameter_provide_com_spec: List[ParameterProvideComSpec] = field(
+        parameter_provide_com_spec: list[ParameterProvideComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-PROVIDE-COM-SPEC",
@@ -492,7 +492,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        queued_sender_com_spec: List[QueuedSenderComSpec] = field(
+        queued_sender_com_spec: list[QueuedSenderComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "QUEUED-SENDER-COM-SPEC",
@@ -500,7 +500,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        server_com_spec: List[ServerComSpec] = field(
+        server_com_spec: list[ServerComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "SERVER-COM-SPEC",
@@ -511,7 +511,7 @@ class PrPortPrototype:
 
     @dataclass
     class RequiredComSpecs:
-        client_com_spec: List[ClientComSpec] = field(
+        client_com_spec: list[ClientComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-COM-SPEC",
@@ -519,7 +519,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_r_port_com_spec: List[CryptoRPortComSpec] = field(
+        crypto_r_port_com_spec: list[CryptoRPortComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-R-PORT-COM-SPEC",
@@ -527,7 +527,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mode_switch_receiver_com_spec: List[ModeSwitchReceiverComSpec] = field(
+        mode_switch_receiver_com_spec: list[ModeSwitchReceiverComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-SWITCH-RECEIVER-COM-SPEC",
@@ -535,7 +535,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nonqueued_receiver_com_spec: List[NonqueuedReceiverComSpec] = field(
+        nonqueued_receiver_com_spec: list[NonqueuedReceiverComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "NONQUEUED-RECEIVER-COM-SPEC",
@@ -543,7 +543,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nv_require_com_spec: List[NvRequireComSpec] = field(
+        nv_require_com_spec: list[NvRequireComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "NV-REQUIRE-COM-SPEC",
@@ -551,7 +551,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        parameter_require_com_spec: List[ParameterRequireComSpec] = field(
+        parameter_require_com_spec: list[ParameterRequireComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-REQUIRE-COM-SPEC",
@@ -559,7 +559,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_data_required_com_spec: List[
+        persistency_data_required_com_spec: list[
             PersistencyDataRequiredComSpec
         ] = field(
             default_factory=list,
@@ -569,7 +569,7 @@ class PrPortPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        queued_receiver_com_spec: List[QueuedReceiverComSpec] = field(
+        queued_receiver_com_spec: list[QueuedReceiverComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "QUEUED-RECEIVER-COM-SPEC",

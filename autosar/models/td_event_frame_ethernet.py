@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -277,7 +277,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -288,7 +288,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -332,7 +332,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class TdHeaderIdFilters:
-        td_header_id_range: List[TdHeaderIdRange] = field(
+        td_header_id_range: list[TdHeaderIdRange] = field(
             default_factory=list,
             metadata={
                 "name": "TD-HEADER-ID-RANGE",
@@ -343,7 +343,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class TdPduTriggeringFilterRefs:
-        td_pdu_triggering_filter_ref: List[
+        td_pdu_triggering_filter_ref: list[
             "TdEventFrameEthernet.TdPduTriggeringFilterRefs.TdPduTriggeringFilterRef"
         ] = field(
             default_factory=list,

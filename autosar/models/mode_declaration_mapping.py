@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -193,7 +193,7 @@ class ModeDeclarationMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -204,7 +204,7 @@ class ModeDeclarationMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -215,7 +215,7 @@ class ModeDeclarationMapping:
 
     @dataclass
     class FirstModeRefs:
-        first_mode_ref: List[
+        first_mode_ref: list[
             "ModeDeclarationMapping.FirstModeRefs.FirstModeRef"
         ] = field(
             default_factory=list,

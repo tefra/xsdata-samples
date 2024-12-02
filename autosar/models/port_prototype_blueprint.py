@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -284,7 +284,7 @@ class PortPrototypeBlueprint:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -295,7 +295,7 @@ class PortPrototypeBlueprint:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -306,7 +306,7 @@ class PortPrototypeBlueprint:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -314,7 +314,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -324,7 +324,7 @@ class PortPrototypeBlueprint:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -335,7 +335,7 @@ class PortPrototypeBlueprint:
 
     @dataclass
     class InitValues:
-        port_prototype_blueprint_init_value: List[
+        port_prototype_blueprint_init_value: list[
             PortPrototypeBlueprintInitValue
         ] = field(
             default_factory=list,
@@ -359,7 +359,7 @@ class PortPrototypeBlueprint:
 
     @dataclass
     class ProvidedComSpecs:
-        field_sender_com_spec: List[FieldSenderComSpec] = field(
+        field_sender_com_spec: list[FieldSenderComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "FIELD-SENDER-COM-SPEC",
@@ -367,7 +367,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mode_switch_sender_com_spec: List[ModeSwitchSenderComSpec] = field(
+        mode_switch_sender_com_spec: list[ModeSwitchSenderComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-SWITCH-SENDER-COM-SPEC",
@@ -375,7 +375,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nonqueued_sender_com_spec: List[NonqueuedSenderComSpec] = field(
+        nonqueued_sender_com_spec: list[NonqueuedSenderComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "NONQUEUED-SENDER-COM-SPEC",
@@ -383,7 +383,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nv_provide_com_spec: List[NvProvideComSpec] = field(
+        nv_provide_com_spec: list[NvProvideComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "NV-PROVIDE-COM-SPEC",
@@ -391,7 +391,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        parameter_provide_com_spec: List[ParameterProvideComSpec] = field(
+        parameter_provide_com_spec: list[ParameterProvideComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-PROVIDE-COM-SPEC",
@@ -399,7 +399,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        queued_sender_com_spec: List[QueuedSenderComSpec] = field(
+        queued_sender_com_spec: list[QueuedSenderComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "QUEUED-SENDER-COM-SPEC",
@@ -407,7 +407,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        server_com_spec: List[ServerComSpec] = field(
+        server_com_spec: list[ServerComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "SERVER-COM-SPEC",
@@ -418,7 +418,7 @@ class PortPrototypeBlueprint:
 
     @dataclass
     class RequiredComSpecs:
-        client_com_spec: List[ClientComSpec] = field(
+        client_com_spec: list[ClientComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-COM-SPEC",
@@ -426,7 +426,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_r_port_com_spec: List[CryptoRPortComSpec] = field(
+        crypto_r_port_com_spec: list[CryptoRPortComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-R-PORT-COM-SPEC",
@@ -434,7 +434,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mode_switch_receiver_com_spec: List[ModeSwitchReceiverComSpec] = field(
+        mode_switch_receiver_com_spec: list[ModeSwitchReceiverComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-SWITCH-RECEIVER-COM-SPEC",
@@ -442,7 +442,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nonqueued_receiver_com_spec: List[NonqueuedReceiverComSpec] = field(
+        nonqueued_receiver_com_spec: list[NonqueuedReceiverComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "NONQUEUED-RECEIVER-COM-SPEC",
@@ -450,7 +450,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nv_require_com_spec: List[NvRequireComSpec] = field(
+        nv_require_com_spec: list[NvRequireComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "NV-REQUIRE-COM-SPEC",
@@ -458,7 +458,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        parameter_require_com_spec: List[ParameterRequireComSpec] = field(
+        parameter_require_com_spec: list[ParameterRequireComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-REQUIRE-COM-SPEC",
@@ -466,7 +466,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_data_required_com_spec: List[
+        persistency_data_required_com_spec: list[
             PersistencyDataRequiredComSpec
         ] = field(
             default_factory=list,
@@ -476,7 +476,7 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        queued_receiver_com_spec: List[QueuedReceiverComSpec] = field(
+        queued_receiver_com_spec: list[QueuedReceiverComSpec] = field(
             default_factory=list,
             metadata={
                 "name": "QUEUED-RECEIVER-COM-SPEC",

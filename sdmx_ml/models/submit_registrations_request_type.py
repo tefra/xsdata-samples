@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.registration_request_type import RegistrationRequestType
 
@@ -20,7 +19,7 @@ class SubmitRegistrationsRequestType:
         a registration.
     """
 
-    registration_request: Tuple[RegistrationRequestType, ...] = field(
+    registration_request: tuple[RegistrationRequestType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RegistrationRequest",

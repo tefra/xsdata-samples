@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
 @dataclass
 class SubdivisionsType:
-    subdivision: List["SubDivisionType"] = field(
+    subdivision: list["SubDivisionType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",

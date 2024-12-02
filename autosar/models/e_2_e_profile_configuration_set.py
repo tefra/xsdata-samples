@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -195,7 +195,7 @@ class E2EProfileConfigurationSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -206,7 +206,7 @@ class E2EProfileConfigurationSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -217,7 +217,7 @@ class E2EProfileConfigurationSet:
 
     @dataclass
     class E2EProfileConfigurations:
-        e_2_e_profile_configuration: List[E2EProfileConfiguration] = field(
+        e_2_e_profile_configuration: list[E2EProfileConfiguration] = field(
             default_factory=list,
             metadata={
                 "name": "E-2-E-PROFILE-CONFIGURATION",

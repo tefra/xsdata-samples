@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Bl,
@@ -23,7 +23,7 @@ class CoctMt030203Uv02LanguageCommunication:
     class Meta:
         name = "COCT_MT030203UV02.LanguageCommunication"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -39,7 +39,7 @@ class CoctMt030203Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -93,7 +93,7 @@ class CoctMt030203Uv02Person:
     class Meta:
         name = "COCT_MT030203UV02.Person"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -109,7 +109,7 @@ class CoctMt030203Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -117,7 +117,7 @@ class CoctMt030203Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -125,7 +125,7 @@ class CoctMt030203Uv02Person:
             "min_occurs": 1,
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -148,7 +148,7 @@ class CoctMt030203Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_communication: List[CoctMt030203Uv02LanguageCommunication] = (
+    language_communication: list[CoctMt030203Uv02LanguageCommunication] = (
         field(
             default_factory=list,
             metadata={

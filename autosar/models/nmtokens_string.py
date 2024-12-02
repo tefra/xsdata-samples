@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -25,7 +25,7 @@ class NmtokensString:
     class Meta:
         name = "NMTOKENS-STRING"
 
-    value: List[str] = field(
+    value: list[str] = field(
         default_factory=list,
         metadata={
             "tokens": True,

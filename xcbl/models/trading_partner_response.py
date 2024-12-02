@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.trading_partner_user_information import (
     PrimaryId,
@@ -225,7 +225,7 @@ class TradingPartnerPrimaryId:
 
 @dataclass(kw_only=True)
 class ListOfSecondaryMessageInformation:
-    secondary_message_information: List[SecondaryMessageInformation] = field(
+    secondary_message_information: list[SecondaryMessageInformation] = field(
         default_factory=list,
         metadata={
             "name": "SecondaryMessageInformation",
@@ -280,7 +280,7 @@ class ReturnedIdentification:
 
 @dataclass(kw_only=True)
 class ListOfReturnedIdentification:
-    returned_identification: List[ReturnedIdentification] = field(
+    returned_identification: list[ReturnedIdentification] = field(
         default_factory=list,
         metadata={
             "name": "ReturnedIdentification",
@@ -373,7 +373,7 @@ class TradingPartnerResponseInfo:
 
 @dataclass(kw_only=True)
 class ListOfTradingPartnerResponseInfo:
-    trading_partner_response_info: List[TradingPartnerResponseInfo] = field(
+    trading_partner_response_info: list[TradingPartnerResponseInfo] = field(
         default_factory=list,
         metadata={
             "name": "TradingPartnerResponseInfo",

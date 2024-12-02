@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.shipping_schedule_response import (
     TotalNumberOfLineItems,
@@ -504,7 +504,7 @@ class AvailabilityToPromiseResponseItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfAvailabilityToPromiseResponseItemDetail:
-    availability_to_promise_response_item_detail: List[
+    availability_to_promise_response_item_detail: list[
         AvailabilityToPromiseResponseItemDetail
     ] = field(
         default_factory=list,

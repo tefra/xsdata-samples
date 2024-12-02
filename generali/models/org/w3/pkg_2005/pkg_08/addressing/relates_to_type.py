@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, Union
+from typing import Union
 
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.relationship_type import (
     RelationshipType,
@@ -23,7 +23,7 @@ class RelatesToType:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

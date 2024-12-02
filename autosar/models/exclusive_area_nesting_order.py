@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
@@ -97,7 +97,7 @@ class ExclusiveAreaNestingOrder:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -108,7 +108,7 @@ class ExclusiveAreaNestingOrder:
 
     @dataclass
     class ExclusiveAreaRefs:
-        exclusive_area_ref: List[
+        exclusive_area_ref: list[
             "ExclusiveAreaNestingOrder.ExclusiveAreaRefs.ExclusiveAreaRef"
         ] = field(
             default_factory=list,

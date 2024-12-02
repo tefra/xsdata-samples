@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -221,7 +221,7 @@ class BswDebugInfo:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -232,7 +232,7 @@ class BswDebugInfo:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -243,7 +243,7 @@ class BswDebugInfo:
 
     @dataclass
     class LocalDebugDatas:
-        implementation_data_type_element: List[
+        implementation_data_type_element: list[
             ImplementationDataTypeElement
         ] = field(
             default_factory=list,
@@ -256,7 +256,7 @@ class BswDebugInfo:
 
     @dataclass
     class ParameterAccessedForDebugRefs:
-        parameter_accessed_for_debug_ref: List[
+        parameter_accessed_for_debug_ref: list[
             "BswDebugInfo.ParameterAccessedForDebugRefs.ParameterAccessedForDebugRef"
         ] = field(
             default_factory=list,
@@ -280,7 +280,7 @@ class BswDebugInfo:
 
     @dataclass
     class VariableAccessedForDebugRefs:
-        variable_accessed_for_debug_ref: List[
+        variable_accessed_for_debug_ref: list[
             "BswDebugInfo.VariableAccessedForDebugRefs.VariableAccessedForDebugRef"
         ] = field(
             default_factory=list,

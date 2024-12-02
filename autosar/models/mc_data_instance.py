@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -362,7 +362,7 @@ class McDataInstance:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -373,7 +373,7 @@ class McDataInstance:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -395,7 +395,7 @@ class McDataInstance:
 
     @dataclass
     class McDataAssignments:
-        role_based_mc_data_assignment: List[RoleBasedMcDataAssignment] = field(
+        role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-MC-DATA-ASSIGNMENT",
@@ -406,7 +406,7 @@ class McDataInstance:
 
     @dataclass
     class SubElements:
-        mc_data_instance: List["McDataInstance"] = field(
+        mc_data_instance: list["McDataInstance"] = field(
             default_factory=list,
             metadata={
                 "name": "MC-DATA-INSTANCE",

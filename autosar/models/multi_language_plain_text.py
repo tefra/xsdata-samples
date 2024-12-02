@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .l_plain_text import LPlainText
 
@@ -28,7 +28,7 @@ class MultiLanguagePlainText:
     class Meta:
         name = "MULTI-LANGUAGE-PLAIN-TEXT"
 
-    l_10: List[LPlainText] = field(
+    l_10: list[LPlainText] = field(
         default_factory=list,
         metadata={
             "name": "L-10",

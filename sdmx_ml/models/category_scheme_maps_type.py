@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.category_scheme_map_type import CategorySchemeMapType
 
@@ -20,7 +19,7 @@ class CategorySchemeMapsType:
         categories in different schemes.
     """
 
-    category_scheme_map: Tuple[CategorySchemeMapType, ...] = field(
+    category_scheme_map: tuple[CategorySchemeMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CategorySchemeMap",

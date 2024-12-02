@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
 from datexii.models.eu.datexii.v2.parking_table import ParkingTable
@@ -22,7 +22,7 @@ class ParkingTablePublication:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_table: List[ParkingTable] = field(
+    parking_table: list[ParkingTable] = field(
         default_factory=list,
         metadata={
             "name": "parkingTable",

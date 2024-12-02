@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -195,7 +195,7 @@ class Code:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -206,7 +206,7 @@ class Code:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -217,7 +217,7 @@ class Code:
 
     @dataclass
     class ArtifactDescriptors:
-        autosar_engineering_object: List[AutosarEngineeringObject] = field(
+        autosar_engineering_object: list[AutosarEngineeringObject] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-ENGINEERING-OBJECT",
@@ -228,7 +228,7 @@ class Code:
 
     @dataclass
     class CallbackHeaderRefs:
-        callback_header_ref: List[
+        callback_header_ref: list[
             "Code.CallbackHeaderRefs.CallbackHeaderRef"
         ] = field(
             default_factory=list,

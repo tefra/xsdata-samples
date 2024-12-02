@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -160,7 +160,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -242,7 +242,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoice_period: Tuple[InvoicePeriod, ...] = field(
+    invoice_period: tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
@@ -250,7 +250,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    discrepancy_response: Tuple[DiscrepancyResponse, ...] = field(
+    discrepancy_response: tuple[DiscrepancyResponse, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DiscrepancyResponse",
@@ -266,7 +266,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Tuple[BillingReference, ...] = field(
+    billing_reference: tuple[BillingReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "BillingReference",
@@ -274,7 +274,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_document_reference: Tuple[DespatchDocumentReference, ...] = field(
+    despatch_document_reference: tuple[DespatchDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DespatchDocumentReference",
@@ -282,7 +282,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receipt_document_reference: Tuple[ReceiptDocumentReference, ...] = field(
+    receipt_document_reference: tuple[ReceiptDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReceiptDocumentReference",
@@ -290,7 +290,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_document_reference: Tuple[ContractDocumentReference, ...] = field(
+    contract_document_reference: tuple[ContractDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContractDocumentReference",
@@ -298,7 +298,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -308,7 +308,7 @@ class CreditNoteType:
             },
         )
     )
-    statement_document_reference: Tuple[StatementDocumentReference, ...] = (
+    statement_document_reference: tuple[StatementDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -318,7 +318,7 @@ class CreditNoteType:
             },
         )
     )
-    originator_document_reference: Tuple[OriginatorDocumentReference, ...] = (
+    originator_document_reference: tuple[OriginatorDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -328,7 +328,7 @@ class CreditNoteType:
             },
         )
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",
@@ -386,7 +386,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Tuple[Delivery, ...] = field(
+    delivery: tuple[Delivery, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Delivery",
@@ -394,7 +394,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+    delivery_terms: tuple[DeliveryTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
@@ -402,7 +402,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_means: Tuple[PaymentMeans, ...] = field(
+    payment_means: tuple[PaymentMeans, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentMeans",
@@ -410,7 +410,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Tuple[PaymentTerms, ...] = field(
+    payment_terms: tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
@@ -452,7 +452,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+    allowance_charge: tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
@@ -460,7 +460,7 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Tuple[TaxTotal, ...] = field(
+    tax_total: tuple[TaxTotal, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TaxTotal",
@@ -477,7 +477,7 @@ class CreditNoteType:
             "required": True,
         },
     )
-    credit_note_line: Tuple[CreditNoteLine, ...] = field(
+    credit_note_line: tuple[CreditNoteLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CreditNoteLine",

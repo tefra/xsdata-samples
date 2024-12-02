@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .eth_global_time_managed_coupling_port import (
@@ -130,7 +130,7 @@ class EthGlobalTimeDomainProps:
             calculate CRC.
         """
 
-        fup_data_id_list: List[PositiveInteger] = field(
+        fup_data_id_list: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "FUP-DATA-ID-LIST",
@@ -142,7 +142,7 @@ class EthGlobalTimeDomainProps:
 
     @dataclass
     class ManagedCouplingPorts:
-        eth_global_time_managed_coupling_port: List[
+        eth_global_time_managed_coupling_port: list[
             EthGlobalTimeManagedCouplingPort
         ] = field(
             default_factory=list,

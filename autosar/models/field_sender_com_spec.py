@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
@@ -187,7 +187,7 @@ class FieldSenderComSpec:
 
     @dataclass
     class CompositeNetworkRepresentations:
-        composite_network_representation: List[
+        composite_network_representation: list[
             CompositeNetworkRepresentation
         ] = field(
             default_factory=list,

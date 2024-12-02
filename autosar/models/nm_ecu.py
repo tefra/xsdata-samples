@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -352,7 +352,7 @@ class NmEcu:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -363,7 +363,7 @@ class NmEcu:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -374,7 +374,7 @@ class NmEcu:
 
     @dataclass
     class BusDependentNmEcus:
-        can_nm_ecu: List[CanNmEcu] = field(
+        can_nm_ecu: list[CanNmEcu] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-NM-ECU",
@@ -382,7 +382,7 @@ class NmEcu:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_nm_ecu: List[FlexrayNmEcu] = field(
+        flexray_nm_ecu: list[FlexrayNmEcu] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-NM-ECU",
@@ -390,7 +390,7 @@ class NmEcu:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_nm_ecu: List[J1939NmEcu] = field(
+        j_1939_nm_ecu: list[J1939NmEcu] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-NM-ECU",
@@ -398,7 +398,7 @@ class NmEcu:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        udp_nm_ecu: List[UdpNmEcu] = field(
+        udp_nm_ecu: list[UdpNmEcu] = field(
             default_factory=list,
             metadata={
                 "name": "UDP-NM-ECU",

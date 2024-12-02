@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .align_enum_simple import AlignEnumSimple
 from .colspec import Colspec
@@ -45,7 +45,7 @@ class Tgroup:
     class Meta:
         name = "TGROUP"
 
-    colspec: List[Colspec] = field(
+    colspec: list[Colspec] = field(
         default_factory=list,
         metadata={
             "name": "COLSPEC",

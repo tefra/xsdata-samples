@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -205,7 +205,7 @@ class DiagnosticJ1939FreezeFrame:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -216,7 +216,7 @@ class DiagnosticJ1939FreezeFrame:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -238,7 +238,7 @@ class DiagnosticJ1939FreezeFrame:
 
     @dataclass
     class SpnRefs:
-        spn_ref: List["DiagnosticJ1939FreezeFrame.SpnRefs.SpnRef"] = field(
+        spn_ref: list["DiagnosticJ1939FreezeFrame.SpnRefs.SpnRef"] = field(
             default_factory=list,
             metadata={
                 "name": "SPN-REF",

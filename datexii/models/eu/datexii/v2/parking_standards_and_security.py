@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
@@ -88,7 +88,7 @@ class ParkingStandardsAndSecurity:
             },
         )
     )
-    parking_security: List[ParkingSecurityEnum] = field(
+    parking_security: list[ParkingSecurityEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingSecurity",
@@ -96,7 +96,7 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_additional_security: List[MultilingualString] = field(
+    parking_additional_security: list[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "parkingAdditionalSecurity",
@@ -104,7 +104,7 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_supervision: List[ParkingSupervisionEnum] = field(
+    parking_supervision: list[ParkingSupervisionEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingSupervision",

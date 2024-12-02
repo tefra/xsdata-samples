@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -136,7 +136,7 @@ class AttributeValueEnumeration:
 
     @dataclass
     class Values:
-        enum_value_ref: List[str] = field(
+        enum_value_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "ENUM-VALUE-REF",
@@ -359,7 +359,7 @@ class ReqIfToolExtension:
     class Meta:
         name = "REQ-IF-TOOL-EXTENSION"
 
-    other_element: List[object] = field(
+    other_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -391,7 +391,7 @@ class AttributeDefinitionBoolean:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["AttributeDefinitionBoolean.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionBoolean.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -461,7 +461,7 @@ class AttributeDefinitionBoolean:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         datatype_definition_boolean_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -494,7 +494,7 @@ class AttributeDefinitionDate:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["AttributeDefinitionDate.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionDate.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -564,7 +564,7 @@ class AttributeDefinitionDate:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         datatype_definition_date_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -601,7 +601,7 @@ class AttributeDefinitionEnumeration:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["AttributeDefinitionEnumeration.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionEnumeration.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -681,7 +681,7 @@ class AttributeDefinitionEnumeration:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         datatype_definition_enumeration_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -716,7 +716,7 @@ class AttributeDefinitionInteger:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["AttributeDefinitionInteger.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionInteger.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -786,7 +786,7 @@ class AttributeDefinitionInteger:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         datatype_definition_integer_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -819,7 +819,7 @@ class AttributeDefinitionReal:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["AttributeDefinitionReal.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionReal.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -889,7 +889,7 @@ class AttributeDefinitionReal:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         datatype_definition_real_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -924,7 +924,7 @@ class AttributeDefinitionString:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["AttributeDefinitionString.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionString.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -994,7 +994,7 @@ class AttributeDefinitionString:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         datatype_definition_string_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1514,7 +1514,7 @@ class RelationGroup:
             },
         )
     )
-    type_value: Optional["RelationGroup.TypeType"] = field(
+    type_value: Optional["RelationGroup.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -1579,7 +1579,7 @@ class RelationGroup:
 
     @dataclass
     class SpecRelations:
-        spec_relation_ref: List[str] = field(
+        spec_relation_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "SPEC-RELATION-REF",
@@ -1601,7 +1601,7 @@ class RelationGroup:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         relation_group_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1709,7 +1709,7 @@ class SpecHierarchy:
 
     @dataclass
     class Children:
-        spec_hierarchy: List["SpecHierarchy"] = field(
+        spec_hierarchy: list["SpecHierarchy"] = field(
             default_factory=list,
             metadata={
                 "name": "SPEC-HIERARCHY",
@@ -1720,7 +1720,7 @@ class SpecHierarchy:
 
     @dataclass
     class EditableAtts:
-        attribute_definition_boolean_ref: List[str] = field(
+        attribute_definition_boolean_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN-REF",
@@ -1728,7 +1728,7 @@ class SpecHierarchy:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_date_ref: List[str] = field(
+        attribute_definition_date_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-DATE-REF",
@@ -1736,7 +1736,7 @@ class SpecHierarchy:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_enumeration_ref: List[str] = field(
+        attribute_definition_enumeration_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-ENUMERATION-REF",
@@ -1744,7 +1744,7 @@ class SpecHierarchy:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_integer_ref: List[str] = field(
+        attribute_definition_integer_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-INTEGER-REF",
@@ -1752,7 +1752,7 @@ class SpecHierarchy:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_real_ref: List[str] = field(
+        attribute_definition_real_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-REAL-REF",
@@ -1760,7 +1760,7 @@ class SpecHierarchy:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_string_ref: List[str] = field(
+        attribute_definition_string_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-STRING-REF",
@@ -1768,7 +1768,7 @@ class SpecHierarchy:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_xhtml_ref: List[str] = field(
+        attribute_definition_xhtml_ref: list[str] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-XHTML-REF",
@@ -1932,7 +1932,7 @@ class DatatypeDefinitionEnumeration:
 
     @dataclass
     class SpecifiedValues:
-        enum_value: List[EnumValue] = field(
+        enum_value: list[EnumValue] = field(
             default_factory=list,
             metadata={
                 "name": "ENUM-VALUE",
@@ -1963,7 +1963,7 @@ class AttributeDefinitionXhtml:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["AttributeDefinitionXhtml.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionXhtml.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2033,7 +2033,7 @@ class AttributeDefinitionXhtml:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         datatype_definition_xhtml_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2066,7 +2066,7 @@ class SpecObject:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["SpecObject.TypeType"] = field(
+    type_value: Optional["SpecObject.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2119,7 +2119,7 @@ class SpecObject:
 
     @dataclass
     class Values:
-        attribute_value_boolean: List[AttributeValueBoolean] = field(
+        attribute_value_boolean: list[AttributeValueBoolean] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-BOOLEAN",
@@ -2127,7 +2127,7 @@ class SpecObject:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_date: List[AttributeValueDate] = field(
+        attribute_value_date: list[AttributeValueDate] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-DATE",
@@ -2135,7 +2135,7 @@ class SpecObject:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_enumeration: List[AttributeValueEnumeration] = field(
+        attribute_value_enumeration: list[AttributeValueEnumeration] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-ENUMERATION",
@@ -2143,7 +2143,7 @@ class SpecObject:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_integer: List[AttributeValueInteger] = field(
+        attribute_value_integer: list[AttributeValueInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-INTEGER",
@@ -2151,7 +2151,7 @@ class SpecObject:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_real: List[AttributeValueReal] = field(
+        attribute_value_real: list[AttributeValueReal] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-REAL",
@@ -2159,7 +2159,7 @@ class SpecObject:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_string: List[AttributeValueString] = field(
+        attribute_value_string: list[AttributeValueString] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-STRING",
@@ -2167,7 +2167,7 @@ class SpecObject:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_xhtml: List[AttributeValueXhtml] = field(
+        attribute_value_xhtml: list[AttributeValueXhtml] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-XHTML",
@@ -2177,7 +2177,7 @@ class SpecObject:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         spec_object_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2228,7 +2228,7 @@ class SpecRelation:
             "required": True,
         },
     )
-    type_value: Optional["SpecRelation.TypeType"] = field(
+    type_value: Optional["SpecRelation.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2281,7 +2281,7 @@ class SpecRelation:
 
     @dataclass
     class Values:
-        attribute_value_boolean: List[AttributeValueBoolean] = field(
+        attribute_value_boolean: list[AttributeValueBoolean] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-BOOLEAN",
@@ -2289,7 +2289,7 @@ class SpecRelation:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_date: List[AttributeValueDate] = field(
+        attribute_value_date: list[AttributeValueDate] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-DATE",
@@ -2297,7 +2297,7 @@ class SpecRelation:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_enumeration: List[AttributeValueEnumeration] = field(
+        attribute_value_enumeration: list[AttributeValueEnumeration] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-ENUMERATION",
@@ -2305,7 +2305,7 @@ class SpecRelation:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_integer: List[AttributeValueInteger] = field(
+        attribute_value_integer: list[AttributeValueInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-INTEGER",
@@ -2313,7 +2313,7 @@ class SpecRelation:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_real: List[AttributeValueReal] = field(
+        attribute_value_real: list[AttributeValueReal] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-REAL",
@@ -2321,7 +2321,7 @@ class SpecRelation:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_string: List[AttributeValueString] = field(
+        attribute_value_string: list[AttributeValueString] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-STRING",
@@ -2329,7 +2329,7 @@ class SpecRelation:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_xhtml: List[AttributeValueXhtml] = field(
+        attribute_value_xhtml: list[AttributeValueXhtml] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-XHTML",
@@ -2363,7 +2363,7 @@ class SpecRelation:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         spec_relation_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2404,7 +2404,7 @@ class Specification:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Optional["Specification.TypeType"] = field(
+    type_value: Optional["Specification.Type"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2457,7 +2457,7 @@ class Specification:
 
     @dataclass
     class Values:
-        attribute_value_boolean: List[AttributeValueBoolean] = field(
+        attribute_value_boolean: list[AttributeValueBoolean] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-BOOLEAN",
@@ -2465,7 +2465,7 @@ class Specification:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_date: List[AttributeValueDate] = field(
+        attribute_value_date: list[AttributeValueDate] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-DATE",
@@ -2473,7 +2473,7 @@ class Specification:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_enumeration: List[AttributeValueEnumeration] = field(
+        attribute_value_enumeration: list[AttributeValueEnumeration] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-ENUMERATION",
@@ -2481,7 +2481,7 @@ class Specification:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_integer: List[AttributeValueInteger] = field(
+        attribute_value_integer: list[AttributeValueInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-INTEGER",
@@ -2489,7 +2489,7 @@ class Specification:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_real: List[AttributeValueReal] = field(
+        attribute_value_real: list[AttributeValueReal] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-REAL",
@@ -2497,7 +2497,7 @@ class Specification:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_string: List[AttributeValueString] = field(
+        attribute_value_string: list[AttributeValueString] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-STRING",
@@ -2505,7 +2505,7 @@ class Specification:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_value_xhtml: List[AttributeValueXhtml] = field(
+        attribute_value_xhtml: list[AttributeValueXhtml] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-VALUE-XHTML",
@@ -2516,7 +2516,7 @@ class Specification:
 
     @dataclass
     class Children:
-        spec_hierarchy: List[SpecHierarchy] = field(
+        spec_hierarchy: list[SpecHierarchy] = field(
             default_factory=list,
             metadata={
                 "name": "SPEC-HIERARCHY",
@@ -2526,7 +2526,7 @@ class Specification:
         )
 
     @dataclass
-    class TypeType:
+    class Type:
         specification_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2603,7 +2603,7 @@ class RelationGroupType:
 
     @dataclass
     class SpecAttributes:
-        attribute_definition_boolean: List[AttributeDefinitionBoolean] = field(
+        attribute_definition_boolean: list[AttributeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN",
@@ -2611,7 +2611,7 @@ class RelationGroupType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_date: List[AttributeDefinitionDate] = field(
+        attribute_definition_date: list[AttributeDefinitionDate] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-DATE",
@@ -2619,7 +2619,7 @@ class RelationGroupType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_enumeration: List[
+        attribute_definition_enumeration: list[
             AttributeDefinitionEnumeration
         ] = field(
             default_factory=list,
@@ -2629,7 +2629,7 @@ class RelationGroupType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_integer: List[AttributeDefinitionInteger] = field(
+        attribute_definition_integer: list[AttributeDefinitionInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-INTEGER",
@@ -2637,7 +2637,7 @@ class RelationGroupType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_real: List[AttributeDefinitionReal] = field(
+        attribute_definition_real: list[AttributeDefinitionReal] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-REAL",
@@ -2645,7 +2645,7 @@ class RelationGroupType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_string: List[AttributeDefinitionString] = field(
+        attribute_definition_string: list[AttributeDefinitionString] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-STRING",
@@ -2653,7 +2653,7 @@ class RelationGroupType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_xhtml: List[AttributeDefinitionXhtml] = field(
+        attribute_definition_xhtml: list[AttributeDefinitionXhtml] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-XHTML",
@@ -2728,7 +2728,7 @@ class SpecObjectType:
 
     @dataclass
     class SpecAttributes:
-        attribute_definition_boolean: List[AttributeDefinitionBoolean] = field(
+        attribute_definition_boolean: list[AttributeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN",
@@ -2736,7 +2736,7 @@ class SpecObjectType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_date: List[AttributeDefinitionDate] = field(
+        attribute_definition_date: list[AttributeDefinitionDate] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-DATE",
@@ -2744,7 +2744,7 @@ class SpecObjectType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_enumeration: List[
+        attribute_definition_enumeration: list[
             AttributeDefinitionEnumeration
         ] = field(
             default_factory=list,
@@ -2754,7 +2754,7 @@ class SpecObjectType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_integer: List[AttributeDefinitionInteger] = field(
+        attribute_definition_integer: list[AttributeDefinitionInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-INTEGER",
@@ -2762,7 +2762,7 @@ class SpecObjectType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_real: List[AttributeDefinitionReal] = field(
+        attribute_definition_real: list[AttributeDefinitionReal] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-REAL",
@@ -2770,7 +2770,7 @@ class SpecObjectType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_string: List[AttributeDefinitionString] = field(
+        attribute_definition_string: list[AttributeDefinitionString] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-STRING",
@@ -2778,7 +2778,7 @@ class SpecObjectType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_xhtml: List[AttributeDefinitionXhtml] = field(
+        attribute_definition_xhtml: list[AttributeDefinitionXhtml] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-XHTML",
@@ -2853,7 +2853,7 @@ class SpecRelationType:
 
     @dataclass
     class SpecAttributes:
-        attribute_definition_boolean: List[AttributeDefinitionBoolean] = field(
+        attribute_definition_boolean: list[AttributeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN",
@@ -2861,7 +2861,7 @@ class SpecRelationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_date: List[AttributeDefinitionDate] = field(
+        attribute_definition_date: list[AttributeDefinitionDate] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-DATE",
@@ -2869,7 +2869,7 @@ class SpecRelationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_enumeration: List[
+        attribute_definition_enumeration: list[
             AttributeDefinitionEnumeration
         ] = field(
             default_factory=list,
@@ -2879,7 +2879,7 @@ class SpecRelationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_integer: List[AttributeDefinitionInteger] = field(
+        attribute_definition_integer: list[AttributeDefinitionInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-INTEGER",
@@ -2887,7 +2887,7 @@ class SpecRelationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_real: List[AttributeDefinitionReal] = field(
+        attribute_definition_real: list[AttributeDefinitionReal] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-REAL",
@@ -2895,7 +2895,7 @@ class SpecRelationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_string: List[AttributeDefinitionString] = field(
+        attribute_definition_string: list[AttributeDefinitionString] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-STRING",
@@ -2903,7 +2903,7 @@ class SpecRelationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_xhtml: List[AttributeDefinitionXhtml] = field(
+        attribute_definition_xhtml: list[AttributeDefinitionXhtml] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-XHTML",
@@ -2978,7 +2978,7 @@ class SpecificationType:
 
     @dataclass
     class SpecAttributes:
-        attribute_definition_boolean: List[AttributeDefinitionBoolean] = field(
+        attribute_definition_boolean: list[AttributeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN",
@@ -2986,7 +2986,7 @@ class SpecificationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_date: List[AttributeDefinitionDate] = field(
+        attribute_definition_date: list[AttributeDefinitionDate] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-DATE",
@@ -2994,7 +2994,7 @@ class SpecificationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_enumeration: List[
+        attribute_definition_enumeration: list[
             AttributeDefinitionEnumeration
         ] = field(
             default_factory=list,
@@ -3004,7 +3004,7 @@ class SpecificationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_integer: List[AttributeDefinitionInteger] = field(
+        attribute_definition_integer: list[AttributeDefinitionInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-INTEGER",
@@ -3012,7 +3012,7 @@ class SpecificationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_real: List[AttributeDefinitionReal] = field(
+        attribute_definition_real: list[AttributeDefinitionReal] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-REAL",
@@ -3020,7 +3020,7 @@ class SpecificationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_string: List[AttributeDefinitionString] = field(
+        attribute_definition_string: list[AttributeDefinitionString] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-STRING",
@@ -3028,7 +3028,7 @@ class SpecificationType:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        attribute_definition_xhtml: List[AttributeDefinitionXhtml] = field(
+        attribute_definition_xhtml: list[AttributeDefinitionXhtml] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-XHTML",
@@ -3094,7 +3094,7 @@ class ReqIfContent:
 
     @dataclass
     class Datatypes:
-        datatype_definition_boolean: List[DatatypeDefinitionBoolean] = field(
+        datatype_definition_boolean: list[DatatypeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
                 "name": "DATATYPE-DEFINITION-BOOLEAN",
@@ -3102,7 +3102,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        datatype_definition_date: List[DatatypeDefinitionDate] = field(
+        datatype_definition_date: list[DatatypeDefinitionDate] = field(
             default_factory=list,
             metadata={
                 "name": "DATATYPE-DEFINITION-DATE",
@@ -3110,7 +3110,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        datatype_definition_enumeration: List[
+        datatype_definition_enumeration: list[
             DatatypeDefinitionEnumeration
         ] = field(
             default_factory=list,
@@ -3120,7 +3120,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        datatype_definition_integer: List[DatatypeDefinitionInteger] = field(
+        datatype_definition_integer: list[DatatypeDefinitionInteger] = field(
             default_factory=list,
             metadata={
                 "name": "DATATYPE-DEFINITION-INTEGER",
@@ -3128,7 +3128,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        datatype_definition_real: List[DatatypeDefinitionReal] = field(
+        datatype_definition_real: list[DatatypeDefinitionReal] = field(
             default_factory=list,
             metadata={
                 "name": "DATATYPE-DEFINITION-REAL",
@@ -3136,7 +3136,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        datatype_definition_string: List[DatatypeDefinitionString] = field(
+        datatype_definition_string: list[DatatypeDefinitionString] = field(
             default_factory=list,
             metadata={
                 "name": "DATATYPE-DEFINITION-STRING",
@@ -3144,7 +3144,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        datatype_definition_xhtml: List[DatatypeDefinitionXhtml] = field(
+        datatype_definition_xhtml: list[DatatypeDefinitionXhtml] = field(
             default_factory=list,
             metadata={
                 "name": "DATATYPE-DEFINITION-XHTML",
@@ -3155,7 +3155,7 @@ class ReqIfContent:
 
     @dataclass
     class SpecTypes:
-        relation_group_type: List[RelationGroupType] = field(
+        relation_group_type: list[RelationGroupType] = field(
             default_factory=list,
             metadata={
                 "name": "RELATION-GROUP-TYPE",
@@ -3163,7 +3163,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        spec_object_type: List[SpecObjectType] = field(
+        spec_object_type: list[SpecObjectType] = field(
             default_factory=list,
             metadata={
                 "name": "SPEC-OBJECT-TYPE",
@@ -3171,7 +3171,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        spec_relation_type: List[SpecRelationType] = field(
+        spec_relation_type: list[SpecRelationType] = field(
             default_factory=list,
             metadata={
                 "name": "SPEC-RELATION-TYPE",
@@ -3179,7 +3179,7 @@ class ReqIfContent:
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             },
         )
-        specification_type: List[SpecificationType] = field(
+        specification_type: list[SpecificationType] = field(
             default_factory=list,
             metadata={
                 "name": "SPECIFICATION-TYPE",
@@ -3190,7 +3190,7 @@ class ReqIfContent:
 
     @dataclass
     class SpecObjects:
-        spec_object: List[SpecObject] = field(
+        spec_object: list[SpecObject] = field(
             default_factory=list,
             metadata={
                 "name": "SPEC-OBJECT",
@@ -3201,7 +3201,7 @@ class ReqIfContent:
 
     @dataclass
     class SpecRelations:
-        spec_relation: List[SpecRelation] = field(
+        spec_relation: list[SpecRelation] = field(
             default_factory=list,
             metadata={
                 "name": "SPEC-RELATION",
@@ -3212,7 +3212,7 @@ class ReqIfContent:
 
     @dataclass
     class Specifications:
-        specification: List[Specification] = field(
+        specification: list[Specification] = field(
             default_factory=list,
             metadata={
                 "name": "SPECIFICATION",
@@ -3223,7 +3223,7 @@ class ReqIfContent:
 
     @dataclass
     class SpecRelationGroups:
-        relation_group: List[RelationGroup] = field(
+        relation_group: list[RelationGroup] = field(
             default_factory=list,
             metadata={
                 "name": "RELATION-GROUP",
@@ -3294,7 +3294,7 @@ class ReqIf:
 
     @dataclass
     class ToolExtensions:
-        req_if_tool_extension: List[ReqIfToolExtension] = field(
+        req_if_tool_extension: list[ReqIfToolExtension] = field(
             default_factory=list,
             metadata={
                 "name": "REQ-IF-TOOL-EXTENSION",

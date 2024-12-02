@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .boolean import Boolean
 from .integer import Integer
@@ -116,7 +116,7 @@ class NmCoordinator:
 
     @dataclass
     class NmNodeRefs:
-        nm_node_ref: List["NmCoordinator.NmNodeRefs.NmNodeRef"] = field(
+        nm_node_ref: list["NmCoordinator.NmNodeRefs.NmNodeRef"] = field(
             default_factory=list,
             metadata={
                 "name": "NM-NODE-REF",

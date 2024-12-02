@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.contact import Contact
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -63,7 +63,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_layout: List[ParkingLayoutEnum] = field(
+    parking_layout: list[ParkingLayoutEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingLayout",
@@ -95,7 +95,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_site_address: List[Contact] = field(
+    parking_site_address: list[Contact] = field(
         default_factory=list,
         metadata={
             "name": "parkingSiteAddress",
@@ -103,7 +103,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reservation_service: List[Contact] = field(
+    reservation_service: list[Contact] = field(
         default_factory=list,
         metadata={
             "name": "reservationService",
@@ -111,7 +111,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_usage_scenario: List[
+    parking_usage_scenario: list[
         ParkingSiteScenarioIndexParkingUsageScenario
     ] = field(
         default_factory=list,
@@ -129,7 +129,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_access: List[ParkingAccess] = field(
+    parking_access: list[ParkingAccess] = field(
         default_factory=list,
         metadata={
             "name": "parkingAccess",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.issue import Issue
 from crossref.models.gov.nih.nlm.ncbi.jats1.issue_id import IssueId
@@ -27,13 +27,13 @@ class VolumeIssueGroup:
         name = "volume-issue-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    volume: List[Volume] = field(
+    volume: list[Volume] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    volume_id: List[VolumeId] = field(
+    volume_id: list[VolumeId] = field(
         default_factory=list,
         metadata={
             "name": "volume-id",
@@ -47,34 +47,34 @@ class VolumeIssueGroup:
             "type": "Element",
         },
     )
-    issue: List[Issue] = field(
+    issue: list[Issue] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    issue_id: List[IssueId] = field(
+    issue_id: list[IssueId] = field(
         default_factory=list,
         metadata={
             "name": "issue-id",
             "type": "Element",
         },
     )
-    issue_title: List[IssueTitle] = field(
+    issue_title: list[IssueTitle] = field(
         default_factory=list,
         metadata={
             "name": "issue-title",
             "type": "Element",
         },
     )
-    issue_title_group: List[IssueTitleGroup] = field(
+    issue_title_group: list[IssueTitleGroup] = field(
         default_factory=list,
         metadata={
             "name": "issue-title-group",
             "type": "Element",
         },
     )
-    issue_sponsor: List[IssueSponsor] = field(
+    issue_sponsor: list[IssueSponsor] = field(
         default_factory=list,
         metadata={
             "name": "issue-sponsor",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -208,7 +208,7 @@ class IdsmProperties:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -219,7 +219,7 @@ class IdsmProperties:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -230,7 +230,7 @@ class IdsmProperties:
 
     @dataclass
     class RateLimitationFilters:
-        idsm_rate_limitation: List[IdsmRateLimitation] = field(
+        idsm_rate_limitation: list[IdsmRateLimitation] = field(
             default_factory=list,
             metadata={
                 "name": "IDSM-RATE-LIMITATION",
@@ -241,7 +241,7 @@ class IdsmProperties:
 
     @dataclass
     class TrafficLimitationFilters:
-        idsm_traffic_limitation: List[IdsmTrafficLimitation] = field(
+        idsm_traffic_limitation: list[IdsmTrafficLimitation] = field(
             default_factory=list,
             metadata={
                 "name": "IDSM-TRAFFIC-LIMITATION",

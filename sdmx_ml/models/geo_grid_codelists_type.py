@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.geo_grid_codelist_type import GeoGridCodelistType
 
@@ -20,7 +19,7 @@ class GeoGridCodelistsType:
         GeoGridCodelist.
     """
 
-    geo_grid_codelist: Tuple[GeoGridCodelistType, ...] = field(
+    geo_grid_codelist: tuple[GeoGridCodelistType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "GeoGridCodelist",

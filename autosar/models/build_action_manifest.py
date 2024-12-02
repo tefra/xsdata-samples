@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -280,7 +280,7 @@ class BuildActionManifest:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -291,7 +291,7 @@ class BuildActionManifest:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -302,7 +302,7 @@ class BuildActionManifest:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -310,7 +310,7 @@ class BuildActionManifest:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -320,7 +320,7 @@ class BuildActionManifest:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -331,7 +331,7 @@ class BuildActionManifest:
 
     @dataclass
     class StartActionRefs:
-        start_action_ref: List[
+        start_action_ref: list[
             "BuildActionManifest.StartActionRefs.StartActionRef"
         ] = field(
             default_factory=list,
@@ -355,7 +355,7 @@ class BuildActionManifest:
 
     @dataclass
     class TearDownActionRefs:
-        tear_down_action_ref: List[
+        tear_down_action_ref: list[
             "BuildActionManifest.TearDownActionRefs.TearDownActionRef"
         ] = field(
             default_factory=list,
@@ -379,7 +379,7 @@ class BuildActionManifest:
 
     @dataclass
     class BuildActions:
-        build_action: List[BuildAction] = field(
+        build_action: list[BuildAction] = field(
             default_factory=list,
             metadata={
                 "name": "BUILD-ACTION",
@@ -390,7 +390,7 @@ class BuildActionManifest:
 
     @dataclass
     class BuildActionEnvironments:
-        build_action_environment: List[BuildActionEnvironment] = field(
+        build_action_environment: list[BuildActionEnvironment] = field(
             default_factory=list,
             metadata={
                 "name": "BUILD-ACTION-ENVIRONMENT",
@@ -401,7 +401,7 @@ class BuildActionManifest:
 
     @dataclass
     class DynamicActionRefs:
-        dynamic_action_ref: List[
+        dynamic_action_ref: list[
             "BuildActionManifest.DynamicActionRefs.DynamicActionRef"
         ] = field(
             default_factory=list,

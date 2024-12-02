@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .positive_integer import PositiveInteger
@@ -104,7 +104,7 @@ class CanGlobalTimeDomainProps:
             calculate CRC.
         """
 
-        fup_data_id_list: List[PositiveInteger] = field(
+        fup_data_id_list: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "FUP-DATA-ID-LIST",
@@ -121,7 +121,7 @@ class CanGlobalTimeDomainProps:
             calculate CRC.
         """
 
-        ofns_data_id_list: List[PositiveInteger] = field(
+        ofns_data_id_list: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "OFNS-DATA-ID-LIST",
@@ -138,7 +138,7 @@ class CanGlobalTimeDomainProps:
             calculate CRC.
         """
 
-        ofs_data_id_list: List[PositiveInteger] = field(
+        ofs_data_id_list: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "OFS-DATA-ID-LIST",
@@ -155,7 +155,7 @@ class CanGlobalTimeDomainProps:
             calculate CRC.
         """
 
-        sync_data_id_list: List[PositiveInteger] = field(
+        sync_data_id_list: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "SYNC-DATA-ID-LIST",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.status_message_type_1 import StatusMessageType1
 from sdmx_ml.models.status_type import StatusType
@@ -23,7 +23,7 @@ class StatusMessageType2:
     class Meta:
         name = "StatusMessageType"
 
-    message_text: Tuple[StatusMessageType1, ...] = field(
+    message_text: tuple[StatusMessageType1, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MessageText",

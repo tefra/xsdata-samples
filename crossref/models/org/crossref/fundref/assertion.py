@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional
+from typing import ForwardRef, Optional
 
 from crossref.models.org.crossref.fundref.assertion_name import AssertionName
 from crossref.models.org.crossref.fundref.assertion_provider import (
@@ -34,7 +34,7 @@ class Assertion:
             "required": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

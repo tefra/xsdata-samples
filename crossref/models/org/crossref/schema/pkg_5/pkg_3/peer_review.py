@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.access_indicators.program import (
     Program as AccessIndicatorsProgram,
@@ -91,7 +91,7 @@ class PeerReview:
             "required": True,
         },
     )
-    institution: List[Institution] = field(
+    institution: list[Institution] = field(
         default_factory=list,
         metadata={
             "type": "Element",

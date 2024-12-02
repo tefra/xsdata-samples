@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -48,7 +48,7 @@ class Situation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    related_situation: List[SituationVersionedReference] = field(
+    related_situation: list[SituationVersionedReference] = field(
         default_factory=list,
         metadata={
             "name": "relatedSituation",
@@ -73,7 +73,7 @@ class Situation:
             "required": True,
         },
     )
-    situation_record: List[SituationRecord] = field(
+    situation_record: list[SituationRecord] = field(
         default_factory=list,
         metadata={
             "name": "situationRecord",

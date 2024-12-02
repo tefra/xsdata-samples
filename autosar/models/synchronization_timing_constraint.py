@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -278,7 +278,7 @@ class SynchronizationTimingConstraint:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -289,7 +289,7 @@ class SynchronizationTimingConstraint:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -300,7 +300,7 @@ class SynchronizationTimingConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: List[
+        trace_ref: list[
             "SynchronizationTimingConstraint.TraceRefs.TraceRef"
         ] = field(
             default_factory=list,
@@ -335,7 +335,7 @@ class SynchronizationTimingConstraint:
 
     @dataclass
     class ScopeEventRefs:
-        scope_event_ref: List[
+        scope_event_ref: list[
             "SynchronizationTimingConstraint.ScopeEventRefs.ScopeEventRef"
         ] = field(
             default_factory=list,
@@ -359,7 +359,7 @@ class SynchronizationTimingConstraint:
 
     @dataclass
     class ScopeRefs:
-        scope_ref: List[
+        scope_ref: list[
             "SynchronizationTimingConstraint.ScopeRefs.ScopeRef"
         ] = field(
             default_factory=list,

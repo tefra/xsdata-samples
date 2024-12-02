@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -135,7 +135,7 @@ class McSwEmulationMethodSupport:
 
     @dataclass
     class ElementGroups:
-        mc_parameter_element_group: List[McParameterElementGroup] = field(
+        mc_parameter_element_group: list[McParameterElementGroup] = field(
             default_factory=list,
             metadata={
                 "name": "MC-PARAMETER-ELEMENT-GROUP",

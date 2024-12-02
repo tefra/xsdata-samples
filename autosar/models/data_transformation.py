@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -222,7 +222,7 @@ class DataTransformation:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -233,7 +233,7 @@ class DataTransformation:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -244,7 +244,7 @@ class DataTransformation:
 
     @dataclass
     class TransformerChainRefs:
-        transformer_chain_ref: List[
+        transformer_chain_ref: list[
             "DataTransformation.TransformerChainRefs.TransformerChainRef"
         ] = field(
             default_factory=list,

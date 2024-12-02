@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .meta_data_item import MetaDataItem
 from .ref import Ref
@@ -69,7 +69,7 @@ class MetaDataItemSet:
 
     @dataclass
     class DataElementRefs:
-        data_element_ref: List[
+        data_element_ref: list[
             "MetaDataItemSet.DataElementRefs.DataElementRef"
         ] = field(
             default_factory=list,
@@ -93,7 +93,7 @@ class MetaDataItemSet:
 
     @dataclass
     class MetaDataItems:
-        meta_data_item: List[MetaDataItem] = field(
+        meta_data_item: list[MetaDataItem] = field(
             default_factory=list,
             metadata={
                 "name": "META-DATA-ITEM",

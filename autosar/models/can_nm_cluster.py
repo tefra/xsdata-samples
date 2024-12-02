@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -485,7 +485,7 @@ class CanNmCluster:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -496,7 +496,7 @@ class CanNmCluster:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -518,7 +518,7 @@ class CanNmCluster:
 
     @dataclass
     class NmNodes:
-        can_nm_node: List[CanNmNode] = field(
+        can_nm_node: list[CanNmNode] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-NM-NODE",
@@ -526,7 +526,7 @@ class CanNmCluster:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_nm_node: List[FlexrayNmNode] = field(
+        flexray_nm_node: list[FlexrayNmNode] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-NM-NODE",
@@ -534,7 +534,7 @@ class CanNmCluster:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_nm_node: List[J1939NmNode] = field(
+        j_1939_nm_node: list[J1939NmNode] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-NM-NODE",
@@ -542,7 +542,7 @@ class CanNmCluster:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        udp_nm_node: List[UdpNmNode] = field(
+        udp_nm_node: list[UdpNmNode] = field(
             default_factory=list,
             metadata={
                 "name": "UDP-NM-NODE",

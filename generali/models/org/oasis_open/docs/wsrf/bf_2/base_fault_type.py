@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -21,7 +21,7 @@ __NAMESPACE__ = "http://docs.oasis-open.org/wsrf/bf-2"
 
 @dataclass
 class BaseFaultType:
-    other_element: List[object] = field(
+    other_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -53,7 +53,7 @@ class BaseFaultType:
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
         },
     )
-    description: List[BaseFaultTypeDescription] = field(
+    description: list[BaseFaultTypeDescription] = field(
         default_factory=list,
         metadata={
             "name": "Description",
@@ -69,7 +69,7 @@ class BaseFaultType:
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

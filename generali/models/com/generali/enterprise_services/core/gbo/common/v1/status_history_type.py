@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition import (
     StatusHistoryTypeStateTransition,
@@ -17,7 +16,7 @@ class StatusHistoryType:
     target lifecycle status.</description>
     """
 
-    state_transition: List[StatusHistoryTypeStateTransition] = field(
+    state_transition: list[StatusHistoryTypeStateTransition] = field(
         default_factory=list,
         metadata={
             "name": "StateTransition",

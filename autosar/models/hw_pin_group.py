@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -231,7 +231,7 @@ class HwPinGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -242,7 +242,7 @@ class HwPinGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -264,7 +264,7 @@ class HwPinGroup:
 
     @dataclass
     class HwCategoryRefs:
-        hw_category_ref: List["HwPinGroup.HwCategoryRefs.HwCategoryRef"] = (
+        hw_category_ref: list["HwPinGroup.HwCategoryRefs.HwCategoryRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -288,7 +288,7 @@ class HwPinGroup:
 
     @dataclass
     class HwAttributeValues:
-        hw_attribute_value: List[HwAttributeValue] = field(
+        hw_attribute_value: list[HwAttributeValue] = field(
             default_factory=list,
             metadata={
                 "name": "HW-ATTRIBUTE-VALUE",
@@ -326,7 +326,7 @@ class HwPinGroupContent:
     class Meta:
         name = "HW-PIN-GROUP-CONTENT"
 
-    hw_pin: List[HwPin] = field(
+    hw_pin: list[HwPin] = field(
         default_factory=list,
         metadata={
             "name": "HW-PIN",
@@ -334,7 +334,7 @@ class HwPinGroupContent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_group: List[HwPinGroup] = field(
+    hw_pin_group: list[HwPinGroup] = field(
         default_factory=list,
         metadata={
             "name": "HW-PIN-GROUP",

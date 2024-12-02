@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -245,7 +245,7 @@ class DiagnosticTroubleCodeObd:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -256,7 +256,7 @@ class DiagnosticTroubleCodeObd:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -278,7 +278,7 @@ class DiagnosticTroubleCodeObd:
 
     @dataclass
     class EventReadinessGroups:
-        event_obd_readiness_group: List[EventObdReadinessGroup] = field(
+        event_obd_readiness_group: list[EventObdReadinessGroup] = field(
             default_factory=list,
             metadata={
                 "name": "EVENT-OBD-READINESS-GROUP",

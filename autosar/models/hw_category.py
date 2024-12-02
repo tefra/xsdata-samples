@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -190,7 +190,7 @@ class HwCategory:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -201,7 +201,7 @@ class HwCategory:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -212,7 +212,7 @@ class HwCategory:
 
     @dataclass
     class HwAttributeDefs:
-        hw_attribute_def: List[HwAttributeDef] = field(
+        hw_attribute_def: list[HwAttributeDef] = field(
             default_factory=list,
             metadata={
                 "name": "HW-ATTRIBUTE-DEF",

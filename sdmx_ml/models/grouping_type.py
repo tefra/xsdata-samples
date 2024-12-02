@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.attribute_list import AttributeList
 from sdmx_ml.models.dimension_list import DimensionList
@@ -18,7 +18,7 @@ class GroupingType:
     this should restrict to specific concrete component lists.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             MetadataAttributeList,
             MeasureList,

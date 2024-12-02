@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .identifier import Identifier
 from .p_mode_in_system_instance_ref import PModeInSystemInstanceRef
@@ -82,7 +82,7 @@ class DiagnosticEnvSwcModeElement:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",

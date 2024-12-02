@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .data_input_association import DataInputAssociation
 from .data_output_association import DataOutputAssociation
@@ -32,14 +32,14 @@ class TActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    property: List[Property] = field(
+    property: list[Property] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    data_input_association: List[DataInputAssociation] = field(
+    data_input_association: list[DataInputAssociation] = field(
         default_factory=list,
         metadata={
             "name": "dataInputAssociation",
@@ -47,7 +47,7 @@ class TActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    data_output_association: List[DataOutputAssociation] = field(
+    data_output_association: list[DataOutputAssociation] = field(
         default_factory=list,
         metadata={
             "name": "dataOutputAssociation",
@@ -55,7 +55,7 @@ class TActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    potential_owner: List[PotentialOwner] = field(
+    potential_owner: list[PotentialOwner] = field(
         default_factory=list,
         metadata={
             "name": "potentialOwner",
@@ -63,7 +63,7 @@ class TActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    human_performer: List[HumanPerformer] = field(
+    human_performer: list[HumanPerformer] = field(
         default_factory=list,
         metadata={
             "name": "humanPerformer",
@@ -71,14 +71,14 @@ class TActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    performer: List[Performer] = field(
+    performer: list[Performer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    resource_role: List[ResourceRole] = field(
+    resource_role: list[ResourceRole] = field(
         default_factory=list,
         metadata={
             "name": "resourceRole",

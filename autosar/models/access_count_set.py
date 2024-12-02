@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .access_count import AccessCount
 from .admin_data import VariationPoint
@@ -78,7 +78,7 @@ class AccessCountSet:
 
     @dataclass
     class AccessCounts:
-        access_count: List[AccessCount] = field(
+        access_count: list[AccessCount] = field(
             default_factory=list,
             metadata={
                 "name": "ACCESS-COUNT",

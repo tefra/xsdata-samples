@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .phm_checkpoint_subtypes_enum import PhmCheckpointSubtypesEnum
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
@@ -46,7 +46,7 @@ class PhmCheckpointInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_component_prototype_ref: List[
+    context_component_prototype_ref: list[
         "PhmCheckpointInExecutableInstanceRef.ContextComponentPrototypeRef"
     ] = field(
         default_factory=list,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_alt_script import (
     StdAltScript,
@@ -27,14 +27,14 @@ class StdDesignatorT:
             "required": True,
         },
     )
-    std_alt_script: List[StdAltScript] = field(
+    std_alt_script: list[StdAltScript] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    std_variant_form: List[StdVariantForm] = field(
+    std_variant_form: list[StdVariantForm] = field(
         default_factory=list,
         metadata={
             "type": "Element",

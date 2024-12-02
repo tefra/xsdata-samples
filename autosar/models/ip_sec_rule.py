@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -379,7 +379,7 @@ class IpSecRule:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -390,7 +390,7 @@ class IpSecRule:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -401,7 +401,7 @@ class IpSecRule:
 
     @dataclass
     class LocalCertificateRefs:
-        local_certificate_ref: List[
+        local_certificate_ref: list[
             "IpSecRule.LocalCertificateRefs.LocalCertificateRef"
         ] = field(
             default_factory=list,
@@ -436,7 +436,7 @@ class IpSecRule:
 
     @dataclass
     class RemoteCertificateRefs:
-        remote_certificate_ref: List[
+        remote_certificate_ref: list[
             "IpSecRule.RemoteCertificateRefs.RemoteCertificateRef"
         ] = field(
             default_factory=list,
@@ -460,7 +460,7 @@ class IpSecRule:
 
     @dataclass
     class RemoteIpAddressRefs:
-        remote_ip_address_ref: List[
+        remote_ip_address_ref: list[
             "IpSecRule.RemoteIpAddressRefs.RemoteIpAddressRef"
         ] = field(
             default_factory=list,

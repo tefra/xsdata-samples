@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -196,7 +196,7 @@ class ServiceInstanceCollectionSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -207,7 +207,7 @@ class ServiceInstanceCollectionSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -218,7 +218,7 @@ class ServiceInstanceCollectionSet:
 
     @dataclass
     class ServiceInstances:
-        consumed_service_instance: List[ConsumedServiceInstance] = field(
+        consumed_service_instance: list[ConsumedServiceInstance] = field(
             default_factory=list,
             metadata={
                 "name": "CONSUMED-SERVICE-INSTANCE",
@@ -226,7 +226,7 @@ class ServiceInstanceCollectionSet:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        provided_service_instance: List[ProvidedServiceInstance] = field(
+        provided_service_instance: list[ProvidedServiceInstance] = field(
             default_factory=list,
             metadata={
                 "name": "PROVIDED-SERVICE-INSTANCE",

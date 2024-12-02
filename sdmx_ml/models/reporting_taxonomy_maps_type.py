@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.reporting_taxonomy_map_type import ReportingTaxonomyMapType
 
@@ -20,7 +19,7 @@ class ReportingTaxonomyMapsType:
         between reporting taxonomies.
     """
 
-    reporting_taxonomy_map: Tuple[ReportingTaxonomyMapType, ...] = field(
+    reporting_taxonomy_map: tuple[ReportingTaxonomyMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReportingTaxonomyMap",

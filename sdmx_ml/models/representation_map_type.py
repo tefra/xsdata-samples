@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.data_type import DataType
 from sdmx_ml.models.representation_map_base_type import (
@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class RepresentationMapType(RepresentationMapBaseType):
-    source_codelist_or_source_data_type: Tuple[Union[str, DataType], ...] = (
+    source_codelist_or_source_data_type: tuple[Union[str, DataType], ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -33,7 +33,7 @@ class RepresentationMapType(RepresentationMapBaseType):
             },
         )
     )
-    target_codelist_or_target_data_type: Tuple[Union[str, DataType], ...] = (
+    target_codelist_or_target_data_type: tuple[Union[str, DataType], ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -54,7 +54,7 @@ class RepresentationMapType(RepresentationMapBaseType):
             },
         )
     )
-    representation_mapping: Tuple[ValueMappingType, ...] = field(
+    representation_mapping: tuple[ValueMappingType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RepresentationMapping",

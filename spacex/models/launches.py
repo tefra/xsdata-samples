@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from typed_dataclass import typed_dataclass
 from xsdata.models.datatype import XmlDateTime
@@ -121,7 +121,7 @@ class Fairings(DictMixin):
             "type": "Element",
         },
     )
-    ships: List[str] = field(
+    ships: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -135,13 +135,13 @@ class Flickr(DictMixin):
     class Meta:
         name = "flickr"
 
-    small: List[str] = field(
+    small: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    original: List[str] = field(
+    original: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -330,25 +330,25 @@ class Launches(DictMixin):
             "type": "Element",
         },
     )
-    crew: List[str] = field(
+    crew: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ships: List[str] = field(
+    ships: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    capsules: List[str] = field(
+    capsules: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    payloads: List[str] = field(
+    payloads: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -375,7 +375,7 @@ class Launches(DictMixin):
             "type": "Element",
         },
     )
-    failures: List[Failures] = field(
+    failures: list[Failures] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -430,7 +430,7 @@ class Launches(DictMixin):
             "required": True,
         },
     )
-    cores: List[Cores] = field(
+    cores: list[Cores] = field(
         default_factory=list,
         metadata={
             "type": "Element",

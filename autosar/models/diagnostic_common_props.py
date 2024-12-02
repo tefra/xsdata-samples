@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .diagnostic_common_props_conditional import (
     DiagnosticCommonPropsConditional,
@@ -59,7 +59,7 @@ class DiagnosticCommonProps:
 
     @dataclass
     class DiagnosticCommonPropsVariants:
-        diagnostic_common_props_conditional: List[
+        diagnostic_common_props_conditional: list[
             DiagnosticCommonPropsConditional
         ] = field(
             default_factory=list,

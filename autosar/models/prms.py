@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
 from .general_parameter import GeneralParameter
@@ -52,7 +52,7 @@ class Prms:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prm: List[GeneralParameter] = field(
+    prm: list[GeneralParameter] = field(
         default_factory=list,
         metadata={
             "name": "PRM",
@@ -75,7 +75,7 @@ class Prms:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    si: List[str] = field(
+    si: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SI",

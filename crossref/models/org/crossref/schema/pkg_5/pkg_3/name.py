@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.given_name import (
     GivenName,
@@ -30,7 +30,7 @@ class Name:
             "required": True,
         },
     )
-    given_name: List[GivenName] = field(
+    given_name: list[GivenName] = field(
         default_factory=list,
         metadata={
             "type": "Element",

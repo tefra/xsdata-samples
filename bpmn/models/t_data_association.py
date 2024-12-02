@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .assignment import Assignment
 from .t_base_element import TBaseElement
@@ -13,7 +13,7 @@ class TDataAssociation(TBaseElement):
     class Meta:
         name = "tDataAssociation"
 
-    source_ref: List[str] = field(
+    source_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "sourceRef",
@@ -37,7 +37,7 @@ class TDataAssociation(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    assignment: List[Assignment] = field(
+    assignment: list[Assignment] = field(
         default_factory=list,
         metadata={
             "type": "Element",

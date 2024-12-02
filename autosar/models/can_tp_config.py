@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -256,7 +256,7 @@ class CanTpConfig:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -267,7 +267,7 @@ class CanTpConfig:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -289,7 +289,7 @@ class CanTpConfig:
 
     @dataclass
     class TpAddresss:
-        can_tp_address: List[CanTpAddress] = field(
+        can_tp_address: list[CanTpAddress] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-TP-ADDRESS",
@@ -300,7 +300,7 @@ class CanTpConfig:
 
     @dataclass
     class TpChannels:
-        can_tp_channel: List[CanTpChannel] = field(
+        can_tp_channel: list[CanTpChannel] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-TP-CHANNEL",
@@ -311,7 +311,7 @@ class CanTpConfig:
 
     @dataclass
     class TpConnections:
-        can_tp_connection: List[CanTpConnection] = field(
+        can_tp_connection: list[CanTpConnection] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-TP-CONNECTION",
@@ -322,7 +322,7 @@ class CanTpConfig:
 
     @dataclass
     class TpEcus:
-        can_tp_ecu: List[CanTpEcu] = field(
+        can_tp_ecu: list[CanTpEcu] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-TP-ECU",
@@ -333,7 +333,7 @@ class CanTpConfig:
 
     @dataclass
     class TpNodes:
-        can_tp_node: List[CanTpNode] = field(
+        can_tp_node: list[CanTpNode] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-TP-NODE",

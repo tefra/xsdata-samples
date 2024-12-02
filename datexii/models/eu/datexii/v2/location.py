@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.external_referencing import (
@@ -24,7 +24,7 @@ class Location(GroupOfLocations):
     :ivar location_extension:
     """
 
-    external_referencing: List[ExternalReferencing] = field(
+    external_referencing: list[ExternalReferencing] = field(
         default_factory=list,
         metadata={
             "name": "externalReferencing",

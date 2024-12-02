@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.fuel_type2_enum import FuelType2Enum
 from datexii.models.eu.datexii.v2.load_type2_enum import LoadType2Enum
@@ -32,7 +32,7 @@ class VehicleCharacteristicsExtended:
         'VehicleUsageTypeEnum'.
     """
 
-    emission_classification: List[str] = field(
+    emission_classification: list[str] = field(
         default_factory=list,
         metadata={
             "name": "emissionClassification",

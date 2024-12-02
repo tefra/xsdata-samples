@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_provided_port_prototype_subtypes_enum import (
     AbstractProvidedPortPrototypeSubtypesEnum,
@@ -52,7 +52,7 @@ class PModeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_component_ref: List[
+    context_component_ref: list[
         "PModeInSystemInstanceRef.ContextComponentRef"
     ] = field(
         default_factory=list,

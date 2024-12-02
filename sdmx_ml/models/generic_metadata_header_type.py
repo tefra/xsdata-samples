@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Tuple
+from typing import Any
 
 from sdmx_ml.models.base_header_type import BaseHeaderType
 from sdmx_ml.models.generic_metadata_structure_type import (
@@ -54,7 +54,7 @@ class GenericMetadataHeaderType(BaseHeaderType):
             "type": "Ignore",
         },
     )
-    structure: Tuple[GenericMetadataStructureType, ...] = field(
+    structure: tuple[GenericMetadataStructureType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Structure",

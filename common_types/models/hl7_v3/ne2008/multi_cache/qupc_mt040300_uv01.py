@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Bl,
@@ -22,7 +22,7 @@ class QupcMt040300Uv01CareProvisionCode:
     class Meta:
         name = "QUPC_MT040300UV01.CareProvisionCode"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -38,7 +38,7 @@ class QupcMt040300Uv01CareProvisionCode:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -68,7 +68,7 @@ class QupcMt040300Uv01CareProvisionReason:
     class Meta:
         name = "QUPC_MT040300UV01.CareProvisionReason"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -84,7 +84,7 @@ class QupcMt040300Uv01CareProvisionReason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -114,7 +114,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
     class Meta:
         name = "QUPC_MT040300UV01.CareRecordTimePeriod"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -130,7 +130,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -160,7 +160,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
     class Meta:
         name = "QUPC_MT040300UV01.ClinicalStatementTimePeriod"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -176,7 +176,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -206,7 +206,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
     class Meta:
         name = "QUPC_MT040300UV01.IncludeCarePlanAttachment"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -222,7 +222,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -252,7 +252,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
     class Meta:
         name = "QUPC_MT040300UV01.MaximumHistoryStatements"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -268,7 +268,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -298,7 +298,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
     class Meta:
         name = "QUPC_MT040300UV01.PatientAdministrativeGender"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -314,7 +314,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -344,7 +344,7 @@ class QupcMt040300Uv01PatientBirthTime:
     class Meta:
         name = "QUPC_MT040300UV01.PatientBirthTime"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -360,7 +360,7 @@ class QupcMt040300Uv01PatientBirthTime:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -390,7 +390,7 @@ class QupcMt040300Uv01PatientId:
     class Meta:
         name = "QUPC_MT040300UV01.PatientId"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -406,7 +406,7 @@ class QupcMt040300Uv01PatientId:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -436,7 +436,7 @@ class QupcMt040300Uv01PatientName:
     class Meta:
         name = "QUPC_MT040300UV01.PatientName"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -452,7 +452,7 @@ class QupcMt040300Uv01PatientName:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -482,7 +482,7 @@ class QupcMt040300Uv01ParameterList:
     class Meta:
         name = "QUPC_MT040300UV01.ParameterList"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -498,7 +498,7 @@ class QupcMt040300Uv01ParameterList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -515,7 +515,7 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    care_provision_reason: List[QupcMt040300Uv01CareProvisionReason] = field(
+    care_provision_reason: list[QupcMt040300Uv01CareProvisionReason] = field(
         default_factory=list,
         metadata={
             "name": "careProvisionReason",

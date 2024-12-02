@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.transformation_scheme_base_type import (
     TransformationSchemeBaseType,
@@ -74,7 +74,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
             "pattern": r".+\.transformation\.CustomTypeScheme=.+",
         },
     )
-    ruleset_scheme: Tuple[str, ...] = field(
+    ruleset_scheme: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "RulesetScheme",
@@ -83,7 +83,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
             "pattern": r".+\.transformation\.RulesetScheme=.+",
         },
     )
-    user_defined_operator_scheme: Tuple[str, ...] = field(
+    user_defined_operator_scheme: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "UserDefinedOperatorScheme",

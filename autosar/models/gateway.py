@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -227,7 +227,7 @@ class Gateway:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -238,7 +238,7 @@ class Gateway:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -260,7 +260,7 @@ class Gateway:
 
     @dataclass
     class FrameMappings:
-        frame_mapping: List[FrameMapping] = field(
+        frame_mapping: list[FrameMapping] = field(
             default_factory=list,
             metadata={
                 "name": "FRAME-MAPPING",
@@ -271,7 +271,7 @@ class Gateway:
 
     @dataclass
     class IPduMappings:
-        i_pdu_mapping: List[IPduMapping] = field(
+        i_pdu_mapping: list[IPduMapping] = field(
             default_factory=list,
             metadata={
                 "name": "I-PDU-MAPPING",
@@ -282,7 +282,7 @@ class Gateway:
 
     @dataclass
     class SignalMappings:
-        i_signal_mapping: List[ISignalMapping] = field(
+        i_signal_mapping: list[ISignalMapping] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-MAPPING",

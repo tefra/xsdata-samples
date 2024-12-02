@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.structured_text import StructuredText
 from sdmx_ml.models.text import Text
@@ -19,7 +18,7 @@ class ValueType:
     TextValueType, and StructuredTextValueType for details.
     """
 
-    content: Tuple[object, ...] = field(
+    content: tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",

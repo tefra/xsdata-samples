@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -200,7 +200,7 @@ class DiagnosticFimAliasEventGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -211,7 +211,7 @@ class DiagnosticFimAliasEventGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -222,7 +222,7 @@ class DiagnosticFimAliasEventGroup:
 
     @dataclass
     class GroupedAliasEventRefs:
-        grouped_alias_event_ref: List[
+        grouped_alias_event_ref: list[
             "DiagnosticFimAliasEventGroup.GroupedAliasEventRefs.GroupedAliasEventRef"
         ] = field(
             default_factory=list,

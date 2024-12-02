@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -181,7 +181,7 @@ class IPv6ExtHeaderFilterList:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -192,7 +192,7 @@ class IPv6ExtHeaderFilterList:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -208,7 +208,7 @@ class IPv6ExtHeaderFilterList:
             allowed by this filter.
         """
 
-        allowed_i_pv_6_ext_header: List[PositiveInteger] = field(
+        allowed_i_pv_6_ext_header: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ALLOWED-I-PV-6-EXT-HEADER",

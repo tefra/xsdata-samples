@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.metadata_provision_agreement_base_type import (
     MetadataProvisionAgreementBaseType,
@@ -49,7 +49,7 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
             "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
         },
     )
-    target: Tuple[str, ...] = field(
+    target: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Target",

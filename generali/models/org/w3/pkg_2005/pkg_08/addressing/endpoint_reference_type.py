@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Optional
 
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.attributed_uritype import (
     AttributedUritype,
@@ -39,14 +39,14 @@ class EndpointReferenceType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         },
     )
-    other_element: List[object] = field(
+    other_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

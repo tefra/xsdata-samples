@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .complex_behavior_definition import ComplexBehaviorDefinition
@@ -57,7 +57,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    complex_behavior_definition: List[ComplexBehaviorDefinition] = field(
+    complex_behavior_definition: list[ComplexBehaviorDefinition] = field(
         default_factory=list,
         metadata={
             "name": "complexBehaviorDefinition",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     ReferrableRefConditional,
@@ -46,7 +46,7 @@ class SdgContents:
     class Meta:
         name = "SDG-CONTENTS"
 
-    sdx_ref: List["SdgContents.SdxRef"] = field(
+    sdx_ref: list["SdgContents.SdxRef"] = field(
         default_factory=list,
         metadata={
             "name": "SDX-REF",
@@ -54,7 +54,7 @@ class SdgContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdxf: List[ReferrableRefConditional] = field(
+    sdxf: list[ReferrableRefConditional] = field(
         default_factory=list,
         metadata={
             "name": "SDXF",
@@ -62,7 +62,7 @@ class SdgContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd: List[Sd] = field(
+    sd: list[Sd] = field(
         default_factory=list,
         metadata={
             "name": "SD",
@@ -70,7 +70,7 @@ class SdgContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdg: List[Sdg] = field(
+    sdg: list[Sdg] = field(
         default_factory=list,
         metadata={
             "name": "SDG",
@@ -78,7 +78,7 @@ class SdgContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdf: List[Sdf] = field(
+    sdf: list[Sdf] = field(
         default_factory=list,
         metadata={
             "name": "SDF",

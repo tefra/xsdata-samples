@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ApplicablePeriod,
@@ -135,7 +135,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    purpose: Tuple[Purpose, ...] = field(
+    purpose: tuple[Purpose, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Purpose",
@@ -160,7 +160,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -176,7 +176,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    applicable_regulation: Tuple[ApplicableRegulation, ...] = field(
+    applicable_regulation: tuple[ApplicableRegulation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ApplicableRegulation",
@@ -184,7 +184,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    guarantee_document_reference: Tuple[GuaranteeDocumentReference, ...] = (
+    guarantee_document_reference: tuple[GuaranteeDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -194,7 +194,7 @@ class GuaranteeCertificateType:
             },
         )
     )
-    immobilized_security: Tuple[ImmobilizedSecurity, ...] = field(
+    immobilized_security: tuple[ImmobilizedSecurity, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ImmobilizedSecurity",
@@ -202,7 +202,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",

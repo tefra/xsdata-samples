@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.accessibility_enum import AccessibilityEnum
 from datexii.models.eu.datexii.v2.availability_enum import AvailabilityEnum
@@ -57,7 +57,7 @@ class ParkingEquipmentOrServiceFacility:
     :ivar parking_equipment_or_service_facility_extension:
     """
 
-    equipment_or_service_facility_identifier: List[str] = field(
+    equipment_or_service_facility_identifier: list[str] = field(
         default_factory=list,
         metadata={
             "name": "equipmentOrServiceFacilityIdentifier",
@@ -97,7 +97,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accessibility: List[AccessibilityEnum] = field(
+    accessibility: list[AccessibilityEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -127,7 +127,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    applicable_for_user: List[UserTypeEnum] = field(
+    applicable_for_user: list[UserTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableForUser",
@@ -159,7 +159,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    applicable_for_vehicles: List[VehicleCharacteristics] = field(
+    applicable_for_vehicles: list[VehicleCharacteristics] = field(
         default_factory=list,
         metadata={
             "name": "applicableForVehicles",

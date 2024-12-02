@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.conditions import Conditions
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -35,7 +35,7 @@ class PoorEnvironmentConditions(Conditions):
     :ivar poor_environment_conditions_extension:
     """
 
-    poor_environment_type: List[PoorEnvironmentTypeEnum] = field(
+    poor_environment_type: list[PoorEnvironmentTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "poorEnvironmentType",

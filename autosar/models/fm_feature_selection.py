@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -232,7 +232,7 @@ class FmFeatureSelection:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -243,7 +243,7 @@ class FmFeatureSelection:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -265,7 +265,7 @@ class FmFeatureSelection:
 
     @dataclass
     class AttributeValues:
-        fm_attribute_value: List[FmAttributeValue] = field(
+        fm_attribute_value: list[FmAttributeValue] = field(
             default_factory=list,
             metadata={
                 "name": "FM-ATTRIBUTE-VALUE",

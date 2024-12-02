@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.concept_scheme_type import ConceptSchemeType
 
@@ -22,7 +21,7 @@ class ConceptSchemesType:
         simple hierarchies.
     """
 
-    concept_scheme: Tuple[ConceptSchemeType, ...] = field(
+    concept_scheme: tuple[ConceptSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConceptScheme",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     AwardId,
@@ -32,21 +32,21 @@ class AwardGroup:
         name = "award-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    funding_source: List[FundingSource] = field(
+    funding_source: list[FundingSource] = field(
         default_factory=list,
         metadata={
             "name": "funding-source",
             "type": "Element",
         },
     )
-    support_source: List[SupportSource] = field(
+    support_source: list[SupportSource] = field(
         default_factory=list,
         metadata={
             "name": "support-source",
             "type": "Element",
         },
     )
-    award_id: List[AwardId] = field(
+    award_id: list[AwardId] = field(
         default_factory=list,
         metadata={
             "name": "award-id",
@@ -67,14 +67,14 @@ class AwardGroup:
             "type": "Element",
         },
     )
-    principal_award_recipient: List[PrincipalAwardRecipient] = field(
+    principal_award_recipient: list[PrincipalAwardRecipient] = field(
         default_factory=list,
         metadata={
             "name": "principal-award-recipient",
             "type": "Element",
         },
     )
-    principal_investigator: List[PrincipalInvestigator] = field(
+    principal_investigator: list[PrincipalInvestigator] = field(
         default_factory=list,
         metadata={
             "name": "principal-investigator",
@@ -100,7 +100,7 @@ class AwardGroup:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",

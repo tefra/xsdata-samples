@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.dimension import Dimension
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -34,7 +34,7 @@ class ParkingSpace1(ParkingSpaceBasics):
     class Meta:
         name = "ParkingSpace"
 
-    identical_to_parking_space: List[str] = field(
+    identical_to_parking_space: list[str] = field(
         default_factory=list,
         metadata={
             "name": "identicalToParkingSpace",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .application_endpoint_ref_conditional import (
@@ -208,7 +208,7 @@ class EventHandler:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -230,7 +230,7 @@ class EventHandler:
 
     @dataclass
     class ConsumedEventGroupRefs:
-        consumed_event_group_ref: List[
+        consumed_event_group_ref: list[
             "EventHandler.ConsumedEventGroupRefs.ConsumedEventGroupRef"
         ] = field(
             default_factory=list,
@@ -254,7 +254,7 @@ class EventHandler:
 
     @dataclass
     class EventMulticastAddresss:
-        application_endpoint_ref_conditional: List[
+        application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
         ] = field(
             default_factory=list,
@@ -267,7 +267,7 @@ class EventHandler:
 
     @dataclass
     class PduActivationRoutingGroups:
-        pdu_activation_routing_group: List[PduActivationRoutingGroup] = field(
+        pdu_activation_routing_group: list[PduActivationRoutingGroup] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-ACTIVATION-ROUTING-GROUP",
@@ -278,7 +278,7 @@ class EventHandler:
 
     @dataclass
     class RoutingGroupRefs:
-        routing_group_ref: List[
+        routing_group_ref: list[
             "EventHandler.RoutingGroupRefs.RoutingGroupRef"
         ] = field(
             default_factory=list,
@@ -302,7 +302,7 @@ class EventHandler:
 
     @dataclass
     class SdServerEgTimingConfigs:
-        someip_sd_server_event_group_timing_config_ref_conditional: List[
+        someip_sd_server_event_group_timing_config_ref_conditional: list[
             SomeipSdServerEventGroupTimingConfigRefConditional
         ] = field(
             default_factory=list,

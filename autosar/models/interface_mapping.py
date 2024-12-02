@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -231,7 +231,7 @@ class InterfaceMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -242,7 +242,7 @@ class InterfaceMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -253,7 +253,7 @@ class InterfaceMapping:
 
     @dataclass
     class EventMappings:
-        event_mapping: List[EventMapping] = field(
+        event_mapping: list[EventMapping] = field(
             default_factory=list,
             metadata={
                 "name": "EVENT-MAPPING",
@@ -264,7 +264,7 @@ class InterfaceMapping:
 
     @dataclass
     class FieldMappings:
-        field_mapping: List[FieldMapping] = field(
+        field_mapping: list[FieldMapping] = field(
             default_factory=list,
             metadata={
                 "name": "FIELD-MAPPING",
@@ -275,7 +275,7 @@ class InterfaceMapping:
 
     @dataclass
     class FireAndForgetMappings:
-        fire_and_forget_mapping: List[FireAndForgetMapping] = field(
+        fire_and_forget_mapping: list[FireAndForgetMapping] = field(
             default_factory=list,
             metadata={
                 "name": "FIRE-AND-FORGET-MAPPING",
@@ -286,7 +286,7 @@ class InterfaceMapping:
 
     @dataclass
     class MethodMappings:
-        method_mapping: List[MethodMapping] = field(
+        method_mapping: list[MethodMapping] = field(
             default_factory=list,
             metadata={
                 "name": "METHOD-MAPPING",

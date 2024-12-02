@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .t_base_element import TBaseElement
@@ -20,7 +20,7 @@ class TLane(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    flow_node_ref: List[str] = field(
+    flow_node_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "flowNodeRef",
@@ -63,7 +63,7 @@ class TLaneSet(TBaseElement):
     class Meta:
         name = "tLaneSet"
 
-    lane: List[Lane] = field(
+    lane: list[Lane] = field(
         default_factory=list,
         metadata={
             "type": "Element",

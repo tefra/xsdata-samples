@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -293,7 +293,7 @@ class SenderReceiverInterface:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -304,7 +304,7 @@ class SenderReceiverInterface:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -315,7 +315,7 @@ class SenderReceiverInterface:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -323,7 +323,7 @@ class SenderReceiverInterface:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -333,7 +333,7 @@ class SenderReceiverInterface:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -344,7 +344,7 @@ class SenderReceiverInterface:
 
     @dataclass
     class Namespaces:
-        symbol_props: List[SymbolProps] = field(
+        symbol_props: list[SymbolProps] = field(
             default_factory=list,
             metadata={
                 "name": "SYMBOL-PROPS",
@@ -355,7 +355,7 @@ class SenderReceiverInterface:
 
     @dataclass
     class DataElements:
-        variable_data_prototype: List[VariableDataPrototype] = field(
+        variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-DATA-PROTOTYPE",
@@ -366,7 +366,7 @@ class SenderReceiverInterface:
 
     @dataclass
     class InvalidationPolicys:
-        invalidation_policy: List[InvalidationPolicy] = field(
+        invalidation_policy: list[InvalidationPolicy] = field(
             default_factory=list,
             metadata={
                 "name": "INVALIDATION-POLICY",
@@ -377,7 +377,7 @@ class SenderReceiverInterface:
 
     @dataclass
     class MetaDataItemSets:
-        meta_data_item_set: List[MetaDataItemSet] = field(
+        meta_data_item_set: list[MetaDataItemSet] = field(
             default_factory=list,
             metadata={
                 "name": "META-DATA-ITEM-SET",

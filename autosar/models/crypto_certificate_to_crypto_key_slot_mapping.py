@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .crypto_certificate_subtypes_enum import CryptoCertificateSubtypesEnum
 from .crypto_key_slot_subtypes_enum import CryptoKeySlotSubtypesEnum
@@ -82,7 +82,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
 
     @dataclass
     class CryptoKeySlotRefs:
-        crypto_key_slot_ref: List[
+        crypto_key_slot_ref: list[
             "CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs.CryptoKeySlotRef"
         ] = field(
             default_factory=list,

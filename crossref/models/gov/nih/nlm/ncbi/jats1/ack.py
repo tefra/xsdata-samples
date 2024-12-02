@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Abstract,
@@ -27,7 +27,7 @@ class Ack:
         name = "ack"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    object_id: List[ObjectId] = field(
+    object_id: list[ObjectId] = field(
         default_factory=list,
         metadata={
             "name": "object-id",
@@ -46,39 +46,39 @@ class Ack:
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: List[KwdGroup] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: List[SubjGroup] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sec: List[Sec] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: List[RefList] = field(
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",

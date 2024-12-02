@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristic_value_type import (
     CharacteristicValueType,
@@ -18,7 +17,7 @@ class CharacteristicTypeValues:
     class Meta:
         global_type = False
 
-    value: List[CharacteristicValueType] = field(
+    value: list[CharacteristicValueType] = field(
         default_factory=list,
         metadata={
             "name": "Value",

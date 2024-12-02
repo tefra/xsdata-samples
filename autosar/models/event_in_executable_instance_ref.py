@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
 from .ref import Ref
@@ -48,7 +48,7 @@ class EventInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_sw_component_prototype_ref: List[
+    context_sw_component_prototype_ref: list[
         "EventInExecutableInstanceRef.ContextSwComponentPrototypeRef"
     ] = field(
         default_factory=list,

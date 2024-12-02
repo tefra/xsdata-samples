@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from tpdb.models.var_declaration import VarDeclaration
 
@@ -9,7 +8,7 @@ class HigherOrderSignatureVariableTypeInfo:
     class Meta:
         global_type = False
 
-    var_declaration: List[VarDeclaration] = field(
+    var_declaration: list[VarDeclaration] = field(
         default_factory=list,
         metadata={
             "name": "varDeclaration",

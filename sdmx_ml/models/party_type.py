@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.contact_type_2 import ContactType2
 from sdmx_ml.models.name import Name
@@ -19,7 +19,7 @@ class PartyType:
     :ivar id: The id attribute holds the identification of the party.
     """
 
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -27,7 +27,7 @@ class PartyType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    contact: Tuple[ContactType2, ...] = field(
+    contact: tuple[ContactType2, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Contact",

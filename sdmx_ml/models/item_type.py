@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, ForwardRef, Optional, Tuple, Union
+from typing import Any, ForwardRef, Optional, Union
 
 from sdmx_ml.models.concept_representation import ConceptRepresentation
 from sdmx_ml.models.contact_type_1 import ContactType1
@@ -21,7 +21,7 @@ class ItemType(ItemBaseType):
     item, but if so should restrict the actual types of item allowed.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             str,
             "CustomType",
@@ -358,7 +358,7 @@ class OrganisationType(BaseOrganisationType):
     :ivar contact: Contact describes a contact for the organisation,
     """
 
-    contact: Tuple[ContactType1, ...] = field(
+    contact: tuple[ContactType1, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Contact",
@@ -377,7 +377,7 @@ class ReportingCategoryType(ReportingCategoryBaseType):
     definition.
     """
 
-    structural_metadata_or_provisioning_metadata: Tuple[
+    structural_metadata_or_provisioning_metadata: tuple[
         Union[
             "ReportingCategoryType.StructuralMetadata",
             "ReportingCategoryType.ProvisioningMetadata",
@@ -906,7 +906,7 @@ class VtlMappingType(VtlMappingBaseType):
         scheme in which it is defined.
     """
 
-    choice_1: Tuple[
+    choice_1: tuple[
         Union[
             "VtlMappingType.Dataflow",
             EmptyType,

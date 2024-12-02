@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -9,7 +9,7 @@ class LocalDataTypeEntry:
     class Meta:
         global_type = False
 
-    value: List[str] = field(
+    value: list[str] = field(
         default_factory=list,
         metadata={
             "name": "Value",

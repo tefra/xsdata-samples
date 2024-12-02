@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ethernet_communication_connector_subtypes_enum import (
     EthernetCommunicationConnectorSubtypesEnum,
@@ -96,7 +96,7 @@ class NmNetworkHandle:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -107,7 +107,7 @@ class NmNetworkHandle:
 
     @dataclass
     class PartialNetworkRefs:
-        partial_network_ref: List[
+        partial_network_ref: list[
             "NmNetworkHandle.PartialNetworkRefs.PartialNetworkRef"
         ] = field(
             default_factory=list,
@@ -131,7 +131,7 @@ class NmNetworkHandle:
 
     @dataclass
     class VlanRefs:
-        vlan_ref: List["NmNetworkHandle.VlanRefs.VlanRef"] = field(
+        vlan_ref: list["NmNetworkHandle.VlanRefs.VlanRef"] = field(
             default_factory=list,
             metadata={
                 "name": "VLAN-REF",

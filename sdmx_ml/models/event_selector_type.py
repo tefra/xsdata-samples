@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Union
 
 from sdmx_ml.models.data_registration_events_type import (
     DataRegistrationEventsType,
@@ -22,7 +22,7 @@ class EventSelectorType:
     which they wish to receive notifications.
     """
 
-    structural_repository_events_or_data_registration_events_or_metadata_registration_events: Tuple[
+    structural_repository_events_or_data_registration_events_or_metadata_registration_events: tuple[
         Union[
             StructuralRepositoryEventsType,
             DataRegistrationEventsType,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .integer_value_variation_point import IntegerValueVariationPoint
 from .ref import Ref
@@ -99,7 +99,7 @@ class SwAxisGeneric:
 
     @dataclass
     class SwGenericAxisParams:
-        sw_generic_axis_param: List[SwGenericAxisParam] = field(
+        sw_generic_axis_param: list[SwGenericAxisParam] = field(
             default_factory=list,
             metadata={
                 "name": "SW-GENERIC-AXIS-PARAM",

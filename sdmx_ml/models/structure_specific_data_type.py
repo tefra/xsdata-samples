@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.data_set_type import DataSetType
 from sdmx_ml.models.footer import Footer
@@ -32,7 +32,7 @@ class StructureSpecificDataType:
             "required": True,
         },
     )
-    data_set: Tuple[DataSetType, ...] = field(
+    data_set: tuple[DataSetType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DataSet",

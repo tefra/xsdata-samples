@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     PublisherLoc,
@@ -19,7 +19,7 @@ class Publisher:
         name = "publisher"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    publisher_name: List[PublisherName] = field(
+    publisher_name: list[PublisherName] = field(
         default_factory=list,
         metadata={
             "name": "publisher-name",
@@ -27,7 +27,7 @@ class Publisher:
             "sequence": 1,
         },
     )
-    publisher_loc: List[PublisherLoc] = field(
+    publisher_loc: list[PublisherLoc] = field(
         default_factory=list,
         metadata={
             "name": "publisher-loc",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.payment_request_acknowledgment import (
     FinancialInstitutionDetail,
@@ -588,7 +588,7 @@ class LegalReportingParty:
 
 @dataclass(kw_only=True)
 class ListOfPaymentDocumentDetail:
-    payment_document_detail: List[PaymentDocumentDetail] = field(
+    payment_document_detail: list[PaymentDocumentDetail] = field(
         default_factory=list,
         metadata={
             "name": "PaymentDocumentDetail",
@@ -772,7 +772,7 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    receiving_fispecific_id: List[ReceivingFispecificId] = field(
+    receiving_fispecific_id: list[ReceivingFispecificId] = field(
         default_factory=list,
         metadata={
             "name": "ReceivingFISpecificID",
@@ -983,7 +983,7 @@ class PaymentRequestDetail:
 
 @dataclass(kw_only=True)
 class ListOfPaymentRequestDetail:
-    payment_request_detail: List[PaymentRequestDetail] = field(
+    payment_request_detail: list[PaymentRequestDetail] = field(
         default_factory=list,
         metadata={
             "name": "PaymentRequestDetail",

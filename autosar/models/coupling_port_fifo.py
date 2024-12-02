@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -191,7 +191,7 @@ class CouplingPortFifo:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -202,7 +202,7 @@ class CouplingPortFifo:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -218,7 +218,7 @@ class CouplingPortFifo:
             which shall be handled by this Fifo. range: 0-7
         """
 
-        assigned_traffic_class: List[PositiveInteger] = field(
+        assigned_traffic_class: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "ASSIGNED-TRAFFIC-CLASS",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_mgr_needs import BswMgrNeeds
@@ -217,7 +217,7 @@ class BswServiceDependency:
 
     @dataclass
     class AssignedDataTypes:
-        role_based_data_type_assignment: List[RoleBasedDataTypeAssignment] = (
+        role_based_data_type_assignment: list[RoleBasedDataTypeAssignment] = (
             field(
                 default_factory=list,
                 metadata={
@@ -230,7 +230,7 @@ class BswServiceDependency:
 
     @dataclass
     class AssignedDatas:
-        role_based_data_assignment: List[RoleBasedDataAssignment] = field(
+        role_based_data_assignment: list[RoleBasedDataAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-DATA-ASSIGNMENT",
@@ -241,7 +241,7 @@ class BswServiceDependency:
 
     @dataclass
     class AssignedEntryRoles:
-        role_based_bsw_module_entry_assignment: List[
+        role_based_bsw_module_entry_assignment: list[
             RoleBasedBswModuleEntryAssignment
         ] = field(
             default_factory=list,

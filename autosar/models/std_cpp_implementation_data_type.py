@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -314,7 +314,7 @@ class StdCppImplementationDataType:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -325,7 +325,7 @@ class StdCppImplementationDataType:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -336,7 +336,7 @@ class StdCppImplementationDataType:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -344,7 +344,7 @@ class StdCppImplementationDataType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -354,7 +354,7 @@ class StdCppImplementationDataType:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -365,7 +365,7 @@ class StdCppImplementationDataType:
 
     @dataclass
     class Namespaces:
-        symbol_props: List[SymbolProps] = field(
+        symbol_props: list[SymbolProps] = field(
             default_factory=list,
             metadata={
                 "name": "SYMBOL-PROPS",
@@ -376,7 +376,7 @@ class StdCppImplementationDataType:
 
     @dataclass
     class SubElements:
-        cpp_implementation_data_type_element: List[
+        cpp_implementation_data_type_element: list[
             CppImplementationDataTypeElement
         ] = field(
             default_factory=list,
@@ -389,7 +389,7 @@ class StdCppImplementationDataType:
 
     @dataclass
     class TemplateArguments:
-        cpp_template_argument: List[CppTemplateArgument] = field(
+        cpp_template_argument: list[CppTemplateArgument] = field(
             default_factory=list,
             metadata={
                 "name": "CPP-TEMPLATE-ARGUMENT",

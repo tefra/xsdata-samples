@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .autosar_data_type_subtypes_enum import AutosarDataTypeSubtypesEnum
 from .identifier import Identifier
@@ -76,7 +76,7 @@ class IncludedDataTypeSet:
 
     @dataclass
     class DataTypeRefs:
-        data_type_ref: List["IncludedDataTypeSet.DataTypeRefs.DataTypeRef"] = (
+        data_type_ref: list["IncludedDataTypeSet.DataTypeRefs.DataTypeRef"] = (
             field(
                 default_factory=list,
                 metadata={

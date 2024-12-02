@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Tuple, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlPeriod
 
@@ -87,7 +87,7 @@ class TextFormatType:
         multiple values in different languages.
     """
 
-    sentinel_value: Tuple[SentinelValueType, ...] = field(
+    sentinel_value: tuple[SentinelValueType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SentinelValue",

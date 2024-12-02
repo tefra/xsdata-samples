@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
@@ -59,7 +59,7 @@ class VmsPictogram:
     :ivar vms_pictogram_extension:
     """
 
-    pictogram_description: List[VmsDatexPictogramEnum] = field(
+    pictogram_description: list[VmsDatexPictogramEnum] = field(
         default_factory=list,
         metadata={
             "name": "pictogramDescription",

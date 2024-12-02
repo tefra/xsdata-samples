@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .date import Date
 from .modification import Modification
@@ -123,7 +123,7 @@ class DocRevision:
 
     @dataclass
     class Modifications:
-        modification: List[Modification] = field(
+        modification: list[Modification] = field(
             default_factory=list,
             metadata={
                 "name": "MODIFICATION",

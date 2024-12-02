@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_optional_type_categories_category_code import (
     BaseReferenceComponentOptionalTypeCategoriesCategoryCode,
@@ -22,7 +21,7 @@ class BaseReferenceComponentOptionalTypeCategories:
     class Meta:
         global_type = False
 
-    category_code: List[
+    category_code: list[
         BaseReferenceComponentOptionalTypeCategoriesCategoryCode
     ] = field(
         default_factory=list,

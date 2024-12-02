@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.order_confirmation import DeliveryComplete
 from xcbl.models.remittance_advice import PurchaseOrderLineItemNumber
@@ -509,7 +509,7 @@ class LineItemGoodsCondition:
 
 @dataclass(kw_only=True)
 class ListOfDestinationRef:
-    destination_ref: List[DestinationRef] = field(
+    destination_ref: list[DestinationRef] = field(
         default_factory=list,
         metadata={
             "name": "DestinationRef",
@@ -521,7 +521,7 @@ class ListOfDestinationRef:
 
 @dataclass(kw_only=True)
 class ListOfGoodsCondition:
-    goods_condition: List[GoodsCondition] = field(
+    goods_condition: list[GoodsCondition] = field(
         default_factory=list,
         metadata={
             "name": "GoodsCondition",
@@ -533,7 +533,7 @@ class ListOfGoodsCondition:
 
 @dataclass(kw_only=True)
 class ListOfGoodsReceiptOrderReference:
-    goods_receipt_order_reference: List[GoodsReceiptOrderReference] = field(
+    goods_receipt_order_reference: list[GoodsReceiptOrderReference] = field(
         default_factory=list,
         metadata={
             "name": "GoodsReceiptOrderReference",
@@ -632,7 +632,7 @@ class GoodsReceiptReferences:
 
 @dataclass(kw_only=True)
 class ListOfGoodsReceiptItemOrderReference:
-    goods_receipt_item_order_reference: List[
+    goods_receipt_item_order_reference: list[
         GoodsReceiptItemOrderReference
     ] = field(
         default_factory=list,
@@ -646,7 +646,7 @@ class ListOfGoodsReceiptItemOrderReference:
 
 @dataclass(kw_only=True)
 class ListOfLineItemGoodsCondition:
-    line_item_goods_condition: List[LineItemGoodsCondition] = field(
+    line_item_goods_condition: list[LineItemGoodsCondition] = field(
         default_factory=list,
         metadata={
             "name": "LineItemGoodsCondition",
@@ -730,7 +730,7 @@ class GoodsReceiptHeader:
             "required": True,
         }
     )
-    terms_of_delivery: List[TermsOfDelivery] = field(
+    terms_of_delivery: list[TermsOfDelivery] = field(
         default_factory=list,
         metadata={
             "name": "TermsOfDelivery",
@@ -925,7 +925,7 @@ class GoodsReceiptItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfGoodsReceiptItemDetail:
-    goods_receipt_item_detail: List[GoodsReceiptItemDetail] = field(
+    goods_receipt_item_detail: list[GoodsReceiptItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "GoodsReceiptItemDetail",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .auditing import Auditing
@@ -28,7 +28,7 @@ class TFlowElement(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    category_value_ref: List[QName] = field(
+    category_value_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "categoryValueRef",

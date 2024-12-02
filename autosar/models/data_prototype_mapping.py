@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -188,7 +188,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class SubElementMappings:
-        sub_element_mapping: List[SubElementMapping] = field(
+        sub_element_mapping: list[SubElementMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SUB-ELEMENT-MAPPING",
@@ -199,7 +199,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class TextTableMappings:
-        text_table_mapping: List[TextTableMapping] = field(
+        text_table_mapping: list[TextTableMapping] = field(
             default_factory=list,
             metadata={
                 "name": "TEXT-TABLE-MAPPING",

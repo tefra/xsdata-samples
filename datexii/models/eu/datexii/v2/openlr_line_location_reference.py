@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.openlr_last_location_reference_point import (
@@ -20,7 +20,7 @@ class OpenlrLineLocationReference:
     points and a terminating last location reference point.
     """
 
-    openlr_location_reference_point: List[OpenlrLocationReferencePoint] = (
+    openlr_location_reference_point: list[OpenlrLocationReferencePoint] = (
         field(
             default_factory=list,
             metadata={

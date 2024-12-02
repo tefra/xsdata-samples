@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev_journal_title import (
     AbbrevJournalTitle,
@@ -25,28 +25,28 @@ class JournalTitleGroup:
         name = "journal-title-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    journal_title: List[JournalTitle] = field(
+    journal_title: list[JournalTitle] = field(
         default_factory=list,
         metadata={
             "name": "journal-title",
             "type": "Element",
         },
     )
-    journal_subtitle: List[JournalSubtitle] = field(
+    journal_subtitle: list[JournalSubtitle] = field(
         default_factory=list,
         metadata={
             "name": "journal-subtitle",
             "type": "Element",
         },
     )
-    trans_title_group: List[TransTitleGroup] = field(
+    trans_title_group: list[TransTitleGroup] = field(
         default_factory=list,
         metadata={
             "name": "trans-title-group",
             "type": "Element",
         },
     )
-    abbrev_journal_title: List[AbbrevJournalTitle] = field(
+    abbrev_journal_title: list[AbbrevJournalTitle] = field(
         default_factory=list,
         metadata={
             "name": "abbrev-journal-title",

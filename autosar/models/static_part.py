@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
@@ -81,7 +81,7 @@ class StaticPart:
 
     @dataclass
     class SegmentPositions:
-        segment_position: List[SegmentPosition] = field(
+        segment_position: list[SegmentPosition] = field(
             default_factory=list,
             metadata={
                 "name": "SEGMENT-POSITION",

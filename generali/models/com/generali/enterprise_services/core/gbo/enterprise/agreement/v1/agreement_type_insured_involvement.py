@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insured_involvement import (
     InsuredInvolvement,
@@ -15,7 +14,7 @@ class AgreementTypeInsuredInvolvement:
     class Meta:
         global_type = False
 
-    insured: List[InsuredInvolvement] = field(
+    insured: list[InsuredInvolvement] = field(
         default_factory=list,
         metadata={
             "name": "Insured",

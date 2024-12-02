@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -250,7 +250,7 @@ class SecurityEventContextMappingCommConnector:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -261,7 +261,7 @@ class SecurityEventContextMappingCommConnector:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -272,7 +272,7 @@ class SecurityEventContextMappingCommConnector:
 
     @dataclass
     class FilterChains:
-        security_event_filter_chain_ref_conditional: List[
+        security_event_filter_chain_ref_conditional: list[
             SecurityEventFilterChainRefConditional
         ] = field(
             default_factory=list,
@@ -285,7 +285,7 @@ class SecurityEventContextMappingCommConnector:
 
     @dataclass
     class IdsmInstances:
-        idsm_instance_ref_conditional: List[IdsmInstanceRefConditional] = (
+        idsm_instance_ref_conditional: list[IdsmInstanceRefConditional] = (
             field(
                 default_factory=list,
                 metadata={
@@ -298,7 +298,7 @@ class SecurityEventContextMappingCommConnector:
 
     @dataclass
     class MappedSecurityEvents:
-        security_event_context_props: List[SecurityEventContextProps] = field(
+        security_event_context_props: list[SecurityEventContextProps] = field(
             default_factory=list,
             metadata={
                 "name": "SECURITY-EVENT-CONTEXT-PROPS",
@@ -309,7 +309,7 @@ class SecurityEventContextMappingCommConnector:
 
     @dataclass
     class CommConnectors:
-        communication_connector_ref_conditional: List[
+        communication_connector_ref_conditional: list[
             CommunicationConnectorRefConditional
         ] = field(
             default_factory=list,

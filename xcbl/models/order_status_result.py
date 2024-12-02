@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.price_check_result import (
     ErrorInfo,
@@ -614,7 +614,7 @@ class OrderStatusResultItem:
             "required": True,
         }
     )
-    item_status: List[ItemStatus] = field(
+    item_status: list[ItemStatus] = field(
         default_factory=list,
         metadata={
             "name": "ItemStatus",
@@ -626,7 +626,7 @@ class OrderStatusResultItem:
 
 @dataclass(kw_only=True)
 class ListOfOrderStatusResultItem:
-    order_status_result_item: List[OrderStatusResultItem] = field(
+    order_status_result_item: list[OrderStatusResultItem] = field(
         default_factory=list,
         metadata={
             "name": "OrderStatusResultItem",
@@ -739,7 +739,7 @@ class OrderStatusDetailResult:
 
 @dataclass(kw_only=True)
 class ListOfOrderStatusResultDetail:
-    order_status_detail_result: List[OrderStatusDetailResult] = field(
+    order_status_detail_result: list[OrderStatusDetailResult] = field(
         default_factory=list,
         metadata={
             "name": "OrderStatusDetailResult",

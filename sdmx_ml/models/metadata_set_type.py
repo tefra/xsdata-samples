@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -74,7 +74,7 @@ class MetadataSetType(MetadataSetBaseType):
             ),
         },
     )
-    target: Tuple[str, ...] = field(
+    target: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Target",
@@ -83,7 +83,7 @@ class MetadataSetType(MetadataSetBaseType):
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?|.+\)(\.\*(\.\*)*)?",
         },
     )
-    attribute: Tuple[Attribute1, ...] = field(
+    attribute: tuple[Attribute1, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Attribute",

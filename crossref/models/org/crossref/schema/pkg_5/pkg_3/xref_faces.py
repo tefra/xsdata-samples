@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, List
+from typing import ForwardRef
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.math import Math
 
@@ -11,7 +11,7 @@ class XrefFaces:
     class Meta:
         name = "xrefFaces"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

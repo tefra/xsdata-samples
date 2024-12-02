@@ -46,7 +46,7 @@ from generali.models.last_modified_date_time import LastModifiedDateTime
 from generali.models.links import Links
 from generali.models.list_agency_name import ListAgencyName
 from generali.models.list_name import ListName
-from generali.models.mod import TypeType
+from generali.models.mod import Type
 from generali.models.models import Models
 from generali.models.name_text import NameText
 from generali.models.numeric import Numeric
@@ -106,7 +106,7 @@ __all__ = [
     "Links",
     "ListAgencyName",
     "ListName",
-    "TypeType",
+    "Type",
     "Models",
     "NameText",
     "Numeric",

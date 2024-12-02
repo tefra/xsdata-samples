@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -162,7 +162,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    filter_reference: List[FilterReference] = field(
+    filter_reference: list[FilterReference] = field(
         default_factory=list,
         metadata={
             "name": "filterReference",
@@ -170,7 +170,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    catalogue_reference: List[CatalogueReference] = field(
+    catalogue_reference: list[CatalogueReference] = field(
         default_factory=list,
         metadata={
             "name": "catalogueReference",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import SubjGroup
 from crossref.models.gov.nih.nlm.ncbi.jats1.series_text import SeriesText
@@ -18,21 +18,21 @@ class ArticleCategories:
         name = "article-categories"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    subj_group: List[SubjGroup] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    series_title: List[SeriesTitle] = field(
+    series_title: list[SeriesTitle] = field(
         default_factory=list,
         metadata={
             "name": "series-title",
             "type": "Element",
         },
     )
-    series_text: List[SeriesText] = field(
+    series_text: list[SeriesText] = field(
         default_factory=list,
         metadata={
             "name": "series-text",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark_domain_exclusive import (
     CrossmarkDomainExclusive,
@@ -57,7 +57,7 @@ class Crossmark:
             "type": "Element",
         },
     )
-    crossmark_domains: List[CrossmarkDomains] = field(
+    crossmark_domains: list[CrossmarkDomains] = field(
         default_factory=list,
         metadata={
             "type": "Element",

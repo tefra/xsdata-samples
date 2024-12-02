@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -272,7 +272,7 @@ class VehiclePackage:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -283,7 +283,7 @@ class VehiclePackage:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -294,7 +294,7 @@ class VehiclePackage:
 
     @dataclass
     class DriverNotifications:
-        vehicle_driver_notification: List[VehicleDriverNotification] = field(
+        vehicle_driver_notification: list[VehicleDriverNotification] = field(
             default_factory=list,
             metadata={
                 "name": "VEHICLE-DRIVER-NOTIFICATION",
@@ -316,7 +316,7 @@ class VehiclePackage:
 
     @dataclass
     class RolloutQualifications:
-        vehicle_rollout_step: List[VehicleRolloutStep] = field(
+        vehicle_rollout_step: list[VehicleRolloutStep] = field(
             default_factory=list,
             metadata={
                 "name": "VEHICLE-ROLLOUT-STEP",
@@ -327,7 +327,7 @@ class VehiclePackage:
 
     @dataclass
     class Ucms:
-        ucm_description: List[UcmDescription] = field(
+        ucm_description: list[UcmDescription] = field(
             default_factory=list,
             metadata={
                 "name": "UCM-DESCRIPTION",
@@ -338,7 +338,7 @@ class VehiclePackage:
 
     @dataclass
     class UcmMasterFallbackRefs:
-        ucm_master_fallback_ref: List[
+        ucm_master_fallback_ref: list[
             "VehiclePackage.UcmMasterFallbackRefs.UcmMasterFallbackRef"
         ] = field(
             default_factory=list,

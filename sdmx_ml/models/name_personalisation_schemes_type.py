@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.name_personalisation_scheme_type import (
     NamePersonalisationSchemeType,
@@ -22,7 +21,7 @@ class NamePersonalisationSchemesType:
         name personalisations are described.
     """
 
-    name_personalisation_scheme: Tuple[NamePersonalisationSchemeType, ...] = (
+    name_personalisation_scheme: tuple[NamePersonalisationSchemeType, ...] = (
         field(
             default_factory=tuple,
             metadata={

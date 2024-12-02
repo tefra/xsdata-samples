@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
@@ -387,7 +387,7 @@ class NonqueuedReceiverComSpec:
 
     @dataclass
     class CompositeNetworkRepresentations:
-        composite_network_representation: List[
+        composite_network_representation: list[
             CompositeNetworkRepresentation
         ] = field(
             default_factory=list,
@@ -422,7 +422,7 @@ class NonqueuedReceiverComSpec:
 
     @dataclass
     class TransformationComSpecPropss:
-        end_to_end_transformation_com_spec_props: List[
+        end_to_end_transformation_com_spec_props: list[
             EndToEndTransformationComSpecProps
         ] = field(
             default_factory=list,
@@ -432,7 +432,7 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_transformation_com_spec_props: List[
+        user_defined_transformation_com_spec_props: list[
             UserDefinedTransformationComSpecProps
         ] = field(
             default_factory=list,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Dict
 
 __NAMESPACE__ = "http://www.w3.org/2006/02/addressing/wsdl"
 
@@ -9,7 +8,7 @@ class UsingAddressing:
     class Meta:
         namespace = "http://www.w3.org/2006/02/addressing/wsdl"
 
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -250,7 +250,7 @@ class FmFeature:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -261,7 +261,7 @@ class FmFeature:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -272,7 +272,7 @@ class FmFeature:
 
     @dataclass
     class AttributeDefs:
-        fm_attribute_def: List[FmAttributeDef] = field(
+        fm_attribute_def: list[FmAttributeDef] = field(
             default_factory=list,
             metadata={
                 "name": "FM-ATTRIBUTE-DEF",
@@ -283,7 +283,7 @@ class FmFeature:
 
     @dataclass
     class Decompositions:
-        fm_feature_decomposition: List[FmFeatureDecomposition] = field(
+        fm_feature_decomposition: list[FmFeatureDecomposition] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-DECOMPOSITION",
@@ -294,7 +294,7 @@ class FmFeature:
 
     @dataclass
     class Relations:
-        fm_feature_relation: List[FmFeatureRelation] = field(
+        fm_feature_relation: list[FmFeatureRelation] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-RELATION",
@@ -305,7 +305,7 @@ class FmFeature:
 
     @dataclass
     class Restrictions:
-        fm_feature_restriction: List[FmFeatureRestriction] = field(
+        fm_feature_restriction: list[FmFeatureRestriction] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-RESTRICTION",

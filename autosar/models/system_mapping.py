@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -453,7 +453,7 @@ class SystemMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -464,7 +464,7 @@ class SystemMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -475,7 +475,7 @@ class SystemMapping:
 
     @dataclass
     class ApplicationPartitionToEcuPartitionMappings:
-        application_partition_to_ecu_partition_mapping: List[
+        application_partition_to_ecu_partition_mapping: list[
             ApplicationPartitionToEcuPartitionMapping
         ] = field(
             default_factory=list,
@@ -488,7 +488,7 @@ class SystemMapping:
 
     @dataclass
     class ComManagementMappings:
-        com_management_mapping: List[ComManagementMapping] = field(
+        com_management_mapping: list[ComManagementMapping] = field(
             default_factory=list,
             metadata={
                 "name": "COM-MANAGEMENT-MAPPING",
@@ -499,7 +499,7 @@ class SystemMapping:
 
     @dataclass
     class CryptoServiceMappings:
-        sec_oc_crypto_service_mapping: List[SecOcCryptoServiceMapping] = field(
+        sec_oc_crypto_service_mapping: list[SecOcCryptoServiceMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SEC-OC-CRYPTO-SERVICE-MAPPING",
@@ -507,7 +507,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        tls_crypto_service_mapping: List[TlsCryptoServiceMapping] = field(
+        tls_crypto_service_mapping: list[TlsCryptoServiceMapping] = field(
             default_factory=list,
             metadata={
                 "name": "TLS-CRYPTO-SERVICE-MAPPING",
@@ -518,7 +518,7 @@ class SystemMapping:
 
     @dataclass
     class DataMappings:
-        client_server_to_signal_group_mapping: List[
+        client_server_to_signal_group_mapping: list[
             ClientServerToSignalGroupMapping
         ] = field(
             default_factory=list,
@@ -528,7 +528,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        client_server_to_signal_mapping: List[ClientServerToSignalMapping] = (
+        client_server_to_signal_mapping: list[ClientServerToSignalMapping] = (
             field(
                 default_factory=list,
                 metadata={
@@ -538,7 +538,7 @@ class SystemMapping:
                 },
             )
         )
-        sender_receiver_composite_element_to_signal_mapping: List[
+        sender_receiver_composite_element_to_signal_mapping: list[
             SenderReceiverCompositeElementToSignalMapping
         ] = field(
             default_factory=list,
@@ -548,7 +548,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sender_receiver_to_signal_group_mapping: List[
+        sender_receiver_to_signal_group_mapping: list[
             SenderReceiverToSignalGroupMapping
         ] = field(
             default_factory=list,
@@ -558,7 +558,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sender_receiver_to_signal_mapping: List[
+        sender_receiver_to_signal_mapping: list[
             SenderReceiverToSignalMapping
         ] = field(
             default_factory=list,
@@ -568,7 +568,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        trigger_to_signal_mapping: List[TriggerToSignalMapping] = field(
+        trigger_to_signal_mapping: list[TriggerToSignalMapping] = field(
             default_factory=list,
             metadata={
                 "name": "TRIGGER-TO-SIGNAL-MAPPING",
@@ -579,7 +579,7 @@ class SystemMapping:
 
     @dataclass
     class EcuResourceMappings:
-        ecu_mapping: List[EcuMapping] = field(
+        ecu_mapping: list[EcuMapping] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-MAPPING",
@@ -590,7 +590,7 @@ class SystemMapping:
 
     @dataclass
     class J1939ControllerApplicationToJ1939NmNodeMappings:
-        j_1939_controller_application_to_j_1939_nm_node_mapping: List[
+        j_1939_controller_application_to_j_1939_nm_node_mapping: list[
             J1939ControllerApplicationToJ1939NmNodeMapping
         ] = field(
             default_factory=list,
@@ -603,7 +603,7 @@ class SystemMapping:
 
     @dataclass
     class MappingConstraints:
-        component_clustering: List[ComponentClustering] = field(
+        component_clustering: list[ComponentClustering] = field(
             default_factory=list,
             metadata={
                 "name": "COMPONENT-CLUSTERING",
@@ -611,7 +611,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        component_separation: List[ComponentSeparation] = field(
+        component_separation: list[ComponentSeparation] = field(
             default_factory=list,
             metadata={
                 "name": "COMPONENT-SEPARATION",
@@ -619,7 +619,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        swc_to_ecu_mapping_constraint: List[SwcToEcuMappingConstraint] = field(
+        swc_to_ecu_mapping_constraint: list[SwcToEcuMappingConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-TO-ECU-MAPPING-CONSTRAINT",
@@ -630,7 +630,7 @@ class SystemMapping:
 
     @dataclass
     class PncMappings:
-        pnc_mapping: List[PncMapping] = field(
+        pnc_mapping: list[PncMapping] = field(
             default_factory=list,
             metadata={
                 "name": "PNC-MAPPING",
@@ -641,7 +641,7 @@ class SystemMapping:
 
     @dataclass
     class PortElementToComResourceMappings:
-        port_element_to_communication_resource_mapping: List[
+        port_element_to_communication_resource_mapping: list[
             PortElementToCommunicationResourceMapping
         ] = field(
             default_factory=list,
@@ -654,7 +654,7 @@ class SystemMapping:
 
     @dataclass
     class ResourceEstimations:
-        ecu_resource_estimation: List[EcuResourceEstimation] = field(
+        ecu_resource_estimation: list[EcuResourceEstimation] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-RESOURCE-ESTIMATION",
@@ -665,7 +665,7 @@ class SystemMapping:
 
     @dataclass
     class ResourceToApplicationPartitionMappings:
-        cp_software_cluster_resource_to_application_partition_mapping: List[
+        cp_software_cluster_resource_to_application_partition_mapping: list[
             CpSoftwareClusterResourceToApplicationPartitionMapping
         ] = field(
             default_factory=list,
@@ -678,7 +678,7 @@ class SystemMapping:
 
     @dataclass
     class SignalPathConstraints:
-        common_signal_path: List[CommonSignalPath] = field(
+        common_signal_path: list[CommonSignalPath] = field(
             default_factory=list,
             metadata={
                 "name": "COMMON-SIGNAL-PATH",
@@ -686,7 +686,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        forbidden_signal_path: List[ForbiddenSignalPath] = field(
+        forbidden_signal_path: list[ForbiddenSignalPath] = field(
             default_factory=list,
             metadata={
                 "name": "FORBIDDEN-SIGNAL-PATH",
@@ -694,7 +694,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        permissible_signal_path: List[PermissibleSignalPath] = field(
+        permissible_signal_path: list[PermissibleSignalPath] = field(
             default_factory=list,
             metadata={
                 "name": "PERMISSIBLE-SIGNAL-PATH",
@@ -702,7 +702,7 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        separate_signal_path: List[SeparateSignalPath] = field(
+        separate_signal_path: list[SeparateSignalPath] = field(
             default_factory=list,
             metadata={
                 "name": "SEPARATE-SIGNAL-PATH",
@@ -713,7 +713,7 @@ class SystemMapping:
 
     @dataclass
     class SoftwareClusterToResourceMappings:
-        cp_software_cluster_to_resource_mapping: List[
+        cp_software_cluster_to_resource_mapping: list[
             CpSoftwareClusterToResourceMapping
         ] = field(
             default_factory=list,
@@ -726,7 +726,7 @@ class SystemMapping:
 
     @dataclass
     class SwClusterMappings:
-        cp_software_cluster_to_ecu_instance_mapping: List[
+        cp_software_cluster_to_ecu_instance_mapping: list[
             CpSoftwareClusterToEcuInstanceMapping
         ] = field(
             default_factory=list,
@@ -739,7 +739,7 @@ class SystemMapping:
 
     @dataclass
     class SwImplMappings:
-        swc_to_impl_mapping: List[SwcToImplMapping] = field(
+        swc_to_impl_mapping: list[SwcToImplMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-TO-IMPL-MAPPING",
@@ -750,7 +750,7 @@ class SystemMapping:
 
     @dataclass
     class SwMappings:
-        swc_to_ecu_mapping: List[SwcToEcuMapping] = field(
+        swc_to_ecu_mapping: list[SwcToEcuMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-TO-ECU-MAPPING",
@@ -761,7 +761,7 @@ class SystemMapping:
 
     @dataclass
     class SwcToApplicationPartitionMappings:
-        swc_to_application_partition_mapping: List[
+        swc_to_application_partition_mapping: list[
             SwcToApplicationPartitionMapping
         ] = field(
             default_factory=list,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.provision_agreement_type import ProvisionAgreementType
 
@@ -20,7 +19,7 @@ class ProvisionAgreementsType:
         provider to report data against a flow.
     """
 
-    provision_agreement: Tuple[ProvisionAgreementType, ...] = field(
+    provision_agreement: tuple[ProvisionAgreementType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProvisionAgreement",

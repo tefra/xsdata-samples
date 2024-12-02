@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from generali.models.amount import (
     Characteristics,
@@ -31,13 +31,13 @@ class Models:
             "type": "Element",
         },
     )
-    originator: List[Originator] = field(
+    originator: list[Originator] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    error_code: List[ErrorCode] = field(
+    error_code: list[ErrorCode] = field(
         default_factory=list,
         metadata={
             "name": "error-code",
@@ -77,13 +77,13 @@ class Models:
             "type": "Element",
         },
     )
-    characteristics: List[Characteristics] = field(
+    characteristics: list[Characteristics] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    failures: List[Failures] = field(
+    failures: list[Failures] = field(
         default_factory=list,
         metadata={
             "type": "Element",

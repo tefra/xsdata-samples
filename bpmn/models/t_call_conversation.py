@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .participant_association import ParticipantAssociation
@@ -13,7 +13,7 @@ class TCallConversation(TConversationNode):
     class Meta:
         name = "tCallConversation"
 
-    participant_association: List[ParticipantAssociation] = field(
+    participant_association: list[ParticipantAssociation] = field(
         default_factory=list,
         metadata={
             "name": "participantAssociation",

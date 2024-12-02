@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -457,7 +457,7 @@ class BswInterruptEntity:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -468,7 +468,7 @@ class BswInterruptEntity:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -479,7 +479,7 @@ class BswInterruptEntity:
 
     @dataclass
     class ActivationReasons:
-        executable_entity_activation_reason: List[
+        executable_entity_activation_reason: list[
             ExecutableEntityActivationReason
         ] = field(
             default_factory=list,
@@ -492,7 +492,7 @@ class BswInterruptEntity:
 
     @dataclass
     class CanEnterExclusiveAreaRefs:
-        can_enter_exclusive_area_ref: List[
+        can_enter_exclusive_area_ref: list[
             "BswInterruptEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"
         ] = field(
             default_factory=list,
@@ -516,7 +516,7 @@ class BswInterruptEntity:
 
     @dataclass
     class ExclusiveAreaNestingOrderRefs:
-        exclusive_area_nesting_order_ref: List[
+        exclusive_area_nesting_order_ref: list[
             "BswInterruptEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"
         ] = field(
             default_factory=list,
@@ -540,7 +540,7 @@ class BswInterruptEntity:
 
     @dataclass
     class RunsInsideExclusiveAreaRefs:
-        runs_inside_exclusive_area_ref: List[
+        runs_inside_exclusive_area_ref: list[
             "BswInterruptEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"
         ] = field(
             default_factory=list,
@@ -575,7 +575,7 @@ class BswInterruptEntity:
 
     @dataclass
     class AccessedModeGroups:
-        mode_declaration_group_prototype_ref_conditional: List[
+        mode_declaration_group_prototype_ref_conditional: list[
             ModeDeclarationGroupPrototypeRefConditional
         ] = field(
             default_factory=list,
@@ -588,7 +588,7 @@ class BswInterruptEntity:
 
     @dataclass
     class ActivationPoints:
-        bsw_internal_triggering_point_ref_conditional: List[
+        bsw_internal_triggering_point_ref_conditional: list[
             BswInternalTriggeringPointRefConditional
         ] = field(
             default_factory=list,
@@ -601,7 +601,7 @@ class BswInterruptEntity:
 
     @dataclass
     class CallPoints:
-        bsw_asynchronous_server_call_point: List[
+        bsw_asynchronous_server_call_point: list[
             BswAsynchronousServerCallPoint
         ] = field(
             default_factory=list,
@@ -611,7 +611,7 @@ class BswInterruptEntity:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_asynchronous_server_call_result_point: List[
+        bsw_asynchronous_server_call_result_point: list[
             BswAsynchronousServerCallResultPoint
         ] = field(
             default_factory=list,
@@ -621,7 +621,7 @@ class BswInterruptEntity:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_direct_call_point: List[BswDirectCallPoint] = field(
+        bsw_direct_call_point: list[BswDirectCallPoint] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-DIRECT-CALL-POINT",
@@ -629,7 +629,7 @@ class BswInterruptEntity:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        bsw_synchronous_server_call_point: List[
+        bsw_synchronous_server_call_point: list[
             BswSynchronousServerCallPoint
         ] = field(
             default_factory=list,
@@ -642,7 +642,7 @@ class BswInterruptEntity:
 
     @dataclass
     class CalledEntrys:
-        bsw_module_entry_ref_conditional: List[
+        bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
         ] = field(
             default_factory=list,
@@ -655,7 +655,7 @@ class BswInterruptEntity:
 
     @dataclass
     class DataReceivePoints:
-        bsw_variable_access: List[BswVariableAccess] = field(
+        bsw_variable_access: list[BswVariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-VARIABLE-ACCESS",
@@ -666,7 +666,7 @@ class BswInterruptEntity:
 
     @dataclass
     class DataSendPoints:
-        bsw_variable_access: List[BswVariableAccess] = field(
+        bsw_variable_access: list[BswVariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-VARIABLE-ACCESS",
@@ -688,7 +688,7 @@ class BswInterruptEntity:
 
     @dataclass
     class IssuedTriggers:
-        trigger_ref_conditional: List[TriggerRefConditional] = field(
+        trigger_ref_conditional: list[TriggerRefConditional] = field(
             default_factory=list,
             metadata={
                 "name": "TRIGGER-REF-CONDITIONAL",
@@ -699,7 +699,7 @@ class BswInterruptEntity:
 
     @dataclass
     class ManagedModeGroups:
-        mode_declaration_group_prototype_ref_conditional: List[
+        mode_declaration_group_prototype_ref_conditional: list[
             ModeDeclarationGroupPrototypeRefConditional
         ] = field(
             default_factory=list,

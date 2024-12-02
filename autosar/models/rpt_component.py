@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -218,7 +218,7 @@ class RptComponent:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -229,7 +229,7 @@ class RptComponent:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -240,7 +240,7 @@ class RptComponent:
 
     @dataclass
     class McDataAssignments:
-        role_based_mc_data_assignment: List[RoleBasedMcDataAssignment] = field(
+        role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-MC-DATA-ASSIGNMENT",
@@ -251,7 +251,7 @@ class RptComponent:
 
     @dataclass
     class RptExecutableEntitys:
-        rpt_executable_entity: List[RptExecutableEntity] = field(
+        rpt_executable_entity: list[RptExecutableEntity] = field(
             default_factory=list,
             metadata={
                 "name": "RPT-EXECUTABLE-ENTITY",

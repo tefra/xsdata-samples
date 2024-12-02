@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .nmtoken_string import NmtokenString
 from .positive_integer import PositiveInteger
@@ -192,7 +192,7 @@ class EndToEndDescription:
             depends on the category of the EndToEndProtection.
         """
 
-        data_id: List[PositiveInteger] = field(
+        data_id: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-ID",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .application_record_element_subtypes_enum import (
     ApplicationRecordElementSubtypesEnum,
@@ -209,7 +209,7 @@ class ClientServerArrayTypeMapping:
 
     @dataclass
     class ArrayElementMappings:
-        client_server_array_element_mapping: List[
+        client_server_array_element_mapping: list[
             ClientServerArrayElementMapping
         ] = field(
             default_factory=list,
@@ -457,7 +457,7 @@ class ClientServerRecordTypeMapping:
 
     @dataclass
     class RecordElementMappings:
-        client_server_record_element_mapping: List[
+        client_server_record_element_mapping: list[
             ClientServerRecordElementMapping
         ] = field(
             default_factory=list,

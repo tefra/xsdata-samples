@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -51,7 +51,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
             "pattern": r".+\.codelist\.Code=.+",
         },
     )
-    hierarchical_code: Tuple["HierarchicalCodeType", ...] = field(
+    hierarchical_code: tuple["HierarchicalCodeType", ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HierarchicalCode",

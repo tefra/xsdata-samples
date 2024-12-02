@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -51,7 +51,7 @@ class SiteMeasurements:
             "required": True,
         },
     )
-    measured_value: List[SiteMeasurementsIndexMeasuredValue] = field(
+    measured_value: list[SiteMeasurementsIndexMeasuredValue] = field(
         default_factory=list,
         metadata={
             "name": "measuredValue",

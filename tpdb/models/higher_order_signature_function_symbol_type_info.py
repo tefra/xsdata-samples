@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from tpdb.models.func_declaration import FuncDeclaration
 
@@ -9,7 +8,7 @@ class HigherOrderSignatureFunctionSymbolTypeInfo:
     class Meta:
         global_type = False
 
-    func_declaration: List[FuncDeclaration] = field(
+    func_declaration: list[FuncDeclaration] = field(
         default_factory=list,
         metadata={
             "name": "funcDeclaration",

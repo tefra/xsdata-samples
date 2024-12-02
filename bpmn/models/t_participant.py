@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .participant_multiplicity import ParticipantMultiplicity
@@ -13,7 +13,7 @@ class TParticipant(TBaseElement):
     class Meta:
         name = "tParticipant"
 
-    interface_ref: List[QName] = field(
+    interface_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "interfaceRef",
@@ -21,7 +21,7 @@ class TParticipant(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    end_point_ref: List[QName] = field(
+    end_point_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "endPointRef",

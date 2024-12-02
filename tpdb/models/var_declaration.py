@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from tpdb.models.type_mod import TypeType
+from tpdb.models.type_mod import Type
 from tpdb.models.var import Var
 
 
@@ -17,7 +17,7 @@ class VarDeclaration:
             "required": True,
         },
     )
-    type_value: Optional[TypeType] = field(
+    type_value: Optional[Type] = field(
         default=None,
         metadata={
             "name": "type",

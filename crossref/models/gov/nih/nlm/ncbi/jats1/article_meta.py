@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Abstract,
@@ -77,7 +77,7 @@ class ArticleMeta:
         name = "article-meta"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    article_id: List[ArticleId] = field(
+    article_id: list[ArticleId] = field(
         default_factory=list,
         metadata={
             "name": "article-id",
@@ -113,20 +113,20 @@ class ArticleMeta:
             "required": True,
         },
     )
-    contrib_group: List[ContribGroup] = field(
+    contrib_group: list[ContribGroup] = field(
         default_factory=list,
         metadata={
             "name": "contrib-group",
             "type": "Element",
         },
     )
-    aff: List[Aff] = field(
+    aff: list[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    aff_alternatives: List[AffAlternatives] = field(
+    aff_alternatives: list[AffAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "aff-alternatives",
@@ -140,7 +140,7 @@ class ArticleMeta:
             "type": "Element",
         },
     )
-    pub_date: List[PubDate] = field(
+    pub_date: list[PubDate] = field(
         default_factory=list,
         metadata={
             "name": "pub-date",
@@ -154,13 +154,13 @@ class ArticleMeta:
             "type": "Element",
         },
     )
-    volume: List[Volume] = field(
+    volume: list[Volume] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    volume_id: List[VolumeId] = field(
+    volume_id: list[VolumeId] = field(
         default_factory=list,
         metadata={
             "name": "volume-id",
@@ -174,34 +174,34 @@ class ArticleMeta:
             "type": "Element",
         },
     )
-    issue: List[Issue] = field(
+    issue: list[Issue] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    issue_id: List[IssueId] = field(
+    issue_id: list[IssueId] = field(
         default_factory=list,
         metadata={
             "name": "issue-id",
             "type": "Element",
         },
     )
-    issue_title: List[IssueTitle] = field(
+    issue_title: list[IssueTitle] = field(
         default_factory=list,
         metadata={
             "name": "issue-title",
             "type": "Element",
         },
     )
-    issue_title_group: List[IssueTitleGroup] = field(
+    issue_title_group: list[IssueTitleGroup] = field(
         default_factory=list,
         metadata={
             "name": "issue-title-group",
             "type": "Element",
         },
     )
-    issue_sponsor: List[IssueSponsor] = field(
+    issue_sponsor: list[IssueSponsor] = field(
         default_factory=list,
         metadata={
             "name": "issue-sponsor",
@@ -215,14 +215,14 @@ class ArticleMeta:
             "type": "Element",
         },
     )
-    volume_issue_group: List[VolumeIssueGroup] = field(
+    volume_issue_group: list[VolumeIssueGroup] = field(
         default_factory=list,
         metadata={
             "name": "volume-issue-group",
             "type": "Element",
         },
     )
-    isbn: List[Isbn] = field(
+    isbn: list[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -260,32 +260,32 @@ class ArticleMeta:
             "type": "Element",
         },
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ext_link: List[ExtLink] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    uri: List[Uri] = field(
+    uri: list[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    product: List[Product] = field(
+    product: list[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    supplementary_material: List[SupplementaryMaterial] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
@@ -311,62 +311,62 @@ class ArticleMeta:
             "type": "Element",
         },
     )
-    self_uri: List[SelfUri] = field(
+    self_uri: list[SelfUri] = field(
         default_factory=list,
         metadata={
             "name": "self-uri",
             "type": "Element",
         },
     )
-    related_article: List[RelatedArticle] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: List[RelatedObject] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    trans_abstract: List[TransAbstract] = field(
+    trans_abstract: list[TransAbstract] = field(
         default_factory=list,
         metadata={
             "name": "trans-abstract",
             "type": "Element",
         },
     )
-    kwd_group: List[KwdGroup] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    funding_group: List[FundingGroup] = field(
+    funding_group: list[FundingGroup] = field(
         default_factory=list,
         metadata={
             "name": "funding-group",
             "type": "Element",
         },
     )
-    support_group: List[SupportGroup] = field(
+    support_group: list[SupportGroup] = field(
         default_factory=list,
         metadata={
             "name": "support-group",
             "type": "Element",
         },
     )
-    conference: List[Conference] = field(
+    conference: list[Conference] = field(
         default_factory=list,
         metadata={
             "type": "Element",

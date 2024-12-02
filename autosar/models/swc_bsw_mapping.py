@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -252,7 +252,7 @@ class SwcBswMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -263,7 +263,7 @@ class SwcBswMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -285,7 +285,7 @@ class SwcBswMapping:
 
     @dataclass
     class RunnableMappings:
-        swc_bsw_runnable_mapping: List[SwcBswRunnableMapping] = field(
+        swc_bsw_runnable_mapping: list[SwcBswRunnableMapping] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-BSW-RUNNABLE-MAPPING",
@@ -307,7 +307,7 @@ class SwcBswMapping:
 
     @dataclass
     class SynchronizedModeGroups:
-        swc_bsw_synchronized_mode_group_prototype: List[
+        swc_bsw_synchronized_mode_group_prototype: list[
             SwcBswSynchronizedModeGroupPrototype
         ] = field(
             default_factory=list,
@@ -320,7 +320,7 @@ class SwcBswMapping:
 
     @dataclass
     class SynchronizedTriggers:
-        swc_bsw_synchronized_trigger: List[SwcBswSynchronizedTrigger] = field(
+        swc_bsw_synchronized_trigger: list[SwcBswSynchronizedTrigger] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-BSW-SYNCHRONIZED-TRIGGER",

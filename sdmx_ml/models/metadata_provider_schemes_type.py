@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.metadata_provider_scheme_type import (
     MetadataProviderSchemeType,
@@ -22,7 +21,7 @@ class MetadataProviderSchemesType:
         providers are described.
     """
 
-    metadata_provider_scheme: Tuple[MetadataProviderSchemeType, ...] = field(
+    metadata_provider_scheme: tuple[MetadataProviderSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MetadataProviderScheme",

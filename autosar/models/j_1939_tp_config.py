@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -232,7 +232,7 @@ class J1939TpConfig:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -243,7 +243,7 @@ class J1939TpConfig:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -265,7 +265,7 @@ class J1939TpConfig:
 
     @dataclass
     class TpAddresss:
-        tp_address: List[TpAddress] = field(
+        tp_address: list[TpAddress] = field(
             default_factory=list,
             metadata={
                 "name": "TP-ADDRESS",
@@ -276,7 +276,7 @@ class J1939TpConfig:
 
     @dataclass
     class TpConnections:
-        j_1939_tp_connection: List[J1939TpConnection] = field(
+        j_1939_tp_connection: list[J1939TpConnection] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-TP-CONNECTION",
@@ -287,7 +287,7 @@ class J1939TpConfig:
 
     @dataclass
     class TpNodes:
-        j_1939_tp_node: List[J1939TpNode] = field(
+        j_1939_tp_node: list[J1939TpNode] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-TP-NODE",

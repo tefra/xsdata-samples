@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.geographic_codelist_type import GeographicCodelistType
 
@@ -21,7 +20,7 @@ class GeographicCodelistsType:
         pattern to represent a geo feature set.
     """
 
-    geographic_codelist: Tuple[GeographicCodelistType, ...] = field(
+    geographic_codelist: tuple[GeographicCodelistType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "GeographicCodelist",

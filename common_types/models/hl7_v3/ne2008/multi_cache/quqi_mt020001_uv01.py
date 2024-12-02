@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Ce,
@@ -32,7 +32,7 @@ class QuqiMt020001Uv01AuthorOrPerformer:
     class Meta:
         name = "QUQI_MT020001UV01.AuthorOrPerformer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -48,7 +48,7 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -142,7 +142,7 @@ class QuqiMt020001Uv01DataEnterer:
     class Meta:
         name = "QUQI_MT020001UV01.DataEnterer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -158,7 +158,7 @@ class QuqiMt020001Uv01DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -212,7 +212,7 @@ class QuqiMt020001Uv01InformationRecipient:
     class Meta:
         name = "QUQI_MT020001UV01.InformationRecipient"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -228,7 +228,7 @@ class QuqiMt020001Uv01InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -281,7 +281,7 @@ class QuqiMt020001Uv01Overseer:
     class Meta:
         name = "QUQI_MT020001UV01.Overseer"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -297,7 +297,7 @@ class QuqiMt020001Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -382,7 +382,7 @@ class QuqiMt020001Uv01Reason:
     class Meta:
         name = "QUQI_MT020001UV01.Reason"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -398,7 +398,7 @@ class QuqiMt020001Uv01Reason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -445,7 +445,7 @@ class QuqiMt020001Uv01SortControl:
     class Meta:
         name = "QUQI_MT020001UV01.SortControl"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -461,7 +461,7 @@ class QuqiMt020001Uv01SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",

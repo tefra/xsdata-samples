@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.reinsurer_involvement_type import (
     ReinsurerInvolvementType,
@@ -15,7 +14,7 @@ class CoverGbotypeReinsurers:
     class Meta:
         global_type = False
 
-    reinsurer: List[ReinsurerInvolvementType] = field(
+    reinsurer: list[ReinsurerInvolvementType] = field(
         default_factory=list,
         metadata={
             "name": "Reinsurer",

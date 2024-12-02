@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
 from crossref.models.org.crossref.access_indicators.program import (
@@ -89,21 +89,21 @@ class PostedContent:
             "type": "Element",
         },
     )
-    institution: List[Institution] = field(
+    institution: list[Institution] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 5,
         },
     )
-    item_number: List[ItemNumber] = field(
+    item_number: list[ItemNumber] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 3,
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",

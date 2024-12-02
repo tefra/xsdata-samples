@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi import Doi
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.full_title import (
@@ -24,7 +24,7 @@ class Publication:
         name = "publication"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    full_title: List[FullTitle] = field(
+    full_title: list[FullTitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -32,14 +32,14 @@ class Publication:
             "max_occurs": 10,
         },
     )
-    issn: List[Issn] = field(
+    issn: list[Issn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 2,
         },
     )
-    isbn: List[Isbn] = field(
+    isbn: list[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",

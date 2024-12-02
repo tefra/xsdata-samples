@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -493,7 +493,7 @@ class BswImplementation:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -504,7 +504,7 @@ class BswImplementation:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -515,7 +515,7 @@ class BswImplementation:
 
     @dataclass
     class BuildActionManifests:
-        build_action_manifest_ref_conditional: List[
+        build_action_manifest_ref_conditional: list[
             BuildActionManifestRefConditional
         ] = field(
             default_factory=list,
@@ -528,7 +528,7 @@ class BswImplementation:
 
     @dataclass
     class CodeDescriptors:
-        code: List[Code] = field(
+        code: list[Code] = field(
             default_factory=list,
             metadata={
                 "name": "CODE",
@@ -539,7 +539,7 @@ class BswImplementation:
 
     @dataclass
     class Compilers:
-        compiler: List[Compiler] = field(
+        compiler: list[Compiler] = field(
             default_factory=list,
             metadata={
                 "name": "COMPILER",
@@ -550,7 +550,7 @@ class BswImplementation:
 
     @dataclass
     class GeneratedArtifacts:
-        dependency_on_artifact: List[DependencyOnArtifact] = field(
+        dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
             metadata={
                 "name": "DEPENDENCY-ON-ARTIFACT",
@@ -561,7 +561,7 @@ class BswImplementation:
 
     @dataclass
     class HwElementRefs:
-        hw_element_ref: List[
+        hw_element_ref: list[
             "BswImplementation.HwElementRefs.HwElementRef"
         ] = field(
             default_factory=list,
@@ -585,7 +585,7 @@ class BswImplementation:
 
     @dataclass
     class Linkers:
-        linker: List[Linker] = field(
+        linker: list[Linker] = field(
             default_factory=list,
             metadata={
                 "name": "LINKER",
@@ -596,7 +596,7 @@ class BswImplementation:
 
     @dataclass
     class RequiredArtifacts:
-        dependency_on_artifact: List[DependencyOnArtifact] = field(
+        dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
             metadata={
                 "name": "DEPENDENCY-ON-ARTIFACT",
@@ -607,7 +607,7 @@ class BswImplementation:
 
     @dataclass
     class RequiredGeneratorTools:
-        dependency_on_artifact: List[DependencyOnArtifact] = field(
+        dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
             metadata={
                 "name": "DEPENDENCY-ON-ARTIFACT",
@@ -640,7 +640,7 @@ class BswImplementation:
 
     @dataclass
     class DebugInfos:
-        bsw_debug_info: List[BswDebugInfo] = field(
+        bsw_debug_info: list[BswDebugInfo] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-DEBUG-INFO",
@@ -651,7 +651,7 @@ class BswImplementation:
 
     @dataclass
     class PreconfiguredConfigurationRefs:
-        preconfigured_configuration_ref: List[
+        preconfigured_configuration_ref: list[
             "BswImplementation.PreconfiguredConfigurationRefs.PreconfiguredConfigurationRef"
         ] = field(
             default_factory=list,
@@ -675,7 +675,7 @@ class BswImplementation:
 
     @dataclass
     class RecommendedConfigurationRefs:
-        recommended_configuration_ref: List[
+        recommended_configuration_ref: list[
             "BswImplementation.RecommendedConfigurationRefs.RecommendedConfigurationRef"
         ] = field(
             default_factory=list,
@@ -699,7 +699,7 @@ class BswImplementation:
 
     @dataclass
     class VendorSpecificModuleDefRefs:
-        vendor_specific_module_def_ref: List[
+        vendor_specific_module_def_ref: list[
             "BswImplementation.VendorSpecificModuleDefRefs.VendorSpecificModuleDefRef"
         ] = field(
             default_factory=list,

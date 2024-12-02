@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.metadata_constraint_base_type import (
     MetadataConstraintBaseType,
@@ -20,7 +19,7 @@ class MetadataConstraintType(MetadataConstraintBaseType):
         values allowed for metadata attributes.
     """
 
-    metadata_target_region: Tuple[MetadataTargetRegionType, ...] = field(
+    metadata_target_region: tuple[MetadataTargetRegionType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MetadataTargetRegion",

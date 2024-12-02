@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ip4_address_string import Ip4AddressString
 from .ip_address_keep_enum import IpAddressKeepEnum
@@ -135,7 +135,7 @@ class Ipv4Configuration:
             servers.
         """
 
-        dns_server_address: List[Ip4AddressString] = field(
+        dns_server_address: list[Ip4AddressString] = field(
             default_factory=list,
             metadata={
                 "name": "DNS-SERVER-ADDRESS",

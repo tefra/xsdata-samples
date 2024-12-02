@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ref import Ref
 from .sw_record_layout_group import SwRecordLayoutGroup
@@ -46,7 +46,7 @@ class SwRecordLayoutGroupContent:
     class Meta:
         name = "SW-RECORD-LAYOUT-GROUP-CONTENT"
 
-    sw_record_layout_ref: List[
+    sw_record_layout_ref: list[
         "SwRecordLayoutGroupContent.SwRecordLayoutRef"
     ] = field(
         default_factory=list,
@@ -56,7 +56,7 @@ class SwRecordLayoutGroupContent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v: List[SwRecordLayoutV] = field(
+    sw_record_layout_v: list[SwRecordLayoutV] = field(
         default_factory=list,
         metadata={
             "name": "SW-RECORD-LAYOUT-V",
@@ -64,7 +64,7 @@ class SwRecordLayoutGroupContent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group: List[SwRecordLayoutGroup] = field(
+    sw_record_layout_group: list[SwRecordLayoutGroup] = field(
         default_factory=list,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP",

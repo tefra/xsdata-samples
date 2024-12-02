@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .access_control_enum import AccessControlEnum
 from .admin_data import (
@@ -277,7 +277,7 @@ class MachineDesign:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -288,7 +288,7 @@ class MachineDesign:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -299,7 +299,7 @@ class MachineDesign:
 
     @dataclass
     class CommunicationConnectors:
-        can_communication_connector: List[CanCommunicationConnector] = field(
+        can_communication_connector: list[CanCommunicationConnector] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-COMMUNICATION-CONNECTOR",
@@ -307,7 +307,7 @@ class MachineDesign:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ethernet_communication_connector: List[
+        ethernet_communication_connector: list[
             EthernetCommunicationConnector
         ] = field(
             default_factory=list,
@@ -317,7 +317,7 @@ class MachineDesign:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_communication_connector: List[
+        flexray_communication_connector: list[
             FlexrayCommunicationConnector
         ] = field(
             default_factory=list,
@@ -327,7 +327,7 @@ class MachineDesign:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        lin_communication_connector: List[LinCommunicationConnector] = field(
+        lin_communication_connector: list[LinCommunicationConnector] = field(
             default_factory=list,
             metadata={
                 "name": "LIN-COMMUNICATION-CONNECTOR",
@@ -335,7 +335,7 @@ class MachineDesign:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_communication_connector: List[TtcanCommunicationConnector] = (
+        ttcan_communication_connector: list[TtcanCommunicationConnector] = (
             field(
                 default_factory=list,
                 metadata={
@@ -345,7 +345,7 @@ class MachineDesign:
                 },
             )
         )
-        user_defined_communication_connector: List[
+        user_defined_communication_connector: list[
             UserDefinedCommunicationConnector
         ] = field(
             default_factory=list,
@@ -369,7 +369,7 @@ class MachineDesign:
 
     @dataclass
     class ServiceDiscoverConfigs:
-        someip_service_discovery: List[SomeipServiceDiscovery] = field(
+        someip_service_discovery: list[SomeipServiceDiscovery] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-SERVICE-DISCOVERY",

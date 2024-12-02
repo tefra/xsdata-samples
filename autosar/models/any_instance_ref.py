@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .atp_feature_subtypes_enum import AtpFeatureSubtypesEnum
@@ -35,7 +35,7 @@ class AnyInstanceRef:
     class Meta:
         name = "ANY-INSTANCE-REF"
 
-    context_element_ref: List["AnyInstanceRef.ContextElementRef"] = field(
+    context_element_ref: list["AnyInstanceRef.ContextElementRef"] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-ELEMENT-REF",

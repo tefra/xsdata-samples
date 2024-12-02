@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .application_composite_element_data_prototype_subtypes_enum import (
     ApplicationCompositeElementDataPrototypeSubtypesEnum,
@@ -44,7 +44,7 @@ class DataPrototypeInClientServerInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_data_prototype_in_cs_ref: List[
+    context_data_prototype_in_cs_ref: list[
         "DataPrototypeInClientServerInterfaceInstanceRef.ContextDataPrototypeInCsRef"
     ] = field(
         default_factory=list,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .boolean import Boolean
 from .flexray_fifo_range import FlexrayFifoRange
@@ -140,7 +140,7 @@ class FlexrayFifoConfiguration:
 
     @dataclass
     class FifoRanges:
-        flexray_fifo_range: List[FlexrayFifoRange] = field(
+        flexray_fifo_range: list[FlexrayFifoRange] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-FIFO-RANGE",

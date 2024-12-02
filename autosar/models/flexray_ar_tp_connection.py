@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .flexray_ar_tp_node_subtypes_enum import FlexrayArTpNodeSubtypesEnum
 from .i_pdu_subtypes_enum import IPduSubtypesEnum
@@ -217,7 +217,7 @@ class FlexrayArTpConnection:
 
     @dataclass
     class TargetRefs:
-        target_ref: List["FlexrayArTpConnection.TargetRefs.TargetRef"] = field(
+        target_ref: list["FlexrayArTpConnection.TargetRefs.TargetRef"] = field(
             default_factory=list,
             metadata={
                 "name": "TARGET-REF",
@@ -239,7 +239,7 @@ class FlexrayArTpConnection:
 
     @dataclass
     class TransmitPduRefs:
-        transmit_pdu_ref: List[
+        transmit_pdu_ref: list[
             "FlexrayArTpConnection.TransmitPduRefs.TransmitPduRef"
         ] = field(
             default_factory=list,

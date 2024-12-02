@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .data_prototype_group_subtypes_enum import DataPrototypeGroupSubtypesEnum
@@ -38,7 +38,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
     class Meta:
         name = "INNER-DATA-PROTOTYPE-GROUP-IN-COMPOSITION-INSTANCE-REF"
 
-    context_sw_component_prototype_ref: List[
+    context_sw_component_prototype_ref: list[
         "InnerDataPrototypeGroupInCompositionInstanceRef.ContextSwComponentPrototypeRef"
     ] = field(
         default_factory=list,

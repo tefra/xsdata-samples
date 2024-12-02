@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Aff,
@@ -30,7 +30,7 @@ class JournalMeta:
         name = "journal-meta"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    journal_id: List[JournalId] = field(
+    journal_id: list[JournalId] = field(
         default_factory=list,
         metadata={
             "name": "journal-id",
@@ -38,34 +38,34 @@ class JournalMeta:
             "min_occurs": 1,
         },
     )
-    journal_title_group: List[JournalTitleGroup] = field(
+    journal_title_group: list[JournalTitleGroup] = field(
         default_factory=list,
         metadata={
             "name": "journal-title-group",
             "type": "Element",
         },
     )
-    contrib_group: List[ContribGroup] = field(
+    contrib_group: list[ContribGroup] = field(
         default_factory=list,
         metadata={
             "name": "contrib-group",
             "type": "Element",
         },
     )
-    aff: List[Aff] = field(
+    aff: list[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    aff_alternatives: List[AffAlternatives] = field(
+    aff_alternatives: list[AffAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
         },
     )
-    issn: List[Issn] = field(
+    issn: list[Issn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -79,7 +79,7 @@ class JournalMeta:
             "type": "Element",
         },
     )
-    isbn: List[Isbn] = field(
+    isbn: list[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -91,13 +91,13 @@ class JournalMeta:
             "type": "Element",
         },
     )
-    notes: List[Notes] = field(
+    notes: list[Notes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    self_uri: List[SelfUri] = field(
+    self_uri: list[SelfUri] = field(
         default_factory=list,
         metadata={
             "name": "self-uri",

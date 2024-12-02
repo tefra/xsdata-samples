@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.text_type import TextType
 from sdmx_ml.models.transition_base_type import TransitionBaseType
@@ -35,7 +35,7 @@ class TransitionType(TransitionBaseType):
             "pattern": r"[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*",
         },
     )
-    condition: Tuple[TextType, ...] = field(
+    condition: tuple[TextType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Condition",

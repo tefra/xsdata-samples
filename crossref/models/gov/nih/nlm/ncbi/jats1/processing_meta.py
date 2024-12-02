@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.custom_meta_group import (
     CustomMetaGroup,
@@ -32,21 +32,21 @@ class ProcessingMeta:
         name = "processing-meta"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    restricted_by: List[RestrictedBy] = field(
+    restricted_by: list[RestrictedBy] = field(
         default_factory=list,
         metadata={
             "name": "restricted-by",
             "type": "Element",
         },
     )
-    extended_by: List[ExtendedBy] = field(
+    extended_by: list[ExtendedBy] = field(
         default_factory=list,
         metadata={
             "name": "extended-by",
             "type": "Element",
         },
     )
-    custom_meta_group: List[CustomMetaGroup] = field(
+    custom_meta_group: list[CustomMetaGroup] = field(
         default_factory=list,
         metadata={
             "name": "custom-meta-group",
@@ -66,7 +66,7 @@ class ProcessingMeta:
             "type": "Attribute",
         },
     )
-    math_representation: List[str] = field(
+    math_representation: list[str] = field(
         default_factory=list,
         metadata={
             "name": "math-representation",

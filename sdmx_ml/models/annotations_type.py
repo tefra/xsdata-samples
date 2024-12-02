@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.annotation_type import AnnotationType
 
@@ -13,7 +12,7 @@ class AnnotationsType:
     structure messages.
     """
 
-    annotation: Tuple[AnnotationType, ...] = field(
+    annotation: tuple[AnnotationType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Annotation",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.attribute_list import AttributeList
 from sdmx_ml.models.data_structure_components_base_type import (
@@ -30,7 +30,7 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
             "required": True,
         },
     )
-    group: Tuple[Group, ...] = field(
+    group: tuple[Group, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Group",

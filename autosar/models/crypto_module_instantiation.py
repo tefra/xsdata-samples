@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -212,7 +212,7 @@ class CryptoModuleInstantiation:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -223,7 +223,7 @@ class CryptoModuleInstantiation:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -234,7 +234,7 @@ class CryptoModuleInstantiation:
 
     @dataclass
     class CertificateToKeySlotMappings:
-        crypto_certificate_to_crypto_key_slot_mapping: List[
+        crypto_certificate_to_crypto_key_slot_mapping: list[
             CryptoCertificateToCryptoKeySlotMapping
         ] = field(
             default_factory=list,
@@ -247,7 +247,7 @@ class CryptoModuleInstantiation:
 
     @dataclass
     class CryptoCertificates:
-        crypto_certificate: List[CryptoCertificate] = field(
+        crypto_certificate: list[CryptoCertificate] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-CERTIFICATE",
@@ -258,7 +258,7 @@ class CryptoModuleInstantiation:
 
     @dataclass
     class CryptoProviders:
-        crypto_provider: List[CryptoProvider] = field(
+        crypto_provider: list[CryptoProvider] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-PROVIDER",

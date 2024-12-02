@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.vms_setting import VmsSetting
@@ -51,14 +51,14 @@ class VmsUnit(VmsSetting):
             "required": True,
         },
     )
-    vms: List[VmsUnitVmsIndexVms] = field(
+    vms: list[VmsUnitVmsIndexVms] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_unit_fault: List[VmsUnitFault] = field(
+    vms_unit_fault: list[VmsUnitFault] = field(
         default_factory=list,
         metadata={
             "name": "vmsUnitFault",

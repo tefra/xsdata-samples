@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.reporting_taxonomy_type import ReportingTaxonomyType
 
@@ -21,7 +20,7 @@ class ReportingTaxonomiesType:
         be described by an independent data or metadata flow definition.
     """
 
-    reporting_taxonomy: Tuple[ReportingTaxonomyType, ...] = field(
+    reporting_taxonomy: tuple[ReportingTaxonomyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReportingTaxonomy",

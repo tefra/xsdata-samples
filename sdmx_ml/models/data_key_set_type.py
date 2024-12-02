@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.data_key_type import DataKeyType
 
@@ -19,7 +19,7 @@ class DataKeySetType:
         constraint.
     """
 
-    key: Tuple[DataKeyType, ...] = field(
+    key: tuple[DataKeyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Key",

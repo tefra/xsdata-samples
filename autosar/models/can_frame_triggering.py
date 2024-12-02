@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -334,7 +334,7 @@ class CanFrameTriggering:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -345,7 +345,7 @@ class CanFrameTriggering:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -356,7 +356,7 @@ class CanFrameTriggering:
 
     @dataclass
     class FramePortRefs:
-        frame_port_ref: List[
+        frame_port_ref: list[
             "CanFrameTriggering.FramePortRefs.FramePortRef"
         ] = field(
             default_factory=list,
@@ -391,7 +391,7 @@ class CanFrameTriggering:
 
     @dataclass
     class PduTriggerings:
-        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = (
+        pdu_triggering_ref_conditional: list[PduTriggeringRefConditional] = (
             field(
                 default_factory=list,
                 metadata={
@@ -404,7 +404,7 @@ class CanFrameTriggering:
 
     @dataclass
     class AbsolutelyScheduledTimings:
-        ttcan_absolutely_scheduled_timing: List[
+        ttcan_absolutely_scheduled_timing: list[
             TtcanAbsolutelyScheduledTiming
         ] = field(
             default_factory=list,

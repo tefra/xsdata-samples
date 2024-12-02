@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, Optional
+from typing import Optional
 
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.action import Action
 
@@ -24,7 +24,7 @@ class ProblemActionType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

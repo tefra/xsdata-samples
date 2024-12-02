@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.sourcing_result_response import (
     Purpose,
@@ -264,7 +264,7 @@ class SourcingCreateSummary:
 
 @dataclass(kw_only=True)
 class ListOfSourcingCreateResponseDetail:
-    sourcing_create_response_detail: List[SourcingCreateResponseDetail] = (
+    sourcing_create_response_detail: list[SourcingCreateResponseDetail] = (
         field(
             default_factory=list,
             metadata={
@@ -373,7 +373,7 @@ class SourcingItemComponentResponse:
 
 @dataclass(kw_only=True)
 class ListOfSourcingItemComponentResponse:
-    sourcing_item_component_response: List[SourcingItemComponentResponse] = (
+    sourcing_item_component_response: list[SourcingItemComponentResponse] = (
         field(
             default_factory=list,
             metadata={

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
@@ -25,7 +25,7 @@ class VmsPublication(PayloadPublication):
             "required": True,
         },
     )
-    vms_unit: List[VmsUnit] = field(
+    vms_unit: list[VmsUnit] = field(
         default_factory=list,
         metadata={
             "name": "vmsUnit",

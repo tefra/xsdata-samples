@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from tpdb.models.entry import Entry
 
@@ -9,7 +8,7 @@ class Replacementmap:
     class Meta:
         name = "replacementmap"
 
-    entry: List[Entry] = field(
+    entry: list[Entry] = field(
         default_factory=list,
         metadata={
             "type": "Element",

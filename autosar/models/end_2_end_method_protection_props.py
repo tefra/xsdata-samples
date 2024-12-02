@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .e_2_e_profile_configuration_subtypes_enum import (
     E2EProfileConfigurationSubtypesEnum,
@@ -152,7 +152,7 @@ class End2EndMethodProtectionProps:
             EndToEndProtection.
         """
 
-        data_id: List[PositiveInteger] = field(
+        data_id: list[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-ID",

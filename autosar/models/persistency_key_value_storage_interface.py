@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
@@ -346,7 +346,7 @@ class PersistencyKeyValueStorageInterface:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -357,7 +357,7 @@ class PersistencyKeyValueStorageInterface:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -368,7 +368,7 @@ class PersistencyKeyValueStorageInterface:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -376,7 +376,7 @@ class PersistencyKeyValueStorageInterface:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -386,7 +386,7 @@ class PersistencyKeyValueStorageInterface:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -397,7 +397,7 @@ class PersistencyKeyValueStorageInterface:
 
     @dataclass
     class Namespaces:
-        symbol_props: List[SymbolProps] = field(
+        symbol_props: list[SymbolProps] = field(
             default_factory=list,
             metadata={
                 "name": "SYMBOL-PROPS",
@@ -408,7 +408,7 @@ class PersistencyKeyValueStorageInterface:
 
     @dataclass
     class RedundancyHandlings:
-        persistency_redundancy_crc: List[PersistencyRedundancyCrc] = field(
+        persistency_redundancy_crc: list[PersistencyRedundancyCrc] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-CRC",
@@ -416,7 +416,7 @@ class PersistencyKeyValueStorageInterface:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_redundancy_hash: List[PersistencyRedundancyHash] = field(
+        persistency_redundancy_hash: list[PersistencyRedundancyHash] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-HASH",
@@ -424,7 +424,7 @@ class PersistencyKeyValueStorageInterface:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        persistency_redundancy_m_out_of_n: List[
+        persistency_redundancy_m_out_of_n: list[
             PersistencyRedundancyMOutOfN
         ] = field(
             default_factory=list,
@@ -437,7 +437,7 @@ class PersistencyKeyValueStorageInterface:
 
     @dataclass
     class DataElements:
-        persistency_data_element: List[PersistencyDataElement] = field(
+        persistency_data_element: list[PersistencyDataElement] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-DATA-ELEMENT",
@@ -448,7 +448,7 @@ class PersistencyKeyValueStorageInterface:
 
     @dataclass
     class DataTypeForSerializationRefs:
-        data_type_for_serialization_ref: List[
+        data_type_for_serialization_ref: list[
             "PersistencyKeyValueStorageInterface.DataTypeForSerializationRefs.DataTypeForSerializationRef"
         ] = field(
             default_factory=list,

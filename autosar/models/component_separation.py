@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -100,7 +100,7 @@ class ComponentSeparation:
 
     @dataclass
     class SeparatedComponentIrefs:
-        separated_component_iref: List[ComponentInSystemInstanceRef] = field(
+        separated_component_iref: list[ComponentInSystemInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "SEPARATED-COMPONENT-IREF",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.footer import Footer
 from sdmx_ml.models.generic_metadata_header_type import (
@@ -25,7 +25,7 @@ class GenericMetadataType:
             "required": True,
         },
     )
-    metadata_set: Tuple[MetadataSetType, ...] = field(
+    metadata_set: tuple[MetadataSetType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MetadataSet",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -260,7 +260,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -271,7 +271,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -293,7 +293,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
     @dataclass
     class SecOcComPropsForMulticastRefs:
-        sec_oc_com_props_for_multicast_ref: List[
+        sec_oc_com_props_for_multicast_ref: list[
             "UserDefinedServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs.SecOcComPropsForMulticastRef"
         ] = field(
             default_factory=list,
@@ -317,7 +317,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
     @dataclass
     class SecureComPropsForTcpRefs:
-        secure_com_props_for_tcp_ref: List[
+        secure_com_props_for_tcp_ref: list[
             "UserDefinedServiceInstanceToMachineMapping.SecureComPropsForTcpRefs.SecureComPropsForTcpRef"
         ] = field(
             default_factory=list,
@@ -341,7 +341,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
     @dataclass
     class SecureComPropsForUdpRefs:
-        secure_com_props_for_udp_ref: List[
+        secure_com_props_for_udp_ref: list[
             "UserDefinedServiceInstanceToMachineMapping.SecureComPropsForUdpRefs.SecureComPropsForUdpRef"
         ] = field(
             default_factory=list,
@@ -365,7 +365,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List[
+        service_instance_ref: list[
             "UserDefinedServiceInstanceToMachineMapping.ServiceInstanceRefs.ServiceInstanceRef"
         ] = field(
             default_factory=list,

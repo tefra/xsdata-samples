@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     ConfLoc,
@@ -36,14 +36,14 @@ class Conference:
             "required": True,
         },
     )
-    conf_name: List[ConfName] = field(
+    conf_name: list[ConfName] = field(
         default_factory=list,
         metadata={
             "name": "conf-name",
             "type": "Element",
         },
     )
-    conf_acronym: List[ConfAcronym] = field(
+    conf_acronym: list[ConfAcronym] = field(
         default_factory=list,
         metadata={
             "name": "conf-acronym",
@@ -64,7 +64,7 @@ class Conference:
             "type": "Element",
         },
     )
-    conf_sponsor: List[ConfSponsor] = field(
+    conf_sponsor: list[ConfSponsor] = field(
         default_factory=list,
         metadata={
             "name": "conf-sponsor",

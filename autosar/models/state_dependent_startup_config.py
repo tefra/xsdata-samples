@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .execution_dependency import ExecutionDependency
 from .function_group_state_in_function_group_set_instance_ref import (
@@ -112,7 +112,7 @@ class StateDependentStartupConfig:
 
     @dataclass
     class ExecutionDependencys:
-        execution_dependency: List[ExecutionDependency] = field(
+        execution_dependency: list[ExecutionDependency] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTION-DEPENDENCY",
@@ -123,7 +123,7 @@ class StateDependentStartupConfig:
 
     @dataclass
     class FunctionGroupStateIrefs:
-        function_group_state_iref: List[
+        function_group_state_iref: list[
             FunctionGroupStateInFunctionGroupSetInstanceRef
         ] = field(
             default_factory=list,

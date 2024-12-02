@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.logical_operator_code_type import (
     LogicalOperatorCodeType,
@@ -30,7 +30,7 @@ class QueryExpressionType:
         i.e. does NOT equal or is NOT less than.</description>
     """
 
-    value_expression: List[ValueExpressionType] = field(
+    value_expression: list[ValueExpressionType] = field(
         default_factory=list,
         metadata={
             "name": "ValueExpression",

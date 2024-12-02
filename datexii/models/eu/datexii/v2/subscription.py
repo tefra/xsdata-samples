@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -100,7 +100,7 @@ class Subscription:
             "required": True,
         },
     )
-    target: List[Target] = field(
+    target: list[Target] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.itinerary import Itinerary
@@ -35,7 +35,7 @@ class ReroutingManagement(NetworkManagement):
     :ivar rerouting_management_extension:
     """
 
-    rerouting_management_type: List[ReroutingManagementTypeEnum] = field(
+    rerouting_management_type: list[ReroutingManagementTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "reroutingManagementType",
@@ -85,7 +85,7 @@ class ReroutingManagement(NetworkManagement):
             "max_length": 1024,
         },
     )
-    alternative_route: List[Itinerary] = field(
+    alternative_route: list[Itinerary] = field(
         default_factory=list,
         metadata={
             "name": "alternativeRoute",

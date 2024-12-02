@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -195,7 +195,7 @@ class TransformationPropsSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -206,7 +206,7 @@ class TransformationPropsSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -217,7 +217,7 @@ class TransformationPropsSet:
 
     @dataclass
     class TransformationPropss:
-        ap_someip_transformation_props: List[ApSomeipTransformationProps] = (
+        ap_someip_transformation_props: list[ApSomeipTransformationProps] = (
             field(
                 default_factory=list,
                 metadata={
@@ -227,7 +227,7 @@ class TransformationPropsSet:
                 },
             )
         )
-        someip_transformation_props: List[SomeipTransformationProps] = field(
+        someip_transformation_props: list[SomeipTransformationProps] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-TRANSFORMATION-PROPS",
@@ -235,7 +235,7 @@ class TransformationPropsSet:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_transformation_props: List[
+        user_defined_transformation_props: list[
             UserDefinedTransformationProps
         ] = field(
             default_factory=list,

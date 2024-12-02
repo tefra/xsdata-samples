@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from ubl.models.common.ubl_signature_aggregate_components_2_1 import (
     SignatureInformation,
@@ -15,7 +14,7 @@ class UbldocumentSignaturesType:
     class Meta:
         name = "UBLDocumentSignaturesType"
 
-    signature_information: Tuple[SignatureInformation, ...] = field(
+    signature_information: tuple[SignatureInformation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SignatureInformation",

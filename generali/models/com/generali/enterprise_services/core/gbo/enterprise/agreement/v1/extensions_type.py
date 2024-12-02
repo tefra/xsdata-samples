@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.extension_type import (
     ExtensionType,
@@ -12,7 +11,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ExtensionsType:
-    extension: List[ExtensionType] = field(
+    extension: list[ExtensionType] = field(
         default_factory=list,
         metadata={
             "name": "Extension",

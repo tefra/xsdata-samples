@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -235,7 +235,7 @@ class PlatformHealthManagementContribution:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -246,7 +246,7 @@ class PlatformHealthManagementContribution:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -257,7 +257,7 @@ class PlatformHealthManagementContribution:
 
     @dataclass
     class Checkpoints:
-        supervision_checkpoint: List[SupervisionCheckpoint] = field(
+        supervision_checkpoint: list[SupervisionCheckpoint] = field(
             default_factory=list,
             metadata={
                 "name": "SUPERVISION-CHECKPOINT",
@@ -268,7 +268,7 @@ class PlatformHealthManagementContribution:
 
     @dataclass
     class LocalSupervisions:
-        local_supervision: List[LocalSupervision] = field(
+        local_supervision: list[LocalSupervision] = field(
             default_factory=list,
             metadata={
                 "name": "LOCAL-SUPERVISION",
@@ -279,7 +279,7 @@ class PlatformHealthManagementContribution:
 
     @dataclass
     class GlobalSupervisions:
-        global_supervision: List[GlobalSupervision] = field(
+        global_supervision: list[GlobalSupervision] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-SUPERVISION",
@@ -290,7 +290,7 @@ class PlatformHealthManagementContribution:
 
     @dataclass
     class HealthChannels:
-        health_channel_external_status: List[HealthChannelExternalStatus] = (
+        health_channel_external_status: list[HealthChannelExternalStatus] = (
             field(
                 default_factory=list,
                 metadata={
@@ -300,7 +300,7 @@ class PlatformHealthManagementContribution:
                 },
             )
         )
-        health_channel_supervision: List[HealthChannelSupervision] = field(
+        health_channel_supervision: list[HealthChannelSupervision] = field(
             default_factory=list,
             metadata={
                 "name": "HEALTH-CHANNEL-SUPERVISION",

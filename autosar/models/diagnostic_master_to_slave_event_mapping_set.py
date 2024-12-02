@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -199,7 +199,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -210,7 +210,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -221,7 +221,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
 
     @dataclass
     class MasterToSlaveEventMappings:
-        diagnostic_master_to_slave_event_mapping: List[
+        diagnostic_master_to_slave_event_mapping: list[
             DiagnosticMasterToSlaveEventMapping
         ] = field(
             default_factory=list,

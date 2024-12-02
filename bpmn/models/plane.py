@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from .bpmnedge import Bpmnedge
 from .bpmnshape import Bpmnshape
@@ -14,7 +13,7 @@ class Plane(Node):
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"
 
-    bpmnshape: List[Bpmnshape] = field(
+    bpmnshape: list[Bpmnshape] = field(
         default_factory=list,
         metadata={
             "name": "BPMNShape",
@@ -22,7 +21,7 @@ class Plane(Node):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/DI",
         },
     )
-    bpmnedge: List[Bpmnedge] = field(
+    bpmnedge: list[Bpmnedge] = field(
         default_factory=list,
         metadata={
             "name": "BPMNEdge",
@@ -30,7 +29,7 @@ class Plane(Node):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/DI",
         },
     )
-    diagram_element: List[DiagramElement] = field(
+    diagram_element: list[DiagramElement] = field(
         default_factory=list,
         metadata={
             "name": "DiagramElement",

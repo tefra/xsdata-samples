@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
-from typing import List
 
-from tpdb.models.type_mod import TypeType
+from tpdb.models.type_mod import Type
 
 
 @dataclass
@@ -9,7 +8,7 @@ class TypeDeclaration:
     class Meta:
         name = "typeDeclaration"
 
-    type_value: List[TypeType] = field(
+    type_value: list[Type] = field(
         default_factory=list,
         metadata={
             "name": "type",

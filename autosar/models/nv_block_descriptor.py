@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -361,7 +361,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -372,7 +372,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -383,7 +383,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class ClientServerPorts:
-        role_based_port_assignment: List[RoleBasedPortAssignment] = field(
+        role_based_port_assignment: list[RoleBasedPortAssignment] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-PORT-ASSIGNMENT",
@@ -394,7 +394,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class ConstantValueMappingRefs:
-        constant_value_mapping_ref: List[
+        constant_value_mapping_ref: list[
             "NvBlockDescriptor.ConstantValueMappingRefs.ConstantValueMappingRef"
         ] = field(
             default_factory=list,
@@ -420,7 +420,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class DataTypeMappingRefs:
-        data_type_mapping_ref: List[
+        data_type_mapping_ref: list[
             "NvBlockDescriptor.DataTypeMappingRefs.DataTypeMappingRef"
         ] = field(
             default_factory=list,
@@ -444,7 +444,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class InstantiationDataDefPropss:
-        instantiation_data_def_props: List[InstantiationDataDefProps] = field(
+        instantiation_data_def_props: list[InstantiationDataDefProps] = field(
             default_factory=list,
             metadata={
                 "name": "INSTANTIATION-DATA-DEF-PROPS",
@@ -455,7 +455,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class ModeSwitchEventTriggeredActivitys:
-        mode_switch_event_triggered_activity: List[
+        mode_switch_event_triggered_activity: list[
             ModeSwitchEventTriggeredActivity
         ] = field(
             default_factory=list,
@@ -468,7 +468,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class NvBlockDataMappings:
-        nv_block_data_mapping: List[NvBlockDataMapping] = field(
+        nv_block_data_mapping: list[NvBlockDataMapping] = field(
             default_factory=list,
             metadata={
                 "name": "NV-BLOCK-DATA-MAPPING",

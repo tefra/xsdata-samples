@@ -56,8 +56,8 @@ from tpdb.models.theory_value import TheoryValue
 from tpdb.models.trs import Trs
 from tpdb.models.type_declaration import TypeDeclaration
 from tpdb.models.type_mod import (
+    Type,
     TypeArrow,
-    TypeType,
 )
 from tpdb.models.var import Var
 from tpdb.models.var_declaration import VarDeclaration
@@ -113,7 +113,7 @@ __all__ = [
     "TheoryValue",
     "Trs",
     "TypeDeclaration",
-    "TypeType",
+    "Type",
     "TypeArrow",
     "Var",
     "VarDeclaration",

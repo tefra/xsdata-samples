@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.update import Update
 
@@ -19,7 +18,7 @@ class Updates:
         name = "updates"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    update: List[Update] = field(
+    update: list[Update] = field(
         default_factory=list,
         metadata={
             "type": "Element",

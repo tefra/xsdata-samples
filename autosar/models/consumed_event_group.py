@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -330,7 +330,7 @@ class ConsumedEventGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -341,7 +341,7 @@ class ConsumedEventGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -363,7 +363,7 @@ class ConsumedEventGroup:
 
     @dataclass
     class EventMulticastAddresss:
-        application_endpoint_ref_conditional: List[
+        application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
         ] = field(
             default_factory=list,
@@ -376,7 +376,7 @@ class ConsumedEventGroup:
 
     @dataclass
     class PduActivationRoutingGroups:
-        pdu_activation_routing_group: List[PduActivationRoutingGroup] = field(
+        pdu_activation_routing_group: list[PduActivationRoutingGroup] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-ACTIVATION-ROUTING-GROUP",
@@ -387,7 +387,7 @@ class ConsumedEventGroup:
 
     @dataclass
     class RoutingGroupRefs:
-        routing_group_ref: List[
+        routing_group_ref: list[
             "ConsumedEventGroup.RoutingGroupRefs.RoutingGroupRef"
         ] = field(
             default_factory=list,
@@ -411,7 +411,7 @@ class ConsumedEventGroup:
 
     @dataclass
     class SdClientTimerConfigs:
-        someip_sd_client_event_group_timing_config_ref_conditional: List[
+        someip_sd_client_event_group_timing_config_ref_conditional: list[
             SomeipSdClientEventGroupTimingConfigRefConditional
         ] = field(
             default_factory=list,

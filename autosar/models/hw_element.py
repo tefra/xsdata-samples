@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -263,7 +263,7 @@ class HwElement:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -274,7 +274,7 @@ class HwElement:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -296,7 +296,7 @@ class HwElement:
 
     @dataclass
     class HwCategoryRefs:
-        hw_category_ref: List["HwElement.HwCategoryRefs.HwCategoryRef"] = (
+        hw_category_ref: list["HwElement.HwCategoryRefs.HwCategoryRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -320,7 +320,7 @@ class HwElement:
 
     @dataclass
     class HwAttributeValues:
-        hw_attribute_value: List[HwAttributeValue] = field(
+        hw_attribute_value: list[HwAttributeValue] = field(
             default_factory=list,
             metadata={
                 "name": "HW-ATTRIBUTE-VALUE",
@@ -331,7 +331,7 @@ class HwElement:
 
     @dataclass
     class NestedElements:
-        hw_element_ref_conditional: List[HwElementRefConditional] = field(
+        hw_element_ref_conditional: list[HwElementRefConditional] = field(
             default_factory=list,
             metadata={
                 "name": "HW-ELEMENT-REF-CONDITIONAL",
@@ -342,7 +342,7 @@ class HwElement:
 
     @dataclass
     class HwPinGroups:
-        hw_pin_group: List[HwPinGroup] = field(
+        hw_pin_group: list[HwPinGroup] = field(
             default_factory=list,
             metadata={
                 "name": "HW-PIN-GROUP",
@@ -353,7 +353,7 @@ class HwElement:
 
     @dataclass
     class HwElementConnections:
-        hw_element_connector: List[HwElementConnector] = field(
+        hw_element_connector: list[HwElementConnector] = field(
             default_factory=list,
             metadata={
                 "name": "HW-ELEMENT-CONNECTOR",

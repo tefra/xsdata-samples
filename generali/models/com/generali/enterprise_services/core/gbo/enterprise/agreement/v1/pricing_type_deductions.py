@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_deduction_type import (
     PricingDeductionType,
@@ -15,7 +14,7 @@ class PricingTypeDeductions:
     class Meta:
         global_type = False
 
-    deduction: List[PricingDeductionType] = field(
+    deduction: list[PricingDeductionType] = field(
         default_factory=list,
         metadata={
             "name": "Deduction",

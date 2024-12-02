@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -440,7 +440,7 @@ class SocketConnection:
 
     @dataclass
     class Pdus:
-        socket_connection_ipdu_identifier: List[
+        socket_connection_ipdu_identifier: list[
             SocketConnectionIpduIdentifier
         ] = field(
             default_factory=list,

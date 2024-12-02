@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .t_base_element import TBaseElement
@@ -13,7 +13,7 @@ class TRelationship(TBaseElement):
     class Meta:
         name = "tRelationship"
 
-    source: List[QName] = field(
+    source: list[QName] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -21,7 +21,7 @@ class TRelationship(TBaseElement):
             "min_occurs": 1,
         },
     )
-    target: List[QName] = field(
+    target: list[QName] = field(
         default_factory=list,
         metadata={
             "type": "Element",

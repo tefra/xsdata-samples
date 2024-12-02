@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Tuple, Union
+from typing import ForwardRef, Optional, Union
 
 from sdmx_ml.models.annotable_type import AnnotableType
 
@@ -36,7 +36,7 @@ class FixedValueMapType(AnnotableType):
             ),
         },
     )
-    value: Tuple[str, ...] = field(
+    value: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Value",

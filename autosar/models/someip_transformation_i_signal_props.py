@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,7 +111,7 @@ class SomeipTransformationISignalProps:
 
     @dataclass
     class SomeipTransformationISignalPropsVariants:
-        someip_transformation_i_signal_props_conditional: List[
+        someip_transformation_i_signal_props_conditional: list[
             SomeipTransformationISignalPropsConditional
         ] = field(
             default_factory=list,

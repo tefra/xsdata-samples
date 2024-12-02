@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_event_subtypes_enum import AbstractEventSubtypesEnum
 from .admin_data import (
@@ -228,7 +228,7 @@ class EocEventRef:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -239,7 +239,7 @@ class EocEventRef:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -250,7 +250,7 @@ class EocEventRef:
 
     @dataclass
     class DirectSuccessorRefs:
-        direct_successor_ref: List[
+        direct_successor_ref: list[
             "EocEventRef.DirectSuccessorRefs.DirectSuccessorRef"
         ] = field(
             default_factory=list,
@@ -296,7 +296,7 @@ class EocEventRef:
 
     @dataclass
     class SuccessorRefs:
-        successor_ref: List["EocEventRef.SuccessorRefs.SuccessorRef"] = field(
+        successor_ref: list["EocEventRef.SuccessorRefs.SuccessorRef"] = field(
             default_factory=list,
             metadata={
                 "name": "SUCCESSOR-REF",

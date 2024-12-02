@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .autosar_operation_argument_instance import (
     AutosarOperationArgumentInstance,
@@ -103,7 +103,7 @@ class TdEventOccurrenceExpression:
 
     @dataclass
     class Arguments:
-        autosar_operation_argument_instance: List[
+        autosar_operation_argument_instance: list[
             AutosarOperationArgumentInstance
         ] = field(
             default_factory=list,
@@ -116,7 +116,7 @@ class TdEventOccurrenceExpression:
 
     @dataclass
     class Modes:
-        timing_mode_instance: List[TimingModeInstance] = field(
+        timing_mode_instance: list[TimingModeInstance] = field(
             default_factory=list,
             metadata={
                 "name": "TIMING-MODE-INSTANCE",
@@ -127,7 +127,7 @@ class TdEventOccurrenceExpression:
 
     @dataclass
     class Variables:
-        autosar_variable_instance: List[AutosarVariableInstance] = field(
+        autosar_variable_instance: list[AutosarVariableInstance] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-VARIABLE-INSTANCE",

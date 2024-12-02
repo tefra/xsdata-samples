@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.collection_multi_resolution import (
     CollectionMultiResolution,
@@ -38,7 +38,7 @@ class Collection:
         name = "collection"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    item: List[Item] = field(
+    item: list[Item] = field(
         default_factory=list,
         metadata={
             "type": "Element",

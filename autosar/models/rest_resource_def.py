@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -217,7 +217,7 @@ class RestResourceDef:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -228,7 +228,7 @@ class RestResourceDef:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -239,7 +239,7 @@ class RestResourceDef:
 
     @dataclass
     class Elements:
-        rest_element_def: List[RestElementDef] = field(
+        rest_element_def: list[RestElementDef] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ELEMENT-DEF",
@@ -250,7 +250,7 @@ class RestResourceDef:
 
     @dataclass
     class Endpoints:
-        rest_endpoint_delete: List[RestEndpointDelete] = field(
+        rest_endpoint_delete: list[RestEndpointDelete] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ENDPOINT-DELETE",
@@ -258,7 +258,7 @@ class RestResourceDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_endpoint_get: List[RestEndpointGet] = field(
+        rest_endpoint_get: list[RestEndpointGet] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ENDPOINT-GET",
@@ -266,7 +266,7 @@ class RestResourceDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_endpoint_post: List[RestEndpointPost] = field(
+        rest_endpoint_post: list[RestEndpointPost] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ENDPOINT-POST",
@@ -274,7 +274,7 @@ class RestResourceDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_endpoint_put: List[RestEndpointPut] = field(
+        rest_endpoint_put: list[RestEndpointPut] = field(
             default_factory=list,
             metadata={
                 "name": "REST-ENDPOINT-PUT",
@@ -285,7 +285,7 @@ class RestResourceDef:
 
     @dataclass
     class Resources:
-        rest_resource_def: List["RestResourceDef"] = field(
+        rest_resource_def: list["RestResourceDef"] = field(
             default_factory=list,
             metadata={
                 "name": "REST-RESOURCE-DEF",
@@ -296,7 +296,7 @@ class RestResourceDef:
 
     @dataclass
     class SystemTriggeredEvents:
-        rest_system_triggered_event: List[RestSystemTriggeredEvent] = field(
+        rest_system_triggered_event: list[RestSystemTriggeredEvent] = field(
             default_factory=list,
             metadata={
                 "name": "REST-SYSTEM-TRIGGERED-EVENT",

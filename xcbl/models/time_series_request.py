@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.time_series_response import (
     CharacteristicCombinationId,
@@ -115,7 +115,7 @@ class TimeSeriesRequestSummary:
 
 @dataclass(kw_only=True)
 class ListOfKeyFigureData:
-    key_figure_data: List[KeyFigureData] = field(
+    key_figure_data: list[KeyFigureData] = field(
         default_factory=list,
         metadata={
             "name": "KeyFigureData",

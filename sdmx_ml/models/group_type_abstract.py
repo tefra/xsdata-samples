@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.comp_type import CompType
@@ -32,7 +32,7 @@ class GroupTypeAbstract(AnnotableType):
     class Meta:
         name = "GroupType"
 
-    comp: Tuple[CompType, ...] = field(
+    comp: tuple[CompType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Comp",
@@ -56,7 +56,7 @@ class GroupTypeAbstract(AnnotableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    local_attributes: Dict[str, str] = field(
+    local_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

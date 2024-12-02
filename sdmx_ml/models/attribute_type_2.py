@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.attribute_base_type import AttributeBaseType
 from sdmx_ml.models.attribute_relationship_type import (
@@ -47,7 +47,7 @@ class AttributeType2(AttributeBaseType):
     class Meta:
         name = "AttributeType"
 
-    concept_role: Tuple[str, ...] = field(
+    concept_role: tuple[str, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConceptRole",

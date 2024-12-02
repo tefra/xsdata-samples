@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -246,7 +246,7 @@ class ISignalIPduGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -257,7 +257,7 @@ class ISignalIPduGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -268,7 +268,7 @@ class ISignalIPduGroup:
 
     @dataclass
     class ContainedISignalIPduGroupRefs:
-        contained_i_signal_i_pdu_group_ref: List[
+        contained_i_signal_i_pdu_group_ref: list[
             "ISignalIPduGroup.ContainedISignalIPduGroupRefs.ContainedISignalIPduGroupRef"
         ] = field(
             default_factory=list,
@@ -292,7 +292,7 @@ class ISignalIPduGroup:
 
     @dataclass
     class ISignalIPdus:
-        i_signal_i_pdu_ref_conditional: List[ISignalIPduRefConditional] = (
+        i_signal_i_pdu_ref_conditional: list[ISignalIPduRefConditional] = (
             field(
                 default_factory=list,
                 metadata={
@@ -305,7 +305,7 @@ class ISignalIPduGroup:
 
     @dataclass
     class NmPdus:
-        nm_pdu_ref_conditional: List[NmPduRefConditional] = field(
+        nm_pdu_ref_conditional: list[NmPduRefConditional] = field(
             default_factory=list,
             metadata={
                 "name": "NM-PDU-REF-CONDITIONAL",

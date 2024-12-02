@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
 from crossref.models.org.crossref.access_indicators.program import (
@@ -78,14 +78,14 @@ class ConferencePaper:
             "required": True,
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    publication_date: List[PublicationDate] = field(
+    publication_date: list[PublicationDate] = field(
         default_factory=list,
         metadata={
             "type": "Element",

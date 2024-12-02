@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.predefined_location_versioned_reference import (
@@ -35,7 +35,7 @@ class LinearTrafficView:
             "required": True,
         },
     )
-    traffic_view_record: List[TrafficViewRecord] = field(
+    traffic_view_record: list[TrafficViewRecord] = field(
         default_factory=list,
         metadata={
             "name": "trafficViewRecord",

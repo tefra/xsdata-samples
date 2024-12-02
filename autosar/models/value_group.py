@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .multilanguage_long_name import MultilanguageLongName
 from .numerical_or_text import NumericalOrText
@@ -65,7 +65,7 @@ class ValueGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vtf: List[NumericalOrText] = field(
+    vtf: list[NumericalOrText] = field(
         default_factory=list,
         metadata={
             "name": "VTF",
@@ -73,7 +73,7 @@ class ValueGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vf: List[NumericalValueVariationPoint] = field(
+    vf: list[NumericalValueVariationPoint] = field(
         default_factory=list,
         metadata={
             "name": "VF",
@@ -81,7 +81,7 @@ class ValueGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vt: List[VerbatimString] = field(
+    vt: list[VerbatimString] = field(
         default_factory=list,
         metadata={
             "name": "VT",
@@ -89,7 +89,7 @@ class ValueGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    v: List[NumericalValue] = field(
+    v: list[NumericalValue] = field(
         default_factory=list,
         metadata={
             "name": "V",
@@ -97,7 +97,7 @@ class ValueGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vg: List["ValueGroup"] = field(
+    vg: list["ValueGroup"] = field(
         default_factory=list,
         metadata={
             "name": "VG",

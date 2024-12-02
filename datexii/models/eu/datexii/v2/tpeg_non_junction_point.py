@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
@@ -33,7 +33,7 @@ class TpegNonJunctionPoint(TpegPoint):
             "required": True,
         },
     )
-    name: List[TpegOtherPointDescriptor] = field(
+    name: list[TpegOtherPointDescriptor] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.applied_deduction_type import (
     AppliedDeductionType,
@@ -12,7 +11,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class AppliedDeductionsType:
-    applied_deduction: List[AppliedDeductionType] = field(
+    applied_deduction: list[AppliedDeductionType] = field(
         default_factory=list,
         metadata={
             "name": "AppliedDeduction",

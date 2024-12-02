@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.hazardous_materials import HazardousMaterials
@@ -40,7 +40,7 @@ class ParkingAssignment:
     :ivar parking_assignment_extension:
     """
 
-    applicable_for_user: List[UserTypeEnum] = field(
+    applicable_for_user: list[UserTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableForUser",
@@ -48,7 +48,7 @@ class ParkingAssignment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_duration: List[ParkingDurationEnum] = field(
+    parking_duration: list[ParkingDurationEnum] = field(
         default_factory=list,
         metadata={
             "name": "parkingDuration",
@@ -56,7 +56,7 @@ class ParkingAssignment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_characteristics: List[VehicleCharacteristics] = field(
+    vehicle_characteristics: list[VehicleCharacteristics] = field(
         default_factory=list,
         metadata={
             "name": "vehicleCharacteristics",
@@ -64,7 +64,7 @@ class ParkingAssignment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    hazardous_materials: List[HazardousMaterials] = field(
+    hazardous_materials: list[HazardousMaterials] = field(
         default_factory=list,
         metadata={
             "name": "hazardousMaterials",
@@ -72,7 +72,7 @@ class ParkingAssignment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    time_period_by_hour: List[TimePeriodByHour] = field(
+    time_period_by_hour: list[TimePeriodByHour] = field(
         default_factory=list,
         metadata={
             "name": "timePeriodByHour",
@@ -80,7 +80,7 @@ class ParkingAssignment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_permit: List[ParkingPermit] = field(
+    parking_permit: list[ParkingPermit] = field(
         default_factory=list,
         metadata={
             "name": "parkingPermit",

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import ForwardRef, List, Optional
+from typing import ForwardRef, Optional
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
@@ -64,7 +64,7 @@ class StrucDocFootnoteRef:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -92,7 +92,7 @@ class StrucDocSub:
     class Meta:
         name = "StrucDoc.Sub"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -107,7 +107,7 @@ class StrucDocSup:
     class Meta:
         name = "StrucDoc.Sup"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -259,7 +259,7 @@ class StrucDocCaption:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -267,7 +267,7 @@ class StrucDocCaption:
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -322,7 +322,7 @@ class StrucDocCol:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -386,7 +386,7 @@ class StrucDocTitleContent:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -394,7 +394,7 @@ class StrucDocTitleContent:
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -441,7 +441,7 @@ class StrucDocColgroup:
     class Meta:
         name = "StrucDoc.Colgroup"
 
-    col: List[StrucDocCol] = field(
+    col: list[StrucDocCol] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -461,7 +461,7 @@ class StrucDocColgroup:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -519,7 +519,7 @@ class StrucDocRenderMultiMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    referenced_object: List[str] = field(
+    referenced_object: list[str] = field(
         default_factory=list,
         metadata={
             "name": "referencedObject",
@@ -540,7 +540,7 @@ class StrucDocRenderMultiMedia:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -568,7 +568,7 @@ class StrucDocTitleFootnote:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -576,7 +576,7 @@ class StrucDocTitleFootnote:
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -626,7 +626,7 @@ class StrucDocContent:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -640,7 +640,7 @@ class StrucDocContent:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -710,7 +710,7 @@ class StrucDocTitle:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -726,7 +726,7 @@ class StrucDocTitle:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -786,7 +786,7 @@ class StrucDocFootnote:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -794,7 +794,7 @@ class StrucDocFootnote:
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -899,7 +899,7 @@ class StrucDocLinkHtml:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -907,7 +907,7 @@ class StrucDocLinkHtml:
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -947,7 +947,7 @@ class StrucDocParagraph:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -955,7 +955,7 @@ class StrucDocParagraph:
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1030,7 +1030,7 @@ class StrucDocTh:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1050,7 +1050,7 @@ class StrucDocTh:
             "type": "Attribute",
         },
     )
-    headers: List[str] = field(
+    headers: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -1099,7 +1099,7 @@ class StrucDocTh:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1169,7 +1169,7 @@ class StrucDocItem:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1177,7 +1177,7 @@ class StrucDocItem:
             "tokens": True,
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1261,7 +1261,7 @@ class StrucDocList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    item: List[StrucDocItem] = field(
+    item: list[StrucDocItem] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1282,7 +1282,7 @@ class StrucDocList:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1317,7 +1317,7 @@ class StrucDocTd:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1337,7 +1337,7 @@ class StrucDocTd:
             "type": "Attribute",
         },
     )
-    headers: List[str] = field(
+    headers: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -1386,7 +1386,7 @@ class StrucDocTd:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
@@ -1453,14 +1453,14 @@ class StrucDocTr:
     class Meta:
         name = "StrucDoc.Tr"
 
-    th: List[StrucDocTh] = field(
+    th: list[StrucDocTh] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    td: List[StrucDocTd] = field(
+    td: list[StrucDocTd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1480,7 +1480,7 @@ class StrucDocTr:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1519,7 +1519,7 @@ class StrucDocTbody:
     class Meta:
         name = "StrucDoc.Tbody"
 
-    tr: List[StrucDocTr] = field(
+    tr: list[StrucDocTr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1540,7 +1540,7 @@ class StrucDocTbody:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1579,7 +1579,7 @@ class StrucDocTfoot:
     class Meta:
         name = "StrucDoc.Tfoot"
 
-    tr: List[StrucDocTr] = field(
+    tr: list[StrucDocTr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1600,7 +1600,7 @@ class StrucDocTfoot:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1639,7 +1639,7 @@ class StrucDocThead:
     class Meta:
         name = "StrucDoc.Thead"
 
-    tr: List[StrucDocTr] = field(
+    tr: list[StrucDocTr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1660,7 +1660,7 @@ class StrucDocThead:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1706,14 +1706,14 @@ class StrucDocTable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    col: List[StrucDocCol] = field(
+    col: list[StrucDocCol] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    colgroup: List[StrucDocColgroup] = field(
+    colgroup: list[StrucDocColgroup] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1734,7 +1734,7 @@ class StrucDocTable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    tbody: List[StrucDocTbody] = field(
+    tbody: list[StrucDocTbody] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1755,7 +1755,7 @@ class StrucDocTable:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1825,7 +1825,7 @@ class StrucDocText:
             "type": "Attribute",
         },
     )
-    style_code: List[str] = field(
+    style_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "styleCode",
@@ -1841,7 +1841,7 @@ class StrucDocText:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

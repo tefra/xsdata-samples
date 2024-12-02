@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.identifier import (
     Identifier,
@@ -21,14 +20,14 @@ class PublisherItem:
         name = "publisher_item"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    item_number: List[ItemNumber] = field(
+    item_number: list[ItemNumber] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 3,
         },
     )
-    identifier: List[Identifier] = field(
+    identifier: list[Identifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",

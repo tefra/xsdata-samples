@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Fn,
@@ -34,19 +34,19 @@ class AuthorNotes:
             "type": "Element",
         },
     )
-    corresp: List[Corresp] = field(
+    corresp: list[Corresp] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn: List[Fn] = field(
+    fn: list[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    p: List[P] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -58,7 +58,7 @@ class AuthorNotes:
             "type": "Attribute",
         },
     )
-    rid: List[str] = field(
+    rid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from .human_performer import HumanPerformer
 from .performer import Performer
@@ -15,7 +14,7 @@ class TGlobalTask(TCallableElement):
     class Meta:
         name = "tGlobalTask"
 
-    potential_owner: List[PotentialOwner] = field(
+    potential_owner: list[PotentialOwner] = field(
         default_factory=list,
         metadata={
             "name": "potentialOwner",
@@ -23,7 +22,7 @@ class TGlobalTask(TCallableElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    human_performer: List[HumanPerformer] = field(
+    human_performer: list[HumanPerformer] = field(
         default_factory=list,
         metadata={
             "name": "humanPerformer",
@@ -31,14 +30,14 @@ class TGlobalTask(TCallableElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    performer: List[Performer] = field(
+    performer: list[Performer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    resource_role: List[ResourceRole] = field(
+    resource_role: list[ResourceRole] = field(
         default_factory=list,
         metadata={
             "name": "resourceRole",

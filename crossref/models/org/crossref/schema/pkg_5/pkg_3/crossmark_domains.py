@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark_domain import (
     CrossmarkDomain,
@@ -24,7 +23,7 @@ class CrossmarkDomains:
         name = "crossmark_domains"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    crossmark_domain: List[CrossmarkDomain] = field(
+    crossmark_domain: list[CrossmarkDomain] = field(
         default_factory=list,
         metadata={
             "type": "Element",

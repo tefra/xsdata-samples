@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -358,7 +358,7 @@ class DltLogChannel:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -369,7 +369,7 @@ class DltLogChannel:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -391,7 +391,7 @@ class DltLogChannel:
 
     @dataclass
     class DltMessageRefs:
-        dlt_message_ref: List["DltLogChannel.DltMessageRefs.DltMessageRef"] = (
+        dlt_message_ref: list["DltLogChannel.DltMessageRefs.DltMessageRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -433,7 +433,7 @@ class DltLogChannel:
             of log messages provided by the process.
         """
 
-        log_trace_log_mode: List[LogTraceLogModeEnum] = field(
+        log_trace_log_mode: list[LogTraceLogModeEnum] = field(
             default_factory=list,
             metadata={
                 "name": "LOG-TRACE-LOG-MODE",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -299,7 +299,7 @@ class ApplicationEndpoint:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -310,7 +310,7 @@ class ApplicationEndpoint:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -321,7 +321,7 @@ class ApplicationEndpoint:
 
     @dataclass
     class ConsumedServiceInstances:
-        consumed_service_instance: List[ConsumedServiceInstance] = field(
+        consumed_service_instance: list[ConsumedServiceInstance] = field(
             default_factory=list,
             metadata={
                 "name": "CONSUMED-SERVICE-INSTANCE",
@@ -343,7 +343,7 @@ class ApplicationEndpoint:
 
     @dataclass
     class ProvidedServiceInstances:
-        provided_service_instance: List[ProvidedServiceInstance] = field(
+        provided_service_instance: list[ProvidedServiceInstance] = field(
             default_factory=list,
             metadata={
                 "name": "PROVIDED-SERVICE-INSTANCE",

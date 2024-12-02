@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -204,7 +204,7 @@ class DdsEventDeployment:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -215,7 +215,7 @@ class DdsEventDeployment:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -243,7 +243,7 @@ class DdsEventDeployment:
             sent.
         """
 
-        transport_protocol: List[String] = field(
+        transport_protocol: list[String] = field(
             default_factory=list,
             metadata={
                 "name": "TRANSPORT-PROTOCOL",

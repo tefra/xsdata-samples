@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .pdu_collection_semantics_enum import PduCollectionSemanticsEnum
 from .pdu_collection_trigger_enum import PduCollectionTriggerEnum
@@ -157,7 +157,7 @@ class SocketConnectionIpduIdentifier:
 
     @dataclass
     class RoutingGroupRefs:
-        routing_group_ref: List[
+        routing_group_ref: list[
             "SocketConnectionIpduIdentifier.RoutingGroupRefs.RoutingGroupRef"
         ] = field(
             default_factory=list,

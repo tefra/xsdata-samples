@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .msr_query_arg import MsrQueryArg
 from .string import String
@@ -43,7 +43,7 @@ class MsrQueryProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_arg: List[MsrQueryArg] = field(
+    msr_query_arg: list[MsrQueryArg] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-ARG",

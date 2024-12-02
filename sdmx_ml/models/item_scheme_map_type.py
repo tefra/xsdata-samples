@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from sdmx_ml.models.item_scheme_map_base_type import ItemSchemeMapBaseType
 from sdmx_ml.models.single_value_mapping_type import SingleValueMappingType
@@ -40,7 +40,7 @@ class ItemSchemeMapType(ItemSchemeMapBaseType):
             "pattern": r".+\)",
         },
     )
-    item_map: Tuple[SingleValueMappingType, ...] = field(
+    item_map: tuple[SingleValueMappingType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ItemMap",

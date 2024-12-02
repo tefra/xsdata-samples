@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ip_sec_config_props_subtypes_enum import IpSecConfigPropsSubtypesEnum
 from .ip_sec_rule import IpSecRule
@@ -81,7 +81,7 @@ class IpSecConfig:
 
     @dataclass
     class IpSecRules:
-        ip_sec_rule: List[IpSecRule] = field(
+        ip_sec_rule: list[IpSecRule] = field(
             default_factory=list,
             metadata={
                 "name": "IP-SEC-RULE",

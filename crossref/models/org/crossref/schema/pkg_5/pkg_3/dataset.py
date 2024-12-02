@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.access_indicators.program import (
     Program as AccessIndicatorsProgram,
@@ -65,7 +65,7 @@ class Dataset:
             "type": "Element",
         },
     )
-    database_date: List[DatabaseDate] = field(
+    database_date: list[DatabaseDate] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
@@ -13,7 +12,7 @@ class OrganisationGbotypeCompanyLevels:
     class Meta:
         global_type = False
 
-    company_level: List[CodeType] = field(
+    company_level: list[CodeType] = field(
         default_factory=list,
         metadata={
             "name": "CompanyLevel",

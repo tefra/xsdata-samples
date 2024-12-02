@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.abbrev_title import (
     AbbrevTitle,
@@ -33,7 +33,7 @@ class JournalMetadata:
         name = "journal_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    full_title: List[FullTitle] = field(
+    full_title: list[FullTitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -41,14 +41,14 @@ class JournalMetadata:
             "max_occurs": 10,
         },
     )
-    abbrev_title: List[AbbrevTitle] = field(
+    abbrev_title: list[AbbrevTitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 10,
         },
     )
-    issn: List[Issn] = field(
+    issn: list[Issn] = field(
         default_factory=list,
         metadata={
             "type": "Element",

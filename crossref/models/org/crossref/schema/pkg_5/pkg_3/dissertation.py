@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
 from crossref.models.org.crossref.access_indicators.program import (
@@ -67,7 +67,7 @@ class Dissertation:
         name = "dissertation"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    person_name: List[PersonName] = field(
+    person_name: list[PersonName] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -86,14 +86,14 @@ class Dissertation:
             "required": True,
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    approval_date: List[ApprovalDate] = field(
+    approval_date: list[ApprovalDate] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -101,7 +101,7 @@ class Dissertation:
             "max_occurs": 10,
         },
     )
-    institution: List[Institution] = field(
+    institution: list[Institution] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -109,14 +109,14 @@ class Dissertation:
             "max_occurs": 6,
         },
     )
-    degree: List[Degree] = field(
+    degree: list[Degree] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 10,
         },
     )
-    isbn: List[Isbn] = field(
+    isbn: list[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",

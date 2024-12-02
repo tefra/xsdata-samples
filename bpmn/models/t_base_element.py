@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Optional
 
 from .documentation import Documentation
 from .extension_elements import ExtensionElements
@@ -12,7 +12,7 @@ class TBaseElement:
     class Meta:
         name = "tBaseElement"
 
-    documentation: List[Documentation] = field(
+    documentation: list[Documentation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -33,7 +33,7 @@ class TBaseElement:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

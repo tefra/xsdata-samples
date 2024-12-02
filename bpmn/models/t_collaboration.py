@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .artifact import Artifact
@@ -27,14 +27,14 @@ class TCollaboration(TRootElement):
     class Meta:
         name = "tCollaboration"
 
-    participant: List[Participant] = field(
+    participant: list[Participant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    message_flow: List[MessageFlow] = field(
+    message_flow: list[MessageFlow] = field(
         default_factory=list,
         metadata={
             "name": "messageFlow",
@@ -42,7 +42,7 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    text_annotation: List[TextAnnotation] = field(
+    text_annotation: list[TextAnnotation] = field(
         default_factory=list,
         metadata={
             "name": "textAnnotation",
@@ -50,28 +50,28 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    group: List[Group] = field(
+    group: list[Group] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    association: List[Association] = field(
+    association: list[Association] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    artifact: List[Artifact] = field(
+    artifact: list[Artifact] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    sub_conversation: List[SubConversation] = field(
+    sub_conversation: list[SubConversation] = field(
         default_factory=list,
         metadata={
             "name": "subConversation",
@@ -79,14 +79,14 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    conversation: List[Conversation] = field(
+    conversation: list[Conversation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    call_conversation: List[CallConversation] = field(
+    call_conversation: list[CallConversation] = field(
         default_factory=list,
         metadata={
             "name": "callConversation",
@@ -94,7 +94,7 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    conversation_node: List[ConversationNode] = field(
+    conversation_node: list[ConversationNode] = field(
         default_factory=list,
         metadata={
             "name": "conversationNode",
@@ -102,7 +102,7 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    conversation_association: List[ConversationAssociation] = field(
+    conversation_association: list[ConversationAssociation] = field(
         default_factory=list,
         metadata={
             "name": "conversationAssociation",
@@ -110,7 +110,7 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    participant_association: List[ParticipantAssociation] = field(
+    participant_association: list[ParticipantAssociation] = field(
         default_factory=list,
         metadata={
             "name": "participantAssociation",
@@ -118,7 +118,7 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    message_flow_association: List[MessageFlowAssociation] = field(
+    message_flow_association: list[MessageFlowAssociation] = field(
         default_factory=list,
         metadata={
             "name": "messageFlowAssociation",
@@ -126,7 +126,7 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    correlation_key: List[CorrelationKey] = field(
+    correlation_key: list[CorrelationKey] = field(
         default_factory=list,
         metadata={
             "name": "correlationKey",
@@ -134,7 +134,7 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    choreography_ref: List[QName] = field(
+    choreography_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "choreographyRef",
@@ -142,7 +142,7 @@ class TCollaboration(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    conversation_link: List[ConversationLink] = field(
+    conversation_link: list[ConversationLink] = field(
         default_factory=list,
         metadata={
             "name": "conversationLink",

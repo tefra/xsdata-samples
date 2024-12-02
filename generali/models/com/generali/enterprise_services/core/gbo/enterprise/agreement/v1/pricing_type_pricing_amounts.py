@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_amount_type import (
     PricingAmountType,
@@ -15,7 +14,7 @@ class PricingTypePricingAmounts:
     class Meta:
         global_type = False
 
-    pricing_amount: List[PricingAmountType] = field(
+    pricing_amount: list[PricingAmountType] = field(
         default_factory=list,
         metadata={
             "name": "PricingAmount",

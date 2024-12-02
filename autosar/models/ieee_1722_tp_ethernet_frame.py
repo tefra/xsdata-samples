@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -247,7 +247,7 @@ class Ieee1722TpEthernetFrame:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -258,7 +258,7 @@ class Ieee1722TpEthernetFrame:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -269,7 +269,7 @@ class Ieee1722TpEthernetFrame:
 
     @dataclass
     class PduToFrameMappings:
-        pdu_to_frame_mapping: List[PduToFrameMapping] = field(
+        pdu_to_frame_mapping: list[PduToFrameMapping] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-TO-FRAME-MAPPING",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
@@ -21,7 +21,7 @@ class NonOrderedLocationGroupByList(NonOrderedLocations):
     :ivar non_ordered_location_group_by_list_extension:
     """
 
-    location_contained_in_group: List[Location] = field(
+    location_contained_in_group: list[Location] = field(
         default_factory=list,
         metadata={
             "name": "locationContainedInGroup",

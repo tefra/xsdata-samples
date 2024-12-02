@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -224,7 +224,7 @@ class ComManagementMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -235,7 +235,7 @@ class ComManagementMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -246,7 +246,7 @@ class ComManagementMapping:
 
     @dataclass
     class ComManagementGroupRefs:
-        com_management_group_ref: List[
+        com_management_group_ref: list[
             "ComManagementMapping.ComManagementGroupRefs.ComManagementGroupRef"
         ] = field(
             default_factory=list,
@@ -270,7 +270,7 @@ class ComManagementMapping:
 
     @dataclass
     class ComManagementPortGroupIrefs:
-        com_management_port_group_iref: List[PortGroupInSystemInstanceRef] = (
+        com_management_port_group_iref: list[PortGroupInSystemInstanceRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -283,7 +283,7 @@ class ComManagementMapping:
 
     @dataclass
     class PhysicalChannelRefs:
-        physical_channel_ref: List[
+        physical_channel_ref: list[
             "ComManagementMapping.PhysicalChannelRefs.PhysicalChannelRef"
         ] = field(
             default_factory=list,

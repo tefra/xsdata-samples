@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.col import Col
 from crossref.models.gov.nih.nlm.ncbi.jats1.colgroup_align import ColgroupAlign
@@ -16,7 +16,7 @@ class Colgroup:
         name = "colgroup"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    col: List[Col] = field(
+    col: list[Col] = field(
         default_factory=list,
         metadata={
             "type": "Element",

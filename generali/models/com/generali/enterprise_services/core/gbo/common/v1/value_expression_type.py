@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
@@ -34,7 +34,7 @@ class ValueExpressionType:
         reference.</description>
     """
 
-    value: List[TextType] = field(
+    value: list[TextType] = field(
         default_factory=list,
         metadata={
             "name": "Value",

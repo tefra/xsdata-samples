@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .category_value import CategoryValue
 from .t_root_element import TRootElement
@@ -12,7 +12,7 @@ class TCategory(TRootElement):
     class Meta:
         name = "tCategory"
 
-    category_value: List[CategoryValue] = field(
+    category_value: list[CategoryValue] = field(
         default_factory=list,
         metadata={
             "name": "categoryValue",

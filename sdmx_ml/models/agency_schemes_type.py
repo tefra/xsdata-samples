@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.agency_scheme_type import AgencySchemeType
 
@@ -18,7 +17,7 @@ class AgencySchemesType:
         scheme, in which agencies are described.
     """
 
-    agency_scheme: Tuple[AgencySchemeType, ...] = field(
+    agency_scheme: tuple[AgencySchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AgencyScheme",

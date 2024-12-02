@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.a import A
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.intent_statement_language import (
@@ -31,7 +31,7 @@ class IntentStatement:
             "type": "Attribute",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

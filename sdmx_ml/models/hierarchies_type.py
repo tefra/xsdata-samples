@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.hierarchy_type import HierarchyType
 
@@ -20,7 +19,7 @@ class HierarchiesType:
         in the list.
     """
 
-    hierarchy: Tuple[HierarchyType, ...] = field(
+    hierarchy: tuple[HierarchyType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Hierarchy",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import (
     ArchiveLocations,
@@ -54,7 +54,7 @@ class ProceedingsMetadata:
             "type": "Element",
         },
     )
-    publisher: List[Publisher] = field(
+    publisher: list[Publisher] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -62,7 +62,7 @@ class ProceedingsMetadata:
             "max_occurs": 5,
         },
     )
-    publication_date: List[PublicationDate] = field(
+    publication_date: list[PublicationDate] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -70,7 +70,7 @@ class ProceedingsMetadata:
             "max_occurs": 10,
         },
     )
-    isbn: List[Isbn] = field(
+    isbn: list[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",

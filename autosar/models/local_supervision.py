@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -230,7 +230,7 @@ class LocalSupervision:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -241,7 +241,7 @@ class LocalSupervision:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -252,7 +252,7 @@ class LocalSupervision:
 
     @dataclass
     class AliveSupervisions:
-        alive_supervision: List[AliveSupervision] = field(
+        alive_supervision: list[AliveSupervision] = field(
             default_factory=list,
             metadata={
                 "name": "ALIVE-SUPERVISION",
@@ -263,7 +263,7 @@ class LocalSupervision:
 
     @dataclass
     class DeadlineSupervisions:
-        deadline_supervision: List[DeadlineSupervision] = field(
+        deadline_supervision: list[DeadlineSupervision] = field(
             default_factory=list,
             metadata={
                 "name": "DEADLINE-SUPERVISION",
@@ -274,7 +274,7 @@ class LocalSupervision:
 
     @dataclass
     class LogicalSupervisions:
-        logical_supervision: List[LogicalSupervision] = field(
+        logical_supervision: list[LogicalSupervision] = field(
             default_factory=list,
             metadata={
                 "name": "LOGICAL-SUPERVISION",
@@ -285,7 +285,7 @@ class LocalSupervision:
 
     @dataclass
     class Transitions:
-        checkpoint_transition: List[CheckpointTransition] = field(
+        checkpoint_transition: list[CheckpointTransition] = field(
             default_factory=list,
             metadata={
                 "name": "CHECKPOINT-TRANSITION",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.maintenance_type import (
     MaintenanceType,
@@ -15,7 +14,7 @@ class EngineeringMaintenanceTypeYears:
     class Meta:
         global_type = False
 
-    maintenance: List[MaintenanceType] = field(
+    maintenance: list[MaintenanceType] = field(
         default_factory=list,
         metadata={
             "name": "Maintenance",

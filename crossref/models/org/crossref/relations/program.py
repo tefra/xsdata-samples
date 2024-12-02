@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.relations.related_item import RelatedItem
 
@@ -16,7 +15,7 @@ class Program:
         name = "program"
         namespace = "http://www.crossref.org/relations.xsd"
 
-    related_item: List[RelatedItem] = field(
+    related_item: list[RelatedItem] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.structure_map_type import StructureMapType
 
@@ -19,7 +18,7 @@ class StructureMapsType:
         or dataflows.
     """
 
-    structure_map: Tuple[StructureMapType, ...] = field(
+    structure_map: tuple[StructureMapType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "StructureMap",

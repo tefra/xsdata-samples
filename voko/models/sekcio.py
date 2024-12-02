@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from voko.models.art import Art
 
@@ -15,7 +15,7 @@ class Sekcio:
             "type": "Attribute",
         },
     )
-    art: List[Art] = field(
+    art: list[Art] = field(
         default_factory=list,
         metadata={
             "type": "Element",

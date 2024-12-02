@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, List
+from typing import ForwardRef
 
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
@@ -9,7 +9,7 @@ class XrefFaces:
     class Meta:
         name = "xrefFaces"
 
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -218,7 +218,7 @@ class CpSoftwareCluster:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -229,7 +229,7 @@ class CpSoftwareCluster:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -240,7 +240,7 @@ class CpSoftwareCluster:
 
     @dataclass
     class SwComponentAssignments:
-        sw_component_prototype_assignment: List[
+        sw_component_prototype_assignment: list[
             SwComponentPrototypeAssignment
         ] = field(
             default_factory=list,
@@ -253,7 +253,7 @@ class CpSoftwareCluster:
 
     @dataclass
     class SwCompositions:
-        composition_sw_component_type_ref_conditional: List[
+        composition_sw_component_type_ref_conditional: list[
             CompositionSwComponentTypeRefConditional
         ] = field(
             default_factory=list,

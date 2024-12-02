@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 from xml.etree.ElementTree import QName
 
 from .t_choreography_activity import TChoreographyActivity
@@ -12,7 +11,7 @@ class TChoreographyTask(TChoreographyActivity):
     class Meta:
         name = "tChoreographyTask"
 
-    message_flow_ref: List[QName] = field(
+    message_flow_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "messageFlowRef",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_adopted_from import (
     StdAdoptedFrom,
@@ -63,25 +63,25 @@ class Designators:
             "type": "Element",
         },
     )
-    std_alt_as_published: List[StdAltAsPublished] = field(
+    std_alt_as_published: list[StdAltAsPublished] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    std_supersedes: List[StdSupersedes] = field(
+    std_supersedes: list[StdSupersedes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    std_adopted_from: List[StdAdoptedFrom] = field(
+    std_adopted_from: list[StdAdoptedFrom] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    std_revision_of: List[StdRevisionOf] = field(
+    std_revision_of: list[StdRevisionOf] = field(
         default_factory=list,
         metadata={
             "type": "Element",

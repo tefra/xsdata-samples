@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
@@ -118,7 +118,7 @@ class SwDataDefProps:
 
     @dataclass
     class SwDataDefPropsVariants:
-        sw_data_def_props_conditional: List["SwDataDefPropsConditional"] = (
+        sw_data_def_props_conditional: list["SwDataDefPropsConditional"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -654,7 +654,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class SwValueBlockSizeMults:
-        numerical_value_variation_point: List[NumericalValueVariationPoint] = (
+        numerical_value_variation_point: list[NumericalValueVariationPoint] = (
             field(
                 default_factory=list,
                 metadata={
@@ -667,7 +667,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -712,7 +712,7 @@ class SwDataDefPropsConditional:
             originated from a VariableDataPrototype.
         """
 
-        autosar_variable: List[AutosarVariableRef] = field(
+        autosar_variable: list[AutosarVariableRef] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-VARIABLE",
@@ -721,7 +721,7 @@ class SwDataDefPropsConditional:
                 "sequence": 1,
             },
         )
-        mc_data_instance_var_ref: List[
+        mc_data_instance_var_ref: list[
             "SwDataDefPropsConditional.SwComparisonVariables.McDataInstanceVarRef"
         ] = field(
             default_factory=list,

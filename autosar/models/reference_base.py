@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ar_package_subtypes_enum import ArPackageSubtypesEnum
 from .boolean import Boolean
@@ -136,7 +136,7 @@ class ReferenceBase:
 
     @dataclass
     class GlobalInPackageRefs:
-        global_in_package_ref: List[
+        global_in_package_ref: list[
             "ReferenceBase.GlobalInPackageRefs.GlobalInPackageRef"
         ] = field(
             default_factory=list,
@@ -166,7 +166,7 @@ class ReferenceBase:
             base.
         """
 
-        global_element: List[ReferrableSubtypesEnum] = field(
+        global_element: list[ReferrableSubtypesEnum] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-ELEMENT",

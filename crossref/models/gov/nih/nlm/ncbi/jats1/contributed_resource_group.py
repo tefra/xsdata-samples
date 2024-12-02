@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.award_group import AwardGroup
 from crossref.models.gov.nih.nlm.ncbi.jats1.resource_group import ResourceGroup
@@ -21,21 +21,21 @@ class ContributedResourceGroup:
         name = "contributed-resource-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    award_group: List[AwardGroup] = field(
+    award_group: list[AwardGroup] = field(
         default_factory=list,
         metadata={
             "name": "award-group",
             "type": "Element",
         },
     )
-    support_description: List[SupportDescription] = field(
+    support_description: list[SupportDescription] = field(
         default_factory=list,
         metadata={
             "name": "support-description",
             "type": "Element",
         },
     )
-    resource_group: List[ResourceGroup] = field(
+    resource_group: list[ResourceGroup] = field(
         default_factory=list,
         metadata={
             "name": "resource-group",

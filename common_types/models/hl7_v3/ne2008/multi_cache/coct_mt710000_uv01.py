@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     Ce,
@@ -24,7 +24,7 @@ class CoctMt710000Uv01LocatedEntityHasParts:
     class Meta:
         name = "COCT_MT710000UV01.LocatedEntityHasParts"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -40,7 +40,7 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -48,7 +48,7 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -87,7 +87,7 @@ class CoctMt710000Uv01LocatedEntityPartOf:
     class Meta:
         name = "COCT_MT710000UV01.LocatedEntityPartOf"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -103,7 +103,7 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -111,7 +111,7 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -149,7 +149,7 @@ class CoctMt710000Uv01Place:
     class Meta:
         name = "COCT_MT710000UV01.Place"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -165,7 +165,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -173,7 +173,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -187,7 +187,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: List[EnExplicit] = field(
+    name: list[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -225,7 +225,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_located_entity_part_of: List[CoctMt710000Uv01LocatedEntityPartOf] = (
+    as_located_entity_part_of: list[CoctMt710000Uv01LocatedEntityPartOf] = (
         field(
             default_factory=list,
             metadata={
@@ -236,7 +236,7 @@ class CoctMt710000Uv01Place:
             },
         )
     )
-    located_entity_has_parts: List[CoctMt710000Uv01LocatedEntityHasParts] = (
+    located_entity_has_parts: list[CoctMt710000Uv01LocatedEntityHasParts] = (
         field(
             default_factory=list,
             metadata={

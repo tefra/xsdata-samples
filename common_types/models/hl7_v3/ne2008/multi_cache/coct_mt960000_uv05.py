@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from ..core.datatypes_base import (
     AnyType,
@@ -32,7 +32,7 @@ class CoctMt960000Uv05Author:
     class Meta:
         name = "COCT_MT960000UV05.Author"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -48,7 +48,7 @@ class CoctMt960000Uv05Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -93,7 +93,7 @@ class CoctMt960000Uv05Device1:
     class Meta:
         name = "COCT_MT960000UV05.Device1"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -109,7 +109,7 @@ class CoctMt960000Uv05Device1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -155,7 +155,7 @@ class CoctMt960000Uv05Device2:
     class Meta:
         name = "COCT_MT960000UV05.Device2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -171,7 +171,7 @@ class CoctMt960000Uv05Device2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -217,7 +217,7 @@ class CoctMt960000Uv05PositionAccuracy:
     class Meta:
         name = "COCT_MT960000UV05.PositionAccuracy"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -233,7 +233,7 @@ class CoctMt960000Uv05PositionAccuracy:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -287,7 +287,7 @@ class CoctMt960000Uv05Component2:
     class Meta:
         name = "COCT_MT960000UV05.Component2"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -303,7 +303,7 @@ class CoctMt960000Uv05Component2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -357,7 +357,7 @@ class CoctMt960000Uv05PositionCoordinate:
     class Meta:
         name = "COCT_MT960000UV05.PositionCoordinate"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -373,7 +373,7 @@ class CoctMt960000Uv05PositionCoordinate:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -412,7 +412,7 @@ class CoctMt960000Uv05PositionCoordinate:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    device: List[CoctMt960000Uv05Device1] = field(
+    device: list[CoctMt960000Uv05Device1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -452,7 +452,7 @@ class CoctMt960000Uv05Component1:
     class Meta:
         name = "COCT_MT960000UV05.Component1"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -468,7 +468,7 @@ class CoctMt960000Uv05Component1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -530,7 +530,7 @@ class CoctMt960000Uv05Position:
     class Meta:
         name = "COCT_MT960000UV05.Position"
 
-    realm_code: List[Cs] = field(
+    realm_code: list[Cs] = field(
         default_factory=list,
         metadata={
             "name": "realmCode",
@@ -546,7 +546,7 @@ class CoctMt960000Uv05Position:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    template_id: List[Ii] = field(
+    template_id: list[Ii] = field(
         default_factory=list,
         metadata={
             "name": "templateId",
@@ -554,7 +554,7 @@ class CoctMt960000Uv05Position:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: List[Ii] = field(
+    id: list[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -599,7 +599,7 @@ class CoctMt960000Uv05Position:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    device: List[CoctMt960000Uv05Device2] = field(
+    device: list[CoctMt960000Uv05Device2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -615,7 +615,7 @@ class CoctMt960000Uv05Position:
             "nillable": True,
         },
     )
-    component1: List[CoctMt960000Uv05Component1] = field(
+    component1: list[CoctMt960000Uv05Component1] = field(
         default_factory=list,
         metadata={
             "type": "Element",

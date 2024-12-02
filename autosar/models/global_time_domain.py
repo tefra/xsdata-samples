@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -448,7 +448,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -459,7 +459,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -470,7 +470,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class CommunicationClusterRefs:
-        communication_cluster_ref: List[
+        communication_cluster_ref: list[
             "GlobalTimeDomain.CommunicationClusterRefs.CommunicationClusterRef"
         ] = field(
             default_factory=list,
@@ -494,7 +494,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class Gateways:
-        global_time_gateway: List[GlobalTimeGateway] = field(
+        global_time_gateway: list[GlobalTimeGateway] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-TIME-GATEWAY",
@@ -505,7 +505,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class GlobalTimeDomainPropertys:
-        can_global_time_domain_props: List[CanGlobalTimeDomainProps] = field(
+        can_global_time_domain_props: list[CanGlobalTimeDomainProps] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-GLOBAL-TIME-DOMAIN-PROPS",
@@ -513,7 +513,7 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        eth_global_time_domain_props: List[EthGlobalTimeDomainProps] = field(
+        eth_global_time_domain_props: list[EthGlobalTimeDomainProps] = field(
             default_factory=list,
             metadata={
                 "name": "ETH-GLOBAL-TIME-DOMAIN-PROPS",
@@ -521,7 +521,7 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        fr_global_time_domain_props: List[FrGlobalTimeDomainProps] = field(
+        fr_global_time_domain_props: list[FrGlobalTimeDomainProps] = field(
             default_factory=list,
             metadata={
                 "name": "FR-GLOBAL-TIME-DOMAIN-PROPS",
@@ -563,7 +563,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class GlobalTimeMasters:
-        global_time_can_master: List[GlobalTimeCanMaster] = field(
+        global_time_can_master: list[GlobalTimeCanMaster] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-TIME-CAN-MASTER",
@@ -571,7 +571,7 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        global_time_eth_master: List[GlobalTimeEthMaster] = field(
+        global_time_eth_master: list[GlobalTimeEthMaster] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-TIME-ETH-MASTER",
@@ -579,7 +579,7 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        global_time_fr_master: List[GlobalTimeFrMaster] = field(
+        global_time_fr_master: list[GlobalTimeFrMaster] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-TIME-FR-MASTER",
@@ -587,7 +587,7 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_global_time_master: List[UserDefinedGlobalTimeMaster] = (
+        user_defined_global_time_master: list[UserDefinedGlobalTimeMaster] = (
             field(
                 default_factory=list,
                 metadata={
@@ -622,7 +622,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class GlobalTimeSubDomains:
-        global_time_domain_ref_conditional: List[
+        global_time_domain_ref_conditional: list[
             GlobalTimeDomainRefConditional
         ] = field(
             default_factory=list,
@@ -683,7 +683,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class PduTriggerings:
-        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = (
+        pdu_triggering_ref_conditional: list[PduTriggeringRefConditional] = (
             field(
                 default_factory=list,
                 metadata={
@@ -696,7 +696,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class Slaves:
-        global_time_can_slave: List[GlobalTimeCanSlave] = field(
+        global_time_can_slave: list[GlobalTimeCanSlave] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-TIME-CAN-SLAVE",
@@ -704,7 +704,7 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        global_time_eth_slave: List[GlobalTimeEthSlave] = field(
+        global_time_eth_slave: list[GlobalTimeEthSlave] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-TIME-ETH-SLAVE",
@@ -712,7 +712,7 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        global_time_fr_slave: List[GlobalTimeFrSlave] = field(
+        global_time_fr_slave: list[GlobalTimeFrSlave] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-TIME-FR-SLAVE",
@@ -720,7 +720,7 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_global_time_slave: List[UserDefinedGlobalTimeSlave] = (
+        user_defined_global_time_slave: list[UserDefinedGlobalTimeSlave] = (
             field(
                 default_factory=list,
                 metadata={
@@ -733,7 +733,7 @@ class GlobalTimeDomain:
 
     @dataclass
     class SubDomainRefs:
-        sub_domain_ref: List["GlobalTimeDomain.SubDomainRefs.SubDomainRef"] = (
+        sub_domain_ref: list["GlobalTimeDomain.SubDomainRefs.SubDomainRef"] = (
             field(
                 default_factory=list,
                 metadata={

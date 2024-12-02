@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.custom_type_scheme_type import CustomTypeSchemeType
 
@@ -20,7 +19,7 @@ class CustomTypeSchemesType:
         described.
     """
 
-    custom_type_scheme: Tuple[CustomTypeSchemeType, ...] = field(
+    custom_type_scheme: tuple[CustomTypeSchemeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CustomTypeScheme",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -277,7 +277,7 @@ class QueuedReceiverComSpec:
 
     @dataclass
     class CompositeNetworkRepresentations:
-        composite_network_representation: List[
+        composite_network_representation: list[
             CompositeNetworkRepresentation
         ] = field(
             default_factory=list,
@@ -312,7 +312,7 @@ class QueuedReceiverComSpec:
 
     @dataclass
     class TransformationComSpecPropss:
-        end_to_end_transformation_com_spec_props: List[
+        end_to_end_transformation_com_spec_props: list[
             EndToEndTransformationComSpecProps
         ] = field(
             default_factory=list,
@@ -322,7 +322,7 @@ class QueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_transformation_com_spec_props: List[
+        user_defined_transformation_com_spec_props: list[
             UserDefinedTransformationComSpecProps
         ] = field(
             default_factory=list,

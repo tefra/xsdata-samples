@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.description import Description
 from sdmx_ml.models.identifiable_type import IdentifiableType
@@ -21,7 +20,7 @@ class NameableType(IdentifiableType):
         parallel language-equivalent forms.
     """
 
-    name: Tuple[Name, ...] = field(
+    name: tuple[Name, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Name",
@@ -30,7 +29,7 @@ class NameableType(IdentifiableType):
             "min_occurs": 1,
         },
     )
-    description: Tuple[Description, ...] = field(
+    description: tuple[Description, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Description",

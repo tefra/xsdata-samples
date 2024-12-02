@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -60,7 +60,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accepted_means_of_payment: List[MeansOfPaymentEnum] = field(
+    accepted_means_of_payment: list[MeansOfPaymentEnum] = field(
         default_factory=list,
         metadata={
             "name": "acceptedMeansOfPayment",
@@ -68,7 +68,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    payment_mode: List[ParkingPaymentModeEnum] = field(
+    payment_mode: list[ParkingPaymentModeEnum] = field(
         default_factory=list,
         metadata={
             "name": "paymentMode",
@@ -110,7 +110,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_band: List[ChargeBand] = field(
+    charge_band: list[ChargeBand] = field(
         default_factory=list,
         metadata={
             "name": "chargeBand",
@@ -118,7 +118,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_band_by_reference: List[ChargeBandByReference] = field(
+    charge_band_by_reference: list[ChargeBandByReference] = field(
         default_factory=list,
         metadata={
             "name": "chargeBandByReference",

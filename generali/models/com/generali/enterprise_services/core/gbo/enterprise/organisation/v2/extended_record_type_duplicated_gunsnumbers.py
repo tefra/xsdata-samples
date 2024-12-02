@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
@@ -9,7 +8,7 @@ class ExtendedRecordTypeDuplicatedGunsnumbers:
     class Meta:
         global_type = False
 
-    duplicated_gunsnumber: List[str] = field(
+    duplicated_gunsnumber: list[str] = field(
         default_factory=list,
         metadata={
             "name": "DuplicatedGUNSNumber",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Tuple, Union
+from typing import ForwardRef, Union
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.optional_local_dimension_reference_type import (
@@ -16,7 +16,7 @@ class AttributeRelationshipType:
     between an attribute and other data structure definition components.
     """
 
-    choice: Tuple[
+    choice: tuple[
         Union[
             "AttributeRelationshipType.Dataflow",
             OptionalLocalDimensionReferenceType,

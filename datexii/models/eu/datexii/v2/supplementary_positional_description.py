@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.affected_carriageway_and_lanes import (
     AffectedCarriagewayAndLanes,
@@ -30,7 +30,7 @@ class SupplementaryPositionalDescription:
         a precision which is better than the stated value in metres.
     """
 
-    location_descriptor: List[LocationDescriptorEnum] = field(
+    location_descriptor: list[LocationDescriptorEnum] = field(
         default_factory=list,
         metadata={
             "name": "locationDescriptor",
@@ -46,7 +46,7 @@ class SupplementaryPositionalDescription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    affected_carriageway_and_lanes: List[AffectedCarriagewayAndLanes] = field(
+    affected_carriageway_and_lanes: list[AffectedCarriagewayAndLanes] = field(
         default_factory=list,
         metadata={
             "name": "affectedCarriagewayAndLanes",

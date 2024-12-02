@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -447,7 +447,7 @@ class EcucEnumerationParamDef:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -458,7 +458,7 @@ class EcucEnumerationParamDef:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -480,7 +480,7 @@ class EcucEnumerationParamDef:
 
     @dataclass
     class EcucValidationConds:
-        ecuc_validation_condition: List[EcucValidationCondition] = field(
+        ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-VALIDATION-CONDITION",
@@ -491,7 +491,7 @@ class EcucEnumerationParamDef:
 
     @dataclass
     class ImplementationConfigClasses:
-        ecuc_implementation_configuration_class: List[
+        ecuc_implementation_configuration_class: list[
             EcucImplementationConfigurationClass
         ] = field(
             default_factory=list,
@@ -504,7 +504,7 @@ class EcucEnumerationParamDef:
 
     @dataclass
     class MultiplicityConfigClasses:
-        ecuc_multiplicity_configuration_class: List[
+        ecuc_multiplicity_configuration_class: list[
             EcucMultiplicityConfigurationClass
         ] = field(
             default_factory=list,
@@ -517,7 +517,7 @@ class EcucEnumerationParamDef:
 
     @dataclass
     class ValueConfigClasses:
-        ecuc_value_configuration_class: List[EcucValueConfigurationClass] = (
+        ecuc_value_configuration_class: list[EcucValueConfigurationClass] = (
             field(
                 default_factory=list,
                 metadata={
@@ -530,7 +530,7 @@ class EcucEnumerationParamDef:
 
     @dataclass
     class Literals:
-        ecuc_enumeration_literal_def: List[EcucEnumerationLiteralDef] = field(
+        ecuc_enumeration_literal_def: list[EcucEnumerationLiteralDef] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-ENUMERATION-LITERAL-DEF",

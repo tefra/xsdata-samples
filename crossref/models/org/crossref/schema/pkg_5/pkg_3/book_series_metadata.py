@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
 from crossref.models.org.crossref.access_indicators.program import (
@@ -79,14 +79,14 @@ class BookSeriesMetadata:
             "type": "Element",
         },
     )
-    abstract: List[Abstract] = field(
+    abstract: list[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    volume: List[Volume] = field(
+    volume: list[Volume] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -101,14 +101,14 @@ class BookSeriesMetadata:
             "type": "Element",
         },
     )
-    publication_date: List[PublicationDate] = field(
+    publication_date: list[PublicationDate] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 20,
         },
     )
-    isbn: List[Isbn] = field(
+    isbn: list[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",

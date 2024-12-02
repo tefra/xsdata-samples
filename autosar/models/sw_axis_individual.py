@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .application_primitive_data_type_subtypes_enum import (
     ApplicationPrimitiveDataTypeSubtypesEnum,
@@ -206,7 +206,7 @@ class SwAxisIndividual:
             originated from a VariableDataPrototype.
         """
 
-        autosar_variable: List[AutosarVariableRef] = field(
+        autosar_variable: list[AutosarVariableRef] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-VARIABLE",
@@ -215,7 +215,7 @@ class SwAxisIndividual:
                 "sequence": 1,
             },
         )
-        mc_data_instance_var_ref: List[
+        mc_data_instance_var_ref: list[
             "SwAxisIndividual.SwVariableRefs.McDataInstanceVarRef"
         ] = field(
             default_factory=list,

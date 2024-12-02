@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.availability_to_promise_response import (
     AvailabilityShipToParty,
@@ -245,7 +245,7 @@ class AvailabilityCheckRequestBaseItemDetail:
             "type": "Element",
         },
     )
-    availability_check_request_transport: List[
+    availability_check_request_transport: list[
         AvailabilityCheckRequestTransport
     ] = field(
         default_factory=list,
@@ -369,7 +369,7 @@ class AvailabilityCheckRequestItemDetail:
 
 @dataclass(kw_only=True)
 class ListOfAvailabilityCheckRequestItemDetail:
-    availability_check_request_item_detail: List[
+    availability_check_request_item_detail: list[
         AvailabilityCheckRequestItemDetail
     ] = field(
         default_factory=list,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -222,7 +222,7 @@ class FmFeatureSelectionSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -233,7 +233,7 @@ class FmFeatureSelectionSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -244,7 +244,7 @@ class FmFeatureSelectionSet:
 
     @dataclass
     class FeatureModelRefs:
-        feature_model_ref: List[
+        feature_model_ref: list[
             "FmFeatureSelectionSet.FeatureModelRefs.FeatureModelRef"
         ] = field(
             default_factory=list,
@@ -268,7 +268,7 @@ class FmFeatureSelectionSet:
 
     @dataclass
     class IncludeRefs:
-        include_ref: List["FmFeatureSelectionSet.IncludeRefs.IncludeRef"] = (
+        include_ref: list["FmFeatureSelectionSet.IncludeRefs.IncludeRef"] = (
             field(
                 default_factory=list,
                 metadata={
@@ -292,7 +292,7 @@ class FmFeatureSelectionSet:
 
     @dataclass
     class Selections:
-        fm_feature_selection: List[FmFeatureSelection] = field(
+        fm_feature_selection: list[FmFeatureSelection] = field(
             default_factory=list,
             metadata={
                 "name": "FM-FEATURE-SELECTION",

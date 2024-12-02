@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.coded_status_message_type import CodedStatusMessageType
 
@@ -19,7 +18,7 @@ class ErrorType:
         order to distinguish message for unique errors.
     """
 
-    error_message: Tuple[CodedStatusMessageType, ...] = field(
+    error_message: tuple[CodedStatusMessageType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ErrorMessage",

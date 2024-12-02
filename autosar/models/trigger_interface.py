@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -263,7 +263,7 @@ class TriggerInterface:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -274,7 +274,7 @@ class TriggerInterface:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -285,7 +285,7 @@ class TriggerInterface:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -293,7 +293,7 @@ class TriggerInterface:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -303,7 +303,7 @@ class TriggerInterface:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -314,7 +314,7 @@ class TriggerInterface:
 
     @dataclass
     class Namespaces:
-        symbol_props: List[SymbolProps] = field(
+        symbol_props: list[SymbolProps] = field(
             default_factory=list,
             metadata={
                 "name": "SYMBOL-PROPS",
@@ -325,7 +325,7 @@ class TriggerInterface:
 
     @dataclass
     class Triggers:
-        trigger: List[Trigger] = field(
+        trigger: list[Trigger] = field(
             default_factory=list,
             metadata={
                 "name": "TRIGGER",

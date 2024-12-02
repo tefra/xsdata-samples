@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ref import Ref
 from .rte_event_subtypes_enum import RteEventSubtypesEnum
@@ -30,7 +30,7 @@ class InstanceEventInCompositionInstanceRef:
     class Meta:
         name = "INSTANCE-EVENT-IN-COMPOSITION-INSTANCE-REF"
 
-    context_component_prototype_ref: List[
+    context_component_prototype_ref: list[
         "InstanceEventInCompositionInstanceRef.ContextComponentPrototypeRef"
     ] = field(
         default_factory=list,

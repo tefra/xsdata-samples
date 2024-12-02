@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.data_structure_type import DataStructureType
 
@@ -21,7 +20,7 @@ class DataStructuresType:
         collect or disseminate data.
     """
 
-    data_structure: Tuple[DataStructureType, ...] = field(
+    data_structure: tuple[DataStructureType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DataStructure",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -239,7 +239,7 @@ class SignalServiceTranslationProps:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -250,7 +250,7 @@ class SignalServiceTranslationProps:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -261,7 +261,7 @@ class SignalServiceTranslationProps:
 
     @dataclass
     class ControlConsumedEventGroupRefs:
-        control_consumed_event_group_ref: List[
+        control_consumed_event_group_ref: list[
             "SignalServiceTranslationProps.ControlConsumedEventGroupRefs.ControlConsumedEventGroupRef"
         ] = field(
             default_factory=list,
@@ -285,7 +285,7 @@ class SignalServiceTranslationProps:
 
     @dataclass
     class ControlPncRefs:
-        control_pnc_ref: List[
+        control_pnc_ref: list[
             "SignalServiceTranslationProps.ControlPncRefs.ControlPncRef"
         ] = field(
             default_factory=list,
@@ -309,7 +309,7 @@ class SignalServiceTranslationProps:
 
     @dataclass
     class ControlProvidedEventGroupRefs:
-        control_provided_event_group_ref: List[
+        control_provided_event_group_ref: list[
             "SignalServiceTranslationProps.ControlProvidedEventGroupRefs.ControlProvidedEventGroupRef"
         ] = field(
             default_factory=list,
@@ -333,7 +333,7 @@ class SignalServiceTranslationProps:
 
     @dataclass
     class SignalServiceTranslationEventPropss:
-        signal_service_translation_event_props: List[
+        signal_service_translation_event_props: list[
             SignalServiceTranslationEventProps
         ] = field(
             default_factory=list,

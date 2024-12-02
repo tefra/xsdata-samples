@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -318,7 +318,7 @@ class DiagnosticCommonPropsConditional:
 
     @dataclass
     class DebounceAlgorithmPropss:
-        diagnostic_debounce_algorithm_props: List[
+        diagnostic_debounce_algorithm_props: list[
             DiagnosticDebounceAlgorithmProps
         ] = field(
             default_factory=list,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Tuple
 
 from sdmx_ml.models.metadata_constraint_type import MetadataConstraintType
 
@@ -20,7 +19,7 @@ class MetadataConstraintsType:
         the definition of the allowable content of a metadata set.
     """
 
-    metadata_constraint: Tuple[MetadataConstraintType, ...] = field(
+    metadata_constraint: tuple[MetadataConstraintType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MetadataConstraint",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .t_root_element import TRootElement
@@ -12,7 +12,7 @@ class TPartnerEntity(TRootElement):
     class Meta:
         name = "tPartnerEntity"
 
-    participant_ref: List[QName] = field(
+    participant_ref: list[QName] = field(
         default_factory=list,
         metadata={
             "name": "participantRef",

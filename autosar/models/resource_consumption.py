@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .access_count_set import AccessCountSet
 from .admin_data import (
@@ -272,7 +272,7 @@ class ResourceConsumption:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -283,7 +283,7 @@ class ResourceConsumption:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -294,7 +294,7 @@ class ResourceConsumption:
 
     @dataclass
     class AccessCountSets:
-        access_count_set: List[AccessCountSet] = field(
+        access_count_set: list[AccessCountSet] = field(
             default_factory=list,
             metadata={
                 "name": "ACCESS-COUNT-SET",
@@ -305,7 +305,7 @@ class ResourceConsumption:
 
     @dataclass
     class ExecutionTimes:
-        analyzed_execution_time: List[AnalyzedExecutionTime] = field(
+        analyzed_execution_time: list[AnalyzedExecutionTime] = field(
             default_factory=list,
             metadata={
                 "name": "ANALYZED-EXECUTION-TIME",
@@ -313,7 +313,7 @@ class ResourceConsumption:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        measured_execution_time: List[MeasuredExecutionTime] = field(
+        measured_execution_time: list[MeasuredExecutionTime] = field(
             default_factory=list,
             metadata={
                 "name": "MEASURED-EXECUTION-TIME",
@@ -321,7 +321,7 @@ class ResourceConsumption:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rough_estimate_of_execution_time: List[
+        rough_estimate_of_execution_time: list[
             RoughEstimateOfExecutionTime
         ] = field(
             default_factory=list,
@@ -331,7 +331,7 @@ class ResourceConsumption:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        simulated_execution_time: List[SimulatedExecutionTime] = field(
+        simulated_execution_time: list[SimulatedExecutionTime] = field(
             default_factory=list,
             metadata={
                 "name": "SIMULATED-EXECUTION-TIME",
@@ -342,7 +342,7 @@ class ResourceConsumption:
 
     @dataclass
     class HeapUsages:
-        measured_heap_usage: List[MeasuredHeapUsage] = field(
+        measured_heap_usage: list[MeasuredHeapUsage] = field(
             default_factory=list,
             metadata={
                 "name": "MEASURED-HEAP-USAGE",
@@ -350,7 +350,7 @@ class ResourceConsumption:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rough_estimate_heap_usage: List[RoughEstimateHeapUsage] = field(
+        rough_estimate_heap_usage: list[RoughEstimateHeapUsage] = field(
             default_factory=list,
             metadata={
                 "name": "ROUGH-ESTIMATE-HEAP-USAGE",
@@ -358,7 +358,7 @@ class ResourceConsumption:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        worst_case_heap_usage: List[WorstCaseHeapUsage] = field(
+        worst_case_heap_usage: list[WorstCaseHeapUsage] = field(
             default_factory=list,
             metadata={
                 "name": "WORST-CASE-HEAP-USAGE",
@@ -369,7 +369,7 @@ class ResourceConsumption:
 
     @dataclass
     class MemorySections:
-        memory_section: List[MemorySection] = field(
+        memory_section: list[MemorySection] = field(
             default_factory=list,
             metadata={
                 "name": "MEMORY-SECTION",
@@ -380,7 +380,7 @@ class ResourceConsumption:
 
     @dataclass
     class SectionNamePrefixs:
-        section_name_prefix: List[SectionNamePrefix] = field(
+        section_name_prefix: list[SectionNamePrefix] = field(
             default_factory=list,
             metadata={
                 "name": "SECTION-NAME-PREFIX",
@@ -391,7 +391,7 @@ class ResourceConsumption:
 
     @dataclass
     class StackUsages:
-        measured_stack_usage: List[MeasuredStackUsage] = field(
+        measured_stack_usage: list[MeasuredStackUsage] = field(
             default_factory=list,
             metadata={
                 "name": "MEASURED-STACK-USAGE",
@@ -399,7 +399,7 @@ class ResourceConsumption:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rough_estimate_stack_usage: List[RoughEstimateStackUsage] = field(
+        rough_estimate_stack_usage: list[RoughEstimateStackUsage] = field(
             default_factory=list,
             metadata={
                 "name": "ROUGH-ESTIMATE-STACK-USAGE",
@@ -407,7 +407,7 @@ class ResourceConsumption:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        worst_case_stack_usage: List[WorstCaseStackUsage] = field(
+        worst_case_stack_usage: list[WorstCaseStackUsage] = field(
             default_factory=list,
             metadata={
                 "name": "WORST-CASE-STACK-USAGE",
@@ -418,7 +418,7 @@ class ResourceConsumption:
 
     @dataclass
     class SystemMemoryUsages:
-        system_memory_usage: List[SystemMemoryUsage] = field(
+        system_memory_usage: list[SystemMemoryUsage] = field(
             default_factory=list,
             metadata={
                 "name": "SYSTEM-MEMORY-USAGE",

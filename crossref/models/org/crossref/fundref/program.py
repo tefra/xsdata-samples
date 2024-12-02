@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from crossref.models.org.crossref.fundref.assertion import Assertion
 
@@ -24,7 +23,7 @@ class Program:
         name = "program"
         namespace = "http://www.crossref.org/fundref.xsd"
 
-    assertion: List[Assertion] = field(
+    assertion: list[Assertion] = field(
         default_factory=list,
         metadata={
             "type": "Element",

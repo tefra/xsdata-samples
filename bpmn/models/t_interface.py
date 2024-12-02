@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .operation import Operation
@@ -13,7 +13,7 @@ class TInterface(TRootElement):
     class Meta:
         name = "tInterface"
 
-    operation: List[Operation] = field(
+    operation: list[Operation] = field(
         default_factory=list,
         metadata={
             "type": "Element",

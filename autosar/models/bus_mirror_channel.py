@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .physical_channel_ref_conditional import PhysicalChannelRefConditional
 from .positive_integer import PositiveInteger
@@ -66,7 +66,7 @@ class BusMirrorChannel:
 
     @dataclass
     class Channels:
-        physical_channel_ref_conditional: List[
+        physical_channel_ref_conditional: list[
             PhysicalChannelRefConditional
         ] = field(
             default_factory=list,

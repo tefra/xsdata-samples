@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -232,7 +232,7 @@ class PredefinedVariant:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -243,7 +243,7 @@ class PredefinedVariant:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -254,7 +254,7 @@ class PredefinedVariant:
 
     @dataclass
     class IncludedVariantRefs:
-        included_variant_ref: List[
+        included_variant_ref: list[
             "PredefinedVariant.IncludedVariantRefs.IncludedVariantRef"
         ] = field(
             default_factory=list,
@@ -278,7 +278,7 @@ class PredefinedVariant:
 
     @dataclass
     class PostBuildVariantCriterionValueSetRefs:
-        post_build_variant_criterion_value_set_ref: List[
+        post_build_variant_criterion_value_set_ref: list[
             "PredefinedVariant.PostBuildVariantCriterionValueSetRefs.PostBuildVariantCriterionValueSetRef"
         ] = field(
             default_factory=list,
@@ -304,7 +304,7 @@ class PredefinedVariant:
 
     @dataclass
     class SwSystemconstantValueSetRefs:
-        sw_systemconstant_value_set_ref: List[
+        sw_systemconstant_value_set_ref: list[
             "PredefinedVariant.SwSystemconstantValueSetRefs.SwSystemconstantValueSetRef"
         ] = field(
             default_factory=list,

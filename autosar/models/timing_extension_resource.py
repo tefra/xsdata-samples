@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -215,7 +215,7 @@ class TimingExtensionResource:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -226,7 +226,7 @@ class TimingExtensionResource:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -237,7 +237,7 @@ class TimingExtensionResource:
 
     @dataclass
     class TimingArguments:
-        autosar_operation_argument_instance: List[
+        autosar_operation_argument_instance: list[
             AutosarOperationArgumentInstance
         ] = field(
             default_factory=list,
@@ -250,7 +250,7 @@ class TimingExtensionResource:
 
     @dataclass
     class TimingModes:
-        timing_mode_instance: List[TimingModeInstance] = field(
+        timing_mode_instance: list[TimingModeInstance] = field(
             default_factory=list,
             metadata={
                 "name": "TIMING-MODE-INSTANCE",
@@ -261,7 +261,7 @@ class TimingExtensionResource:
 
     @dataclass
     class TimingVariables:
-        autosar_variable_instance: List[AutosarVariableInstance] = field(
+        autosar_variable_instance: list[AutosarVariableInstance] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-VARIABLE-INSTANCE",

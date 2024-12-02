@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Optional, Union
+from typing import Optional, Union
 from xml.etree.ElementTree import QName
 
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
@@ -17,7 +17,7 @@ class AttributedQnameType:
             "required": True,
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -37,7 +37,7 @@ class AttributedUritype:
             "required": True,
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -54,7 +54,7 @@ class AttributedUnsignedLongType:
             "required": True,
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -65,14 +65,14 @@ class AttributedUnsignedLongType:
 
 @dataclass
 class MetadataType:
-    any_element: List[object] = field(
+    any_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -83,14 +83,14 @@ class MetadataType:
 
 @dataclass
 class ReferenceParametersType:
-    any_element: List[object] = field(
+    any_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -159,7 +159,7 @@ class RelatesToType:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -207,14 +207,14 @@ class EndpointReferenceType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         },
     )
-    other_element: List[object] = field(
+    other_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -241,7 +241,7 @@ class ProblemActionType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

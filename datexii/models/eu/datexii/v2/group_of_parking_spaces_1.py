@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.dimension import Dimension
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -77,7 +77,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "required": True,
         },
     )
-    identical_to_group: List[str] = field(
+    identical_to_group: list[str] = field(
         default_factory=list,
         metadata={
             "name": "identicalToGroup",
@@ -86,7 +86,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "max_length": 1024,
         },
     )
-    real_subset_of_group: List[str] = field(
+    real_subset_of_group: list[str] = field(
         default_factory=list,
         metadata={
             "name": "realSubsetOfGroup",
@@ -119,7 +119,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space: List[GroupOfParkingSpacesParkingSpaceIndexParkingSpace] = (
+    parking_space: list[GroupOfParkingSpacesParkingSpaceIndexParkingSpace] = (
         field(
             default_factory=list,
             metadata={

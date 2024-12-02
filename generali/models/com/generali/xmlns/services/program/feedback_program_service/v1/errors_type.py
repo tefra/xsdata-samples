@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.error_element_type import (
     ErrorElementType,
@@ -12,7 +11,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ErrorsType:
-    error_item: List[ErrorElementType] = field(
+    error_item: list[ErrorElementType] = field(
         default_factory=list,
         metadata={
             "name": "ErrorItem",

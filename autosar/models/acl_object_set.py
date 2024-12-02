@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .acl_scope_enum import AclScopeEnum
 from .admin_data import (
@@ -314,7 +314,7 @@ class AclObjectSet:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -325,7 +325,7 @@ class AclObjectSet:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -336,7 +336,7 @@ class AclObjectSet:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -344,7 +344,7 @@ class AclObjectSet:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -354,7 +354,7 @@ class AclObjectSet:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -370,7 +370,7 @@ class AclObjectSet:
             objects as instances of the denoted meta class.
         """
 
-        acl_object_class: List[ReferrableSubtypesEnum] = field(
+        acl_object_class: list[ReferrableSubtypesEnum] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-OBJECT-CLASS",
@@ -392,7 +392,7 @@ class AclObjectSet:
 
     @dataclass
     class DerivedFromBlueprintRefs:
-        derived_from_blueprint_ref: List[
+        derived_from_blueprint_ref: list[
             "AclObjectSet.DerivedFromBlueprintRefs.DerivedFromBlueprintRef"
         ] = field(
             default_factory=list,
@@ -416,7 +416,7 @@ class AclObjectSet:
 
     @dataclass
     class EngineeringObjects:
-        autosar_engineering_object: List[AutosarEngineeringObject] = field(
+        autosar_engineering_object: list[AutosarEngineeringObject] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-ENGINEERING-OBJECT",
@@ -427,7 +427,7 @@ class AclObjectSet:
 
     @dataclass
     class ObjectDefinitionRefs:
-        object_definition_ref: List[
+        object_definition_ref: list[
             "AclObjectSet.ObjectDefinitionRefs.ObjectDefinitionRef"
         ] = field(
             default_factory=list,
@@ -451,7 +451,7 @@ class AclObjectSet:
 
     @dataclass
     class ObjectDefintionRefs:
-        object_defintion_ref: List[
+        object_defintion_ref: list[
             "AclObjectSet.ObjectDefintionRefs.ObjectDefintionRef"
         ] = field(
             default_factory=list,
@@ -475,7 +475,7 @@ class AclObjectSet:
 
     @dataclass
     class ObjectRefs:
-        object_ref: List["AclObjectSet.ObjectRefs.ObjectRef"] = field(
+        object_ref: list["AclObjectSet.ObjectRefs.ObjectRef"] = field(
             default_factory=list,
             metadata={
                 "name": "OBJECT-REF",

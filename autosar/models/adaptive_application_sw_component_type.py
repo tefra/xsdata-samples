@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .adaptive_swc_internal_behavior import AdaptiveSwcInternalBehavior
 from .admin_data import (
@@ -310,7 +310,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -321,7 +321,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -332,7 +332,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -340,7 +340,7 @@ class AdaptiveApplicationSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -350,7 +350,7 @@ class AdaptiveApplicationSwComponentType:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -361,7 +361,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class SwComponentDocumentations:
-        sw_component_documentation: List[SwComponentDocumentation] = field(
+        sw_component_documentation: list[SwComponentDocumentation] = field(
             default_factory=list,
             metadata={
                 "name": "SW-COMPONENT-DOCUMENTATION",
@@ -372,7 +372,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class ConsistencyNeedss:
-        consistency_needs: List[ConsistencyNeeds] = field(
+        consistency_needs: list[ConsistencyNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "CONSISTENCY-NEEDS",
@@ -383,7 +383,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class Ports:
-        p_port_prototype: List[PPortPrototype] = field(
+        p_port_prototype: list[PPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "P-PORT-PROTOTYPE",
@@ -391,7 +391,7 @@ class AdaptiveApplicationSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        pr_port_prototype: List[PrPortPrototype] = field(
+        pr_port_prototype: list[PrPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "PR-PORT-PROTOTYPE",
@@ -399,7 +399,7 @@ class AdaptiveApplicationSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        r_port_prototype: List[RPortPrototype] = field(
+        r_port_prototype: list[RPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "R-PORT-PROTOTYPE",
@@ -410,7 +410,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class PortGroups:
-        port_group: List[PortGroup] = field(
+        port_group: list[PortGroup] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-GROUP",
@@ -421,7 +421,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class UnitGroupRefs:
-        unit_group_ref: List[
+        unit_group_ref: list[
             "AdaptiveApplicationSwComponentType.UnitGroupRefs.UnitGroupRef"
         ] = field(
             default_factory=list,
@@ -445,7 +445,7 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class InternalBehaviors:
-        adaptive_swc_internal_behavior: List[AdaptiveSwcInternalBehavior] = (
+        adaptive_swc_internal_behavior: list[AdaptiveSwcInternalBehavior] = (
             field(
                 default_factory=list,
                 metadata={

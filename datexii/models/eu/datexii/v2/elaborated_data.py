@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.basic_data import BasicData
 from datexii.models.eu.datexii.v2.elaborated_data_fault import (
@@ -50,7 +50,7 @@ class ElaboratedData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    elaborated_data_fault: List[ElaboratedDataFault] = field(
+    elaborated_data_fault: list[ElaboratedDataFault] = field(
         default_factory=list,
         metadata={
             "name": "elaboratedDataFault",

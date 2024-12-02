@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
@@ -23,7 +22,7 @@ class BaseReferenceComponentTypeIds:
     class Meta:
         global_type = False
 
-    id: List[Idtype] = field(
+    id: list[Idtype] = field(
         default_factory=list,
         metadata={
             "name": "ID",

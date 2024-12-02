@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple
+from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -118,7 +118,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    note: Tuple[Note, ...] = field(
+    note: tuple[Note, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Note",
@@ -126,7 +126,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    cancellation_note: Tuple[CancellationNote, ...] = field(
+    cancellation_note: tuple[CancellationNote, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "CancellationNote",
@@ -135,7 +135,7 @@ class FulfilmentCancellationType:
             "min_occurs": 1,
         },
     )
-    despatch_document_reference: Tuple[DespatchDocumentReference, ...] = field(
+    despatch_document_reference: tuple[DespatchDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "DespatchDocumentReference",
@@ -143,7 +143,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receipt_document_reference: Tuple[ReceiptDocumentReference, ...] = field(
+    receipt_document_reference: tuple[ReceiptDocumentReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ReceiptDocumentReference",
@@ -151,7 +151,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    order_reference: Tuple[OrderReference, ...] = field(
+    order_reference: tuple[OrderReference, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OrderReference",
@@ -159,7 +159,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+    additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -169,7 +169,7 @@ class FulfilmentCancellationType:
             },
         )
     )
-    contract: Tuple[Contract, ...] = field(
+    contract: tuple[Contract, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Contract",
@@ -177,7 +177,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Tuple[Signature, ...] = field(
+    signature: tuple[Signature, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Signature",

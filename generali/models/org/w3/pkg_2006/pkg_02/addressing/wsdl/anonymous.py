@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, Optional
+from typing import Optional
 
 from generali.models.org.w3.pkg_2006.pkg_02.addressing.wsdl.anonymous_type import (
     AnonymousType,
@@ -19,7 +19,7 @@ class Anonymous:
             "required": True,
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -307,7 +307,7 @@ class SwcTiming:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -318,7 +318,7 @@ class SwcTiming:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -329,7 +329,7 @@ class SwcTiming:
 
     @dataclass
     class TimingConditions:
-        timing_condition: List[TimingCondition] = field(
+        timing_condition: list[TimingCondition] = field(
             default_factory=list,
             metadata={
                 "name": "TIMING-CONDITION",
@@ -340,7 +340,7 @@ class SwcTiming:
 
     @dataclass
     class TimingDescriptions:
-        td_event_bsw_internal_behavior: List[TdEventBswInternalBehavior] = (
+        td_event_bsw_internal_behavior: list[TdEventBswInternalBehavior] = (
             field(
                 default_factory=list,
                 metadata={
@@ -350,7 +350,7 @@ class SwcTiming:
                 },
             )
         )
-        td_event_bsw_mode_declaration: List[TdEventBswModeDeclaration] = field(
+        td_event_bsw_mode_declaration: list[TdEventBswModeDeclaration] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-BSW-MODE-DECLARATION",
@@ -358,7 +358,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_bsw_module: List[TdEventBswModule] = field(
+        td_event_bsw_module: list[TdEventBswModule] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-BSW-MODULE",
@@ -366,7 +366,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_complex: List[TdEventComplex] = field(
+        td_event_complex: list[TdEventComplex] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-COMPLEX",
@@ -374,7 +374,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_fr_cluster_cycle_start: List[TdEventFrClusterCycleStart] = (
+        td_event_fr_cluster_cycle_start: list[TdEventFrClusterCycleStart] = (
             field(
                 default_factory=list,
                 metadata={
@@ -384,7 +384,7 @@ class SwcTiming:
                 },
             )
         )
-        td_event_frame: List[TdEventFrame] = field(
+        td_event_frame: list[TdEventFrame] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-FRAME",
@@ -392,7 +392,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_frame_ethernet: List[TdEventFrameEthernet] = field(
+        td_event_frame_ethernet: list[TdEventFrameEthernet] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-FRAME-ETHERNET",
@@ -400,7 +400,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_i_pdu: List[TdEventIPdu] = field(
+        td_event_i_pdu: list[TdEventIPdu] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-I-PDU",
@@ -408,7 +408,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_i_signal: List[TdEventISignal] = field(
+        td_event_i_signal: list[TdEventISignal] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-I-SIGNAL",
@@ -416,7 +416,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_mode_declaration: List[TdEventModeDeclaration] = field(
+        td_event_mode_declaration: list[TdEventModeDeclaration] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-MODE-DECLARATION",
@@ -424,7 +424,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_operation: List[TdEventOperation] = field(
+        td_event_operation: list[TdEventOperation] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-OPERATION",
@@ -432,7 +432,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_service_instance_discovery: List[
+        td_event_service_instance_discovery: list[
             TdEventServiceInstanceDiscovery
         ] = field(
             default_factory=list,
@@ -442,7 +442,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_service_instance_event: List[TdEventServiceInstanceEvent] = (
+        td_event_service_instance_event: list[TdEventServiceInstanceEvent] = (
             field(
                 default_factory=list,
                 metadata={
@@ -452,7 +452,7 @@ class SwcTiming:
                 },
             )
         )
-        td_event_service_instance_field: List[TdEventServiceInstanceField] = (
+        td_event_service_instance_field: list[TdEventServiceInstanceField] = (
             field(
                 default_factory=list,
                 metadata={
@@ -462,7 +462,7 @@ class SwcTiming:
                 },
             )
         )
-        td_event_service_instance_method: List[
+        td_event_service_instance_method: list[
             TdEventServiceInstanceMethod
         ] = field(
             default_factory=list,
@@ -472,7 +472,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_swc_internal_behavior: List[TdEventSwcInternalBehavior] = (
+        td_event_swc_internal_behavior: list[TdEventSwcInternalBehavior] = (
             field(
                 default_factory=list,
                 metadata={
@@ -482,7 +482,7 @@ class SwcTiming:
                 },
             )
         )
-        td_event_swc_internal_behavior_reference: List[
+        td_event_swc_internal_behavior_reference: list[
             TdEventSwcInternalBehaviorReference
         ] = field(
             default_factory=list,
@@ -492,7 +492,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_trigger: List[TdEventTrigger] = field(
+        td_event_trigger: list[TdEventTrigger] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-TRIGGER",
@@ -500,7 +500,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_tt_can_cycle_start: List[TdEventTtCanCycleStart] = field(
+        td_event_tt_can_cycle_start: list[TdEventTtCanCycleStart] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-TT-CAN-CYCLE-START",
@@ -508,7 +508,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_variable_data_prototype: List[
+        td_event_variable_data_prototype: list[
             TdEventVariableDataPrototype
         ] = field(
             default_factory=list,
@@ -518,7 +518,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_vfb_reference: List[TdEventVfbReference] = field(
+        td_event_vfb_reference: list[TdEventVfbReference] = field(
             default_factory=list,
             metadata={
                 "name": "TD-EVENT-VFB-REFERENCE",
@@ -526,7 +526,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        timing_description_event_chain: List[TimingDescriptionEventChain] = (
+        timing_description_event_chain: list[TimingDescriptionEventChain] = (
             field(
                 default_factory=list,
                 metadata={
@@ -539,7 +539,7 @@ class SwcTiming:
 
     @dataclass
     class TimingGuarantees:
-        age_constraint: List[AgeConstraint] = field(
+        age_constraint: list[AgeConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "AGE-CONSTRAINT",
@@ -547,7 +547,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        arbitrary_event_triggering: List[ArbitraryEventTriggering] = field(
+        arbitrary_event_triggering: list[ArbitraryEventTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "ARBITRARY-EVENT-TRIGGERING",
@@ -555,7 +555,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        burst_pattern_event_triggering: List[BurstPatternEventTriggering] = (
+        burst_pattern_event_triggering: list[BurstPatternEventTriggering] = (
             field(
                 default_factory=list,
                 metadata={
@@ -565,7 +565,7 @@ class SwcTiming:
                 },
             )
         )
-        concrete_pattern_event_triggering: List[
+        concrete_pattern_event_triggering: list[
             ConcretePatternEventTriggering
         ] = field(
             default_factory=list,
@@ -575,7 +575,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        execution_order_constraint: List[ExecutionOrderConstraint] = field(
+        execution_order_constraint: list[ExecutionOrderConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTION-ORDER-CONSTRAINT",
@@ -583,7 +583,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        execution_time_constraint: List[ExecutionTimeConstraint] = field(
+        execution_time_constraint: list[ExecutionTimeConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTION-TIME-CONSTRAINT",
@@ -591,7 +591,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        latency_timing_constraint: List[LatencyTimingConstraint] = field(
+        latency_timing_constraint: list[LatencyTimingConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "LATENCY-TIMING-CONSTRAINT",
@@ -599,7 +599,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        offset_timing_constraint: List[OffsetTimingConstraint] = field(
+        offset_timing_constraint: list[OffsetTimingConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "OFFSET-TIMING-CONSTRAINT",
@@ -607,7 +607,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        periodic_event_triggering: List[PeriodicEventTriggering] = field(
+        periodic_event_triggering: list[PeriodicEventTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "PERIODIC-EVENT-TRIGGERING",
@@ -615,7 +615,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sporadic_event_triggering: List[SporadicEventTriggering] = field(
+        sporadic_event_triggering: list[SporadicEventTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "SPORADIC-EVENT-TRIGGERING",
@@ -623,7 +623,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        synchronization_point_constraint: List[
+        synchronization_point_constraint: list[
             SynchronizationPointConstraint
         ] = field(
             default_factory=list,
@@ -633,7 +633,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        synchronization_timing_constraint: List[
+        synchronization_timing_constraint: list[
             SynchronizationTimingConstraint
         ] = field(
             default_factory=list,
@@ -646,7 +646,7 @@ class SwcTiming:
 
     @dataclass
     class TimingRequirements:
-        age_constraint: List[AgeConstraint] = field(
+        age_constraint: list[AgeConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "AGE-CONSTRAINT",
@@ -654,7 +654,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        arbitrary_event_triggering: List[ArbitraryEventTriggering] = field(
+        arbitrary_event_triggering: list[ArbitraryEventTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "ARBITRARY-EVENT-TRIGGERING",
@@ -662,7 +662,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        burst_pattern_event_triggering: List[BurstPatternEventTriggering] = (
+        burst_pattern_event_triggering: list[BurstPatternEventTriggering] = (
             field(
                 default_factory=list,
                 metadata={
@@ -672,7 +672,7 @@ class SwcTiming:
                 },
             )
         )
-        concrete_pattern_event_triggering: List[
+        concrete_pattern_event_triggering: list[
             ConcretePatternEventTriggering
         ] = field(
             default_factory=list,
@@ -682,7 +682,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        execution_order_constraint: List[ExecutionOrderConstraint] = field(
+        execution_order_constraint: list[ExecutionOrderConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTION-ORDER-CONSTRAINT",
@@ -690,7 +690,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        execution_time_constraint: List[ExecutionTimeConstraint] = field(
+        execution_time_constraint: list[ExecutionTimeConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTION-TIME-CONSTRAINT",
@@ -698,7 +698,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        latency_timing_constraint: List[LatencyTimingConstraint] = field(
+        latency_timing_constraint: list[LatencyTimingConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "LATENCY-TIMING-CONSTRAINT",
@@ -706,7 +706,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        offset_timing_constraint: List[OffsetTimingConstraint] = field(
+        offset_timing_constraint: list[OffsetTimingConstraint] = field(
             default_factory=list,
             metadata={
                 "name": "OFFSET-TIMING-CONSTRAINT",
@@ -714,7 +714,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        periodic_event_triggering: List[PeriodicEventTriggering] = field(
+        periodic_event_triggering: list[PeriodicEventTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "PERIODIC-EVENT-TRIGGERING",
@@ -722,7 +722,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sporadic_event_triggering: List[SporadicEventTriggering] = field(
+        sporadic_event_triggering: list[SporadicEventTriggering] = field(
             default_factory=list,
             metadata={
                 "name": "SPORADIC-EVENT-TRIGGERING",
@@ -730,7 +730,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        synchronization_point_constraint: List[
+        synchronization_point_constraint: list[
             SynchronizationPointConstraint
         ] = field(
             default_factory=list,
@@ -740,7 +740,7 @@ class SwcTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        synchronization_timing_constraint: List[
+        synchronization_timing_constraint: list[
             SynchronizationTimingConstraint
         ] = field(
             default_factory=list,

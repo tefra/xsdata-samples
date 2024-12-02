@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -401,7 +401,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -412,7 +412,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -423,7 +423,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class BlueprintPolicys:
-        blueprint_policy_list: List[BlueprintPolicyList] = field(
+        blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-LIST",
@@ -431,7 +431,7 @@ class CompositionSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+        blueprint_policy_not_modifiable: list[BlueprintPolicyNotModifiable] = (
             field(
                 default_factory=list,
                 metadata={
@@ -441,7 +441,7 @@ class CompositionSwComponentType:
                 },
             )
         )
-        blueprint_policy_single: List[BlueprintPolicySingle] = field(
+        blueprint_policy_single: list[BlueprintPolicySingle] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-SINGLE",
@@ -452,7 +452,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class SwComponentDocumentations:
-        sw_component_documentation: List[SwComponentDocumentation] = field(
+        sw_component_documentation: list[SwComponentDocumentation] = field(
             default_factory=list,
             metadata={
                 "name": "SW-COMPONENT-DOCUMENTATION",
@@ -463,7 +463,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class ConsistencyNeedss:
-        consistency_needs: List[ConsistencyNeeds] = field(
+        consistency_needs: list[ConsistencyNeeds] = field(
             default_factory=list,
             metadata={
                 "name": "CONSISTENCY-NEEDS",
@@ -474,7 +474,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class Ports:
-        p_port_prototype: List[PPortPrototype] = field(
+        p_port_prototype: list[PPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "P-PORT-PROTOTYPE",
@@ -482,7 +482,7 @@ class CompositionSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        pr_port_prototype: List[PrPortPrototype] = field(
+        pr_port_prototype: list[PrPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "PR-PORT-PROTOTYPE",
@@ -490,7 +490,7 @@ class CompositionSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        r_port_prototype: List[RPortPrototype] = field(
+        r_port_prototype: list[RPortPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "R-PORT-PROTOTYPE",
@@ -501,7 +501,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class PortGroups:
-        port_group: List[PortGroup] = field(
+        port_group: list[PortGroup] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-GROUP",
@@ -512,7 +512,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class UnitGroupRefs:
-        unit_group_ref: List[
+        unit_group_ref: list[
             "CompositionSwComponentType.UnitGroupRefs.UnitGroupRef"
         ] = field(
             default_factory=list,
@@ -536,7 +536,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class Components:
-        sw_component_prototype: List[SwComponentPrototype] = field(
+        sw_component_prototype: list[SwComponentPrototype] = field(
             default_factory=list,
             metadata={
                 "name": "SW-COMPONENT-PROTOTYPE",
@@ -547,7 +547,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class Connectors:
-        assembly_sw_connector: List[AssemblySwConnector] = field(
+        assembly_sw_connector: list[AssemblySwConnector] = field(
             default_factory=list,
             metadata={
                 "name": "ASSEMBLY-SW-CONNECTOR",
@@ -555,7 +555,7 @@ class CompositionSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        delegation_sw_connector: List[DelegationSwConnector] = field(
+        delegation_sw_connector: list[DelegationSwConnector] = field(
             default_factory=list,
             metadata={
                 "name": "DELEGATION-SW-CONNECTOR",
@@ -563,7 +563,7 @@ class CompositionSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        pass_through_sw_connector: List[PassThroughSwConnector] = field(
+        pass_through_sw_connector: list[PassThroughSwConnector] = field(
             default_factory=list,
             metadata={
                 "name": "PASS-THROUGH-SW-CONNECTOR",
@@ -574,7 +574,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class ConstantValueMappingRefs:
-        constant_value_mapping_ref: List[
+        constant_value_mapping_ref: list[
             "CompositionSwComponentType.ConstantValueMappingRefs.ConstantValueMappingRef"
         ] = field(
             default_factory=list,
@@ -600,7 +600,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class DataTypeMappingRefs:
-        data_type_mapping_ref: List[
+        data_type_mapping_ref: list[
             "CompositionSwComponentType.DataTypeMappingRefs.DataTypeMappingRef"
         ] = field(
             default_factory=list,
@@ -624,7 +624,7 @@ class CompositionSwComponentType:
 
     @dataclass
     class InstantiationRteEventPropss:
-        instantiation_timing_event_props: List[
+        instantiation_timing_event_props: list[
             InstantiationTimingEventProps
         ] = field(
             default_factory=list,

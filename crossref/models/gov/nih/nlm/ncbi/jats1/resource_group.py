@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.resource_name import ResourceName
 from crossref.models.gov.nih.nlm.ncbi.jats1.resource_wrap import ResourceWrap
@@ -18,14 +18,14 @@ class ResourceGroup:
         name = "resource-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    resource_name: List[ResourceName] = field(
+    resource_name: list[ResourceName] = field(
         default_factory=list,
         metadata={
             "name": "resource-name",
             "type": "Element",
         },
     )
-    resource_wrap: List[ResourceWrap] = field(
+    resource_wrap: list[ResourceWrap] = field(
         default_factory=list,
         metadata={
             "name": "resource-wrap",

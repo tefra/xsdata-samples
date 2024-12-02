@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from datexii.models.eu.datexii.v2.parking_table_versioned_reference import (
     ParkingTableVersionedReference,
@@ -20,7 +19,7 @@ class ParkingVehiclesPublication:
     :ivar parking_vehicle:
     """
 
-    parking_table_reference: List[ParkingTableVersionedReference] = field(
+    parking_table_reference: list[ParkingTableVersionedReference] = field(
         default_factory=list,
         metadata={
             "name": "parkingTableReference",
@@ -28,7 +27,7 @@ class ParkingVehiclesPublication:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_vehicle: List[ParkingVehicle] = field(
+    parking_vehicle: list[ParkingVehicle] = field(
         default_factory=list,
         metadata={
             "name": "parkingVehicle",

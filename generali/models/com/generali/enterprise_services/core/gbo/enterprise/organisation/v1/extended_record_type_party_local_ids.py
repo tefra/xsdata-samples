@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.party_local_id_type import (
     PartyLocalIdType,
@@ -13,7 +12,7 @@ class ExtendedRecordTypePartyLocalIds:
     class Meta:
         global_type = False
 
-    party_local_id: List[PartyLocalIdType] = field(
+    party_local_id: list[PartyLocalIdType] = field(
         default_factory=list,
         metadata={
             "name": "PartyLocalId",

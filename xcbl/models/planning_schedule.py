@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.planning_schedule_response import (
     LocationGroupedPlanningDetail,
@@ -11,7 +11,7 @@ from xcbl.models.planning_schedule_response import (
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedPlanningDetail:
-    location_grouped_planning_detail: List[LocationGroupedPlanningDetail] = (
+    location_grouped_planning_detail: list[LocationGroupedPlanningDetail] = (
         field(
             default_factory=list,
             metadata={
@@ -25,7 +25,7 @@ class ListOfLocationGroupedPlanningDetail:
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedPlanningDetail:
-    material_grouped_planning_detail: List[MaterialGroupedPlanningDetail] = (
+    material_grouped_planning_detail: list[MaterialGroupedPlanningDetail] = (
         field(
             default_factory=list,
             metadata={

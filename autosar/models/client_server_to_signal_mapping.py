@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
@@ -205,7 +205,7 @@ class ClientServerToSignalMapping:
 
     @dataclass
     class EventGroupRefs:
-        event_group_ref: List[
+        event_group_ref: list[
             "ClientServerToSignalMapping.EventGroupRefs.EventGroupRef"
         ] = field(
             default_factory=list,
@@ -229,7 +229,7 @@ class ClientServerToSignalMapping:
 
     @dataclass
     class EventHandlerRefs:
-        event_handler_ref: List[
+        event_handler_ref: list[
             "ClientServerToSignalMapping.EventHandlerRefs.EventHandlerRef"
         ] = field(
             default_factory=list,
@@ -253,7 +253,7 @@ class ClientServerToSignalMapping:
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List[
+        service_instance_ref: list[
             "ClientServerToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef"
         ] = field(
             default_factory=list,

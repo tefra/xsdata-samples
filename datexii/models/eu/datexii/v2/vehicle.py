@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.axle_spacing import AxleSpacing
 from datexii.models.eu.datexii.v2.axle_weight import AxleWeight
@@ -116,7 +116,7 @@ class Vehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    axle_spacing_on_vehicle: List[AxleSpacing] = field(
+    axle_spacing_on_vehicle: list[AxleSpacing] = field(
         default_factory=list,
         metadata={
             "name": "axleSpacingOnVehicle",
@@ -124,7 +124,7 @@ class Vehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_axle_weight: List[AxleWeight] = field(
+    specific_axle_weight: list[AxleWeight] = field(
         default_factory=list,
         metadata={
             "name": "specificAxleWeight",

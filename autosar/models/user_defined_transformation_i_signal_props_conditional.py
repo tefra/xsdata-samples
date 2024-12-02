@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import VariationPoint
 from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
@@ -99,7 +99,7 @@ class UserDefinedTransformationISignalPropsConditional:
 
     @dataclass
     class DataPrototypeTransformationPropss:
-        data_prototype_transformation_props: List[
+        data_prototype_transformation_props: list[
             DataPrototypeTransformationProps
         ] = field(
             default_factory=list,

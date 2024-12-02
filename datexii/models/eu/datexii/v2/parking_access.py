@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from datexii.models.eu.datexii.v2.access_category_enum import (
     AccessCategoryEnum,
@@ -51,7 +51,7 @@ class ParkingAccess:
     :ivar id:
     """
 
-    access_category: List[AccessCategoryEnum] = field(
+    access_category: list[AccessCategoryEnum] = field(
         default_factory=list,
         metadata={
             "name": "accessCategory",
@@ -68,7 +68,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    access_equipment: List[AccessEquipmentEnum] = field(
+    access_equipment: list[AccessEquipmentEnum] = field(
         default_factory=list,
         metadata={
             "name": "accessEquipment",
@@ -76,7 +76,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accessibility: List[AccessibilityEnum] = field(
+    accessibility: list[AccessibilityEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -115,7 +115,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    primary_road: List[Road] = field(
+    primary_road: list[Road] = field(
         default_factory=list,
         metadata={
             "name": "primaryRoad",

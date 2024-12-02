@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 __NAMESPACE__ = (
     "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
@@ -8,7 +7,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ProgramRespAppDataType:
-    any_element: List[object] = field(
+    any_element: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

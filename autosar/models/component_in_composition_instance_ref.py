@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .ref import Ref
 from .sw_component_prototype_subtypes_enum import (
@@ -33,7 +33,7 @@ class ComponentInCompositionInstanceRef:
     class Meta:
         name = "COMPONENT-IN-COMPOSITION-INSTANCE-REF"
 
-    context_component_ref: List[
+    context_component_ref: list[
         "ComponentInCompositionInstanceRef.ContextComponentRef"
     ] = field(
         default_factory=list,

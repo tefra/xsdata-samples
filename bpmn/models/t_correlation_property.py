@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .correlation_property_retrieval_expression import (
@@ -15,7 +15,7 @@ class TCorrelationProperty(TRootElement):
     class Meta:
         name = "tCorrelationProperty"
 
-    correlation_property_retrieval_expression: List[
+    correlation_property_retrieval_expression: list[
         CorrelationPropertyRetrievalExpression
     ] = field(
         default_factory=list,

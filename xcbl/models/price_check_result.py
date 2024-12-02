@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xcbl.models.remittance_advice import SupplierParty
 from xcbl.models.sourcing_result import (
@@ -232,7 +232,7 @@ class LineItemAttachment:
 
 @dataclass(kw_only=True)
 class ListOfParameter:
-    parameter: List[Parameter] = field(
+    parameter: list[Parameter] = field(
         default_factory=list,
         metadata={
             "name": "Parameter",
@@ -457,7 +457,7 @@ class CheckResultBaseItemDetail:
             "type": "Element",
         },
     )
-    check_result_transport: List[CheckResultTransport] = field(
+    check_result_transport: list[CheckResultTransport] = field(
         default_factory=list,
         metadata={
             "name": "CheckResultTransport",
@@ -713,7 +713,7 @@ class PriceCheckResultSummary:
 
 @dataclass(kw_only=True)
 class ListOfPriceCheckResultItemDetail:
-    price_check_result_item_detail: List[PriceCheckResultItemDetail] = field(
+    price_check_result_item_detail: list[PriceCheckResultItemDetail] = field(
         default_factory=list,
         metadata={
             "name": "PriceCheckResultItemDetail",

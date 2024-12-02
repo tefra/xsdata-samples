@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -211,7 +211,7 @@ class PortGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -222,7 +222,7 @@ class PortGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -233,7 +233,7 @@ class PortGroup:
 
     @dataclass
     class InnerGroupIrefs:
-        inner_group_iref: List[InnerPortGroupInCompositionInstanceRef] = field(
+        inner_group_iref: list[InnerPortGroupInCompositionInstanceRef] = field(
             default_factory=list,
             metadata={
                 "name": "INNER-GROUP-IREF",
@@ -244,7 +244,7 @@ class PortGroup:
 
     @dataclass
     class OuterPorts:
-        port_prototype_ref_conditional: List[PortPrototypeRefConditional] = (
+        port_prototype_ref_conditional: list[PortPrototypeRefConditional] = (
             field(
                 default_factory=list,
                 metadata={

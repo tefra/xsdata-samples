@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 
 @dataclass
-class TypeType:
+class Type:
     class Meta:
         name = "type"
 
@@ -26,7 +26,7 @@ class TypeArrow:
     class Meta:
         global_type = False
 
-    type_value: List[TypeType] = field(
+    type_value: list[Type] = field(
         default_factory=list,
         metadata={
             "name": "type",

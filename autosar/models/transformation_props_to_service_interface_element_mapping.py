@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -247,7 +247,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -258,7 +258,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -269,7 +269,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
     @dataclass
     class EventRefs:
-        event_ref: List[
+        event_ref: list[
             "TransformationPropsToServiceInterfaceElementMapping.EventRefs.EventRef"
         ] = field(
             default_factory=list,
@@ -293,7 +293,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
     @dataclass
     class FieldRefs:
-        field_ref: List[
+        field_ref: list[
             "TransformationPropsToServiceInterfaceElementMapping.FieldRefs.FieldRef"
         ] = field(
             default_factory=list,
@@ -317,7 +317,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
     @dataclass
     class MethodRefs:
-        method_ref: List[
+        method_ref: list[
             "TransformationPropsToServiceInterfaceElementMapping.MethodRefs.MethodRef"
         ] = field(
             default_factory=list,
@@ -341,7 +341,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
     @dataclass
     class TlvDataIdDefinitionRefs:
-        tlv_data_id_definition_ref: List[
+        tlv_data_id_definition_ref: list[
             "TransformationPropsToServiceInterfaceElementMapping.TlvDataIdDefinitionRefs.TlvDataIdDefinitionRef"
         ] = field(
             default_factory=list,

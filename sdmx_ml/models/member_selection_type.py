@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Union
+from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -35,7 +35,7 @@ class MemberSelectionType:
     :ivar valid_to:
     """
 
-    value_or_time_range: Tuple[
+    value_or_time_range: tuple[
         Union[SimpleComponentValueType, TimeRangeValueType], ...
     ] = field(
         default_factory=tuple,

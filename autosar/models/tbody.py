@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .row import Row
 from .valign_enum_simple import ValignEnumSimple
@@ -33,7 +33,7 @@ class Tbody:
     class Meta:
         name = "TBODY"
 
-    row: List[Row] = field(
+    row: list[Row] = field(
         default_factory=list,
         metadata={
             "name": "ROW",

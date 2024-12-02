@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -234,7 +234,7 @@ class RootSwCompositionPrototype:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -245,7 +245,7 @@ class RootSwCompositionPrototype:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -256,7 +256,7 @@ class RootSwCompositionPrototype:
 
     @dataclass
     class CalibrationParameterValueSetRefs:
-        calibration_parameter_value_set_ref: List[
+        calibration_parameter_value_set_ref: list[
             "RootSwCompositionPrototype.CalibrationParameterValueSetRefs.CalibrationParameterValueSetRef"
         ] = field(
             default_factory=list,

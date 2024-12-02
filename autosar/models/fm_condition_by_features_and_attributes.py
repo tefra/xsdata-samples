@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, List, Optional
+from typing import ForwardRef, Optional
 
 from .fm_attribute_def_subtypes_enum import FmAttributeDefSubtypesEnum
 from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum
@@ -46,7 +46,7 @@ class FmConditionByFeaturesAndAttributes:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    content: List[object] = field(
+    content: list[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",

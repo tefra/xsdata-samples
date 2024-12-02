@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -221,7 +221,7 @@ class DiagnosticIumprGroup:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -232,7 +232,7 @@ class DiagnosticIumprGroup:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -243,7 +243,7 @@ class DiagnosticIumprGroup:
 
     @dataclass
     class IumprGroupIdentifiers:
-        diagnostic_iumpr_group_identifier: List[
+        diagnostic_iumpr_group_identifier: list[
             DiagnosticIumprGroupIdentifier
         ] = field(
             default_factory=list,
@@ -256,7 +256,7 @@ class DiagnosticIumprGroup:
 
     @dataclass
     class IumprRefs:
-        iumpr_ref: List["DiagnosticIumprGroup.IumprRefs.IumprRef"] = field(
+        iumpr_ref: list["DiagnosticIumprGroup.IumprRefs.IumprRef"] = field(
             default_factory=list,
             metadata={
                 "name": "IUMPR-REF",

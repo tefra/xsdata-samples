@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -222,7 +222,7 @@ class SpecificationDocumentScope:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -233,7 +233,7 @@ class SpecificationDocumentScope:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -255,7 +255,7 @@ class SpecificationDocumentScope:
 
     @dataclass
     class DocumentElementScopes:
-        document_element_scope: List[DocumentElementScope] = field(
+        document_element_scope: list[DocumentElementScope] = field(
             default_factory=list,
             metadata={
                 "name": "DOCUMENT-ELEMENT-SCOPE",

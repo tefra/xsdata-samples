@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 
@@ -16,7 +16,7 @@ from generali.models.indicator import Indicator
 from generali.models.last_modified_date_time import LastModifiedDateTime
 from generali.models.list_agency_name import ListAgencyName
 from generali.models.list_name import ListName
-from generali.models.mod import TypeType
+from generali.models.mod import Type
 from generali.models.name_text import NameText
 from generali.models.numeric import Numeric
 from generali.models.percent import Percent
@@ -52,7 +52,7 @@ class Amount:
             "type": "Element",
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -98,7 +98,7 @@ class Code:
             "type": "Element",
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -250,7 +250,7 @@ class Quantity:
             "type": "Element",
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -316,7 +316,7 @@ class TypeCode:
             "type": "Element",
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -389,14 +389,14 @@ class Originator:
             "type": "Element",
         },
     )
-    reference_parameters: List[ReferenceParameters] = field(
+    reference_parameters: list[ReferenceParameters] = field(
         default_factory=list,
         metadata={
             "name": "reference-parameters",
             "type": "Element",
         },
     )
-    metadata: List[Metadata] = field(
+    metadata: list[Metadata] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -588,7 +588,7 @@ class Characteristic:
             "type": "Element",
         },
     )
-    values: List[Values] = field(
+    values: list[Values] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -853,7 +853,7 @@ class Properties:
             "type": "Element",
         },
     )
-    dollar_sign: Optional[TypeType] = field(
+    dollar_sign: Optional[Type] = field(
         default=None,
         metadata={
             "name": "$",
@@ -1065,7 +1065,7 @@ class CreatedById:
             "required": True,
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1129,7 +1129,7 @@ class Id:
             "required": True,
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1216,7 +1216,7 @@ class LastModifiedById:
             "required": True,
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1274,7 +1274,7 @@ class StatusCode:
             "required": True,
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1361,7 +1361,7 @@ class VersionId:
             "required": True,
         },
     )
-    required: List[str] = field(
+    required: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",

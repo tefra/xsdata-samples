@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -589,7 +589,7 @@ class RunnableEntity:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -600,7 +600,7 @@ class RunnableEntity:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -611,7 +611,7 @@ class RunnableEntity:
 
     @dataclass
     class ActivationReasons:
-        executable_entity_activation_reason: List[
+        executable_entity_activation_reason: list[
             ExecutableEntityActivationReason
         ] = field(
             default_factory=list,
@@ -624,7 +624,7 @@ class RunnableEntity:
 
     @dataclass
     class CanEnterExclusiveAreaRefs:
-        can_enter_exclusive_area_ref: List[
+        can_enter_exclusive_area_ref: list[
             "RunnableEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"
         ] = field(
             default_factory=list,
@@ -648,7 +648,7 @@ class RunnableEntity:
 
     @dataclass
     class ExclusiveAreaNestingOrderRefs:
-        exclusive_area_nesting_order_ref: List[
+        exclusive_area_nesting_order_ref: list[
             "RunnableEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"
         ] = field(
             default_factory=list,
@@ -672,7 +672,7 @@ class RunnableEntity:
 
     @dataclass
     class RunsInsideExclusiveAreaRefs:
-        runs_inside_exclusive_area_ref: List[
+        runs_inside_exclusive_area_ref: list[
             "RunnableEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"
         ] = field(
             default_factory=list,
@@ -707,7 +707,7 @@ class RunnableEntity:
 
     @dataclass
     class Arguments:
-        runnable_entity_argument: List[RunnableEntityArgument] = field(
+        runnable_entity_argument: list[RunnableEntityArgument] = field(
             default_factory=list,
             metadata={
                 "name": "RUNNABLE-ENTITY-ARGUMENT",
@@ -718,7 +718,7 @@ class RunnableEntity:
 
     @dataclass
     class AsynchronousServerCallResultPoints:
-        asynchronous_server_call_result_point: List[
+        asynchronous_server_call_result_point: list[
             AsynchronousServerCallResultPoint
         ] = field(
             default_factory=list,
@@ -731,7 +731,7 @@ class RunnableEntity:
 
     @dataclass
     class DataReadAccesss:
-        variable_access: List[VariableAccess] = field(
+        variable_access: list[VariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-ACCESS",
@@ -742,7 +742,7 @@ class RunnableEntity:
 
     @dataclass
     class DataReceivePointByArguments:
-        variable_access: List[VariableAccess] = field(
+        variable_access: list[VariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-ACCESS",
@@ -753,7 +753,7 @@ class RunnableEntity:
 
     @dataclass
     class DataReceivePointByValues:
-        variable_access: List[VariableAccess] = field(
+        variable_access: list[VariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-ACCESS",
@@ -764,7 +764,7 @@ class RunnableEntity:
 
     @dataclass
     class DataSendPoints:
-        variable_access: List[VariableAccess] = field(
+        variable_access: list[VariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-ACCESS",
@@ -775,7 +775,7 @@ class RunnableEntity:
 
     @dataclass
     class DataWriteAccesss:
-        variable_access: List[VariableAccess] = field(
+        variable_access: list[VariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-ACCESS",
@@ -786,7 +786,7 @@ class RunnableEntity:
 
     @dataclass
     class ExternalTriggeringPoints:
-        external_triggering_point: List[ExternalTriggeringPoint] = field(
+        external_triggering_point: list[ExternalTriggeringPoint] = field(
             default_factory=list,
             metadata={
                 "name": "EXTERNAL-TRIGGERING-POINT",
@@ -797,7 +797,7 @@ class RunnableEntity:
 
     @dataclass
     class InternalTriggeringPoints:
-        internal_triggering_point: List[InternalTriggeringPoint] = field(
+        internal_triggering_point: list[InternalTriggeringPoint] = field(
             default_factory=list,
             metadata={
                 "name": "INTERNAL-TRIGGERING-POINT",
@@ -808,7 +808,7 @@ class RunnableEntity:
 
     @dataclass
     class ModeAccessPoints:
-        mode_access_point: List[ModeAccessPoint] = field(
+        mode_access_point: list[ModeAccessPoint] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-ACCESS-POINT",
@@ -819,7 +819,7 @@ class RunnableEntity:
 
     @dataclass
     class ModeSwitchPoints:
-        mode_switch_point: List[ModeSwitchPoint] = field(
+        mode_switch_point: list[ModeSwitchPoint] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-SWITCH-POINT",
@@ -830,7 +830,7 @@ class RunnableEntity:
 
     @dataclass
     class ParameterAccesss:
-        parameter_access: List[ParameterAccess] = field(
+        parameter_access: list[ParameterAccess] = field(
             default_factory=list,
             metadata={
                 "name": "PARAMETER-ACCESS",
@@ -841,7 +841,7 @@ class RunnableEntity:
 
     @dataclass
     class ReadLocalVariables:
-        variable_access: List[VariableAccess] = field(
+        variable_access: list[VariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-ACCESS",
@@ -852,7 +852,7 @@ class RunnableEntity:
 
     @dataclass
     class ServerCallPoints:
-        asynchronous_server_call_point: List[AsynchronousServerCallPoint] = (
+        asynchronous_server_call_point: list[AsynchronousServerCallPoint] = (
             field(
                 default_factory=list,
                 metadata={
@@ -862,7 +862,7 @@ class RunnableEntity:
                 },
             )
         )
-        synchronous_server_call_point: List[SynchronousServerCallPoint] = (
+        synchronous_server_call_point: list[SynchronousServerCallPoint] = (
             field(
                 default_factory=list,
                 metadata={
@@ -875,7 +875,7 @@ class RunnableEntity:
 
     @dataclass
     class WaitPoints:
-        wait_point: List[WaitPoint] = field(
+        wait_point: list[WaitPoint] = field(
             default_factory=list,
             metadata={
                 "name": "WAIT-POINT",
@@ -886,7 +886,7 @@ class RunnableEntity:
 
     @dataclass
     class WrittenLocalVariables:
-        variable_access: List[VariableAccess] = field(
+        variable_access: list[VariableAccess] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-ACCESS",

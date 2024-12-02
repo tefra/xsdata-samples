@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Optional
 
 from .bpmndiagram import Bpmndiagram
 from .cancel_event_definition import CancelEventDefinition
@@ -49,7 +49,7 @@ class TDefinitions:
     class Meta:
         name = "tDefinitions"
 
-    import_value: List[Import] = field(
+    import_value: list[Import] = field(
         default_factory=list,
         metadata={
             "name": "import",
@@ -57,35 +57,35 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    extension: List[Extension] = field(
+    extension: list[Extension] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    signal: List[Signal] = field(
+    signal: list[Signal] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    resource: List[Resource] = field(
+    resource: list[Resource] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    process: List[Process] = field(
+    process: list[Process] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    partner_role: List[PartnerRole] = field(
+    partner_role: list[PartnerRole] = field(
         default_factory=list,
         metadata={
             "name": "partnerRole",
@@ -93,7 +93,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    partner_entity: List[PartnerEntity] = field(
+    partner_entity: list[PartnerEntity] = field(
         default_factory=list,
         metadata={
             "name": "partnerEntity",
@@ -101,14 +101,14 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    message: List[Message] = field(
+    message: list[Message] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    item_definition: List[ItemDefinition] = field(
+    item_definition: list[ItemDefinition] = field(
         default_factory=list,
         metadata={
             "name": "itemDefinition",
@@ -116,14 +116,14 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    interface: List[Interface] = field(
+    interface: list[Interface] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    global_user_task: List[GlobalUserTask] = field(
+    global_user_task: list[GlobalUserTask] = field(
         default_factory=list,
         metadata={
             "name": "globalUserTask",
@@ -131,7 +131,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    global_task: List[GlobalTask] = field(
+    global_task: list[GlobalTask] = field(
         default_factory=list,
         metadata={
             "name": "globalTask",
@@ -139,7 +139,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    global_script_task: List[GlobalScriptTask] = field(
+    global_script_task: list[GlobalScriptTask] = field(
         default_factory=list,
         metadata={
             "name": "globalScriptTask",
@@ -147,7 +147,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    global_manual_task: List[GlobalManualTask] = field(
+    global_manual_task: list[GlobalManualTask] = field(
         default_factory=list,
         metadata={
             "name": "globalManualTask",
@@ -155,7 +155,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    global_business_rule_task: List[GlobalBusinessRuleTask] = field(
+    global_business_rule_task: list[GlobalBusinessRuleTask] = field(
         default_factory=list,
         metadata={
             "name": "globalBusinessRuleTask",
@@ -163,7 +163,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    timer_event_definition: List[TimerEventDefinition] = field(
+    timer_event_definition: list[TimerEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "timerEventDefinition",
@@ -171,7 +171,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    terminate_event_definition: List[TerminateEventDefinition] = field(
+    terminate_event_definition: list[TerminateEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "terminateEventDefinition",
@@ -179,7 +179,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    signal_event_definition: List[SignalEventDefinition] = field(
+    signal_event_definition: list[SignalEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "signalEventDefinition",
@@ -187,7 +187,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    message_event_definition: List[MessageEventDefinition] = field(
+    message_event_definition: list[MessageEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "messageEventDefinition",
@@ -195,7 +195,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    link_event_definition: List[LinkEventDefinition] = field(
+    link_event_definition: list[LinkEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "linkEventDefinition",
@@ -203,7 +203,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    escalation_event_definition: List[EscalationEventDefinition] = field(
+    escalation_event_definition: list[EscalationEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "escalationEventDefinition",
@@ -211,7 +211,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    error_event_definition: List[ErrorEventDefinition] = field(
+    error_event_definition: list[ErrorEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "errorEventDefinition",
@@ -219,7 +219,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    conditional_event_definition: List[ConditionalEventDefinition] = field(
+    conditional_event_definition: list[ConditionalEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "conditionalEventDefinition",
@@ -227,7 +227,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    compensate_event_definition: List[CompensateEventDefinition] = field(
+    compensate_event_definition: list[CompensateEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "compensateEventDefinition",
@@ -235,7 +235,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    cancel_event_definition: List[CancelEventDefinition] = field(
+    cancel_event_definition: list[CancelEventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "cancelEventDefinition",
@@ -243,7 +243,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    event_definition: List[EventDefinition] = field(
+    event_definition: list[EventDefinition] = field(
         default_factory=list,
         metadata={
             "name": "eventDefinition",
@@ -251,21 +251,21 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    escalation: List[Escalation] = field(
+    escalation: list[Escalation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    error: List[Error] = field(
+    error: list[Error] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    end_point: List[EndPoint] = field(
+    end_point: list[EndPoint] = field(
         default_factory=list,
         metadata={
             "name": "endPoint",
@@ -273,7 +273,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    data_store: List[DataStore] = field(
+    data_store: list[DataStore] = field(
         default_factory=list,
         metadata={
             "name": "dataStore",
@@ -281,7 +281,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    correlation_property: List[CorrelationProperty] = field(
+    correlation_property: list[CorrelationProperty] = field(
         default_factory=list,
         metadata={
             "name": "correlationProperty",
@@ -289,7 +289,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    global_conversation: List[GlobalConversation] = field(
+    global_conversation: list[GlobalConversation] = field(
         default_factory=list,
         metadata={
             "name": "globalConversation",
@@ -297,7 +297,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    global_choreography_task: List[GlobalChoreographyTask] = field(
+    global_choreography_task: list[GlobalChoreographyTask] = field(
         default_factory=list,
         metadata={
             "name": "globalChoreographyTask",
@@ -305,28 +305,28 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    choreography: List[Choreography] = field(
+    choreography: list[Choreography] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    collaboration: List[Collaboration] = field(
+    collaboration: list[Collaboration] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    category: List[Category] = field(
+    category: list[Category] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    root_element: List[RootElement] = field(
+    root_element: list[RootElement] = field(
         default_factory=list,
         metadata={
             "name": "rootElement",
@@ -334,7 +334,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    bpmndiagram: List[Bpmndiagram] = field(
+    bpmndiagram: list[Bpmndiagram] = field(
         default_factory=list,
         metadata={
             "name": "BPMNDiagram",
@@ -342,7 +342,7 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/DI",
         },
     )
-    relationship: List[Relationship] = field(
+    relationship: list[Relationship] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -396,7 +396,7 @@ class TDefinitions:
             "type": "Attribute",
         },
     )
-    other_attributes: Dict[str, str] = field(
+    other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",

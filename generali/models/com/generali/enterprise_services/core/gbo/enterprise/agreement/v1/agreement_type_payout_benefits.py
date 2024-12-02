@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import List
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.payout_benefit import (
     PayoutBenefit,
@@ -15,7 +14,7 @@ class AgreementTypePayoutBenefits:
     class Meta:
         global_type = False
 
-    payout_benefit: List[PayoutBenefit] = field(
+    payout_benefit: list[PayoutBenefit] = field(
         default_factory=list,
         metadata={
             "name": "PayoutBenefit",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
@@ -174,7 +174,7 @@ class SenderReceiverToSignalMapping:
 
     @dataclass
     class EventGroupRefs:
-        event_group_ref: List[
+        event_group_ref: list[
             "SenderReceiverToSignalMapping.EventGroupRefs.EventGroupRef"
         ] = field(
             default_factory=list,
@@ -198,7 +198,7 @@ class SenderReceiverToSignalMapping:
 
     @dataclass
     class EventHandlerRefs:
-        event_handler_ref: List[
+        event_handler_ref: list[
             "SenderReceiverToSignalMapping.EventHandlerRefs.EventHandlerRef"
         ] = field(
             default_factory=list,
@@ -222,7 +222,7 @@ class SenderReceiverToSignalMapping:
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List[
+        service_instance_ref: list[
             "SenderReceiverToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef"
         ] = field(
             default_factory=list,

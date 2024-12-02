@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -196,7 +196,7 @@ class GeneralPurposeConnection:
 
     @dataclass
     class ShortNameFragments:
-        short_name_fragment: List[ShortNameFragment] = field(
+        short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
             metadata={
                 "name": "SHORT-NAME-FRAGMENT",
@@ -207,7 +207,7 @@ class GeneralPurposeConnection:
 
     @dataclass
     class Annotations:
-        annotation: List[Annotation] = field(
+        annotation: list[Annotation] = field(
             default_factory=list,
             metadata={
                 "name": "ANNOTATION",
@@ -218,7 +218,7 @@ class GeneralPurposeConnection:
 
     @dataclass
     class PduTriggeringRefs:
-        pdu_triggering_ref: List[
+        pdu_triggering_ref: list[
             "GeneralPurposeConnection.PduTriggeringRefs.PduTriggeringRef"
         ] = field(
             default_factory=list,
