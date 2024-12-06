@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="24.9">
-  <Output maxLineLength="79" subscriptableTypes="false" genericCollections="false" unionType="false">
+<Config xmlns="http://pypi.org/project/xsdata" version="24.11">
+  <Output maxLineLength="79" genericCollections="false" unionType="false">
     <Package>generali.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
     <Structure>namespace-clusters</Structure>
