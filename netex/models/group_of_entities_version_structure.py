@@ -1,4 +1,3 @@
-from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,8 +31,8 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Iterable[MultilingualString] = field(
-        default_factory=list,
+    description: Optional[MultilingualString] = field(
+        default=None,
         metadata={
             "name": "Description",
             "type": "Element",

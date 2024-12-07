@@ -4468,12 +4468,10 @@ obj = PublicationDelivery(
                                             value='Tarife de Deservire Generala',
                                             lang='ro'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Tariff Tren Regio R',
-                                                lang='ro'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Tariff Tren Regio R',
+                                            lang='ro'
+                                        ),
                                         info_links=InfoLinksRelStructure(
                                             info_link=[
                                                 InfoLink(
@@ -5486,11 +5484,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='50% Clasa 1'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='First class with discount'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='First class with discount'
+                                                    ),
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -6778,11 +6774,9 @@ obj = PublicationDelivery(
                                                         value='50% Clasa 2',
                                                         lang='ro'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Second class with discount'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Second class with discount'
+                                                    ),
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -7557,11 +7551,9 @@ obj = PublicationDelivery(
                                             value='Tariff Tren InterrrRegio R',
                                             lang='ro'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Interregional tariff.  Mostly the sames a Regional tariff '
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Interregional tariff.  Mostly the sames a Regional tariff '
+                                        ),
                                         info_links=InfoLinksRelStructure(
                                             info_link=[
                                                 InfoLink(
@@ -8000,11 +7992,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='50% Clasa 1'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='First class with discount'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='First class with discount'
+                                                    ),
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -8425,11 +8415,9 @@ obj = PublicationDelivery(
                                                         value='50% Clasa 2',
                                                         lang='ro'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Second class with discount'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Second class with discount'
+                                                    ),
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -8651,12 +8639,10 @@ obj = PublicationDelivery(
                                             value='Tarife de Deservire Generala',
                                             lang='ro'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Tariff Tren Regio R',
-                                                lang='ro'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Tariff Tren Regio R',
+                                            lang='ro'
+                                        ),
                                         info_links=InfoLinksRelStructure(
                                             info_link=[
                                                 InfoLink(
@@ -8880,12 +8866,10 @@ obj = PublicationDelivery(
                                                         value='Tarif de Taxare in Tren',
                                                         lang='ro'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Regior si Interregio-IR',
-                                                            lang='ro'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Regior si Interregio-IR',
+                                                        lang='ro'
+                                                    ),
                                                     specifics=FareTableSpecificsStructure(
                                                         class_of_use_ref=ClassOfUseRef(
                                                             version='any',
@@ -9903,12 +9887,10 @@ obj = PublicationDelivery(
                                             value='Tarife Oferta dus-intors Variabil la Tren IR',
                                             lang='ro'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Discounted return tariff for IR ',
-                                                lang='en'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Discounted return tariff for IR ',
+                                            lang='en'
+                                        ),
                                         info_links=InfoLinksRelStructure(
                                             info_link=[
                                                 InfoLink(
@@ -10653,11 +10635,9 @@ obj = PublicationDelivery(
                                                         value='dus-intors copil Clasa 1',
                                                         lang='ro'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='First class with discount'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='First class with discount'
+                                                    ),
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -11905,11 +11885,9 @@ obj = PublicationDelivery(
                                                         value='dus-intors copil Clasa 2',
                                                         lang='ro'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Second class with discount'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Second class with discount'
+                                                    ),
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -13136,11 +13114,9 @@ obj = PublicationDelivery(
                                             value='Tarife Abonament lunar',
                                             lang='ro'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Monthly season pass'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Monthly season pass'
+                                        ),
                                         prices_for=PriceableObjectRefsRelStructure(
                                             choice=[
                                                 PreassignedFareProductRef(
@@ -13881,11 +13857,9 @@ obj = PublicationDelivery(
                                             value='Tarife Abonament lunar elevi',
                                             lang='ro'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Monthly season pass'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Monthly season pass'
+                                        ),
                                         prices_for=PriceableObjectRefsRelStructure(
                                             choice=[
                                                 PreassignedFareProductRef(
@@ -14626,11 +14600,9 @@ obj = PublicationDelivery(
                                             value='Tarife Abonament saptamanal',
                                             lang='ro'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Weekly season pass'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Weekly season pass'
+                                        ),
                                         prices_for=PriceableObjectRefsRelStructure(
                                             choice=[
                                                 PreassignedFareProductRef(

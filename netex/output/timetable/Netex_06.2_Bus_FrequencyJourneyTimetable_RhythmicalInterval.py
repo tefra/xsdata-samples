@@ -347,11 +347,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Regular  Interval service between 10am and 17:00 pm'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='At 20 & 45 Minutes past the hour '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='At 20 & 45 Minutes past the hour '
+                                                    ),
                                                     first_departure_time=XmlTime(10, 0, 0, 0),
                                                     last_departure_time=XmlTime(17, 0, 0, 0),
                                                     timebands=TimebandRefsRelStructure(

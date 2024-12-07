@@ -198,11 +198,9 @@ obj = PublicationDelivery(
                             short_name=MultilingualString(
                                 value='Frampton FC'
                             ),
-                            description=[
-                                MultilingualString(
-                                    value='Frampton FC Football Stadium'
-                                ),
-                            ],
+                            description=MultilingualString(
+                                value='Frampton FC Football Stadium'
+                            ),
                             centroid=SimplePointVersionStructure(
                                 location=LocationStructure2(
                                     longitude=Decimal('-180'),
@@ -297,11 +295,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Foo St Entrance A'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Entrance A '
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Entrance A '
+                                        ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
                                                 longitude=Decimal('-180'),
@@ -386,11 +382,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Validator locator'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='normalizedString'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='normalizedString'
+                                                    ),
                                                     equipment_positions=EquipmentPositionsRelStructure(
                                                         equipment_position=[
                                                             EquipmentPosition(
@@ -461,11 +455,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Foo St Entrance B'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Entrance B'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Entrance B'
+                                        ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
                                                 longitude=Decimal('-180'),
@@ -550,11 +542,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Validator locator'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='normalizedString'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='normalizedString'
+                                                    ),
                                                     equipment_positions=EquipmentPositionsRelStructure(
                                                         equipment_position=[
                                                             EquipmentPosition(

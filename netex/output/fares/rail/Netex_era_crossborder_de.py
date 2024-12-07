@@ -981,11 +981,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Prices for  Trilex Tagesticket '
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Prices\n1 person with up to 3 children (6-14 y.) 21,00  EURO \n2 persons with a total of up to 3 children (6-14 y.) 28,00  EURO \n3 persons with a total of up to 3 children (6-14 years)  EURO  35.00\n4 persons with a total of up to 3 children (6-14 years)  EURO  42.00\n5 persons with a total of up to 3 children (6-14 years) 49,00  EURO '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Prices\n1 person with up to 3 children (6-14 y.) 21,00  EURO \n2 persons with a total of up to 3 children (6-14 y.) 28,00  EURO \n3 persons with a total of up to 3 children (6-14 years)  EURO  35.00\n4 persons with a total of up to 3 children (6-14 years)  EURO  42.00\n5 persons with a total of up to 3 children (6-14 years) 49,00  EURO '
+                                                    ),
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
@@ -1421,11 +1419,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Prices for  Trilex Dresden-Wroclaw-Spezial '
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='How much is the ticket\n1 person with up to 2 children (6-14 y.) 35,00  EURO \n2 persons with a total of up to 2 children (6-14 y.) 69,00  EURO \n3 persons with a total of up to 2 children (6-14 years)  EURO  89.00\n4 persons with a total of up to 2 children (6-14 y.) 94,00  EURO \n5 persons with a total of up to 2 children (6-14 years)  EURO  99.00\nFurther fare reductions will not be granted.  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='How much is the ticket\n1 person with up to 2 children (6-14 y.) 35,00  EURO \n2 persons with a total of up to 2 children (6-14 y.) 69,00  EURO \n3 persons with a total of up to 2 children (6-14 years)  EURO  89.00\n4 persons with a total of up to 2 children (6-14 y.) 94,00  EURO \n5 persons with a total of up to 2 children (6-14 years)  EURO  99.00\nFurther fare reductions will not be granted.  '
+                                                    ),
                                                     members=FarePricesRelStructure(
                                                         fare_price_ref_or_cell_ref_or_fare_price=[
                                                             SalesOfferPackagePrice(

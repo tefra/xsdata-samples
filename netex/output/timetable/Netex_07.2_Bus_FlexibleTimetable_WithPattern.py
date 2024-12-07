@@ -266,11 +266,9 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Tau'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Area around Beta ville'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Area around Beta ville'
+                                        ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
                                                 longitude=Decimal('53.0000'),

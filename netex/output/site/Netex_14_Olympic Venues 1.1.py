@@ -117,11 +117,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Olympic Park'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Olympic Park'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Olympic Park'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Park'
                                         ),
@@ -482,11 +480,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Aquatics Centre'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Aquatics Centre'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Aquatics Centre'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -541,11 +537,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Olympic Stadium'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Olympic Stadium'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Olympic Stadium'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -600,11 +594,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Velodrome'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Velodrome'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Velodrome'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -659,11 +651,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Basketball Arena'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Basketball Arena'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Basketball Arena'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -718,11 +708,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Hockey Centre'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Hockey Centre'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Hockey Centre'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -777,11 +765,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Water Polo Arena'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Water Polo Arena'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Water Polo Arena'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -836,11 +822,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Handball Arena'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Handball Arena'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Handball Arena'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -895,11 +879,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='BMX Track'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='BMX Track'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='BMX Track'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -952,11 +934,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Eton Manor'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eton Manor (Paralympics only)'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eton Manor (Paralympics only)'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -3394,11 +3374,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='ExCeL'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='ExCeL'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='ExCeL'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Park'
                                         ),
@@ -3546,11 +3524,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Excel North Sports Hall 1'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Excel North Sports Hall 1'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Excel North Sports Hall 1'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -3592,11 +3568,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Excel North Sports Hall 2'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Excel North Sports Hall 2'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Excel North Sports Hall 2'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -3638,11 +3612,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Excel South Sports Hall 1'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Excel South Sports Hall 1'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Excel South Sports Hall 1'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -3684,11 +3656,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Excel South Sports Hall 2'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Excel South Sports Hall 2'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Excel South Sports Hall 2'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -3730,11 +3700,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Excel South Sports Hall 3'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Excel South Sports Hall 3'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Excel South Sports Hall 3'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -4132,11 +4100,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Greenwich Park'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Greenwich Park'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Greenwich Park'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -4627,11 +4593,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='North Greenwich Arena'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='North Greenwich Arena'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='North Greenwich Arena'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -4855,11 +4819,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='The Royal Artillery Barracks'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='The Royal Artillery Barracks'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='The Royal Artillery Barracks'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -5195,11 +5157,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Earls Court'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Earls Court'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Earls Court'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -5425,11 +5385,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Lords Cricket Ground'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Lords Cricket Ground'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Lords Cricket Ground'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -5765,11 +5723,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Wimbledon'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Wimbledon'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Wimbledon'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -6224,11 +6180,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Horse Guards Parade'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Horse Guards Parade'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Horse Guards Parade'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -6614,11 +6568,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='The Mall'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='The Mall'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='The Mall'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -6942,11 +6894,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Hyde Park'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Hyde Park'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Hyde Park'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -7139,11 +7089,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Wembley Arena'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Wembley Arena'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Wembley Arena'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -7367,11 +7315,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Lee Valley Centre'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Lee Valley White Water Centre'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Lee Valley White Water Centre'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -7564,11 +7510,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Hadleigh Farm'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Hadleigh Farm'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Hadleigh Farm'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -7761,11 +7705,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Eton Dorney'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eton Dorney'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eton Dorney'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -8089,11 +8031,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Weymouth and Portland'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Weymouth and Portland - The Nothe'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Weymouth and Portland - The Nothe'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -8286,11 +8226,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Wembley Stadium'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Wembley Stadium'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Wembley Stadium'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -8475,11 +8413,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Millennium Stadium'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Millennium Stadium'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Millennium Stadium'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -8529,11 +8465,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Hampden Park'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Hampden Park'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Hampden Park'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -8583,11 +8517,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Old Trafford'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Old Trafford'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Old Trafford'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -8637,11 +8569,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='City of Coventry Stadium'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='City of Coventry Stadium'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='City of Coventry Stadium'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),
@@ -8695,11 +8625,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value="St James' Park (Newcastle)"
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value="St James' Park (Newcastle)"
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value="St James' Park (Newcastle)"
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             ref='Venue'
                                         ),

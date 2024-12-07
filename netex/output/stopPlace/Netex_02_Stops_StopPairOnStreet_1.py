@@ -262,12 +262,10 @@ obj = PublicationDelivery(
                                                         value='Stadtmuseum Haltstelle A',
                                                         lang='de'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Zum Ecke Museum Strasse und Kohlstrasse - 50 m nach Museum eingang .',
-                                                            lang='de'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Zum Ecke Museum Strasse und Kohlstrasse - 50 m nach Museum eingang .',
+                                                        lang='de'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -323,12 +321,10 @@ obj = PublicationDelivery(
                                                         value='Stadtmuseum Haltstelle B',
                                                         lang='de'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Zum Ecke Museum Strasse und Kohlstrasse - 50 m nach Museum eingang am anderen seit .',
-                                                            lang='de'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Zum Ecke Museum Strasse und Kohlstrasse - 50 m nach Museum eingang am anderen seit .',
+                                                        lang='de'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397148'),

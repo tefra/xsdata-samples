@@ -8,9 +8,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class DefaultInterchangseInFrameRelStructure(ContainmentAggregationStructure):
+class DefaultInterchangesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
-        name = "defaultInterchangseInFrame_RelStructure"
+        name = "defaultInterchangesInFrame_RelStructure"
 
     default_interchange: Iterable[DefaultInterchange] = field(
         default_factory=list,

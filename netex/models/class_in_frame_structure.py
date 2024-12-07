@@ -6,6 +6,7 @@ from .class_attribute_in_frame import ClassAttributeInFrame
 from .class_ref_type_enumeration import ClassRefTypeEnumeration
 from .class_relationship_in_frame import ClassRelationshipInFrame
 from .mandatory_enumeration import MandatoryEnumeration
+from .type_of_frame_ref import TypeOfFrameRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -20,7 +21,7 @@ class ClassInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_frame_ref: Optional[str] = field(
+    type_of_frame_ref: Optional[TypeOfFrameRef] = field(
         default=None,
         metadata={
             "name": "TypeOfFrameRef",

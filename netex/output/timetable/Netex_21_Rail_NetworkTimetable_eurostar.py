@@ -3118,11 +3118,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 1 & 2'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Two sided Eastbound'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Two sided Eastbound'
+                                                    ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     level_ref=LevelRef(
                                                         version='any',
@@ -3135,11 +3133,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 1'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Domestic Services Eastbound'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Domestic Services Eastbound'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3152,11 +3148,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 1a'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='East End of Platform 1'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='East End of Platform 1'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3169,11 +3163,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 1b'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Middle section of Platform 1'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Middle section of Platform 1'
+                                                    ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3186,11 +3178,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 1c'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='West End of Platform 1'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='West End of Platform 1'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3203,11 +3193,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 2'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Eurostar Services Eastbound'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Eurostar Services Eastbound'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3268,11 +3256,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 2a'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='East End of Platform 2'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='East End of Platform 2'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3285,11 +3271,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 2b'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Middle section of Platform 2'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Middle section of Platform 2'
+                                                    ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3302,11 +3286,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 2c'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='West End of Platform 2'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='West End of Platform 2'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3319,11 +3301,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 5 & 6'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Two sided Westbound'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Two sided Westbound'
+                                                    ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     level_ref=LevelRef(
                                                         version='any',
@@ -3336,11 +3316,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 5'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Eurostar Services Westbound'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Eurostar Services Westbound'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3401,11 +3379,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 5a'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='East End of Platform 5'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='East End of Platform 5'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3418,11 +3394,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 5b'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Middle section of Platform 5'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Middle section of Platform 5'
+                                                    ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3435,11 +3409,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 5c'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='West End of Platform 5'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='West End of Platform 5'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3452,11 +3424,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 6'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Domestic Services Westbound'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Domestic Services Westbound'
+                                                    ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3469,11 +3439,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 6a'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='East End of Platform 6'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='East End of Platform 6'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3486,11 +3454,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 6b'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Middle section of Platform 6'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Middle section of Platform 6'
+                                                    ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3503,11 +3469,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 6c'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='West End of Platform 6'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='West End of Platform 6'
+                                                    ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     parent_quay_ref=QuayRefStructure(
                                                         version='any',
@@ -3690,11 +3654,9 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Marne'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='For Disneyland Resort'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='For Disneyland Resort'
+                                        ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
                                                 longitude=Decimal('48.869418'),
@@ -9368,11 +9330,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Gravesend'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='UK Plus bus tariff zone'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='UK Plus bus tariff zone'
+                                        ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
@@ -9389,11 +9349,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Ashford Kent'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='UK Plus bus tariff zone'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='UK Plus bus tariff zone'
+                                        ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
@@ -21217,11 +21175,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Monday to Friday'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eurostar Outbound Monday to Friday timetable'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eurostar Outbound Monday to Friday timetable'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             version='any',
                                             ref='eos:POG_matrix'
@@ -21651,11 +21607,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Saturdays & Sundays'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eurostart  Saturday & Sunday  timetable'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eurostart  Saturday & Sunday  timetable'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             version='any',
                                             ref='eos:POG_matrix'
@@ -23915,11 +23869,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Daily Direct Service to the Park gates from 12 December 2010 to 2 July 2011'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eurostar London  to Disneyland  Monday to Friday timetable'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eurostar London  to Disneyland  Monday to Friday timetable'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             version='any',
                                             ref='eos:POG_matrix'
@@ -23976,11 +23928,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Daily Direct Service to the Park gates from 12 December 2010 to 2 July 2011'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eurostar  Disneyland to  London    Monday to Friday timetable'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eurostar  Disneyland to  London    Monday to Friday timetable'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             version='any',
                                             ref='eos:POG_matrix'
@@ -25688,11 +25638,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Daily Direct Service tothe French ALps  from 12 December 2010 to 2 July 2011'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eurostar London  to Alps   timetable'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eurostar London  to Alps   timetable'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             version='any',
                                             ref='eos:POG_matrix'
@@ -25777,11 +25725,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Daily Direct Service to the French Alps from 12 December 2010 to 2 July 2011'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Alps  to  London    timetable'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Alps  to  London    timetable'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             version='any',
                                             ref='eos:POG_matrix'
@@ -27048,11 +26994,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Lille to Rennes  12 December 2010 to 2 July 2011'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eurostar North West France connecting timetable - out'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eurostar North West France connecting timetable - out'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             version='any',
                                             ref='eos:POG_matrix'
@@ -27109,11 +27053,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Rennes   to Lille  12 December 2010 to 2 July 2011'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Eurostar North West France connecting timetable - in'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Eurostar North West France connecting timetable - in'
+                                        ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
                                             version='any',
                                             ref='eos:POG_matrix'

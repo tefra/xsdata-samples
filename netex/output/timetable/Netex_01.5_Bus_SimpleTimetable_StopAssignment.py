@@ -993,11 +993,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Alpha Quay 4  '
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop A is terminus serves both directions'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop A is terminus serves both directions'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -1051,11 +1049,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Bravo  Eastbound  Arrivals(Quay 1)'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop Ba  is paired with Stop Bb  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop Ba  is paired with Stop Bb  '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -1076,11 +1072,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Bravo  Eastbound Departures (Quay 1b)'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop Ba  is paired with Stop Bb  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop Ba  is paired with Stop Bb  '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -1102,11 +1096,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Bravo  Westbound (Quay 2)'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop Ba  is paired with Stop Bb  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop Ba  is paired with Stop Bb  '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -1162,11 +1154,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Charley  Eaestbound (Quay 1)'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='StopCa  is paired with Stop Cb  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='StopCa  is paired with Stop Cb  '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -1188,11 +1178,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Charley  Westbound (Quay 2)'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop Cb  is paired with Stop Ca '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop Cb  is paired with Stop Ca '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),

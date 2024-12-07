@@ -345,12 +345,10 @@ obj = PublicationDelivery(
                                                         value='Poste',
                                                         lang='fr'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Pres de la Gare 20m a droit .',
-                                                            lang='fr'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Pres de la Gare 20m a droit .',
+                                                        lang='fr'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.207139714'),

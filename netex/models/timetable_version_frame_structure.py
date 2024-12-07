@@ -11,8 +11,8 @@ from .contained_availability_conditions_rel_structure import (
 from .coupled_journeys_in_frame_rel_structure import (
     CoupledJourneysInFrameRelStructure,
 )
-from .default_interchangse_in_frame_rel_structure import (
-    DefaultInterchangseInFrameRelStructure,
+from .default_interchanges_in_frame_rel_structure import (
+    DefaultInterchangesInFrameRelStructure,
 )
 from .flexible_service_properties_in_frame_rel_structure import (
     FlexibleServicePropertiesInFrameRelStructure,
@@ -365,7 +365,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    default_interchanges: Optional[DefaultInterchangseInFrameRelStructure] = (
+    default_interchanges: Optional[DefaultInterchangesInFrameRelStructure] = (
         field(
             default=None,
             metadata={

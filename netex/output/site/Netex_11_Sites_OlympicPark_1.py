@@ -1710,11 +1710,9 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Olympic Park'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Queen Elizabeth II Olympic Park'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Queen Elizabeth II Olympic Park'
+                                        ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
@@ -1818,11 +1816,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='2012 Olympic Park Stratford Entrance'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stratford Entrance'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stratford Entrance'
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -2253,11 +2249,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='2012 Olympic Park Stratford Disabled user Entrance'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stratford Disabled USEr ENtrance  Entrance'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stratford Disabled USEr ENtrance  Entrance'
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -2674,11 +2668,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='2012 Olympic Park North Entrance'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Entrance from North car park'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Entrance from North car park'
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -3127,11 +3119,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='2012 Olympic Park South Entrance'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Entrance from Southcar park'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Entrance from Southcar park'
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -3580,11 +3570,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='2012 Olympic Park East Entrance'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Entrance from East  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Entrance from East  '
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -4033,11 +4021,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='2012 Olympic Park Press'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Entrance for press '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Entrance for press '
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(

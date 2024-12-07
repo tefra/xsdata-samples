@@ -252,11 +252,9 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Quebec H and R'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Qbece road'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Qbece road'
+                                        ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
                                                 pos=Pos(

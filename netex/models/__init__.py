@@ -1263,8 +1263,8 @@ from .default_interchange_ref_structure import DefaultInterchangeRefStructure
 from .default_interchange_version_structure import (
     DefaultInterchangeVersionStructure,
 )
-from .default_interchangse_in_frame_rel_structure import (
-    DefaultInterchangseInFrameRelStructure,
+from .default_interchanges_in_frame_rel_structure import (
+    DefaultInterchangesInFrameRelStructure,
 )
 from .default_service_journey_run_time import DefaultServiceJourneyRunTime
 from .default_service_journey_run_time_versioned_child_structure import (
@@ -7673,7 +7673,7 @@ __all__ = [
     "DefaultInterchangeRef",
     "DefaultInterchangeRefStructure",
     "DefaultInterchangeVersionStructure",
-    "DefaultInterchangseInFrameRelStructure",
+    "DefaultInterchangesInFrameRelStructure",
     "DefaultServiceJourneyRunTime",
     "DefaultServiceJourneyRunTimeVersionedChildStructure",
     "DefaultServiceJourneyRunTimesRelStructure",

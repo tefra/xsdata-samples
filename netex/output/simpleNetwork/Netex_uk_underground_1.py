@@ -1223,11 +1223,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Tube lines'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Deep lines'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Deep lines'
+                                        ),
                                         members=LineRefsRelStructure(
                                             line_ref=[
                                                 LineRef(
@@ -1276,11 +1274,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Other lines'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Deep lines'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Deep lines'
+                                        ),
                                         members=LineRefsRelStructure(
                                             line_ref=[
                                                 LineRef(

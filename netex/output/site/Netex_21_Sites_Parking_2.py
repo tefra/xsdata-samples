@@ -316,11 +316,9 @@ obj = PublicationDelivery(
                             short_name=MultilingualString(
                                 value='CIty Car Park'
                             ),
-                            description=[
-                                MultilingualString(
-                                    value='Mult storey next to Sainsbury . Three storeys 220 public and 30 disabled places '
-                                ),
-                            ],
+                            description=MultilingualString(
+                                value='Mult storey next to Sainsbury . Three storeys 220 public and 30 disabled places '
+                            ),
                             centroid=SimplePointVersionStructure(
                                 id='xyz',
                                 location=LocationStructure2(
@@ -546,12 +544,10 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Main Entrance from street'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='External Entrance Street level from High Street ',
-                                                lang='en'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='External Entrance Street level from High Street ',
+                                            lang='en'
+                                        ),
                                         parent_zone_ref=ZoneRefStructure(
                                             version='any',
                                             ref='mypark:PP01'
@@ -605,12 +601,10 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Walkway  Entrance from store'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='External Entrance Walkway to store.',
-                                                lang='en'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='External Entrance Walkway to store.',
+                                            lang='en'
+                                        ),
                                         parent_zone_ref=ZoneRefStructure(
                                             version='any',
                                             ref='mypark:PP01'
@@ -1439,11 +1433,9 @@ obj = PublicationDelivery(
                             short_name=MultilingualString(
                                 value='CIty Car Park'
                             ),
-                            description=[
-                                MultilingualString(
-                                    value='On street parking metered 8.30 to 6 pm Mondat to Friday  '
-                                ),
-                            ],
+                            description=MultilingualString(
+                                value='On street parking metered 8.30 to 6 pm Mondat to Friday  '
+                            ),
                             url='http://www.barpccyparkingregs.co.uk',
                             accessibility_assessment=AccessibilityAssessment(
                                 id='mypark:PS22@01',
@@ -1662,11 +1654,9 @@ obj = PublicationDelivery(
                             short_name=MultilingualString(
                                 value='CIty Car Park'
                             ),
-                            description=[
-                                MultilingualString(
-                                    value='On street parking  Blued badge '
-                                ),
-                            ],
+                            description=MultilingualString(
+                                value='On street parking  Blued badge '
+                            ),
                             url='http://www.bartwonhallparking.co.uk',
                             accessibility_assessment=AccessibilityAssessment(
                                 id='mypark:PS22',
@@ -2235,11 +2225,9 @@ obj = PublicationDelivery(
                             short_name=MultilingualString(
                                 value='BARCEST P&R A'
                             ),
-                            description=[
-                                MultilingualString(
-                                    value='PARK and ride outsde town  '
-                                ),
-                            ],
+                            description=MultilingualString(
+                                value='PARK and ride outsde town  '
+                            ),
                             centroid=SimplePointVersionStructure(
                                 id='xyz',
                                 location=LocationStructure2(

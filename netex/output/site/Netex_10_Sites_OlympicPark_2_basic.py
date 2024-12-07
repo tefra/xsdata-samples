@@ -746,11 +746,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='London 2012 Olympic Park'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Queen Elizabeth II Olympic Park'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Queen Elizabeth II Olympic Park'
+                                        ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(

@@ -2632,11 +2632,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Monday to Friday'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Line 42    Monday to Friday timetable - Clockwise services '
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Line 42    Monday to Friday timetable - Clockwise services '
+                                        ),
                                         day_types=GroupOfServicesVersionStructure.DayTypes(
                                             day_type_ref=[
                                                 DayTypeRefStructure(
@@ -2677,11 +2675,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Monday to Friday'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Line 42    Monday to Friday timetable - AntiClockwise services '
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Line 42    Monday to Friday timetable - AntiClockwise services '
+                                        ),
                                         day_types=GroupOfServicesVersionStructure.DayTypes(
                                             day_type_ref=[
                                                 DayTypeRefStructure(

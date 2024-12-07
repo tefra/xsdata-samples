@@ -271,11 +271,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Regular  Interval service between 10am and 12:00 pm'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='About every 12 minutes'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='About every 12 minutes'
+                                                    ),
                                                     first_departure_time=XmlTime(10, 0, 0, 0),
                                                     last_departure_time=XmlTime(12, 0, 0, 0),
                                                     scheduled_headway_interval=XmlDuration("PT12M"),
@@ -287,11 +285,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Regular  Interval service between 12am and 18:00 pm'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='About every 20 minutes'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='About every 20 minutes'
+                                                    ),
                                                     first_departure_time=XmlTime(12, 0, 0, 0),
                                                     last_departure_time=XmlTime(18, 0, 0, 0),
                                                     scheduled_headway_interval=XmlDuration("PT20M"),

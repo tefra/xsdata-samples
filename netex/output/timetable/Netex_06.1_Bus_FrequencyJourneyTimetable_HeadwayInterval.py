@@ -631,11 +631,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='every 10 minutes between 10am and 10:50pm'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='About every 10 minutes'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='About every 10 minutes'
+                                        ),
                                         first_departure_time=XmlTime(10, 0, 0, 0),
                                         last_departure_time=XmlTime(11, 0, 0, 0),
                                         journeys=ExplicitJourneyRefsRelStructure(

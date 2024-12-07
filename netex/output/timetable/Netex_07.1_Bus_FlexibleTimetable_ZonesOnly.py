@@ -139,11 +139,9 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Sigma'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Area around Alphavilee'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Area around Alphavilee'
+                                        ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
                                                 pos=Pos(
@@ -233,11 +231,9 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Tau'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Area around Beta ville'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Area around Beta ville'
+                                        ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
                                                 longitude=Decimal('53.0000'),

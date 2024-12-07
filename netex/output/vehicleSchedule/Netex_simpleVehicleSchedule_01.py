@@ -3999,11 +3999,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Garage G1 '
                                         ),
-                                        description=[
-                                            MultilingualString(
+                                        description=MultilingualString(
 
-                                            ),
-                                        ],
+                                        ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 GaragePointRef(

@@ -2620,11 +2620,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platforms 5 & 6'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platforms 5 & 6 '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platforms 5 & 6 '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -2727,11 +2725,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 5'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 5 is paired with platform 6 with separate lift and stair access  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 5 is paired with platform 6 with separate lift and stair access  '
+                                                    ),
                                                     label=MultilingualString(
                                                         value='5'
                                                     ),
@@ -2748,11 +2744,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 6'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 5 is paired with platform 6 with separate lift and stair access'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 5 is paired with platform 6 with separate lift and stair access'
+                                                    ),
                                                     label=MultilingualString(
                                                         value='5'
                                                     ),
@@ -2769,11 +2763,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platforms 7 &8'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platforms 7 & 8'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platforms 7 & 8'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -2876,11 +2868,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 7'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 7 is paired with platform 8 with separate lift and stair access  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 7 is paired with platform 8 with separate lift and stair access  '
+                                                    ),
                                                     label=MultilingualString(
                                                         value='7'
                                                     ),
@@ -2897,11 +2887,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 8'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 8 is paired with platform 7 with separate lift and stair access'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 8 is paired with platform 7 with separate lift and stair access'
+                                                    ),
                                                     label=MultilingualString(
                                                         value='8'
                                                     ),
@@ -2918,11 +2906,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platforms 9 &10'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platforms 9 & 10'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platforms 9 & 10'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -3011,11 +2997,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 9'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 9  is paired with platform 10 with separate lift and stair access  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 9  is paired with platform 10 with separate lift and stair access  '
+                                                    ),
                                                     label=MultilingualString(
                                                         value='9'
                                                     ),
@@ -3041,11 +3025,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 10'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 10 is paired with platform 9 with separate lift and stair access. It has shared use for tram'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 10 is paired with platform 9 with separate lift and stair access. It has shared use for tram'
+                                                    ),
                                                     transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                                     other_transport_modes=[
                                                         VehicleModeEnumeration.TRAM,
@@ -3075,11 +3057,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Taxi Rank'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='TAxirank is in front of station'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='TAxirank is in front of station'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -3108,11 +3088,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Set down Point'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Setdown is in front of station'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Setdown is in front of station'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -3145,11 +3123,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Ticket Hall'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Main Ticket hall with ntrance from foreCourt'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Main Ticket hall with ntrance from foreCourt'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_A1',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -3307,11 +3283,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Upper Concourse'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Upper concourse with access to ticket hall and steps and lifts to platforms'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Upper concourse with access to ticket hall and steps and lifts to platforms'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_A2',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -3412,11 +3386,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Upper Concourse Corridor  Lift Area'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Upper concourse lift area with lifts to platforms. Part of upper concourse'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Upper concourse lift area with lifts to platforms. Part of upper concourse'
+                                                    ),
                                                     covered=CoveredEnumeration.INDOORS,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     level_ref=LevelRef(
@@ -3464,11 +3436,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Upper Concourse Corridor Bicycle Store'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Upper concourse  cycle stores. Part of upper concourse'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Upper concourse  cycle stores. Part of upper concourse'
+                                                    ),
                                                     covered=CoveredEnumeration.INDOORS,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     level_ref=LevelRef(
@@ -3497,11 +3467,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Centre Court Entrance Area'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='CEN ter Court  access area to upper concourse'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='CEN ter Court  access area to upper concourse'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_A4',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -3607,11 +3575,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Lift Shaft 1 to Underground'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Lift Shaft 1 to District line'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Lift Shaft 1 to District line'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_L1',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -3692,11 +3658,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Lift Shaft 2 to Platforms 5 and 6'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Lift Shaft 2 to Platforms 5 and 6'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Lift Shaft 2 to Platforms 5 and 6'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_L2',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -3771,11 +3735,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Lift Shaft to 3  Platforms 7 and 8'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Lift Shaft 3  to Platforms 7 and 8  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Lift Shaft 3  to Platforms 7 and 8  '
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_L3',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -3850,11 +3812,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Lift Shaft 4 to Platforms 9 and 10'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Lift Shaft 4 to Platforms 9 and 10'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Lift Shaft 4 to Platforms 9 and 10'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_L4',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -3929,11 +3889,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Staircase 2 to Platforms 5 and 6'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Staircase 2 to Platforms 5 and 6'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Staircase 2 to Platforms 5 and 6'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_S2',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -3979,11 +3937,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Staircase 3 to Platforms 7 and 8'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Staircase 3 to Platforms  7 and 8  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Staircase 3 to Platforms  7 and 8  '
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_S3',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -4029,11 +3985,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Staircase 4 to Platforms 9 and 10'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Staircase 4 to Platforms 9 and 10'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Staircase 4 to Platforms 9 and 10'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_S4',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -4079,11 +4033,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='forecourt'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Station ForCourt'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Station ForCourt'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_FC',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -10142,11 +10094,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platforms 1 & 2'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 1 is paired with platform 2 and on the same surface as 3 and 4 '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 1 is paired with platform 2 and on the same surface as 3 and 4 '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -10277,11 +10227,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 1'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 1 is paired with platform 2  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 1 is paired with platform 2  '
+                                                    ),
                                                     label=MultilingualString(
                                                         value='1'
                                                     ),
@@ -10299,11 +10247,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 2'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platforms 2 is a pair with platform 1'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platforms 2 is a pair with platform 1'
+                                                    ),
                                                     label=MultilingualString(
                                                         value='2'
                                                     ),
@@ -10321,11 +10267,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platforms 3 & 4'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 3 is paired with platform 4 and on the same surface as 1 and 4'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 3 is paired with platform 4 and on the same surface as 1 and 4'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -10455,11 +10399,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 3'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 3 is paired with platform 4 '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 3 is paired with platform 4 '
+                                                    ),
                                                     label=MultilingualString(
                                                         value='3'
                                                     ),
@@ -10477,11 +10419,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 4'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platforms 4 is a pair with platform 3'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platforms 4 is a pair with platform 3'
+                                                    ),
                                                     label=MultilingualString(
                                                         value='4'
                                                     ),
@@ -10502,11 +10442,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Underground District  Line concourse'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='District Line to lower concourse with access to platforms'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='District Line to lower concourse with access to platforms'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_A5',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -10604,11 +10542,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Staircase to DL '
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Staircase down to DL concourse - two flights of 13 steps'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Staircase down to DL concourse - two flights of 13 steps'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='nptg:9100WIMBLDN_S1',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -12341,11 +12277,9 @@ obj = PublicationDelivery(
                                                     short_name=MultilingualString(
                                                         value='Wimbledon'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop P  is paired with Stop C outside the station '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop P  is paired with Stop C outside the station '
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -12436,11 +12370,9 @@ obj = PublicationDelivery(
                                                     short_name=MultilingualString(
                                                         value='Wimbledon'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop P  is paired with Stop C outside the station '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop P  is paired with Stop C outside the station '
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -12534,11 +12466,9 @@ obj = PublicationDelivery(
                                                     short_name=MultilingualString(
                                                         value='Wimbledon'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop D  is on the Broadway'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop D  is on the Broadway'
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -12632,11 +12562,9 @@ obj = PublicationDelivery(
                                                     short_name=MultilingualString(
                                                         value='Wimbledon'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop L  is along the street on Hartfield road'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop L  is along the street on Hartfield road'
+                                                    ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
@@ -14001,11 +13929,9 @@ obj = PublicationDelivery(
                                                 Quay(
                                                     id='naptStop:490014734AnB',
                                                     version='any',
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop A  is paired with Stop B on Alexandra Road  St Georges Road'
-                                                        ),
-                                                    ]
+                                                    description=MultilingualString(
+                                                        value='Stop A  is paired with Stop B on Alexandra Road  St Georges Road'
+                                                    )
                                                 ),
                                                 Quay(
                                                     id='naptStop:490014734A',
@@ -14368,11 +14294,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Station Parking'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='ForeCourt parking'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='ForeCourt parking'
+                                        ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
                                                 longitude=Decimal('-180'),
@@ -14470,11 +14394,9 @@ obj = PublicationDelivery(
                                                 ParkingArea(
                                                     id='nptg:ParkingArea:9100WIMBLDN_P1_PA4',
                                                     version='any',
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Parking for disabled'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Parking for disabled'
+                                                    ),
                                                     parking_properties_or_parking_properties=ParkingProperties(
                                                         id='nptg:ParkingArea:9100WIMBLDN_P1_PA4',
                                                         version='any',

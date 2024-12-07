@@ -41,6 +41,7 @@ from netex.models.overtaking_possibility import OvertakingPossibility
 from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_capacity_structure import PassengerCapacityStructure
 from netex.models.passenger_stop_assignment import PassengerStopAssignment
+from netex.models.path_heading_enumeration import PathHeadingEnumeration
 from netex.models.point_on_route import PointOnRoute
 from netex.models.point_on_section import PointOnSection
 from netex.models.point_projection import PointProjection
@@ -70,6 +71,9 @@ from netex.models.road_element import RoadElement
 from netex.models.road_junction import RoadJunction
 from netex.models.road_point_ref_structure import RoadPointRefStructure
 from netex.models.route import Route
+from netex.models.route_instruction import RouteInstruction
+from netex.models.route_instruction_ref import RouteInstructionRef
+from netex.models.route_instructions_rel_structure import RouteInstructionsRelStructure
 from netex.models.route_link import RouteLink
 from netex.models.route_link_ref import RouteLinkRef
 from netex.models.route_link_ref_structure import RouteLinkRefStructure
@@ -119,6 +123,7 @@ from netex.models.timing_point_ref import TimingPointRef
 from netex.models.timing_point_ref_structure import TimingPointRefStructure
 from netex.models.timing_points_in_frame_rel_structure import TimingPointsInFrameRelStructure
 from netex.models.timing_points_in_journey_pattern_rel_structure import TimingPointsInJourneyPatternRelStructure
+from netex.models.transition_enumeration import TransitionEnumeration
 from netex.models.transport_type_ref_structure import TransportTypeRefStructure
 from netex.models.vehicle_type import VehicleType
 from netex.models.vehicle_type_ref import VehicleTypeRef
@@ -258,11 +263,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='PlaceA'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop A is termiuis serves both directions'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop A is termiuis serves both directions'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -317,11 +320,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Place B, Northbound'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop Ba  is paired with Stop Bb  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop Ba  is paired with Stop Bb  '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -343,11 +344,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Place B,  SOuthbound'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop Ba  is paired with Stop Bb  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop Ba  is paired with Stop Bb  '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -404,11 +403,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Place C'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='StopCa  is paired with Stop Cb  '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='StopCa  is paired with Stop Cb  '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -430,11 +427,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Place C'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop Cb  is paired with Stop Ca '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop Cb  is paired with Stop Ca '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -491,11 +486,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='PlaceD'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop D is termiuis serves both directions'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop D is termiuis serves both directions'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -552,11 +545,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='PlaceE'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop Es termiuis serves both directions'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop Es termiuis serves both directions'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2071397147'),
@@ -1190,6 +1181,27 @@ obj = PublicationDelivery(
                                                     onward_route_link_ref=RouteLinkRefStructure(
                                                         version='any',
                                                         ref='hde:hde:RL_001o@SSP0001A+RteP021'
+                                                    ),
+                                                    route_instructions=RouteInstructionsRelStructure(
+                                                        route_instruction_ref_or_route_instruction=[
+                                                            RouteInstruction(
+                                                                id='ri1',
+                                                                version='any',
+                                                                instruction=MultilingualString(
+                                                                    value='3rd road to the left'
+                                                                ),
+                                                                distance=Decimal('100')
+                                                            ),
+                                                            RouteInstruction(
+                                                                id='ri3',
+                                                                version='any',
+                                                                path_heading=PathHeadingEnumeration.BACK,
+                                                                transition=TransitionEnumeration.DOWN,
+                                                                road_name=MultilingualString(
+                                                                    value='false'
+                                                                )
+                                                            ),
+                                                        ]
                                                     )
                                                 ),
                                                 PointOnRoute(
@@ -1203,6 +1215,14 @@ obj = PublicationDelivery(
                                                     onward_route_link_ref=RouteLinkRefStructure(
                                                         version='any',
                                                         ref='hde:RL_001o@RteP021+SSP0002B_a'
+                                                    ),
+                                                    route_instructions=RouteInstructionsRelStructure(
+                                                        route_instruction_ref_or_route_instruction=[
+                                                            RouteInstructionRef(
+                                                                version='any',
+                                                                ref='ri1'
+                                                            ),
+                                                        ]
                                                     )
                                                 ),
                                                 PointOnRoute(

@@ -455,11 +455,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Reid Im Zillerthal'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Reid'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Reid'
+                                        ),
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
                                             id='topat:E0034695',
                                             version='01',
@@ -655,12 +653,10 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Main Entrance from street'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='External Entrance to  Ticket Hall from forecourt',
-                                                            lang='en'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='External Entrance to  Ticket Hall from forecourt',
+                                                        lang='en'
+                                                    ),
                                                     parent_zone_ref=ZoneRefStructure(
                                                         version='01',
                                                         ref='ztb:bh0023@A1'
@@ -716,12 +712,10 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Entrance to platform 1 from Ticket hall '
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value=' Entrance to  Ticket Hall from platform 1',
-                                                            lang='en'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value=' Entrance to  Ticket Hall from platform 1',
+                                                        lang='en'
+                                                    ),
                                                     parent_zone_ref=ZoneRefStructure(
                                                         version='01',
                                                         ref='ztb:bh0023@A1'
@@ -759,12 +753,10 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Entrance to track  crossing from platorm  l '
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='platform 1 Entrance to crossing over tracks to platform 2',
-                                                            lang='en'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='platform 1 Entrance to crossing over tracks to platform 2',
+                                                        lang='en'
+                                                    ),
                                                     parent_zone_ref=ZoneRefStructure(
                                                         version='01',
                                                         ref='ztb:bh0023@Rail@Q1'
@@ -804,12 +796,10 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='platform 2 Entrance to track  crossing from platorm  l '
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value=' Entrance to crossing over tracks from platform2',
-                                                            lang='en'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value=' Entrance to crossing over tracks from platform2',
+                                                        lang='en'
+                                                    ),
                                                     parent_zone_ref=ZoneRefStructure(
                                                         version='01',
                                                         ref='ztb:bh0023@Rail@Q2'
@@ -857,11 +847,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Bahnsteig 1'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Bahnsteig 1  adjacent to ticket hall'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Bahnsteig 1  adjacent to ticket hall'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -960,11 +948,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Platform 2'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Platform 2, reached by crossing tracks from platform 1'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Platform 2, reached by crossing tracks from platform 1'
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             pos=Pos(
@@ -1041,11 +1027,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Ticket Hall'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Main Ticket hall with with Entrance from forecourt'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Main Ticket hall with with Entrance from forecourt'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='ztb:bh0023@A1',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -1133,11 +1117,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Area in front  outside of station  '
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Areas in front of station'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Areas in front of station'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='ztb:bh0023@A2',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -1178,11 +1160,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Barrow Crossing   over tracks'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Crossing over tracks'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Crossing over tracks'
+                                                    ),
                                                     accessibility_assessment=AccessibilityAssessment(
                                                         id='ztb:bh0023@AX3',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -2140,11 +2120,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Ried, Bahnhof  Bus'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Stop outside the station '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Stop outside the station '
+                                                    ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
                                                             longitude=Decimal('-0.2068758371'),

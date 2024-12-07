@@ -7637,11 +7637,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Common properties of  a Single'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='A  single trip , with or without plus bus\t\t\t\t\t\t\t'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='A  single trip , with or without plus bus\t\t\t\t\t\t\t'
+                                        ),
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
@@ -7791,11 +7789,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Common properties of  a Single'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Reururn trip with optional London transfer and plus bus'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Reururn trip with optional London transfer and plus bus'
+                                        ),
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
@@ -8029,11 +8025,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Common properties of  Anytime tickets'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Parameters which are the same for all operators are stated here \nANYTIME DAY SINGLE\n\nDESCRIPTION\nFlexible ticket with no time restrictions on when you can travel.\n\nVALIDITY\nYour journey(s) must be on the date specified.\n\nBOOKING\nCan be booked in advance or purchased on the day of travel.\n\nREFUNDS\nIf you decide not to use your ticket to make all or part of your intended journey then you can apply for a refund from the My Account pages, or through Customer Support within 28 days of expiry of the ticket. Please note, the outward portion cannot be refunded if the return portion has been used. A GBP 10.00 administration fee will apply and the amount of the refund will take into account any use you have made of the ticket and in some circumstances no refund will be paid.\n\nAMENDING YOUR BOOKING\nYou can change the time of your journey without changing your tickets. If you wish to change your date of travel or Class of ticket, you will need to buy a new ticket and apply for a refund on your current ticket.\n\nDISCOUNTS\nYes - normal railcard and child discounts available.\n\nBREAK OF JOURNEY\nYou may start, break and resume, or end your journey at any intermediate station along the route of travel.\n\nOTHER CONDITIONS\nThe outward portion of an Anytime Day Return ticket is only valid for travel when accompanied by an unused return portion.\n\nRoute\nTravel is allowed via any permitted route.\t\n\n=============================\nAnytime fares are fully flexible walk-up tickets with no restrictions on when you can travel.\n \nAvailability\nTickets can be bought in advance or immediately before travel.\n\nDiscounts\n* Children (aged 5 to 15 inclusive): 50% discount. Up to two children aged under 5 can travel free with each fare paying passenger.\n* Railcard discounts (see note below): \n* 16-25 Railcard: 34% discount on Standard Class fares\n* Disabled Persons Railcard: 34% discount on Standard  & First Class fares\n* Family  & Friends Railcard: 34% discount on Standard Class fares\n* HM Forces Railcard: 34% discount on Standard & First Class fares\n* Network Railcard (London & South East): 34% discount on Standard Class fares\n* Senior Railcard: 34% discount on Standard & First Class fares\n\nOther discount cards (see note below):\nGold Card (London & South East): 34% discount on Standard Class fares\nJobCentre Plus Travel Discount Card: 50% discount on Standard Class fares \nNote: Minimum fares / time restrictions may apply to tickets bought with a Railcard or other discount card. See terms and conditions of the appropriate Railcard or discount card for details. \n\nWhen and where the ticket can be used \n* Anytime Day (Single and Return) tickets must be used on the date shown on your ticket and up to 04:29 the following day.\n* Anytime Single must be used within 2 days of the date shown on the ticket and up until 04:29 after the last day of validity.\n* For Anytime Return tickets, the outward journey must be made within 5 days and up until 04:29 after the last day of validity; the return portion must be used within one calendar month and up until 04:29 after the last day of validity.\n\nIf the route shown on the ticket has a  "+", the ticket includes the cost of travelling between certain London Stations (e.g. between Liverpool St and Paddington) by either London Underground, Docklands Light Railway (DLR) or Thameslink services appropriate to the route of the journey being made. \n\nNote: Tickets will only be accepted by London Underground and DLR on the date shown on the ticket (or last day of validity for return portions of Off-Peak Returns) and until 04:29 the following day. - Other than to change trains, a break of journey at intermediate London Underground or DLR stations is NOT permitted.- Travel restrictions do not apply on weekends and public holidays.\n\nConditions of use\n* Railcard holders travelling on a discounted ticket must carry their Railcard when they travel. If a Railcard holder fails to produce their valid Railcard with their ticket, they will be required to pay a full priced ticket for their journey as if no Railcard and/or no ticket were held.\n\n* The outward part of an Anytime Return ticket is only valid for travel when accompanied by an unused return part of the same ticket.\n \n\n* Break of journey: You may start, break and resume, or end your journey at any intermediate station along the route of travel.\n\nIf you decide not to use your ticket to make all or part of your intended journey then you can get a refund by returning your unused ticket to the ticket office or place of purchase (for tickets bought via websites, telesales or travel agents) within 28 days of the ticket expiry date. You may be required to pay an administration fee.\n\nThe refund amount will normally take into account any use you have made of the ticket and in some circumstances no refund will be paid.\n \nManaged by: Multiple Train Operating Companies expand  panel Last updated:   28 September 2016 \n\t\t\t\t\t http://www.nationalrail.co.uk/times_fares/ticket_types/46550.aspx \n\t\t\t\t\t\t \n\t\t\t\t\t http://www.nationalrail.co.uk/times_fares/ticket_types/46544.aspx nk \t\t\t\t\t\n\t\t\t\t\t\t\t'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Parameters which are the same for all operators are stated here \nANYTIME DAY SINGLE\n\nDESCRIPTION\nFlexible ticket with no time restrictions on when you can travel.\n\nVALIDITY\nYour journey(s) must be on the date specified.\n\nBOOKING\nCan be booked in advance or purchased on the day of travel.\n\nREFUNDS\nIf you decide not to use your ticket to make all or part of your intended journey then you can apply for a refund from the My Account pages, or through Customer Support within 28 days of expiry of the ticket. Please note, the outward portion cannot be refunded if the return portion has been used. A GBP 10.00 administration fee will apply and the amount of the refund will take into account any use you have made of the ticket and in some circumstances no refund will be paid.\n\nAMENDING YOUR BOOKING\nYou can change the time of your journey without changing your tickets. If you wish to change your date of travel or Class of ticket, you will need to buy a new ticket and apply for a refund on your current ticket.\n\nDISCOUNTS\nYes - normal railcard and child discounts available.\n\nBREAK OF JOURNEY\nYou may start, break and resume, or end your journey at any intermediate station along the route of travel.\n\nOTHER CONDITIONS\nThe outward portion of an Anytime Day Return ticket is only valid for travel when accompanied by an unused return portion.\n\nRoute\nTravel is allowed via any permitted route.\t\n\n=============================\nAnytime fares are fully flexible walk-up tickets with no restrictions on when you can travel.\n \nAvailability\nTickets can be bought in advance or immediately before travel.\n\nDiscounts\n* Children (aged 5 to 15 inclusive): 50% discount. Up to two children aged under 5 can travel free with each fare paying passenger.\n* Railcard discounts (see note below): \n* 16-25 Railcard: 34% discount on Standard Class fares\n* Disabled Persons Railcard: 34% discount on Standard  & First Class fares\n* Family  & Friends Railcard: 34% discount on Standard Class fares\n* HM Forces Railcard: 34% discount on Standard & First Class fares\n* Network Railcard (London & South East): 34% discount on Standard Class fares\n* Senior Railcard: 34% discount on Standard & First Class fares\n\nOther discount cards (see note below):\nGold Card (London & South East): 34% discount on Standard Class fares\nJobCentre Plus Travel Discount Card: 50% discount on Standard Class fares \nNote: Minimum fares / time restrictions may apply to tickets bought with a Railcard or other discount card. See terms and conditions of the appropriate Railcard or discount card for details. \n\nWhen and where the ticket can be used \n* Anytime Day (Single and Return) tickets must be used on the date shown on your ticket and up to 04:29 the following day.\n* Anytime Single must be used within 2 days of the date shown on the ticket and up until 04:29 after the last day of validity.\n* For Anytime Return tickets, the outward journey must be made within 5 days and up until 04:29 after the last day of validity; the return portion must be used within one calendar month and up until 04:29 after the last day of validity.\n\nIf the route shown on the ticket has a  "+", the ticket includes the cost of travelling between certain London Stations (e.g. between Liverpool St and Paddington) by either London Underground, Docklands Light Railway (DLR) or Thameslink services appropriate to the route of the journey being made. \n\nNote: Tickets will only be accepted by London Underground and DLR on the date shown on the ticket (or last day of validity for return portions of Off-Peak Returns) and until 04:29 the following day. - Other than to change trains, a break of journey at intermediate London Underground or DLR stations is NOT permitted.- Travel restrictions do not apply on weekends and public holidays.\n\nConditions of use\n* Railcard holders travelling on a discounted ticket must carry their Railcard when they travel. If a Railcard holder fails to produce their valid Railcard with their ticket, they will be required to pay a full priced ticket for their journey as if no Railcard and/or no ticket were held.\n\n* The outward part of an Anytime Return ticket is only valid for travel when accompanied by an unused return part of the same ticket.\n \n\n* Break of journey: You may start, break and resume, or end your journey at any intermediate station along the route of travel.\n\nIf you decide not to use your ticket to make all or part of your intended journey then you can get a refund by returning your unused ticket to the ticket office or place of purchase (for tickets bought via websites, telesales or travel agents) within 28 days of the ticket expiry date. You may be required to pay an administration fee.\n\nThe refund amount will normally take into account any use you have made of the ticket and in some circumstances no refund will be paid.\n \nManaged by: Multiple Train Operating Companies expand  panel Last updated:   28 September 2016 \n\t\t\t\t\t http://www.nationalrail.co.uk/times_fares/ticket_types/46550.aspx \n\t\t\t\t\t\t \n\t\t\t\t\t http://www.nationalrail.co.uk/times_fares/ticket_types/46544.aspx nk \t\t\t\t\t\n\t\t\t\t\t\t\t'
+                                        ),
                                         condition_summary=ConditionSummary(
                                             fare_structure_type=FareStructureTypeEnumeration.POINT_TO_POINT_FARE,
                                             has_travel_time_restrictions=False,
@@ -8135,11 +8129,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Common properties of  Offpeak tickets'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value="Parameters which are the same for all operators are stated here \n\t\t\t\t\t\t\t\nOFF-PEAK DAY SINGLE TICKET TYPE OFF-PEAK\n\nDESCRIPTION\nFlexible ticket only valid at specific off-peak times of the day.\n\nVALIDITY\nYour journey must be on off-peak trains on the date specified. Off-peak times vary by route - our journey planner only shows off-peak tickets on trains for which they are valid.\n\nBOOKING\nCan be booked in advance or purchased on the day of travel.\n\nREFUNDS\nIf you decide not to use your ticket to make all or part of your intended journey then you can apply for a refund from the My Account pages, or through Customer Support within 28 days of expiry of the ticket. A GBP 10.00 administration fee will apply and the amount of the refund will take into account any use you have made of the ticket and in some circumstances no refund will be paid.\n\nAMENDING YOUR BOOKING\nYou can change the time of your journey without changing your tickets. If you wish to change your date of travel or Class of ticket, you will need to buy a new ticket and apply for a refund on your current ticket.\n\nDISCOUNTS\nYes - normal railcard and child discounts available.\n\nBREAK OF JOURNEY\nBreak of journey is generally permitted unless prohibited for the journey that you are making. If you intend to break your journey, please contact us to check if it is permitted. You can always break your journey where necessary to change train.\n\nRoute Valid only on [Great Northern] services.\t\t\t\n=======================================\n Buy anytime, travel off peak\n\nWhat are Off-Peak tickets?\nOff-Peak fares are cheaper tickets for travelling on trains that are less busy.\n\nOffering good value for money, these tickets may require you to travel at specific times of day, days of the week or on a specific route. Where there is more than one Off-Peak fare for a journey, the cheaper fare with more restrictions will be called Super Off-Peak.\n\nYou can buy Off-Peak tickets any time before you travel. The travel restrictions for your Off-Peak ticket will depend on the journey you are making and will be advised when you buy your ticket.\n\nWhen can I use an Off-Peak ticket?\nThe trains that you can catch and the times that you can travel with an Off-Peak ticket vary considerably depending on the journey being made, the day/date of travel and the train company that you are travelling with. Please use the Journey Planner to choose your desired time of travel and click 'check ticket availability and prices' to display the complete range of fares available for your journey.\n\nCan I get a discount?\nChild discounts apply for all Off-Peak fares.\nRailcard holders get 1/3 off all Off-Peak fares. Senior, HM Forces and Disabled Persons Railcard holders also get 1/3 off all First Class Off-Peak fares.\n\nPlease note that minimum fares / time restrictions may apply to tickets bought with a 16-25 Railcard.\nWhat are the Terms and Conditions?\nView full terms and conditions for Off-Peak and Super Off-Peak and Off Peak Day and Super Off-Peak Day Tickets.\n  \nManaged by: Multiple Train Operating Companies expand  panel Last updated:   08 July 2015\n\n\t http://www.nationalrail.co.uk/times_fares/ticket_types/46544.aspx \n \n\t\thttp://www.nationalrail.co.uk/times_fares/ticket_types/46590.aspx\t\t\t\t\n\t\t\t\t\t\t\t"
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value="Parameters which are the same for all operators are stated here \n\t\t\t\t\t\t\t\nOFF-PEAK DAY SINGLE TICKET TYPE OFF-PEAK\n\nDESCRIPTION\nFlexible ticket only valid at specific off-peak times of the day.\n\nVALIDITY\nYour journey must be on off-peak trains on the date specified. Off-peak times vary by route - our journey planner only shows off-peak tickets on trains for which they are valid.\n\nBOOKING\nCan be booked in advance or purchased on the day of travel.\n\nREFUNDS\nIf you decide not to use your ticket to make all or part of your intended journey then you can apply for a refund from the My Account pages, or through Customer Support within 28 days of expiry of the ticket. A GBP 10.00 administration fee will apply and the amount of the refund will take into account any use you have made of the ticket and in some circumstances no refund will be paid.\n\nAMENDING YOUR BOOKING\nYou can change the time of your journey without changing your tickets. If you wish to change your date of travel or Class of ticket, you will need to buy a new ticket and apply for a refund on your current ticket.\n\nDISCOUNTS\nYes - normal railcard and child discounts available.\n\nBREAK OF JOURNEY\nBreak of journey is generally permitted unless prohibited for the journey that you are making. If you intend to break your journey, please contact us to check if it is permitted. You can always break your journey where necessary to change train.\n\nRoute Valid only on [Great Northern] services.\t\t\t\n=======================================\n Buy anytime, travel off peak\n\nWhat are Off-Peak tickets?\nOff-Peak fares are cheaper tickets for travelling on trains that are less busy.\n\nOffering good value for money, these tickets may require you to travel at specific times of day, days of the week or on a specific route. Where there is more than one Off-Peak fare for a journey, the cheaper fare with more restrictions will be called Super Off-Peak.\n\nYou can buy Off-Peak tickets any time before you travel. The travel restrictions for your Off-Peak ticket will depend on the journey you are making and will be advised when you buy your ticket.\n\nWhen can I use an Off-Peak ticket?\nThe trains that you can catch and the times that you can travel with an Off-Peak ticket vary considerably depending on the journey being made, the day/date of travel and the train company that you are travelling with. Please use the Journey Planner to choose your desired time of travel and click 'check ticket availability and prices' to display the complete range of fares available for your journey.\n\nCan I get a discount?\nChild discounts apply for all Off-Peak fares.\nRailcard holders get 1/3 off all Off-Peak fares. Senior, HM Forces and Disabled Persons Railcard holders also get 1/3 off all First Class Off-Peak fares.\n\nPlease note that minimum fares / time restrictions may apply to tickets bought with a 16-25 Railcard.\nWhat are the Terms and Conditions?\nView full terms and conditions for Off-Peak and Super Off-Peak and Off Peak Day and Super Off-Peak Day Tickets.\n  \nManaged by: Multiple Train Operating Companies expand  panel Last updated:   08 July 2015\n\n\t http://www.nationalrail.co.uk/times_fares/ticket_types/46544.aspx \n \n\t\thttp://www.nationalrail.co.uk/times_fares/ticket_types/46590.aspx\t\t\t\t\n\t\t\t\t\t\t\t"
+                                        ),
                                         condition_summary=ConditionSummary(
                                             fare_structure_type=FareStructureTypeEnumeration.POINT_TO_POINT_FARE,
                                             has_travel_time_restrictions=True,
@@ -8247,11 +8239,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Common properties of  advance tickets'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Parameters which are the same for all operators are stated here \nADVANCE SINGLE TICKET TYPE ADVANCE\n\nDESCRIPTION\nNon-refundable ticket, only valid for the date, time and trains specified.\n\nVALIDITY\nYou must travel on the date, time and trains specified. You may not start, break and resume, or end your journey at any intermediate station except to change to/from connecting trains as shown on the ticket(s) or other valid travel itinerary.\n\nBOOKING\nMust be booked in advance of travel, subject to availability.\n\nREFUNDS\nNo refunds available.\n\nAMENDING YOUR BOOKING\nYes - date/time of tickets can be changed up until time of departure (except if you have chosen to print your own e-ticket(s) or have chosen for your ticket(s) to be delivered to your mobile phone) subject to the payment of a GBP 10.00 fee per ticket per person and any difference in fares. It is not possible to purchase a cheaper fare than the original, nor to change the origin or destination.\n\nDISCOUNTS\nChild discounts, 16-25 Railcard, Family and Friends Railcard (standard class only), Senior Railcard, Two Together Railcard, HM Forces and Disabled Persons Railcards discounts apply.\t\n\n============\nAdvance Standard Fare \n\t\t\t\t\t\t\t Advance fares are Single (one-way) tickets offering great value for money on many longer distance journeys.\n\nYou must book in advance* and fares are sold in limited numbers and so subject to availability. In general, the further ahead you book, the cheaper the Advance fare will be. You can mix and match Advance fares for a return journey. \nFor more information see our Buying advance tickets and Reserving seats page.\n\n*details on Advance booking thresholds can be found on our Latest purchase time page\nWhen can I use an Advance ticket?\nAdvance fares are valid only on the date and train shown on the ticket and seat reservation and are non-refundable.\n\nYou can however change the time or date of travel before departure of the first reserved train.\n\nAny difference in fare and an administration fee will be payable prior to travel.\n\nCan I get a discount?\nChild discounts apply for all Advance fares.\nNational Railcard holders get 1/3 off all Standard Class Advance fares.\n16-25, Senior, HM Forces and Disabled Persons Railcard holders also get 1/3 off all First Class Advance fares.\n \n\nManaged by: Multiple Train Operating Companies expand  panel Last updated:  15 September 2017\t\t \n\t\t\t\t\t\t\t \n'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Parameters which are the same for all operators are stated here \nADVANCE SINGLE TICKET TYPE ADVANCE\n\nDESCRIPTION\nNon-refundable ticket, only valid for the date, time and trains specified.\n\nVALIDITY\nYou must travel on the date, time and trains specified. You may not start, break and resume, or end your journey at any intermediate station except to change to/from connecting trains as shown on the ticket(s) or other valid travel itinerary.\n\nBOOKING\nMust be booked in advance of travel, subject to availability.\n\nREFUNDS\nNo refunds available.\n\nAMENDING YOUR BOOKING\nYes - date/time of tickets can be changed up until time of departure (except if you have chosen to print your own e-ticket(s) or have chosen for your ticket(s) to be delivered to your mobile phone) subject to the payment of a GBP 10.00 fee per ticket per person and any difference in fares. It is not possible to purchase a cheaper fare than the original, nor to change the origin or destination.\n\nDISCOUNTS\nChild discounts, 16-25 Railcard, Family and Friends Railcard (standard class only), Senior Railcard, Two Together Railcard, HM Forces and Disabled Persons Railcards discounts apply.\t\n\n============\nAdvance Standard Fare \n\t\t\t\t\t\t\t Advance fares are Single (one-way) tickets offering great value for money on many longer distance journeys.\n\nYou must book in advance* and fares are sold in limited numbers and so subject to availability. In general, the further ahead you book, the cheaper the Advance fare will be. You can mix and match Advance fares for a return journey. \nFor more information see our Buying advance tickets and Reserving seats page.\n\n*details on Advance booking thresholds can be found on our Latest purchase time page\nWhen can I use an Advance ticket?\nAdvance fares are valid only on the date and train shown on the ticket and seat reservation and are non-refundable.\n\nYou can however change the time or date of travel before departure of the first reserved train.\n\nAny difference in fare and an administration fee will be payable prior to travel.\n\nCan I get a discount?\nChild discounts apply for all Advance fares.\nNational Railcard holders get 1/3 off all Standard Class Advance fares.\n16-25, Senior, HM Forces and Disabled Persons Railcard holders also get 1/3 off all First Class Advance fares.\n \n\nManaged by: Multiple Train Operating Companies expand  panel Last updated:  15 September 2017\t\t \n\t\t\t\t\t\t\t \n'
+                                        ),
                                         condition_summary=ConditionSummary(
                                             fare_structure_type=FareStructureTypeEnumeration.POINT_TO_POINT_FARE,
                                             has_travel_time_restrictions=True,
@@ -9372,11 +9362,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Common properties of  Supplement sale '
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Parameters which are the same for all operators are stated here \n \t\t\t\t\t\n\t\t\t\t\t\t\t'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Parameters which are the same for all operators are stated here \n \t\t\t\t\t\n\t\t\t\t\t\t\t'
+                                        ),
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
@@ -9441,11 +9429,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Prices for each OD'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='includes full derivation of child fare from adult '
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='includes full derivation of child fare from adult '
+                                        ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
@@ -10848,11 +10834,9 @@ obj = PublicationDelivery(
                                                                 name=MultilingualString(
                                                                     value='Prices for advance fares'
                                                                 ),
-                                                                description=[
-                                                                    MultilingualString(
-                                                                        value='Only online prices given here '
-                                                                    ),
-                                                                ],
+                                                                description=MultilingualString(
+                                                                    value='Only online prices given here '
+                                                                ),
                                                                 prices_for=PriceableObjectRefsRelStructure(
                                                                     choice=[
                                                                         FareStructureElementRef(
@@ -10918,11 +10902,9 @@ obj = PublicationDelivery(
                                                                                                     name=MultilingualString(
                                                                                                         value='Prices for advance single  fares - adult '
                                                                                                     ),
-                                                                                                    description=[
-                                                                                                        MultilingualString(
-                                                                                                            value='These are codes as dynmaic  quota based fares with a minimum price at each level  '
-                                                                                                        ),
-                                                                                                    ],
+                                                                                                    description=MultilingualString(
+                                                                                                        value='These are codes as dynmaic  quota based fares with a minimum price at each level  '
+                                                                                                    ),
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
@@ -11059,11 +11041,9 @@ obj = PublicationDelivery(
                                                                                                     name=MultilingualString(
                                                                                                         value='Prices for advance single  fares - adult '
                                                                                                     ),
-                                                                                                    description=[
-                                                                                                        MultilingualString(
-                                                                                                            value='These are prices  are for  dynamic  quota based fares with a minimum price at each level  '
-                                                                                                        ),
-                                                                                                    ],
+                                                                                                    description=MultilingualString(
+                                                                                                        value='These are prices  are for  dynamic  quota based fares with a minimum price at each level  '
+                                                                                                    ),
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
@@ -12669,11 +12649,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Common properties of  Anytime'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Parameters which are the same for all operators are stated here'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Parameters which are the same for all operators are stated here'
+                                        ),
                                         condition_summary=ConditionSummary(
                                             fare_structure_type=FareStructureTypeEnumeration.POINT_TO_POINT_FARE,
                                             is_personal=True,
@@ -15269,11 +15247,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Lines allowing mobile tickets'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='For which routes can I select m-tickets?\nYou can now buy One Way and Day Return tickets up to 10 minutes before your train departure.  \n\nThis convenient way to buy tickets is currently available for journeys to and from Tottenham Hale and Bishops Stortford from Roydon, Harlow Mill, Sawbridgeworth, Stansted Mountfitchet, Stansted Airport, Elsenham, Newport, Audley End, Great Chesterford, Whittlesford Parkway and Shelford.  \n \n'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='For which routes can I select m-tickets?\nYou can now buy One Way and Day Return tickets up to 10 minutes before your train departure.  \n\nThis convenient way to buy tickets is currently available for journeys to and from Tottenham Hale and Bishops Stortford from Roydon, Harlow Mill, Sawbridgeworth, Stansted Mountfitchet, Stansted Airport, Elsenham, Newport, Audley End, Great Chesterford, Whittlesford Parkway and Shelford.  \n \n'
+                                        ),
                                         members=LineRefsRelStructure(
                                             line_ref=[
                                                 LineRef(
@@ -15289,11 +15265,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Lines allowing mobile tickets'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='For which routes can I select m-tickets? \nIn addition Advance Purchase tickets are available on selected routes. Currently, you are able to take advantage of a mobile ticket if you are opting for an Advance ticket on:\n\n - the Mainline service between Norwich and London Liverpool Street,\n - connecting stations on branch lines from Great Yarmouth, Cromer/Sheringham, Lowestoft, Felixstowe and Harwich, Clacton on Sea and Walton on Naze, as well as Ely via Cambridge to London.\n'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='For which routes can I select m-tickets? \nIn addition Advance Purchase tickets are available on selected routes. Currently, you are able to take advantage of a mobile ticket if you are opting for an Advance ticket on:\n\n - the Mainline service between Norwich and London Liverpool Street,\n - connecting stations on branch lines from Great Yarmouth, Cromer/Sheringham, Lowestoft, Felixstowe and Harwich, Clacton on Sea and Walton on Naze, as well as Ely via Cambridge to London.\n'
+                                        ),
                                         members=LineRefsRelStructure(
                                             line_ref=[
                                                 LineRef(
@@ -15421,11 +15395,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Off-Peak and Off-Peak Day: from London Included services'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Off-Peak and Off-Peak Day: From London: Valid on the following services:\nhttps://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets\n09:28 to Cambridge (to Cheshunt and beyond). \n09:02 to Ipswich (Stratford, 09:09) (to stations on the Sudbury branch only).\n09:18 to Clacton-on-Sea (Stratford, 09:25) (to Wivenhoe and beyond, including to Walton-on-the-Naze)..'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Off-Peak and Off-Peak Day: From London: Valid on the following services:\nhttps://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets\n09:28 to Cambridge (to Cheshunt and beyond). \n09:02 to Ipswich (Stratford, 09:09) (to stations on the Sudbury branch only).\n09:18 to Clacton-on-Sea (Stratford, 09:25) (to Wivenhoe and beyond, including to Walton-on-the-Naze)..'
+                                        ),
                                         members=GroupOfServicesMembersRelStructure(
                                             group_of_services_member=[
                                                 GroupOfServicesMemberStructure(
@@ -15491,11 +15463,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Off-Peak and Off-Peak Day: into London Included services'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Off-Peak and Off-Peak Day: To London: Valid on the following services:\nhttps://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets\n08:11 from Clacton-on-Sea and intermediate stations to Wivenhoe, including the 08:00 from Walton-on-the-Naze by changing at Thorpe-le-Soken.\n08:28 from Harwich Town and intermediate stations to Mistley.'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Off-Peak and Off-Peak Day: To London: Valid on the following services:\nhttps://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets\n08:11 from Clacton-on-Sea and intermediate stations to Wivenhoe, including the 08:00 from Walton-on-the-Naze by changing at Thorpe-le-Soken.\n08:28 from Harwich Town and intermediate stations to Mistley.'
+                                        ),
                                         members=GroupOfServicesMembersRelStructure(
                                             group_of_services_member=[
                                                 GroupOfServicesMemberStructure(
@@ -15543,11 +15513,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Off-Peak Day: from  London Included services'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Off-Peak Day Return:\nhttps://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets\n Off-Peak period returns are also valid at all times on the following services from Liverpool St:\n\n16:30, 16:32 and 18:30 (to stations on the Felixstowe branch only. Includes Off-Peak Day Travelcards and Off-Peak Singles).\n16:34 (Stratford, 16:42) (to stations on the Braintree branch only).\n18:12 (Stratford, 18:20) (to stations on the Sudbury branch only).\n18:32 (Stratford, 18:40) (to Hatfield Peverel, Kelvedon, Alresford and stations to Walton-on-the-Naze only)..'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Off-Peak Day Return:\nhttps://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets\n Off-Peak period returns are also valid at all times on the following services from Liverpool St:\n\n16:30, 16:32 and 18:30 (to stations on the Felixstowe branch only. Includes Off-Peak Day Travelcards and Off-Peak Singles).\n16:34 (Stratford, 16:42) (to stations on the Braintree branch only).\n18:12 (Stratford, 18:20) (to stations on the Sudbury branch only).\n18:32 (Stratford, 18:40) (to Hatfield Peverel, Kelvedon, Alresford and stations to Walton-on-the-Naze only)..'
+                                        ),
                                         members=GroupOfServicesMembersRelStructure(
                                             group_of_services_member=[
                                                 GroupOfServicesMemberStructure(
@@ -15845,11 +15813,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Greater Anglia ODs for Season Tickets'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Season Tickets only available on certain routes'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Season Tickets only available on certain routes'
+                                                    ),
                                                     members=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
@@ -15888,11 +15854,9 @@ obj = PublicationDelivery(
                                                 GroupOfDistanceMatrixElements(
                                                     id='abga:LE@Carnet@London_ODs',
                                                     version='01',
-                                                    description=[
-                                                        MultilingualString(
-                                                            value="OD's for which carnet tickets are available"
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value="OD's for which carnet tickets are available"
+                                                    ),
                                                     members=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
@@ -20292,11 +20256,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Common Properties  of PlusBUS season passes'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='7. Is it possible to buy season tickets for PLUSBUS?\nYes, but you must buy (or already have) a season ticket for train travel as well. You can only buy a PlusBus season ticket for the towns that are named on your rail season ticket as the origin or final destination oif your train journey (not any intermediate town). \n\nPlusBus season tickets are now available for nearly all PlusBus served towns and cities across Britain. Each PlusBus served town or city in Britain has its own page on this website. PlusBusseason ticket prices are shown (where available) on the town-specific pages of this website.\n\nSeason tickets are available for specific periods only: 7 days (consecutive); a month; quarter year and annual.\nPeriod of validity:\tTicket type:\tTicket description:\n1 day \t\t\t\t\tPBD\t\t\t\tPlusBus Day\n7-day season\t\tPB7\t\t\t\tPlusBus 7-day\nMonth season\t\tPBM\t\t\t\tPlusBus Month\nQuarter season\t\tPBQ\t\t\t\tPlusBus Quarter\nAnnual season\t\tPBA\t\t\t\tPlusBus Annual \nThe validity of your PlusBus season ticket does not have to match your rail season ticket validity, but your PlusBus ticket MUST expire either on the same date as your rail season ticket, or on a date before your rail season ticket expires.'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='7. Is it possible to buy season tickets for PLUSBUS?\nYes, but you must buy (or already have) a season ticket for train travel as well. You can only buy a PlusBus season ticket for the towns that are named on your rail season ticket as the origin or final destination oif your train journey (not any intermediate town). \n\nPlusBus season tickets are now available for nearly all PlusBus served towns and cities across Britain. Each PlusBus served town or city in Britain has its own page on this website. PlusBusseason ticket prices are shown (where available) on the town-specific pages of this website.\n\nSeason tickets are available for specific periods only: 7 days (consecutive); a month; quarter year and annual.\nPeriod of validity:\tTicket type:\tTicket description:\n1 day \t\t\t\t\tPBD\t\t\t\tPlusBus Day\n7-day season\t\tPB7\t\t\t\tPlusBus 7-day\nMonth season\t\tPBM\t\t\t\tPlusBus Month\nQuarter season\t\tPBQ\t\t\t\tPlusBus Quarter\nAnnual season\t\tPBA\t\t\t\tPlusBus Annual \nThe validity of your PlusBus season ticket does not have to match your rail season ticket validity, but your PlusBus ticket MUST expire either on the same date as your rail season ticket, or on a date before your rail season ticket expires.'
+                                        ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                 GenericParameterAssignment(
@@ -21671,11 +21633,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='London Termini Stations for transfers'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='\'London Terminal\' stations\nTickets issued for travel to/from London usually show \'London Terminals\' as the destination/origin rather than naming a specific station. This is because the ticket is valid to more than one London Terminal station provided it\'s on any reasonable line of route. Tickets can only be used on National Rail services.\n\nFor example, a ticket from Woking to London Terminals is valid to:\n\nLondon Waterloo,\nLondon Victoria (via Clapham Junction),\nLondon Bridge,\nLondon Blackfriars,\nCity Thameslink,\nLondon Charing Cross,\nLondon Waterloo East or\nLondon Cannon Street (via London Bridge).\nIt would not be valid to, for example, London Euston or Paddington as this would not be on the line of route and would involve crossing London using another mode of transport, such as the London Underground or London Buses.\n\nThe exception to this is where there are National Rail journey opportunities that include a choice of London Terminal stations on the Thameslink route between London Bridge, London Blackfriars, City Thameslink, Farringdon and London St Pancras. For these journeys the London Terminal stations that you can use with a London Terminals ticket, will be determined by whether your journey will start / finish north or south of London as follows: For information on tickets issued to/from \'London Thameslink\' click here\n\nTickets which restrict travel on services of a specific train company or some special fares may be valid only to a named London Terminal station, e.g. London Kings Cross.\n\nThe list of London termini stations, defined as \'London Terminals\' for ticketing purposes are:\n\nLondon Blackfriars - Serves stations on the Bedford/Cambridge/Peterborough to Brighton cross-London \'Thameslink\' route and also commuter services to areas of south east London.\nLondon Cannon Street - Serves London Bridge and stations throughout south east London and Kent.\nLondon Charing Cross - Serves London Bridge and stations throughout south east London and Kent.\nLondon Euston - Serves central and north-west England and western Scotland, including Birmingham, Manchester, Liverpool, Carlisle, Chester, Glasgow, with rail and ferry services to/from both Northern Ireland and the Republic of Ireland. Also provides regional services to Milton Keynes and Northampton and local services to Watford Junction. Euston is also the London terminus for sleeper services to/from Scotland.\nLondon Fenchurch Street - Serves the commuter towns on the north side of the Thames Estuary including Southend. Tower Hill is the nearest Tube station.\nLondon Kings Cross - Serves the north east and eastern Scotland including Doncaster, Hull, Leeds, York, Newcastle-upon-Tyne, Aberdeen and Edinburgh. Also provides regional services to Cambridge, Hitchin, Kings Lynn, Peterborough and Stevenage and commuter and local services to stations north and north east of London.\nLondon Liverpool Street - Serves stations throughout East Anglia, including Chelmsford, Colchester, Ipswich and Norwich, and is the London terminus for Stansted Express services from Stansted Airport. Also provides commuter and local services in east and north east London.\nLondon Bridge - Serves stations throughout south east London and Kent. From London Bridge there are direct services south to Gatwick Airport, Horsham and the Sussex coast, and north to Bedford, Peterborough and Cambridge.\nLondon Marylebone - Serves central southern Midlands including High Wycombe, Banbury, Leamington Spa, Stratford-upon-Avon and Birmingham and provides commuter and local services to the north west of London including Amersham, Aylesbury.\nMoorgate - Provides commuter and local services in an area north and north east of London similar to that served by Kings Cross.\nLondon Paddington - Serves South Wales and the West Country, including Bath, Bristol, Cardiff, Exeter, Oxford, Plymouth, Swansea, and local services along the Thames Valley to Slough, Maidenhead and Reading. Paddington is also the London terminus for the Heathrow Express to Heathrow Airport and the sleeper service to/from Devon and Cornwall.\nLondon St Pancras International - Serves the East Midlands including Derby, Leicester, Nottingham and Sheffield, and is the terminus for high speed domestic services from Stratford Int\'l, Ashford Int\'l, Canterbury, Dover and Faversham. Commuter services also operate south to Brighton, Gatwick Airport and Horsham, and north to Bedford, Cambridge, Luton Airport, and Peterborough. - St Pancras International is also the London terminus for Eurostar services to Amsterdam, Brussels and Paris.\nLondon Victoria - Serves south and south east coastal towns including Brighton, Dover, Eastbourne, Hastings and Margate, also Chatham and Canterbury. Victoria is the London terminus for Gatwick Express services to Gatwick Airport and provides local suburban services to south and south east London.\nLondon Waterloo - Serves the south coast, including Bournemouth, Portsmouth, Southampton, Weymouth also Salisbury and Winchester, and provides local suburban services to south west London including Hampton Court, Richmond and Wimbledon.\nIn addition, the following stations, whilst not technically a London terminus are considered to be \'London Terminals\' for ticketing purposes to/from south of London\n\nCity Thameslink\t\nServes stations north of London to Bedford, Cambridge and Peterborough and south of London to Brighton, Gatwick Airport, Horsham and Rainham.\n\nMonday to Saturday only\n\nVauxhall\tServes local suburban services to south west London including Hampton Court, Richmond and Wimbledon.\nLondon Waterloo East\t\nServes London Bridge and stations throughout south east London and Kent.\n\nFrom London Bridge there are direct services to Gatwick Airport, the Sussex coast and north to Bedford, Cambridge and Peterborough.\n\nIn addition, the following stations, whilst not technically a London terminus are considered to be \'London Terminals\' for ticketing purposes to/from north of London\nOld Street\tProvides commuter and local services in an area north and north east of London similar to that served by London Kings Cross.\nPlease note:\nTickets issued to or from \'LONDON TERMINALS\' are only valid as described above. Customers with London Terminals tickets routes "Plus High Speed" are also permitted to travel in either direction on Thameslink services between London St Pancras International and Farringdon, City Thameslink, London Blackfriars, Elephant and Castle and London Bridge\nShoreditch High Street is not considered to be part of \'London Terminals\''
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='\'London Terminal\' stations\nTickets issued for travel to/from London usually show \'London Terminals\' as the destination/origin rather than naming a specific station. This is because the ticket is valid to more than one London Terminal station provided it\'s on any reasonable line of route. Tickets can only be used on National Rail services.\n\nFor example, a ticket from Woking to London Terminals is valid to:\n\nLondon Waterloo,\nLondon Victoria (via Clapham Junction),\nLondon Bridge,\nLondon Blackfriars,\nCity Thameslink,\nLondon Charing Cross,\nLondon Waterloo East or\nLondon Cannon Street (via London Bridge).\nIt would not be valid to, for example, London Euston or Paddington as this would not be on the line of route and would involve crossing London using another mode of transport, such as the London Underground or London Buses.\n\nThe exception to this is where there are National Rail journey opportunities that include a choice of London Terminal stations on the Thameslink route between London Bridge, London Blackfriars, City Thameslink, Farringdon and London St Pancras. For these journeys the London Terminal stations that you can use with a London Terminals ticket, will be determined by whether your journey will start / finish north or south of London as follows: For information on tickets issued to/from \'London Thameslink\' click here\n\nTickets which restrict travel on services of a specific train company or some special fares may be valid only to a named London Terminal station, e.g. London Kings Cross.\n\nThe list of London termini stations, defined as \'London Terminals\' for ticketing purposes are:\n\nLondon Blackfriars - Serves stations on the Bedford/Cambridge/Peterborough to Brighton cross-London \'Thameslink\' route and also commuter services to areas of south east London.\nLondon Cannon Street - Serves London Bridge and stations throughout south east London and Kent.\nLondon Charing Cross - Serves London Bridge and stations throughout south east London and Kent.\nLondon Euston - Serves central and north-west England and western Scotland, including Birmingham, Manchester, Liverpool, Carlisle, Chester, Glasgow, with rail and ferry services to/from both Northern Ireland and the Republic of Ireland. Also provides regional services to Milton Keynes and Northampton and local services to Watford Junction. Euston is also the London terminus for sleeper services to/from Scotland.\nLondon Fenchurch Street - Serves the commuter towns on the north side of the Thames Estuary including Southend. Tower Hill is the nearest Tube station.\nLondon Kings Cross - Serves the north east and eastern Scotland including Doncaster, Hull, Leeds, York, Newcastle-upon-Tyne, Aberdeen and Edinburgh. Also provides regional services to Cambridge, Hitchin, Kings Lynn, Peterborough and Stevenage and commuter and local services to stations north and north east of London.\nLondon Liverpool Street - Serves stations throughout East Anglia, including Chelmsford, Colchester, Ipswich and Norwich, and is the London terminus for Stansted Express services from Stansted Airport. Also provides commuter and local services in east and north east London.\nLondon Bridge - Serves stations throughout south east London and Kent. From London Bridge there are direct services south to Gatwick Airport, Horsham and the Sussex coast, and north to Bedford, Peterborough and Cambridge.\nLondon Marylebone - Serves central southern Midlands including High Wycombe, Banbury, Leamington Spa, Stratford-upon-Avon and Birmingham and provides commuter and local services to the north west of London including Amersham, Aylesbury.\nMoorgate - Provides commuter and local services in an area north and north east of London similar to that served by Kings Cross.\nLondon Paddington - Serves South Wales and the West Country, including Bath, Bristol, Cardiff, Exeter, Oxford, Plymouth, Swansea, and local services along the Thames Valley to Slough, Maidenhead and Reading. Paddington is also the London terminus for the Heathrow Express to Heathrow Airport and the sleeper service to/from Devon and Cornwall.\nLondon St Pancras International - Serves the East Midlands including Derby, Leicester, Nottingham and Sheffield, and is the terminus for high speed domestic services from Stratford Int\'l, Ashford Int\'l, Canterbury, Dover and Faversham. Commuter services also operate south to Brighton, Gatwick Airport and Horsham, and north to Bedford, Cambridge, Luton Airport, and Peterborough. - St Pancras International is also the London terminus for Eurostar services to Amsterdam, Brussels and Paris.\nLondon Victoria - Serves south and south east coastal towns including Brighton, Dover, Eastbourne, Hastings and Margate, also Chatham and Canterbury. Victoria is the London terminus for Gatwick Express services to Gatwick Airport and provides local suburban services to south and south east London.\nLondon Waterloo - Serves the south coast, including Bournemouth, Portsmouth, Southampton, Weymouth also Salisbury and Winchester, and provides local suburban services to south west London including Hampton Court, Richmond and Wimbledon.\nIn addition, the following stations, whilst not technically a London terminus are considered to be \'London Terminals\' for ticketing purposes to/from south of London\n\nCity Thameslink\t\nServes stations north of London to Bedford, Cambridge and Peterborough and south of London to Brighton, Gatwick Airport, Horsham and Rainham.\n\nMonday to Saturday only\n\nVauxhall\tServes local suburban services to south west London including Hampton Court, Richmond and Wimbledon.\nLondon Waterloo East\t\nServes London Bridge and stations throughout south east London and Kent.\n\nFrom London Bridge there are direct services to Gatwick Airport, the Sussex coast and north to Bedford, Cambridge and Peterborough.\n\nIn addition, the following stations, whilst not technically a London terminus are considered to be \'London Terminals\' for ticketing purposes to/from north of London\nOld Street\tProvides commuter and local services in an area north and north east of London similar to that served by London Kings Cross.\nPlease note:\nTickets issued to or from \'LONDON TERMINALS\' are only valid as described above. Customers with London Terminals tickets routes "Plus High Speed" are also permitted to travel in either direction on Thameslink services between London St Pancras International and Farringdon, City Thameslink, London Blackfriars, Elephant and Castle and London Bridge\nShoreditch High Street is not considered to be part of \'London Terminals\''
+                                        ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
@@ -21758,11 +21718,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='London Termini Thaneslink'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value="London Thameslink\nTickets with an origin/destination of 'London Thameslink' are valid to/from the following stations:\n\n"
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value="London Thameslink\nTickets with an origin/destination of 'London Thameslink' are valid to/from the following stations:\n\n"
+                                        ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
@@ -21799,11 +21757,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Stations with First class Lounges - Virgin Trains East Coast'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value="At Stations Virgin Trains East Coast\nFirst Class Lounges are available at London King's Cross, Leeds, Newcastle, Edinburgh Waverley, Berwick-upon-Tweed, Darlington, Wakefield Westgate and Doncaster stations.\nComplimentary refreshments and newspapers are provided in all lounges. First Class lounges also give you access to complimentary internet via Wi-Fi and business facilities including faxes, photocopiers and workstations should you need them.  For your convenience, meeting rooms are available at Leeds, Newcastle and Edinburgh stations. They are equipped with all you would need to run a meeting, from flipcharts to phones. Complimentary refreshments will be delivered at regular intervals and you can order a buffet lunch if required.\n\nFirst Class Lounges are open to customers who hold one of the following ticket types:\n\nFully inter-available First Class Season Ticket (i.e. tickets not specific to one train company)\nAny First Class Anytime ticket valid for travel on the Virgin Trains East Coast route\nAny Virgin Trains East Coast First Class packages\nHolders of a First Class Lounge supplement, available for purchase with a Virgin Trains East Coast First Advance ticket or First Class reader offer\nPlease be aware that First Advance and Weekend First tickets are not entitled to use the First Class Lounges. If travelling on a First Advance ticket, you can purchase a £5 supplement ticket, which allows you access into the First Class Lounge. This can be purchased on the day of travel at any Virgin Trains East Coast Travel Centre or at the time of booking your ticket online.\nhttp://www.nationalrail.co.uk/stations_destinations/44863.aspx\n"
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value="At Stations Virgin Trains East Coast\nFirst Class Lounges are available at London King's Cross, Leeds, Newcastle, Edinburgh Waverley, Berwick-upon-Tweed, Darlington, Wakefield Westgate and Doncaster stations.\nComplimentary refreshments and newspapers are provided in all lounges. First Class lounges also give you access to complimentary internet via Wi-Fi and business facilities including faxes, photocopiers and workstations should you need them.  For your convenience, meeting rooms are available at Leeds, Newcastle and Edinburgh stations. They are equipped with all you would need to run a meeting, from flipcharts to phones. Complimentary refreshments will be delivered at regular intervals and you can order a buffet lunch if required.\n\nFirst Class Lounges are open to customers who hold one of the following ticket types:\n\nFully inter-available First Class Season Ticket (i.e. tickets not specific to one train company)\nAny First Class Anytime ticket valid for travel on the Virgin Trains East Coast route\nAny Virgin Trains East Coast First Class packages\nHolders of a First Class Lounge supplement, available for purchase with a Virgin Trains East Coast First Advance ticket or First Class reader offer\nPlease be aware that First Advance and Weekend First tickets are not entitled to use the First Class Lounges. If travelling on a First Advance ticket, you can purchase a £5 supplement ticket, which allows you access into the First Class Lounge. This can be purchased on the day of travel at any Virgin Trains East Coast Travel Centre or at the time of booking your ticket online.\nhttp://www.nationalrail.co.uk/stations_destinations/44863.aspx\n"
+                                        ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
@@ -21855,11 +21811,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Stations with First class Lounges - East Midlands'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value="At Stations\nThe First Class lounges are open Monday to Friday and are a great place to work or relax while you're waiting for a train. They offer complimentary refreshments, WiFi, fax and phone services are available.\n\nLounges are available at:\n\nLondon's St Pancras International on the upper concourse, near the statue of Sir John Betjeman\nNottingham Platform 4 / 5\nDerby on Platform 4\nLeicester on Platform 3\nFirst Class Lounges are available to customers with First Inclusive, First Plus Breakfast, First Plus Parking, First Open (Anytime) and First Class Season tickets.\nhttp://www.nationalrail.co.uk/stations_destinations/44863.aspx\n"
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value="At Stations\nThe First Class lounges are open Monday to Friday and are a great place to work or relax while you're waiting for a train. They offer complimentary refreshments, WiFi, fax and phone services are available.\n\nLounges are available at:\n\nLondon's St Pancras International on the upper concourse, near the statue of Sir John Betjeman\nNottingham Platform 4 / 5\nDerby on Platform 4\nLeicester on Platform 3\nFirst Class Lounges are available to customers with First Inclusive, First Plus Breakfast, First Plus Parking, First Open (Anytime) and First Class Season tickets.\nhttp://www.nationalrail.co.uk/stations_destinations/44863.aspx\n"
+                                        ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
@@ -21891,11 +21845,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Stations with First class Lounges - Great Western'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Great Western Railway\n \nAt stations\nExclusive access to First Class lounges at London Paddington, and Cardiff Central stations\nhttp://www.nationalrail.co.uk/stations_destinations/44863.aspx\n'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Great Western Railway\n \nAt stations\nExclusive access to First Class lounges at London Paddington, and Cardiff Central stations\nhttp://www.nationalrail.co.uk/stations_destinations/44863.aspx\n'
+                                        ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
@@ -22779,11 +22731,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='OD Pairs for Season Tickets for East Anglia'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Season Tickets are available for most short and medium distance journeys on the National Rail network. Season Tickets are not generally available for long distance journeys, but maybe available where a train company chooses to offer them.'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Season Tickets are available for most short and medium distance journeys on the National Rail network. Season Tickets are not generally available for long distance journeys, but maybe available where a train company chooses to offer them.'
+                                                    ),
                                                     members=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
@@ -22850,11 +22800,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='OD Pairs for East Anglia'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='OD pairs making up network'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='OD pairs making up network'
+                                                    ),
                                                     members=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
@@ -24447,11 +24395,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Gold card scheme Operators'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Where can I travel?\nAnnual Gold Card discounted tickets are valid for travel on journeys wholly within the Annual Gold Card area on the following participating train companies services:\n\nArriva Trains Wales\tc2c\nChiltern Railways\tCrossCountry ++\nEast Midlands Trains\tGatwick Express\nGreat Northern\tGreat Western Railway* \nGreater Anglia\tHeathrow Express\nIsland Line\tLondon Overground\nLondon Northwestern Railway\tSoutheastern\nSouthern\tSouth Western Railway\nStansted Express\t\nThameslink             \nWest Midlands Railway\t\n'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Where can I travel?\nAnnual Gold Card discounted tickets are valid for travel on journeys wholly within the Annual Gold Card area on the following participating train companies services:\n\nArriva Trains Wales\tc2c\nChiltern Railways\tCrossCountry ++\nEast Midlands Trains\tGatwick Express\nGreat Northern\tGreat Western Railway* \nGreater Anglia\tHeathrow Express\nIsland Line\tLondon Overground\nLondon Northwestern Railway\tSoutheastern\nSouthern\tSouth Western Railway\nStansted Express\t\nThameslink             \nWest Midlands Railway\t\n'
+                                        ),
                                         members=TransportOrganisationRefsRelStructure(
                                             transport_organisation_ref=[
                                                 OperatorRef(

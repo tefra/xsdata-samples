@@ -905,11 +905,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Liverpool Street Visitor Centre'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Liverpool Street Underground station'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Liverpool Street Underground station'
+                                                    ),
                                                     access_space_type=AccessSpaceTypeEnumeration.SHOP
                                                 ),
                                             ]
@@ -1037,11 +1035,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Picdilly Circus  Visitor Centre'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Piccadilly Circus Underground station'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Piccadilly Circus Underground station'
+                                                    ),
                                                     access_space_type=AccessSpaceTypeEnumeration.SHOP
                                                 ),
                                             ]
@@ -1078,11 +1074,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Euston Visitor Centre'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Opposite platform 10'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Opposite platform 10'
+                                                    ),
                                                     access_space_type=AccessSpaceTypeEnumeration.SHOP
                                                 ),
                                             ]
@@ -1167,11 +1161,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='VictoriaVisitor Centre'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Opposite platform 8, Victoria rail station'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Opposite platform 8, Victoria rail station'
+                                                    ),
                                                     access_space_type=AccessSpaceTypeEnumeration.SHOP
                                                 ),
                                             ]
@@ -1244,11 +1236,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Heathrow Terminal 123 Visitor Centre'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Heathrow Terminal123 Underground station, Heathrow Airport'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Heathrow Terminal123 Underground station, Heathrow Airport'
+                                                    ),
                                                     access_space_type=AccessSpaceTypeEnumeration.SHOP
                                                 ),
                                             ]
@@ -1285,11 +1275,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value="King's Cross  Visitor Centre"
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value="King's Cross Underground station, Western Ticket Hall near St Pancras "
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value="King's Cross Underground station, Western Ticket Hall near St Pancras "
+                                                    ),
                                                     access_space_type=AccessSpaceTypeEnumeration.SHOP
                                                 ),
                                             ]
@@ -1353,11 +1341,9 @@ obj = PublicationDelivery(
                                             name=MultilingualString(
                                                 value='Tube lines'
                                             ),
-                                            description=[
-                                                MultilingualString(
-                                                    value='Deep lines'
-                                                ),
-                                            ],
+                                            description=MultilingualString(
+                                                value='Deep lines'
+                                            ),
                                             members=LineRefsRelStructure(
                                                 line_ref=[
                                                     LineRef(
@@ -3758,11 +3744,9 @@ obj = PublicationDelivery(
                                             name=MultilingualString(
                                                 value='River Bus lines'
                                             ),
-                                            description=[
-                                                MultilingualString(
-                                                    value="\t\t\n\t\t\t\t\t\t\t\t\tCity Cruises: Westminster - Greenwich\n\t\t\t\t\t\t\t\t\tCrown River Cruises: Westminster - St Katherine's\n\t\t\t\t\t\t\t\t\tThames Clippers: Bankside - Millbank\n\t\t\t\t\t\t\t\t\tThames Clippers: Embankment and the London Eye - The O2 and Woolwich Arsenal\n\t\t\t\t\t\t\t\t\tThames River Services: Westminster - Greenwich - Thames Barrier\n\t\t\t\t\t\t\t\t\tWPSA: Westminster - Hampton Court\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t"
-                                                ),
-                                            ],
+                                            description=MultilingualString(
+                                                value="\t\t\n\t\t\t\t\t\t\t\t\tCity Cruises: Westminster - Greenwich\n\t\t\t\t\t\t\t\t\tCrown River Cruises: Westminster - St Katherine's\n\t\t\t\t\t\t\t\t\tThames Clippers: Bankside - Millbank\n\t\t\t\t\t\t\t\t\tThames Clippers: Embankment and the London Eye - The O2 and Woolwich Arsenal\n\t\t\t\t\t\t\t\t\tThames River Services: Westminster - Greenwich - Thames Barrier\n\t\t\t\t\t\t\t\t\tWPSA: Westminster - Hampton Court\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t"
+                                            ),
                                             members=LineRefsRelStructure(
                                                 line_ref=[
                                                     LineRef(
@@ -9407,11 +9391,9 @@ obj = PublicationDelivery(
                                                 FareTable(
                                                     id='tfl:Oyster@concession',
                                                     version='any',
-                                                    description=[
-                                                        MultilingualString(
-                                                            value="\n\t\t\t\t\t\t\t\t http://www.tfl.gov.uk/tickets/14837.aspx\nNational RailCard and Gold Card discounts\n\nWe'll reduce the daily price cap by 34 per cent if:\n\nAll your travel is during off-peak hours\nAnd you have put any of the RailCard discount entitlements below on your Oyster card:\nDisabled Persons\nHM Forces\nSenior\n16 - 25\nGold Card\n(subject to the conditions on your RailCard or Gold Card)\n\t\t\t\t\t\t\t\t"
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value="\n\t\t\t\t\t\t\t\t http://www.tfl.gov.uk/tickets/14837.aspx\nNational RailCard and Gold Card discounts\n\nWe'll reduce the daily price cap by 34 per cent if:\n\nAll your travel is during off-peak hours\nAnd you have put any of the RailCard discount entitlements below on your Oyster card:\nDisabled Persons\nHM Forces\nSenior\n16 - 25\nGold Card\n(subject to the conditions on your RailCard or Gold Card)\n\t\t\t\t\t\t\t\t"
+                                                    ),
                                                     cells=CellsRelStructure(
                                                         choice=[
                                                             UsageParameterPrice(
@@ -27693,11 +27675,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Cost of card'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value=' Buy your RailCard now and Save!\nOn 19 May the price of a 1-year RailCard will change from £28 to £30 and a 3-year RailCard from £65 to £70.  The Family and Friends RailCard is still great value with cardholders saving on average £131 a year on their rail travel, as well as taking advantage of our RailCard partner offers.\n '
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value=' Buy your RailCard now and Save!\nOn 19 May the price of a 1-year RailCard will change from £28 to £30 and a 3-year RailCard from £65 to £70.  The Family and Friends RailCard is still great value with cardholders saving on average £131 a year on their rail travel, as well as taking advantage of our RailCard partner offers.\n '
+                                                    ),
                                                     start_date=XmlDate(2013, 5, 19),
                                                     cells=CellsRelStructure(
                                                         choice=[
@@ -28796,11 +28776,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Bus Fare Prices  -Adult'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='You need an Oyster card to:\nUse pay as you go and daily price capping\nBuy 7 Day, monthly and longer period Bus and Tram Passes\nYou do not need an Oyster card to pay cash single fares.\nYou can also use a contactless payment card to pay for single fares on buses (not trams) at the pay as you go fare of £1.40.\nFind out more about using contactless payment cards on buses'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='You need an Oyster card to:\nUse pay as you go and daily price capping\nBuy 7 Day, monthly and longer period Bus and Tram Passes\nYou do not need an Oyster card to pay cash single fares.\nYou can also use a contactless payment card to pay for single fares on buses (not trams) at the pay as you go fare of £1.40.\nFind out more about using contactless payment cards on buses'
+                                                    ),
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -30402,11 +30380,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='RB2 adult fares'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Millbank to Bankside\t£5.50\t£4.95\t£3.70\t £11\nSt George Wharf to Millbank\t£3.30\t£2.97\t£2.20\t £6.60\nAll other journeys on this service\t£6\t£5.40\t£4\t £12'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Millbank to Bankside\t£5.50\t£4.95\t£3.70\t £11\nSt George Wharf to Millbank\t£3.30\t£2.97\t£2.20\t £6.60\nAll other journeys on this service\t£6\t£5.40\t£4\t £12'
+                                                    ),
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -30678,11 +30654,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='RB2 child fares'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Millbank to Bankside\t£2.80\tn/a\t£1.80\nSt George Wharf to Millbank\t£1.70\tn/a\t£1.10\nAll other journeys on this service\t£3.00\tn/a\t£2.00'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Millbank to Bankside\t£2.80\tn/a\t£1.80\nSt George Wharf to Millbank\t£1.70\tn/a\t£1.10\nAll other journeys on this service\t£3.00\tn/a\t£2.00'
+                                                    ),
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -30954,11 +30928,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='RB2 child fares'
                                                     ),
-                                                    description=[
-                                                        MultilingualString(
-                                                            value='Millbank to Bankside\t£2.80\tn/a\t£1.80\nSt George Wharf to Millbank\t£1.70\tn/a\t£1.10\nAll other journeys on this service\t£3.00\tn/a\t£2.00'
-                                                        ),
-                                                    ],
+                                                    description=MultilingualString(
+                                                        value='Millbank to Bankside\t£2.80\tn/a\t£1.80\nSt George Wharf to Millbank\t£1.70\tn/a\t£1.10\nAll other journeys on this service\t£3.00\tn/a\t£2.00'
+                                                    ),
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -36151,11 +36123,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Rail Operators who dont support freedom passs'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='\n\t\t\t\t\t\t\t\n Your Freedom Pass allows you to travel in Standard Class on most local rail services in London, provided you travel at the following times: \n\nMonday to Friday from 9.30am and until 4.30am the following morning\nWeekends and public holidays at any time\nOn some routes Freedom Pass holders may travel free 24 hours. To find out more about this download the Freedom Pass travel map for the whole of London (PDF, 114kb) Opens in a new window\n\nFor borough-by-borough exclusions, you can see our exclusions map\nAs a summary, the Freedom Pass is not valid for travel on train services operated by:\n\nEast Coast\nEast Midlands Trains\nGrand Central\nHull Trains\nGatwick Express (between London Victoria and Gatwick)\nHeathrow Express\nHeathrow Connect between Hayes and Harlington and Heathrow\nVirgin Trains\nSoutheastern high speed services to and from St Pancras International and Stratford International\nIf you are travelling by National Rail you need to make sure you are travelling in the Freedom Pass area or you may receive a penalty fare. If you wish to travel beyond the Freedom Pass area you must buy a separate extension ticket before you travel. Extension tickets used in conjunction with a Freedom Pass are NOT valid on services operated by any of the Train Companies listed above. Always show your Freedom Pass with your photograph at the ticket office when buying extension tickets. Holders of Senior and Disabled Persons RailCards may be able to obtain a discount on the price of extension tickets.\n\nFor more information on National Rail services see the\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t'
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='\n\t\t\t\t\t\t\t\n Your Freedom Pass allows you to travel in Standard Class on most local rail services in London, provided you travel at the following times: \n\nMonday to Friday from 9.30am and until 4.30am the following morning\nWeekends and public holidays at any time\nOn some routes Freedom Pass holders may travel free 24 hours. To find out more about this download the Freedom Pass travel map for the whole of London (PDF, 114kb) Opens in a new window\n\nFor borough-by-borough exclusions, you can see our exclusions map\nAs a summary, the Freedom Pass is not valid for travel on train services operated by:\n\nEast Coast\nEast Midlands Trains\nGrand Central\nHull Trains\nGatwick Express (between London Victoria and Gatwick)\nHeathrow Express\nHeathrow Connect between Hayes and Harlington and Heathrow\nVirgin Trains\nSoutheastern high speed services to and from St Pancras International and Stratford International\nIf you are travelling by National Rail you need to make sure you are travelling in the Freedom Pass area or you may receive a penalty fare. If you wish to travel beyond the Freedom Pass area you must buy a separate extension ticket before you travel. Extension tickets used in conjunction with a Freedom Pass are NOT valid on services operated by any of the Train Companies listed above. Always show your Freedom Pass with your photograph at the ticket office when buying extension tickets. Holders of Senior and Disabled Persons RailCards may be able to obtain a discount on the price of extension tickets.\n\nFor more information on National Rail services see the\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t'
+                                        ),
                                         members=TransportOrganisationRefsRelStructure(
                                             transport_organisation_ref=[
                                                 OperatorRef(

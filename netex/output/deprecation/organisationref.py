@@ -45,11 +45,9 @@ obj = PublicationDelivery(
                             name=MultilingualString(
                                 value='Le Corbusier'
                             ),
-                            description=[
-                                MultilingualString(
-                                    value='Pôle monomodal regroupant les arrêts monomodaux Le Corbusier, Lycée de Villaroy et Jules Michelet'
-                                ),
-                            ],
+                            description=MultilingualString(
+                                value='Pôle monomodal regroupant les arrêts monomodaux Le Corbusier, Lycée de Villaroy et Jules Michelet'
+                            ),
                             centroid=SimplePointVersionStructure(
                                 location=LocationStructure2(
                                     longitude=Decimal('2.068554'),

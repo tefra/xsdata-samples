@@ -2574,11 +2574,9 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Monday to Friday'
                                         ),
-                                        description=[
-                                            MultilingualString(
-                                                value='Line 24    Monday to Friday timetable - Outbound services '
-                                            ),
-                                        ],
+                                        description=MultilingualString(
+                                            value='Line 24    Monday to Friday timetable - Outbound services '
+                                        ),
                                         day_types=GroupOfServicesVersionStructure.DayTypes(
                                             day_type_ref=[
                                                 DayTypeRefStructure(
