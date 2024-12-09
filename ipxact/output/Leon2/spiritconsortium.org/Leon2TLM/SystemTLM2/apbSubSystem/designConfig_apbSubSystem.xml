@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>Leon2TLM</ipxact:library>
+  <ipxact:name>designConfig_apbSubSystem</ipxact:name>
+  <ipxact:version>1.2</ipxact:version>
+  <ipxact:designRef vendor="spiritconsortium.org" library="Leon2TLM" name="design_apbSubSystem" version="1.2"/>
+  <ipxact:interconnectionConfiguration>
+    <ipxact:interconnectionRef>defaultid4490193</ipxact:interconnectionRef>
+    <ipxact:abstractorInstances>
+      <ipxact:abstractorInstance>
+        <ipxact:instanceName>i_adp</ipxact:instanceName>
+        <ipxact:abstractorRef vendor="spiritconsortium.org" library="Leon2TLM" name="scmlAdaptor" version="1.0"/>
+        <ipxact:viewName>PVPVT</ipxact:viewName>
+      </ipxact:abstractorInstance>
+    </ipxact:abstractorInstances>
+  </ipxact:interconnectionConfiguration>
+  <ipxact:interconnectionConfiguration>
+    <ipxact:interconnectionRef>defaultid4490210</ipxact:interconnectionRef>
+    <ipxact:abstractorInstances>
+      <ipxact:abstractorInstance>
+        <ipxact:instanceName>i_pv2tac</ipxact:instanceName>
+        <ipxact:abstractorRef vendor="spiritconsortium.org" library="Leon2TLM" name="pv2tac" version="1.0"/>
+        <ipxact:viewName>PV2TAC</ipxact:viewName>
+      </ipxact:abstractorInstance>
+    </ipxact:abstractorInstances>
+  </ipxact:interconnectionConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_apb</ipxact:instanceName>
+    <ipxact:view viewRef="TLM_PV"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_h2p</ipxact:instanceName>
+    <ipxact:view viewRef="TLM_PV"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_irq</ipxact:instanceName>
+    <ipxact:view viewRef="TLM_PV"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_tim</ipxact:instanceName>
+    <ipxact:view viewRef="TLM_PV"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_uart_scml</ipxact:instanceName>
+    <ipxact:view viewRef="PVPVT"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_uart_tac</ipxact:instanceName>
+    <ipxact:view viewRef="PV"/>
+  </ipxact:viewConfiguration>
+</ipxact:designConfiguration>
+

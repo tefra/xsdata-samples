@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>Leon2TLM</ipxact:library>
+  <ipxact:name>Leon2Platform</ipxact:name>
+  <ipxact:version>1.3</ipxact:version>
+  <ipxact:model>
+    <ipxact:views>
+      <ipxact:view>
+        <ipxact:name>spirit-design</ipxact:name>
+        <ipxact:envIdentifier>::Hierarchy</ipxact:envIdentifier>
+        <ipxact:designInstantiationRef>spirit-design</ipxact:designInstantiationRef>
+      </ipxact:view>
+      <ipxact:view>
+        <ipxact:name>TLM_PV</ipxact:name>
+        <ipxact:envIdentifier>:*Simulation:</ipxact:envIdentifier>
+        <ipxact:componentInstantiationRef>TLM_PV</ipxact:componentInstantiationRef>
+      </ipxact:view>
+    </ipxact:views>
+    <ipxact:instantiations>
+      <ipxact:componentInstantiation>
+        <ipxact:name>TLM_PV</ipxact:name>
+        <ipxact:language>systemc</ipxact:language>
+        <ipxact:moduleName>Leon2Platform</ipxact:moduleName>
+        <ipxact:fileSetRef>
+          <ipxact:localName>sourceCode</ipxact:localName>
+        </ipxact:fileSetRef>
+      </ipxact:componentInstantiation>
+      <ipxact:designInstantiation>
+        <ipxact:name>spirit-design</ipxact:name>
+        <ipxact:designRef vendor="spiritconsortium.org" library="Leon2TLM" name="design_Leon2Platform" version="1.3"/>
+      </ipxact:designInstantiation>
+    </ipxact:instantiations>
+    <ipxact:ports>
+      <ipxact:port>
+        <ipxact:name>clkin</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>bool</ipxact:typeName>
+              <ipxact:typeDefinition>systemc.h</ipxact:typeDefinition>
+              <ipxact:viewRef>TLM_PV</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+          <ipxact:drivers>
+            <ipxact:driver>
+              <ipxact:clockDriver clockName="clkin">
+                <ipxact:clockPeriod>ClockPeriod</ipxact:clockPeriod>
+                <ipxact:clockPulseOffset>ClockPulseOffset</ipxact:clockPulseOffset>
+                <ipxact:clockPulseValue>ClockPulseValue</ipxact:clockPulseValue>
+                <ipxact:clockPulseDuration>ClockPulseDuration</ipxact:clockPulseDuration>
+              </ipxact:clockDriver>
+            </ipxact:driver>
+          </ipxact:drivers>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>rstin_an</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>sc_logic</ipxact:typeName>
+              <ipxact:typeDefinition>systemc.h</ipxact:typeDefinition>
+              <ipxact:viewRef>TLM_PV</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+          <ipxact:drivers>
+            <ipxact:driver>
+              <ipxact:singleShotDriver>
+                <ipxact:singleShotOffset>0.0</ipxact:singleShotOffset>
+                <ipxact:singleShotValue>0</ipxact:singleShotValue>
+                <ipxact:singleShotDuration>10.0</ipxact:singleShotDuration>
+              </ipxact:singleShotDriver>
+            </ipxact:driver>
+          </ipxact:drivers>
+        </ipxact:wire>
+      </ipxact:port>
+    </ipxact:ports>
+  </ipxact:model>
+  <ipxact:fileSets>
+    <ipxact:fileSet>
+      <ipxact:name>sourceCode</ipxact:name>
+      <ipxact:file>
+        <ipxact:name>tlmsrc/Leon2Platform.h</ipxact:name>
+        <ipxact:fileType>systemCSource</ipxact:fileType>
+        <ipxact:isIncludeFile>true</ipxact:isIncludeFile>
+        <ipxact:logicalName>Leon2Platform</ipxact:logicalName>
+      </ipxact:file>
+    </ipxact:fileSet>
+  </ipxact:fileSets>
+  <ipxact:parameters>
+    <ipxact:parameter parameterId="ClockPulseValue" prompt="Clock Pulse Value:" type="longint" resolve="user">
+      <ipxact:name>ClockPulseValue</ipxact:name>
+      <ipxact:value>1</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter parameterId="ClockPeriod" prompt="Clock Pulse Period:" type="real" resolve="user">
+      <ipxact:name>ClockPeriod</ipxact:name>
+      <ipxact:value>100.0</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter parameterId="ClockPulseDuration" prompt="Clock Pulse Duration:" type="real" resolve="user">
+      <ipxact:name>ClockPulseDuration</ipxact:name>
+      <ipxact:value>50.0</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter parameterId="ClockPulseOffset" prompt="Clock Pulse Offset:" type="real" resolve="user">
+      <ipxact:name>ClockPulseOffset</ipxact:name>
+      <ipxact:value>50.0</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:component>
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>Leon2RTL</ipxact:library>
+  <ipxact:name>dac</ipxact:name>
+  <ipxact:version>1.2</ipxact:version>
+  <ipxact:model>
+    <ipxact:views>
+      <ipxact:view>
+        <ipxact:name>vhdlSource</ipxact:name>
+        <ipxact:envIdentifier>:modelsim.mentor.com:</ipxact:envIdentifier>
+        <ipxact:envIdentifier>:ncsim.cadence.com:</ipxact:envIdentifier>
+        <ipxact:envIdentifier>:vcs.synopsys.com:</ipxact:envIdentifier>
+        <ipxact:envIdentifier>:designcompiler.synopsys.com:</ipxact:envIdentifier>
+        <ipxact:componentInstantiationRef>vhdlSource</ipxact:componentInstantiationRef>
+      </ipxact:view>
+    </ipxact:views>
+    <ipxact:instantiations>
+      <ipxact:componentInstantiation>
+        <ipxact:name>vhdlSource</ipxact:name>
+        <ipxact:language>vhdl</ipxact:language>
+        <ipxact:moduleName>dac</ipxact:moduleName>
+        <ipxact:moduleParameters>
+          <ipxact:moduleParameter minimum="1" maximum="32" dataType="integer">
+            <ipxact:name>WIDTH</ipxact:name>
+            <ipxact:value>dacwidth</ipxact:value>
+          </ipxact:moduleParameter>
+        </ipxact:moduleParameters>
+        <ipxact:fileSetRef>
+          <ipxact:localName>fs-vhdlSource</ipxact:localName>
+        </ipxact:fileSetRef>
+      </ipxact:componentInstantiation>
+    </ipxact:instantiations>
+    <ipxact:ports>
+      <ipxact:port>
+        <ipxact:name>data</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>dacwidth - 1</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>clk</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+        </ipxact:wire>
+      </ipxact:port>
+    </ipxact:ports>
+  </ipxact:model>
+  <ipxact:fileSets>
+    <ipxact:fileSet>
+      <ipxact:name>fs-vhdlSource</ipxact:name>
+      <ipxact:file>
+        <ipxact:name>hdlsrc/dac.vhd</ipxact:name>
+        <ipxact:fileType>vhdlSource</ipxact:fileType>
+        <ipxact:logicalName>dac_lib</ipxact:logicalName>
+      </ipxact:file>
+    </ipxact:fileSet>
+  </ipxact:fileSets>
+  <ipxact:parameters>
+    <ipxact:parameter parameterId="dacwidth" minimum="1" maximum="32" resolve="user">
+      <ipxact:name>WIDTH</ipxact:name>
+      <ipxact:value>24</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:component>
+

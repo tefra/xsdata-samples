@@ -24,6 +24,7 @@ jobs:
           - { name: "DateX II", id: "datexii" }
           - { name: "EWP", id: "ewp" }
           - { name: "Generali", id: "generali", skip_mypy: true }
+          - { name: "IPXACT", id: "ipxact" }
           - { name: "NeTEx", id: "netex", skip_mypy: true }
           - { name: "NPO API", id: "npo" }
           - { name: "ReqIF", id: "reqif" }

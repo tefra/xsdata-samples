@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>Addressing</ipxact:library>
+  <ipxact:name>directSlave</ipxact:name>
+  <ipxact:version>1.0</ipxact:version>
+  <ipxact:busInterfaces>
+    <ipxact:busInterface>
+      <ipxact:name>directSlave</ipxact:name>
+      <ipxact:busType vendor="spiritconsortium.org" library="busdef.direct" name="direct" version="1.0"/>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="spiritconsortium.org" library="busdef.direct" name="direct_rtl" version="1.0"/>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>PADDR</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>addr + 32 - 1</ipxact:left>
+                  <ipxact:right>addr</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>paddr_s</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>PWDATA</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>pwdata_s</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>PRDATA</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>prdata_s</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:target>
+        <ipxact:memoryMapRef memoryMapRef="ambaDirect"/>
+      </ipxact:target>
+      <ipxact:bitsInLau>8</ipxact:bitsInLau>
+      <ipxact:bitSteering>sSteer</ipxact:bitSteering>
+      <ipxact:endianness>little</ipxact:endianness>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="addr" prompt="Least mapped LSB of the address" type="longint" resolve="user">
+          <ipxact:name>addr</ipxact:name>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="sSteer" prompt="bitSteering:" choiceRef="bitSteer" configGroups="requiredConfig" resolve="user">
+          <ipxact:name>sSteer</ipxact:name>
+          <ipxact:value>off</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </ipxact:busInterface>
+  </ipxact:busInterfaces>
+  <ipxact:memoryMaps>
+    <ipxact:memoryMap>
+      <ipxact:name>ambaDirect</ipxact:name>
+      <ipxact:addressBlock>
+        <ipxact:name>defaultid4489935</ipxact:name>
+        <ipxact:baseAddress>mmBase</ipxact:baseAddress>
+        <ipxact:range>mmRange</ipxact:range>
+        <ipxact:width>mmWidth</ipxact:width>
+        <ipxact:usage>memory</ipxact:usage>
+        <ipxact:accessPolicies>
+          <ipxact:accessPolicy>
+            <ipxact:access>read-write</ipxact:access>
+          </ipxact:accessPolicy>
+        </ipxact:accessPolicies>
+        <ipxact:parameters>
+          <ipxact:parameter parameterId="mmBase" prompt="memoryMap Base address:" configGroups="requiredConfig" type="longint" resolve="user">
+            <ipxact:name>mmBase</ipxact:name>
+            <ipxact:value>'h00000000</ipxact:value>
+          </ipxact:parameter>
+          <ipxact:parameter parameterId="mmRange" prompt="memoryMap Range (bytes):" configGroups="requiredConfig" type="longint" resolve="user">
+            <ipxact:name>mmRange</ipxact:name>
+            <ipxact:value>'h100</ipxact:value>
+          </ipxact:parameter>
+          <ipxact:parameter parameterId="mmWidth" prompt="memoryMap Width:" configGroups="requiredConfig" type="longint" resolve="user">
+            <ipxact:name>mmWidth</ipxact:name>
+            <ipxact:value>32</ipxact:value>
+          </ipxact:parameter>
+        </ipxact:parameters>
+      </ipxact:addressBlock>
+    </ipxact:memoryMap>
+  </ipxact:memoryMaps>
+  <ipxact:model>
+    <ipxact:ports>
+      <ipxact:port>
+        <ipxact:name>paddr_s</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>31</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>pwdata_s</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>dataWidth - 1</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>prdata_s</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>dataWidth - 1</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+        </ipxact:wire>
+      </ipxact:port>
+    </ipxact:ports>
+  </ipxact:model>
+  <ipxact:choices>
+    <ipxact:choice>
+      <ipxact:name>bitSteer</ipxact:name>
+      <ipxact:enumeration text="on">on</ipxact:enumeration>
+      <ipxact:enumeration text="off">off</ipxact:enumeration>
+    </ipxact:choice>
+  </ipxact:choices>
+  <ipxact:parameters>
+    <ipxact:parameter parameterId="dataWidth" prompt="Data width:" configGroups="requiredConfig" resolve="user">
+      <ipxact:name>width</ipxact:name>
+      <ipxact:value>32</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+</ipxact:component>
+

@@ -1,0 +1,615 @@
+from ipxact.models.abstraction_types import AbstractionTypes
+from ipxact.models.access import Access
+from ipxact.models.access_policies import AccessPolicies
+from ipxact.models.access_type import AccessType
+from ipxact.models.address_block import AddressBlock
+from ipxact.models.address_block_type import AddressBlockType
+from ipxact.models.base_address import BaseAddress
+from ipxact.models.bus_interface import BusInterface
+from ipxact.models.bus_interface_type import BusInterfaceType
+from ipxact.models.bus_interfaces import BusInterfaces
+from ipxact.models.component import Component
+from ipxact.models.component_instantiation_type import ComponentInstantiationType
+from ipxact.models.component_port_direction_type import ComponentPortDirectionType
+from ipxact.models.configurable_library_ref_type import ConfigurableLibraryRefType
+from ipxact.models.driver import Driver
+from ipxact.models.drivers import Drivers
+from ipxact.models.extended_vectors_type import ExtendedVectorsType
+from ipxact.models.field_type import FieldType
+from ipxact.models.file import File
+from ipxact.models.file_set import FileSet
+from ipxact.models.file_set_ref import FileSetRef
+from ipxact.models.file_sets import FileSets
+from ipxact.models.file_type import FileType
+from ipxact.models.format_type import FormatType
+from ipxact.models.ipxact_uri import IpxactUri
+from ipxact.models.language_type import LanguageType
+from ipxact.models.left import Left
+from ipxact.models.memory_map_ref import MemoryMapRef
+from ipxact.models.memory_map_type import MemoryMapType
+from ipxact.models.memory_maps import MemoryMaps
+from ipxact.models.model import Model
+from ipxact.models.model_type import ModelType
+from ipxact.models.module_parameter_type import ModuleParameterType
+from ipxact.models.parameter import Parameter
+from ipxact.models.parameter_type_resolve import ParameterTypeResolve
+from ipxact.models.parameters import Parameters
+from ipxact.models.port import Port
+from ipxact.models.port_wire_type import PortWireType
+from ipxact.models.reset import Reset
+from ipxact.models.right import Right
+from ipxact.models.simple_file_type import SimpleFileType
+from ipxact.models.single_shot_driver import SingleShotDriver
+from ipxact.models.unsigned_bit_vector_expression import UnsignedBitVectorExpression
+from ipxact.models.unsigned_int_expression import UnsignedIntExpression
+from ipxact.models.unsigned_longint_expression import UnsignedLongintExpression
+from ipxact.models.unsigned_positive_int_expression import UnsignedPositiveIntExpression
+from ipxact.models.unsigned_positive_longint_expression import UnsignedPositiveLongintExpression
+from ipxact.models.value import Value
+
+
+obj = Component(
+    vendor='spiritconsortium.org',
+    library='Leon2RTL',
+    name='gpio',
+    version='1.2',
+    bus_interfaces=BusInterfaces(
+        bus_interface=[
+            BusInterface(
+                name='IPReset',
+                bus_type=ConfigurableLibraryRefType(
+                    vendor='spiritconsortium.org',
+                    library='busdef.reset',
+                    name='reset',
+                    version='1.0'
+                ),
+                abstraction_types=AbstractionTypes(
+                    abstraction_type=[
+                        AbstractionTypes.AbstractionType(
+                            abstraction_ref=ConfigurableLibraryRefType(
+                                vendor='spiritconsortium.org',
+                                library='busdef.reset',
+                                name='reset_rtl',
+                                version='1.0'
+                            ),
+                            port_maps=AbstractionTypes.AbstractionType.PortMaps(
+                                port_map=[
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='RESETn'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='rst_an'
+                                        )
+                                    ),
+                                ]
+                            )
+                        ),
+                    ]
+                ),
+                target=BusInterfaceType.Target(
+
+                )
+            ),
+            BusInterface(
+                name='APBClk',
+                bus_type=ConfigurableLibraryRefType(
+                    vendor='spiritconsortium.org',
+                    library='busdef.clock',
+                    name='clock',
+                    version='1.0'
+                ),
+                abstraction_types=AbstractionTypes(
+                    abstraction_type=[
+                        AbstractionTypes.AbstractionType(
+                            abstraction_ref=ConfigurableLibraryRefType(
+                                vendor='spiritconsortium.org',
+                                library='busdef.clock',
+                                name='clock_rtl',
+                                version='1.0'
+                            ),
+                            port_maps=AbstractionTypes.AbstractionType.PortMaps(
+                                port_map=[
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='CLK'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='pclk'
+                                        )
+                                    ),
+                                ]
+                            )
+                        ),
+                    ]
+                ),
+                target=BusInterfaceType.Target(
+
+                )
+            ),
+            BusInterface(
+                name='ambaAPB',
+                bus_type=ConfigurableLibraryRefType(
+                    vendor='amba.com',
+                    library='AMBA2',
+                    name='APB',
+                    version='r2p0_4'
+                ),
+                abstraction_types=AbstractionTypes(
+                    abstraction_type=[
+                        AbstractionTypes.AbstractionType(
+                            abstraction_ref=ConfigurableLibraryRefType(
+                                vendor='amba.com',
+                                library='AMBA2',
+                                name='APB_rtl',
+                                version='r2p0_4'
+                            ),
+                            port_maps=AbstractionTypes.AbstractionType.PortMaps(
+                                port_map=[
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='PSELx'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='psel'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='PENABLE'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='penable'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='PADDR'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='paddr'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='PWRITE'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='pwrite'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='PWDATA'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='pwdata'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='PRDATA'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='prdata'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='PCLK'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='pclk'
+                                        )
+                                    ),
+                                ]
+                            )
+                        ),
+                    ]
+                ),
+                target=BusInterfaceType.Target(
+                    memory_map_ref=MemoryMapRef(
+                        memory_map_ref='ambaAPB'
+                    )
+                ),
+                connection_required=True
+            ),
+        ]
+    ),
+    memory_maps=MemoryMaps(
+        memory_map=[
+            MemoryMapType(
+                name='ambaAPB',
+                address_block=[
+                    AddressBlock(
+                        name='defaultid4489839',
+                        base_address=BaseAddress(
+                            value='0'
+                        ),
+                        range=UnsignedPositiveLongintExpression(
+                            value='4 * (2 ** 10)'
+                        ),
+                        width=UnsignedPositiveIntExpression(
+                            value='width'
+                        ),
+                        parameters=Parameters(
+                            parameter=[
+                                Parameter(
+                                    name='width',
+                                    value=Value(
+                                        value='32'
+                                    ),
+                                    parameter_id='width',
+                                    type_value=FormatType.LONGINT
+                                ),
+                            ]
+                        ),
+                        register=[
+                            AddressBlockType.Register(
+                                name='inputreg',
+                                address_offset=UnsignedLongintExpression(
+                                    value="'h0"
+                                ),
+                                size=UnsignedPositiveIntExpression(
+                                    value='32'
+                                ),
+                                access_policies=AccessPolicies(
+                                    access_policy=[
+                                        AccessPolicies.AccessPolicy(
+                                            access=AccessType.READ_ONLY
+                                        ),
+                                    ]
+                                ),
+                                field_value=[
+                                    FieldType(
+                                        name='inputreg_field',
+                                        bit_offset=UnsignedIntExpression(
+                                            value='0'
+                                        ),
+                                        bit_width=UnsignedPositiveIntExpression(
+                                            value='gpi'
+                                        ),
+                                        volatile=True,
+                                        field_access_policies=FieldType.FieldAccessPolicies(
+                                            field_access_policy=[
+                                                FieldType.FieldAccessPolicies.FieldAccessPolicy(
+                                                    access=Access(
+                                                        value=AccessType.READ_ONLY
+                                                    )
+                                                ),
+                                            ]
+                                        )
+                                    ),
+                                ]
+                            ),
+                            AddressBlockType.Register(
+                                name='outputreg',
+                                address_offset=UnsignedLongintExpression(
+                                    value="'h4"
+                                ),
+                                size=UnsignedPositiveIntExpression(
+                                    value='8'
+                                ),
+                                access_policies=AccessPolicies(
+                                    access_policy=[
+                                        AccessPolicies.AccessPolicy(
+                                            access=AccessType.READ_WRITE
+                                        ),
+                                    ]
+                                ),
+                                field_value=[
+                                    FieldType(
+                                        name='outputreg_field',
+                                        bit_offset=UnsignedIntExpression(
+                                            value='0'
+                                        ),
+                                        bit_width=UnsignedPositiveIntExpression(
+                                            value='gpo'
+                                        ),
+                                        resets=FieldType.Resets(
+                                            reset=[
+                                                Reset(
+                                                    value=UnsignedBitVectorExpression(
+                                                        value="(('h00) >> 0) & {gpo{1'b1}}"
+                                                    )
+                                                ),
+                                            ]
+                                        ),
+                                        field_access_policies=FieldType.FieldAccessPolicies(
+                                            field_access_policy=[
+                                                FieldType.FieldAccessPolicies.FieldAccessPolicy(
+                                                    access=Access(
+                                                        value=AccessType.READ_WRITE
+                                                    )
+                                                ),
+                                            ]
+                                        )
+                                    ),
+                                ]
+                            ),
+                        ]
+                    ),
+                ]
+            ),
+        ]
+    ),
+    model=Model(
+        views=ModelType.Views(
+            view=[
+                ModelType.Views.View(
+                    name='vhdlsource',
+                    env_identifier=[
+                        ModelType.Views.View.EnvIdentifier(
+                            value=':modelsim.mentor.com:'
+                        ),
+                        ModelType.Views.View.EnvIdentifier(
+                            value=':ncsim.cadence.com:'
+                        ),
+                        ModelType.Views.View.EnvIdentifier(
+                            value=':vcs.synopsys.com:'
+                        ),
+                        ModelType.Views.View.EnvIdentifier(
+                            value=':designcompiler.synopsys.com:'
+                        ),
+                    ],
+                    component_instantiation_ref='vhdlsource'
+                ),
+            ]
+        ),
+        instantiations=ModelType.Instantiations(
+            component_instantiation=[
+                ComponentInstantiationType(
+                    name='vhdlsource',
+                    language=LanguageType(
+                        value='vhdl'
+                    ),
+                    module_name='gpio(rtl)',
+                    module_parameters=ComponentInstantiationType.ModuleParameters(
+                        module_parameter=[
+                            ModuleParameterType(
+                                name='GPI_BITS',
+                                value=Value(
+                                    value='gpi'
+                                ),
+                                minimum='1',
+                                maximum='32',
+                                data_type='integer'
+                            ),
+                            ModuleParameterType(
+                                name='GPO_RESET_VALUE',
+                                value=Value(
+                                    value='GPORESET'
+                                ),
+                                data_type='integer'
+                            ),
+                            ModuleParameterType(
+                                name='GPO_BITS',
+                                value=Value(
+                                    value='gpo'
+                                ),
+                                minimum='1',
+                                maximum='32',
+                                data_type='integer'
+                            ),
+                        ]
+                    ),
+                    file_set_ref=[
+                        FileSetRef(
+                            local_name='fs-vhdlSource'
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        ports=ModelType.Ports(
+            port=[
+                Port(
+                    name='pclk',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='psel',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='penable',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='paddr',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN,
+                        vectors=ExtendedVectorsType(
+                            vector=[
+                                ExtendedVectorsType.Vector(
+                                    left=Left(
+                                        value='11'
+                                    ),
+                                    right=Right(
+                                        value='0'
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+                Port(
+                    name='pwrite',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='pwdata',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN,
+                        vectors=ExtendedVectorsType(
+                            vector=[
+                                ExtendedVectorsType.Vector(
+                                    left=Left(
+                                        value='31'
+                                    ),
+                                    right=Right(
+                                        value='0'
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+                Port(
+                    name='prdata',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.OUT,
+                        vectors=ExtendedVectorsType(
+                            vector=[
+                                ExtendedVectorsType.Vector(
+                                    left=Left(
+                                        value='31'
+                                    ),
+                                    right=Right(
+                                        value='0'
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+                Port(
+                    name='rst_an',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN,
+                        drivers=Drivers(
+                            driver=[
+                                Driver(
+                                    single_shot_driver=SingleShotDriver(
+                                        single_shot_offset=SingleShotDriver.SingleShotOffset(
+                                            value='500'
+                                        ),
+                                        single_shot_value=UnsignedBitVectorExpression(
+                                            value='1'
+                                        ),
+                                        single_shot_duration=SingleShotDriver.SingleShotDuration(
+                                            value='1000'
+                                        )
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+                Port(
+                    name='gpi',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN,
+                        vectors=ExtendedVectorsType(
+                            vector=[
+                                ExtendedVectorsType.Vector(
+                                    left=Left(
+                                        value='gpi - 1'
+                                    ),
+                                    right=Right(
+                                        value='0'
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+                Port(
+                    name='gpo',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.OUT,
+                        vectors=ExtendedVectorsType(
+                            vector=[
+                                ExtendedVectorsType.Vector(
+                                    left=Left(
+                                        value='gpo - 1'
+                                    ),
+                                    right=Right(
+                                        value='0'
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+            ]
+        )
+    ),
+    file_sets=FileSets(
+        file_set=[
+            FileSet(
+                name='fs-vhdlSource',
+                file=[
+                    File(
+                        name=IpxactUri(
+                            value='hdlsrc/gpio.vhd'
+                        ),
+                        file_type=[
+                            FileType(
+                                value=SimpleFileType.VHDL_SOURCE
+                            ),
+                        ],
+                        logical_name=File.LogicalName(
+                            value='gpio_lib'
+                        )
+                    ),
+                ]
+            ),
+        ]
+    ),
+    parameters=Parameters(
+        parameter=[
+            Parameter(
+                name='GPI_BITS',
+                value=Value(
+                    value='8'
+                ),
+                parameter_id='gpi',
+                prompt='Number of input:',
+                order=0.0,
+                config_groups=[
+                    'requiredConfig',
+                ],
+                minimum='1',
+                maximum='32',
+                resolve=ParameterTypeResolve.USER
+            ),
+            Parameter(
+                name='GPO_RESET_VALUE',
+                value=Value(
+                    value="'h00000000"
+                ),
+                parameter_id='GPORESET',
+                prompt='Reset value of the outputs (Value other than 0x0 will not match XML):',
+                order=2.0,
+                config_groups=[
+                    'requiredConfig',
+                ],
+                resolve=ParameterTypeResolve.USER
+            ),
+            Parameter(
+                name='GPO_BITS',
+                value=Value(
+                    value='8'
+                ),
+                parameter_id='gpo',
+                prompt='Number of outputs:',
+                order=1.0,
+                config_groups=[
+                    'requiredConfig',
+                ],
+                minimum='1',
+                maximum='32',
+                resolve=ParameterTypeResolve.USER
+            ),
+        ]
+    )
+)

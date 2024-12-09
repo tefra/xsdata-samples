@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:abstractionDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>abstractiondef.tlm</ipxact:library>
+  <ipxact:name>serial_pv</ipxact:name>
+  <ipxact:version>1.0</ipxact:version>
+  <ipxact:busType vendor="spiritconsortium.org" library="busdef.generic" name="serial" version="1.0"/>
+  <ipxact:ports>
+    <ipxact:port>
+      <ipxact:logicalName>RW_TRANSACTION</ipxact:logicalName>
+      <ipxact:transactional>
+        <ipxact:onInitiator>
+          <ipxact:presence>required</ipxact:presence>
+          <ipxact:initiative>requires</ipxact:initiative>
+          <ipxact:protocol>
+            <ipxact:protocolType>tlm</ipxact:protocolType>
+          </ipxact:protocol>
+        </ipxact:onInitiator>
+        <ipxact:onTarget>
+          <ipxact:presence>required</ipxact:presence>
+          <ipxact:initiative>provides</ipxact:initiative>
+          <ipxact:protocol>
+            <ipxact:protocolType>tlm</ipxact:protocolType>
+          </ipxact:protocol>
+        </ipxact:onTarget>
+      </ipxact:transactional>
+    </ipxact:port>
+  </ipxact:ports>
+</ipxact:abstractionDefinition>
+

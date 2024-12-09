@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:abstractionDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>abstractiondef.tlm</ipxact:library>
+  <ipxact:name>apb_pv</ipxact:name>
+  <ipxact:version>1.4</ipxact:version>
+  <ipxact:busType vendor="amba.com" library="AMBA2" name="APB" version="r2p0_4"/>
+  <ipxact:ports>
+    <ipxact:port>
+      <ipxact:logicalName>PV_TRANS</ipxact:logicalName>
+      <ipxact:transactional>
+        <ipxact:qualifier>
+          <ipxact:isAddress>true</ipxact:isAddress>
+          <ipxact:isData>true</ipxact:isData>
+        </ipxact:qualifier>
+        <ipxact:onInitiator>
+          <ipxact:presence>required</ipxact:presence>
+          <ipxact:initiative>requires</ipxact:initiative>
+          <ipxact:protocol>
+            <ipxact:protocolType custom="pv_initiator_port">custom</ipxact:protocolType>
+          </ipxact:protocol>
+        </ipxact:onInitiator>
+        <ipxact:onTarget>
+          <ipxact:presence>required</ipxact:presence>
+          <ipxact:initiative>provides</ipxact:initiative>
+          <ipxact:protocol>
+            <ipxact:protocolType custom="pv_target_port">custom</ipxact:protocolType>
+          </ipxact:protocol>
+        </ipxact:onTarget>
+      </ipxact:transactional>
+    </ipxact:port>
+  </ipxact:ports>
+</ipxact:abstractionDefinition>
+
