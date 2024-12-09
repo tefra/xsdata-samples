@@ -1,0 +1,81 @@
+from ipxact.models.configurable_library_ref_type import ConfigurableLibraryRefType
+from ipxact.models.design_configuration import DesignConfiguration
+from ipxact.models.instance_name import InstanceName
+from ipxact.models.library_ref_type import LibraryRefType
+
+
+obj = DesignConfiguration(
+    vendor='spiritconsortium.org',
+    library='Leon2TLM',
+    name='designConfig_apbSubSystem',
+    version='1.3',
+    design_ref=LibraryRefType(
+        vendor='spiritconsortium.org',
+        library='Leon2TLM',
+        name='design_apbSubSystem',
+        version='1.3'
+    ),
+    interconnection_configuration=[
+        DesignConfiguration.InterconnectionConfiguration(
+            interconnection_ref='apbramconnection',
+            abstractor_instances=[
+                DesignConfiguration.InterconnectionConfiguration.AbstractorInstances(
+                    abstractor_instance=[
+                        DesignConfiguration.InterconnectionConfiguration.AbstractorInstances.AbstractorInstance(
+                            instance_name='i_pv2apb',
+                            abstractor_ref=ConfigurableLibraryRefType(
+                                vendor='spiritconsortium.org',
+                                library='Leon2TLM',
+                                name='pv2apb',
+                                version='1.0'
+                            ),
+                            view_name='PVPVT'
+                        ),
+                    ]
+                ),
+            ]
+        ),
+    ],
+    view_configuration=[
+        DesignConfiguration.ViewConfiguration(
+            instance_name=InstanceName(
+                value='i_apb'
+            ),
+            view=DesignConfiguration.ViewConfiguration.View(
+                view_ref='TLM_PV'
+            )
+        ),
+        DesignConfiguration.ViewConfiguration(
+            instance_name=InstanceName(
+                value='i_h2p'
+            ),
+            view=DesignConfiguration.ViewConfiguration.View(
+                view_ref='TLM_PV'
+            )
+        ),
+        DesignConfiguration.ViewConfiguration(
+            instance_name=InstanceName(
+                value='i_irq'
+            ),
+            view=DesignConfiguration.ViewConfiguration.View(
+                view_ref='TLM_PV'
+            )
+        ),
+        DesignConfiguration.ViewConfiguration(
+            instance_name=InstanceName(
+                value='i_tim'
+            ),
+            view=DesignConfiguration.ViewConfiguration.View(
+                view_ref='TLM_PV'
+            )
+        ),
+        DesignConfiguration.ViewConfiguration(
+            instance_name=InstanceName(
+                value='i_apbram'
+            ),
+            view=DesignConfiguration.ViewConfiguration.View(
+                view_ref='systemC'
+            )
+        ),
+    ]
+)

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>Leon2TLM</ipxact:library>
+  <ipxact:name>design_apbSubSystem</ipxact:name>
+  <ipxact:version>1.3</ipxact:version>
+  <ipxact:componentInstances>
+    <ipxact:componentInstance>
+      <ipxact:instanceName>i_apb</ipxact:instanceName>
+      <ipxact:componentRef vendor="spiritconsortium.org" library="Leon2TLM" name="apbbus8" version="1.4">
+        <ipxact:configurableElementValues>
+          <ipxact:configurableElementValue referenceId="rangeSlv0">4096</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="rangeSlv1">4096</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="rangeSlv2">4096</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="rangeSlv3">4096</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="rangeSlv4">4096</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="rangeSlv5">4096</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="rangeSlv6">4096</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="rangeSlv7">4096</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="remapAddressSlv0">'h0</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="remapAddressSlv1">'h1000</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="remapAddressSlv2">'h2000</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="remapAddressSlv3">'h3000</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="remapAddressSlv4">'h4000</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="remapAddressSlv5">'h5000</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="remapAddressSlv6">'h6000</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="remapAddressSlv7">'h7000</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="mapfile">leon2ApbBus.map</ipxact:configurableElementValue>
+        </ipxact:configurableElementValues>
+      </ipxact:componentRef>
+    </ipxact:componentInstance>
+    <ipxact:componentInstance>
+      <ipxact:instanceName>i_h2p</ipxact:instanceName>
+      <ipxact:componentRef vendor="spiritconsortium.org" library="Leon2TLM" name="apbmst" version="1.4">
+        <ipxact:configurableElementValues>
+          <ipxact:configurableElementValue referenceId="masterRange">1 * (2 ** 20)</ipxact:configurableElementValue>
+          <ipxact:configurableElementValue referenceId="mapfile">leon2ApbMst.map</ipxact:configurableElementValue>
+        </ipxact:configurableElementValues>
+      </ipxact:componentRef>
+    </ipxact:componentInstance>
+    <ipxact:componentInstance>
+      <ipxact:instanceName>i_irq</ipxact:instanceName>
+      <ipxact:componentRef vendor="spiritconsortium.org" library="Leon2TLM" name="irqctrl" version="1.4"/>
+    </ipxact:componentInstance>
+    <ipxact:componentInstance>
+      <ipxact:instanceName>i_tim</ipxact:instanceName>
+      <ipxact:componentRef vendor="spiritconsortium.org" library="Leon2TLM" name="timers" version="1.4"/>
+    </ipxact:componentInstance>
+    <ipxact:componentInstance>
+      <ipxact:instanceName>i_apbram</ipxact:instanceName>
+      <ipxact:componentRef vendor="spiritconsortium.org" library="Leon2TLM" name="apbram" version="1.0"/>
+    </ipxact:componentInstance>
+  </ipxact:componentInstances>
+  <ipxact:interconnections>
+    <ipxact:interconnection>
+      <ipxact:name>defaultid4490143</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_h2p" busRef="APB_Master"/>
+      <ipxact:activeInterface componentInstanceRef="i_apb" busRef="APB_MirroredMaster"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>defaultid4490160</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_irq" busRef="APB_Slave"/>
+      <ipxact:activeInterface componentInstanceRef="i_apb" busRef="APB_MirroredSlave0"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>defaultid4490176</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_tim" busRef="APB_Slave"/>
+      <ipxact:activeInterface componentInstanceRef="i_apb" busRef="APB_MirroredSlave1"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>apbramconnection</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_apbram" busRef="ambaAPB"/>
+      <ipxact:activeInterface componentInstanceRef="i_apb" busRef="APB_MirroredSlave2"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>defaultid4490226</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_irq" busRef="INT_Slave1"/>
+      <ipxact:activeInterface componentInstanceRef="i_tim" busRef="Int0"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>defaultid4490243</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_irq" busRef="INT_Slave2"/>
+      <ipxact:activeInterface componentInstanceRef="i_tim" busRef="Int1"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>AHB_Slave</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_h2p" busRef="AHB_Slave"/>
+      <ipxact:hierInterface busRef="AHB_Slave"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>INT_Master</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_irq" busRef="INT_Master"/>
+      <ipxact:hierInterface busRef="INT_Master"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>INT_Slave</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_irq" busRef="INT_Slave4"/>
+      <ipxact:hierInterface busRef="INT_Slave"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>APB_MSlave_4</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_apb" busRef="APB_MirroredSlave4"/>
+      <ipxact:hierInterface busRef="APB_MSlave_4"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>APB_MSlave_5</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_apb" busRef="APB_MirroredSlave5"/>
+      <ipxact:hierInterface busRef="APB_MSlave_5"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>APB_MSlave_6</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_apb" busRef="APB_MirroredSlave6"/>
+      <ipxact:hierInterface busRef="APB_MSlave_6"/>
+    </ipxact:interconnection>
+    <ipxact:interconnection>
+      <ipxact:name>APB_MSlave_7</ipxact:name>
+      <ipxact:activeInterface componentInstanceRef="i_apb" busRef="APB_MirroredSlave7"/>
+      <ipxact:hierInterface busRef="APB_MSlave_7"/>
+    </ipxact:interconnection>
+  </ipxact:interconnections>
+  <ipxact:adHocConnections>
+    <ipxact:adHocConnection>
+      <ipxact:name>clk_timers</ipxact:name>
+      <ipxact:portReferences>
+        <ipxact:internalPortReference portRef="clk" componentInstanceRef="i_tim"/>
+        <ipxact:externalPortReference portRef="clk_timers"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+    <ipxact:adHocConnection>
+      <ipxact:name>pclk</ipxact:name>
+      <ipxact:portReferences>
+        <ipxact:internalPortReference portRef="pclk" componentInstanceRef="i_apbram"/>
+        <ipxact:externalPortReference portRef="pclk"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+    <ipxact:adHocConnection>
+      <ipxact:name>presetn</ipxact:name>
+      <ipxact:portReferences>
+        <ipxact:internalPortReference portRef="presetn" componentInstanceRef="i_apbram"/>
+        <ipxact:externalPortReference portRef="presetn"/>
+      </ipxact:portReferences>
+    </ipxact:adHocConnection>
+  </ipxact:adHocConnections>
+</ipxact:design>
+

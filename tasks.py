@@ -12,6 +12,7 @@ SUITES = {
     "datexii": "datexii/schemas",
     "ewp": "ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd",
     "generali": "generali/schemas -r",
+    "ipxact": "ipxact/schemas/index.xsd",
     "netex": "netex/NeTEx/xsd/NeTEx_publication.xsd",
     "npo": "npo/schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd",
     "reqif": "reqif/schemas/reqif.xsd",

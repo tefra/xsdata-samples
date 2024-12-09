@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:busDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>amba.com</ipxact:vendor>
+  <ipxact:library>AMBA2</ipxact:library>
+  <ipxact:name>APB</ipxact:name>
+  <ipxact:version>r2p0_4</ipxact:version>
+  <ipxact:directConnection>false</ipxact:directConnection>
+  <ipxact:isAddressable>true</ipxact:isAddressable>
+  <ipxact:maxInitiators>1</ipxact:maxInitiators>
+  <ipxact:systemGroupNames>
+    <ipxact:systemGroupName>apb_clk</ipxact:systemGroupName>
+    <ipxact:systemGroupName>apb_reset</ipxact:systemGroupName>
+  </ipxact:systemGroupNames>
+</ipxact:busDefinition>
+

@@ -1,0 +1,161 @@
+from ipxact.models.active_interface import ActiveInterface
+from ipxact.models.ad_hoc_connection import AdHocConnection
+from ipxact.models.ad_hoc_connections import AdHocConnections
+from ipxact.models.component_instance import ComponentInstance
+from ipxact.models.component_instances import ComponentInstances
+from ipxact.models.configurable_library_ref_type import ConfigurableLibraryRefType
+from ipxact.models.design import Design
+from ipxact.models.external_port_reference import ExternalPortReference
+from ipxact.models.hier_interface_type import HierInterfaceType
+from ipxact.models.instance_name import InstanceName
+from ipxact.models.interconnection import Interconnection
+from ipxact.models.interconnections import Interconnections
+
+
+obj = Design(
+    vendor='spiritconsortium.org',
+    library='Leon2RTL',
+    name='uartHierDesign',
+    version='1.0',
+    component_instances=ComponentInstances(
+        component_instance=[
+            ComponentInstance(
+                instance_name=InstanceName(
+                    value='i_uart'
+                ),
+                component_ref=ConfigurableLibraryRefType(
+                    vendor='spiritconsortium.org',
+                    library='Leon2RTL',
+                    name='uart',
+                    version='1.2'
+                )
+            ),
+        ]
+    ),
+    interconnections=Interconnections(
+        interconnection=[
+            Interconnection(
+                name='APBClk',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_uart',
+                        bus_ref='APBClk'
+                    ),
+                ],
+                hier_interface=[
+                    HierInterfaceType(
+                        bus_ref='APBClk'
+                    ),
+                ]
+            ),
+            Interconnection(
+                name='APBReset',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_uart',
+                        bus_ref='APBReset'
+                    ),
+                ],
+                hier_interface=[
+                    HierInterfaceType(
+                        bus_ref='APBReset'
+                    ),
+                ]
+            ),
+            Interconnection(
+                name='Interrupt',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_uart',
+                        bus_ref='Interrupt'
+                    ),
+                ],
+                hier_interface=[
+                    HierInterfaceType(
+                        bus_ref='Interrupt'
+                    ),
+                ]
+            ),
+            Interconnection(
+                name='serial',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_uart',
+                        bus_ref='serial'
+                    ),
+                ],
+                hier_interface=[
+                    HierInterfaceType(
+                        bus_ref='serial'
+                    ),
+                ]
+            ),
+            Interconnection(
+                name='ambaAPB',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_uart',
+                        bus_ref='ambaAPB'
+                    ),
+                ],
+                hier_interface=[
+                    HierInterfaceType(
+                        bus_ref='ambaAPB'
+                    ),
+                ]
+            ),
+        ]
+    ),
+    ad_hoc_connections=AdHocConnections(
+        ad_hoc_connection=[
+            AdHocConnection(
+                name='scaler',
+                port_references=AdHocConnection.PortReferences(
+                    internal_port_reference=[
+                        AdHocConnection.PortReferences.InternalPortReference(
+                            port_ref='scaler',
+                            component_instance_ref='i_uart'
+                        ),
+                    ],
+                    external_port_reference=[
+                        ExternalPortReference(
+                            port_ref='scaler'
+                        ),
+                    ]
+                )
+            ),
+            AdHocConnection(
+                name='txen',
+                port_references=AdHocConnection.PortReferences(
+                    internal_port_reference=[
+                        AdHocConnection.PortReferences.InternalPortReference(
+                            port_ref='txen',
+                            component_instance_ref='i_uart'
+                        ),
+                    ],
+                    external_port_reference=[
+                        ExternalPortReference(
+                            port_ref='txen'
+                        ),
+                    ]
+                )
+            ),
+            AdHocConnection(
+                name='flow',
+                port_references=AdHocConnection.PortReferences(
+                    internal_port_reference=[
+                        AdHocConnection.PortReferences.InternalPortReference(
+                            port_ref='flow',
+                            component_instance_ref='i_uart'
+                        ),
+                    ],
+                    external_port_reference=[
+                        ExternalPortReference(
+                            port_ref='flow'
+                        ),
+                    ]
+                )
+            ),
+        ]
+    )
+)

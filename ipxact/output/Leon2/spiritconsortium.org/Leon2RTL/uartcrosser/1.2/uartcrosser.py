@@ -1,0 +1,371 @@
+from ipxact.models.abstraction_types import AbstractionTypes
+from ipxact.models.bus_interface import BusInterface
+from ipxact.models.bus_interfaces import BusInterfaces
+from ipxact.models.component import Component
+from ipxact.models.component_instantiation_type import ComponentInstantiationType
+from ipxact.models.component_port_direction_type import ComponentPortDirectionType
+from ipxact.models.configurable_library_ref_type import ConfigurableLibraryRefType
+from ipxact.models.extended_vectors_type import ExtendedVectorsType
+from ipxact.models.file import File
+from ipxact.models.file_set import FileSet
+from ipxact.models.file_set_ref import FileSetRef
+from ipxact.models.file_sets import FileSets
+from ipxact.models.file_type import FileType
+from ipxact.models.format_type import FormatType
+from ipxact.models.ipxact_uri import IpxactUri
+from ipxact.models.language_type import LanguageType
+from ipxact.models.left import Left
+from ipxact.models.model import Model
+from ipxact.models.model_type import ModelType
+from ipxact.models.module_parameter_type import ModuleParameterType
+from ipxact.models.parameter import Parameter
+from ipxact.models.parameter_type_resolve import ParameterTypeResolve
+from ipxact.models.parameters import Parameters
+from ipxact.models.port import Port
+from ipxact.models.port_wire_type import PortWireType
+from ipxact.models.right import Right
+from ipxact.models.simple_file_type import SimpleFileType
+from ipxact.models.value import Value
+from ipxact.models.vector import Vector
+from ipxact.models.vectors import Vectors
+
+
+obj = Component(
+    vendor='spiritconsortium.org',
+    library='Leon2RTL',
+    name='uartcrosser',
+    version='1.2',
+    bus_interfaces=BusInterfaces(
+        bus_interface=[
+            BusInterface(
+                name='Uart0',
+                bus_type=ConfigurableLibraryRefType(
+                    vendor='spiritconsortium.org',
+                    library='busdef.generic',
+                    name='serial',
+                    version='1.0'
+                ),
+                abstraction_types=AbstractionTypes(
+                    abstraction_type=[
+                        AbstractionTypes.AbstractionType(
+                            abstraction_ref=ConfigurableLibraryRefType(
+                                vendor='spiritconsortium.org',
+                                library='busdef.generic',
+                                name='serial_rtl',
+                                version='1.0'
+                            ),
+                            port_maps=AbstractionTypes.AbstractionType.PortMaps(
+                                port_map=[
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='RxD'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='rxd0'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='TxD'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='txd0'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='CTSn'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='ctsn0'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='RTSn'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='rtsn0'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='DTRn'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='rxen0'
+                                        )
+                                    ),
+                                ]
+                            )
+                        ),
+                    ]
+                ),
+                mirrored_initiator=''
+            ),
+            BusInterface(
+                name='Uart1',
+                bus_type=ConfigurableLibraryRefType(
+                    vendor='spiritconsortium.org',
+                    library='busdef.generic',
+                    name='serial',
+                    version='1.0'
+                ),
+                abstraction_types=AbstractionTypes(
+                    abstraction_type=[
+                        AbstractionTypes.AbstractionType(
+                            abstraction_ref=ConfigurableLibraryRefType(
+                                vendor='spiritconsortium.org',
+                                library='busdef.generic',
+                                name='serial_rtl',
+                                version='1.0'
+                            ),
+                            port_maps=AbstractionTypes.AbstractionType.PortMaps(
+                                port_map=[
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='RxD'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='rxd1'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='TxD'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='txd1'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='CTSn'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='ctsn1'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='RTSn'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='rtsn1'
+                                        )
+                                    ),
+                                    AbstractionTypes.AbstractionType.PortMaps.PortMap(
+                                        logical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort(
+                                            name='DTRn'
+                                        ),
+                                        physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
+                                            name='rxen1'
+                                        )
+                                    ),
+                                ]
+                            )
+                        ),
+                    ]
+                ),
+                mirrored_initiator=''
+            ),
+        ]
+    ),
+    model=Model(
+        views=ModelType.Views(
+            view=[
+                ModelType.Views.View(
+                    name='vhdlsource',
+                    env_identifier=[
+                        ModelType.Views.View.EnvIdentifier(
+                            value=':modelsim.mentor.com:'
+                        ),
+                        ModelType.Views.View.EnvIdentifier(
+                            value=':ncsim.cadence.com:'
+                        ),
+                        ModelType.Views.View.EnvIdentifier(
+                            value=':vcs.synopsys.com:'
+                        ),
+                        ModelType.Views.View.EnvIdentifier(
+                            value=':designcompiler.synopsys.com:'
+                        ),
+                    ],
+                    component_instantiation_ref='vhdlsource'
+                ),
+            ]
+        ),
+        instantiations=ModelType.Instantiations(
+            component_instantiation=[
+                ComponentInstantiationType(
+                    name='vhdlsource',
+                    language=LanguageType(
+                        value='vhdl'
+                    ),
+                    module_name='uartcrosser(struct)',
+                    module_parameters=ComponentInstantiationType.ModuleParameters(
+                        module_parameter=[
+                            ModuleParameterType(
+                                name='ScalerValue',
+                                vectors=ModuleParameterType.Vectors(
+                                    vector=[
+                                        ModuleParameterType.Vectors.Vector(
+                                            left=Left(
+                                                value='0'
+                                            ),
+                                            right=Right(
+                                                value='7'
+                                            )
+                                        ),
+                                    ]
+                                ),
+                                value=Value(
+                                    value='ScalerValue'
+                                ),
+                                type_value=FormatType.BIT,
+                                data_type='std_logic_vector(7 downto 0)'
+                            ),
+                        ]
+                    ),
+                    file_set_ref=[
+                        FileSetRef(
+                            local_name='fs-vhdlSource'
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        ports=ModelType.Ports(
+            port=[
+                Port(
+                    name='rxd0',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.OUT
+                    )
+                ),
+                Port(
+                    name='txd0',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='ctsn0',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.OUT
+                    )
+                ),
+                Port(
+                    name='rtsn0',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='rxen0',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='rxd1',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.OUT
+                    )
+                ),
+                Port(
+                    name='txd1',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='ctsn1',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.OUT
+                    )
+                ),
+                Port(
+                    name='rtsn1',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='rxen1',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.IN
+                    )
+                ),
+                Port(
+                    name='scaler',
+                    wire=PortWireType(
+                        direction=ComponentPortDirectionType.OUT,
+                        vectors=ExtendedVectorsType(
+                            vector=[
+                                ExtendedVectorsType.Vector(
+                                    left=Left(
+                                        value='7'
+                                    ),
+                                    right=Right(
+                                        value='0'
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                ),
+            ]
+        )
+    ),
+    file_sets=FileSets(
+        file_set=[
+            FileSet(
+                name='fs-vhdlSource',
+                file=[
+                    File(
+                        name=IpxactUri(
+                            value='hdlsrc/uartcrosser.vhd'
+                        ),
+                        file_type=[
+                            FileType(
+                                value=SimpleFileType.VHDL_SOURCE
+                            ),
+                        ],
+                        logical_name=File.LogicalName(
+                            value='uartcrosser_lib'
+                        )
+                    ),
+                ]
+            ),
+        ]
+    ),
+    parameters=Parameters(
+        parameter=[
+            Parameter(
+                name='ScalerValue',
+                vectors=Vectors(
+                    vector=[
+                        Vector(
+                            left=Left(
+                                value='0'
+                            ),
+                            right=Right(
+                                value='7'
+                            )
+                        ),
+                    ]
+                ),
+                value=Value(
+                    value="8'b00000001"
+                ),
+                parameter_id='ScalerValue',
+                prompt='Value of the scaler:',
+                config_groups=[
+                    'requiredConfig',
+                ],
+                type_value=FormatType.BIT,
+                resolve=ParameterTypeResolve.USER
+            ),
+        ]
+    )
+)

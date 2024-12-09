@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>Leon2TLM</ipxact:library>
+  <ipxact:name>designConfig_apbSubSystem</ipxact:name>
+  <ipxact:version>1.3</ipxact:version>
+  <ipxact:designRef vendor="spiritconsortium.org" library="Leon2TLM" name="design_apbSubSystem" version="1.3"/>
+  <ipxact:interconnectionConfiguration>
+    <ipxact:interconnectionRef>apbramconnection</ipxact:interconnectionRef>
+    <ipxact:abstractorInstances>
+      <ipxact:abstractorInstance>
+        <ipxact:instanceName>i_pv2apb</ipxact:instanceName>
+        <ipxact:abstractorRef vendor="spiritconsortium.org" library="Leon2TLM" name="pv2apb" version="1.0"/>
+        <ipxact:viewName>PVPVT</ipxact:viewName>
+      </ipxact:abstractorInstance>
+    </ipxact:abstractorInstances>
+  </ipxact:interconnectionConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_apb</ipxact:instanceName>
+    <ipxact:view viewRef="TLM_PV"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_h2p</ipxact:instanceName>
+    <ipxact:view viewRef="TLM_PV"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_irq</ipxact:instanceName>
+    <ipxact:view viewRef="TLM_PV"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_tim</ipxact:instanceName>
+    <ipxact:view viewRef="TLM_PV"/>
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>i_apbram</ipxact:instanceName>
+    <ipxact:view viewRef="systemC"/>
+  </ipxact:viewConfiguration>
+</ipxact:designConfiguration>
+

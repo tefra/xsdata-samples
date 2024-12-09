@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:abstractionDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022">
+  <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+  <ipxact:library>busdef.reset</ipxact:library>
+  <ipxact:name>reset_rtl</ipxact:name>
+  <ipxact:version>1.0</ipxact:version>
+  <ipxact:busType vendor="spiritconsortium.org" library="busdef.reset" name="reset" version="1.0"/>
+  <ipxact:ports>
+    <ipxact:port>
+      <ipxact:logicalName>RESET</ipxact:logicalName>
+      <ipxact:wire>
+        <ipxact:qualifier>
+          <ipxact:isReset>true</ipxact:isReset>
+        </ipxact:qualifier>
+        <ipxact:onInitiator>
+          <ipxact:width>1</ipxact:width>
+          <ipxact:direction>out</ipxact:direction>
+        </ipxact:onInitiator>
+        <ipxact:onTarget>
+          <ipxact:width>1</ipxact:width>
+          <ipxact:direction>in</ipxact:direction>
+        </ipxact:onTarget>
+      </ipxact:wire>
+    </ipxact:port>
+    <ipxact:port>
+      <ipxact:logicalName>RESETn</ipxact:logicalName>
+      <ipxact:wire>
+        <ipxact:qualifier>
+          <ipxact:isReset>true</ipxact:isReset>
+        </ipxact:qualifier>
+        <ipxact:onInitiator>
+          <ipxact:width>1</ipxact:width>
+          <ipxact:direction>out</ipxact:direction>
+        </ipxact:onInitiator>
+        <ipxact:onTarget>
+          <ipxact:width>1</ipxact:width>
+          <ipxact:direction>in</ipxact:direction>
+        </ipxact:onTarget>
+      </ipxact:wire>
+    </ipxact:port>
+  </ipxact:ports>
+</ipxact:abstractionDefinition>
+

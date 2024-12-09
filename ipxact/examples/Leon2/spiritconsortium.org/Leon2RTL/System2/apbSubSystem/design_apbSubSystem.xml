@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+// Description: design_apbSubSystem.xml
+// Author:      The SPIRIT Consortium
+// Revision:    $Revision: 1506 $
+// Date:        $Date: 2009-04-25 23:51:56 -0700 (Sat, 25 Apr 2009) $
+//
+// Copyright (c) 2009 The SPIRIT Consortium.
+//
+// This work forms part of a deliverable of The SPIRIT Consortium.
+//
+// Use of these materials are governed by the legal terms and conditions
+// outlined in the disclaimer available from www.spiritconsortium.org.
+//
+// This source file is provided on an AS IS basis.  The SPIRIT
+// Consortium disclaims any warranty express or implied including
+// any warranty of merchantability and fitness for use for a
+// particular purpose.
+//
+// The user of the source file shall indemnify and hold The SPIRIT
+// Consortium and its members harmless from any damages or liability.
+// Users are requested to provide feedback to The SPIRIT Consortium
+// using either mailto:feedback@lists.spiritconsortium.org or the forms at
+// http://www.spiritconsortium.org/about/contact_us/
+//
+// This file may be copied, and distributed, with or without
+// modifications; this notice must be included on any copy.
+-->
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
+               xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2022 http://www.accellera.org/XMLSchema/IPXACT/1685-2022/index.xsd">
+   <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+   <ipxact:library>Leon2RTL</ipxact:library>
+   <ipxact:name>design_apbSubSystem</ipxact:name>
+   <ipxact:version>2.0</ipxact:version>
+   <ipxact:componentInstances>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_apbbus9</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="apbbus9"
+                              vendor="spiritconsortium.org"
+                              version="1.3">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="rangeSlv0">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="rangeSlv1">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="rangeSlv2">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="rangeSlv3">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="rangeSlv4">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="rangeSlv5">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="rangeSlv6">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="rangeSlv7">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="rangeSlv8">4096</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv0">'h0</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv1">'h1000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv2">'h2000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv3">'h3000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv4">'h4000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv5">'h5000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv6">'h6000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv7">'h7000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="remapAddressSlv8">'h8000</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_apbmst</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="apbmst"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="masterRange">1 * (2 ** 20)</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_irqctrl</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="irqctrl"
+                              vendor="spiritconsortium.org"
+                              version="1.2"/>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_timers</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="timers"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="TPRESC">22</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_uart</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="uart"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="ClockPeriod">8</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseDuration">4</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseOffset">4</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseValue">1</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="EXTBAUD">false</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="VirtualClockPeriod">8</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="VirtualClockPulseDuration">4</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="VirtualClockPulseOffset">4</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="VirtualClockPulseValue">1</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_uart_1</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="uart"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="ClockPeriod">8</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseDuration">4</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseOffset">4</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseValue">1</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="EXTBAUD">false</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="id_OutputFileName">default.htm</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="VirtualClockPeriod">8</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="VirtualClockPulseDuration">4</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="VirtualClockPulseOffset">4</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="VirtualClockPulseValue">1</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_uartcrosser</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="uartcrosser"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="ScalerValue">'h1</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+   </ipxact:componentInstances>
+   <ipxact:interconnections>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490161</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAPB" componentInstanceRef="i_apbmst"/>
+         <ipxact:activeInterface busRef="MirroredMaster" componentInstanceRef="i_apbbus9"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490178</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAPB" componentInstanceRef="i_irqctrl"/>
+         <ipxact:activeInterface busRef="MirroredSlave0" componentInstanceRef="i_apbbus9"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490194</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAPB" componentInstanceRef="i_timers"/>
+         <ipxact:activeInterface busRef="MirroredSlave1" componentInstanceRef="i_apbbus9"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490211</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAPB" componentInstanceRef="i_uart"/>
+         <ipxact:activeInterface busRef="MirroredSlave2" componentInstanceRef="i_apbbus9"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490228</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAPB" componentInstanceRef="i_uart_1"/>
+         <ipxact:activeInterface busRef="MirroredSlave3" componentInstanceRef="i_apbbus9"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490244</ipxact:name>
+         <ipxact:activeInterface busRef="SlaveInt1" componentInstanceRef="i_irqctrl"/>
+         <ipxact:activeInterface busRef="Int0" componentInstanceRef="i_timers"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490261</ipxact:name>
+         <ipxact:activeInterface busRef="SlaveInt2" componentInstanceRef="i_irqctrl"/>
+         <ipxact:activeInterface busRef="Int1" componentInstanceRef="i_timers"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490278</ipxact:name>
+         <ipxact:activeInterface busRef="SlaveInt0" componentInstanceRef="i_irqctrl"/>
+         <ipxact:activeInterface busRef="Interrupt" componentInstanceRef="i_uart"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490294</ipxact:name>
+         <ipxact:activeInterface busRef="SlaveInt3" componentInstanceRef="i_irqctrl"/>
+         <ipxact:activeInterface busRef="Interrupt" componentInstanceRef="i_uart_1"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490311</ipxact:name>
+         <ipxact:activeInterface busRef="serial" componentInstanceRef="i_uart"/>
+         <ipxact:activeInterface busRef="Uart0" componentInstanceRef="i_uartcrosser"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490327</ipxact:name>
+         <ipxact:activeInterface busRef="serial" componentInstanceRef="i_uart_1"/>
+         <ipxact:activeInterface busRef="Uart1" componentInstanceRef="i_uartcrosser"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>i_apbbus_slv4</ipxact:name>
+         <ipxact:activeInterface busRef="MirroredSlave4" componentInstanceRef="i_apbbus9"/>
+         <ipxact:hierInterface busRef="i_apbbus_slv4"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>i_apbbus_slv5</ipxact:name>
+         <ipxact:activeInterface busRef="MirroredSlave5" componentInstanceRef="i_apbbus9"/>
+         <ipxact:hierInterface busRef="i_apbbus_slv5"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>i_apbbus_slv6</ipxact:name>
+         <ipxact:activeInterface busRef="MirroredSlave6" componentInstanceRef="i_apbbus9"/>
+         <ipxact:hierInterface busRef="i_apbbus_slv6"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>i_apbbus_slv7</ipxact:name>
+         <ipxact:activeInterface busRef="MirroredSlave7" componentInstanceRef="i_apbbus9"/>
+         <ipxact:hierInterface busRef="i_apbbus_slv7"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>Interrupt</ipxact:name>
+         <ipxact:activeInterface busRef="MasterInt" componentInstanceRef="i_irqctrl"/>
+         <ipxact:hierInterface busRef="Interrupt"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>i_apbbus_slv8</ipxact:name>
+         <ipxact:activeInterface busRef="MirroredSlave8" componentInstanceRef="i_apbbus9"/>
+         <ipxact:hierInterface busRef="i_apbbus_slv8"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>Int4</ipxact:name>
+         <ipxact:activeInterface busRef="SlaveInt4" componentInstanceRef="i_irqctrl"/>
+         <ipxact:hierInterface busRef="Int4"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>Int5</ipxact:name>
+         <ipxact:activeInterface busRef="SlaveInt5" componentInstanceRef="i_irqctrl"/>
+         <ipxact:hierInterface busRef="Int5"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>Int6</ipxact:name>
+         <ipxact:activeInterface busRef="SlaveInt6" componentInstanceRef="i_irqctrl"/>
+         <ipxact:hierInterface busRef="Int6"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>ex_ambaAHB</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAHB" componentInstanceRef="i_apbmst"/>
+         <ipxact:hierInterface busRef="ex_ambaAHB"/>
+      </ipxact:interconnection>
+   </ipxact:interconnections>
+   <ipxact:adHocConnections>
+      <ipxact:adHocConnection>
+         <ipxact:name>id4490347</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="i_uart_1" portRef="scaler">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>7</ipxact:left>
+                     <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_uart" portRef="scaler">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>7</ipxact:left>
+                     <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_uartcrosser" portRef="scaler">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>7</ipxact:left>
+                     <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>logic_one</ipxact:name>
+         <ipxact:tiedValue>1</ipxact:tiedValue>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="i_timers" portRef="freezetime"/>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>logic_zero</ipxact:name>
+         <ipxact:tiedValue>0</ipxact:tiedValue>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="i_irqctrl" portRef="irq">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>14</ipxact:left>
+                     <ipxact:right>14</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_irqctrl" portRef="irq">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>13</ipxact:left>
+                     <ipxact:right>13</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_irqctrl" portRef="irq">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>12</ipxact:left>
+                     <ipxact:right>12</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_irqctrl" portRef="irq">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>11</ipxact:left>
+                     <ipxact:right>11</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_irqctrl" portRef="irq">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>10</ipxact:left>
+                     <ipxact:right>10</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_irqctrl" portRef="irq">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>9</ipxact:left>
+                     <ipxact:right>9</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_irqctrl" portRef="irq">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>8</ipxact:left>
+                     <ipxact:right>8</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_irqctrl" portRef="irq">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>7</ipxact:left>
+                     <ipxact:right>7</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="i_timers" portRef="ntrace"/>
+            <ipxact:internalPortReference componentInstanceRef="i_timers" portRef="lresp"/>
+            <ipxact:internalPortReference componentInstanceRef="i_timers" portRef="dsuen"/>
+            <ipxact:internalPortReference componentInstanceRef="i_timers" portRef="dsubre"/>
+            <ipxact:internalPortReference componentInstanceRef="i_timers" portRef="dsuact"/>
+            <ipxact:internalPortReference componentInstanceRef="i_timers" portRef="dresp"/>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+   </ipxact:adHocConnections>
+</ipxact:design>

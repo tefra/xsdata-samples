@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+// Description: design_Leon2Platform.xml
+// Author:      The SPIRIT Consortium
+// Revision:    $Revision: 1506 $
+// Date:        $Date: 2009-04-25 23:51:56 -0700 (Sat, 25 Apr 2009) $
+//
+// Copyright (c) 2009 The SPIRIT Consortium.
+//
+// This work forms part of a deliverable of The SPIRIT Consortium.
+//
+// Use of these materials are governed by the legal terms and conditions
+// outlined in the disclaimer available from www.spiritconsortium.org.
+//
+// This source file is provided on an AS IS basis.  The SPIRIT
+// Consortium disclaims any warranty express or implied including
+// any warranty of merchantability and fitness for use for a
+// particular purpose.
+//
+// The user of the source file shall indemnify and hold The SPIRIT
+// Consortium and its members harmless from any damages or liability.
+// Users are requested to provide feedback to The SPIRIT Consortium
+// using either mailto:feedback@lists.spiritconsortium.org or the forms at
+// http://www.spiritconsortium.org/about/contact_us/
+//
+// This file may be copied, and distributed, with or without
+// modifications; this notice must be included on any copy.
+-->
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
+               xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2022 http://www.accellera.org/XMLSchema/IPXACT/1685-2022/index.xsd">
+   <ipxact:vendor>spiritconsortium.org</ipxact:vendor>
+   <ipxact:library>Leon2RTL</ipxact:library>
+   <ipxact:name>design_Leon2Platform</ipxact:name>
+   <ipxact:version>5.0</ipxact:version>
+   <ipxact:componentInstances>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_ahb2ahb</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="ahb2ahb"
+                              vendor="spiritconsortium.org"
+                              version="1.2"/>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>i_ahb2ahb_1</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="ahb2ahb"
+                              vendor="spiritconsortium.org"
+                              version="1.2"/>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>uahbbus</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="ahbbus33"
+                              vendor="spiritconsortium.org"
+                              version="1.3">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="defmast">1</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="range_slv0_mirror">'h00040000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="range_slv1_mirror">'h00020000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="range_slv2_mirror">'h40000000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="split_slv0">false</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="split_slv1">false</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="split_slv2">false</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="start_addr_slv0_mirror">'h0</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="start_addr_slv1_mirror">'h30000000</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="start_addr_slv2_mirror">'h80000000</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>uahbram</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="ahbram"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="addressBusSize">16</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>uapbSubSystem</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="apbSubSystem"
+                              vendor="spiritconsortium.org"
+                              version="5.0"/>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>uaudioSubSystem</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="audioSubSystem"
+                              vendor="spiritconsortium.org"
+                              version="5.0"/>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>ucgu</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="cgu"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="ClockPeriod">100</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseDuration">50</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseOffset">50</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseValue">1</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>udma</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="dma"
+                              vendor="spiritconsortium.org"
+                              version="1.2"/>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>ui2cSubSystem</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="i2cSubSystem"
+                              vendor="spiritconsortium.org"
+                              version="5.0"/>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>uproc</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="processor"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="code_file">master5.tbl</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+      <ipxact:componentInstance>
+         <ipxact:instanceName>urgu</ipxact:instanceName>
+         <ipxact:componentRef library="Leon2RTL"
+                              name="rgu"
+                              vendor="spiritconsortium.org"
+                              version="1.2">
+            <ipxact:configurableElementValues>
+               <ipxact:configurableElementValue referenceId="ClockPeriod">100</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseDuration">50</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseOffset">50</ipxact:configurableElementValue>
+               <ipxact:configurableElementValue referenceId="ClockPulseValue">1</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+         </ipxact:componentRef>
+      </ipxact:componentInstance>
+   </ipxact:componentInstances>
+   <ipxact:interconnections>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490051</ipxact:name>
+         <ipxact:activeInterface busRef="AHBmaster" componentInstanceRef="uproc"/>
+         <ipxact:activeInterface busRef="MirroredMaster0" componentInstanceRef="uahbbus"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490067</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAHB" componentInstanceRef="udma"/>
+         <ipxact:activeInterface busRef="MirroredMaster1" componentInstanceRef="uahbbus"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490084</ipxact:name>
+         <ipxact:activeInterface busRef="AHBmaster" componentInstanceRef="i_ahb2ahb_1"/>
+         <ipxact:activeInterface busRef="MirroredMaster2" componentInstanceRef="uahbbus"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490101</ipxact:name>
+         <ipxact:activeInterface busRef="AHBSlave" componentInstanceRef="uahbram"/>
+         <ipxact:activeInterface busRef="MirroredSlave0" componentInstanceRef="uahbbus"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490117</ipxact:name>
+         <ipxact:activeInterface busRef="ex_ambaAHB" componentInstanceRef="uapbSubSystem"/>
+         <ipxact:activeInterface busRef="MirroredSlave1" componentInstanceRef="uahbbus"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490134</ipxact:name>
+         <ipxact:activeInterface busRef="AHBSlave" componentInstanceRef="i_ahb2ahb"/>
+         <ipxact:activeInterface busRef="MirroredSlave2" componentInstanceRef="uahbbus"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490151</ipxact:name>
+         <ipxact:activeInterface busRef="SlaveIntController" componentInstanceRef="uproc"/>
+         <ipxact:activeInterface busRef="Interrupt" componentInstanceRef="uapbSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490168</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAPB" componentInstanceRef="ucgu"/>
+         <ipxact:activeInterface busRef="i_apbbus_slv4" componentInstanceRef="uapbSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490184</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAPB" componentInstanceRef="urgu"/>
+         <ipxact:activeInterface busRef="i_apbbus_slv5" componentInstanceRef="uapbSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490201</ipxact:name>
+         <ipxact:activeInterface busRef="APBslave" componentInstanceRef="uproc"/>
+         <ipxact:activeInterface busRef="i_apbbus_slv6" componentInstanceRef="uapbSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490218</ipxact:name>
+         <ipxact:activeInterface busRef="ambaAPB" componentInstanceRef="udma"/>
+         <ipxact:activeInterface busRef="i_apbbus_slv7" componentInstanceRef="uapbSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490235</ipxact:name>
+         <ipxact:activeInterface busRef="i2c_ambaAPB" componentInstanceRef="ui2cSubSystem"/>
+         <ipxact:activeInterface busRef="i_apbbus_slv8" componentInstanceRef="uapbSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490252</ipxact:name>
+         <ipxact:activeInterface busRef="AHBmaster" componentInstanceRef="i_ahb2ahb"/>
+         <ipxact:activeInterface busRef="MirroredMaster0" componentInstanceRef="uaudioSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490269</ipxact:name>
+         <ipxact:activeInterface busRef="AHBSlave" componentInstanceRef="i_ahb2ahb_1"/>
+         <ipxact:activeInterface busRef="i_ahbbus_slv4" componentInstanceRef="uaudioSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490285</ipxact:name>
+         <ipxact:activeInterface busRef="Int6" componentInstanceRef="uapbSubSystem"/>
+         <ipxact:activeInterface busRef="mp3_dma_Interrupt" componentInstanceRef="uaudioSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490302</ipxact:name>
+         <ipxact:activeInterface busRef="AHBClk" componentInstanceRef="uapbSubSystem"/>
+         <ipxact:activeInterface busRef="clock0_2" componentInstanceRef="ucgu"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490319</ipxact:name>
+         <ipxact:activeInterface busRef="AHBClk" componentInstanceRef="uproc"/>
+         <ipxact:activeInterface busRef="clock0_3" componentInstanceRef="ucgu"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490352</ipxact:name>
+         <ipxact:activeInterface busRef="APBClk" componentInstanceRef="uproc"/>
+         <ipxact:activeInterface busRef="clock0_1" componentInstanceRef="ucgu"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490369</ipxact:name>
+         <ipxact:activeInterface busRef="Int5" componentInstanceRef="uapbSubSystem"/>
+         <ipxact:activeInterface busRef="interrupt" componentInstanceRef="udma"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490385</ipxact:name>
+         <ipxact:activeInterface busRef="Int4" componentInstanceRef="uapbSubSystem"/>
+         <ipxact:activeInterface busRef="i2c_interrupt" componentInstanceRef="ui2cSubSystem"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490402</ipxact:name>
+         <ipxact:activeInterface busRef="AHBReset" componentInstanceRef="uapbSubSystem"/>
+         <ipxact:activeInterface busRef="reset0_2" componentInstanceRef="urgu"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490419</ipxact:name>
+         <ipxact:activeInterface busRef="AHBReset" componentInstanceRef="uproc"/>
+         <ipxact:activeInterface busRef="reset0_3" componentInstanceRef="urgu"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>defaultid4490452</ipxact:name>
+         <ipxact:activeInterface busRef="APBReset" componentInstanceRef="uproc"/>
+         <ipxact:activeInterface busRef="reset0_1" componentInstanceRef="urgu"/>
+      </ipxact:interconnection>
+      <ipxact:interconnection>
+         <ipxact:name>i2c</ipxact:name>
+         <ipxact:activeInterface busRef="i2c" componentInstanceRef="ui2cSubSystem"/>
+         <ipxact:hierInterface busRef="i2c"/>
+      </ipxact:interconnection>
+   </ipxact:interconnections>
+   <ipxact:adHocConnections>
+      <ipxact:adHocConnection>
+         <ipxact:name>clkin</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="urgu" portRef="ipclk"/>
+            <ipxact:internalPortReference componentInstanceRef="ucgu" portRef="clkin"/>
+            <ipxact:externalPortReference portRef="clkin"/>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>rstin_an</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="urgu" portRef="rstin_an"/>
+            <ipxact:externalPortReference portRef="rstin_an"/>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>SimDone</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="uproc" portRef="SimDone"/>
+            <ipxact:externalPortReference portRef="SimDone"/>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>mp3Decode_dac_data</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="uaudioSubSystem" portRef="i_mp3Decode_dac_data">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>23</ipxact:left>
+                     <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:externalPortReference portRef="mp3Decode_dac_data"/>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>id4490556</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="ui2cSubSystem" portRef="i_i2c_ip_clk"/>
+            <ipxact:internalPortReference componentInstanceRef="ucgu" portRef="clkout">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>1</ipxact:left>
+                     <ipxact:right>1</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>id4490577</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="uaudioSubSystem" portRef="i_mp3Decode_mp3_clk"/>
+            <ipxact:internalPortReference componentInstanceRef="ucgu" portRef="clkout">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>2</ipxact:left>
+                     <ipxact:right>2</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>id4490598</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="uaudioSubSystem" portRef="i_mp3Decode_dac_clk"/>
+            <ipxact:internalPortReference componentInstanceRef="ucgu" portRef="clkout">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>3</ipxact:left>
+                     <ipxact:right>3</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>id4490619</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="ui2cSubSystem" portRef="i_i2c_rst_an"/>
+            <ipxact:internalPortReference componentInstanceRef="urgu" portRef="rstout_an">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>1</ipxact:left>
+                     <ipxact:right>1</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>id4490640</ipxact:name>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="uaudioSubSystem" portRef="i_mp3Decode_mp3_rst_an"/>
+            <ipxact:internalPortReference componentInstanceRef="urgu" portRef="rstout_an">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>2</ipxact:left>
+                     <ipxact:right>2</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+      <ipxact:adHocConnection>
+         <ipxact:name>logic_zero</ipxact:name>
+         <ipxact:tiedValue>0</ipxact:tiedValue>
+         <ipxact:portReferences>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hlock_mst0"/>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hlock_mst2"/>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>15</ipxact:left>
+                     <ipxact:right>15</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>14</ipxact:left>
+                     <ipxact:right>14</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>13</ipxact:left>
+                     <ipxact:right>13</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>12</ipxact:left>
+                     <ipxact:right>12</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>11</ipxact:left>
+                     <ipxact:right>11</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>10</ipxact:left>
+                     <ipxact:right>10</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>9</ipxact:left>
+                     <ipxact:right>9</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>8</ipxact:left>
+                     <ipxact:right>8</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>7</ipxact:left>
+                     <ipxact:right>7</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>6</ipxact:left>
+                     <ipxact:right>6</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>5</ipxact:left>
+                     <ipxact:right>5</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>4</ipxact:left>
+                     <ipxact:right>4</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>3</ipxact:left>
+                     <ipxact:right>3</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>2</ipxact:left>
+                     <ipxact:right>2</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>1</ipxact:left>
+                     <ipxact:right>1</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv1">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>0</ipxact:left>
+                     <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>15</ipxact:left>
+                     <ipxact:right>15</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>14</ipxact:left>
+                     <ipxact:right>14</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>13</ipxact:left>
+                     <ipxact:right>13</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>12</ipxact:left>
+                     <ipxact:right>12</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>11</ipxact:left>
+                     <ipxact:right>11</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>10</ipxact:left>
+                     <ipxact:right>10</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>9</ipxact:left>
+                     <ipxact:right>9</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>8</ipxact:left>
+                     <ipxact:right>8</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>7</ipxact:left>
+                     <ipxact:right>7</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>6</ipxact:left>
+                     <ipxact:right>6</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>5</ipxact:left>
+                     <ipxact:right>5</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>4</ipxact:left>
+                     <ipxact:right>4</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>3</ipxact:left>
+                     <ipxact:right>3</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>2</ipxact:left>
+                     <ipxact:right>2</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>1</ipxact:left>
+                     <ipxact:right>1</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uahbbus" portRef="hsplit_slv2">
+               <ipxact:partSelect>
+                  <ipxact:range>
+                     <ipxact:left>0</ipxact:left>
+                     <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+               </ipxact:partSelect>
+            </ipxact:internalPortReference>
+            <ipxact:internalPortReference componentInstanceRef="uaudioSubSystem" portRef="MirroredMaster0_hlock"/>
+            <ipxact:internalPortReference componentInstanceRef="uproc" portRef="clkn"/>
+            <ipxact:internalPortReference componentInstanceRef="uproc" portRef="tck"/>
+            <ipxact:internalPortReference componentInstanceRef="uproc" portRef="tdi"/>
+            <ipxact:internalPortReference componentInstanceRef="uproc" portRef="tms"/>
+            <ipxact:internalPortReference componentInstanceRef="uproc" portRef="ntrst"/>
+         </ipxact:portReferences>
+      </ipxact:adHocConnection>
+   </ipxact:adHocConnections>
+</ipxact:design>

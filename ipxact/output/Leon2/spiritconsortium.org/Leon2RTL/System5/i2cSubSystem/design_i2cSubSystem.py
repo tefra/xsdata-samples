@@ -1,0 +1,198 @@
+from ipxact.models.active_interface import ActiveInterface
+from ipxact.models.ad_hoc_connection import AdHocConnection
+from ipxact.models.ad_hoc_connections import AdHocConnections
+from ipxact.models.complex_tied_value_expression import ComplexTiedValueExpression
+from ipxact.models.component_instance import ComponentInstance
+from ipxact.models.component_instances import ComponentInstances
+from ipxact.models.configurable_element_value import ConfigurableElementValue
+from ipxact.models.configurable_element_values import ConfigurableElementValues
+from ipxact.models.configurable_library_ref_type import ConfigurableLibraryRefType
+from ipxact.models.design import Design
+from ipxact.models.external_port_reference import ExternalPortReference
+from ipxact.models.hier_interface_type import HierInterfaceType
+from ipxact.models.instance_name import InstanceName
+from ipxact.models.interconnection import Interconnection
+from ipxact.models.interconnections import Interconnections
+
+
+obj = Design(
+    vendor='spiritconsortium.org',
+    library='Leon2RTL',
+    name='design_i2cSubSystem',
+    version='5.0',
+    component_instances=ComponentInstances(
+        component_instance=[
+            ComponentInstance(
+                instance_name=InstanceName(
+                    value='i_i2c'
+                ),
+                component_ref=ConfigurableLibraryRefType(
+                    configurable_element_values=ConfigurableElementValues(
+                        configurable_element_value=[
+                            ConfigurableElementValue(
+                                value='8',
+                                reference_id='ClockPeriod'
+                            ),
+                            ConfigurableElementValue(
+                                value='4',
+                                reference_id='ClockPulseDuration'
+                            ),
+                            ConfigurableElementValue(
+                                value='4',
+                                reference_id='ClockPulseOffset'
+                            ),
+                            ConfigurableElementValue(
+                                value='1',
+                                reference_id='ClockPulseValue'
+                            ),
+                            ConfigurableElementValue(
+                                value='1000',
+                                reference_id='ipClockPeriod'
+                            ),
+                            ConfigurableElementValue(
+                                value='500',
+                                reference_id='ipClockPulseDuration'
+                            ),
+                            ConfigurableElementValue(
+                                value='500',
+                                reference_id='ipClockPulseOffset'
+                            ),
+                            ConfigurableElementValue(
+                                value='1',
+                                reference_id='ipClockPulseValue'
+                            ),
+                        ]
+                    ),
+                    vendor='spiritconsortium.org',
+                    library='Leon2RTL',
+                    name='i2c',
+                    version='1.0'
+                )
+            ),
+            ComponentInstance(
+                instance_name=InstanceName(
+                    value='i_i2c_io'
+                ),
+                component_ref=ConfigurableLibraryRefType(
+                    vendor='spiritconsortium.org',
+                    library='Leon2RTL',
+                    name='i2c_io',
+                    version='1.0'
+                )
+            ),
+        ]
+    ),
+    interconnections=Interconnections(
+        interconnection=[
+            Interconnection(
+                name='defaultid4489761',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_i2c_io',
+                        bus_ref='i2c_internal'
+                    ),
+                    ActiveInterface(
+                        component_instance_ref='i_i2c',
+                        bus_ref='i2c_internal'
+                    ),
+                ]
+            ),
+            Interconnection(
+                name='i2c_interrupt',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_i2c',
+                        bus_ref='interrupt'
+                    ),
+                ],
+                hier_interface=[
+                    HierInterfaceType(
+                        bus_ref='i2c_interrupt'
+                    ),
+                ]
+            ),
+            Interconnection(
+                name='i2c',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_i2c_io',
+                        bus_ref='i2c'
+                    ),
+                ],
+                hier_interface=[
+                    HierInterfaceType(
+                        bus_ref='i2c'
+                    ),
+                ]
+            ),
+            Interconnection(
+                name='i2c_ambaAPB',
+                active_interface=[
+                    ActiveInterface(
+                        component_instance_ref='i_i2c',
+                        bus_ref='ambaAPB'
+                    ),
+                ],
+                hier_interface=[
+                    HierInterfaceType(
+                        bus_ref='i2c_ambaAPB'
+                    ),
+                ]
+            ),
+        ]
+    ),
+    ad_hoc_connections=AdHocConnections(
+        ad_hoc_connection=[
+            AdHocConnection(
+                name='i_i2c_ip_clk',
+                port_references=AdHocConnection.PortReferences(
+                    internal_port_reference=[
+                        AdHocConnection.PortReferences.InternalPortReference(
+                            port_ref='ip_clk',
+                            component_instance_ref='i_i2c'
+                        ),
+                    ],
+                    external_port_reference=[
+                        ExternalPortReference(
+                            port_ref='i_i2c_ip_clk'
+                        ),
+                    ]
+                )
+            ),
+            AdHocConnection(
+                name='i_i2c_rst_an',
+                port_references=AdHocConnection.PortReferences(
+                    internal_port_reference=[
+                        AdHocConnection.PortReferences.InternalPortReference(
+                            port_ref='rst_an',
+                            component_instance_ref='i_i2c'
+                        ),
+                    ],
+                    external_port_reference=[
+                        ExternalPortReference(
+                            port_ref='i_i2c_rst_an'
+                        ),
+                    ]
+                )
+            ),
+            AdHocConnection(
+                name='logic_zero',
+                tied_value=ComplexTiedValueExpression(
+                    value='0'
+                ),
+                port_references=AdHocConnection.PortReferences(
+                    internal_port_reference=[
+                        AdHocConnection.PortReferences.InternalPortReference(
+                            port_ref='scl_out',
+                            component_instance_ref='i_i2c_io'
+                        ),
+                        AdHocConnection.PortReferences.InternalPortReference(
+                            port_ref='sda_out',
+                            component_instance_ref='i_i2c_io'
+                        ),
+                    ]
+                )
+            ),
+        ]
+    )
+)
