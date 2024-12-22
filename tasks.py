@@ -56,7 +56,7 @@ def build(
 
     for s in get_suite(c, suite):
         run(f"rm -rf {s}/models")
-        run(f"xsdata {SUITES[s]} --config {s}/.xsdata.xml {build_cmd_args}")
+        run(f"xsdata generate {SUITES[s]} --config {s}/.xsdata.xml {build_cmd_args}")
 
 
 @task
@@ -101,7 +101,7 @@ def all_tasks(
 
     for s in get_suite(c, suite):
         run(f"rm -rf {s}/models")
-        run(f"xsdata {SUITES[s]} --config {s}/.xsdata.xml {build_cmd_args}")
+        run(f"xsdata generate {SUITES[s]} --config {s}/.xsdata.xml {build_cmd_args}")
         run(f"pytest --output-format {output_format} {s}/")
 
         if s not in ("generali", "sdmx_ml"):
