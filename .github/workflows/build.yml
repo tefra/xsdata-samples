@@ -19,13 +19,13 @@ jobs:
           - { name: "Amadeus", id: "amadeus" }
           - { name: "Autosar", id: "autosar" }
           - { name: "BPMN", id: "bpmn" }
-          - { name: "Common Types", id: "common-types", skip_mypy: true }
+          - { name: "Common Types", id: "common-types" }
           - { name: "Crossref Metadata", id: "crossref" }
           - { name: "DateX II", id: "datexii" }
           - { name: "EWP", id: "ewp" }
           - { name: "Generali", id: "generali", skip_mypy: true }
-          - { name: "IPXACT", id: "ipxact", skip_mypy: true }
-          - { name: "NeTEx", id: "netex", skip_mypy: true }
+          - { name: "IPXACT", id: "ipxact" }
+          - { name: "NeTEx", id: "netex" }
           - { name: "NPO API", id: "npo" }
           - { name: "ReqIF", id: "reqif" }
           - { name: "Sabre", id: "sabre" }
