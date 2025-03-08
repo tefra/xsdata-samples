@@ -4,11 +4,11 @@ from dataclasses import dataclass, field
 
 from travelport.models.base_req_2 import BaseReq2
 from travelport.models.profile_data_filter_1 import ProfileDataFilter1
-from travelport.models.provisioning_code_profile_type_1 import (
-    ProvisioningCodeProfileType1,
+from travelport.models.provisioning_code_profile_type_7 import (
+    ProvisioningCodeProfileType7,
 )
-from travelport.models.unique_profile_id_profile_type_1 import (
-    UniqueProfileIdProfileType1,
+from travelport.models.unique_profile_id_profile_type_7 import (
+    UniqueProfileIdProfileType7,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -98,7 +98,7 @@ class ProfileRetrieveReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType1 = field(
+        profile_type: None | ProvisioningCodeProfileType7 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -131,7 +131,7 @@ class ProfileRetrieveReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType1 = field(
+        profile_type: None | UniqueProfileIdProfileType7 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from travelport.models.provisioning_code_profile_type_1 import (
-    ProvisioningCodeProfileType1,
+from travelport.models.provisioning_code_profile_type_2 import (
+    ProvisioningCodeProfileType2,
 )
-from travelport.models.unique_profile_id_profile_type_1 import (
-    UniqueProfileIdProfileType1,
+from travelport.models.unique_profile_id_profile_type_2 import (
+    UniqueProfileIdProfileType2,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -74,7 +74,7 @@ class ProfileParentDelete1:
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType1 = field(
+        profile_type: None | ProvisioningCodeProfileType2 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -107,7 +107,7 @@ class ProfileParentDelete1:
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType1 = field(
+        profile_type: None | UniqueProfileIdProfileType2 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

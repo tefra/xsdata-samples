@@ -3,7 +3,7 @@
   <Output maxLineLength="79" genericCollections="false" unionType="true">
     <Package>sabre.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
-    <Structure>filenames</Structure>
+    <Structure>clusters</Structure>
     <DocstringStyle>Google</DocstringStyle>
     <RelativeImports>false</RelativeImports>
     <CompoundFields defaultName="choice" useSubstitutionGroups="false" forceDefaultName="false" maxNameParts="3">false</CompoundFields>

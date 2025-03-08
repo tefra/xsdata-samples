@@ -3,11 +3,11 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from travelport.models.base_req_5 import BaseReq5
-from travelport.models.provisioning_code_profile_type_2 import (
-    ProvisioningCodeProfileType2,
+from travelport.models.provisioning_code_profile_type_14 import (
+    ProvisioningCodeProfileType14,
 )
-from travelport.models.unique_profile_id_profile_type_2 import (
-    UniqueProfileIdProfileType2,
+from travelport.models.unique_profile_id_profile_type_14 import (
+    UniqueProfileIdProfileType14,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -88,7 +88,7 @@ class ProfileDeleteReq2(BaseReq5):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType2 = field(
+        profile_type: None | ProvisioningCodeProfileType14 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -121,7 +121,7 @@ class ProfileDeleteReq2(BaseReq5):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType2 = field(
+        profile_type: None | UniqueProfileIdProfileType14 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

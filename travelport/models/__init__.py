@@ -3365,6 +3365,45 @@ from travelport.models.provisioning_code_profile_type_1 import (
 from travelport.models.provisioning_code_profile_type_2 import (
     ProvisioningCodeProfileType2,
 )
+from travelport.models.provisioning_code_profile_type_3 import (
+    ProvisioningCodeProfileType3,
+)
+from travelport.models.provisioning_code_profile_type_4 import (
+    ProvisioningCodeProfileType4,
+)
+from travelport.models.provisioning_code_profile_type_5 import (
+    ProvisioningCodeProfileType5,
+)
+from travelport.models.provisioning_code_profile_type_6 import (
+    ProvisioningCodeProfileType6,
+)
+from travelport.models.provisioning_code_profile_type_7 import (
+    ProvisioningCodeProfileType7,
+)
+from travelport.models.provisioning_code_profile_type_8 import (
+    ProvisioningCodeProfileType8,
+)
+from travelport.models.provisioning_code_profile_type_9 import (
+    ProvisioningCodeProfileType9,
+)
+from travelport.models.provisioning_code_profile_type_10 import (
+    ProvisioningCodeProfileType10,
+)
+from travelport.models.provisioning_code_profile_type_11 import (
+    ProvisioningCodeProfileType11,
+)
+from travelport.models.provisioning_code_profile_type_12 import (
+    ProvisioningCodeProfileType12,
+)
+from travelport.models.provisioning_code_profile_type_13 import (
+    ProvisioningCodeProfileType13,
+)
+from travelport.models.provisioning_code_profile_type_14 import (
+    ProvisioningCodeProfileType14,
+)
+from travelport.models.provisioning_code_profile_type_15 import (
+    ProvisioningCodeProfileType15,
+)
 from travelport.models.pseudo_city_code_1 import PseudoCityCode1
 from travelport.models.pseudo_city_code_2 import PseudoCityCode2
 from travelport.models.pseudo_city_code_3 import PseudoCityCode3
@@ -5661,6 +5700,45 @@ from travelport.models.unique_profile_id_profile_type_1 import (
 )
 from travelport.models.unique_profile_id_profile_type_2 import (
     UniqueProfileIdProfileType2,
+)
+from travelport.models.unique_profile_id_profile_type_3 import (
+    UniqueProfileIdProfileType3,
+)
+from travelport.models.unique_profile_id_profile_type_4 import (
+    UniqueProfileIdProfileType4,
+)
+from travelport.models.unique_profile_id_profile_type_5 import (
+    UniqueProfileIdProfileType5,
+)
+from travelport.models.unique_profile_id_profile_type_6 import (
+    UniqueProfileIdProfileType6,
+)
+from travelport.models.unique_profile_id_profile_type_7 import (
+    UniqueProfileIdProfileType7,
+)
+from travelport.models.unique_profile_id_profile_type_8 import (
+    UniqueProfileIdProfileType8,
+)
+from travelport.models.unique_profile_id_profile_type_9 import (
+    UniqueProfileIdProfileType9,
+)
+from travelport.models.unique_profile_id_profile_type_10 import (
+    UniqueProfileIdProfileType10,
+)
+from travelport.models.unique_profile_id_profile_type_11 import (
+    UniqueProfileIdProfileType11,
+)
+from travelport.models.unique_profile_id_profile_type_12 import (
+    UniqueProfileIdProfileType12,
+)
+from travelport.models.unique_profile_id_profile_type_13 import (
+    UniqueProfileIdProfileType13,
+)
+from travelport.models.unique_profile_id_profile_type_14 import (
+    UniqueProfileIdProfileType14,
+)
+from travelport.models.unique_profile_id_profile_type_15 import (
+    UniqueProfileIdProfileType15,
 )
 from travelport.models.united_nations_1 import UnitedNations1
 from travelport.models.united_nations_2 import UnitedNations2
@@ -8268,7 +8346,20 @@ __all__ = [
     "ProviderReservationSearchResult",
     "ProviderReservationStatus",
     "ProvisioningCodeProfileType1",
+    "ProvisioningCodeProfileType10",
+    "ProvisioningCodeProfileType11",
+    "ProvisioningCodeProfileType12",
+    "ProvisioningCodeProfileType13",
+    "ProvisioningCodeProfileType14",
+    "ProvisioningCodeProfileType15",
     "ProvisioningCodeProfileType2",
+    "ProvisioningCodeProfileType3",
+    "ProvisioningCodeProfileType4",
+    "ProvisioningCodeProfileType5",
+    "ProvisioningCodeProfileType6",
+    "ProvisioningCodeProfileType7",
+    "ProvisioningCodeProfileType8",
+    "ProvisioningCodeProfileType9",
     "PseudoCityCode1",
     "PseudoCityCode2",
     "PseudoCityCode3",
@@ -9737,7 +9828,20 @@ __all__ = [
     "UnassociatedRemark5",
     "UnassociatedRemark6",
     "UniqueProfileIdProfileType1",
+    "UniqueProfileIdProfileType10",
+    "UniqueProfileIdProfileType11",
+    "UniqueProfileIdProfileType12",
+    "UniqueProfileIdProfileType13",
+    "UniqueProfileIdProfileType14",
+    "UniqueProfileIdProfileType15",
     "UniqueProfileIdProfileType2",
+    "UniqueProfileIdProfileType3",
+    "UniqueProfileIdProfileType4",
+    "UniqueProfileIdProfileType5",
+    "UniqueProfileIdProfileType6",
+    "UniqueProfileIdProfileType7",
+    "UniqueProfileIdProfileType8",
+    "UniqueProfileIdProfileType9",
     "UnitedNations1",
     "UnitedNations2",
     "UnitedNations3",

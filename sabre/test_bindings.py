@@ -4,8 +4,7 @@ from pathlib import Path
 from lxml import etree
 from xsdata.formats.dataclass.serializers import DictFactory
 
-from sabre.models import OtaAirLowFareSearchRq
-from sabre.models import OtaAirLowFareSearchRs
+from sabre.models import OtaAirLowFareSearchRs, OtaAirLowFareSearchRq
 
 cwd = Path(__file__).parent.absolute()
 xsd_location = str(cwd.joinpath("schemas/BargainFinderMaxRQ_v1-9-7.xsd"))

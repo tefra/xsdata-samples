@@ -9,11 +9,11 @@ from travelport.models.profile_child_search_req_hierarchy_type_2 import (
 from travelport.models.profile_search_modifiers_2 import (
     ProfileSearchModifiers2,
 )
-from travelport.models.provisioning_code_profile_type_2 import (
-    ProvisioningCodeProfileType2,
+from travelport.models.provisioning_code_profile_type_15 import (
+    ProvisioningCodeProfileType15,
 )
-from travelport.models.unique_profile_id_profile_type_2 import (
-    UniqueProfileIdProfileType2,
+from travelport.models.unique_profile_id_profile_type_15 import (
+    UniqueProfileIdProfileType15,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -136,7 +136,7 @@ class ProfileChildSearchReq2(BaseReq5):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType2 = field(
+        profile_type: None | ProvisioningCodeProfileType15 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -169,7 +169,7 @@ class ProfileChildSearchReq2(BaseReq5):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType2 = field(
+        profile_type: None | UniqueProfileIdProfileType15 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

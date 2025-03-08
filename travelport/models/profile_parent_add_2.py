@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from travelport.models.provisioning_code_profile_type_2 import (
-    ProvisioningCodeProfileType2,
+from travelport.models.provisioning_code_profile_type_9 import (
+    ProvisioningCodeProfileType9,
 )
-from travelport.models.unique_profile_id_profile_type_2 import (
-    UniqueProfileIdProfileType2,
+from travelport.models.unique_profile_id_profile_type_9 import (
+    UniqueProfileIdProfileType9,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -75,7 +75,7 @@ class ProfileParentAdd2:
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType2 = field(
+        profile_type: None | ProvisioningCodeProfileType9 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -108,7 +108,7 @@ class ProfileParentAdd2:
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType2 = field(
+        profile_type: None | UniqueProfileIdProfileType9 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
