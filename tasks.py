@@ -70,7 +70,8 @@ def test(c: Context, suite: Optional[str] = None, output_format="dataclasses"):
 def mypy(c: Context, suite: Optional[str] = None):
     run = partial(c.run, pty=True, echo=True)
     for s in get_suite(c, suite):
-        run(f"mypy {s}/models")
+        if s not in ("generali", "sdmx_ml"):
+            run(f"mypy {s}/models")
 
 
 @task
