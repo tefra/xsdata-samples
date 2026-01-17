@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class OverrideDefinition:
     """
-    Element to override setting of fields defined in default template .Can be used
-    to override custom filed,custom group , fixed field group and fixed field.
+    Element to override setting of fields defined in default template .Can
+    be used to override custom filed,custom group , fixed field group and
+    fixed field.
 
     Parameters
     ----------

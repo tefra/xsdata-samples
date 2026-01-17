@@ -6,9 +6,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
 class TypeOtherPreference2(Enum):
-    """Specify the OtherPreference.
+    """
+    Specify the OtherPreference. (ie.
 
-    (ie. Cruise, Taxi, etc)
+    Cruise, Taxi, etc).
     """
 
     CRUISE = "Cruise"

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TcpIpIcmpv6Props:
     """
-    This meta-class specifies the configuration options for ICMPv6 (Internet
-    Control Message Protocol).
+    This meta-class specifies the configuration options for ICMPv6
+    (Internet Control Message Protocol).
 
     :ivar tcp_ip_icmp_v_6_echo_reply_avoid_fragmentation: This attribute
         defines whether the echo reply is only transmitted in case that

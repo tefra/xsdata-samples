@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class OptionalServices:
     """
-    A wrapper for all the information regarding each of the Optional services.
+    A wrapper for all the information regarding each of the Optional
+    services.
 
     Parameters
     ----------

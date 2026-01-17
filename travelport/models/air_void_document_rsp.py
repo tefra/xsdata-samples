@@ -11,10 +11,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirVoidDocumentRsp(BaseRsp1):
-    """Result of void ticket request.
+    """
+    Result of void ticket request.
 
-    Includes ticket number of voided tickets and air segments with
-    updated status.
+    Includes ticket number of voided tickets and air segments with updated
+    status.
 
     Parameters
     ----------

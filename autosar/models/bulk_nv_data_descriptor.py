@@ -20,12 +20,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BulkNvDataDescriptor:
-    """This meta-class represents one bulk NV Data Block that is read-only for the
-    application software.
+    """
+    This meta-class represents one bulk NV Data Block that is read-only for
+    the application software.
 
-    The purpose of a bulk NV Data Block is to provide access to
-    information uploaded to the vehicle at e.g. the end of the
-    production line.
+    The purpose of a bulk NV Data Block is to provide access to information
+    uploaded to the vehicle at e.g. the end of the production line.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

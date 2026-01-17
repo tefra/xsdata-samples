@@ -17,15 +17,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DltUserNeeds:
-    """This meta-class specifies the needs on the configuration of the Diagnostic
-    Log and Trace module for one SessionId.
+    """
+    This meta-class specifies the needs on the configuration of the
+    Diagnostic Log and Trace module for one SessionId.
 
-    This class currently contains no attributes. An instance of this
-    class is used to find out which PortPrototypes of an
-    AtomicSwComponentType belong to this SessionId in order to group the
-    request and response PortPrototypes of the same SessionId. The
-    actual SessionId value is stored in the PortDefinedArgumentValue of
-    the respective PortPrototype specification.
+    This class currently contains no attributes. An instance of this class
+    is used to find out which PortPrototypes of an AtomicSwComponentType
+    belong to this SessionId in order to group the request and response
+    PortPrototypes of the same SessionId. The actual SessionId value is
+    stored in the PortDefinedArgumentValue of the respective PortPrototype
+    specification.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

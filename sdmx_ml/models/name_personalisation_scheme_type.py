@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class NamePersonalisationSchemeType(VtlDefinitionSchemeType):
     """
-    NamePersonalisationSchemeType defines a set of personalisations of VTL standard
-    names that are used in a set of transformations.
+    NamePersonalisationSchemeType defines a set of personalisations of VTL
+    standard names that are used in a set of transformations.
     """
 
     choice_1: Any = field(

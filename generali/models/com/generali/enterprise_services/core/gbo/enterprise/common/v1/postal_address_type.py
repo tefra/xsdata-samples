@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 class PostalAddressType:
     """
     <description xmlns=""> <description>A definition of a postal
-    address.</description> </description>
+    address.</description> </description>.
 
     :ivar occupant_name_text: <description xmlns="">The occupant at this
         address</description>

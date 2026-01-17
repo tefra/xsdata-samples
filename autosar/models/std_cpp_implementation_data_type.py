@@ -37,9 +37,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class StdCppImplementationDataType:
     """
-    This meta-class represents the way to specify a data type definition that is
-    taken as the basis for a C++ language binding to a C++ Standard Library
-    feature.
+    This meta-class represents the way to specify a data type definition
+    that is taken as the basis for a C++ language binding to a C++ Standard
+    Library feature.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

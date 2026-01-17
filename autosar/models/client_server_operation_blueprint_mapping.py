@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ClientServerOperationBlueprintMapping:
     """
-    This class describes a specific mapping between a ClientServerOperation in a
-    ClientServerInterface blueprint and a BswModuleEntry blueprint.
+    This class describes a specific mapping between a ClientServerOperation
+    in a ClientServerInterface blueprint and a BswModuleEntry blueprint.
 
     :ivar blueprint_mapping_guide: This attribute offers the possibility
         to provide additional information with respect to the mapping.

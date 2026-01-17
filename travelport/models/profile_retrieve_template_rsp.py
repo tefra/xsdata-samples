@@ -10,11 +10,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileRetrieveTemplateRsp(BaseRsp5):
-    """Response with profile template data.
+    """
+    Response with profile template data.
 
-    If the version on the request matches the most recent template
-    version then the template is not returned.  Otherwise the template
-    is returned.
+    If the version on the request matches the most recent template version
+    then the template is not returned. Otherwise the template is returned.
     """
 
     class Meta:

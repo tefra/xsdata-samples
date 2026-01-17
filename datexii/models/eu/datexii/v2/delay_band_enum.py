@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class DelayBandEnum(Enum):
     """
-    Classifications of a delay banded by length (i.e. the additional travel time).
+    Classifications of a delay banded by length (i.e. the additional travel
+    time).
 
     :cvar NEGLIGIBLE: Negligible delay.
     :cvar UP_TO_TEN_MINUTES: Delay up to ten minutes.

@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 @dataclass(frozen=True)
 class NameableType(IdentifiableType):
     """
-    NameableType is an abstract base type for  all nameable objects.
+    NameableType is an abstract base type for all nameable objects.
 
     :ivar name: Name provides for a human-readable name for the object.
         This may be provided in multiple, parallel language-equivalent

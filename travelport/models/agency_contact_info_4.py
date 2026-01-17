@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 @dataclass
 class AgencyContactInfo4:
-    """Generic agency contact information container.
+    """
+    Generic agency contact information container.
 
-    It must contain  at least one phone number to be used by an agency
+    It must contain at least one phone number to be used by an agency.
     """
 
     class Meta:

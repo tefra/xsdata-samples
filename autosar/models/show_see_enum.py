@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ShowSeeEnum:
     """
-    This enumerator specifies if the word "see" shall be rendered before the xref.
+    This enumerator specifies if the word "see" shall be rendered before
+    the xref.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

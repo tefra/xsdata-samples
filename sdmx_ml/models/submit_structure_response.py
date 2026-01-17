@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 @dataclass(frozen=True)
 class SubmitStructureResponse(SubmitStructureResponseType2):
-    """SubmitStructureResponse is returned by the registry when a structure
+    """
+    SubmitStructureResponse is returned by the registry when a structure
     submission request is received.
 
     It indicates the status of the submission, and carries any error

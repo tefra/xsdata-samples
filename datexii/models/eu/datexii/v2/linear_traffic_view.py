@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class LinearTrafficView:
     """
-    An identifiable instance of a linear traffic view at a single point in time
-    relating to a linear section of road, comprising one or more traffic view
-    records.
+    An identifiable instance of a linear traffic view at a single point in
+    time relating to a linear section of road, comprising one or more
+    traffic view records.
 
     :ivar linear_predefined_location_reference: A reference to a
         versioned predefined location which is of type linear.

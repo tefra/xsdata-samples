@@ -13,12 +13,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SeparateSignalPath:
-    """The SeparateSignalPath describes that two SwcToSwcSignals and/or
-    SwcToSwcOperationArguments shall not take the same way (Signal Path) in the
-    topology (e.g. Redundancy).
+    """
+    The SeparateSignalPath describes that two SwcToSwcSignals and/or
+    SwcToSwcOperationArguments shall not take the same way (Signal Path) in
+    the topology (e.g.
 
-    This means that the signals are not allowed to share even a single
-    physical channel in their path.
+    Redundancy). This means that the signals are not allowed to share even
+    a single physical channel in their path.
 
     :ivar introduction: This represents introductory documentation about
         the signal path constraint.

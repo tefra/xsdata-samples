@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 @dataclass
 class BookingEndReq(BookingBaseReq):
-    """Ends the session.
+    """
+    Ends the session.
 
     Will end transact the booking on the host and create a UR, or will
     ignore the current activity.

@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEventToTroubleCodeJ1939Mapping:
     """
-    By means of this meta-class it is possible to associate a DiagnosticEvent to a
-    DiagnosticTroubleCodeJ1939.
+    By means of this meta-class it is possible to associate a
+    DiagnosticEvent to a DiagnosticTroubleCodeJ1939.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

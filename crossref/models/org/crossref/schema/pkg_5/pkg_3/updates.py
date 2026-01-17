@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Updates:
-    """A document might provide updates (e.g. corrections, clarifications,
+    """
+    A document might provide updates (e.g. corrections, clarifications,
     retractions) to several other documents.
 
     When this is the case, the DOIs of the documents that are being

@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class ExchangeAirSegment:
     """
-    A container to define segment and cabin class in order to process an exchange.
+    A container to define segment and cabin class in order to process an
+    exchange.
 
     Parameters
     ----------

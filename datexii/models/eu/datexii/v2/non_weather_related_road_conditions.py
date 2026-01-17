@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class NonWeatherRelatedRoadConditions(RoadConditions):
     """
-    Road surface conditions that are not related to the weather but which may
-    affect driving conditions.
+    Road surface conditions that are not related to the weather but which
+    may affect driving conditions.
 
     :ivar non_weather_related_road_condition_type: The type of road
         conditions which are not related to the weather.

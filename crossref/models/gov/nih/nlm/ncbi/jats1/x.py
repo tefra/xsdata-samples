@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class X:
-    """<div>
-    <h3>X - Generated Text and Punctuation</h3>
-    </div>"""
+    """
+    <div> <h3>X - Generated Text and Punctuation</h3> </div>.
+    """
 
     class Meta:
         name = "x"

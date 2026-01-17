@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PrmCharMinTypMax:
     """
-    This metaclass represents the characteristics of a parameter as minimal,
-    typical maximum value.
+    This metaclass represents the characteristics of a parameter as
+    minimal, typical maximum value.
 
     :ivar min: This represnts the minimum value of the parameter.
     :ivar typ: This represnts the typical value of the parameter.

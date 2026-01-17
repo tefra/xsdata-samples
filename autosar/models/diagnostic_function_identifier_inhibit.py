@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticFunctionIdentifierInhibit:
     """
-    This meta-class represents the ability to define the inhibition of a specific
-    function identifier within the Fim configuration.
+    This meta-class represents the ability to define the inhibition of a
+    specific function identifier within the Fim configuration.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

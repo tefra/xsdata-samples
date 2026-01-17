@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TriggerMapping:
     """
-    Defines the mapping of two particular unequally named Triggers in the given
-    context.
+    Defines the mapping of two particular unequally named Triggers in the
+    given context.
 
     :ivar first_trigger_ref: A Trigger to be mapped.
     :ivar second_trigger_ref: A Trigger to be mapped.

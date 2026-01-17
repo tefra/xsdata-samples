@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class Protocol:
-    """Defines the protocol type.
+    """
+    defines the protocol type.
 
-    Defaults to tlm_base_protocol_type for TLM sockets
+    Defaults to tlm_base_protocol_type for TLM sockets.
     """
 
     class Meta:

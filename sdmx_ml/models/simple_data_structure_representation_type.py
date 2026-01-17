@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class SimpleDataStructureRepresentationType(DataStructureRepresentationType):
     """
-    SimpleDataStructureRepresentationType defines the representation for any non-
-    time dimension data structure definition component.
+    SimpleDataStructureRepresentationType defines the representation for
+    any non-time dimension data structure definition component.
     """
 
     max_occurs: Any = field(

@@ -9,12 +9,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 @dataclass(frozen=True)
 class StructureSpecificData(StructureSpecificDataType):
-    """StructureSpecificData is used to convey data structure specific according to
-    data structure definition.
+    """
+    StructureSpecificData is used to convey data structure specific
+    according to data structure definition.
 
-    The payload of this message (i.e. the data sets) will be based on
-    XML schemas which are specific to the data structure definition and
-    the orientation (i.e. the observation dimension) of the data.
+    The payload of this message (i.e. the data sets) will be based on XML
+    schemas which are specific to the data structure definition and the
+    orientation (i.e. the observation dimension) of the data.
     """
 
     class Meta:

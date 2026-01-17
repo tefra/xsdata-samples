@@ -31,9 +31,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ServiceInstanceToSignalMapping:
     """
-    This meta-class is defined for a specific ServiceInstance and contains the
-    mappings of elements of a ServiceInterface for which the ServiceInstance is
-    defined  to individual ISignalTriggerings.
+    This meta-class is defined for a specific ServiceInstance and contains
+    the mappings of elements of a ServiceInterface for which the
+    ServiceInstance is defined to individual ISignalTriggerings.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

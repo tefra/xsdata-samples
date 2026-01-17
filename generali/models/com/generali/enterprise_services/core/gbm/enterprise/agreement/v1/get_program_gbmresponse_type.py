@@ -19,8 +19,8 @@ __NAMESPACE__ = (
 @dataclass
 class GetProgramGbmresponseType(BaseGbmtype):
     """
-    <description xmlns="">The definition of the response message that supports
-    retrieve of a agreement</description>
+    <description xmlns="">The definition of the response message that
+    supports retrieve of a agreement</description>.
 
     :ivar app_data: A component of the GBM that allows application
         specific or pre-processing information to be added.

@@ -12,9 +12,10 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class TimeTextFormatType(SimpleComponentTextFormatType):
     """
-    TimeTextFormat is a restricted version of the SimpleComponentTextFormatType
-    that only allows time based format and specifies a default
-    ObservationalTimePeriod representation and facets of a start and end time.
+    TimeTextFormat is a restricted version of the
+    SimpleComponentTextFormatType that only allows time based format and
+    specifies a default ObservationalTimePeriod representation and facets
+    of a start and end time.
     """
 
     text_type: TimeDataType = field(

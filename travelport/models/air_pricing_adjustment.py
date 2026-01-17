@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirPricingAdjustment:
-    """This is a container to adjust price of AirPricingInfo.
+    """
+    This is a container to adjust price of AirPricingInfo.
 
     Pass zero values to remove existing adjustment.
 

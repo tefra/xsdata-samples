@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class InstanceName:
     """
-    An instance name assigned to subcomponent instances and contained channels,
-    that is unique within the parent component.
+    An instance name assigned to subcomponent instances and contained
+    channels, that is unique within the parent component.
     """
 
     class Meta:

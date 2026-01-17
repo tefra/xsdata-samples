@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsUnitFault(Fault):
     """
-    Details of the fault which is being reported for the specified variable message
-    sign control unit.
+    Details of the fault which is being reported for the specified variable
+    message sign control unit.
 
     :ivar vms_unit_fault: The type of fault which is being reported for
         the VMS unit.

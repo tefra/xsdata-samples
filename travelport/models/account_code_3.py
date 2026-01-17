@@ -8,9 +8,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 @dataclass
 class AccountCode3:
     """
-    Account Code is used to get Private Fares.If ProviderCode or SupplierCode is
-    not specified, it will be considered a default AccounCode to be sent to all the
-    Providers or Suppliers.
+    Account Code is used to get Private Fares.If ProviderCode or
+    SupplierCode is not specified, it will be considered a default
+    AccounCode to be sent to all the Providers or Suppliers.
 
     Parameters
     ----------

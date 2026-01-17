@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class ProviderInfo1(TypeKeyElement1):
     """
-    A representation of the Provider Information (e.g. PCC, IATA, Provider Code)
-    given to a Branch profile.
+    A representation of the Provider Information (e.g.
+
+    PCC, IATA, Provider Code) given to a Branch profile.
 
     Parameters
     ----------

@@ -28,8 +28,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataReceiveErrorEvent:
     """
-    This event is raised by the RTE when the Com layer detects and notifies an
-    error concerning the reception of the referenced data element.
+    This event is raised by the RTE when the Com layer detects and notifies
+    an error concerning the reception of the referenced data element.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

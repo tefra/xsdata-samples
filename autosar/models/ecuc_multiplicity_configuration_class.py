@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcucMultiplicityConfigurationClass:
     """
-    Specifies the MultiplicityConfigurationClass of a parameter/reference or a
-    container for each ConfigurationVariant of the EcucModuleDef.
+    Specifies the MultiplicityConfigurationClass of a parameter/reference
+    or a container for each ConfigurationVariant of the EcucModuleDef.
 
     :ivar config_class: Specifies the ConfigurationClass for the given
         ConfigurationVariant.

@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class MsrQueryProps:
-    """This metaclass represents the ability to specificy a query which yields some
-    documentation text.
+    """
+    This metaclass represents the ability to specificy a query which yields
+    some documentation text.
 
-    The qualities of the result are determined by the context in which
-    the query is used.
+    The qualities of the result are determined by the context in which the
+    query is used.
 
     :ivar msr_query_name: This element specifies the name of the MSR-
         QUERY triggered.

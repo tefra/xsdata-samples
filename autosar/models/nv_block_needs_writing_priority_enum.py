@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class NvBlockNeedsWritingPriorityEnum:
     """
-    Specifies the priority of writing this block in case of concurrent requests to
-    write other blocks.
+    Specifies the priority of writing this block in case of concurrent
+    requests to write other blocks.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

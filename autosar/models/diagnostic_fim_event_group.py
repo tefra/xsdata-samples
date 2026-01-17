@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticFimEventGroup:
-    """This meta-class represents the ability to model a Fim event group, also
+    """
+    This meta-class represents the ability to model a Fim event group, also
     known as a summary event in Fim terminology.
 
     This represents a group of single diagnostic events.

@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IpSecConfigProps:
     """
-    This element holds all the attributes for configuration of IPsec that are
-    independent of specific IPsec rules.
+    This element holds all the attributes for configuration of IPsec that
+    are independent of specific IPsec rules.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

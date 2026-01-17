@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class AwardName:
     """
-    <div> <h3>Award Name</h3> </div>
+    <div> <h3>Award Name</h3> </div>.
     """
 
     class Meta:

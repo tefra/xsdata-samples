@@ -26,8 +26,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class BaseIdentifiedComponentType(BaseComponentType):
     """
-    <description xmlns="">The base type for all business objects and components
-    with an identifier and a lifecycle state.</description>
+    <description xmlns="">The base type for all business objects and
+    components with an identifier and a lifecycle state.</description>.
 
     :ivar ids: <description xmlns="">The set of Identifiers for the
         business object or component. These should be used to uniquely

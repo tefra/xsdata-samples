@@ -34,10 +34,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Topic1:
-    """This meta-class represents a topic of a documentation.
+    """
+    This meta-class represents a topic of a documentation.
 
-    Topics are similar to chapters but they cannot be nested. They also
-    do not appear in the table of content. Topics can be used to produce
+    Topics are similar to chapters but they cannot be nested. They also do
+    not appear in the table of content. Topics can be used to produce
     intermediate headlines thus structuring a chapter internally.
 
     :ivar short_name: This specifies an identifying shortName for the

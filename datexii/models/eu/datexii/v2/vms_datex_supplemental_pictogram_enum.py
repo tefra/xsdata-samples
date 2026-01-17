@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class VmsDatexSupplementalPictogramEnum(Enum):
     """
-    Types of pictograms displayable in supplementary panels (normally below the
-    main pictogram display which it qualifies).
+    Types of pictograms displayable in supplementary panels (normally below
+    the main pictogram display which it qualifies).
 
     :cvar DISTANCE_TO_THE_BEGINNINGOF_THE_APPLICATION_ZONE: Distance to
         the beginning of the application zone.

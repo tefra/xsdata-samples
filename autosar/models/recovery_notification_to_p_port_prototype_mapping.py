@@ -27,9 +27,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RecoveryNotificationToPPortPrototypeMapping:
     """
-    This meta-class represents the ability to associate a RecoveryNotification to a
-    PPortPrototype while also being able to identify the respective Process in
-    which the actual recovery executes.
+    This meta-class represents the ability to associate a
+    RecoveryNotification to a PPortPrototype while also being able to
+    identify the respective Process in which the actual recovery executes.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

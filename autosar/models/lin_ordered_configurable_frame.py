@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinOrderedConfigurableFrame:
-    """With the assignment of the index to a frame a mapping of Pids to Frames is
-    possible.
+    """
+    With the assignment of the index to a frame a mapping of Pids to Frames
+    is possible.
 
     This element shall be used for the LIN 2.1 Assign-Frame-PID-Range
     command.

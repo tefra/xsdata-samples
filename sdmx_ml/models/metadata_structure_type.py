@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class MetadataStructureType(StructureTypeAbstract):
     """
-    MetadataStructureType is used to describe a metadata structure definition,
-    which is defined as a collection of metadata concepts, their structure and
-    usage when used to collect or disseminate reference metadata.
+    MetadataStructureType is used to describe a metadata structure
+    definition, which is defined as a collection of metadata concepts,
+    their structure and usage when used to collect or disseminate reference
+    metadata.
     """
 
     data_structure_components: Any = field(

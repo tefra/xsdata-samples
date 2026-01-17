@@ -26,7 +26,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class ArgumentDataPrototype:
     """
     An argument of an operation, much like a data element, but also carries
-    direction information and is owned by a particular ClientServerOperation.
+    direction information and is owned by a particular
+    ClientServerOperation.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

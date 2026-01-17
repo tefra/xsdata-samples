@@ -3,11 +3,11 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from travelport.models.base_req_2 import BaseReq2
-from travelport.models.provisioning_code_profile_type_8 import (
-    ProvisioningCodeProfileType8,
+from travelport.models.provisioning_code_profile_type_1 import (
+    ProvisioningCodeProfileType1,
 )
-from travelport.models.unique_profile_id_profile_type_8 import (
-    UniqueProfileIdProfileType8,
+from travelport.models.unique_profile_id_profile_type_1 import (
+    UniqueProfileIdProfileType1,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class ProfileDeleteReq1(BaseReq2):
-    """Request to delete a particular profile.
+    """
+    Request to delete a particular profile.
 
     Either ProfileID or ProvisioningCode are mandatory.
 
@@ -87,7 +88,7 @@ class ProfileDeleteReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType8 = field(
+        profile_type: None | ProvisioningCodeProfileType1 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -120,7 +121,7 @@ class ProfileDeleteReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType8 = field(
+        profile_type: None | UniqueProfileIdProfileType1 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ReportBehaviorEnum:
     """
-    This enumeration specifies the report status of related events before or after
-    diagnostic event initialization.
+    This enumeration specifies the report status of related events before
+    or after diagnostic event initialization.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

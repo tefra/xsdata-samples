@@ -20,7 +20,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class Back:
     """
-    <div> <h3>Back Matter</h3> </div>
+    <div> <h3>Back Matter</h3> </div>.
     """
 
     class Meta:

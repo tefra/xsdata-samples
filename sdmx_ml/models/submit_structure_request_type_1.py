@@ -10,14 +10,15 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class SubmitStructureRequestType1:
-    """SubmitStructureRequestType describes the structure of a structure
+    """
+    SubmitStructureRequestType describes the structure of a structure
     submission.
 
-    Structural components are provided either in-line or referenced via
-    a SDMX-ML Structure message external to the registry. A default
-    action and external reference resolution action are all provided for
-    each of the contained components, but can be overridden on a per
-    component basis.
+    Structural components are provided either in-line or referenced via a
+    SDMX-ML Structure message external to the registry. A default action
+    and external reference resolution action are all provided for each of
+    the contained components, but can be overridden on a per component
+    basis.
 
     :ivar structure_location_or_structures:
     :ivar submitted_structure: SubmittedStructure contains a reference

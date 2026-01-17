@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrGeoCoordinate:
     """
-    A geo-coordinate pair is a position in a map defined by its longitude and
-    latitude coordinate values.
+    A geo-coordinate pair is a position in a map defined by its longitude
+    and latitude coordinate values.
     """
 
     openlr_coordinate: Optional[PointCoordinates] = field(

@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class NumTripsType:
     """
-    This element allows a user to specify the number of itineraries returned.
+    This element allows a user to specify the number of itineraries
+    returned.
 
     Attributes:
         number:

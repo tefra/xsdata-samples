@@ -21,7 +21,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class BaseGbopartsType(BaseComponentType):
     """
     <description xmlns="">The base type for the business object parts
-    components.</description>
+    components.</description>.
 
     :ivar notes: <description xmlns="">The set of notes or comments for
         the parent context.</description>

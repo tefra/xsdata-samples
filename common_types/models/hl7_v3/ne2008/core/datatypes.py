@@ -279,14 +279,16 @@ class IvxbReal(Real):
 
 @dataclass
 class PivlTs(SxcmTs):
-    """Note: because this type is defined as an extension of SXCM_T,
-    all of the attributes and elements accepted for T are also
-    accepted by this definition.  However, they are NOT allowed
-    by the normative description of this type.  Unfortunately,
-    we cannot write a general purpose schematron contraints to
-    provide that extra validation, thus applications must be
-    aware that instance (fragments) that pass validation with
-    this might might still not be legal.
+    """
+    Note: because this type is defined as an extension of SXCM_T, all of
+    the attributes and elements accepted for T are also accepted by this
+    definition.
+
+    However, they are NOT allowed by the normative description of this
+    type. Unfortunately, we cannot write a general purpose schematron
+    contraints to provide that extra validation, thus applications must be
+    aware that instance (fragments) that pass validation with this might
+    might still not be legal.
 
     :ivar phase: A prototype of the repeating interval specifying the
         duration of each occurrence and anchors the periodic interval
@@ -1003,14 +1005,16 @@ class BxitIvlPq(IvlPq):
 
 @dataclass
 class EivlTs(SxcmTs):
-    """Note: because this type is defined as an extension of SXCM_T,
-    all of the attributes and elements accepted for T are also
-    accepted by this definition.  However, they are NOT allowed
-    by the normative description of this type.  Unfortunately,
-    we cannot write a general purpose schematron contraints to
-    provide that extra validation, thus applications must be
-    aware that instance (fragments) that pass validation with
-    this might might still not be legal.
+    """
+    Note: because this type is defined as an extension of SXCM_T, all of
+    the attributes and elements accepted for T are also accepted by this
+    definition.
+
+    However, they are NOT allowed by the normative description of this
+    type. Unfortunately, we cannot write a general purpose schematron
+    contraints to provide that extra validation, thus applications must be
+    aware that instance (fragments) that pass validation with this might
+    might still not be legal.
 
     :ivar event: A code for a common (periodical) activity of daily
         living based on which the event related periodic interval is
@@ -1144,14 +1148,16 @@ class IvlPpdTs(SxcmPpdTs):
 
 @dataclass
 class EivlPpdTs(SxcmPpdTs):
-    """Note: because this type is defined as an extension of SXCM_T,
-    all of the attributes and elements accepted for T are also
-    accepted by this definition.  However, they are NOT allowed
-    by the normative description of this type.  Unfortunately,
-    we cannot write a general purpose schematron contraints to
-    provide that extra validation, thus applications must be
-    aware that instance (fragments) that pass validation with
-    this might might still not be legal.
+    """
+    Note: because this type is defined as an extension of SXCM_T, all of
+    the attributes and elements accepted for T are also accepted by this
+    definition.
+
+    However, they are NOT allowed by the normative description of this
+    type. Unfortunately, we cannot write a general purpose schematron
+    contraints to provide that extra validation, thus applications must be
+    aware that instance (fragments) that pass validation with this might
+    might still not be legal.
 
     :ivar event: A code for a common (periodical) activity of daily
         living based on which the event related periodic interval is
@@ -1183,14 +1189,16 @@ class EivlPpdTs(SxcmPpdTs):
 
 @dataclass
 class PivlPpdTs(SxcmPpdTs):
-    """Note: because this type is defined as an extension of SXCM_T,
-    all of the attributes and elements accepted for T are also
-    accepted by this definition.  However, they are NOT allowed
-    by the normative description of this type.  Unfortunately,
-    we cannot write a general purpose schematron contraints to
-    provide that extra validation, thus applications must be
-    aware that instance (fragments) that pass validation with
-    this might might still not be legal.
+    """
+    Note: because this type is defined as an extension of SXCM_T, all of
+    the attributes and elements accepted for T are also accepted by this
+    definition.
+
+    However, they are NOT allowed by the normative description of this
+    type. Unfortunately, we cannot write a general purpose schematron
+    contraints to provide that extra validation, thus applications must be
+    aware that instance (fragments) that pass validation with this might
+    might still not be legal.
 
     :ivar phase: A prototype of the repeating interval specifying the
         duration of each occurrence and anchors the periodic interval

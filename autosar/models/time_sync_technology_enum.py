@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TimeSyncTechnologyEnum:
-    """Timesynchronization.
+    """
+    Timesynchronization.
 
     Server/Client configuration.
 

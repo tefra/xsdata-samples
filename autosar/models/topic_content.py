@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TopicContent:
-    """This meta-class represents the content of a topic.
+    """
+    This meta-class represents the content of a topic.
 
     It is mainly a documentation block, but can also be a table.
 

@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NotAvailableValueSpecification:
-    """This meta-class provides the ability to specify a ValueSpecification to
+    """
+    This meta-class provides the ability to specify a ValueSpecification to
     state that the respective element is not available.
 
     This ability is needed to support the existence of

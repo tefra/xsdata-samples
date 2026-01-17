@@ -16,7 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ConditionalChangeNad:
-    """Generates an conditional change NAD request.
+    """
+    Generates an conditional change NAD request.
 
     See ISO 17987 protocol specification for more information.
 

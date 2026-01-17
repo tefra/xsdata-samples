@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 @dataclass
 class VehicleUpsellOffer:
-    """Offer data of Vehicle which is used to send an upsell request.
+    """
+    Offer data of Vehicle which is used to send an upsell request.
 
     Offer is found for a matching qualify.
 

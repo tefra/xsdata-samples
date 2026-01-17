@@ -25,10 +25,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlexrayArTpConfig:
-    """This element defines exactly one FlexRay Autosar TP Configuration.
+    """
+    This element defines exactly one FlexRay Autosar TP Configuration.
 
-    One FlexrayArTpConfig element shall be created for each FlexRay
-    Network in the System that uses FlexRay Autosar TP.
+    One FlexrayArTpConfig element shall be created for each FlexRay Network
+    in the System that uses FlexRay Autosar TP.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

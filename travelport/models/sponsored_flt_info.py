@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class SponsoredFltInfo:
-    """This describes whether the segment is determined to be a sponsored flight.
+    """
+    This describes whether the segment is determined to be a sponsored
+    flight.
 
     The SponsoredFltInfo node will only come back for Travelport UIs and
     not for other customers.

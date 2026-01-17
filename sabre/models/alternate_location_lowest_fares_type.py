@@ -10,9 +10,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class AlternateLocationLowestFaresType:
-    """IntelliSell Type .
-
-    lowest fare for alternate origin / destination pair.
+    """
+    IntelliSell Type . lowest fare for alternate origin / destination pair.
     """
 
     origin_location: None | ResponseLocationType = field(

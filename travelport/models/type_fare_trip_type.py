@@ -6,18 +6,14 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
 class TypeFareTripType(Enum):
-    """Type of trip for this fare ( One-way, Return,
+    """
+    Type of trip for this fare ( One-way, Return, etc..) OneWay - one way
+    fare OneWayOnly - one way fare only.
 
-    etc..)
-    OneWay - one way fare
-    OneWayOnly - one way fare only. Do not
-    double
-    Return - round trip fare
-    ReturnOnly -- Round Trip fare only.
-    Cannot be divided for use in half Round Trip
-    HalfReturn - Half roundtrip fare
-    CircleTrip -- circle trip fare
-    RoundTheWorld -- round the world fare
+    Do not double Return - round trip fare ReturnOnly -- Round Trip fare
+    only. Cannot be divided for use in half Round Trip HalfReturn - Half
+    roundtrip fare CircleTrip -- circle trip fare RoundTheWorld -- round
+    the world fare.
     """
 
     ONE_WAY = "OneWay"

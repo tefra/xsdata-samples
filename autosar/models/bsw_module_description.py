@@ -31,7 +31,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswModuleDescription:
-    """Root element for the description of a single BSW module or BSW cluster.
+    """
+    Root element for the description of a single BSW module or BSW cluster.
 
     In case it describes a BSW module, the short name of this element
     equals the name of the BSW module.

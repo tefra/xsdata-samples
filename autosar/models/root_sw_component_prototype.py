@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RootSwComponentPrototype:
-    """The RootSwCompositionPrototype represents the top-level-composition of
+    """
+    The RootSwCompositionPrototype represents the top-level-composition of
     software components within an Executable.
 
     The contained SwComponentPrototypes are fully specified by their

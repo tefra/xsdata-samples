@@ -13,10 +13,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class NmCoordinator:
     """
-    A NM coordinator is an ECU, which is connected to at least two busses, and
-    where the requirement exists that shutdown of NM of at least two of these
-    busses (also referred to as coordinated busses) has to be performed
-    synchronously.
+    A NM coordinator is an ECU, which is connected to at least two busses,
+    and where the requirement exists that shutdown of NM of at least two of
+    these busses (also referred to as coordinated busses) has to be
+    performed synchronously.
 
     :ivar index: Identification of the NMCoordinator.
     :ivar nm_active_coordinator: Please note that this attribute is

@@ -10,10 +10,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class TimeRangeValueType:
-    """TimeRangeValueType allows a time period value to be expressed as a range.
+    """
+    TimeRangeValueType allows a time period value to be expressed as a
+    range.
 
-    It can be expressed as the period before a period, after a period,
-    or between two periods. Each of these properties can specify their
+    It can be expressed as the period before a period, after a period, or
+    between two periods. Each of these properties can specify their
     inclusion in regards to the range.
     """
 

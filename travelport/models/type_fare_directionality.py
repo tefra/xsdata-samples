@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 class TypeFareDirectionality(Enum):
     """
-    A fare's directionality (e.g. one-way, return )
+    A fare's directionality (e.g. one-way, return ).
     """
 
     OUTBOUND = "Outbound"

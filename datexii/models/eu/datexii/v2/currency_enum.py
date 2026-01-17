@@ -4,11 +4,11 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class CurrencyEnum(Enum):
-    """Three letter code defining the currency according to ISO 4217 (e.g. EUR for
-    Euro).
+    """
+    Three letter code defining the currency according to ISO 4217 (e.g.
 
-    This enumeration only contains European currencies including the US
-    dollar.
+    EUR for Euro). This enumeration only contains European currencies
+    including the US dollar.
 
     :cvar EUR: Euro
     :cvar ALL: Lek (Albania)

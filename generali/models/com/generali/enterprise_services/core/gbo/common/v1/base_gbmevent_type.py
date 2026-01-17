@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class BaseGbmeventType(BaseGbmtype):
     """
     <description xmlns="">The base definition of all business events and
-    notifications.</description>
+    notifications.</description>.
 
     :ivar event_code: <description xmlns="">A value representing the
         event that occurred on the publishing system to generate this

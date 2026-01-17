@@ -26,10 +26,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DelegationSwConnector:
     """
-    A delegation connector delegates one inner PortPrototype  (a port of a
-    component that is used inside the composition) to a outer PortPrototype of
-    compatible type that belongs directly to the composition (a port that is owned
-    by the composition).
+    A delegation connector delegates one inner PortPrototype (a port of a
+    component that is used inside the composition) to a outer PortPrototype
+    of compatible type that belongs directly to the composition (a port
+    that is owned by the composition).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

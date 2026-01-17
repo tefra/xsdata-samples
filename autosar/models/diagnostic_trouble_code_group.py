@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticTroubleCodeGroup:
     """
-    The diagnostic trouble code group defines the DTCs belonging together and
-    thereby forming a group.
+    The diagnostic trouble code group defines the DTCs belonging together
+    and thereby forming a group.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

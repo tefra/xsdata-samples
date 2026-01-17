@@ -35,8 +35,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DdsRequiredServiceInstance:
     """
     This meta-class represents the ability to describe the existence and
-    configuration of a required service instance in a concrete implementation on
-    top of DDS.
+    configuration of a required service instance in a concrete
+    implementation on top of DDS.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

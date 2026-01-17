@@ -20,13 +20,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TimingModeInstance:
-    """This class specifies the mode declaration to be checked in a specific
+    """
+    This class specifies the mode declaration to be checked in a specific
     instance of a mode declaration group.
 
-    This is used in a timing condition formula as an operand of the
-    unary timing function TIMEX_modeActive to check whether the mode
-    declaration is active at the point in time this expression is
-    evaluated.
+    This is used in a timing condition formula as an operand of the unary
+    timing function TIMEX_modeActive to check whether the mode declaration
+    is active at the point in time this expression is evaluated.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

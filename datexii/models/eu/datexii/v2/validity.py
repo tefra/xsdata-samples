@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Validity:
     """
-    Specification of validity, either explicitly or by a validity time period
-    specification which may be discontinuous.
+    Specification of validity, either explicitly or by a validity time
+    period specification which may be discontinuous.
 
     :ivar validity_status: Specification of validity, either explicitly
         overriding the validity time specification or confirming it.

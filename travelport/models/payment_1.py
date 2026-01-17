@@ -10,7 +10,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class Payment1:
-    """Payment information - must be used in conjunction with credit card info
+    """
+    Payment information - must be used in conjunction with credit card
+    info.
 
     Parameters
     ----------

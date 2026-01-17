@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class FareRestrictPrefType:
     """
-    Identifies preferences for airfare restrictions acceptable or not acceptable
-    for a given travel situation.
+    Identifies preferences for airfare restrictions acceptable or not
+    acceptable for a given travel situation.
 
     Attributes:
         prefer_level:

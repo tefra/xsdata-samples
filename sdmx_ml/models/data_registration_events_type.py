@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class DataRegistrationEventsType:
-    """DataRegistrationEventsType details the data registration events for the
+    """
+    DataRegistrationEventsType details the data registration events for the
     subscription.
 
     It is possible to subscribe to all data registration events in the

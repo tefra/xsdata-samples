@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class GeographicCodelistsType:
-    """GeographicCodelistsType describes the structure of the geographic code lists
-    container.
+    """
+    GeographicCodelistsType describes the structure of the geographic code
+    lists container.
 
     It contains one or more geographic codelist, which can be explicitly
-    detailed or referenced from an external structure document or
-    registry service.
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar geographic_codelist: GeographiCodelist provides the details of
         a geographic codelists container, which comprises a set of

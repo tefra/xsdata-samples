@@ -70,7 +70,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class FrontStub:
     """
-    <div> <h3>Stub Front Metadata</h3> </div>
+    <div> <h3>Stub Front Metadata</h3> </div>.
     """
 
     class Meta:

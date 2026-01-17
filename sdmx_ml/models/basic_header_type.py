@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class BasicHeaderType(BaseHeaderType):
     """
-    BasicHeaderType defines the most basic header information used in simple
-    message exchanges.
+    BasicHeaderType defines the most basic header information used in
+    simple message exchanges.
 
     :ivar name: Name provides a name for the transmission. Multiple
         instances allow for parallel language values.

@@ -22,11 +22,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ISignalPort:
-    """Connectors reception or send port on the referenced channel referenced by an
-    ISignalTriggering.
+    """
+    Connectors reception or send port on the referenced channel referenced
+    by an ISignalTriggering.
 
-    If different timeouts or DataFilters for ISignals need to be
-    specified several ISignalPorts may be created.
+    If different timeouts or DataFilters for ISignals need to be specified
+    several ISignalPorts may be created.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

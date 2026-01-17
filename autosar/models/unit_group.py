@@ -20,21 +20,21 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class UnitGroup:
-    """This meta-class represents the ability to specify a logical grouping of
-    units.The category denotes the unit system that the referenced units are
-    associated to.
+    """
+    This meta-class represents the ability to specify a logical grouping of
+    units.The category denotes the unit system that the referenced units
+    are associated to.
 
     In this way, e.g. country-specific unit systems (CATEGORY="COUNTRY")
-    can be defined as well as specific unit systems for certain
-    application domains. In the same way a group of equivalent units,
-    can be defined which are used in different countries, by setting
-    CATEGORY="EQUIV_UNITS".  KmPerHour and MilesPerHour could such be
-    combined to one group named "vehicle_speed". The unit MeterPerSec
-    would not belong to this group because it is normally not used for
-    vehicle speed. But all of the mentioned units could be combined to
-    one group named "speed". Note that the UnitGroup does not ensure the
-    physical compliance of the units. This is maintained by the physical
-    dimension.
+    can be defined as well as specific unit systems for certain application
+    domains. In the same way a group of equivalent units, can be defined
+    which are used in different countries, by setting
+    CATEGORY="EQUIV_UNITS". KmPerHour and MilesPerHour could such be
+    combined to one group named "vehicle_speed". The unit MeterPerSec would
+    not belong to this group because it is normally not used for vehicle
+    speed. But all of the mentioned units could be combined to one group
+    named "speed". Note that the UnitGroup does not ensure the physical
+    compliance of the units. This is maintained by the physical dimension.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

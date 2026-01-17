@@ -21,8 +21,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class J1939SharedAddressCluster:
     """
-    This meta-class represents the ability to identify several J1939Clusters that
-    share a common address space for the routing of messages.
+    This meta-class represents the ability to identify several
+    J1939Clusters that share a common address space for the routing of
+    messages.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

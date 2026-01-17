@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class ProviderReservationDetails:
     """
-    Indicates the type of content in PNR,to retrieve the display only content use
-    ProviderReservationDisplayDetailsReq.
+    Indicates the type of content in PNR,to retrieve the display only
+    content use ProviderReservationDisplayDetailsReq.
 
     Parameters
     ----------

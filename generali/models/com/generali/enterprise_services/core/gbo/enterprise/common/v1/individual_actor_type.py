@@ -31,7 +31,7 @@ __NAMESPACE__ = (
 @dataclass
 class IndividualActorType(BaseComponentType):
     """
-    <description xmlns=""/>
+    <description xmlns=""/>.
 
     :ivar name: <description xmlns="">The name of the
         individual.</description>

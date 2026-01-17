@@ -23,10 +23,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AsynchronousServerCallPoint:
-    """An AsynchronousServerCallPoint is used for asynchronous invocation of a
+    """
+    An AsynchronousServerCallPoint is used for asynchronous invocation of a
     ClientServerOperation.
 
-    IMPORTANT: a ServerCallPoint cannot be used concurrently. Once the client RunnableEntity has made the invocation, the ServerCallPoint cannot be used until the call returns (or an error occurs!) at which point the ServerCallPoint becomes available again.
+    IMPORTANT: a ServerCallPoint cannot be used concurrently. Once the
+    client RunnableEntity has made the invocation, the ServerCallPoint
+    cannot be used until the call returns (or an error occurs!) at which
+    point the ServerCallPoint becomes available again.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

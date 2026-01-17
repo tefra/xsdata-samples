@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class AlternateDateLowestFaresType:
-    """IntelliSell Type .
-
-    lowest fare for alternate departure / return date times.
+    """
+    IntelliSell Type . lowest fare for alternate departure / return date
+    times.
     """
 
     departure_date_time: None | str = field(

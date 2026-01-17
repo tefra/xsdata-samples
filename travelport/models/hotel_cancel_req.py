@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class HotelCancelReq(BaseReq1):
-    """Cancel request for a hotel booking.
+    """
+    Cancel request for a hotel booking.
 
     Given a provider code and a provider locator code.
     """

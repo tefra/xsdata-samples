@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CanTpEcu:
-    """ECU specific TP configuration parameters.
+    """
+    ECU specific TP configuration parameters.
 
     Each TpEcu element has a reference to exactly one ECUInstance in the
     topology.

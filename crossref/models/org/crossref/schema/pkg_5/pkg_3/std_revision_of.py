@@ -5,10 +5,10 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class StdRevisionOf:
-    """Designator for the previous revision of the standard being deposited.
-
+    """
+    Designator for the previous revision of the standard being deposited.
     (note: use alt_as_published for revisions within designators having
-    common stem)
+    common stem).
     """
 
     class Meta:

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DeterministicClientResource:
     """
-    This meta-class specifies computing resource needs of DeterministicClient
-    library functions.
+    This meta-class specifies computing resource needs of
+    DeterministicClient library functions.
 
     :ivar number_of_instructions: This attribute represents the
         normalized runtime consumption on the target system within one

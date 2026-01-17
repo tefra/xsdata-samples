@@ -11,10 +11,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RuleBasedValueSpecification:
     """
-    This meta-class is used to support a rule-based initialization approach for
-    data types with an array-nature (ApplicationArrayDataType and
+    This meta-class is used to support a rule-based initialization approach
+    for data types with an array-nature (ApplicationArrayDataType and
     ImplementationDataType of category ARRAY) or a compound
-    ApplicationPrimitiveDataType (which also boils down to an array-nature).
+    ApplicationPrimitiveDataType (which also boils down to an
+    array-nature).
 
     :ivar rule: This denotes the name of the rule of the
         RuleBasedValueSpecification. The rule determines the calculation

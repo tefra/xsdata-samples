@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ParameterInAtomicSwcTypeInstanceRef:
     """
-    This class implements an instance reference which can be applied for variables
-    as well as for parameters.
+    This class implements an instance reference which can be applied for
+    variables as well as for parameters.
 
     :ivar port_prototype_ref: This is the port providing the variable or
         the entry point to the variable structure.

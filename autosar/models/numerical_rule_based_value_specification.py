@@ -11,8 +11,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class NumericalRuleBasedValueSpecification:
     """
-    This meta-class is used to support a rule-based initialization approach for
-    data types with an array-nature (ImplementationDataType of category ARRAY).
+    This meta-class is used to support a rule-based initialization approach
+    for data types with an array-nature (ImplementationDataType of category
+    ARRAY).
 
     :ivar short_label: This can be used to identify particular value
         specifications for human readers, for example elements of a

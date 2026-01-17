@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class PosType:
     """
-    Point of Sale (POS) is the details identifying the party or connection channel
-    making the request.
+    Point of Sale (POS) is the details identifying the party or connection
+    channel making the request.
 
     Attributes:
         source: This holds details regarding the requestor. It may be

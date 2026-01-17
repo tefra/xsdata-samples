@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 @dataclass
 class HotelRateDetail:
     """
-    Returns hotel rate details during the stay if rates are available for requested
-    property.
+    Returns hotel rate details during the stay if rates are available for
+    requested property.
 
     Parameters
     ----------

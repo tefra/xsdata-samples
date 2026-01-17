@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 @dataclass
 class NextResultReference3:
     """
-    Container to return/send additional retrieve/request additional search results.
+    Container to return/send additional retrieve/request additional search
+    results.
 
     Parameters
     ----------

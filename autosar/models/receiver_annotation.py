@@ -18,8 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ReceiverAnnotation:
-    """Annotation of a receiver port, specifying properties of data elements that
-    don't affect communication or generation of the RTE.
+    """
+    Annotation of a receiver port, specifying properties of data elements
+    that don't affect communication or generation of the RTE.
 
     The given attributes are requirements on the required data.
 

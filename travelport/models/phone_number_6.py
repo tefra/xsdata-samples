@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 @dataclass
 class PhoneNumber6:
     """
-    Consists of type (office, home, fax), location (city code), the country code,
-    the number, and an extension.
+    Consists of type (office, home, fax), location (city code), the country
+    code, the number, and an extension.
 
     Parameters
     ----------

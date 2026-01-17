@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class SavedTripModifyReq(BaseReq1):
     """
-    Request to modify an existing SavedTrip using the LocatorCode of the SavedTrip
-    as the SavedTrip identifier.
+    Request to modify an existing SavedTrip using the LocatorCode of the
+    SavedTrip as the SavedTrip identifier.
     """
 
     class Meta:

@@ -60,15 +60,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswCompositionTiming:
-    """A model element used to define timing descriptions and constraints for a set
-    of BswImplementations representing a BSW composition.
+    """
+    A model element used to define timing descriptions and constraints for
+    a set of BswImplementations representing a BSW composition.
 
     A constraint defined at this level holds true for all referenced
     BswImplementations. Note, that multiple implementations of the same
-    basic software module could be involved. TimingDescriptions
-    aggregated by BswCompositionTiming are restricted to event chains
-    referring to events which are derived from the class
-    TDEventBswInternalBehavior and TDEventBsw.
+    basic software module could be involved. TimingDescriptions aggregated
+    by BswCompositionTiming are restricted to event chains referring to
+    events which are derived from the class TDEventBswInternalBehavior and
+    TDEventBsw.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

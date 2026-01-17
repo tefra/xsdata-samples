@@ -11,15 +11,15 @@ from tpdb.models.trs import Trs
 
 @dataclass
 class Problem:
-    """This is the root element representing a termination problem.
+    """
+    This is the root element representing a termination problem.
 
-    Versioning Information:
-    Version 0.4: added higher-order features (courtesy Albert Rubio and Rene Thiemann)
-    Version 0.32: removed the targetNamespace
-    Version 0.31: adds the capability to have multiple originalfilename tags;
-    removed the strategy=NONE.
-    Version 0.3: adds the /problem/metainformation/originalfilename tag.
-    Version 0.2: first official release
+    Versioning Information: Version 0.4: added higher-order features
+    (courtesy Albert Rubio and Rene Thiemann) Version 0.32: removed the
+    targetNamespace Version 0.31: adds the capability to have multiple
+    originalfilename tags; removed the strategy=NONE. Version 0.3: adds the
+    /problem/metainformation/originalfilename tag. Version 0.2: first
+    official release.
     """
 
     class Meta:

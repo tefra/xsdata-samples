@@ -15,10 +15,11 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class VmsPictogram:
-    """A main pictogram displayable on the VMS panel.
+    """
+    A main pictogram displayable on the VMS panel.
 
-    Note a main pictogram may have an associated supplementary panel
-    which may itself contain a further pictogram and line of text.
+    Note a main pictogram may have an associated supplementary panel which
+    may itself contain a further pictogram and line of text.
 
     :ivar pictogram_description: Description of the (main) displayed
         pictogram.

@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 @dataclass(frozen=True)
 class RegistrationStatusType:
     """
-    RegistrationStatusType describes the structure of a registration status.
+    RegistrationStatusType describes the structure of a registration
+    status.
 
     :ivar registration: Registration, at the very least echoes the
         submitted registration. It the request was to create a new

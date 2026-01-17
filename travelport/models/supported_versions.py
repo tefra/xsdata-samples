@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class SupportedVersions:
     """
-    SOAP Header element that determines what version a particular request supports.
+    SOAP Header element that determines what version a particular request
+    supports.
     """
 
     class Meta:

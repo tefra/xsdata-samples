@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class VehicleCountAndRate:
-    """Vehicle rates can be assigned to a parking site or to assigned parking
+    """
+    Vehicle rates can be assigned to a parking site or to assigned parking
     spaces.
 
     Furthermore, they can reference to a measurement site or to an

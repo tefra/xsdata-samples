@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MsrQueryP1:
     """
-    This meta-class represents the ability to express a query which yields the
-    content of a topic as a result.
+    This meta-class represents the ability to express a query which yields
+    the content of a topic as a result.
 
     :ivar msr_query_props: This is argument and properties of the
         paragraph query.

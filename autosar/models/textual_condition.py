@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TextualCondition:
-    """Specifies additional conditions for one or more model elements.
+    """
+    Specifies additional conditions for one or more model elements.
 
     The condition is described using human language.
 

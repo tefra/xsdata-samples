@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class TransformationSchemeBaseType(VtlDefinitionSchemeType):
-    """TransformationSchemeBaseType is an abstract base type for the
+    """
+    TransformationSchemeBaseType is an abstract base type for the
     TransformationSchemeType.
 
     It restricts the item types to be only transformations.

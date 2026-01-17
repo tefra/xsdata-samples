@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 @dataclass
 class CabinClass2:
     """
-    The cabin class (First, Business, Economy)
+    The cabin class (First, Business, Economy).
     """
 
     class Meta:

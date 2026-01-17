@@ -10,14 +10,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwcToSwcSignal:
-    """The SwcToSwcSignal describes the information (data element) that is
+    """
+    The SwcToSwcSignal describes the information (data element) that is
     exchanged between two SW Components.
 
     On the SWC Level it is possible that a SW Component sends one data
     element from one P-Port to two different SW Components (1:n
     Communication). The SwcToSwcSignal describes exactly the information
-    which is exchanged between one P-Port of a SW Component and one
-    R-Port of another SW Component.
+    which is exchanged between one P-Port of a SW Component and one R-Port
+    of another SW Component.
 
     :ivar data_element_irefs: Reference to a data element on the
         PPortPrototype and to the same data element on the

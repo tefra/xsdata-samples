@@ -23,15 +23,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlatMap:
-    """Contains a flat list of references to software objects.
+    """
+    Contains a flat list of references to software objects.
 
-    This list is used to identify instances and to resolve name
-    conflicts. The scope is given by the RootSwCompositionPrototype for
-    which it is used, i.e. it can be applied to a system, system extract
-    or ECU-extract. An instance of FlatMap may also be used in a
-    preliminary context, e.g. in the scope of a software component
-    before integration into a system. In this case it is not referred by
-    a RootSwCompositionPrototype.
+    This list is used to identify instances and to resolve name conflicts.
+    The scope is given by the RootSwCompositionPrototype for which it is
+    used, i.e. it can be applied to a system, system extract or
+    ECU-extract. An instance of FlatMap may also be used in a preliminary
+    context, e.g. in the scope of a software component before integration
+    into a system. In this case it is not referred by a
+    RootSwCompositionPrototype.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

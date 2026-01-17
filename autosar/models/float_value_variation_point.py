@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FloatValueVariationPoint:
-    """This class represents an attribute value variation point for Float
+    """
+    This class represents an attribute value variation point for Float
     attributes.
 
-    Note that this class might be used in the extended meta-model only
+    Note that this class might be used in the extended meta-model only.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

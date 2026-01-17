@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class FreeTextType:
     """
-    Textual information to provide descriptions and/or additional information.
+    Textual information to provide descriptions and/or additional
+    information.
 
     Attributes:
         value:

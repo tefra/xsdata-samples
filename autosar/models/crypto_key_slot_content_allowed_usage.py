@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoKeySlotContentAllowedUsage:
     """
-    This meta-class restricts the allowed usage of a key stored in the key slot.
+    This meta-class restricts the allowed usage of a key stored in the key
+    slot.
 
     :ivar allowed_keyslot_usage: This attribute defines for which
         operations the KeySlot may be used.

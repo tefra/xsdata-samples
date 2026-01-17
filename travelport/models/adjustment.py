@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class Adjustment:
-    """An indentifier which indentifies adjustment made on original pricing.
+    """
+    An indentifier which indentifies adjustment made on original pricing.
 
     It can a flat amount or percentage of original price. The value of
     Amount/Percent can be negetive. Negative value implies a discount.

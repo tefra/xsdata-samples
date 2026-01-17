@@ -13,15 +13,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FrameMapping:
-    """The entire source frame is mapped as it is onto the target frame (what in
-    general is only possible inside of a common platform).
+    """
+    The entire source frame is mapped as it is onto the target frame (what
+    in general is only possible inside of a common platform).
 
     In this case source and target frame should be the identical object.
     Each pair consists in a SOURCE and a TARGET referencing to a
-    FrameTriggering. The Frame Mapping is not supported by the Autosar
-    BSW. The existence is optional and has been incorporated into the
-    System Template mainly for compatibility in order to allow
-    interchange between FIBEX and AUTOSAR descriptions.
+    FrameTriggering. The Frame Mapping is not supported by the Autosar BSW.
+    The existence is optional and has been incorporated into the System
+    Template mainly for compatibility in order to allow interchange between
+    FIBEX and AUTOSAR descriptions.
 
     :ivar introduction: This represents introductory documentation about
         the frame mapping.

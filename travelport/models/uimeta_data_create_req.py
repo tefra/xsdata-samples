@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class UimetaDataCreateReq(BaseReq2):
     """
-    Service for Request to create the entry in action by Admin in Admin login view
-    in Profile Settings.
+    Service for Request to create the entry in action by Admin in Admin
+    login view in Profile Settings.
 
     Parameters
     ----------

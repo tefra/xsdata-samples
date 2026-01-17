@@ -19,11 +19,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwGenericAxisParamType:
-    """This meta-class describes a generic axis parameter type, namely:
-
-    * Plausibility checks can be specified via dataConstr.
-    * Textual description (desc), as a formal description is not of any use, due to the large variety of possibilities.
-    * If this parameter contains structures, these can be simulated through the recursive use of SwGenericAxisParamTypes.
+    """
+    This meta-class describes a generic axis parameter type, namely: *
+    Plausibility checks can be specified via dataConstr. * Textual
+    description (desc), as a formal description is not of any use, due to
+    the large variety of possibilities. * If this parameter contains
+    structures, these can be simulated through the recursive use of
+    SwGenericAxisParamTypes.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

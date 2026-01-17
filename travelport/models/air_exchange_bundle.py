@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AirExchangeBundle:
     """
-    Bundle exchange, pricing, and penalty information for one ticket number Used
-    both in request and response.
+    Bundle exchange, pricing, and penalty information for one ticket number
+    Used both in request and response.
 
     Parameters
     ----------

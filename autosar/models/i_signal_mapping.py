@@ -13,8 +13,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ISignalMapping:
-    """Arranges those signals (or SignalGroups) that are transferred by the gateway
-    from one channel to the other in pairs and defines the mapping between them.
+    """
+    Arranges those signals (or SignalGroups) that are transferred by the
+    gateway from one channel to the other in pairs and defines the mapping
+    between them.
 
     Each pair consists in a source and a target referencing to a
     ISignalTriggering.

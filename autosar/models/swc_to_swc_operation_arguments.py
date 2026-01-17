@@ -11,15 +11,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwcToSwcOperationArguments:
-    """The SwcToSwcOperationArguments describes the information (client server
-    operation arguments, plus the operation identification, if required) that are
-    exchanged between two SW Components from exactly one client to one server, or
-    from one server back to one client.
+    """
+    The SwcToSwcOperationArguments describes the information (client server
+    operation arguments, plus the operation identification, if required)
+    that are exchanged between two SW Components from exactly one client to
+    one server, or from one server back to one client.
 
     The direction attribute defines which direction is described. If
-    direction == IN, all arguments sent from the client to the server
-    are described by the SwcToSwcOperationArguments, in direction ==
-    OUT, it's the arguments sent back from server to client.
+    direction == IN, all arguments sent from the client to the server are
+    described by the SwcToSwcOperationArguments, in direction == OUT, it's
+    the arguments sent back from server to client.
 
     :ivar direction: Direction addressed by this
         SwcToSwcClientServerOperation element.

@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class LocalSupervision:
     """
-    This element defines a LocalSupervision in the context of platform health
-    management contribution.
+    This element defines a LocalSupervision in the context of platform
+    health management contribution.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

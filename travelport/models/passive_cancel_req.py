@@ -11,12 +11,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class PassiveCancelReq(BaseReq1):
-    """Request for cancellation of Passive reservation/segment.
+    """
+    Request for cancellation of Passive reservation/segment.
 
-    Given the ProviderReservationInfo and PassiveReservationLocatorCode
-    , it will cancel the Passive Reservation An optional attribute of
-    'Key' will enable cancellation of a particular PassiveSegment in the
-    Passive Reservation
+    Given the ProviderReservationInfo and PassiveReservationLocatorCode ,
+    it will cancel the Passive Reservation An optional attribute of 'Key'
+    will enable cancellation of a particular PassiveSegment in the Passive
+    Reservation.
 
     Parameters
     ----------

@@ -21,11 +21,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PerInstanceMemory:
-    """Defines a 'C' typed memory-block that needs to be available for each
+    """
+    Defines a 'C' typed memory-block that needs to be available for each
     instance of the SW-component.
 
-    This is typically only useful if supportsMultipleInstantiation is
-    set to "true" or if the software-component defines NVRAM access via
+    This is typically only useful if supportsMultipleInstantiation is set
+    to "true" or if the software-component defines NVRAM access via
     permanent blocks.
 
     :ivar short_name: This specifies an identifying shortName for the

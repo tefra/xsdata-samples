@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EventOccurrenceKindEnum:
     """
-    This is used to describe the type of the occurrence of an event within a given
-    time interval.
+    This is used to describe the type of the occurrence of an event within
+    a given time interval.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

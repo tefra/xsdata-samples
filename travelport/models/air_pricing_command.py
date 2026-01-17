@@ -12,10 +12,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirPricingCommand:
-    """A containter to identify individual pricing events.
+    """
+    A containter to identify individual pricing events.
 
-    A pricing result will be returned for each pricing command according
-    to its parameters.
+    A pricing result will be returned for each pricing command according to
+    its parameters.
 
     Parameters
     ----------

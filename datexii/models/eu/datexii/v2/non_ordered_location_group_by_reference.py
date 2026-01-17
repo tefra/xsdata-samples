@@ -15,9 +15,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class NonOrderedLocationGroupByReference(NonOrderedLocations):
     """
-    A group of (i.e. more than one) physically separate locations which have no
-    specific order that are defined by reference to a predefined non ordered
-    location group.
+    A group of (i.e. more than one) physically separate locations which
+    have no specific order that are defined by reference to a predefined
+    non ordered location group.
 
     :ivar predefined_non_ordered_location_group_reference: A reference
         to a versioned instance of a predefined non ordered location

@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ItineraryByIndexedLocations(Itinerary):
-    """Multiple physically separate locations arranged as an ordered set that
+    """
+    Multiple physically separate locations arranged as an ordered set that
     defines an itinerary or route.
 
     The index qualifier indicates the order.

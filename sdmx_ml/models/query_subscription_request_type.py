@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class QuerySubscriptionRequestType:
-    """QuerySubscriptionRequestType describes the structure of a query for
+    """
+    QuerySubscriptionRequestType describes the structure of a query for
     subscriptions.
 
     Subscriptions for a given organisation may be retrieved.

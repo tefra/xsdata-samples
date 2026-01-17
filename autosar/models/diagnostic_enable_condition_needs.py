@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEnableConditionNeeds:
     """
-    This meta-class represents the needs of a software-component to provide the
-    capability to set an enable condition.
+    This meta-class represents the needs of a software-component to provide
+    the capability to set an enable condition.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

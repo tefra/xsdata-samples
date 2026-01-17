@@ -29,10 +29,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswBackgroundEvent:
-    """A recurring BswEvent which is used to perform background activities.
+    """
+    A recurring BswEvent which is used to perform background activities.
 
-    It is similar to a BswTimingEvent but has no fixed time period and
-    is activated only with low priority.
+    It is similar to a BswTimingEvent but has no fixed time period and is
+    activated only with low priority.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

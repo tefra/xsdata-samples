@@ -30,12 +30,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwcBswMapping:
-    """Maps an SwcInternalBehavior to an BswInternalBehavior.
+    """
+    Maps an SwcInternalBehavior to an BswInternalBehavior.
 
     This is required to coordinate the API generation and the scheduling
-    for AUTOSAR Service Components, ECU Abstraction Components and
-    Complex Driver Components by the RTE and the BSW scheduling
-    mechanisms.
+    for AUTOSAR Service Components, ECU Abstraction Components and Complex
+    Driver Components by the RTE and the BSW scheduling mechanisms.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

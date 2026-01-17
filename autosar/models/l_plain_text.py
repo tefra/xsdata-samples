@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LPlainText:
-    """This represents plain string in one particular language.
+    """
+    This represents plain string in one particular language.
 
     The language is denoted in the attribute l.
 

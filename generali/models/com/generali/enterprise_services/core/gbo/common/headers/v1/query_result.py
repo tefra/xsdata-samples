@@ -12,8 +12,8 @@ __NAMESPACE__ = (
 @dataclass
 class QueryResult(QueryResultType):
     """
-    <description xmlns="">A header providing meta-data about the result of a
-    query.</description>
+    <description xmlns="">A header providing meta-data about the result of
+    a query.</description>.
     """
 
     class Meta:

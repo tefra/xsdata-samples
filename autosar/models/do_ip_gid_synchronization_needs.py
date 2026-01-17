@@ -17,14 +17,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DoIpGidSynchronizationNeeds:
-    """The DoIpGidSynchronizationNeeds indicates that the software-component owning
-    this ServiceNeeds is triggered by the DoIP entity to start a synchronization of
-    the GID (Group Identification) on the DoIP service 0x0001, 0x0002, 0x0003 or
-    before announcement via service 0x0004 according to ISO 13400-2:2012 if
-    necessary.
+    """
+    The DoIpGidSynchronizationNeeds indicates that the software-component
+    owning this ServiceNeeds is triggered by the DoIP entity to start a
+    synchronization of the GID (Group Identification) on the DoIP service
+    0x0001, 0x0002, 0x0003 or before announcement via service 0x0004
+    according to ISO 13400-2:2012 if necessary.
 
-    Note that this need is only relevant for DoIP synchronization
-    masters.
+    Note that this need is only relevant for DoIP synchronization masters.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

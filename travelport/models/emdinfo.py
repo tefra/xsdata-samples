@@ -18,11 +18,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class Emdinfo:
-    """This is the parent container to display EMD information.
+    """
+    This is the parent container to display EMD information.
 
-    Occurrence of multiple unique EMDs inside this container indicate
-    that those EMDs are conjunctive to each other. Supported providers
-    are 1G/1V/1P
+    Occurrence of multiple unique EMDs inside this container indicate that
+    those EMDs are conjunctive to each other. Supported providers are
+    1G/1V/1P.
 
     Parameters
     ----------

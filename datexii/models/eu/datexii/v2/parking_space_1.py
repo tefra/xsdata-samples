@@ -13,11 +13,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingSpace1(ParkingSpaceBasics):
-    """A single parking space.
+    """
+    A single parking space.
 
     It is possible to define the same parking space more than once with
-    different properties, e.g. when there is a different parking
-    assignment for different times.
+    different properties, e.g. when there is a different parking assignment
+    for different times.
 
     :ivar identical_to_parking_space: Points to another instance of
         'ParkingSpace', which is identical from a local point of view

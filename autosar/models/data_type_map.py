@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataTypeMap:
     """
-    This class represents the relationship between ApplicationDataType and its
-    implementing AbstractImplementationDataType.
+    This class represents the relationship between ApplicationDataType and
+    its implementing AbstractImplementationDataType.
 
     :ivar application_data_type_ref: This is the corresponding
         ApplicationDataType

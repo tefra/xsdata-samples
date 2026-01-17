@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class ConstraintSet:
-    """Defines constraints that apply to a component port.
+    """
+    Defines constraints that apply to a component port.
 
     If multiple constraintSet elements are used, each must have a unique
     value for the constraintSetId attribute.

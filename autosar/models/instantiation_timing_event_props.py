@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class InstantiationTimingEventProps:
-    """This meta class represents the ability to refine a timing event for
+    """
+    This meta class represents the ability to refine a timing event for
     particular instances of a software component.
 
     This supports then an instance specific timing.

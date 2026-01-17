@@ -7,11 +7,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class CodelistsType:
-    """CodelistsType describes the structure of the codelists container.
+    """
+    CodelistsType describes the structure of the codelists container.
 
-    It contains one or more codelist, which can be explicitly detailed
-    or referenced from an external structure document or registry
-    service.
+    It contains one or more codelist, which can be explicitly detailed or
+    referenced from an external structure document or registry service.
 
     :ivar codelist: Codelist provides the details of a codelist, which
         is defined as a list from which some statistical concepts (coded

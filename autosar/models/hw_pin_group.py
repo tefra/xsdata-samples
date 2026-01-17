@@ -23,8 +23,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class HwPinGroup:
-    """This meta-class represents the ability to describe groups of pins which are
-    used to connect hardware elements.
+    """
+    This meta-class represents the ability to describe groups of pins which
+    are used to connect hardware elements.
 
     This group acts as a bundle of pins. Thereby they allow to describe
     high level connections. Pin groups can even be nested.

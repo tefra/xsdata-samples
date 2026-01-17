@@ -15,8 +15,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SomeipRequiredEventGroup:
     """
-    The meta-class represents the ability to configure ServiceInstance related
-    communication settings on the required side for each EventGroup separately.
+    The meta-class represents the ability to configure ServiceInstance
+    related communication settings on the required side for each EventGroup
+    separately.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

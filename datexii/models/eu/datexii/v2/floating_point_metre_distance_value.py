@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class FloatingPointMetreDistanceValue(DataValue):
     """
-    A measured or calculated value of distance in metres in a floating point
-    format.
+    A measured or calculated value of distance in metres in a floating
+    point format.
 
     :ivar floating_point_metre_distance: A value of distance expressed
         in metres in a floating point format.

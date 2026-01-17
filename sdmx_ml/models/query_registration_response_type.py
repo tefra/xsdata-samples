@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class QueryRegistrationResponseType:
-    """QueryRegistrationResponseType describes the structure of a registration
+    """
+    QueryRegistrationResponseType describes the structure of a registration
     query response.
 
-    It provides a status for the request, and if successful, the
-    resulting data and/or metadata results.
+    It provides a status for the request, and if successful, the resulting
+    data and/or metadata results.
 
     :ivar status_message: StatusMessage provides that status for the
         registration query request, and if necessary, any error or

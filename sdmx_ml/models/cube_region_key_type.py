@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class CubeRegionKeyType(MemberSelectionType):
-    """CubeRegionKeyType is a type for providing a set of values for a dimension
-    for the purpose of defining a data cube region.
+    """
+    CubeRegionKeyType is a type for providing a set of values for a
+    dimension for the purpose of defining a data cube region.
 
     A set of distinct value can be provided, or if this dimension is
     represented as time, and time range can be specified.

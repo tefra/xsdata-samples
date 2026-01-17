@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class ConfigurableElementValues:
     """
-    All configuration information for a contained component, generator, generator
-    chain or abstractor instance.
+    All configuration information for a contained component, generator,
+    generator chain or abstractor instance.
 
     :ivar configurable_element_value: Describes the content of a
         configurable element. The required referenceId attribute refers

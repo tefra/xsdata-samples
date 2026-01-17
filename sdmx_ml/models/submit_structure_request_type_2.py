@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class SubmitStructureRequestType2(RegistryInterfaceType):
     """
-    SubmitStructureRequestType defines the structure of a registry submit structure
-    request document.
+    SubmitStructureRequestType defines the structure of a registry submit
+    structure request document.
     """
 
     class Meta:

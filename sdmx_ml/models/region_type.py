@@ -11,9 +11,19 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class RegionType(AnnotableType):
-    """RegionType is an abstract type which defines a generic constraint region.
+    """
+    RegionType is an abstract type which defines a generic constraint
+    region.
 
-    This type can be refined to define regions for data or metadata sets. A region is defined by a collection of key values - each of which a collection of values for a component which disambiguates data (i.e. dimensions of a dataset). For each region, a collection of attribute values can be provided. Taken together, the key values and attributes serve to identify or describe a subset of a data or metadata set. Finally, the region can flagged as being included or excluded, although this flag only makes sense when the region is used in a particular context.
+    This type can be refined to define regions for data or metadata sets. A
+    region is defined by a collection of key values - each of which a
+    collection of values for a component which disambiguates data (i.e.
+    dimensions of a dataset). For each region, a collection of attribute
+    values can be provided. Taken together, the key values and attributes
+    serve to identify or describe a subset of a data or metadata set.
+    Finally, the region can flagged as being included or excluded, although
+    this flag only makes sense when the region is used in a particular
+    context.
 
     :ivar key_value: KeyValue contains a reference to a component which
         disambiguates the data (i.e. a dimension) and provides a

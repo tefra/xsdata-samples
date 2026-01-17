@@ -22,13 +22,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SecurityEventStateFilter:
-    """This meta-class represents the configuration of a state filter for security
-    events.
+    """
+    This meta-class represents the configuration of a state filter for
+    security events.
 
-    The referenced states represent a block list, i.e. the security
-    events are dropped if the referenced state is the active state in
-    the relevant state machine (which depends on whether the IdsM
-    instance runs on the Classic or the Adaptive Platform).
+    The referenced states represent a block list, i.e. the security events
+    are dropped if the referenced state is the active state in the relevant
+    state machine (which depends on whether the IdsM instance runs on the
+    Classic or the Adaptive Platform).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

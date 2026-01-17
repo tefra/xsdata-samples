@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 @dataclass
 class CreditCardAuth4:
-    """The result of a Credit Auth Request.
+    """
+    The result of a Credit Auth Request.
 
     Will contain all the authorization info and result codes.
 

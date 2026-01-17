@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HttpAcceptEncoding:
     """
-    This meta-class represents the ability to specify the accept-encoding of an
-    exchange using HTTP.
+    This meta-class represents the ability to specify the accept-encoding
+    of an exchange using HTTP.
 
     :ivar accept_encoding: This attribute is only used on the client
         side of the configuration for the purpose of stating the

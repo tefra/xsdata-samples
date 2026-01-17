@@ -18,7 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlexrayArTpChannel:
-    """A channel is a group of connections sharing several properties.
+    """
+    A channel is a group of connections sharing several properties.
 
     The FlexRay AutosarTransport Layer supports several channels. These
     channels can work concurrently, thus each of them requires its own

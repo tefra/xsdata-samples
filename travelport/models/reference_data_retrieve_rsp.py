@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class ReferenceDataRetrieveRsp(BaseRsp1):
     """
-    Response to retrieve code, name and description for a specific reference data
-    type.
+    Response to retrieve code, name and description for a specific
+    reference data type.
     """
 
     class Meta:

@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class J1939DcmDm19Support:
     """
-    The software-component provides information about calibration verification
-    numbers for inclusion in DM19.
+    The software-component provides information about calibration
+    verification numbers for inclusion in DM19.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

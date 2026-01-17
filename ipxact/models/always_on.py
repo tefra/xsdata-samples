@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class AlwaysOn(UnsignedBitExpression):
-    """Boolean value.
+    """
+    Boolean value.
 
     If set to true, then the domain/port is always powered, whatever its
     power domain. Only applies for output ports.

@@ -16,13 +16,14 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Journal:
-    """Container for all information about a single journal and the volumes,
+    """
+    Container for all information about a single journal and the volumes,
     issues, and articles being registered within the journal.
 
     Within a journal instance you may register articles from a single
     issue, detailed in journal_issue. If you want to register items from
-    more than one issue you must use multiple journal instances within
-    your XML file.
+    more than one issue you must use multiple journal instances within your
+    XML file.
     """
 
     class Meta:

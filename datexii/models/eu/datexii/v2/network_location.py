@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class NetworkLocation(Location):
     """
-    The specification of a location on a network (as a point or a linear location).
+    The specification of a location on a network (as a point or a linear
+    location).
     """
 
     supplementary_positional_description: Optional[

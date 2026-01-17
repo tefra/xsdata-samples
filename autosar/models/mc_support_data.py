@@ -14,12 +14,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McSupportData:
-    """Root element for all measurement and calibration support data related to one
-    Implementation artifact on an ECU.
+    """
+    Root element for all measurement and calibration support data related
+    to one Implementation artifact on an ECU.
 
-    There shall be one such element related to the RTE implementation
-    (if it owns MC data) and a separate one for each module or
-    component, which owns private MC data.
+    There shall be one such element related to the RTE implementation (if
+    it owns MC data) and a separate one for each module or component, which
+    owns private MC data.
 
     :ivar emulation_supports: Describes the calibration method used by
         the RTE. This information is not needed for A2L generation, but

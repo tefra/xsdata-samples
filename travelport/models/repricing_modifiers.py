@@ -21,9 +21,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class RepricingModifiers:
-    """Used for rapid reprice to provide additional options for the reprice.
+    """
+    Used for rapid reprice to provide additional options for the reprice.
 
-    Providers: 1G/1V/1P/1S/1A
+    Providers: 1G/1V/1P/1S/1A.
 
     Parameters
     ----------

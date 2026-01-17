@@ -44,7 +44,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class CharacteristicValueType(BaseComponentType):
     """
-    <description xmlns="">A value of the characteristic.</description>
+    <description xmlns="">A value of the characteristic.</description>.
     """
 
     text: Optional[TextType] = field(

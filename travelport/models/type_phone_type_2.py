@@ -6,9 +6,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
 class TypePhoneType2(Enum):
-    """Specifies the phone types.
+    """
+    Specifies the phone types. (ie.
 
-    (ie. Home, Business, Mobile, etc)
+    Home, Business, Mobile, etc).
     """
 
     WORK = "Work"

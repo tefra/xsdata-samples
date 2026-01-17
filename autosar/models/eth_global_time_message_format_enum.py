@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EthGlobalTimeMessageFormatEnum:
     """
-    Specifies which message formats are available to for the Ethernet time sync
-    protocol.
+    Specifies which message formats are available to for the Ethernet time
+    sync protocol.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

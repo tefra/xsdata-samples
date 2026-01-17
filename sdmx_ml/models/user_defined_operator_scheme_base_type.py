@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class UserDefinedOperatorSchemeBaseType(VtlDefinitionSchemeType):
-    """UserDefinedOperatorSchemeBaseType is an abstract base type for the
+    """
+    UserDefinedOperatorSchemeBaseType is an abstract base type for the
     UserDefinedOperatorSchemeType.
 
     It restricts the item types to be only user defined operators.

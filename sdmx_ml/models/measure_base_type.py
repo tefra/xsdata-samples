@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 class MeasureBaseType(ComponentType):
     """
     MeasureBaseType is an abstract base type that refines ComponentType to
-    rerstrict the represenations to those which are applicable for a measure.
+    rerstrict the represenations to those which are applicable for a
+    measure.
     """
 
     concept_identity: Optional[str] = field(

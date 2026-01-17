@@ -21,11 +21,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AutosarOperationArgumentInstance:
-    """This class represents a reference to an argument instance.
+    """
+    This class represents a reference to an argument instance.
 
-    This way it is possible to reference an argument instance in the occurrence expression formula. The argument instance can target to one of the following arguments:
-    * a whole argument used in an operation of a PortPrototype with ClientServerInterface
-    * an element inside of a composite argument used in an operation of a PortPrototype with ClientServerInterface
+    This way it is possible to reference an argument instance in the
+    occurrence expression formula. The argument instance can target to one
+    of the following arguments: * a whole argument used in an operation of
+    a PortPrototype with ClientServerInterface * an element inside of a
+    composite argument used in an operation of a PortPrototype with
+    ClientServerInterface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -12,9 +12,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticParameter:
     """
-    This meta-class represents the ability to describe information relevant for the
-    execution of a specific diagnostic service, i.e. it can be taken to
-    parameterize the service.
+    This meta-class represents the ability to describe information relevant
+    for the execution of a specific diagnostic service, i.e. it can be
+    taken to parameterize the service.
 
     :ivar bit_offset: This represents the bitOffset of the
         DiagnosticParameter

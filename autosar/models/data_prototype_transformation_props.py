@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataPrototypeTransformationProps:
     """
-    DataPrototypeTransformationProps allows to set the attributes for the different
-    TransformationTechnologies that are DataPrototype specific.
+    DataPrototypeTransformationProps allows to set the attributes for the
+    different TransformationTechnologies that are DataPrototype specific.
 
     :ivar data_protototype_in_port_interface_ref: Reference to a
         DataPrototype that is transported in the serialized ISignal.

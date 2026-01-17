@@ -21,7 +21,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirExchangeTicketingReq(BaseReq1):
-    """Request to ticket an exchanged itinerary.
+    """
+    Request to ticket an exchanged itinerary.
 
     Providers 1G, 1V, 1P.
 

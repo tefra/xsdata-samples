@@ -17,7 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class HwAttributeLiteralDef:
-    """One available EnumerationLiteral of the Enumeration definition.
+    """
+    One available EnumerationLiteral of the Enumeration definition.
 
     Only applicable if the category of the HwAttributeDef equals
     Enumeration.

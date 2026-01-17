@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PointDestination(Destination):
     """
-    The specification of the destination of a defined route or itinerary which is a
-    point.
+    The specification of the destination of a defined route or itinerary
+    which is a point.
     """
 
     point: Optional[Point] = field(

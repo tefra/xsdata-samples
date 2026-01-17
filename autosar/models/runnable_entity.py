@@ -44,11 +44,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RunnableEntity:
-    """A RunnableEntity represents the smallest code-fragment that is provided by
-    an AtomicSwComponentType and are executed under control of the RTE.
+    """
+    A RunnableEntity represents the smallest code-fragment that is provided
+    by an AtomicSwComponentType and are executed under control of the RTE.
 
-    RunnableEntities are for instance set up to respond to data
-    reception or operation invocation on a server.
+    RunnableEntities are for instance set up to respond to data reception
+    or operation invocation on a server.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

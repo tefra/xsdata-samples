@@ -34,10 +34,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingRecord:
-    """A container for static parking information.
+    """
+    A container for static parking information.
 
-    Must be specialised as a parking site or as a group of parking
-    sites.
+    Must be specialised as a parking site or as a group of parking sites.
 
     :ivar parking_name: Name of the parking, i.e. name of the parking
         site or the group of parking sites.

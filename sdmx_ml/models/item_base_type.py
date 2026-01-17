@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ItemBaseType(NameableType):
-    """ItemBaseType is an abstract base type that forms the basis for the ItemType.
+    """
+    ItemBaseType is an abstract base type that forms the basis for the
+    ItemType.
 
     It requires that at least an id be supplied for an item.
     """

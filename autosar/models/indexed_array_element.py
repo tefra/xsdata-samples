@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class IndexedArrayElement:
-    """This element represents exactly one indexed element in the array.
+    """
+    This element represents exactly one indexed element in the array.
 
     Either the applicationArrayElement or implementationArrayElement
     reference shall be used.

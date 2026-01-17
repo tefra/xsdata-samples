@@ -23,14 +23,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AsynchronousServerCallResultPoint:
-    """If a RunnableEntity owns a AsynchronousServerCallResultPoint it is entitled
-    to get the result of the referenced AsynchronousServerCallPoint.
+    """
+    If a RunnableEntity owns a AsynchronousServerCallResultPoint it is
+    entitled to get the result of the referenced
+    AsynchronousServerCallPoint.
 
     If it is associated with AsynchronousServerCallReturnsEvent, this
-    RTEEvent notifies the completion of the required
-    ClientServerOperation or a timeout. The occurrence of this event can
-    either unblock a WaitPoint or can lead to the invocation of a
-    RunnableEntity.
+    RTEEvent notifies the completion of the required ClientServerOperation
+    or a timeout. The occurrence of this event can either unblock a
+    WaitPoint or can lead to the invocation of a RunnableEntity.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

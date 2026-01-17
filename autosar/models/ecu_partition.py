@@ -18,7 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcuPartition:
-    """Partitions are used as error containment regions.
+    """
+    Partitions are used as error containment regions.
 
     They permit the grouping of SWCs and resources and allow to describe
     recovery policies individually for each partition. Partitions can be

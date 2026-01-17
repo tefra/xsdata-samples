@@ -6,11 +6,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TableSeparatorString:
-    """This represents the ability to denote a separator string within an OASIS
-    exchange table.
-
-    * '''0''': no line is displayed
-    * '''1''': line is displayed
+    """
+    This represents the ability to denote a separator string within an
+    OASIS exchange table. * '''0''': no line is displayed * '''1''': line
+    is displayed.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -14,8 +14,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class ConnectionType:
     """
-    To specify connection locations, preference level for each, min connection
-    time, and whether location is specified for stopping or changing.
+    To specify connection locations, preference level for each, min
+    connection time, and whether location is specified for stopping or
+    changing.
     """
 
     connection_location: list[ConnectionType.ConnectionLocation] = field(

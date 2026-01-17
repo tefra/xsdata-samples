@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CouplingElement:
-    """A CouplingElement is used to connect EcuInstances to the VLAN of an
+    """
+    A CouplingElement is used to connect EcuInstances to the VLAN of an
     EthernetCluster.
 
     CouplingElements can reach from a simple hub to a complex managed

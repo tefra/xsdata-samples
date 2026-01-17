@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataPrototypeInServiceInterfaceRef:
     """
-    This meta-class represents the ability to refer to an AUTOSAR DataPrototype in
-    the context of a ServiceInterface.
+    This meta-class represents the ability to refer to an AUTOSAR
+    DataPrototype in the context of a ServiceInterface.
 
     :ivar data_prototype_iref: This element represents the ability to: *
         refer to a DataPrototype in the context of a ServiceInterface. *

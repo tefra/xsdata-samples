@@ -13,10 +13,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class SubspaceRefType:
-    """Address subspace type.
+    """
+    Address subspace type.
 
-    Its subspaceReference attribute references the subspace from which
-    the dimensions are taken.
+    Its subspaceReference attribute references the subspace from which the
+    dimensions are taken.
 
     :ivar name: Unique name
     :ivar display_name:

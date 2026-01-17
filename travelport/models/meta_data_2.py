@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class MetaData2:
     """
-    An element created under the service which will store all settings for the
-    selected profile.
+    An element created under the service which will store all settings for
+    the selected profile.
 
     Parameters
     ----------

@@ -6,9 +6,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
 class TypeProfileComponentType2(Enum):
-    """Specifies the component names.
-
-    (i.e AccountInfo, AirPreference, TravelDocument etc)
+    """
+    Specifies the component names. (i.e AccountInfo, AirPreference,
+    TravelDocument etc).
     """
 
     ACCOUNT_INFO = "AccountInfo"

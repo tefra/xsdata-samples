@@ -20,11 +20,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CanTpConnection:
-    """A connection identifies the sender and the receiver of this particular
+    """
+    A connection identifies the sender and the receiver of this particular
     communication.
 
-    The CanTp module routes a Pdu through this connection.
-    atpVariation: Derived, because TpNode can vary.
+    The CanTp module routes a Pdu through this connection. atpVariation:
+    Derived, because TpNode can vary.
 
     :ivar ident: This adds the ability to become referrable to
         TpConnection.

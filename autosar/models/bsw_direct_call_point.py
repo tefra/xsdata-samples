@@ -18,11 +18,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswDirectCallPoint:
-    """Represents a concrete point in the code from where a BswModuleEntry is
+    """
+    Represents a concrete point in the code from where a BswModuleEntry is
     called directly, i.e. not via the BSW Scheduler.
 
-    This information can be used to analyze call tree and resource
-    locking scenarios. It is not needed to configure the BSW Scheduler.
+    This information can be used to analyze call tree and resource locking
+    scenarios. It is not needed to configure the BSW Scheduler.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

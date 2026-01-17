@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 @dataclass(frozen=True)
 class AnnotationsType:
     """
-    AnnotationsType provides for a list of annotations to be attached to data and
-    structure messages.
+    AnnotationsType provides for a list of annotations to be attached to
+    data and structure messages.
     """
 
     annotation: tuple[AnnotationType, ...] = field(

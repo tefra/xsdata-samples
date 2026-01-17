@@ -10,16 +10,21 @@ __NAMESPACE__ = (
 
 @dataclass
 class DateType:
-    """<ns1:UniqueID xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreCo
-    mponentsTechnicalSpecification:2">UDT000009</ns1:UniqueID> <ns1:Acronym xmlns:n
-    s1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecifi
-    cation:2">UDT</ns1:Acronym> <ns1:DictionaryEntryName xmlns:ns1="urn:un:unece:un
-    cefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Date.
+    """
+    <ns1:UniqueID
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">UDT000009</ns1:UniqueID>
+    <ns1:Acronym
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">UDT</ns1:Acronym>
+    <ns1:DictionaryEntryName
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Date.
 
-    Type</ns1:DictionaryEntryName>
-    <ns1:Version xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.01</ns1:Version>
-    <ns1:Definition xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A particular point in the progression of time together with the relevant supplementary information.</ns1:Definition>
-    <ns1:PrimitiveType xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">date</ns1:PrimitiveType>
+    Type</ns1:DictionaryEntryName> <ns1:Version
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.01</ns1:Version>
+    <ns1:Definition
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A
+    particular point in the progression of time together with the relevant
+    supplementary information.</ns1:Definition> <ns1:PrimitiveType
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">date</ns1:PrimitiveType>.
     """
 
     value: Optional[XmlDate] = field(

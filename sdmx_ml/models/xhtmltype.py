@@ -5,12 +5,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class Xhtmltype:
-    """XHTMLType allows for mixed content of text and XHTML tags.
+    """
+    XHTMLType allows for mixed content of text and XHTML tags.
 
-    When using this type, one will have to provide a reference to the
-    XHTML schema, since the processing of the tags within this type is
-    strict, meaning that they are validated against the XHTML schema
-    provided.
+    When using this type, one will have to provide a reference to the XHTML
+    schema, since the processing of the tags within this type is strict,
+    meaning that they are validated against the XHTML schema provided.
     """
 
     class Meta:

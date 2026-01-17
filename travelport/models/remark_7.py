@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 @dataclass
 class Remark7:
-    """A textual remark container to hold any printable text.
-
-    (max 512 chars)
+    """
+    A textual remark container to hold any printable text. (max 512 chars).
     """
 
     class Meta:

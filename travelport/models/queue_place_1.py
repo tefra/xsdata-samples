@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 @dataclass
 class QueuePlace1:
     """
-    Allow queue placement of a PNR at the time of booking to be used for Providers
-    1G,1V and 1P.
+    Allow queue placement of a PNR at the time of booking to be used for
+    Providers 1G,1V and 1P.
 
     Parameters
     ----------

@@ -11,11 +11,12 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class FooterMessageType(CodedStatusMessageType):
-    """FooterMessageType defines the structure of a message that is contained in
-    the footer of a message.
+    """
+    FooterMessageType defines the structure of a message that is contained
+    in the footer of a message.
 
-    It is a status message that have a severity code of Error,
-    Information, or Warning added to it.
+    It is a status message that have a severity code of Error, Information,
+    or Warning added to it.
     """
 
     severity: Optional[SeverityCodeType] = field(

@@ -41,7 +41,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class ConfTheme:
     """
-    <div> <h3>Conference Theme</h3> </div>
+    <div> <h3>Conference Theme</h3> </div>.
     """
 
     class Meta:

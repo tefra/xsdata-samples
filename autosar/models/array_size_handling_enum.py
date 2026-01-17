@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ArraySizeHandlingEnum:
     """
-    This enumeration defines different ways to handle the sizes of variable size
-    arrays.
+    This enumeration defines different ways to handle the sizes of variable
+    size arrays.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

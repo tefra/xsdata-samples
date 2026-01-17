@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class GeneralObstruction(Obstruction):
     """
-    Any stationary or moving obstacle of a physical nature, other than of an
-    animal, vehicle, environmental, or damaged equipment nature.
+    Any stationary or moving obstacle of a physical nature, other than of
+    an animal, vehicle, environmental, or damaged equipment nature.
 
     :ivar obstruction_type: Characterization of the type of general
         obstruction.

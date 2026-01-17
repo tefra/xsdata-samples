@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum:
     """
-    This meta-class contains a list of possible subfunctions for the UDS service
-    0x2C.
+    This meta-class contains a list of possible subfunctions for the UDS
+    service 0x2C.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

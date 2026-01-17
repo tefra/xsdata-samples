@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegSimplePoint(TpegPointLocation):
     """
-    A point on the road network which is not bounded by any other points on the
-    road network.
+    A point on the road network which is not bounded by any other points on
+    the road network.
 
     :ivar tpeg_simple_point_location_type: The type of TPEG location.
     :ivar point: A single point defined by a coordinate set and TPEG

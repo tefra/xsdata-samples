@@ -12,8 +12,8 @@ __NAMESPACE__ = (
 @dataclass
 class NotifyProgramGbmrequest(NotifyProgramGbmrequestType):
     """
-    <description xmlns="">The definition of the request message that supports
-    retrieval of a agreement</description>
+    <description xmlns="">The definition of the request message that
+    supports retrieval of a agreement</description>.
     """
 
     class Meta:

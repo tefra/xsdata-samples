@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class AddressUnitBits(UnsignedPositiveLongintExpression):
-    """The number of data bits in an addressable unit.
+    """
+    The number of data bits in an addressable unit.
 
     The default is byte addressable (8 bits).
     """

@@ -63,7 +63,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ServiceTiming:
     """
-    This meta-class represents the timing view for one or more service instances.
+    This meta-class represents the timing view for one or more service
+    instances.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class GeneralInstructionOrMessageToRoadUsers(NetworkManagement):
     """
-    General instruction and/or message that is issued by the network/road operator
-    which is applicable to drivers and sometimes passengers.
+    General instruction and/or message that is issued by the network/road
+    operator which is applicable to drivers and sometimes passengers.
 
     :ivar general_instruction_to_road_users_type: General instruction
         that is issued by the network/road operator which is applicable

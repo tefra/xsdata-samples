@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class AttributeListBaseType(ComponentListType):
     """
-    AttributeListBaseType is an abstract base type used as the basis for the
-    AttributeListType.
+    AttributeListBaseType is an abstract base type used as the basis for
+    the AttributeListType.
 
     :ivar choice:
     :ivar id: The id attribute is provided in this case for

@@ -30,11 +30,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SomeipServiceInstanceToMachineMapping:
-    """This meta-class allows to map SomeipServiceInstances to a
+    """
+    This meta-class allows to map SomeipServiceInstances to a
     CommunicationConnector of a Machine.
 
-    In this step the network configuration (IP Address, Transport
-    Protocol, Port Number) for the ServiceInstance is defined.
+    In this step the network configuration (IP Address, Transport Protocol,
+    Port Number) for the ServiceInstance is defined.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

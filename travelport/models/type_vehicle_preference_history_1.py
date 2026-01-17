@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class TypeVehiclePreferenceHistory1(TypeBasePreferenceHistory1):
     """
-    Defines avehicle preference for a particular set of criteria (e.g. dates,
-    supplier, etc.).
+    Defines avehicle preference for a particular set of criteria (e.g.
+    dates, supplier, etc.).
 
     Parameters
     ----------

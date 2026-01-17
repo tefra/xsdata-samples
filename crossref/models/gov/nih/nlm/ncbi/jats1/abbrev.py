@@ -212,7 +212,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class CompoundKwd:
     """
-    <div> <h3>Compound Keyword</h3> </div>
+    <div> <h3>Compound Keyword</h3> </div>.
     """
 
     class Meta:
@@ -286,7 +286,7 @@ class CompoundKwd:
 @dataclass
 class CompoundSubject:
     """
-    <div> <h3>Compound Subject Name</h3> </div>
+    <div> <h3>Compound Subject Name</h3> </div>.
     """
 
     class Meta:
@@ -360,7 +360,7 @@ class CompoundSubject:
 @dataclass
 class Abbrev:
     """
-    <div> <h3>Abbreviation or Acronym</h3> </div>
+    <div> <h3>Abbreviation or Acronym</h3> </div>.
     """
 
     class Meta:
@@ -477,7 +477,7 @@ class Abbrev:
 @dataclass
 class Abstract:
     """
-    <div> <h3>Abstract</h3> </div>
+    <div> <h3>Abstract</h3> </div>.
     """
 
     class Meta:
@@ -554,7 +554,7 @@ class Abstract:
 @dataclass
 class Alternatives:
     """
-    <div> <h3>Alternatives For Processing</h3> </div>
+    <div> <h3>Alternatives For Processing</h3> </div>.
     """
 
     class Meta:
@@ -685,7 +685,7 @@ class Alternatives:
 @dataclass
 class Annotation:
     """
-    <div> <h3>Annotation in a Citation</h3> </div>
+    <div> <h3>Annotation in a Citation</h3> </div>.
     """
 
     class Meta:
@@ -738,7 +738,7 @@ class Annotation:
 @dataclass
 class AuthorComment:
     """
-    <div> <h3>Author Comment</h3> </div>
+    <div> <h3>Author Comment</h3> </div>.
     """
 
     class Meta:
@@ -797,7 +797,7 @@ class AuthorComment:
 @dataclass
 class BlockAlternatives:
     """
-    <div> <h3>Block-Level Alternatives For Processing</h3> </div>
+    <div> <h3>Block-Level Alternatives For Processing</h3> </div>.
     """
 
     class Meta:
@@ -863,7 +863,7 @@ class BlockAlternatives:
 @dataclass
 class Caption:
     """
-    <div> <h3>Caption of a Figure, Table, Etc.</h3> </div>
+    <div> <h3>Caption of a Figure, Table, Etc.</h3> </div>.
     """
 
     class Meta:
@@ -927,7 +927,7 @@ class Caption:
 @dataclass
 class CitationAlternatives:
     """
-    <div> <h3>Citation Alternatives</h3> </div>
+    <div> <h3>Citation Alternatives</h3> </div>.
     """
 
     class Meta:
@@ -980,7 +980,7 @@ class CitationAlternatives:
 @dataclass
 class ConfSponsor:
     """
-    <div> <h3>Conference Sponsor</h3> </div>
+    <div> <h3>Conference Sponsor</h3> </div>.
     """
 
     class Meta:
@@ -1044,7 +1044,7 @@ class ConfSponsor:
 @dataclass
 class CopyrightHolder:
     """
-    <div> <h3>Copyright Holder</h3> </div>
+    <div> <h3>Copyright Holder</h3> </div>.
     """
 
     class Meta:
@@ -1116,7 +1116,7 @@ class CopyrightHolder:
 @dataclass
 class Def:
     """
-    <div> <h3>Definition List: Definition</h3> </div>
+    <div> <h3>Definition List: Definition</h3> </div>.
     """
 
     class Meta:
@@ -1169,7 +1169,7 @@ class Def:
 @dataclass
 class Edition:
     """
-    <div> <h3>Edition Statement, Cited</h3> </div>
+    <div> <h3>Edition Statement, Cited</h3> </div>.
     """
 
     class Meta:
@@ -1239,7 +1239,7 @@ class Edition:
 @dataclass
 class Fn:
     """
-    <div> <h3>Footnote</h3> </div>
+    <div> <h3>Footnote</h3> </div>.
     """
 
     class Meta:
@@ -1311,7 +1311,7 @@ class Fn:
 @dataclass
 class IndexTerm:
     """
-    <div> <h3>Index Term</h3> </div>
+    <div> <h3>Index Term</h3> </div>.
     """
 
     class Meta:
@@ -1419,7 +1419,7 @@ class IndexTerm:
 @dataclass
 class Institution:
     """
-    <div> <h3>Institution Name: in an Address</h3> </div>
+    <div> <h3>Institution Name: in an Address</h3> </div>.
     """
 
     class Meta:
@@ -1534,7 +1534,7 @@ class Institution:
 @dataclass
 class License:
     """
-    <div> <h3>License Information</h3> </div>
+    <div> <h3>License Information</h3> </div>.
     """
 
     class Meta:
@@ -1645,7 +1645,7 @@ class License:
 @dataclass
 class OpenAccess:
     """
-    <div> <h3>Open Access</h3> </div>
+    <div> <h3>Open Access</h3> </div>.
     """
 
     class Meta:
@@ -1691,7 +1691,7 @@ class OpenAccess:
 @dataclass
 class AddrLine:
     """
-    <div> <h3>Address Line</h3> </div>
+    <div> <h3>Address Line</h3> </div>.
     """
 
     class Meta:
@@ -1883,7 +1883,7 @@ class AddrLine:
 @dataclass
 class AltTitle:
     """
-    <div> <h3>Alternate Title</h3> </div>
+    <div> <h3>Alternate Title</h3> </div>.
     """
 
     class Meta:
@@ -2092,7 +2092,7 @@ class AltTitle:
 @dataclass
 class Array:
     """
-    <div> <h3>Array (Simple Tabular Array)</h3> </div>
+    <div> <h3>Array (Simple Tabular Array)</h3> </div>.
     """
 
     class Meta:
@@ -2213,7 +2213,7 @@ class Array:
 @dataclass
 class ArticleTitle:
     """
-    <div> <h3>Article Title</h3> </div>
+    <div> <h3>Article Title</h3> </div>.
     """
 
     class Meta:
@@ -2408,7 +2408,7 @@ class ArticleTitle:
 @dataclass
 class Attrib:
     """
-    <div> <h3>Attribution</h3> </div>
+    <div> <h3>Attribution</h3> </div>.
     """
 
     class Meta:
@@ -2606,7 +2606,7 @@ class Attrib:
 @dataclass
 class AwardId:
     """
-    <div> <h3>Award Identifier</h3> </div>
+    <div> <h3>Award Identifier</h3> </div>.
     """
 
     class Meta:
@@ -2838,7 +2838,7 @@ class AwardId:
 @dataclass
 class Bold:
     """
-    <div> <h3>Bold</h3> </div>
+    <div> <h3>Bold</h3> </div>.
     """
 
     class Meta:
@@ -3035,7 +3035,7 @@ class Bold:
 @dataclass
 class DefItem:
     """
-    <div> <h3>Definition List: Definition Item</h3> </div>
+    <div> <h3>Definition List: Definition Item</h3> </div>.
     """
 
     class Meta:
@@ -3088,7 +3088,7 @@ class DefItem:
 @dataclass
 class FnGroup:
     """
-    <div> <h3>Footnote Group</h3> </div>
+    <div> <h3>Footnote Group</h3> </div>.
     """
 
     class Meta:
@@ -3153,7 +3153,7 @@ class FnGroup:
 @dataclass
 class InstitutionWrap:
     """
-    <div> <h3>Institution Wrapper</h3> </div>
+    <div> <h3>Institution Wrapper</h3> </div>.
     """
 
     class Meta:
@@ -3191,7 +3191,7 @@ class InstitutionWrap:
 @dataclass
 class Speaker:
     """
-    <div> <h3>Speaker</h3> </div>
+    <div> <h3>Speaker</h3> </div>.
     """
 
     class Meta:
@@ -3279,7 +3279,7 @@ class Speaker:
 @dataclass
 class Address:
     """
-    <div> <h3>Address/Contact Information</h3> </div>
+    <div> <h3>Address/Contact Information</h3> </div>.
     """
 
     class Meta:
@@ -3401,7 +3401,7 @@ class Address:
 @dataclass
 class Aff:
     """
-    <div> <h3>Affiliation</h3> </div>
+    <div> <h3>Affiliation</h3> </div>.
     """
 
     class Meta:
@@ -3596,7 +3596,7 @@ class Aff:
 @dataclass
 class ChapterTitle:
     """
-    <div> <h3>Chapter Title in a Citation</h3> </div>
+    <div> <h3>Chapter Title in a Citation</h3> </div>.
     """
 
     class Meta:
@@ -3766,7 +3766,7 @@ class ChapterTitle:
 @dataclass
 class ChemStruct:
     """
-    <div> <h3>Chemical Structure (Display)</h3> </div>
+    <div> <h3>Chemical Structure (Display)</h3> </div>.
     """
 
     class Meta:
@@ -4014,7 +4014,7 @@ class ChemStruct:
 @dataclass
 class Code:
     """
-    <div> <h3>Code Text</h3> </div>
+    <div> <h3>Code Text</h3> </div>.
     """
 
     class Meta:
@@ -4238,7 +4238,7 @@ class Code:
 @dataclass
 class ConfLoc:
     """
-    <div> <h3>Conference Location</h3> </div>
+    <div> <h3>Conference Location</h3> </div>.
     """
 
     class Meta:
@@ -4330,7 +4330,7 @@ class ConfLoc:
 @dataclass
 class CopyrightStatement:
     """
-    <div> <h3>Copyright Statement</h3> </div>
+    <div> <h3>Copyright Statement</h3> </div>.
     """
 
     class Meta:
@@ -4458,7 +4458,7 @@ class CopyrightStatement:
 @dataclass
 class DataTitle:
     """
-    <div> <h3>Data Title in a Citation</h3> </div>
+    <div> <h3>Data Title in a Citation</h3> </div>.
     """
 
     class Meta:
@@ -4598,7 +4598,7 @@ class DataTitle:
 @dataclass
 class ExtLink:
     """
-    <div> <h3>External Link</h3> </div>
+    <div> <h3>External Link</h3> </div>.
     """
 
     class Meta:
@@ -4772,7 +4772,7 @@ class ExtLink:
 @dataclass
 class PublisherName:
     """
-    <div> <h3>Publisher's Name</h3> </div>
+    <div> <h3>Publisher's Name</h3> </div>.
     """
 
     class Meta:
@@ -4829,7 +4829,7 @@ class PublisherName:
 @dataclass
 class AffAlternatives:
     """
-    <div> <h3>Affiliation Alternatives</h3> </div>
+    <div> <h3>Affiliation Alternatives</h3> </div>.
     """
 
     class Meta:
@@ -4861,7 +4861,7 @@ class AffAlternatives:
 @dataclass
 class Answer:
     """
-    <div> <h3>Answer Elements</h3> </div>
+    <div> <h3>Answer Elements</h3> </div>.
     """
 
     class Meta:
@@ -5197,7 +5197,7 @@ class Answer:
 @dataclass
 class ChemStructWrap:
     """
-    <div> <h3>Chemical Structure Wrapper</h3> </div>
+    <div> <h3>Chemical Structure Wrapper</h3> </div>.
     """
 
     class Meta:
@@ -5383,7 +5383,7 @@ class ChemStructWrap:
 @dataclass
 class Comment:
     """
-    <div> <h3>Comment in a Citation</h3> </div>
+    <div> <h3>Comment in a Citation</h3> </div>.
     """
 
     class Meta:
@@ -5588,7 +5588,7 @@ class Comment:
 @dataclass
 class DefHead:
     """
-    <div> <h3>Definition List: Definition Head</h3> </div>
+    <div> <h3>Definition List: Definition Head</h3> </div>.
     """
 
     class Meta:
@@ -5772,7 +5772,7 @@ class DefHead:
 @dataclass
 class DispFormula:
     """
-    <div> <h3>Formula, Display</h3> </div>
+    <div> <h3>Formula, Display</h3> </div>.
     """
 
     class Meta:
@@ -5989,7 +5989,7 @@ class DispFormula:
 @dataclass
 class FixedCase:
     """
-    <div> <h3>Fixed Case</h3> </div>
+    <div> <h3>Fixed Case</h3> </div>.
     """
 
     class Meta:
@@ -6187,7 +6187,7 @@ class FixedCase:
 @dataclass
 class Graphic:
     """
-    <div> <h3>Graphic</h3> </div>
+    <div> <h3>Graphic</h3> </div>.
     """
 
     class Meta:
@@ -6400,7 +6400,7 @@ class Graphic:
 @dataclass
 class Permissions:
     """
-    <div> <h3>Permissions</h3> </div>
+    <div> <h3>Permissions</h3> </div>.
     """
 
     class Meta:
@@ -6459,7 +6459,7 @@ class Permissions:
 @dataclass
 class PublisherLoc:
     """
-    <div> <h3>Publisher's Location</h3> </div>
+    <div> <h3>Publisher's Location</h3> </div>.
     """
 
     class Meta:
@@ -6556,7 +6556,7 @@ class PublisherLoc:
 @dataclass
 class AnswerSet:
     """
-    <div> <h3>Answer Set</h3> </div>
+    <div> <h3>Answer Set</h3> </div>.
     """
 
     class Meta:
@@ -6652,7 +6652,7 @@ class AnswerSet:
 @dataclass
 class DefList:
     """
-    <div> <h3>Definition List</h3> </div>
+    <div> <h3>Definition List</h3> </div>.
     """
 
     class Meta:
@@ -6759,7 +6759,7 @@ class DefList:
 @dataclass
 class DispFormulaGroup:
     """
-    <div> <h3>Formula, Display Group</h3> </div>
+    <div> <h3>Formula, Display Group</h3> </div>.
     """
 
     class Meta:
@@ -6891,7 +6891,7 @@ class DispFormulaGroup:
 @dataclass
 class FundingSource:
     """
-    <div> <h3>Funding Source</h3> </div>
+    <div> <h3>Funding Source</h3> </div>.
     """
 
     class Meta:
@@ -7123,7 +7123,7 @@ class FundingSource:
 @dataclass
 class Gov:
     """
-    <div> <h3>Government Report, Cited</h3> </div>
+    <div> <h3>Government Report, Cited</h3> </div>.
     """
 
     class Meta:
@@ -7239,7 +7239,7 @@ class Gov:
 @dataclass
 class InlineFormula:
     """
-    <div> <h3>Formula, Inline</h3> </div>
+    <div> <h3>Formula, Inline</h3> </div>.
     """
 
     class Meta:
@@ -7396,7 +7396,7 @@ class InlineFormula:
 @dataclass
 class InlineMedia:
     """
-    <div> <h3>Inline Media Object</h3> </div>
+    <div> <h3>Inline Media Object</h3> </div>.
     """
 
     class Meta:
@@ -7624,7 +7624,7 @@ class InlineMedia:
 @dataclass
 class InlineSupplementaryMaterial:
     """
-    <div> <h3>Inline Supplementary Material</h3> </div>
+    <div> <h3>Inline Supplementary Material</h3> </div>.
     """
 
     class Meta:
@@ -7824,7 +7824,7 @@ class InlineSupplementaryMaterial:
 @dataclass
 class Bio:
     """
-    <div> <h3>Biography</h3> </div>
+    <div> <h3>Biography</h3> </div>.
     """
 
     class Meta:
@@ -8198,7 +8198,7 @@ class Bio:
 @dataclass
 class BoxedText:
     """
-    <div> <h3>Boxed Text</h3> </div>
+    <div> <h3>Boxed Text</h3> </div>.
     """
 
     class Meta:
@@ -8544,7 +8544,7 @@ class BoxedText:
 @dataclass
 class Italic:
     """
-    <div> <h3>Italic</h3> </div>
+    <div> <h3>Italic</h3> </div>.
     """
 
     class Meta:
@@ -8741,7 +8741,7 @@ class Italic:
 @dataclass
 class Collab:
     """
-    <div> <h3>Collaborative (Group) Author</h3> </div>
+    <div> <h3>Collaborative (Group) Author</h3> </div>.
     """
 
     class Meta:
@@ -9046,7 +9046,7 @@ class Collab:
 @dataclass
 class DispQuote:
     """
-    <div> <h3>Quote, Displayed</h3> </div>
+    <div> <h3>Quote, Displayed</h3> </div>.
     """
 
     class Meta:
@@ -9340,7 +9340,7 @@ class DispQuote:
 @dataclass
 class Kwd:
     """
-    <div> <h3>Keyword</h3> </div>
+    <div> <h3>Keyword</h3> </div>.
     """
 
     class Meta:
@@ -9476,7 +9476,7 @@ class Kwd:
 @dataclass
 class Label:
     """
-    <div> <h3>Label of a Figure, Reference, Etc.</h3> </div>
+    <div> <h3>Label of a Figure, Reference, Etc.</h3> </div>.
     """
 
     class Meta:
@@ -9600,7 +9600,7 @@ class Label:
 @dataclass
 class Monospace:
     """
-    <div> <h3>Monospace Text (Typewriter Text)</h3> </div>
+    <div> <h3>Monospace Text (Typewriter Text)</h3> </div>.
     """
 
     class Meta:
@@ -9797,7 +9797,7 @@ class Monospace:
 @dataclass
 class CollabAlternatives:
     """
-    <div> <h3>Collaboration Alternatives</h3> </div>
+    <div> <h3>Collaboration Alternatives</h3> </div>.
     """
 
     class Meta:
@@ -9829,7 +9829,7 @@ class CollabAlternatives:
 @dataclass
 class Explanation:
     """
-    <div> <h3>Explanation</h3> </div>
+    <div> <h3>Explanation</h3> </div>.
     """
 
     class Meta:
@@ -10159,7 +10159,7 @@ class Explanation:
 @dataclass
 class Fig:
     """
-    <div> <h3>Figure</h3> </div>
+    <div> <h3>Figure</h3> </div>.
     """
 
     class Meta:
@@ -10417,7 +10417,7 @@ class Fig:
 @dataclass
 class List:
     """
-    <div> <h3>List</h3> </div>
+    <div> <h3>List</h3> </div>.
     """
 
     class Meta:
@@ -10511,7 +10511,7 @@ class List:
 @dataclass
 class NestedKwd:
     """
-    <div> <h3>Nested Keyword</h3> </div>
+    <div> <h3>Nested Keyword</h3> </div>.
     """
 
     class Meta:
@@ -10597,7 +10597,7 @@ class NestedKwd:
 @dataclass
 class NlmCitation:
     """
-    <div> <h3>Nlm Citation Model</h3> </div>
+    <div> <h3>Nlm Citation Model</h3> </div>.
     """
 
     class Meta:
@@ -10895,7 +10895,7 @@ class NlmCitation:
 @dataclass
 class Note:
     """
-    <div> <h3>Note in a Reference List</h3> </div>
+    <div> <h3>Note in a Reference List</h3> </div>.
     """
 
     class Meta:
@@ -10959,7 +10959,7 @@ class Note:
 @dataclass
 class Contrib:
     """
-    <div> <h3>Contributor</h3> </div>
+    <div> <h3>Contributor</h3> </div>.
     """
 
     class Meta:
@@ -11198,7 +11198,7 @@ class Contrib:
 @dataclass
 class ElementCitation:
     """
-    <div> <h3>Element Citation</h3> </div>
+    <div> <h3>Element Citation</h3> </div>.
     """
 
     class Meta:
@@ -11883,7 +11883,7 @@ class ElementCitation:
 @dataclass
 class FigGroup:
     """
-    <div> <h3>Figure Group</h3> </div>
+    <div> <h3>Figure Group</h3> </div>.
     """
 
     class Meta:
@@ -12050,7 +12050,7 @@ class FigGroup:
 @dataclass
 class KwdGroup:
     """
-    <div> <h3>Keyword Group</h3> </div>
+    <div> <h3>Keyword Group</h3> </div>.
     """
 
     class Meta:
@@ -12148,7 +12148,7 @@ class KwdGroup:
 @dataclass
 class MixedCitation:
     """
-    <div> <h3>Mixed Citation</h3> </div>
+    <div> <h3>Mixed Citation</h3> </div>.
     """
 
     class Meta:
@@ -12624,7 +12624,7 @@ class MixedCitation:
 @dataclass
 class PersonGroup:
     """
-    <div> <h3>Person Group For a Cited Publication</h3> </div>
+    <div> <h3>Person Group For a Cited Publication</h3> </div>.
     """
 
     class Meta:
@@ -12727,7 +12727,7 @@ class PersonGroup:
 @dataclass
 class ContribGroup:
     """
-    <div> <h3>Contributor Group</h3> </div>
+    <div> <h3>Contributor Group</h3> </div>.
     """
 
     class Meta:
@@ -12843,7 +12843,7 @@ class ContribGroup:
 @dataclass
 class Glossary:
     """
-    <div> <h3>Glossary Elements</h3> </div>
+    <div> <h3>Glossary Elements</h3> </div>.
     """
 
     class Meta:
@@ -13138,7 +13138,7 @@ class Glossary:
 @dataclass
 class Media:
     """
-    <div> <h3>Media Object</h3> </div>
+    <div> <h3>Media Object</h3> </div>.
     """
 
     class Meta:
@@ -13351,7 +13351,7 @@ class Media:
 @dataclass
 class Ref:
     """
-    <div> <h3>Reference Item</h3> </div>
+    <div> <h3>Reference Item</h3> </div>.
     """
 
     class Meta:
@@ -13437,7 +13437,7 @@ class Ref:
 @dataclass
 class NamedContent:
     """
-    <div> <h3>Named Special (Subject) Content</h3> </div>
+    <div> <h3>Named Special (Subject) Content</h3> </div>.
     """
 
     class Meta:
@@ -13846,7 +13846,7 @@ class NamedContent:
 @dataclass
 class Option:
     """
-    <div> <h3>Option Elements</h3> </div>
+    <div> <h3>Option Elements</h3> </div>.
     """
 
     class Meta:
@@ -14180,7 +14180,7 @@ class Option:
 @dataclass
 class Overline:
     """
-    <div> <h3>Overline</h3> </div>
+    <div> <h3>Overline</h3> </div>.
     """
 
     class Meta:
@@ -14377,7 +14377,7 @@ class Overline:
 @dataclass
 class P:
     """
-    <div> <h3>Paragraph</h3> </div>
+    <div> <h3>Paragraph</h3> </div>.
     """
 
     class Meta:
@@ -14722,7 +14722,7 @@ class P:
 @dataclass
 class PartTitle:
     """
-    <div> <h3>Part Title in a Citation</h3> </div>
+    <div> <h3>Part Title in a Citation</h3> </div>.
     """
 
     class Meta:
@@ -14892,7 +14892,7 @@ class PartTitle:
 @dataclass
 class Preformat:
     """
-    <div> <h3>Preformatted Text</h3> </div>
+    <div> <h3>Preformatted Text</h3> </div>.
     """
 
     class Meta:
@@ -15076,7 +15076,7 @@ class Preformat:
 @dataclass
 class Rb:
     """
-    <div> <h3>Ruby Base</h3> </div>
+    <div> <h3>Ruby Base</h3> </div>.
     """
 
     class Meta:
@@ -15172,7 +15172,7 @@ class Rb:
 @dataclass
 class Question:
     """
-    <div> <h3>Question</h3> </div>
+    <div> <h3>Question</h3> </div>.
     """
 
     class Meta:
@@ -15520,7 +15520,7 @@ class Question:
 @dataclass
 class Ruby:
     """
-    <div> <h3>Ruby Wrapper</h3> </div>
+    <div> <h3>Ruby Wrapper</h3> </div>.
     """
 
     class Meta:
@@ -15573,7 +15573,7 @@ class Ruby:
 @dataclass
 class Speech:
     """
-    <div> <h3>Speech</h3> </div>
+    <div> <h3>Speech</h3> </div>.
     """
 
     class Meta:
@@ -15640,7 +15640,7 @@ class Speech:
 @dataclass
 class Statement:
     """
-    <div> <h3>Statement, Formal</h3> </div>
+    <div> <h3>Statement, Formal</h3> </div>.
     """
 
     class Meta:
@@ -15742,7 +15742,7 @@ class Statement:
 @dataclass
 class QuestionWrap:
     """
-    <div> <h3>Question Wrap</h3> </div>
+    <div> <h3>Question Wrap</h3> </div>.
     """
 
     class Meta:
@@ -15827,7 +15827,7 @@ class QuestionWrap:
 @dataclass
 class RelatedArticle:
     """
-    <div> <h3>Related Article Information</h3> </div>
+    <div> <h3>Related Article Information</h3> </div>.
     """
 
     class Meta:
@@ -16285,7 +16285,7 @@ class RelatedArticle:
 @dataclass
 class RelatedObject:
     """
-    <div> <h3>Related Object Information</h3> </div>
+    <div> <h3>Related Object Information</h3> </div>.
     """
 
     class Meta:
@@ -16769,7 +16769,7 @@ class RelatedObject:
 @dataclass
 class QuestionPreamble:
     """
-    <div> <h3>Question Preamble</h3> </div>
+    <div> <h3>Question Preamble</h3> </div>.
     """
 
     class Meta:
@@ -17077,7 +17077,7 @@ class QuestionPreamble:
 @dataclass
 class Roman:
     """
-    <div> <h3>Roman</h3> </div>
+    <div> <h3>Roman</h3> </div>.
     """
 
     class Meta:
@@ -17274,7 +17274,7 @@ class Roman:
 @dataclass
 class QuestionWrapGroup:
     """
-    <div> <h3>Question Wrap Group</h3> </div>
+    <div> <h3>Question Wrap Group</h3> </div>.
     """
 
     class Meta:
@@ -17373,7 +17373,7 @@ class QuestionWrapGroup:
 @dataclass
 class SansSerif:
     """
-    <div> <h3>Sans Serif</h3> </div>
+    <div> <h3>Sans Serif</h3> </div>.
     """
 
     class Meta:
@@ -17570,7 +17570,7 @@ class SansSerif:
 @dataclass
 class Sc:
     """
-    <div> <h3>Small Caps</h3> </div>
+    <div> <h3>Small Caps</h3> </div>.
     """
 
     class Meta:
@@ -17767,7 +17767,7 @@ class Sc:
 @dataclass
 class Strike:
     """
-    <div> <h3>Strike Through</h3> </div>
+    <div> <h3>Strike Through</h3> </div>.
     """
 
     class Meta:
@@ -17964,7 +17964,7 @@ class Strike:
 @dataclass
 class StyledContent:
     """
-    <div> <h3>Styled Special (Subject) Content</h3> </div>
+    <div> <h3>Styled Special (Subject) Content</h3> </div>.
     """
 
     class Meta:
@@ -18306,7 +18306,7 @@ class StyledContent:
 @dataclass
 class Sub:
     """
-    <div> <h3>Subscript</h3> </div>
+    <div> <h3>Subscript</h3> </div>.
     """
 
     class Meta:
@@ -18503,7 +18503,7 @@ class Sub:
 @dataclass
 class Sup:
     """
-    <div> <h3>Superscript</h3> </div>
+    <div> <h3>Superscript</h3> </div>.
     """
 
     class Meta:
@@ -18700,7 +18700,7 @@ class Sup:
 @dataclass
 class StdOrganization:
     """
-    <div> <h3>Standards Organization</h3> </div>
+    <div> <h3>Standards Organization</h3> </div>.
     """
 
     class Meta:
@@ -18772,7 +18772,7 @@ class StdOrganization:
 @dataclass
 class Target:
     """
-    <div> <h3>Target of an Internal Link</h3> </div>
+    <div> <h3>Target of an Internal Link</h3> </div>.
     """
 
     class Meta:
@@ -18889,7 +18889,7 @@ class Target:
 @dataclass
 class Version:
     """
-    <div> <h3>Version Statement, Cited</h3> </div>
+    <div> <h3>Version Statement, Cited</h3> </div>.
     """
 
     class Meta:
@@ -18959,7 +18959,7 @@ class Version:
 @dataclass
 class Underline:
     """
-    <div> <h3>Underline</h3> </div>
+    <div> <h3>Underline</h3> </div>.
     """
 
     class Meta:
@@ -19163,7 +19163,7 @@ class Underline:
 @dataclass
 class CompoundSubjectPart:
     """
-    <div> <h3>Compound Subject Part Name</h3> </div>
+    <div> <h3>Compound Subject Part Name</h3> </div>.
     """
 
     class Meta:
@@ -19289,7 +19289,7 @@ class CompoundSubjectPart:
 @dataclass
 class Price:
     """
-    <div> <h3>Price</h3> </div>
+    <div> <h3>Price</h3> </div>.
     """
 
     class Meta:
@@ -19395,7 +19395,7 @@ class Price:
 @dataclass
 class Role:
     """
-    <div> <h3>Role or Function Title of Contributor</h3> </div>
+    <div> <h3>Role or Function Title of Contributor</h3> </div>.
     """
 
     class Meta:
@@ -19552,7 +19552,7 @@ class Role:
 @dataclass
 class Series:
     """
-    <div> <h3>Series</h3> </div>
+    <div> <h3>Series</h3> </div>.
     """
 
     class Meta:
@@ -19668,7 +19668,7 @@ class Series:
 @dataclass
 class Subject:
     """
-    <div> <h3>Subject Name</h3> </div>
+    <div> <h3>Subject Name</h3> </div>.
     """
 
     class Meta:
@@ -19828,7 +19828,7 @@ class Subject:
 @dataclass
 class TextualForm:
     """
-    <div> <h3>Textual Form</h3> </div>
+    <div> <h3>Textual Form</h3> </div>.
     """
 
     class Meta:
@@ -19958,7 +19958,7 @@ class TextualForm:
 @dataclass
 class Xref:
     """
-    <div> <h3>X(cross) Reference</h3> </div>
+    <div> <h3>X(cross) Reference</h3> </div>.
     """
 
     class Meta:
@@ -20094,7 +20094,7 @@ class Xref:
 @dataclass
 class CompoundKwdPart:
     """
-    <div> <h3>Compound Keyword Part</h3> </div>
+    <div> <h3>Compound Keyword Part</h3> </div>.
     """
 
     class Meta:
@@ -20232,7 +20232,7 @@ class CompoundKwdPart:
 @dataclass
 class OnBehalfOf:
     """
-    <div> <h3>On Behalf of</h3> </div>
+    <div> <h3>On Behalf of</h3> </div>.
     """
 
     class Meta:
@@ -20361,7 +20361,7 @@ class OnBehalfOf:
 @dataclass
 class See:
     """
-    <div> <h3>See</h3> </div>
+    <div> <h3>See</h3> </div>.
     """
 
     class Meta:
@@ -20601,7 +20601,7 @@ class See:
 @dataclass
 class SeeAlso:
     """
-    <div> <h3>See-Also Term</h3> </div>
+    <div> <h3>See-Also Term</h3> </div>.
     """
 
     class Meta:
@@ -20868,7 +20868,7 @@ class SeeAlso:
 @dataclass
 class Source:
     """
-    <div> <h3>Source</h3> </div>
+    <div> <h3>Source</h3> </div>.
     """
 
     class Meta:
@@ -21127,7 +21127,7 @@ class SubjGroup:
 @dataclass
 class Subtitle:
     """
-    <div> <h3>Article Subtitle</h3> </div>
+    <div> <h3>Article Subtitle</h3> </div>.
     """
 
     class Meta:
@@ -21336,7 +21336,7 @@ class Subtitle:
 @dataclass
 class Term:
     """
-    <div> <h3>Definition List: Term</h3> </div>
+    <div> <h3>Definition List: Term</h3> </div>.
     """
 
     class Meta:
@@ -21610,7 +21610,7 @@ class Term:
 @dataclass
 class TermHead:
     """
-    <div> <h3>Definition List: Term Head</h3> </div>
+    <div> <h3>Definition List: Term Head</h3> </div>.
     """
 
     class Meta:
@@ -21794,7 +21794,7 @@ class TermHead:
 @dataclass
 class Title:
     """
-    <div> <h3>Title</h3> </div>
+    <div> <h3>Title</h3> </div>.
     """
 
     class Meta:
@@ -22012,7 +22012,7 @@ class Title:
 @dataclass
 class TransSource:
     """
-    <div> <h3>Translated Source</h3> </div>
+    <div> <h3>Translated Source</h3> </div>.
     """
 
     class Meta:
@@ -22189,7 +22189,7 @@ class TransSource:
 @dataclass
 class TransTitle:
     """
-    <div> <h3>Translated Title</h3> </div>
+    <div> <h3>Translated Title</h3> </div>.
     """
 
     class Meta:
@@ -22398,7 +22398,7 @@ class TransTitle:
 @dataclass
 class VerseLine:
     """
-    <div> <h3>Line of a Verse</h3> </div>
+    <div> <h3>Line of a Verse</h3> </div>.
     """
 
     class Meta:
@@ -22597,7 +22597,7 @@ class VerseLine:
 @dataclass
 class ListItem:
     """
-    <div> <h3>List Item</h3> </div>
+    <div> <h3>List Item</h3> </div>.
     """
 
     class Meta:
@@ -22668,7 +22668,7 @@ class ListItem:
 @dataclass
 class SecMeta:
     """
-    <div> <h3>Section Metadata</h3> </div>
+    <div> <h3>Section Metadata</h3> </div>.
     """
 
     class Meta:
@@ -22733,7 +22733,7 @@ class SecMeta:
 @dataclass
 class Std:
     """
-    <div> <h3>Standard, Cited</h3> </div>
+    <div> <h3>Standard, Cited</h3> </div>.
     """
 
     class Meta:
@@ -22885,7 +22885,7 @@ class Std:
 @dataclass
 class Supplement:
     """
-    <div> <h3>Supplement</h3> </div>
+    <div> <h3>Supplement</h3> </div>.
     """
 
     class Meta:
@@ -23053,7 +23053,7 @@ class Supplement:
 @dataclass
 class TableWrapFoot:
     """
-    <div> <h3>Table Wrap Footer</h3> </div>
+    <div> <h3>Table Wrap Footer</h3> </div>.
     """
 
     class Meta:
@@ -23115,7 +23115,7 @@ class TableWrapFoot:
 @dataclass
 class VerseGroup:
     """
-    <div> <h3>Verse Form For Poetry</h3> </div>
+    <div> <h3>Verse Form For Poetry</h3> </div>.
     """
 
     class Meta:
@@ -23225,7 +23225,7 @@ class VerseGroup:
 @dataclass
 class Product:
     """
-    <div> <h3>Product Information</h3> </div>
+    <div> <h3>Product Information</h3> </div>.
     """
 
     class Meta:
@@ -24689,7 +24689,8 @@ class Thead:
 @dataclass
 class Table:
     """
-    <div> <h3>Table: Table Element ..............................</h3> </div>
+    <div> <h3>Table: Table Element ..............................</h3>
+    </div>.
     """
 
     class Meta:
@@ -24812,7 +24813,7 @@ class Table:
 @dataclass
 class TableWrap:
     """
-    <div> <h3>Table Wrapper</h3> </div>
+    <div> <h3>Table Wrapper</h3> </div>.
     """
 
     class Meta:
@@ -25057,7 +25058,7 @@ class TableWrap:
 @dataclass
 class SupplementaryMaterial:
     """
-    <div> <h3>Supplementary Material</h3> </div>
+    <div> <h3>Supplementary Material</h3> </div>.
     """
 
     class Meta:
@@ -25379,7 +25380,7 @@ class SupplementaryMaterial:
 @dataclass
 class TableWrapGroup:
     """
-    <div> <h3>Table Wrapper Group</h3> </div>
+    <div> <h3>Table Wrapper Group</h3> </div>.
     """
 
     class Meta:
@@ -25522,7 +25523,7 @@ class TableWrapGroup:
 @dataclass
 class LicenseP:
     """
-    <div> <h3>License Paragraph</h3> </div>
+    <div> <h3>License Paragraph</h3> </div>.
     """
 
     class Meta:
@@ -25864,7 +25865,7 @@ class LicenseP:
 @dataclass
 class RefList:
     """
-    <div> <h3>Reference List (Bibliographic Reference List)</h3> </div>
+    <div> <h3>Reference List (Bibliographic Reference List)</h3> </div>.
     """
 
     class Meta:
@@ -26166,7 +26167,7 @@ class RefList:
 @dataclass
 class Sec:
     """
-    <div> <h3>Section</h3> </div>
+    <div> <h3>Section</h3> </div>.
     """
 
     class Meta:

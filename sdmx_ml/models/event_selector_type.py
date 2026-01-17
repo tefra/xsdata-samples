@@ -16,7 +16,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class EventSelectorType:
-    """EventSelectorType describes the details of the events for a subscription.
+    """
+    EventSelectorType describes the details of the events for a
+    subscription.
 
     It allows subscribers to specify registry and repository events for
     which they wish to receive notifications.

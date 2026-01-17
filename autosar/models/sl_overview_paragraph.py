@@ -17,10 +17,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SlOverviewParagraph:
-    """MixedContentForOverviewParagraph in one particular language.
+    """
+    MixedContentForOverviewParagraph in one particular language.
 
-    The language is defined by the context. The attribute l is there
-    only for backwards compatibility and shall be ignored.
+    The language is defined by the context. The attribute l is there only
+    for backwards compatibility and shall be ignored.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

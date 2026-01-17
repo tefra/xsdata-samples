@@ -6,10 +6,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CategoryString:
-    """This represents the pattern applicable to categories.
+    """
+    This represents the pattern applicable to categories.
 
-    It is basically the same as Identifier but has a different
-    semantics. Therefore it is modeled as a primitive of its own.
+    It is basically the same as Identifier but has a different semantics.
+    Therefore it is modeled as a primitive of its own.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

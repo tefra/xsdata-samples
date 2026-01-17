@@ -12,9 +12,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsSupplementaryPanelCharacteristics:
     """
-    Characteristics of a panel which may display details (sometimes regulatory in
-    nature) that are supplemental to the main pictogram, comprising an additional
-    line of text and/or a pictogram.
+    Characteristics of a panel which may display details (sometimes
+    regulatory in nature) that are supplemental to the main pictogram,
+    comprising an additional line of text and/or a pictogram.
 
     :ivar supplementary_pictogram_code_list_identifier: Indicates which
         supplementary pictogram code list is referenced.

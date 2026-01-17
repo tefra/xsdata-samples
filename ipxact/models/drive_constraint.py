@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class DriveConstraint:
-    """Defines a constraint indicating how an input is to be driven.
+    """
+    Defines a constraint indicating how an input is to be driven.
 
     The preferred methodology is to specify a library cell in technology
     independent fashion. The implemention tool should assume that the

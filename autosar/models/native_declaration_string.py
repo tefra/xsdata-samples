@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NativeDeclarationString:
-    """This string contains a native data declaration of a data type in a
+    """
+    This string contains a native data declaration of a data type in a
     programming language.
 
     It is basically a string, but white-space shall be preserved.

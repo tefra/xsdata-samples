@@ -7,10 +7,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 @dataclass
 class PointOfSale6:
-    """User can use this node to send a specific PCC to access fares allowed only
-    for that PCC.
+    """
+    User can use this node to send a specific PCC to access fares allowed
+    only for that PCC.
 
-    This node gives the capability for fare redistribution at UR level.  For fare redistribution at the stored fare level see AirPricingSolution/AirPricingInfo/AirPricingModifiers/PointOfSale.
+    This node gives the capability for fare redistribution at UR level. For
+    fare redistribution at the stored fare level see
+    AirPricingSolution/AirPricingInfo/AirPricingModifiers/PointOfSale.
 
     Parameters
     ----------

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class TypeParameters:
     """
-    List of port type parameters (e.g. template or constructor parameters for a
-    systemC port or socket)
+    list of port type parameters (e.g. template or constructor parameters
+    for a systemC port or socket).
     """
 
     class Meta:

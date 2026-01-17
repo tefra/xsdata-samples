@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 @dataclass
 class CabinClass6:
     """
-    Requests cabin class (First, Business and Economy, etc.) as supported by the
-    provider or supplier.
+    Requests cabin class (First, Business and Economy, etc.) as supported
+    by the provider or supplier.
     """
 
     class Meta:

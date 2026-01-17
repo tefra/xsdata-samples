@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SecurityEventOneEveryNFilter:
     """
-    This meta-class represents the configuration of a sampling (i.e. every n-th
-    event is sampled) filter for security events.
+    This meta-class represents the configuration of a sampling (i.e. every
+    n-th event is sampled) filter for security events.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

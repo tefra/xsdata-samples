@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class IntentStatement:
     """
-    Member's custom statement of intent to publish content for which a pending
-    publication DOI has been created.
+    Member's custom statement of intent to publish content for which a
+    pending publication DOI has been created.
     """
 
     class Meta:

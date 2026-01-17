@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NoteTypeEnum:
-    """This enumerator specifies the type of the note.
+    """
+    This enumerator specifies the type of the note.
 
     It can be used to render a note label or even a note icon.
 

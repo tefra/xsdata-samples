@@ -7,11 +7,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataflowsType:
-    """DataflowsType describes the structure of the data flows container.
+    """
+    DataflowsType describes the structure of the data flows container.
 
-    It contains one or more data flow, which can be explicitly detailed
-    or referenced from an external structure document or registry
-    service.
+    It contains one or more data flow, which can be explicitly detailed or
+    referenced from an external structure document or registry service.
 
     :ivar dataflow: Dataflow provides the details of a data flow, which
         is defined as the structure of data that will be provided for

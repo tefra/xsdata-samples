@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class UimetaDataRetrieveRsp(BaseRsp2):
     """
-    Service for Response to retrieve the settings by user in Profile Settings.
+    Service for Response to retrieve the settings by user in Profile
+    Settings.
 
     Parameters
     ----------

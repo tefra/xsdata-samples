@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class HotelPreference1(TypeBasePreference1):
     """
-    Defines a preference for a particular set of criteria for hotels (e.g., dates,
-    rates, chain, room type).
+    Defines a preference for a particular set of criteria for hotels (e.g.,
+    dates, rates, chain, room type).
 
     Parameters
     ----------

@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LVerbatim:
-    """MixedContentForVerbatim in one particular language.
+    """
+    MixedContentForVerbatim in one particular language.
 
     The language is denoted in the attribute l.
 

@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcucConditionSpecification:
     """
-    Allows to define existence dependencies based on the value of  parameter
+    Allows to define existence dependencies based on the value of parameter
     values.
 
     :ivar condition_formula: Definition of the formula used to define

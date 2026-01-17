@@ -36,9 +36,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SensorActuatorSwComponentType:
     """
-    The SensorActuatorSwComponentType introduces the possibility to link from the
-    software representation of a sensor/actuator to its hardware description
-    provided by the ECU Resource Template.
+    The SensorActuatorSwComponentType introduces the possibility to link
+    from the software representation of a sensor/actuator to its hardware
+    description provided by the ECU Resource Template.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

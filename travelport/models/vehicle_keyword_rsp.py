@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 @dataclass
 class VehicleKeywordRsp(BaseRsp1):
     """
-    Used to respond with a list of keywords or specific keyword information.
+    Used to respond with a list of keywords or specific keyword
+    information.
 
     Parameters
     ----------

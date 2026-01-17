@@ -8,12 +8,13 @@ __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 
 @dataclass
 class Extended:
-    """Intended for use as the type of user-declared elements to make them extended
-    links.
+    """
+    Intended for use as the type of user-declared elements to make them
+    extended links.
 
     Note that the elements referenced in the content model are all
-    abstract. The intention is that by simply declaring elements with
-    these as their substitutionGroup, all the right things will happen.
+    abstract. The intention is that by simply declaring elements with these
+    as their substitutionGroup, all the right things will happen.
     """
 
     class Meta:

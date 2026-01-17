@@ -18,11 +18,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class MacMulticastGroup:
-    """Per EthernetCluster globally defined MacMulticastGroup.
+    """
+    Per EthernetCluster globally defined MacMulticastGroup.
 
     One sender can handle many receivers simultaneously if the receivers
-    have all the same macMulticastAddress. The addresses need to be
-    unique for the particular EthernetCluster.
+    have all the same macMulticastAddress. The addresses need to be unique
+    for the particular EthernetCluster.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

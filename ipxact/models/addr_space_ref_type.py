@@ -8,10 +8,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class AddrSpaceRefType:
-    """Base type for an element which references an address space.
+    """
+    Base type for an element which references an address space.
 
-    Reference is kept in an attribute rather than the text value, so
-    that the type may be extended with child elements if necessary.
+    Reference is kept in an attribute rather than the text value, so that
+    the type may be extended with child elements if necessary.
 
     :ivar vendor_extensions:
     :ivar address_space_ref: A reference to a unique address space.

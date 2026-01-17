@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 class TypeTicketStatus(Enum):
     """
-    Status for the ticket (Ticketed, Voided, etc)
+    Status for the ticket (Ticketed, Voided, etc).
 
     Properties
     ----------

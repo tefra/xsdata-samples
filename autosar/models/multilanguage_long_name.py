@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class MultilanguageLongName:
-    """This meta-class represents the ability to specify a long name which acts in
-    the role of a headline.
+    """
+    This meta-class represents the ability to specify a long name which
+    acts in the role of a headline.
 
-    It is intended for human readers. Per language it should be around
-    max 80 characters.
+    It is intended for human readers. Per language it should be around max
+    80 characters.
 
     :ivar l_4: This is the long name in one particular language.
     :ivar s: Checksum calculated by the user's tool environment for an

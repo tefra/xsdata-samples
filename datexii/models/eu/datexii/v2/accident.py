@@ -18,11 +18,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class Accident(TrafficElement):
-    """Accidents are events where one or more vehicles are involved in collisions
-    or in leaving the roadway.
+    """
+    Accidents are events where one or more vehicles are involved in
+    collisions or in leaving the roadway.
 
-    These include collisions between vehicles or with other road users
-    or obstacles.
+    These include collisions between vehicles or with other road users or
+    obstacles.
 
     :ivar accident_cause: A descriptor indicating the most significant
         factor causing an accident.

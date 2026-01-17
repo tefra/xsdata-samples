@@ -23,8 +23,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class InterfaceMapping:
     """
-    This meta-class collects the mappings of elements of a single ServiceInterface
-    to PortInterface elements of the AUTOSAR Classic Platform.
+    This meta-class collects the mappings of elements of a single
+    ServiceInterface to PortInterface elements of the AUTOSAR Classic
+    Platform.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

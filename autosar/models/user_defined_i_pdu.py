@@ -23,12 +23,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class UserDefinedIPdu:
-    """UserDefinedIPdu allows to describe PDU-based communication over Complex
+    """
+    UserDefinedIPdu allows to describe PDU-based communication over Complex
     Drivers.
 
-    If a new BSW module is added above the PduR (e.g. a Diagnostic
-    Service ) then this IPdu element shall be used to describe the
-    communication.
+    If a new BSW module is added above the PduR (e.g. a Diagnostic Service
+    ) then this IPdu element shall be used to describe the communication.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

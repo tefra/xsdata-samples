@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 @dataclass
 class RailExchangeRsp(TypeRailReservationRsp):
     """
-    Returns rail exchange reservation information with ticketing/refund info etc..
+    Returns rail exchange reservation information with ticketing/refund
+    info etc..
     """
 
     class Meta:

@@ -15,7 +15,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class HwAttributeValue:
-    """This metaclass represents the ability to assign a hardware attribute value.
+    """
+    This metaclass represents the ability to assign a hardware attribute
+    value.
 
     Note that v and vt are mutually exclusive.
 

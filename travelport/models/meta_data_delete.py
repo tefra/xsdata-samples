@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class MetaDataDelete:
     """
-    Delete  element of given type identified by its key.
+    Delete element of given type identified by its key.
 
     Parameters
     ----------

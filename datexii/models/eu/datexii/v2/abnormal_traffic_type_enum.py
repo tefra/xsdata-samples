@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class AbnormalTrafficTypeEnum(Enum):
     """
-    Collection of descriptive terms for abnormal traffic conditions specifically
-    relating to the nature of the traffic movement.
+    Collection of descriptive terms for abnormal traffic conditions
+    specifically relating to the nature of the traffic movement.
 
     :cvar STATIONARY_TRAFFIC: Traffic is stationary, or very near
         stationary, at the specified location (i.e. average speed is

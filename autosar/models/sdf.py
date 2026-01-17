@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Sdf:
     """
-    This class represents a numerical value in a special data group which may be
-    subject to variability.
+    This class represents a numerical value in a special data group which
+    may be subject to variability.
 
     :ivar value: This is the value of the special data.
     :ivar s: Checksum calculated by the user's tool environment for an

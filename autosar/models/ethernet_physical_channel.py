@@ -32,10 +32,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EthernetPhysicalChannel:
-    """The EthernetPhysicalChannel represents a VLAN or an untagged channel.
+    """
+    The EthernetPhysicalChannel represents a VLAN or an untagged channel.
 
-    An untagged channel is modeled as an EthernetPhysicalChannel without
-    an aggregated VLAN.
+    An untagged channel is modeled as an EthernetPhysicalChannel without an
+    aggregated VLAN.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

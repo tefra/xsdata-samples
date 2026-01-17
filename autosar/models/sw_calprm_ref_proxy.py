@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwCalprmRefProxy:
     """
-    Wrapper class for different kinds of references to a calibration parameter.
+    Wrapper class for different kinds of references to a calibration
+    parameter.
 
     :ivar ar_parameter: This represents a Parameter within AUTOSAR. Note
         that the Datatype of the referenced ParameterDataPrototype shall

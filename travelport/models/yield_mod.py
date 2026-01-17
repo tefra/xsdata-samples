@@ -7,10 +7,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class Yield:
-    """An identifier which identifies yield made on original pricing.
+    """
+    An identifier which identifies yield made on original pricing.
 
-    It can be a flat amount of original price. The value of Amount can
-    be negative. Negative value implies a discount.
+    It can be a flat amount of original price. The value of Amount can be
+    negative. Negative value implies a discount.
 
     Parameters
     ----------

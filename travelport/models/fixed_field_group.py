@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class FixedFieldGroup:
     """
-    Defines the structure of a fixed group, which can be based on existing fixed
-    fields and groups.
+    Defines the structure of a fixed group, which can be based on existing
+    fixed fields and groups.
 
     Parameters
     ----------

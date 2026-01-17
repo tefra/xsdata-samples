@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ReceptionComSpecProps:
     """
-    This meta-class defines a set of reception attributes which the application
-    software is assumed to implement.
+    This meta-class defines a set of reception attributes which the
+    application software is assumed to implement.
 
     :ivar data_update_period: This attribute defines the period in which
         the application shall check for updated data. This attribute is

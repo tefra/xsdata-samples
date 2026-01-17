@@ -11,11 +11,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PrmChar:
-    """This metaclass represents the ability to express the characteristics of one
-    particular parameter.
+    """
+    This metaclass represents the ability to express the characteristics of
+    one particular parameter.
 
     It can be exressed as numerical or as text parameter (provided as
-    subclasses of PrmCharContents)
+    subclasses of PrmCharContents).
 
     :ivar cond: This represents the particular conditions under which
         the parameter characteristic is valid.

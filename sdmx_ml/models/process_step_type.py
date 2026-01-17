@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ProcessStepType(ProcessStepBaseType):
-    """ProcessStepType describes the structure of a process step.
+    """
+    ProcessStepType describes the structure of a process step.
 
     A nested process step is automatically sub-ordinate, and followed as
     the next step. If the following step is conditional, it should be

@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticInitialEventStatusEnum:
     """
-    This represents the ability to define an initial status for the ROE service.
+    This represents the ability to define an initial status for the ROE
+    service.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

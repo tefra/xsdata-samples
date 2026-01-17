@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class EmdissuanceReq(BaseReq1):
     """
-    Electronic Miscellaneous Document issuance request.Supported providers are
-    1V/1G/1P.
+    Electronic Miscellaneous Document issuance request.Supported providers
+    are 1V/1G/1P.
 
     Parameters
     ----------

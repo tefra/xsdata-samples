@@ -13,13 +13,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RuleBasedAxisCont:
-    """This represents the values for the axis of a compound primitive (curve,
+    """
+    This represents the values for the axis of a compound primitive (curve,
     map).
 
-    For standard and fix axes,  SwAxisCont contains the values of the
-    axis directly. The axis values of SwAxisCont with the category
-    COM_AXIS, RES_AXIS are for display only. For editing and processing,
-    only the values in the related GroupAxis are binding.
+    For standard and fix axes, SwAxisCont contains the values of the axis
+    directly. The axis values of SwAxisCont with the category COM_AXIS,
+    RES_AXIS are for display only. For editing and processing, only the
+    values in the related GroupAxis are binding.
 
     :ivar category: This category specifies the particular axis types: *
         STD_AXIS * COM_AXIS * RES_AXIS  (swArraysize necessary)

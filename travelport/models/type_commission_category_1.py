@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
 class TypeCommissionCategory1(Enum):
-    """A type that represents a category of commissions.
+    """
+    A type that represents a category of commissions.
 
     Example include per booking, by monetary amount, etc.
     """

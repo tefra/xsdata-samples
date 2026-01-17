@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 @dataclass
 class HotelKeywordReq(BaseReq1):
     """
-    Request to retrieve the hotel keyword details of a hotel chain or property.
+    Request to retrieve the hotel keyword details of a hotel chain or
+    property.
 
     Parameters
     ----------

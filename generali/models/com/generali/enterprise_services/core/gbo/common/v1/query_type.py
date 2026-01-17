@@ -17,9 +17,9 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class QueryType:
     """
-    <description xmlns="">A data object that allows simple and complex query
-    criteria to be specified against which a set of business objects can be
-    matched.</description>
+    <description xmlns="">A data object that allows simple and complex
+    query criteria to be specified against which a set of business objects
+    can be matched.</description>.
 
     :ivar identification: <description xmlns="">A component within the
         query that specifies a specific instance of a business to

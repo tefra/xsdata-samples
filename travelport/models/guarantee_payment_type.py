@@ -7,10 +7,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class GuaranteePaymentType:
-    """Accepted payment types.
+    """
+    Accepted payment types.
 
-    Applicable only for HotelSupershopper, Hotel Details and Hotel
-    rules.
+    Applicable only for HotelSupershopper, Hotel Details and Hotel rules.
 
     Parameters
     ----------

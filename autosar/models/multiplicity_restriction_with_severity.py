@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MultiplicityRestrictionWithSeverity:
     """
-    Restriction that specifies the valid number of occurrences of an element in the
-    current context.
+    Restriction that specifies the valid number of occurrences of an
+    element in the current context.
 
     :ivar severity: Severity level that is reported in case the
         restriction is violated.

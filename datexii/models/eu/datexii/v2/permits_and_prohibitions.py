@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PermitsAndProhibitions:
     """
-    Defines sets of action and regulations to specify permitted and prohibited
-    issues.
+    Defines sets of action and regulations to specify permitted and
+    prohibited issues.
 
     :ivar activity: An activity, which is regulated.
     :ivar regulation: Regulation for the specified activity.

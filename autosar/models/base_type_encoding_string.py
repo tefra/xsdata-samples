@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BaseTypeEncodingString:
-    """This is the string denotion of a BaseType encoding.
+    """
+    This is the string denotion of a BaseType encoding.
 
     It may be refined by specific use-cases.
 

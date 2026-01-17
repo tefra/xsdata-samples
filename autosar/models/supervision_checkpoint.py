@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SupervisionCheckpoint:
     """
-    This element contains an instance reference to a RPortPrototype representing a
-    checkpoint for Platform Health Management.
+    This element contains an instance reference to a RPortPrototype
+    representing a checkpoint for Platform Health Management.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

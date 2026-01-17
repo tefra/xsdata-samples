@@ -15,10 +15,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Table:
-    """This class implements an exchange table according to OASIS Technical
-    Resolution TR 9503:1995.
-
-    http://www.oasis-open.org/specs/a503.htm
+    """
+    This class implements an exchange table according to OASIS Technical
+    Resolution TR 9503:1995. http://www.oasis-open.org/specs/a503.htm.
 
     :ivar table_caption: This element specifies the table heading.
     :ivar tgroup: A table can be built of individual segments. Such a

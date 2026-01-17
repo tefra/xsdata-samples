@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class AlertCMethod2SecondaryPointLocation:
-    """The point (called Secondary point) which is at the upstream end of a linear
-    road section.
+    """
+    The point (called Secondary point) which is at the upstream end of a
+    linear road section.
 
     The point is specified by a reference to a point in a pre-defined
     ALERT-C location table.

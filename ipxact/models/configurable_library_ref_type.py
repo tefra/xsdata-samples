@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class ConfigurableLibraryRefType:
-    """Base IP-XACT document reference type for configurable top-level objects.
+    """
+    Base IP-XACT document reference type for configurable top-level
+    objects.
 
     Contains vendor, library, name and version attributes along with
     configurable element values.

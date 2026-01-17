@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class BaggageRestriction:
     """
-    Information related to  Baggage restriction rules .
+    Information related to Baggage restriction rules .
     """
 
     class Meta:

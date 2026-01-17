@@ -20,11 +20,10 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class UnstructuredCitation:
-    """A citation to an item that is not structured with the Crossref citation
-    model.
-
-    'unstructured_citation' supports deposit of references for which no
-    structural information is available.
+    """
+    A citation to an item that is not structured with the Crossref citation
+    model. 'unstructured_citation' supports deposit of references for which
+    no structural information is available.
     """
 
     class Meta:

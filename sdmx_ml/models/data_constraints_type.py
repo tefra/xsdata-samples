@@ -7,13 +7,14 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataConstraintsType:
-    """DataConstraintsType describes the structure of the data constraints
+    """
+    DataConstraintsType describes the structure of the data constraints
     container.
 
     It contains one or more data constraint, which can be explicitly
-    detailed or referenced from an external structure document or
-    registry service. This container may contain both attachment and
-    content constraints.
+    detailed or referenced from an external structure document or registry
+    service. This container may contain both attachment and content
+    constraints.
 
     :ivar data_constraint: DataConstraint specifies a sub set of the
         definition of the allowable or available content of a data set

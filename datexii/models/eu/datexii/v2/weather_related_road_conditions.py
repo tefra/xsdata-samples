@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class WeatherRelatedRoadConditions(RoadConditions):
     """
-    Road surface conditions that are related to the weather which may affect the
-    driving conditions, such as ice, snow or water.
+    Road surface conditions that are related to the weather which may
+    affect the driving conditions, such as ice, snow or water.
 
     :ivar weather_related_road_condition_type: The type of road surface
         condition that is related to the weather which is affecting the

@@ -28,7 +28,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class InternalTriggerOccurredEvent:
     """
-    The event is raised when the referenced internal trigger have been occurred.
+    The event is raised when the referenced internal trigger have been
+    occurred.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

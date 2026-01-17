@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class Xmlremark1:
-    """A remark container to hold an XML document.
-
-    (max 1024 chars) This will be encoded with xml encoding.
+    """
+    A remark container to hold an XML document. (max 1024 chars) This will
+    be encoded with xml encoding.
 
     Parameters
     ----------

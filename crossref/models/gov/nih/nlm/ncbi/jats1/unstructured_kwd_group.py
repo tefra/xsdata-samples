@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class UnstructuredKwdGroup:
     """
-    <div> <h3>Unstructured Keyword Group</h3> </div>
+    <div> <h3>Unstructured Keyword Group</h3> </div>.
     """
 
     class Meta:

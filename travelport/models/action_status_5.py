@@ -11,10 +11,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 @dataclass
 class ActionStatus5:
-    """Status of the action that will happen or has happened to the air
+    """
+    Status of the action that will happen or has happened to the air
     reservation.
 
-    One Action status for each provider reservation
+    One Action status for each provider reservation.
 
     Parameters
     ----------

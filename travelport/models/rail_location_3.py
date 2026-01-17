@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 @dataclass
 class RailLocation3(Location3):
     """
-    RCH specific location code (a.k.a UCodes) which uniquely identifies a train
-    station.
+    RCH specific location code (a.k.a UCodes) which uniquely identifies a
+    train station.
     """
 
     class Meta:

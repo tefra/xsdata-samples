@@ -26,12 +26,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ISignalIPdu:
-    """Represents the IPdus handled by Com.
+    """
+    Represents the IPdus handled by Com.
 
-    The ISignalIPdu assembled and disassembled in AUTOSAR COM consists
-    of one or more signals. In case no multiplexing is performed this
-    IPdu is routed to/from the Interface Layer. A maximum of one dynamic
-    length signal per IPdu is allowed.
+    The ISignalIPdu assembled and disassembled in AUTOSAR COM consists of
+    one or more signals. In case no multiplexing is performed this IPdu is
+    routed to/from the Interface Layer. A maximum of one dynamic length
+    signal per IPdu is allowed.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

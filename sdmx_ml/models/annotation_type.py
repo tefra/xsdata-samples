@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class AnnotationType:
-    """AnnotationType provides for non-documentation notes and annotations to be
-    embedded in data and structure messages.
+    """
+    AnnotationType provides for non-documentation notes and annotations to
+    be embedded in data and structure messages.
 
-    It provides optional fields for providing a title, a type
-    description, a URI, and the text of the annotation.
+    It provides optional fields for providing a title, a type description,
+    a URI, and the text of the annotation.
 
     :ivar annotation_title: AnnotationTitle provides a title for the
         annotation.

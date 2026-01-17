@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/technical/v1"
 @dataclass
 class TransmissionResponse(TransmissionResponseType):
     """
-    <description xmlns="">The definition of the response message that supports
-    retrieve of a program</description>
+    <description xmlns="">The definition of the response message that
+    supports retrieve of a program</description>.
     """
 
     class Meta:

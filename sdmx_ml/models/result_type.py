@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class ResultType:
-    """ResultType contains the details about a data or metadata source, through the
-    complete registration information.
+    """
+    ResultType contains the details about a data or metadata source,
+    through the complete registration information.
 
-    In addition, a reference to the content constraints for the data
-    source may be provided, if the query requested this information.
+    In addition, a reference to the content constraints for the data source
+    may be provided, if the query requested this information.
 
     :ivar registration: Registration provides the details of a matching
         registration. In addition to the data source and provision

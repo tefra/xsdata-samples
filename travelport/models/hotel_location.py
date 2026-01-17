@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class HotelLocation:
-    """Date and Location information for the Hotel.
+    """
+    Date and Location information for the Hotel.
 
     Location can be optional if a Reference Point is provided.
 

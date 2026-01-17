@@ -11,5 +11,5 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class MaritalStatusCodeType(CodeType):
     """
     <description xmlns="">A codelist indicating the marital status of an
-    individual.</description>
+    individual.</description>.
     """

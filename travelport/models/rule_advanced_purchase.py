@@ -9,13 +9,14 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class RuleAdvancedPurchase:
-    """Container for rules regarding advance purchase restrictions.
+    """
+    Container for rules regarding advance purchase restrictions.
 
-    TicketingEarliestDate and TicketingLatestDate are strings
-    representing respective dates. If a year component is present then
-    it signifies an exact date. If only day and month components are
-    present then it signifies a seasonal date, which means applicable
-    for that date in any year
+    TicketingEarliestDate and TicketingLatestDate are strings representing
+    respective dates. If a year component is present then it signifies an
+    exact date. If only day and month components are present then it
+    signifies a seasonal date, which means applicable for that date in any
+    year.
 
     Parameters
     ----------

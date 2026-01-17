@@ -25,16 +25,17 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinEventTriggeredFrame:
-    """An event triggered frame is used as a placeholder to allow multiple slave
-    nodes to provide its response.
+    """
+    An event triggered frame is used as a placeholder to allow multiple
+    slave nodes to provide its response.
 
-    The header of an event triggered frame is transmitted when a frame
-    slot allocated to the event triggered frame is processed. The
-    publisher of an associated unconditional frame shall only transmit
-    the response if at least one of the signals carried in its
-    unconditional frame is updated. The LIN Master discovers and purges
-    collisions with the collisionResolvingScheduleTable. The event
-    controlled frame shall not contain any Pdus.
+    The header of an event triggered frame is transmitted when a frame slot
+    allocated to the event triggered frame is processed. The publisher of
+    an associated unconditional frame shall only transmit the response if
+    at least one of the signals carried in its unconditional frame is
+    updated. The LIN Master discovers and purges collisions with the
+    collisionResolvingScheduleTable. The event controlled frame shall not
+    contain any Pdus.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

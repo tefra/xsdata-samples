@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class MeasuredDataPublication(PayloadPublication):
     """
-    A publication containing one or more measurement data sets, each set being
-    measured at a single measurement site.
+    A publication containing one or more measurement data sets, each set
+    being measured at a single measurement site.
 
     :ivar measurement_site_table_reference: A reference to a versioned
         Measurement Site table.

@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class RoadSurfaceConditionMeasurements:
     """
-    Measurements of the road surface condition which relate specifically to the
-    weather.
+    Measurements of the road surface condition which relate specifically to
+    the weather.
 
     :ivar road_surface_temperature: The temperature measured on the road
         surface.

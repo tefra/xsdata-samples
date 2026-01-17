@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class UniversalRecordSearchRsp(BaseRsp1):
     """
-    Response containing summary information for reservations under a Universal
-    Record.
+    Response containing summary information for reservations under a
+    Universal Record.
     """
 
     class Meta:

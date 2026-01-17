@@ -8,8 +8,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class HierarchicalCodeBaseType(IdentifiableType):
-    """HierarchicalCodeBaseType is an abstract base type the creates the basis for
-    the HierarchicalCodeType.
+    """
+    HierarchicalCodeBaseType is an abstract base type the creates the basis
+    for the HierarchicalCodeType.
 
     It removes the urn and uri.
 

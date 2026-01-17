@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Junction:
     """
-    Junction (on a highway), can also be an interchange or if applicable also a
-    motorway service station (see junctionClassification).
+    Junction (on a highway), can also be an interchange or if applicable
+    also a motorway service station (see junctionClassification).
 
     :ivar junction_classification: Explicit type of junction.
     :ivar junction_name: Name of the junction.

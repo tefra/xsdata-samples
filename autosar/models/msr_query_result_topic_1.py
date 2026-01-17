@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MsrQueryResultTopic1:
     """
-    This metaclass represents the ability to express the result of a query which is
-    a set of topics.
+    This metaclass represents the ability to express the result of a query
+    which is a set of topics.
 
     :ivar topic_1: This represents one particular topic in the query
         result.

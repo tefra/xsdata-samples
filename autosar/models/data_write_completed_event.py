@@ -26,8 +26,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataWriteCompletedEvent:
     """
-    This event is raised if an implicit write access was successful or an error
-    occurred.
+    This event is raised if an implicit write access was successful or an
+    error occurred.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

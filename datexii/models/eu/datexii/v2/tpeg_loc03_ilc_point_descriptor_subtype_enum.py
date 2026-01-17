@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class TpegLoc03IlcPointDescriptorSubtypeEnum(Enum):
     """
-    Descriptors for describing a junction by identifying the intersecting roads at
-    a road junction.
+    Descriptors for describing a junction by identifying the intersecting
+    roads at a road junction.
 
     :cvar TPEG_ILC_NAME1: The name of the road on which the junction
         point is located.

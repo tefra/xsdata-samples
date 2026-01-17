@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class AlertCLocation:
     """
-    Identification of a specific point, linear or area location in an ALERT-C
-    location table.
+    Identification of a specific point, linear or area location in an
+    ALERT-C location table.
 
     :ivar alert_clocation_name: Name of ALERT-C location.
     :ivar specific_location: Unique code within the ALERT-C location

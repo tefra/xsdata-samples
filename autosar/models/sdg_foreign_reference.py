@@ -21,7 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgForeignReference:
-    """A reference without variation support that can point to any referrable
+    """
+    A reference without variation support that can point to any referrable
     object in an AUTOSAR Model.
 
     This class accepts the special data "Sdx" reference.

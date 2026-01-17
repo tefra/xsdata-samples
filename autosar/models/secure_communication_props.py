@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SecureCommunicationProps:
     """
-    This meta-class contains configuration settings that are specific for an
-    individual SecuredIPdu.
+    This meta-class contains configuration settings that are specific for
+    an individual SecuredIPdu.
 
     :ivar auth_algorithm: This attribute defines the authentication
         algorithm used for MAC generation and verification.

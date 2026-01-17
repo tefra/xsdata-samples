@@ -8,11 +8,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataStructureType(DataStructureBaseType):
-    """DataStructureType defines the structure for a data structure definition.
+    """
+    DataStructureType defines the structure for a data structure
+    definition.
 
     A data structure definition is defined as a collection of metadata
-    concepts, their structure and usage when used to collect or
-    disseminate data.
+    concepts, their structure and usage when used to collect or disseminate
+    data.
 
     :ivar metadata: A data structure definition may be related to a
         metadata structure definition in order to use its metadata

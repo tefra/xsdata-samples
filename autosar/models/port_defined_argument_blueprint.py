@@ -16,9 +16,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PortDefinedArgumentBlueprint:
     """
-    This class describes a Blueprint of a PortDefinedArgument which needs to be
-    defined in the SwcInternalBehavior of the component implementing the server of
-    the ClientServerInterface.
+    This class describes a Blueprint of a PortDefinedArgument which needs
+    to be defined in the SwcInternalBehavior of the component implementing
+    the server of the ClientServerInterface.
 
     :ivar blueprint_mapping_guide: This attribute offers the possibility
         to provide additional information with respect to the mapping.

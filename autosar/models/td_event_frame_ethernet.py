@@ -31,9 +31,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TdEventFrameEthernet:
     """
-    This is used to describe timing description events related to the exchange of
-    Ethernet frames between an Ethernet communication controller and the BSW
-    Ethernet interface and driver module.
+    This is used to describe timing description events related to the
+    exchange of Ethernet frames between an Ethernet communication
+    controller and the BSW Ethernet interface and driver module.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

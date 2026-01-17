@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 class TypeReserveRequirement(Enum):
     """
-    Type of payment required to reserve travel i.e. Hotel Reservation requirement.
+    Type of payment required to reserve travel i.e.
+
+    Hotel Reservation requirement.
     """
 
     DEPOSIT = "Deposit"

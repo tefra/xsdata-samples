@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ComSecOcToCryptoKeySlotMapping:
     """
-    This meta-class maps the ServiceElementSecureComConfig defined in the COM
-    deployment to the CryptoKeySlot defined in the Crypto Stack.
+    This meta-class maps the ServiceElementSecureComConfig defined in the
+    COM deployment to the CryptoKeySlot defined in the Crypto Stack.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

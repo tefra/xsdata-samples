@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DoIpNetworkConfiguration:
     """
-    This element collects DoIP properties that are network interface specific.
+    This element collects DoIP properties that are network interface
+    specific.
 
     :ivar eid_use_mac: This attribute defines whther the MAC of the
         network interface is used as eid. True: MAC is used False: eid

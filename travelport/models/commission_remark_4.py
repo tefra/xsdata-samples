@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 @dataclass
 class CommissionRemark4:
-    """Identifies the agency commision remarks.
+    """
+    Identifies the agency commision remarks.
 
     Specifically used for Worldspan.
 

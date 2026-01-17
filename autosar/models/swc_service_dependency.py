@@ -107,12 +107,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwcServiceDependency:
-    """Specialization of ServiceDependency in the context of an
+    """
+    Specialization of ServiceDependency in the context of an
     SwcInternalBehavior.
 
-    It allows to associate ports, port groups and (in special cases)
-    data defined for an atomic software component  to a given
-    ServiceNeeds element.
+    It allows to associate ports, port groups and (in special cases) data
+    defined for an atomic software component to a given ServiceNeeds
+    element.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

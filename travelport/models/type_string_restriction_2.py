@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class TypeStringRestriction2:
-    """Restrictions on profile data for fields with a data type of string.
+    """
+    Restrictions on profile data for fields with a data type of string.
 
     Min and max lengths are inclusive.
 

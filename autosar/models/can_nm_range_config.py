@@ -8,13 +8,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CanNmRangeConfig:
-    """Defines the CANID ranges that are used for Nm.
+    """
+    Defines the CANID ranges that are used for Nm.
 
-    This range definition is redundant to the attribute
-    "rxIdentifierRange" of CanFrameTriggering. For backward
-    compatibility reasons this redundancy shall be preserved and both
-    shall be defined. In future this element will be removed from the
-    model.
+    This range definition is redundant to the attribute "rxIdentifierRange"
+    of CanFrameTriggering. For backward compatibility reasons this
+    redundancy shall be preserved and both shall be defined. In future this
+    element will be removed from the model.
 
     :ivar lower_can_id: Lower CAN Identifier of a receive CAN L-PDU for
         identifier range definition.

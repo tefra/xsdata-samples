@@ -12,13 +12,12 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Update:
-    """The DOI of the content being updated (e.g. corrected, retracted, etc.) In
-    the CrossMark Terms and Conditions "updates" are defined as changes that are
-    likely to "change the reader’s interpretation or crediting of the work." That
-    is, *editorially significant* changes.
-
-    "Updates" should not include minor changes to spelling, punctuation,
-    formatting, etc.
+    """
+    The DOI of the content being updated (e.g. corrected, retracted, etc.)
+    In the CrossMark Terms and Conditions "updates" are defined as changes
+    that are likely to "change the reader’s interpretation or crediting of
+    the work." That is, *editorially significant* changes. "Updates" should
+    not include minor changes to spelling, punctuation, formatting, etc.
 
     :ivar type_value: This attribute should be used to list the update
         type. Allowed update types are: <ul xmlns=""> <li>addendum</li>

@@ -14,9 +14,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsSupplementaryPanel:
     """
-    A panel which may display information or a regulatory instruction which is
-    supplemental to the associated pictogram, comprising either an additional line
-    of text or a pictogram or both.
+    A panel which may display information or a regulatory instruction which
+    is supplemental to the associated pictogram, comprising either an
+    additional line of text or a pictogram or both.
 
     :ivar supplementary_message_description: Free text description of
         the message that is displayed in the panel which is supplemental

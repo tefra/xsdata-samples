@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataComProps:
     """
-    Represents a single resource required or provided by a CP Software Cluster
-    which relates to the port based communication on VFB level.
+    Represents a single resource required or provided by a CP Software
+    Cluster which relates to the port based communication on VFB level.
 
     :ivar send_indication: Send indication behavior for last-is-the best
         data communciation.

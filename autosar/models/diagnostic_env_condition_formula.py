@@ -11,18 +11,19 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticEnvConditionFormula:
-    """A DiagnosticEnvConditionFormula embodies the computation instruction that is
-    to be evaluated at runtime to determine if the DiagnosticEnvironmentalCondition
-    is currently present (i.e. the formula is evaluated to true) or not
-    (otherwise).
+    """
+    A DiagnosticEnvConditionFormula embodies the computation instruction
+    that is to be evaluated at runtime to determine if the
+    DiagnosticEnvironmentalCondition is currently present (i.e. the formula
+    is evaluated to true) or not (otherwise).
 
-    The formula itself consists of parts which are combined by the
-    logical operations specified by DiagnosticEnvConditionFormula.op. If
-    a diagnostic functionality cannot be executed because an
-    environmental condition fails then the diagnostic stack shall send a
-    negative response code (NRC) back to the client. The value of the
-    NRC is directly related to the specific formula and is therefore
-    formalized in the attribute DiagnosticEnvConditionFormula.nrcValue.
+    The formula itself consists of parts which are combined by the logical
+    operations specified by DiagnosticEnvConditionFormula.op. If a
+    diagnostic functionality cannot be executed because an environmental
+    condition fails then the diagnostic stack shall send a negative
+    response code (NRC) back to the client. The value of the NRC is
+    directly related to the specific formula and is therefore formalized in
+    the attribute DiagnosticEnvConditionFormula.nrcValue.
 
     :ivar nrc_value: This attribute represents the concrete NRC value
         that shall be returned if the condition fails.

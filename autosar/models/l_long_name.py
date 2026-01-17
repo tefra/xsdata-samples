@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LLongName:
-    """MixedContentForLongNames  in one particular language.
+    """
+    MixedContentForLongNames in one particular language.
 
     The language is denoted in the attribute l.
 

@@ -12,12 +12,13 @@ __NAMESPACE__ = (
 
 @dataclass
 class FailureType:
-    """<description xmlns="">A component that describes individual failures within
-    the fault.
+    """
+    <description xmlns="">A component that describes individual failures
+    within the fault.
 
     This component is used to support multiple causes to the fault, i.e.
-    where the fault is generated from one or more API calls or one or
-    more validation failures.</description>
+    where the fault is generated from one or more API calls or one or more
+    validation failures.</description>.
 
     :ivar code: <description xmlns="">The code identifying the specific
         failure.</description>

@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class CodedTextFormatType(SimpleComponentTextFormatType):
-    """CodedTextFormatType is a restricted version of the
+    """
+    CodedTextFormatType is a restricted version of the
     SimpleComponentTextFormatType that only allows factets and text types
     applicable to codes.
 

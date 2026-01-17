@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ISignalTriggering:
     """
-    A ISignalTriggering allows an assignment of ISignals to physical channels.
+    A ISignalTriggering allows an assignment of ISignals to physical
+    channels.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

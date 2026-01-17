@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticOperationCycleTypeEnum:
     """
-    Operation cycles types used to identify certain Operation cycles with a certain
-    semantics.
+    Operation cycles types used to identify certain Operation cycles with a
+    certain semantics.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ModeDeclaration:
-    """Declaration of one Mode.
+    """
+    Declaration of one Mode.
 
     The name and semantics of a specific mode is not defined in the
     meta-model.

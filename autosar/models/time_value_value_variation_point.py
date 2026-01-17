@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TimeValueValueVariationPoint:
     """
-    This class represents the ability to express a formula for a numerical time
-    value.
+    This class represents the ability to express a formula for a numerical
+    time value.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

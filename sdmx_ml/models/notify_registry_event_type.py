@@ -12,16 +12,17 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class NotifyRegistryEventType:
-    """NotifyRegistryEventType describes the structure a registry notification, in
-    response to a subscription to a registry event.
+    """
+    NotifyRegistryEventType describes the structure a registry
+    notification, in response to a subscription to a registry event.
 
     At a minimum, the event time, a reference to the change object, a
-    reference to the underlying subscription triggering the
-    notification, and the action that took place on the object are sent.
-    In addition, the full details of the object may be provided at the
-    discretion of the registry. In the event that the details are not
-    sent, it will be possible to query for the details of the changed
-    object using the reference provided.
+    reference to the underlying subscription triggering the notification,
+    and the action that took place on the object are sent. In addition, the
+    full details of the object may be provided at the discretion of the
+    registry. In the event that the details are not sent, it will be
+    possible to query for the details of the changed object using the
+    reference provided.
 
     :ivar event_time: EventTime specifies the time of the triggering
         event.

@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
 class TypePaymentType1(Enum):
-    """Defines the form of payment type.
-
-    (Credit Card, Cash, etc)
+    """
+    Defines the form of payment type. (Credit Card, Cash, etc).
     """
 
     CREDIT_CARD = "Credit Card"

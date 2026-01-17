@@ -6,16 +6,23 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SectionInitializationPolicyType:
-    """SectionInitializationPolicyType describes the intended initialization of
-    MemorySections.
+    """
+    SectionInitializationPolicyType describes the intended initialization
+    of MemorySections.
 
-    The following values are standardized in AUTOSAR Methodology:
-    * '''NO-INIT''': No initialization and no clearing is performed. Such data elements shall not be read before one has written a value into it.
-    * '''INIT''': To be used for data that are initialized by every reset to the specified value (initValue).
-    * '''POWER-ON-INIT''': To be used for data that are initialized by "Power On" to the specified value (initValue). Note: there might be several resets between power on resets.
-    * '''CLEARED''': To be used for data that are initialized by every reset to zero.
-    * '''POWER-ON-CLEARED''': To be used for data that are initialized by "Power On" to zero. Note: there might be several resets between power on resets.
-    Please note that the values are defined similar to the representation of enumeration types in the XML schema to ensure backward compatibility.
+    The following values are standardized in AUTOSAR Methodology: *
+    '''NO-INIT''': No initialization and no clearing is performed. Such
+    data elements shall not be read before one has written a value into it.
+    * '''INIT''': To be used for data that are initialized by every reset
+    to the specified value (initValue). * '''POWER-ON-INIT''': To be used
+    for data that are initialized by "Power On" to the specified value
+    (initValue). Note: there might be several resets between power on
+    resets. * '''CLEARED''': To be used for data that are initialized by
+    every reset to zero. * '''POWER-ON-CLEARED''': To be used for data that
+    are initialized by "Power On" to zero. Note: there might be several
+    resets between power on resets. Please note that the values are defined
+    similar to the representation of enumeration types in the XML schema to
+    ensure backward compatibility.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

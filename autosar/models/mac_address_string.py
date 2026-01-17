@@ -6,10 +6,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class MacAddressString:
-    """This primitive specifies a Mac Address.
+    """
+    This primitive specifies a Mac Address.
 
-    Notation: FF:FF:FF:FF:FF:FF
-    Alternative notations, e.g. using dash instead of colon, or another grouping of numbers, is not allowed.
+    Notation: FF:FF:FF:FF:FF:FF Alternative notations, e.g. using dash
+    instead of colon, or another grouping of numbers, is not allowed.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

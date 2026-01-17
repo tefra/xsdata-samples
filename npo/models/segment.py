@@ -9,7 +9,8 @@ __NAMESPACE__ = "urn:vpro:media:2009"
 
 @dataclass
 class Segment(SegmentType):
-    """A program can contain a number of segments.
+    """
+    A program can contain a number of segments.
 
     A segment is an identifiable part of a program.
     """

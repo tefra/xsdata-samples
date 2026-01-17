@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BuildEngineeringObject:
     """
-    This meta-class represents the ability to denote an artifact which is processed
-    within a particular build action.
+    This meta-class represents the ability to denote an artifact which is
+    processed within a particular build action.
 
     :ivar short_label: This is the short name of the engineering object.
         Note that it is modeled as NameToken and not as Identifier since

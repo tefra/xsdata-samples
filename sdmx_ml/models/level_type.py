@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class LevelType(LevelBaseType):
-    """LevelType describes a level in a hierarchical codelist.
+    """
+    LevelType describes a level in a hierarchical codelist.
 
-    Where level is defined as a group where codes can be characterised
-    by homogeneous coding, and where the parent of each code in the
-    group is at the same higher level of the hierarchy.
+    Where level is defined as a group where codes can be characterised by
+    homogeneous coding, and where the parent of each code in the group is
+    at the same higher level of the hierarchy.
 
     :ivar coding_format: CodingFormat specifies the text formatting of
         the codes in this level. This includes facets such as the

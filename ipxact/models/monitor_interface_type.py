@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class MonitorInterfaceType(InterfaceType):
     """
-    Hierarchical reference to an interface being monitored or monitoring another
-    interface.
+    Hierarchical reference to an interface being monitored or monitoring
+    another interface.
 
     :ivar description:
     :ivar vendor_extensions:

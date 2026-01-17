@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class AdHocConnections:
-    """Defines the set of ad-hoc connections in a design.
+    """
+    Defines the set of ad-hoc connections in a design.
 
-    An ad-hoc connection represents a connection between two component
-    pins which were not connected as a result of interface connections
-    (i.e.the pin to pin connection was made explicitly and is
-    represented explicitly).
+    An ad-hoc connection represents a connection between two component pins
+    which were not connected as a result of interface connections (i.e.the
+    pin to pin connection was made explicitly and is represented
+    explicitly).
     """
 
     class Meta:

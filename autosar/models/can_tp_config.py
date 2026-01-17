@@ -27,7 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CanTpConfig:
-    """This element defines exactly one CAN TP Configuration.
+    """
+    This element defines exactly one CAN TP Configuration.
 
     One CanTpConfig element shall be created for each CAN Network in the
     System.

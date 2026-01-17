@@ -14,15 +14,16 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class MetadataSetType(MetadataSetBaseType):
-    """MetadataSetType describes the structure for a metadata set, which contains a
-    collection of reported metadata against a set of targets.
+    """
+    MetadataSetType describes the structure for a metadata set, which
+    contains a collection of reported metadata against a set of targets.
 
     The targets should conform to the restrictions described by the
-    metadata provision or the metadataflow. Note that this is
-    maintainble, and as such must specify in agency. In this case, the
-    agency is the metadata provider. If a metadata provision agreement
-    is referenced, it is assumed that the metadata provider described in
-    the provision will be the same as the agency for this set.
+    metadata provision or the metadataflow. Note that this is maintainble,
+    and as such must specify in agency. In this case, the agency is the
+    metadata provider. If a metadata provision agreement is referenced, it
+    is assumed that the metadata provider described in the provision will
+    be the same as the agency for this set.
 
     :ivar metadata_provision_agreement_or_metadataflow:
     :ivar target: Target references the target structures for which

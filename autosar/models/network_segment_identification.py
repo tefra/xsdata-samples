@@ -8,8 +8,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NetworkSegmentIdentification:
-    """This meta-class represents the ability to identify the PhysicalChannel on a
-    system scope in a numerical way.
+    """
+    This meta-class represents the ability to identify the PhysicalChannel
+    on a system scope in a numerical way.
 
     One possible application of this approach is the Time Validation.
 

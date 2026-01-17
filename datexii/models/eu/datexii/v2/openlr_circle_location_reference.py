@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
     """
-    The openLR method of areadefinition by providing a center position and a
-    radius.
+    the openLR method of areadefinition by providing a center position and
+    a radius.
 
     :ivar radius: The radius of the geometric area identified.
     :ivar openlr_geo_coordinate:

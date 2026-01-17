@@ -18,8 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DataPrototypeInPortInterfaceRef:
     """
     This class represents a RootDataPrototype that is typed by an
-    ApplicationDataType or ImplementationDataType or a DataTypeElement that is
-    aggregated within a composite application data type (record or array).
+    ApplicationDataType or ImplementationDataType or a DataTypeElement that
+    is aggregated within a composite application data type (record or
+    array).
 
     :ivar tag_id: This attribute represents the ability to specify a
         tag-id for the serialization of a specific DataPrototype in the

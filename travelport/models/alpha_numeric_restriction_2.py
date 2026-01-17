@@ -9,7 +9,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class AlphaNumericRestriction2(TypeStringRestriction2):
-    """Restrictions on profile data for fields with a data type of alphanumeric.
+    """
+    Restrictions on profile data for fields with a data type of
+    alphanumeric.
 
     Min and max lengths are inclusive.
     """

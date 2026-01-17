@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class MonitorInterconnection:
-    """Describes a connection from the interface of one component to any number of
-    monitor interfaces in the design.
+    """
+    Describes a connection from the interface of one component to any
+    number of monitor interfaces in the design.
 
     An active interface can be connected to unlimited number of monitor
     interfaces.

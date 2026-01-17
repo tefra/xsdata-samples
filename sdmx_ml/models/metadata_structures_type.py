@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataStructuresType:
-    """MetadataStructuresType describes the structure of the metadata structure
-    definitions container.
+    """
+    MetadataStructuresType describes the structure of the metadata
+    structure definitions container.
 
     It contains one or more metadata structure definition, which can be
-    explicitly detailed or referenced from an external structure
-    document or registry service.
+    explicitly detailed or referenced from an external structure document
+    or registry service.
 
     :ivar metadata_structure: MetadataStructure provides the details of
         a metadata structure definition, which is defined as a

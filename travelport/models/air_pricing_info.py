@@ -40,10 +40,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirPricingInfo:
-    """Per traveler type pricing breakdown.
+    """
+    Per traveler type pricing breakdown.
 
-    This will reflect the pricing for all travelers of the specified
-    type.
+    This will reflect the pricing for all travelers of the specified type.
 
     Parameters
     ----------

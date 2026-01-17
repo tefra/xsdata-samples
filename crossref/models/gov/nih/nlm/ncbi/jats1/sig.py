@@ -32,7 +32,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class Sig:
     """
-    <div> <h3>Signature</h3> </div>
+    <div> <h3>Signature</h3> </div>.
     """
 
     class Meta:

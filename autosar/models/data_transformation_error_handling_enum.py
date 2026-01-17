@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataTransformationErrorHandlingEnum:
     """
-    This enumeration defines different ways how a RunnableEntity shall handle
-    transformer errors.
+    This enumeration defines different ways how a RunnableEntity shall
+    handle transformer errors.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

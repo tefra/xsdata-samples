@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 @dataclass
 class RailInfo:
     """
-    Container for rail-related information required for retrieving a rail seat
-    map/coach map.
+    Container for rail-related information required for retrieving a rail
+    seat map/coach map.
 
     Parameters
     ----------

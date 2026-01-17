@@ -26,9 +26,12 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class AirTravelerType:
-    """Information about the person traveling.
+    """
+    Information about the person traveling.
 
-    Gender - the gender of the customer, if needed. BirthDate - Date of Birth. Currency - the preferred currency in which monetary amounts should be returned.
+    Gender - the gender of the customer, if needed. BirthDate - Date of
+    Birth. Currency - the preferred currency in which monetary amounts
+    should be returned.
 
     Attributes:
         profile_ref: Stored information about a customer. May contain

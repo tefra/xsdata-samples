@@ -20,8 +20,9 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class Standard:
     """
-    Standard is the top level element for deposit of metadata about standards
-    developed by Standards Development Organizations (SDOs) or Consortia.
+    standard is the top level element for deposit of metadata about
+    standards developed by Standards Development Organizations (SDOs) or
+    Consortia.
     """
 
     class Meta:

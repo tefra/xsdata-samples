@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwcBswSynchronizedModeGroupPrototype:
     """
-    Synchronizes a mode group provided by a component via a port with a mode group
-    provided by a BSW module or cluster.
+    Synchronizes a mode group provided by a component via a port with a
+    mode group provided by a BSW module or cluster.
 
     :ivar bsw_mode_group_ref: The BSW mode group prototype.
     :ivar swc_mode_group_iref: The SWC mode group prototype provided by

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PointCoordinates:
     """
-    A pair of coordinates defining the geodetic position of a single point using
-    the European Terrestrial Reference System 1989 (ETRS89).
+    A pair of coordinates defining the geodetic position of a single point
+    using the European Terrestrial Reference System 1989 (ETRS89).
 
     :ivar latitude: Latitude in decimal degrees using the European
         Terrestrial Reference System 1989 (ETRS89).

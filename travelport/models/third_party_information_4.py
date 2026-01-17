@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 @dataclass
 class ThirdPartyInformation4:
-    """Third party supplier locator information.
+    """
+    Third party supplier locator information.
 
     Specifically applicable for SDK booking.
 

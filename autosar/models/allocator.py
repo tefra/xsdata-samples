@@ -21,9 +21,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Allocator:
     """
-    This meta-class represents the ability to take influence on the way objects are
-    allocated in memory, for example it can be controlled whether an objects is
-    allocated on the heap or on the stack.
+    This meta-class represents the ability to take influence on the way
+    objects are allocated in memory, for example it can be controlled
+    whether an objects is allocated on the heap or on the stack.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

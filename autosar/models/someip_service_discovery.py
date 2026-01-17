@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SomeipServiceDiscovery:
     """
-    This meta-class represents a specialization of the generic service discovery
-    for the SOME/IP case.
+    This meta-class represents a specialization of the generic service
+    discovery for the SOME/IP case.
 
     :ivar multicast_sd_ip_address_ref: This reference identifies the
         multicast IP address used for service discovery.

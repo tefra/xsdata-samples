@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EndToEndDescription:
-    """This meta-class contains information about end-to-end protection.
+    """
+    This meta-class contains information about end-to-end protection.
 
     The set of applicable attributes depends on the actual value of the
     category attribute of EndToEndProtection.

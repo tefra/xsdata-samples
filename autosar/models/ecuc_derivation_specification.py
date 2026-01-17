@@ -10,9 +10,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucDerivationSpecification:
-    """Allows to define configuration items that are calculated based on the value of
-    * other parameter values
-    * elements (attributes/classes) defined in other AUTOSAR templates such as System template and SW component template
+    """
+    Allows to define configuration items that are calculated based on the
+    value of * other parameter values * elements (attributes/classes)
+    defined in other AUTOSAR templates such as System template and SW
+    component template.
 
     :ivar calculation_formula: Definition of the formula used to
         calculate the value of the configuration element.

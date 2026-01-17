@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class DimensionListBaseType(ComponentListType):
     """
-    DimensionListBaseType is an abstract base type used as the basis for the
-    DimensionListType.
+    DimensionListBaseType is an abstract base type used as the basis for
+    the DimensionListType.
 
     :ivar choice:
     :ivar id: The id attribute is provided in this case for

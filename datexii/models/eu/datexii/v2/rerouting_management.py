@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ReroutingManagement(NetworkManagement):
     """
-    Rerouting management action that is issued by the network/road operator.
+    Rerouting management action that is issued by the network/road
+    operator.
 
     :ivar rerouting_management_type: Type of rerouting management action
         instigated by operator.

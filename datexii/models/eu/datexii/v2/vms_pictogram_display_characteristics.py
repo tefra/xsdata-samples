@@ -18,8 +18,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsPictogramDisplayCharacteristics:
     """
-    Characteristics specific to the pictogram display area(s) on the VMS where
-    pictogramDisplayAreaIndex indicates which pictogram area it relates to.
+    Characteristics specific to the pictogram display area(s) on the VMS
+    where pictogramDisplayAreaIndex indicates which pictogram area it
+    relates to.
 
     :ivar pictogram_lanterns_present: Indicates whether the VMS is
         equipped with flashing lanterns associated with the pictogram

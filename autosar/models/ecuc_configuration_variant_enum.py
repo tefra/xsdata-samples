@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcucConfigurationVariantEnum:
     """
-    Specifies the possible Configuration Variants used for AUTOSAR BSW Modules.
+    Specifies the possible Configuration Variants used for AUTOSAR BSW
+    Modules.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

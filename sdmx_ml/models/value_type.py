@@ -8,9 +8,10 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class ValueType:
-    """ValueType is an abstract class that is the basis for any component value
-    that cannot be simply represented as a space-normalized value (e.g. in an XML
-    attribute).
+    """
+    ValueType is an abstract class that is the basis for any component
+    value that cannot be simply represented as a space-normalized value
+    (e.g. in an XML attribute).
 
     Although its content is mixed, it should be restricted so that only
     character data or the Text or Structured text is used. See

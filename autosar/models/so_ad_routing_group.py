@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SoAdRoutingGroup:
-    """Routing of Pdus in the SoAd can be activated or deactivated.
+    """
+    Routing of Pdus in the SoAd can be activated or deactivated.
 
     The ShortName of this element shall contain the RoutingGroupId.
 

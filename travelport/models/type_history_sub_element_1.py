@@ -98,8 +98,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class TypeHistorySubElement1:
     """
-    A choice of all fields that have changed in the course of a add, modified, or
-    deleted.
+    A choice of all fields that have changed in the course of a add,
+    modified, or deleted.
     """
 
     class Meta:

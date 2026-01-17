@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 @dataclass
 class BookingAirPnrElementReq(BookingBaseReq):
     """
-    Adds, Modifies air elements like Stored fare FOP, Credit Card Auth, Ticketing
-    Modifiers etc.
+    Adds, Modifies air elements like Stored fare FOP, Credit Card Auth,
+    Ticketing Modifiers etc.
     """
 
     class Meta:

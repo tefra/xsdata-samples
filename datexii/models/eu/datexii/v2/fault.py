@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Fault:
     """
-    Information about a fault relating to a specific piece of equipment or process.
+    Information about a fault relating to a specific piece of equipment or
+    process.
 
     :ivar fault_identifier: Unique identifier of the fault.
     :ivar fault_description: Textual description of the fault.

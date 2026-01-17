@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 @dataclass
 class CreateTerminalSessionReq(BaseReq4):
     """
-    Use this request to create a new session If you do not explicitly close a
-    session when you are done, the host may hold onto resources (a pnr for example)
-    for some indeterminate amount of time.
+    Use this request to create a new session If you do not explicitly close
+    a session when you are done, the host may hold onto resources (a pnr
+    for example) for some indeterminate amount of time.
 
     Parameters
     ----------

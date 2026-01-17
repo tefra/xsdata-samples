@@ -7,10 +7,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class WireTypeDefs:
-    """The group of wire type definitions.
+    """
+    The group of wire type definitions.
 
-    If no match to a viewName is found then the default language types
-    are to be used. See the User Guide for these default types.
+    If no match to a viewName is found then the default language types are
+    to be used. See the User Guide for these default types.
     """
 
     class Meta:

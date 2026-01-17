@@ -25,7 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class J1939TpConfig:
-    """This element defines exactly one J1939 TP Configuration.
+    """
+    This element defines exactly one J1939 TP Configuration.
 
     One J1939TpConfig element shall be created for each J1939 Network in
     the System.

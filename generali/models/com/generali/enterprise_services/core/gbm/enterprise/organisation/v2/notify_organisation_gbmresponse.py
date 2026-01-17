@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/enterprise/org
 @dataclass
 class NotifyOrganisationGbmresponse(NotifyOrganisationGbmresponseType):
     """
-    <description xmlns="">The definition of the response message that supports
-    acknowledgement for an Organisation notification</description>
+    <description xmlns="">The definition of the response message that
+    supports acknowledgement for an Organisation
+    notification</description>.
     """
 
     class Meta:

@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SenderAnnotation:
     """
-    Annotation of a sender port, specifying properties of data elements that don't
-    affect communication or generation of the RTE.
+    Annotation of a sender port, specifying properties of data elements
+    that don't affect communication or generation of the RTE.
 
     :ivar label: This is the headline for the annotation.
     :ivar annotation_origin: This attribute identifies the origin of the

@@ -10,13 +10,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlexrayAbsolutelyScheduledTiming:
-    """Each frame in FlexRay is identified by its slot id and communication cycle.
+    """
+    Each frame in FlexRay is identified by its slot id and communication
+    cycle.
 
-    A description is provided by the usage of AbsolutelyScheduledTiming.
-    In the static segment a frame can be sent multiple times within one
+    A description is provided by the usage of AbsolutelyScheduledTiming. In
+    the static segment a frame can be sent multiple times within one
     communication cycle. For describing this case multiple
-    AbsolutelyScheduledTimings have to be used. The main use case would
-    be that a frame is sent twice within one communication cycle.
+    AbsolutelyScheduledTimings have to be used. The main use case would be
+    that a frame is sent twice within one communication cycle.
 
     :ivar communication_cycle: The communication cycle where the frame
         is sent.

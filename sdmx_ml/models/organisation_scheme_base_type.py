@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class OrganisationSchemeBaseType(ItemSchemeType):
     """
-    OrganisationSchemeBaseType is an abstract base type for any organisation
-    scheme.
+    OrganisationSchemeBaseType is an abstract base type for any
+    organisation scheme.
     """
 
     choice: Any = field(

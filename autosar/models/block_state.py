@@ -17,12 +17,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BlockState:
-    """This meta-class defines a block state that is part of the collection of
+    """
+    This meta-class defines a block state that is part of the collection of
     block states belonging to a specific IdsmInstance.
 
-    The IdsM shall discard any reported security event that is mapped to
-    a filter chain containing a SecurityEventStateFilter that references
-    the block state which is currently active in the IdsM.
+    The IdsM shall discard any reported security event that is mapped to a
+    filter chain containing a SecurityEventStateFilter that references the
+    block state which is currently active in the IdsM.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

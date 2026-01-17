@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RteApiReturnValueProvisionEnum:
     """
-    This meta-class provides values to control how return values from RTE APIs are
-    provided.
+    This meta-class provides values to control how return values from RTE
+    APIs are provided.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

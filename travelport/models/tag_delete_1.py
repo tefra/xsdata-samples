@@ -9,9 +9,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class TagDelete1:
-    """Delete a tag from the specified element of the profile.
+    """
+    Delete a tag from the specified element of the profile.
 
-    There are two methods to delete tag from profile data - One is through this TagDelete element and another is through TagRef. To delete the last Tag associated to a ProfileData use TagDelete element.
+    There are two methods to delete tag from profile data - One is through
+    this TagDelete element and another is through TagRef. To delete the
+    last Tag associated to a ProfileData use TagDelete element.
 
     Parameters
     ----------

@@ -22,8 +22,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DoIpLogicTesterAddressProps:
     """
-    This meta-class acts as a target for references to the DoIpLogicTesterAddress
-    and collects DoIpLogicTesterAddress specific settings.
+    This meta-class acts as a target for references to the
+    DoIpLogicTesterAddress and collects DoIpLogicTesterAddress specific
+    settings.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

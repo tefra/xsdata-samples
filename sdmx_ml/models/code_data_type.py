@@ -4,13 +4,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
 class CodeDataType(Enum):
-    """CodeDataType is a restriction of the basic data types that are applicable to
-    codes.
+    """
+    CodeDataType is a restriction of the basic data types that are
+    applicable to codes.
 
-    Although some of the higher level time period formats are
-    perimitted, it should be noted that any value which contains time
-    (which includes a time zone offset) is not allowable as a code
-    identifier.
+    Although some of the higher level time period formats are perimitted,
+    it should be noted that any value which contains time (which includes a
+    time zone offset) is not allowable as a code identifier.
 
     :cvar STRING: A string datatype corresponding to W3C XML Schema's
         xs:string datatype.

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 @dataclass
 class CityOrAirport5(Location5):
     """
-    This element can be used when it is not known whether the value is an airport
-    or a city code.
+    This element can be used when it is not known whether the value is an
+    airport or a city code.
 
     Parameters
     ----------

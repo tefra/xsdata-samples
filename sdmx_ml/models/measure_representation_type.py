@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MeasureRepresentationType(RepresentationType):
-    """MeasureRepresentationType defines the representation for a measure.
+    """
+    MeasureRepresentationType defines the representation for a measure.
 
     A measure can be text (including XHTML and multi-lingual values), a
     simple value, or an enumerated value.

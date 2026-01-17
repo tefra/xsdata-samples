@@ -13,8 +13,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 @dataclass
 class RateMatchIndicator:
     """
-    "Match" Indicators for certain request parameters, e.g. Child Count, Extra
-    Adults etc.
+    "Match" Indicators for certain request parameters, e.g.
+
+    Child Count, Extra Adults etc.
     """
 
     class Meta:

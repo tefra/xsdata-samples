@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class ProfileSearchFieldReq2(BaseReq5):
     """
-    Request to retrieve the fields and field groups owned by a specified agency.
+    Request to retrieve the fields and field groups owned by a specified
+    agency.
 
     Parameters
     ----------

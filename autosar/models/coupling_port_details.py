@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CouplingPortDetails:
-    """Defines details of a CouplingPort.
+    """
+    Defines details of a CouplingPort.
 
     May be used to configure the structures of a switch.
 

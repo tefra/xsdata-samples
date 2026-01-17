@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class TypeCommonEditableField2(TypeFieldRef2):
     """
-    Base type of common attributes that can be edited for a field or field group
-    command.
+    Base type of common attributes that can be edited for a field or field
+    group command.
 
     Parameters
     ----------

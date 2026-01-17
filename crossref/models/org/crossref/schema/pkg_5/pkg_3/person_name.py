@@ -30,8 +30,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class PersonName:
     """
-    The name of a person (as opposed to an organization) that contributed to an
-    item.
+    The name of a person (as opposed to an organization) that contributed
+    to an item.
     """
 
     class Meta:

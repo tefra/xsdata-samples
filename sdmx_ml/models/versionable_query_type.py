@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 @dataclass(frozen=True)
 class VersionableQueryType(IdentifiableQueryType):
     """
-    VersionableQueryType describes the structure of a query for a versionable
-    object.
+    VersionableQueryType describes the structure of a query for a
+    versionable object.
 
     :ivar version: The version attribute is used to query for an object
         based on its version. This can be and explicit value, wild-

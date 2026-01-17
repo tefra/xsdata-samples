@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 class TypeEticketability(Enum):
     """
-    Defines the ability to eticket an entity (Yes, No, Required, Ticketless)
+    Defines the ability to eticket an entity (Yes, No, Required,
+    Ticketless).
     """
 
     YES = "Yes"

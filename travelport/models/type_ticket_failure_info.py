@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class TypeTicketFailureInfo:
     """
-    Will be optionally returned as part if one or all ticketing requests fail.
+    Will be optionally returned as part if one or all ticketing requests
+    fail.
 
     Parameters
     ----------

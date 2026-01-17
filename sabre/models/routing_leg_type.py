@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class RoutingLegType:
     """
-    Definition of individual routing legs, at least one leg must be present.
+    Definition of individual routing legs, at least one leg must be
+    present.
     """
 
     inbound_outbound_carrier: list[str] = field(

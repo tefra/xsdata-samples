@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 @dataclass
 class Simple:
     """
-    Intended for use as the type of user-declared elements to make them simple
-    links.
+    Intended for use as the type of user-declared elements to make them
+    simple links.
     """
 
     class Meta:

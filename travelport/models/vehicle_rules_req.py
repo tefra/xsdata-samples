@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 @dataclass
 class VehicleRulesReq(BaseSearchReq1):
     """
-    Used to request  rules for a specific vehicle and rate.
+    Used to request rules for a specific vehicle and rate.
 
     Parameters
     ----------

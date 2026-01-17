@@ -8,9 +8,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwCalibrationAccessEnum:
-    """Determines the access rights to a data object w.r.t.
-
-    measurement and calibration.
+    """
+    Determines the access rights to a data object w.r.t. measurement and
+    calibration.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

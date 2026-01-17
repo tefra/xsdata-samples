@@ -13,8 +13,8 @@ __NAMESPACE__ = (
 @dataclass
 class QueryResultType(BaseHeaderType):
     """
-    <description xmlns="">A header providing meta-data about the result of a
-    query.</description>
+    <description xmlns="">A header providing meta-data about the result of
+    a query.</description>.
 
     :ivar total_count: <description xmlns="">The total number of records
         matched in the query and possibly returned in the payload of the

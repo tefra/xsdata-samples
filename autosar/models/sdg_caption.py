@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgCaption:
-    """This meta-class represents the caption of a special data group.
+    """
+    This meta-class represents the caption of a special data group.
 
     This allows to have some parts of special data as identifiable.
 

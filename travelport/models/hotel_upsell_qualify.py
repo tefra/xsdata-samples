@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 @dataclass
 class HotelUpsellQualify:
-    """Qualify data of Hotel against which Hotel property details search is matched
-    to get an upsell Offer.
+    """
+    Qualify data of Hotel against which Hotel property details search is
+    matched to get an upsell Offer.
 
     Each qualify should have an offer.
 

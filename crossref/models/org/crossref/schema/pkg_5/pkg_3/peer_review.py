@@ -46,8 +46,9 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class PeerReview:
     """
-    The peer_review content type is intended for assigning DOIs to the reports and
-    other artifacts associated with the review of published content.
+    The peer_review content type is intended for assigning DOIs to the
+    reports and other artifacts associated with the review of published
+    content.
 
     :ivar contributors:
     :ivar titles:

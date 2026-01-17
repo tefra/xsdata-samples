@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class LibraryRefType:
-    """Base IP-XACT document reference type.
+    """
+    Base IP-XACT document reference type.
 
     Contains vendor, library, name and version attributes.
     """

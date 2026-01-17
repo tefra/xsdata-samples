@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompuScaleRationalFormula:
     """
-    This meta-class represents the fact that the computation in this scale is
-    represented as rational term.
+    This meta-class represents the fact that the computation in this scale
+    is represented as rational term.
 
     :ivar compu_rational_coeffs: This specifies the coefficients of the
         rational formula.

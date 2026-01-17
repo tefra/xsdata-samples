@@ -21,15 +21,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ObdPidServiceNeeds:
-    """Specifies the abstract needs of a component or module on the configuration
-    of OBD Services in relation to a particular PID (parameter identifier) which is
-    supported by this component or module.
+    """
+    Specifies the abstract needs of a component or module on the
+    configuration of OBD Services in relation to a particular PID
+    (parameter identifier) which is supported by this component or module.
 
-    In case of using a client/server communicated value, the related
-    value shall be communicated via the port referenced by
-    asssignedPort. The details of this communication (e.g. appropriate
-    naming conventions) are specified in the related software
-    specifications (SWS).
+    In case of using a client/server communicated value, the related value
+    shall be communicated via the port referenced by asssignedPort. The
+    details of this communication (e.g. appropriate naming conventions) are
+    specified in the related software specifications (SWS).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

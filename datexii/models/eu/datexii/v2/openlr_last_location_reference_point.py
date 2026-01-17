@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrLastLocationReferencePoint(OpenlrBaseLocationReferencePoint):
     """
-    The sequence of location reference points is terminated by a last location
-    reference point.
+    The sequence of location reference points is terminated by a last
+    location reference point.
     """
 
     openlr_last_location_reference_point_extension: Optional[ExtensionType] = (

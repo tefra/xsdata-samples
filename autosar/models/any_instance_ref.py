@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AnyInstanceRef:
-    """Describes a reference to any instance in an AUTOSAR model.
+    """
+    Describes a reference to any instance in an AUTOSAR model.
 
     This is the most generic form of an instance ref. Refer to the
     superclass notes for more details.

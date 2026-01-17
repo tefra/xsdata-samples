@@ -25,7 +25,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class Vms:
-    """Provides the current status and settings of the VMS and the currently
+    """
+    Provides the current status and settings of the VMS and the currently
     displayed information.
 
     Where a VMS is displaying a sequence or alternating set of messages

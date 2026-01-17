@@ -20,11 +20,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EthIpProps:
-    """@RESTRICT_TO_STANDARD:CP!
-    This meta-class is used to configure the EcuInstance specific IP attributes.
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:AP!
-    This meta-class is used to configure the Machine specific IP attributes.
+    """
+    @RESTRICT_TO_STANDARD:CP!
+
+    This meta-class is used to configure the EcuInstance specific IP
+    attributes. @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:AP! This
+    meta-class is used to configure the Machine specific IP attributes.
     @END_RESTRICT_TO_STANDARD!
 
     :ivar short_name: This specifies an identifying shortName for the

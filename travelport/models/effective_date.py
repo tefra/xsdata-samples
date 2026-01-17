@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 @dataclass
 class EffectiveDate:
-    """Effective Date range.
+    """
+    Effective Date range.
 
     For specific date usage set both limits to same value.
 

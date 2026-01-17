@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class DoubleValueType(ValueType):
-    """DoubleValueType is a refinement of SimpleValueType limiting the content to
-    be a double.
+    """
+    DoubleValueType is a refinement of SimpleValueType limiting the content
+    to be a double.
 
     This can be further refined ranges, etc.
     """

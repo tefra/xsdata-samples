@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class FieldDataSearch1:
     """
-    Specifies a search term and value (wildcards permitted), to search profiles by
-    data in custom profile fields.
+    Specifies a search term and value (wildcards permitted), to search
+    profiles by data in custom profile fields.
 
     Parameters
     ----------

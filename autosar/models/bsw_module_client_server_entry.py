@@ -13,13 +13,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswModuleClientServerEntry:
-    """This meta-class represents a single API entry into the BSW module or cluster
-    that has the ability to be called in client-server fashion via the BSW
-    Scheduler.
+    """
+    This meta-class represents a single API entry into the BSW module or
+    cluster that has the ability to be called in client-server fashion via
+    the BSW Scheduler.
 
-    In this regard it is more special than BswModuleEntry and can be
-    seen as a wrapper around the BswModuleEntry to which it refers
-    (property encapsulatedEntry).
+    In this regard it is more special than BswModuleEntry and can be seen
+    as a wrapper around the BswModuleEntry to which it refers (property
+    encapsulatedEntry).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

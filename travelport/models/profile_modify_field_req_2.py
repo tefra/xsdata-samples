@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileModifyFieldReq2(BaseReq5):
-    """Modifies a custom field or field group.
+    """
+    Modifies a custom field or field group.
 
     Note that some modifications are not permitted once a field or field
     group is in use (i.e., is associated to a template).

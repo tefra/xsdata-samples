@@ -12,17 +12,18 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TransmissionModeDeclaration:
-    """AUTOSAR COM provides the possibility to define two different TRANSMISSION
-    MODES (True and False) for each I-PDU.
+    """
+    AUTOSAR COM provides the possibility to define two different
+    TRANSMISSION MODES (True and False) for each I-PDU.
 
     As TransmissionMode selector the signal content can be evaluated via
-    transmissionModeCondition (implemented directly in the COM module)
-    or mode conditions can be defined with the modeDrivenTrueCondition
-    or modeDrivenFalseCondition (evaluated by BswM and invoking
+    transmissionModeCondition (implemented directly in the COM module) or
+    mode conditions can be defined with the modeDrivenTrueCondition or
+    modeDrivenFalseCondition (evaluated by BswM and invoking
     Com_SwitchIpduTxMode COM API). If modeDrivenTrueCondition and
-    modeDrivenFalseCondition are defined they shall never evaluate to
-    true both at the same time. The mixing of Transmission Mode Switch
-    via API and signal value is not allowed.
+    modeDrivenFalseCondition are defined they shall never evaluate to true
+    both at the same time. The mixing of Transmission Mode Switch via API
+    and signal value is not allowed.
 
     :ivar mode_driven_false_conditions: Defines the trigger for the
         Com_SwitchIpduTxMode Transmission Mode switch. Only if all

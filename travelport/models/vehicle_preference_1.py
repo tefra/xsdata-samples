@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class VehiclePreference1(TypeBasePreference1):
     """
-    Defines a preference for a particular set of criteria for vehicle (e.g., dates,
-    equipment, vendor, car type).
+    Defines a preference for a particular set of criteria for vehicle
+    (e.g., dates, equipment, vendor, car type).
 
     Parameters
     ----------

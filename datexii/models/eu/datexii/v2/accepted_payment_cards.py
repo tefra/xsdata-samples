@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class AcceptedPaymentCards:
     """
-    Use this class to describe details in case acceptedMeansOfPayment is set to
-    'paymentCard'.
+    Use this class to describe details in case acceptedMeansOfPayment is
+    set to 'paymentCard'.
 
     :ivar payment_cards: List of accepted payment cards.
     :ivar other_payment_cards: Further accepted payment cards.

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class VoluntaryChangesType:
     """
-    Specifies charges and/or penalties associated with making ticket changes after
-    purchase.
+    Specifies charges and/or penalties associated with making ticket
+    changes after purchase.
 
     Attributes:
         penalty: Specifies penalty charges as either a currency amount

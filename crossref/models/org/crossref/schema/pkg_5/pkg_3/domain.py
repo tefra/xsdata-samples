@@ -5,11 +5,12 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Domain:
-    """A domain name or subdomain name (e.g. www.psychoceramics.org or
+    """
+    A domain name or subdomain name (e.g. www.psychoceramics.org or
     psychoceramics.org).
 
-    It is used to identify when a referring URL is coming from a
-    Crossmark domain.
+    It is used to identify when a referring URL is coming from a Crossmark
+    domain.
     """
 
     class Meta:

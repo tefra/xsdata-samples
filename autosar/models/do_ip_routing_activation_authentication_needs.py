@@ -20,9 +20,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DoIpRoutingActivationAuthenticationNeeds:
     """
-    DoIPRoutingActivationAuthenticationNeeds indicates that the software-component
-    owning this ServiceNeeds will have an authentication required for a DoIP
-    routing activation service (0x0005) according to ISO 13400-2:2012.
+    DoIPRoutingActivationAuthenticationNeeds indicates that the
+    software-component owning this ServiceNeeds will have an authentication
+    required for a DoIP routing activation service (0x0005) according to
+    ISO 13400-2:2012.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

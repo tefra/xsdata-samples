@@ -21,7 +21,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class TelephoneNumberType:
     """
     <description xmlns="">A definition of a land line telephone number or
-    MSISDN.</description>
+    MSISDN.</description>.
 
     :ivar full_number_text: <description xmlns=""> <description>The full
         telephone number, e.g. +44 0790 028 2454</description>

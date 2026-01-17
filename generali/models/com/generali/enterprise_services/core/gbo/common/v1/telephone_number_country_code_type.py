@@ -10,6 +10,6 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class TelephoneNumberCountryCodeType(TextType):
     """
-    <description xmlns=""> <description>The definition Country Code part of a
-    Telephone Number.</description> </description>
+    <description xmlns=""> <description>The definition Country Code part of
+    a Telephone Number.</description> </description>.
     """

@@ -48,7 +48,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswSchedulableEntity:
-    """BSW module entity, which is designed for control by the BSW Scheduler.
+    """
+    BSW module entity, which is designed for control by the BSW Scheduler.
 
     It may for example implement a so-called "main" function.
 

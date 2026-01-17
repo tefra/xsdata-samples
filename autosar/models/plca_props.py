@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class PlcaProps:
     """
     This meta-class allows to configure the PLCA (Physical Layer Collision
-    Avoidance) in case 10-BASE-T1S Ethernet is used and PLCA is enabled on the
-    CouplingPort (PHY).
+    Avoidance) in case 10-BASE-T1S Ethernet is used and PLCA is enabled on
+    the CouplingPort (PHY).
 
     :ivar plca_local_node_id: This attribute defines the node ID when
         the PLCA mode for 10BASE-T1S is used.

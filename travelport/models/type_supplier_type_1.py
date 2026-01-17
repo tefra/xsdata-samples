@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
 class TypeSupplierType1(Enum):
-    """The category of supplier that may apply.
-
-    (Air, Car, Hotel, etc)
+    """
+    The category of supplier that may apply. (Air, Car, Hotel, etc).
     """
 
     AIR = "Air"

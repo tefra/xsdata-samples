@@ -14,10 +14,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class PricingDetails:
-    """Used for rapid reprice.
+    """
+    Used for rapid reprice.
 
-    This is a response element.  Additional information about how
-    pricing was obtain, messages, etc.  Providers: 1G/1V/1P/1S/1A
+    This is a response element. Additional information about how pricing
+    was obtain, messages, etc. Providers: 1G/1V/1P/1S/1A.
 
     Parameters
     ----------

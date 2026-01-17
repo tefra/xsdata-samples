@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class SubmitSubscriptionsRequestType:
-    """SubmitSubscriptionsRequestType defines the payload of a request message used
-    to submit addtions, updates, or deletions of subscriptions.
+    """
+    SubmitSubscriptionsRequestType defines the payload of a request message
+    used to submit addtions, updates, or deletions of subscriptions.
 
     Subscriptions are submitted to the registry to subscribe to
     registration and change events for specific registry resources.

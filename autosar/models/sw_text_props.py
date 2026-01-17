@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwTextProps:
     """
-    This meta-class expresses particular properties applicable to strings in
-    variables or calibration parameters.
+    This meta-class expresses particular properties applicable to strings
+    in variables or calibration parameters.
 
     :ivar array_size_semantics: This attribute controls the semantics of
         the arraysize for the array representing the string in an

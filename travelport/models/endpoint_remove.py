@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class EndpointRemove(TypeEditableEndpoint):
     """
-    Removes an endpoint from an action in a particular field or field group.
+    Removes an endpoint from an action in a particular field or field
+    group.
     """
 
     class Meta:

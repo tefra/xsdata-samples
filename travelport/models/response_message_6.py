@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 @dataclass
 class ResponseMessage6:
-    """A simple textual fare note.
+    """
+    A simple textual fare note.
 
     Used within several other objects.
 

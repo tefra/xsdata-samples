@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ArrayImplPolicyEnum:
     """
-    This meta-class provides values to configure the implementation of the payload
-    part of an array.
+    This meta-class provides values to configure the implementation of the
+    payload part of an array.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

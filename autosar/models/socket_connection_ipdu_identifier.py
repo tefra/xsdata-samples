@@ -15,11 +15,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SocketConnectionIpduIdentifier:
-    """An Identifier is required in case of one port per ECU communication where
-    multiple Pdus are transmitted over the same connection.
+    """
+    An Identifier is required in case of one port per ECU communication
+    where multiple Pdus are transmitted over the same connection.
 
-    If only one IPdu is transmitted over the connetion this attribute
-    can be ignored.
+    If only one IPdu is transmitted over the connetion this attribute can
+    be ignored.
 
     :ivar header_id: If multiple Pdus are transmitted over the same
         connection this headerId can be used to distinguish between the

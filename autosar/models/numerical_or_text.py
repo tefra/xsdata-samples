@@ -10,13 +10,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NumericalOrText:
-    """This meta-class represents the ability to yield either a numerical or a
+    """
+    This meta-class represents the ability to yield either a numerical or a
     string.
 
-    A typical use case is that two or more instances of this meta-class
-    are aggregated with a VariationPoint where some instances yield
-    strings while other instances yield numerical depending on the
-    resolution of the binding expression.
+    A typical use case is that two or more instances of this meta-class are
+    aggregated with a VariationPoint where some instances yield strings
+    while other instances yield numerical depending on the resolution of
+    the binding expression.
 
     :ivar vf: This attribute represents the ability to provide a
         numerical value. The latest binding time of the VariationPoint

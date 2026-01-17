@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class StateDependentStartupConfig:
     """
-    This meta-class defines the startup configuration for the process depending on
-    a collection of machine states.
+    This meta-class defines the startup configuration for the process
+    depending on a collection of machine states.
 
     :ivar execution_dependencys: This attribute defines that all
         processes that are referenced via the ExecutionDependency shall

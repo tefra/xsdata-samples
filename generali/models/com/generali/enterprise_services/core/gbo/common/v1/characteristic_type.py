@@ -13,10 +13,11 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class CharacteristicType(BaseSimpleComponentType):
-    """<description xmlns="">A characteristic, a name and value.
+    """
+    <description xmlns="">A characteristic, a name and value.
 
     An Example might be Colour="Black" or Memory="32
-    GBytes".</description>
+    GBytes".</description>.
     """
 
     values: Optional[CharacteristicTypeValues] = field(

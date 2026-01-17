@@ -15,14 +15,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ArParameterInImplementationDataInstanceRef:
-    """This class represents the ability to navigate into an element inside of an
-    ParameterDataPrototype typed  by an ImplementationDatatype.
+    """
+    This class represents the ability to navigate into an element inside of
+    an ParameterDataPrototype typed by an ImplementationDatatype.
 
     Note that it shall not be used if the target is the
-    ParameterDataPrototype itself (e.g. if the target is a primitive
-    data type). Note that this class follows the pattern of an
-    InstanceRef but is not implemented based on the abstract classes
-    because the ImplementationDataType isn't either, especially because
+    ParameterDataPrototype itself (e.g. if the target is a primitive data
+    type). Note that this class follows the pattern of an InstanceRef but
+    is not implemented based on the abstract classes because the
+    ImplementationDataType isn't either, especially because
     ImplementationDataTypeElement (intentionally) isn't derived from
     AtpPrototype.
 

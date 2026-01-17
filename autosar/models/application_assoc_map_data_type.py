@@ -25,7 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ApplicationAssocMapDataType:
     """
-    An application data type which is a map and consists of a key and a value.
+    An application data type which is a map and consists of a key and a
+    value.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

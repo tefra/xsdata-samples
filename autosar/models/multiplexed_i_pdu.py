@@ -26,13 +26,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class MultiplexedIPdu:
-    """A MultiplexedPdu (i.e. NOT a COM I-PDU) contains a DynamicPart, an optional
-    StaticPart and a selectorField.
+    """
+    A MultiplexedPdu (i.e.
 
-    In case of multiplexing this IPdu is routed between the Pdu
-    Multiplexer and the Interface Layer. A multiplexer is used to define
-    variable parts within an IPdu that may carry different signals. The
-    receivers of such a IPdu can determine which signalPdus are
+    NOT a COM I-PDU) contains a DynamicPart, an optional StaticPart and a
+    selectorField. In case of multiplexing this IPdu is routed between the
+    Pdu Multiplexer and the Interface Layer. A multiplexer is used to
+    define variable parts within an IPdu that may carry different signals.
+    The receivers of such a IPdu can determine which signalPdus are
     transmitted by evaluating the selector field, which carries a unique
     selector code for each sub-part.
 

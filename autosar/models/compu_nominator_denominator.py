@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompuNominatorDenominator:
     """
-    This class represents the ability to express a polynomial either as Nominator
-    or as Denominator.
+    This class represents the ability to express a polynomial either as
+    Nominator or as Denominator.
 
     :ivar v: this is the list of polynomial factors. Note that the first
         vf represents the power=0.  The polynomial is v[0] * x^0 + v[1]

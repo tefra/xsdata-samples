@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class BasicComponentTextFormatType(TextFormatType):
     """
-    BasicComponentTextFormatType is a restricted version of the TextFormatType that
-    restricts the text type to the representations allowed for all components
-    except for target objects.
+    BasicComponentTextFormatType is a restricted version of the
+    TextFormatType that restricts the text type to the representations
+    allowed for all components except for target objects.
     """
 
     text_type: BasicComponentDataType = field(

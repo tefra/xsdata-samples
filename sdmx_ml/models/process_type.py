@@ -8,9 +8,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ProcessType(ProcessBaseType):
-    """ProcessType describes the structure of a process, which is a scheme which
-    defines or documents the operations performed on data in order to validate data
-    or to derive new information according to a given set of rules.
+    """
+    ProcessType describes the structure of a process, which is a scheme
+    which defines or documents the operations performed on data in order to
+    validate data or to derive new information according to a given set of
+    rules.
 
     Processes occur in order, and will continue in order unless a
     transition dictates another step should occur.

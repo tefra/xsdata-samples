@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ClientServerApplicationErrorMapping:
     """
-    This meta-class represents the ability to map ApplicationErrors onto each
-    other.
+    This meta-class represents the ability to map ApplicationErrors onto
+    each other.
 
     :ivar first_application_error_ref: This represents the first
         ApplicationError in the context of the

@@ -6,9 +6,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
 class TypePosition(Enum):
-    """Facility position with respect to position within the aircraft cabin.
+    """
+    Facility position with respect to position within the aircraft cabin.
 
-    Possible values are – Left, Right, Center, Left Center, Right Center
+    Possible values are – Left, Right, Center, Left Center, Right Center.
     """
 
     LEFT = "Left"

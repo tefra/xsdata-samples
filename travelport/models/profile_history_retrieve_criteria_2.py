@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileHistoryRetrieveCriteria2:
-    """Specify one or more criteria used to filter the history data.
+    """
+    Specify one or more criteria used to filter the history data.
 
     Only history data matching all parameters will be returned.
 

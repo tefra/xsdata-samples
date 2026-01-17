@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class VehicleUpsellDelete:
     """
-    Delete command for deleting VehicleUpsellQualify,VehicleUpsellOffer using there
-    persisted keys.
+    Delete command for deleting VehicleUpsellQualify,VehicleUpsellOffer
+    using there persisted keys.
     """
 
     class Meta:

@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class FareNote:
-    """A simple textual fare note.
+    """
+    A simple textual fare note.
 
     Used within several other objects.
 

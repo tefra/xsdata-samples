@@ -25,8 +25,9 @@ __NAMESPACE__ = (
 @dataclass
 class ActorRoleReferenceType(BaseReferenceComponentType):
     """
-    <description xmlns="">A component defining a reference to a Party indicating
-    the Role being undertaken by the Individual or Organisation.</description>
+    <description xmlns="">A component defining a reference to a Party
+    indicating the Role being undertaken by the Individual or
+    Organisation.</description>.
 
     :ivar organisation: <description xmlns="">The details of the
         organisation actor.</description>

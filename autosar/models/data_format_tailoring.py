@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataFormatTailoring:
     """
-    This class collects all rules that tailor the AUTOSAR templates for a specific
-    data exchange point.
+    This class collects all rules that tailor the AUTOSAR templates for a
+    specific data exchange point.
 
     :ivar class_tailorings: Specification of tailorings of Meta Classes
     :ivar constraint_tailorings: Specification of tailorings of

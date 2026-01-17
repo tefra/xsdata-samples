@@ -20,13 +20,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SystemSignal:
-    """The system signal represents the communication system's view of data
+    """
+    The system signal represents the communication system's view of data
     exchanged between SW components which reside on different ECUs.
 
-    The system signals allow to represent this communication in a
-    flattened structure, with exactly one system signal defined for each
-    data element prototype sent and received by connected SW component
-    instances.
+    The system signals allow to represent this communication in a flattened
+    structure, with exactly one system signal defined for each data element
+    prototype sent and received by connected SW component instances.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

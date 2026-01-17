@@ -20,12 +20,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EthTcpIpIcmpProps:
-    """@RESTRICT_TO_STANDARD:CP!
-    This meta-class is used to configure the EcuInstance specific ICMP (Internet Control Message Protocol) attributes
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:AP!
-    This meta-class is used to configure the Machine specific ICMP (Internet Control Message Protocol) attributes
-    @END_RESTRICT_TO_STANDARD!
+    """
+    @RESTRICT_TO_STANDARD:CP!
+
+    This meta-class is used to configure the EcuInstance specific ICMP
+    (Internet Control Message Protocol) attributes
+    @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:AP! This meta-class is
+    used to configure the Machine specific ICMP (Internet Control Message
+    Protocol) attributes @END_RESTRICT_TO_STANDARD!
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

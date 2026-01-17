@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ComponentType(ComponentBaseType):
-    """ComponentType is an abstract base type for all components.
+    """
+    ComponentType is an abstract base type for all components.
 
     It contains information pertaining to a component, including an
     optional reference to a concept, an optional role played by the

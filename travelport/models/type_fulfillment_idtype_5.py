@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 class TypeFulfillmentIdtype5(Enum):
     """
-    IdentificationType to define how the customer will identify himself when
-    collecting the ticket.
+    IdentificationType to define how the customer will identify himself
+    when collecting the ticket.
     """
 
     BAHN_CARD = "Bahn Card"

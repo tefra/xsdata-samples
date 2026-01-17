@@ -6,9 +6,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
 class TypePreferencePurpose2(Enum):
-    """Specify the preference purpose.
+    """
+    Specify the preference purpose. (ie.
 
-    (ie. Business, Leisure, etc)
+    Business, Leisure, etc).
     """
 
     BUSINESS = "Business"

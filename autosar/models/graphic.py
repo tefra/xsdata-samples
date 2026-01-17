@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Graphic:
     """
-    This class represents an artifact containing the image to be inserted in the
-    document.
+    This class represents an artifact containing the image to be inserted
+    in the document.
 
     :ivar short_label: This is the short name of the engineering object.
         Note that it is modeled as NameToken and not as Identifier since

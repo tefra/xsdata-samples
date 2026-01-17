@@ -20,11 +20,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwAxisIndividual:
-    """This meta-class describes an axis integrated into a parameter (field etc.).
+    """
+    This meta-class describes an axis integrated into a parameter (field
+    etc.).
 
-    The integration makes this individual to each parameter. The so-
-    called grouped axis represents the counterpart to this. It is
-    conceived as an independent parameter (see class SwAxisGrouped).
+    The integration makes this individual to each parameter. The so-called
+    grouped axis represents the counterpart to this. It is conceived as an
+    independent parameter (see class SwAxisGrouped).
 
     :ivar max_gradient: This attribute defines the maximum permissible
         gradient for an adjustable object (curve, map or cuboid) with

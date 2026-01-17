@@ -8,12 +8,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataStructureBaseType(StructureTypeAbstract):
-    """DataStructureBaseType describes base refinement of the StructureType for a
-    data structure definition.
+    """
+    DataStructureBaseType describes base refinement of the StructureType
+    for a data structure definition.
 
     A data structure definition is defined as a collection of metadata
-    concepts, their structure and usage when used to collect or
-    disseminate data.
+    concepts, their structure and usage when used to collect or disseminate
+    data.
     """
 
     metadata_structure_components: Any = field(

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EnvironmentCaptureToReportingEnum:
     """
-    This meta-class represents the ability to define the behavior of the capturing
-    behavior.
+    This meta-class represents the ability to define the behavior of the
+    capturing behavior.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

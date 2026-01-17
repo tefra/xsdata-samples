@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MemorySectionLocation:
     """
-    Specifies in which hardware ProvidedMemorySegment the softwareMemorySection is
-    located.
+    Specifies in which hardware ProvidedMemorySegment the
+    softwareMemorySection is located.
 
     :ivar provided_memory_ref: Reference to the hardware
         ProvidedMemorySegment.

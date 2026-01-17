@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class PhoneNumberHistory1:
     """
-    Consists of type (office, home, fax), location (city code), the country code,
-    the number, and an extension.
+    Consists of type (office, home, fax), location (city code), the country
+    code, the number, and an extension.
 
     Parameters
     ----------

@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class Dimension:
-    """A component that provides dimension information.
+    """
+    A component that provides dimension information.
 
-    The product of width and height must not be necessarily be the
-    square footage (e.g. in multi-storey buildings or when some zones
-    are not part of the square footage).
+    The product of width and height must not be necessarily be the square
+    footage (e.g. in multi-storey buildings or when some zones are not part
+    of the square footage).
 
     :ivar dimension_length: Length.
     :ivar dimension_width: Width.

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SymbolicNameProps:
     """
-    This meta-class can be taken to contribute to the creation of symbolic name
-    values.
+    This meta-class can be taken to contribute to the creation of symbolic
+    name values.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

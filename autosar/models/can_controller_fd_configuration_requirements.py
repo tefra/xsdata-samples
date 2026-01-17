@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CanControllerFdConfigurationRequirements:
-    """This element allows the specification of ranges for the CanFD bit timing
-    configuration parameters.
+    """
+    This element allows the specification of ranges for the CanFD bit
+    timing configuration parameters.
 
     These ranges are taken as requirements and shall be respected by the
     ECU developer.

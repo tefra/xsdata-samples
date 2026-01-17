@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UdpProps:
     """
-    This meta-class specifies the configuration options for UDP (User Datagram
-    Protocol).
+    This meta-class specifies the configuration options for UDP (User
+    Datagram Protocol).
 
     :ivar udp_ttl: Default Time-to-live value of outgoing UDP packets.
     :ivar s: Checksum calculated by the user's tool environment for an

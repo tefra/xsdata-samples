@@ -16,7 +16,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class RoadSurfaceConditionInformation(WeatherData):
     """
-    Measurements of road surface conditions which are related to the weather.
+    Measurements of road surface conditions which are related to the
+    weather.
 
     :ivar weather_related_road_condition_type: The type of road surface
         condition that is related to the weather which is affecting the

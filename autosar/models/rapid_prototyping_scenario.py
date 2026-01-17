@@ -22,11 +22,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RapidPrototypingScenario:
-    """This meta class provides the ability to describe a Rapid Prototyping
+    """
+    This meta class provides the ability to describe a Rapid Prototyping
     Scenario.
 
-    Such a Rapid Prototyping Scenario consist out of two main aspects,
-    the description of the byPassPoints and the relation to an rptHook.
+    Such a Rapid Prototyping Scenario consist out of two main aspects, the
+    description of the byPassPoints and the relation to an rptHook.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

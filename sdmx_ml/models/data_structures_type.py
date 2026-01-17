@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataStructuresType:
-    """DataStructuresType describes the structure of the data structure definitions
-    container.
+    """
+    DataStructuresType describes the structure of the data structure
+    definitions container.
 
     It contains one or more data structure definition, which can be
-    explicitly detailed or referenced from an external structure
-    document or registry service.
+    explicitly detailed or referenced from an external structure document
+    or registry service.
 
     :ivar data_structure: DataStructure provides the details of a data
         structure definition, which is defined as a collection of

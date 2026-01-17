@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SynchronizationTypeEnum:
     """
-    This is used to describe the type of the synchronization timing constraint.
+    This is used to describe the type of the synchronization timing
+    constraint.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

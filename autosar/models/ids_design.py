@@ -19,12 +19,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class IdsDesign:
-    """This meta-class represents the root element of a SecurityExtract file for
-    IDS development.
+    """
+    This meta-class represents the root element of a SecurityExtract file
+    for IDS development.
 
     It defines the scope of an IDS to be designed and implemented by
-    referencing all SecurityExtract meta-classes that need to be
-    included into the IDS development process.
+    referencing all SecurityExtract meta-classes that need to be included
+    into the IDS development process.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

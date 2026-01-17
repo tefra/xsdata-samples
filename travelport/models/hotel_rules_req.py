@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 @dataclass
 class HotelRulesReq(BaseReq1):
     """
-    Retrieves hotel rules using hotel property code, chain code and hotel room rate
-    type.
+    Retrieves hotel rules using hotel property code, chain code and hotel
+    room rate type.
 
     Parameters
     ----------

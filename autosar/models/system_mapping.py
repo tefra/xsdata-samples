@@ -66,12 +66,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SystemMapping:
-    """@RESTRICT_TO_STANDARD:CP!
-    The system mapping aggregates all mapping aspects (mapping of SW components to ECUs, mapping of data elements to signals, and mapping constraints).
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:AP!
-    The system mapping aggregates all mapping aspects that are relevant in the System Description.
-    @END_RESTRICT_TO_STANDARD!
+    """
+    @RESTRICT_TO_STANDARD:CP!
+
+    The system mapping aggregates all mapping aspects (mapping of SW
+    components to ECUs, mapping of data elements to signals, and mapping
+    constraints). @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:AP! The
+    system mapping aggregates all mapping aspects that are relevant in the
+    System Description. @END_RESTRICT_TO_STANDARD!
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -9,10 +9,10 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class ReportingTaxonomyType(ItemSchemeType):
     """
-    ReportingTaxonomyType describes the structure of a reporting taxonomy, which is
-    a scheme which defines the composition structure of a data report where each
-    component can be described by an independent structure or structure usage
-    description.
+    ReportingTaxonomyType describes the structure of a reporting taxonomy,
+    which is a scheme which defines the composition structure of a data
+    report where each component can be described by an independent
+    structure or structure usage description.
     """
 
     choice_1: Any = field(

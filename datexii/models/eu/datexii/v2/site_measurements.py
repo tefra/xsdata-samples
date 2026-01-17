@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class SiteMeasurements:
     """
-    A  measurement data set derived from a specific measurement site.
+    A measurement data set derived from a specific measurement site.
 
     :ivar measurement_site_reference: A reference to a versioned
         measurement site record defined in a Measurement Site table.

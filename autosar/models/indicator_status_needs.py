@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IndicatorStatusNeeds:
     """
-    This meta-class shall be taken to signal a service use case that affects the
-    indicator status.
+    This meta-class shall be taken to signal a service use case that
+    affects the indicator status.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

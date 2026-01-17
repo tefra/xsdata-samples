@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class CreditCardAuthReq(BaseReq1):
     """
-    Performs a credit card authorization to validate a credit card for use during
-    booking.
+    Performs a credit card authorization to validate a credit card for use
+    during booking.
     """
 
     class Meta:

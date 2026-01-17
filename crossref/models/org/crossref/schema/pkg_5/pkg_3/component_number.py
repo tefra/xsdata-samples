@@ -5,11 +5,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class ComponentNumber:
-    """The chapter, section, part, etc.
+    """
+    The chapter, section, part, etc. number for a content item in a book.
 
-    number for a content item in a book. Unlike volume and
-    edition_number, component_number should include any additional text
-    that helps identify the type of component.
+    Unlike volume and edition_number, component_number should include any
+    additional text that helps identify the type of component.
     """
 
     class Meta:

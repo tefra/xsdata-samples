@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwCalprmAxisSet:
     """
-    This element specifies the input parameter axes (abscissas) of parameters (and
-    variables, if these are used adaptively).
+    This element specifies the input parameter axes (abscissas) of
+    parameters (and variables, if these are used adaptively).
 
     :ivar sw_calprm_axis: One axis belonging to this SwCalprmAxisSet
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class StructureSpecificDataHeaderType(BaseHeaderType):
     """
-    StructureSpecificDataHeaderType defines the header structure for a structure
-    specific data message.
+    StructureSpecificDataHeaderType defines the header structure for a
+    structure specific data message.
 
     :ivar metadata_provider: MetadataProvider identifies the provider of
         the metadata for a metadata message.

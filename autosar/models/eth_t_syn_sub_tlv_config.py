@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EthTSynSubTlvConfig:
     """
-    Defines the subTLV fields which shall be included in the time sync message.
+    Defines the subTLV fields which shall be included in the time sync
+    message.
 
     :ivar ofs_sub_tlv: Defines whether an AUTOSAR Follow_Up TLV OFS Sub-
         TLV is used.

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class MetadataAttributeRepresentationType(RepresentationType):
     """
-    MetadataAttributeRepresentationType defines the possible local representations
-    of a metadata attribute.
+    MetadataAttributeRepresentationType defines the possible local
+    representations of a metadata attribute.
     """
 
     min_occurs: Any = field(

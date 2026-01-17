@@ -14,9 +14,10 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataStructureComponentsType(DataStructureComponentsBaseType):
-    """DataStructureComponentsType describes the structure of the grouping to the
-    sets of metadata concepts that have a defined structural role in the data
-    structure definition.
+    """
+    DataStructureComponentsType describes the structure of the grouping to
+    the sets of metadata concepts that have a defined structural role in
+    the data structure definition.
 
     At a minimum at least one dimension must be defined.
     """

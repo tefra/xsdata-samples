@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Compu:
     """
-    This meta-class represents the ability to express one particular computation.
+    This meta-class represents the ability to express one particular
+    computation.
 
     :ivar compu_scales: This represents one scale within the compu
         method. Note that it contains a Variationpoint in order to

@@ -16,7 +16,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrGridLocationReference(OpenlrAreaLocationReference):
     """
-    The openLR method of areadefinition by providing repeating rectangles.
+    the openLR method of areadefinition by providing repeating rectangles.
     """
 
     openlr_rectangle: Optional[OpenlrRectangle] = field(

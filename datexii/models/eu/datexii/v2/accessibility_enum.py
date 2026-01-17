@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class AccessibilityEnum(Enum):
     """
-    Special forms of accessibility, easements and marking for handicapped people.
+    Special forms of accessibility, easements and marking for handicapped
+    people.
 
     :cvar BARRIER_FREE_ACCESSIBLE: Accessible without any steps or other
         barriers. This is not as strong as handicappedAccessible.

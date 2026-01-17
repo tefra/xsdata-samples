@@ -15,12 +15,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ModeAccessPoint:
-    """A ModeAccessPoint is required by a RunnableEntity owned by a Mode Manager or
-    Mode User.
+    """
+    A ModeAccessPoint is required by a RunnableEntity owned by a Mode
+    Manager or Mode User.
 
-    Its semantics implies the ability to access the current mode
-    (provided by the RTE)  of a ModeDeclarationGroupPrototype's
-    ModeDeclarationGroup.
+    Its semantics implies the ability to access the current mode (provided
+    by the RTE) of a ModeDeclarationGroupPrototype's ModeDeclarationGroup.
 
     :ivar ident: The aggregation in the role ident provides the ability
         to make the ModeAccessPoint identifiable. From the semantical

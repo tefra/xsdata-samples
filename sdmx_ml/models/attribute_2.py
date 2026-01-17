@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class Attribute2(AttributeType2):
     """
-    Attribute describes the definition of a data attribute, which is defined as a
-    characteristic of an object or entity.
+    Attribute describes the definition of a data attribute, which is
+    defined as a characteristic of an object or entity.
     """
 
     class Meta:

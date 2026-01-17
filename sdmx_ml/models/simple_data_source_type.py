@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class SimpleDataSourceType:
-    """SimpleDataSourceType describes a simple data source.
+    """
+    SimpleDataSourceType describes a simple data source.
 
     The URL of the data is contained in the content.
 

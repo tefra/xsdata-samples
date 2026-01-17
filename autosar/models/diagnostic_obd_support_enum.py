@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticObdSupportEnum:
-    """This meta-class represents the ability to model the roles in which a
+    """
+    This meta-class represents the ability to model the roles in which a
     participation in OBD is foreseen.
 
     At the moment, this applies exclusively to the Dem. However, future

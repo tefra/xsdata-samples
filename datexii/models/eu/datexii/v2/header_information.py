@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class HeaderInformation:
     """
-    Management information relating to the data contained within a publication.
+    Management information relating to the data contained within a
+    publication.
 
     :ivar area_of_interest: The extent of the geographic area to which
         the related information should be distributed.

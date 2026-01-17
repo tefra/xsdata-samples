@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class UserDefinedPdu:
-    """UserDefinedPdu allows to describe PDU-based communication over Complex
+    """
+    UserDefinedPdu allows to describe PDU-based communication over Complex
     Drivers.
 
     If a new BSW module is added above the BusIf (e.g. a new Nm module)

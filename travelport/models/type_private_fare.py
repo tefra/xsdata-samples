@@ -6,8 +6,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
 class TypePrivateFare(Enum):
-    """List the types of private fares, Agency private fare, Airline private Fare
-    and Unknown.
+    """
+    List the types of private fares, Agency private fare, Airline private
+    Fare and Unknown.
 
     Also, this enumaration list includes PrivateFare to indetify private
     fares for GDSs where we can not identify specific private fares.

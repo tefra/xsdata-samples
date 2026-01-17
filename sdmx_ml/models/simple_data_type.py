@@ -4,8 +4,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
 class SimpleDataType(Enum):
-    """SimpleDataType restricts BasicComponentDataType to specify the allowable
-    data types for a data structure definition component.
+    """
+    SimpleDataType restricts BasicComponentDataType to specify the
+    allowable data types for a data structure definition component.
 
     The XHTML representation is removed as a possible type.
 

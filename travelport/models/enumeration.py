@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class Enumeration:
     """
-    Provides the capability to group the results into differnt trip type and
-    diversification strategies.
+    Provides the capability to group the results into differnt trip type
+    and diversification strategies.
     """
 
     class Meta:

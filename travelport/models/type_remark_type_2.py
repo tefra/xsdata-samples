@@ -6,10 +6,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
 class TypeRemarkType2(Enum):
-    """A code for categorizing a remark.
+    """
+    A code for categorizing a remark.
 
-    This may include General Remarks, Itinerary Remarks, Accounting
-    Remark, Name Remark, etc.
+    This may include General Remarks, Itinerary Remarks, Accounting Remark,
+    Name Remark, etc.
     """
 
     GENERAL = "General"

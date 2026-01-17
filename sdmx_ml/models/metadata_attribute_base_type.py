@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class MetadataAttributeBaseType(ComponentType):
     """
-    MetadataAttributeBaseType is an abstract base type the serves as the basis for
-    the MetadataAttributeType.
+    MetadataAttributeBaseType is an abstract base type the serves as the
+    basis for the MetadataAttributeType.
     """
 
     concept_identity: Optional[str] = field(

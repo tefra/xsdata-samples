@@ -55,17 +55,18 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ISignal:
-    """Signal of the Interaction Layer.
+    """
+    Signal of the Interaction Layer.
 
     The RTE supports a "signal fan-out" where the same System Signal is
-    sent in different SignalIPdus to multiple receivers. To support the
-    RTE "signal fan-out" each SignalIPdu  contains ISignals. If the same
-    System Signal is to be mapped into several SignalIPdus there is one
-    ISignal needed for each ISignalToIPduMapping. ISignals describe the
-    Interface between the Precompile configured RTE and the potentially
-    Postbuild configured Com Stack (see ECUC Parameter Mapping). In case
-    of the SystemSignalGroup an ISignal shall be created for each
-    SystemSignal contained in the SystemSignalGroup.
+    sent in different SignalIPdus to multiple receivers. To support the RTE
+    "signal fan-out" each SignalIPdu contains ISignals. If the same System
+    Signal is to be mapped into several SignalIPdus there is one ISignal
+    needed for each ISignalToIPduMapping. ISignals describe the Interface
+    between the Precompile configured RTE and the potentially Postbuild
+    configured Com Stack (see ECUC Parameter Mapping). In case of the
+    SystemSignalGroup an ISignal shall be created for each SystemSignal
+    contained in the SystemSignalGroup.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

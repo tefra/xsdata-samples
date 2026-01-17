@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ClientIntentEnum:
     """
-    This meta-class represents the intent to specify how a given ServiceInterface
-    is used from the perspective of a given client.
+    This meta-class represents the intent to specify how a given
+    ServiceInterface is used from the perspective of a given client.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

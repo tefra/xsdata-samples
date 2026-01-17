@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 class TypeRateTimePeriod(Enum):
     """
-    The period for the rate code (daily, weekly, etc)
+    The period for the rate code (daily, weekly, etc).
     """
 
     HOURLY = "Hourly"

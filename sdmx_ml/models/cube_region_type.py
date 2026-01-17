@@ -8,12 +8,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class CubeRegionType(RegionType):
-    """CubeRegionType defines the structure of a data cube region.
+    """
+    CubeRegionType defines the structure of a data cube region.
 
-    This is based on the abstract RegionType and simply refines the key
-    and attribute values to conform with what is applicable for
-    dimensions and attributes, respectively. See the documentation of
-    the base type for more details on how a region is defined.
+    This is based on the abstract RegionType and simply refines the key and
+    attribute values to conform with what is applicable for dimensions and
+    attributes, respectively. See the documentation of the base type for
+    more details on how a region is defined.
     """
 
     valid_from: Any = field(

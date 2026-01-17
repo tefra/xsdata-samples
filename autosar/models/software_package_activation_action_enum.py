@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SoftwarePackageActivationActionEnum:
     """
-    This enumeration provides a choice of possible actions to be executed on
-    installing a SoftwarePackage to a target Machine.
+    This enumeration provides a choice of possible actions to be executed
+    on installing a SoftwarePackage to a target Machine.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

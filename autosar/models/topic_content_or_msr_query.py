@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TopicContentOrMsrQuery:
     """
-    This meta-class represents a topic or a topic content which is generated using
-    queries.
+    This meta-class represents a topic or a topic content which is
+    generated using queries.
 
     :ivar msr_query_p_1: This represents automatically contributed
         contents provided by an msrquery.

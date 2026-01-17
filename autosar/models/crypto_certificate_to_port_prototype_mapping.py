@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class CryptoCertificateToPortPrototypeMapping:
     """
     This meta-class represents the ability to define a mapping between a
-    CryptoCertificate on deployment level to a given PortPrototype that is typed by
-    a CryptoCertificateInterface.
+    CryptoCertificate on deployment level to a given PortPrototype that is
+    typed by a CryptoCertificateInterface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

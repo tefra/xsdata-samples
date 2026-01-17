@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ExternalReferencing:
     """
-    A location defined by reference to an external/other referencing system.
+    A location defined by reference to an external/other referencing
+    system.
 
     :ivar external_location_code: A code in the external referencing
         system which defines the location.

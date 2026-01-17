@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TdEventFrClusterCycleStart:
     """
-    This is used to describe the timing event related to a point in time where a
-    communication cycle starts on a FlexRay cluster.
+    This is used to describe the timing event related to a point in time
+    where a communication cycle starts on a FlexRay cluster.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

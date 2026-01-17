@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegLinearLocation:
     """
-    A linear section along a single road defined between two points on the same
-    road by a TPEG-Loc structure.
+    A linear section along a single road defined between two points on the
+    same road by a TPEG-Loc structure.
 
     :ivar tpeg_direction: The direction of traffic flow.
     :ivar tpeg_linear_location_type: The type of TPEG location.

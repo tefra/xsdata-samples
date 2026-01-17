@@ -17,13 +17,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TlsJobMapping:
-    """This meta-class allows to map a TlsJobRequirement to a concrete crypto job
-    that will fulfill the JobRequirement.
+    """
+    This meta-class allows to map a TlsJobRequirement to a concrete crypto
+    job that will fulfill the JobRequirement.
 
-    The crypto job represents a call to a specific routine that
-    implements a crypto function and that uses a specific key and refers
-    to a specific primitive as a formal representation of the crypto
-    algorithm.
+    The crypto job represents a call to a specific routine that implements
+    a crypto function and that uses a specific key and refers to a specific
+    primitive as a formal representation of the crypto algorithm.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

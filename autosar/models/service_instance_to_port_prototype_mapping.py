@@ -28,12 +28,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ServiceInstanceToPortPrototypeMapping:
-    """This meta-class represents the ability to assign a transport layer dependent
-    ServiceInstance to a PortPrototype.
+    """
+    This meta-class represents the ability to assign a transport layer
+    dependent ServiceInstance to a PortPrototype.
 
-    With this mapping it is possible to define how specific
-    PortPrototypes are represented in the middleware in terms of service
-    configuration.
+    With this mapping it is possible to define how specific PortPrototypes
+    are represented in the middleware in terms of service configuration.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

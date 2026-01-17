@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AssemblySwConnector:
     """
-    AssemblySwConnectors are exclusively used to connect SwComponentPrototypes in
-    the context of a CompositionSwComponentType.
+    AssemblySwConnectors are exclusively used to connect
+    SwComponentPrototypes in the context of a CompositionSwComponentType.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

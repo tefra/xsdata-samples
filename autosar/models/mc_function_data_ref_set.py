@@ -10,13 +10,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McFunctionDataRefSet:
-    """Refers to a set of data assigned to an McFunction in a particular role.
+    """
+    Refers to a set of data assigned to an McFunction in a particular role.
 
-    The data are given
-    * either by entries in a FlatMap
-    * or by data instances that are part of MC support data.
-    These two possibilities are exclusive within a given McFunctionDataRefSet. Which one to use depends on the process and tool environment.
-    The set is subject to variability because the same functional model may be used with various representation of the data.
+    The data are given * either by entries in a FlatMap * or by data
+    instances that are part of MC support data. These two possibilities are
+    exclusive within a given McFunctionDataRefSet. Which one to use depends
+    on the process and tool environment. The set is subject to variability
+    because the same functional model may be used with various
+    representation of the data.
 
     :ivar mc_function_data_ref_set_variants: This element was
         generated/modified due to an atpVariation stereotype.

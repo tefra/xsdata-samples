@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BswTriggerDirectImplementation:
     """
-    Specifies a released trigger to be directly implemented via OS calls, for
-    example in a Complex Driver module.
+    Specifies a released trigger to be directly implemented via OS calls,
+    for example in a Complex Driver module.
 
     :ivar cat_2_isr: The name of the OS category 2 ISR, which is
         controlled by the referred trigger. This means, that the module

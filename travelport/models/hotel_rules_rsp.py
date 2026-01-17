@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 @dataclass
 class HotelRulesRsp(BaseRsp1):
     """
-    Response showing rule details of a given hotel property and room rate code.
+    Response showing rule details of a given hotel property and room rate
+    code.
 
     Parameters
     ----------

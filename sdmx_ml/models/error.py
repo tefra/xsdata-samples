@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 @dataclass(frozen=True)
 class Error(ErrorType):
-    """Error is used to communicate that an error has occurred when responding to a
-    request in an non-registry environment.
+    """
+    Error is used to communicate that an error has occurred when responding
+    to a request in an non-registry environment.
 
     The content will be a collection of error messages.
     """

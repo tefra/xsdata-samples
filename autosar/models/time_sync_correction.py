@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TimeSyncCorrection:
     """
-    This meta-class represents the attributes used for the correction of time
-    synchronization.
+    This meta-class represents the attributes used for the correction of
+    time synchronization.
 
     :ivar allow_provider_rate_correction: Defines whether the rate
         correction value of a Time Base can be set by means of the

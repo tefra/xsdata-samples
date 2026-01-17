@@ -6,10 +6,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Boolean:
-    """A Boolean value denotes a logical condition that is either 'true' or
+    """
+    A Boolean value denotes a logical condition that is either 'true' or
     'false'.
 
-    It can be one of "0", "1", "true", "false"
+    It can be one of "0", "1", "true", "false".
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

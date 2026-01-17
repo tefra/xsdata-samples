@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class UniversalRecordRetrieveReq(BaseReq1):
     """
-    Request to retrieve a summary information for reservations under a Universal
-    Record.
+    Request to retrieve a summary information for reservations under a
+    Universal Record.
 
     Parameters
     ----------

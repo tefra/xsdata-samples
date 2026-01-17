@@ -9,12 +9,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class OrganisationSchemeMapsType:
-    """OrganisationSchemeMapsType describes the structure of the organisation
+    """
+    OrganisationSchemeMapsType describes the structure of the organisation
     scheme maps container.
 
     It contains one or more organisation scheme map, which can be
-    explicitly detailed or referenced from an external structure
-    document or registry service.
+    explicitly detailed or referenced from an external structure document
+    or registry service.
 
     :ivar organisation_scheme_map: OrganisationSchemeMap provides the
         details of a organisation scheme map, which descibes mappings

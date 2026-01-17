@@ -28,10 +28,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class EocExecutableEntityRef:
     """
     This is used to define a reference to an ExecutableEntity If the
-    ExecutionOrderConstraint is defined on VFB, System or ECU level, a reference to
-    the SwComponentPrototype, via the ComponentInCompositionInstanceRef, the
-    referenced ExecutableEntity belongs to, shall be provided as context
-    information.
+    ExecutionOrderConstraint is defined on VFB, System or ECU level, a
+    reference to the SwComponentPrototype, via the
+    ComponentInCompositionInstanceRef, the referenced ExecutableEntity
+    belongs to, shall be provided as context information.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

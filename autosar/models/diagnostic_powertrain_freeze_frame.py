@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticPowertrainFreezeFrame:
-    """This meta-class represents a powertrain-related freeze-frame.
+    """
+    This meta-class represents a powertrain-related freeze-frame.
 
     In theory, this meta-class would need an additional id attribute.
     However, legal regulations requires only a single value for this

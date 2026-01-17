@@ -21,7 +21,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class PtcfareBreakdownType:
-    """Per passenger type code pricing for this itinerary.
+    """
+    Per passenger type code pricing for this itinerary.
 
     Set if fareBreakdown was requested.
 

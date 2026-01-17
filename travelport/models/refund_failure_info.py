@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class RefundFailureInfo:
     """
-    Will be optionally returned as part of AirRefunTicketingRsp if one or all
-    ticket refund requests fail.
+    Will be optionally returned as part of AirRefunTicketingRsp if one or
+    all ticket refund requests fail.
 
     Parameters
     ----------

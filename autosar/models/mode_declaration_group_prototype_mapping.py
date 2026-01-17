@@ -15,10 +15,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModeDeclarationGroupPrototypeMapping:
     """
-    Defines the mapping of two particular ModeDeclarationGroupPrototypes (in the
-    given context) that are unequally named and/or require a reference to a
-    ModeDeclarationMappingSet in order to become compatible by definition of
-    ModeDeclarationMappings.
+    Defines the mapping of two particular ModeDeclarationGroupPrototypes
+    (in the given context) that are unequally named and/or require a
+    reference to a ModeDeclarationMappingSet in order to become compatible
+    by definition of ModeDeclarationMappings.
 
     :ivar first_mode_group_ref: ModeDeclarationGroupPrototype to be
         mapped.

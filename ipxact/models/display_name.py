@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class DisplayName:
-    """Element name for display purposes.
+    """
+    Element name for display purposes.
 
     Typically a few words providing a more detailed and/or user-friendly
     name than the ipxact:name.

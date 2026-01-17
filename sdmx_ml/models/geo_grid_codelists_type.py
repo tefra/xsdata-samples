@@ -7,11 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class GeoGridCodelistsType:
-    """GeoGridCodelistsType describes the structure of the codelists container.
+    """
+    GeoGridCodelistsType describes the structure of the codelists
+    container.
 
     It contains one or more geographic grid codelist, which can be
-    explicitly detailed or referenced from an external structure
-    document or registry service.
+    explicitly detailed or referenced from an external structure document
+    or registry service.
 
     :ivar geo_grid_codelist: GeoGridCodelist provides the details of a
         geographic grid code list, which comprises a set of GridCodes,

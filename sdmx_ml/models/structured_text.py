@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 @dataclass(frozen=True)
 class StructuredText(Xhtmltype):
     """
-    StructuredText is a reusable element, used for providing a language specific
-    text value structured as XHTML.
+    StructuredText is a reusable element, used for providing a language
+    specific text value structured as XHTML.
     """
 
     class Meta:

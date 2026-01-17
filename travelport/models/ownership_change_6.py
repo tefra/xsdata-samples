@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 @dataclass
 class OwnershipChange6:
-    """Element to change the ownership of the PNR in the UR.
+    """
+    Element to change the ownership of the PNR in the UR.
 
     PROVIDER SUPPORTED: Worldspan and JAL.
 

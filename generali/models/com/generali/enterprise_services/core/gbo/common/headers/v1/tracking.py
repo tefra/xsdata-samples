@@ -12,7 +12,8 @@ __NAMESPACE__ = (
 @dataclass
 class Tracking(TrackingType):
     """
-    <description xmlns="">Holds in-flight tracking information.</description>
+    <description xmlns="">Holds in-flight tracking
+    information.</description>.
     """
 
     class Meta:

@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class NetworkManagement(OperatorAction):
     """
-    Network management action which is applicable to the road network and its
-    users.
+    Network management action which is applicable to the road network and
+    its users.
 
     :ivar compliance_option: Defines whether the network management
         instruction or the control resulting from a network management

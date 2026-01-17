@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class GenericEthernetFrame:
     """
-    This element is used for EthernetFrames without additional attributes that are
-    routed by the EthIf.
+    This element is used for EthernetFrames without additional attributes
+    that are routed by the EthIf.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

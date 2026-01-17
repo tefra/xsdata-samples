@@ -10,12 +10,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileSummaryErrorInfo2(TypeErrorInfo5):
-    """Error information when a profile service fails and profile information is
-    needed to be returned.
+    """
+    Error information when a profile service fails and profile information
+    is needed to be returned.
 
-    The service failed because there profiles attached to the element
-    being modified.  This error info shows those profiles  Up to the
-    first 100 profiles are shown.
+    The service failed because there profiles attached to the element being
+    modified. This error info shows those profiles Up to the first 100
+    profiles are shown.
 
     Parameters
     ----------

@@ -33,8 +33,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EthernetRawDataStreamMapping:
     """
-    This meta-class represents the ability to map a PortPrototype to a Ethernet-
-    based communication channel.
+    This meta-class represents the ability to map a PortPrototype to a
+    Ethernet-based communication channel.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

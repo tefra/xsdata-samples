@@ -9,19 +9,20 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 @dataclass
 class VehicleReturnDateLocation:
-    """Used to update Return Location and Return Date of existing Vehicle Booking.
+    """
+    Used to update Return Location and Return Date of existing Vehicle
+    Booking.
 
     Modify operation : Only modification of ReturnDateTime is supported.
-    Deletion of ReturnDateTime is not supported.
-    If values passed in ReturnLocation, ReturnLocationType and
-    ReturnLocationNumber are exactly same as PickupLocation,
-    PickupLocationType and PickupLocationNumber of existing booking then
-    ReturnLocation, ReturnLocationType and ReturnLocationNumber will be
-    deleted.
-    If values passed in ReturnLocation, ReturnLocationType and
-    ReturnLocationNumber are not same as PickupLocation,
-    PickupLocationType and PickupLocationNumber of existing booking then ReturnLocation,
-    ReturnLocationType and ReturnLocationNumber will be updated.
+    Deletion of ReturnDateTime is not supported. If values passed in
+    ReturnLocation, ReturnLocationType and ReturnLocationNumber are exactly
+    same as PickupLocation, PickupLocationType and PickupLocationNumber of
+    existing booking then ReturnLocation, ReturnLocationType and
+    ReturnLocationNumber will be deleted. If values passed in
+    ReturnLocation, ReturnLocationType and ReturnLocationNumber are not
+    same as PickupLocation, PickupLocationType and PickupLocationNumber of
+    existing booking then ReturnLocation, ReturnLocationType and
+    ReturnLocationNumber will be updated.
     """
 
     class Meta:

@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class DistanceAlongLinearElement:
     """
-    Distance of a point along a linear element either measured from the start node
-    or a defined referent on that linear element, where the start node is relative
-    to the element definition rather than the direction of traffic flow.
+    Distance of a point along a linear element either measured from the
+    start node or a defined referent on that linear element, where the
+    start node is relative to the element definition rather than the
+    direction of traffic flow.
     """
 
     distance_along_linear_element_extension: Optional[ExtensionType] = field(

@@ -9,7 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EnumerationMappingEntry:
-    """This class specifies the entry elements of the enumeration mapping table.
+    """
+    This class specifies the entry elements of the enumeration mapping
+    table.
 
     Note that this class might be used in the extended meta-model only.
 

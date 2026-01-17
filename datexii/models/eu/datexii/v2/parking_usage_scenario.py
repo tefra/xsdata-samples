@@ -21,11 +21,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingUsageScenario:
-    """A special type of usage available for the parking site or the group of
+    """
+    A special type of usage available for the parking site or the group of
     parking spaces.
 
-    In the 'ParkingStatusPublication', the operation type (in operation
-    or not) can be defined.
+    In the 'ParkingStatusPublication', the operation type (in operation or
+    not) can be defined.
 
     :ivar parking_usage_scenario: A special type of usage available for
         the parking site or a group of parking spaces. In the

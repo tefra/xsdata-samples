@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ModeRequestTypeMap:
-    """Specifies a mapping between a ModeDeclarationGroup and an
+    """
+    Specifies a mapping between a ModeDeclarationGroup and an
     ImplementationDataType.
 
     This ImplementationDataType shall be used to implement the

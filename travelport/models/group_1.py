@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class Group1:
-    """Represents a traveler group for Group booking and all their accompanying
-    data.
+    """
+    Represents a traveler group for Group booking and all their
+    accompanying data.
 
     SUPPORTED PROVIDER: Worldspan.
 

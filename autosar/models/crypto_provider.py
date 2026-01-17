@@ -20,8 +20,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CryptoProvider:
-    """CryptoProvider implements cryptographic primitives (algorithms) supported by
-    the stack.
+    """
+    CryptoProvider implements cryptographic primitives (algorithms)
+    supported by the stack.
 
     Implementation of this component may be software or hardware based
     (HSM/TPM).

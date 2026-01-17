@@ -17,8 +17,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class VehicleCountWithinInterval:
-    """Gives incoming and/or outgoing vehicles and/or change of occupied spaces
-    within a given interval.
+    """
+    Gives incoming and/or outgoing vehicles and/or change of occupied
+    spaces within a given interval.
 
     The interval is given in positive or negative seconds related to
     'measurementOrCalculationTime' or 'measurementDefaultTime'.

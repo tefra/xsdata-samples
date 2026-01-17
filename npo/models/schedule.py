@@ -9,11 +9,12 @@ __NAMESPACE__ = "urn:vpro:media:2009"
 
 @dataclass
 class Schedule(ScheduleType):
-    """Programs of type 'BROADCAST' can contain schedule events.
+    """
+    Programs of type 'BROADCAST' can contain schedule events.
 
-    A schedule indicates on which channel and at what time the program
-    is broadcast. A schedule is a container which contains the schedule
-    events of different programs, for a certain period of time.
+    A schedule indicates on which channel and at what time the program is
+    broadcast. A schedule is a container which contains the schedule events
+    of different programs, for a certain period of time.
     """
 
     class Meta:

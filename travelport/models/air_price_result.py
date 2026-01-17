@@ -11,9 +11,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirPriceResult:
-    """A solution will be returned if one exists.
+    """
+    A solution will be returned if one exists.
 
-    Otherwise an error will be present
+    Otherwise an error will be present.
 
     Parameters
     ----------

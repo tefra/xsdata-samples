@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEnvSwcModeElement:
     """
-    This meta-class represents the ability to refer to a ModeDeclaration in a
-    concrete System context.
+    This meta-class represents the ability to refer to a ModeDeclaration in
+    a concrete System context.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

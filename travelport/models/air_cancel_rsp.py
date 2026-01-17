@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class AirCancelRsp(BaseRsp1):
-    """Response to an AirCancelReq.
+    """
+    Response to an AirCancelReq.
 
     AirReservation returned reflects the requested modifications.
 

@@ -20,10 +20,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EthernetFrame:
-    """Ethernet specific attributes to the Frame.
+    """
+    Ethernet specific attributes to the Frame.
 
-    This element is removed and shall no longer be used. It is replaced
-    by AbstractEthernetFrame.
+    This element is removed and shall no longer be used. It is replaced by
+    AbstractEthernetFrame.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

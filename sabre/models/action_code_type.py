@@ -6,7 +6,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
 class ActionCodeType(Enum):
-    """Identifies the action code for a booking - OK, Waitlist etc."""
+    """
+    Identifies the action code for a booking - OK, Waitlist etc.
+    """
 
     OK = "OK"
     WAITLIST = "Waitlist"

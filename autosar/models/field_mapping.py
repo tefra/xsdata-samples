@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class FieldMapping:
     """
     Mapping of a Field that is located in a ServiceInterface to
-    ClientServerOperations that represent the getter and setter methods and to a
-    VariableDataPrototype that represents the notifier in the Field.
+    ClientServerOperations that represent the getter and setter methods and
+    to a VariableDataPrototype that represents the notifier in the Field.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

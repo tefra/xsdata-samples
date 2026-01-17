@@ -7,10 +7,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 @dataclass
 class FulFillmentType:
-    """Fulfillment options for this segment.
-
-    the options will be one of "Ticket on Departure", "Ticketless",
-    "Ticket By Email", "Travel Agency"
+    """
+    Fulfillment options for this segment. the options will be one of
+    "Ticket on Departure", "Ticketless", "Ticket By Email", "Travel
+    Agency".
     """
 
     class Meta:

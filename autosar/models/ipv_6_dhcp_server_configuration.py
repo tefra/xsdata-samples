@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Ipv6DhcpServerConfiguration:
     """
-    Defines the configuration of a IPv6 DHCP server that runs on the network
-    endpoint.
+    Defines the configuration of a IPv6 DHCP server that runs on the
+    network endpoint.
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one

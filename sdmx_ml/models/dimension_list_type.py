@@ -10,10 +10,19 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DimensionListType(DimensionListBaseType):
-    """DimensionListType describes the key descriptor for a data structure
+    """
+    DimensionListType describes the key descriptor for a data structure
     definition.
 
-    The order of the declaration of child dimensions is significant: it is used to describe the order in which they will appear in data formats for which key values are supplied in an ordered fashion (exclusive of the time dimension, which is not represented as a member of the ordered key). Any data structure definition which uses the time dimension should also declare a frequency dimension, conventionally the first dimension in the key (the set of ordered non-time dimensions). If is not necessary to assign a time dimension, as data can be organised in any fashion required.
+    The order of the declaration of child dimensions is significant: it is
+    used to describe the order in which they will appear in data formats
+    for which key values are supplied in an ordered fashion (exclusive of
+    the time dimension, which is not represented as a member of the ordered
+    key). Any data structure definition which uses the time dimension
+    should also declare a frequency dimension, conventionally the first
+    dimension in the key (the set of ordered non-time dimensions). If is
+    not necessary to assign a time dimension, as data can be organised in
+    any fashion required.
     """
 
     dimension: tuple[Dimension, ...] = field(

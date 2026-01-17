@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class GenericMetadataHeaderType(BaseHeaderType):
     """
-    GenericMetadataHeaderType defines the header format for generic reference
-    metadata.
+    GenericMetadataHeaderType defines the header format for generic
+    reference metadata.
 
     :ivar data_provider: DataProvider identifies the provider of the
         data for a data message.

@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UriString:
     """
-    A Uniform Resource Identifier (URI), is a compact string of characters used to
-    identify or name a resource.
+    A Uniform Resource Identifier (URI), is a compact string of characters
+    used to identify or name a resource.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataAttributeListType(ComponentListType):
-    """MetadataAttributeListType describes the structure of a meta data attribute
-    list.
+    """
+    MetadataAttributeListType describes the structure of a meta data
+    attribute list.
 
     It comprises a set of metadata attributes that can be defined as a
     hierarchy.

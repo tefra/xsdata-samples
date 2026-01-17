@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 @dataclass
 class Characteristic2:
     """
-    Defines coach characteristics such as accommodation class, smoking choice, etc.
+    Defines coach characteristics such as accommodation class, smoking
+    choice, etc.
     """
 
     class Meta:

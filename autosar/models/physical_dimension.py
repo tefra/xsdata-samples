@@ -19,19 +19,19 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PhysicalDimension:
-    """This class represents a physical dimension.
+    """
+    This class represents a physical dimension.
 
-    If the physical dimension of two units is identical, then a
-    conversion between them is possible. The conversion between units is
-    related to the definition of the physical dimension. Note that the
-    equivalence of the exponents does not per se define the
-    convertibility. For example Energy and Torque share the same
-    exponents (Nm). Please note further the value of an exponent does
-    not necessarily have to be an integer number. It is also possible
-    that the value yields a rational number, e.g. to compute the square
-    root of a given physical quantity. In this case the exponent value
-    would be a rational number where the numerator value is 1 and the
-    denominator value is 2.
+    If the physical dimension of two units is identical, then a conversion
+    between them is possible. The conversion between units is related to
+    the definition of the physical dimension. Note that the equivalence of
+    the exponents does not per se define the convertibility. For example
+    Energy and Torque share the same exponents (Nm). Please note further
+    the value of an exponent does not necessarily have to be an integer
+    number. It is also possible that the value yields a rational number,
+    e.g. to compute the square root of a given physical quantity. In this
+    case the exponent value would be a rational number where the numerator
+    value is 1 and the denominator value is 2.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

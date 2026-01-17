@@ -24,7 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DataPrototypeGroup:
-    """This meta-class represents the ability to define a collection of
+    """
+    This meta-class represents the ability to define a collection of
     DataPrototypes that are subject to the formal definition of implicit
     communication behavior.
 

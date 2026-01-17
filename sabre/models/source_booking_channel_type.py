@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class SourceBookingChannelType(BookingChannelType):
     """
-    Specifies the booking channel type and whether it is the primary means of
-    connectivity of the source.
+    Specifies the booking channel type and whether it is the primary means
+    of connectivity of the source.
 
     Attributes:
         company_name: Identifies the company that is associated with the

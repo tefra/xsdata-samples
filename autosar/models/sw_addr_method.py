@@ -27,11 +27,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwAddrMethod:
-    """Used to assign a common addressing method, e.g. common memory section, to
-    data or code objects.
+    """
+    Used to assign a common addressing method, e.g. common memory section,
+    to data or code objects.
 
-    These objects could actually live in different modules or
-    components.
+    These objects could actually live in different modules or components.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

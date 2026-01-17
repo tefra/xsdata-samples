@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class RestrictedBy:
     """
-    <div> <h3>Restricted-by Model</h3> </div>
+    <div> <h3>Restricted-by Model</h3> </div>.
     """
 
     class Meta:

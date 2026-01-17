@@ -6,12 +6,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SymbolString:
-    """This meta-class has the ability to contain a string plus an additional
+    """
+    This meta-class has the ability to contain a string plus an additional
     namePattern.
 
     Please note that this meta-class has only been introduced to fix an
-    issue with the backwards compatibility between R4.0.3 and R4.1.1 in
-    the context of McDataInstance
+    issue with the backwards compatibility between R4.0.3 and R4.1.1 in the
+    context of McDataInstance.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

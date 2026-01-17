@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 class DocumentTypeShareSynchInd(Enum):
     """
-    Value="Inherit" Permission for sharing data for synchronization of information
-    held by other travel service providers.
+    value="Inherit" Permission for sharing data for synchronization of
+    information held by other travel service providers.
     """
 
     YES = "Yes"

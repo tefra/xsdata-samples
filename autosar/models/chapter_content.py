@@ -24,10 +24,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ChapterContent:
-    """This class represents the content which is directly in a chapter.
+    """
+    This class represents the content which is directly in a chapter.
 
     It is basically the same as the one in a Topic but might have
-    additional complex structures (e.g. Synopsis)
+    additional complex structures (e.g. Synopsis).
 
     :ivar msr_query_p_1: This represents automatically contributed
         contents provided by an msrquery.

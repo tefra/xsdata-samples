@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class GroupBaseType(ComponentListType):
     """
-    GroupBaseType is an abstract base type that forms the basis for the GroupType.
+    GroupBaseType is an abstract base type that forms the basis for the
+    GroupType.
     """
 
     choice: Any = field(

@@ -9,12 +9,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class OrganisationUnitSchemesType:
-    """OrganisationUnitSchemesType describes the structure of the organisation unit
-    schemes container.
+    """
+    OrganisationUnitSchemesType describes the structure of the organisation
+    unit schemes container.
 
     It contains one or more organisation unit scheme, which can be
-    explicitly detailed or referenced from an external structure
-    document or registry service.
+    explicitly detailed or referenced from an external structure document
+    or registry service.
 
     :ivar organisation_unit_scheme: OrganisationUnitScheme provides the
         details of an organisation unit scheme, in which organisation

@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class GroupOfVehiclesInvolved:
     """
-    Group of the vehicles involved having common characteristics and/or status.
+    Group of the vehicles involved having common characteristics and/or
+    status.
 
     :ivar number_of_vehicles: The number of vehicles of this group that
         are involved.

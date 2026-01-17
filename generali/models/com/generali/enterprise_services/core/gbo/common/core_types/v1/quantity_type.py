@@ -9,18 +9,23 @@ __NAMESPACE__ = (
 
 @dataclass
 class QuantityType:
-    """<ns1:UniqueID xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreCo
-    mponentsTechnicalSpecification:2">UNDT000009</ns1:UniqueID> <ns1:Acronym xmlns:
-    ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecif
-    ication:2">CCT</ns1:Acronym> <ns1:DictionaryEntryName xmlns:ns1="urn:un:unece:u
-    ncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Quantity
-    .
+    """
+    <ns1:UniqueID
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">UNDT000009</ns1:UniqueID>
+    <ns1:Acronym
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">CCT</ns1:Acronym>
+    <ns1:DictionaryEntryName
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Quantity.
 
-    Type</ns1:DictionaryEntryName>
-    <ns1:Version xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.01</ns1:Version>
-    <ns1:Definition xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A counted number of non-monetary units possibly including fractions.</ns1:Definition>
-    <ns1:PrimaryRepresentationTerm xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Quantity</ns1:PrimaryRepresentationTerm>
-    <ns1:PrimitiveType xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">decimal</ns1:PrimitiveType>
+    Type</ns1:DictionaryEntryName> <ns1:Version
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.01</ns1:Version>
+    <ns1:Definition
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A
+    counted number of non-monetary units possibly including
+    fractions.</ns1:Definition> <ns1:PrimaryRepresentationTerm
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Quantity</ns1:PrimaryRepresentationTerm>
+    <ns1:PrimitiveType
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">decimal</ns1:PrimitiveType>.
 
     :ivar value:
     :ivar unit_code: <ns1:Name

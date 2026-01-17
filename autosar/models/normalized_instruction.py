@@ -6,8 +6,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NormalizedInstruction:
-    """This meta-class is used to describe runtime budget needs on the target system within DeterministicClient::WaitForNextActivation cycles. NormalizedInstructions does not reflect the actual number of code instructions, but allows the description of comparative resource needs. NormalizedInstructions is used for configuration of computing resources at integration time.
-    NormalizedInstruction = runtime in sec * clock frequency in Hz
+    """
+    This meta-class is used to describe runtime budget needs on the target
+    system within DeterministicClient::WaitForNextActivation cycles.
+
+    NormalizedInstructions does not reflect the actual number of code
+    instructions, but allows the description of comparative resource needs.
+    NormalizedInstructions is used for configuration of computing resources
+    at integration time. NormalizedInstruction = runtime in sec * clock
+    frequency in Hz.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

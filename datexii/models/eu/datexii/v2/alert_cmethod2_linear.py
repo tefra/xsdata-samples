@@ -16,8 +16,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class AlertCMethod2Linear(AlertCLinear):
-    """A linear section along a road between two points, Primary and Secondary,
-    which are pre-defined in an ALERT-C location table.
+    """
+    A linear section along a road between two points, Primary and
+    Secondary, which are pre-defined in an ALERT-C location table.
 
     Direction is FROM the Secondary point TO the Primary point, i.e. the
     Primary point is downstream of the Secondary point.

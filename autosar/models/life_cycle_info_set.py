@@ -25,12 +25,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LifeCycleInfoSet:
-    """This meta class represents the ability to attach a life cycle  information
-    to a particular set of elements.
+    """
+    This meta class represents the ability to attach a life cycle
+    information to a particular set of elements.
 
-    The information can be defined for a particular period. This
-    supports the definition of transition plans. If no period is
-    specified, the life cycle state applies forever.
+    The information can be defined for a particular period. This supports
+    the definition of transition plans. If no period is specified, the life
+    cycle state applies forever.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

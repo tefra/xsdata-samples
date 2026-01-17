@@ -26,11 +26,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ClientServerOperation:
-    """@RESTRICT_TO_STANDARD:CP:AP!
+    """
+    @RESTRICT_TO_STANDARD:CP:AP!
+
     An operation declared within the scope of a client/server interface.
-    @RESTRICT_TO_STANDARD:FO!
-    A remote procedure call declared within the scope of the current interface.
-    @END_RESTRICT_TO_STANDARD!
+    @RESTRICT_TO_STANDARD:FO! A remote procedure call declared within the
+    scope of the current interface. @END_RESTRICT_TO_STANDARD!
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

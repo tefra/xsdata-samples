@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AirMerchandisingOfferAvailabilityReq(BaseReq1):
     """
-    Check with the supplier whether or not the reservation or air solution supports
-    any merchandising offerings.
+    Check with the supplier whether or not the reservation or air solution
+    supports any merchandising offerings.
 
     Parameters
     ----------

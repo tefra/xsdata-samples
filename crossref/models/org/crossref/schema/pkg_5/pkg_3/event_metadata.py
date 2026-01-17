@@ -28,10 +28,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class EventMetadata:
-    """A container for all information that applies to a conference event.
+    """
+    A container for all information that applies to a conference event.
+    event_metadata captures information about a conference event.
 
-    event_metadata captures information about a conference event. Data
-    about conference proceedings is captured in proceedings_metadata.
+    Data about conference proceedings is captured in proceedings_metadata.
     """
 
     class Meta:

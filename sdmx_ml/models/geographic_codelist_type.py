@@ -9,10 +9,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class GeographicCodelistType(GeoCodelistType):
-    """GeographicCodelistType defines the sturcture of a geographic codelist.
+    """
+    GeographicCodelistType defines the sturcture of a geographic codelist.
 
-    It comprises a set of GeoFeatureSetCodes, by adding a value in the
-    Code that follows a pattern to represent a geo feature set.
+    It comprises a set of GeoFeatureSetCodes, by adding a value in the Code
+    that follows a pattern to represent a geo feature set.
     """
 
     choice_3: Any = field(

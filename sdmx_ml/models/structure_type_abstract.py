@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class StructureTypeAbstract(MaintainableType):
-    """StructureType is an abstract base type for all structure objects.
+    """
+    StructureType is an abstract base type for all structure objects.
 
     Concrete instances of this should restrict to a concrete grouping.
     """

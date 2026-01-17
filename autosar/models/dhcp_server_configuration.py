@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DhcpServerConfiguration:
-    """Defines the configuration of DHCP servers that are running on the network
-    endpoint.
+    """
+    Defines the configuration of DHCP servers that are running on the
+    network endpoint.
 
-    It is possible that an Ipv4DhcpServer and an Ipv6DhcpServer run on
-    the same Ecu.
+    It is possible that an Ipv4DhcpServer and an Ipv6DhcpServer run on the
+    same Ecu.
 
     :ivar ipv_4_dhcp_server_configuration: Configuration of a IPv4 DHCP
         server that runs on the network endpoint.

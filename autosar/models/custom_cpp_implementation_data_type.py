@@ -36,9 +36,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CustomCppImplementationDataType:
-    """This meta-class represents the way to specify a data type definition that is
-    taken as the basis for a C++ language binding to a custom implementation that
-    is declared in the configured header file.
+    """
+    This meta-class represents the way to specify a data type definition
+    that is taken as the basis for a C++ language binding to a custom
+    implementation that is declared in the configured header file.
 
     The ShortName of this CustomCppImplementationDataType defines the
     Class-Name of the custom implementation.

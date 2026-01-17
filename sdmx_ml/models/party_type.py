@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class PartyType:
     """
-    PartyType defines the information which is sent about various parties such as
-    senders and receivers of messages.
+    PartyType defines the information which is sent about various parties
+    such as senders and receivers of messages.
 
     :ivar name: Name is a human-readable name of the party.
     :ivar contact: Contact provides contact information for the party in

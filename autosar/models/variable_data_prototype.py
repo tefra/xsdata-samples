@@ -39,11 +39,18 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class VariableDataPrototype:
-    """@RESTRICT_TO_STANDARD:CP:AP!
-    A VariableDataPrototype is used to contain values in an ECU application. This means that most likely a VariableDataPrototype allocates "static" memory on the  ECU. In some cases optimization strategies might lead to a situation where the  memory allocation can be avoided.
-    In particular, the value of a VariableDataPrototype is likely to change as the ECU on which it is used executes.
-    @RESTRICT_TO_STANDARD:FO!
-    A VariableDataPrototype is used to contain arbitrary values in a software component.  In particular, the value of a VariableDataPrototype is likely to change over its lifetime.
+    """
+    @RESTRICT_TO_STANDARD:CP:AP!
+
+    A VariableDataPrototype is used to contain values in an ECU
+    application. This means that most likely a VariableDataPrototype
+    allocates "static" memory on the ECU. In some cases optimization
+    strategies might lead to a situation where the memory allocation can be
+    avoided. In particular, the value of a VariableDataPrototype is likely
+    to change as the ECU on which it is used executes.
+    @RESTRICT_TO_STANDARD:FO! A VariableDataPrototype is used to contain
+    arbitrary values in a software component. In particular, the value of a
+    VariableDataPrototype is likely to change over its lifetime.
     @END_RESTRICT_TO_STANDARD!
 
     :ivar short_name: This specifies an identifying shortName for the

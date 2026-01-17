@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FmFeatureModel:
-    """A Feature model describes the features of a product line and their
+    """
+    A Feature model describes the features of a product line and their
     dependencies.
 
     Feature models are an optional part of an AUTOSAR model.

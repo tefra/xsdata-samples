@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class ComputationMethodEnum(Enum):
     """
-    Types of computational methods used in deriving data values for data sets.
+    Types of computational methods used in deriving data values for data
+    sets.
 
     :cvar
         ARITHMETIC_AVERAGE_OF_SAMPLES_BASED_ON_AFIXED_NUMBER_OF_SAMPLES:

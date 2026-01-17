@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class CrossmarkPolicy:
-    """A DOI which points to a publisher's CrossMark policy document.
+    """
+    A DOI which points to a publisher's CrossMark policy document.
 
     Publishers might have different policies for different publications.
     """

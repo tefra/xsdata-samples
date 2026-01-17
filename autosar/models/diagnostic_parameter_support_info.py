@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticParameterSupportInfo:
     """
-    This represents a way to define which bit of the supportInfo is representing
-    this part of the PID.
+    This represents a way to define which bit of the supportInfo is
+    representing this part of the PID.
 
     :ivar support_info_bit: defines the bit in the SupportInfo byte,
         which represents the PID DataElement pidSize / position / size.

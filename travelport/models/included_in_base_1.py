@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class IncludedInBase1:
-    """Shows the taxes and fees included in the base fare.
-
-    (ACH only)
+    """
+    Shows the taxes and fees included in the base fare. (ACH only).
 
     Parameters
     ----------

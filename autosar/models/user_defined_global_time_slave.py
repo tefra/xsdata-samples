@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UserDefinedGlobalTimeSlave:
     """
-    This represents the specialization of the GlobalTimeSlave for user defined
-    communication.
+    This represents the specialization of the GlobalTimeSlave for user
+    defined communication.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

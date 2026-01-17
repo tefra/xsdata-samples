@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class TimeBaseProviderToPersistencyMapping:
     """
     This meta-class represents the ability to define a mapping between a
-    TimeBaseProvider and a PersistencyDeploymentElement for the purpose of storing
-    and retrieving the time value.
+    TimeBaseProvider and a PersistencyDeploymentElement for the purpose of
+    storing and retrieving the time value.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

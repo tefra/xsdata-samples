@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 @dataclass(frozen=True)
 class IdentifiableQueryType:
     """
-    IdentifiableQueryType describes the structure of a query for an identifiable
-    object.
+    IdentifiableQueryType describes the structure of a query for an
+    identifiable object.
 
     :ivar id: The id attribute is used to query for an object based on
         its identifier. This is either an explicit value, or completely

@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FlexrayTpNode:
     """
-    TP Node (Sender or Receiver) provides the TP Address and the connection to the
-    Topology description.
+    TP Node (Sender or Receiver) provides the TP Address and the connection
+    to the Topology description.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

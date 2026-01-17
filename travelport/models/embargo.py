@@ -7,9 +7,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class Embargo:
-    """Embargo details.
+    """
+    Embargo details.
 
-    Provider: 1G, 1V, 1P
+    Provider: 1G, 1V, 1P.
 
     Parameters
     ----------

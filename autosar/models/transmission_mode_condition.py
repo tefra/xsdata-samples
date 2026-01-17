@@ -12,11 +12,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TransmissionModeCondition:
-    """Possibility to attach a condition to each signal within an I-PDU.
+    """
+    Possibility to attach a condition to each signal within an I-PDU.
 
     If at least one condition evaluates to true, TRANSMISSION MODE True
-    shall be used for this I-Pdu. In all other cases, the TRANSMISSION
-    MODE FALSE shall be used.
+    shall be used for this I-Pdu. In all other cases, the TRANSMISSION MODE
+    FALSE shall be used.
 
     :ivar data_filter: Possibilities to define conditions
     :ivar i_signal_in_i_pdu_ref: Reference to a signal to which a

@@ -10,6 +10,6 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class ThingActorType(BaseComponentType):
     """
-    A type defining the details of a thing, examples of thing include servers,
-    vehicles, aircraft, etc.
+    A type defining the details of a thing, examples of thing include
+    servers, vehicles, aircraft, etc.
     """

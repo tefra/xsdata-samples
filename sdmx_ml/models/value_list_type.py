@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ValueListType(ValueListBaseType):
-    """ValueListType defines the structure of value list.
+    """
+    ValueListType defines the structure of value list.
 
-    These represent a closed set of values the can occur for a
-    dimension, measure, or attribute. These may be values, or values
-    with names and descriptions (similar to a codelist).
+    These represent a closed set of values the can occur for a dimension,
+    measure, or attribute. These may be values, or values with names and
+    descriptions (similar to a codelist).
     """
 
     value_item: tuple[ValueItemType, ...] = field(

@@ -98,7 +98,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswServiceDependency:
-    """Specialization of ServiceDependency in the context of an
+    """
+    Specialization of ServiceDependency in the context of an
     BswInternalBehavior.
 
     It allows to associate BswModuleEntries and data defined for a BSW

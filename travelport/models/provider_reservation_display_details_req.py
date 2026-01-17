@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class ProviderReservationDisplayDetailsReq(BaseReq1):
     """
-    Request to display the addtional details of provider reservation information .
+    Request to display the addtional details of provider reservation
+    information .
 
     Parameters
     ----------

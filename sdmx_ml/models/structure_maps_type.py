@@ -7,11 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class StructureMapsType:
-    """StructureMapsType describes the structure of the structure maps container.
+    """
+    StructureMapsType describes the structure of the structure maps
+    container.
 
     It contains one or more structure maps, which can be explicitly
-    detailed or referenced from an external structure document or
-    registry service.
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar structure_map: StructureMap provides the details or a
         structure map, which describes mapping between data structures

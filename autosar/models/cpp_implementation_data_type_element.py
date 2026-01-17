@@ -21,11 +21,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CppImplementationDataTypeElement:
-    """Declares a data object which is locally aggregated.
+    """
+    Declares a data object which is locally aggregated.
 
     Such an element can only be used within the scope where it is
-    aggregated. A CppImplementationDataTypeElement is used to represent
-    an element of a structure, defining its type.
+    aggregated. A CppImplementationDataTypeElement is used to represent an
+    element of a structure, defining its type.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

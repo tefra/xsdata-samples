@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class TrafficConstrictionTypeEnum(Enum):
     """
-    Types of constriction to which traffic is subjected as a result of an event.
+    Types of constriction to which traffic is subjected as a result of an
+    event.
 
     :cvar CARRIAGEWAY_BLOCKED: The carriageway is totally obstructed in
         the specified direction due to an unplanned event.

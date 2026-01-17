@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class ClearboxElementRefType:
-    """Reference to a clearboxElement within a view.
+    """
+    Reference to a clearboxElement within a view.
 
     The 'name' attribute must refer to a clearboxElement defined within
     this component.

@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 @dataclass
 class Policy(TypeKeyword1):
-    """Policy category code, e.g. “AGE”.
+    """
+    Policy category code, e.g. “AGE”.
 
     Valid for 1P only.
     """

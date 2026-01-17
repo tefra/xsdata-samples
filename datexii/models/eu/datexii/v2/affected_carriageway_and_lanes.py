@@ -10,11 +10,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class AffectedCarriagewayAndLanes:
-    """Supplementary positional information which details carriageway and lane
+    """
+    Supplementary positional information which details carriageway and lane
     locations.
 
-    Several instances may exist where the element being described
-    extends over more than one carriageway.
+    Several instances may exist where the element being described extends
+    over more than one carriageway.
 
     :ivar carriageway: Indicates the section of carriageway to which the
         location relates.

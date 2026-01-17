@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 @dataclass
 class Ssrinfo6:
     """
-    Bundle SSR with BookingTraveler reference in order to add SSR post booking.
+    Bundle SSR with BookingTraveler reference in order to add SSR post
+    booking.
 
     Parameters
     ----------

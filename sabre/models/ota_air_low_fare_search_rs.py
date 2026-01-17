@@ -25,14 +25,16 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class OtaAirLowFareSearchRs:
-    """The Low Fare Search Response message contains a number of .Priced Itinerary.
-    options. Each includes:
+    """
+    The Low Fare Search Response message contains a number of .Priced
+    Itinerary. options.
 
-    - A set of available flights matching the client.s request.
-    - Pricing information including taxes and full fare breakdown for each passenger type
-    - Ticketing information
-    - Fare Basis Codes and the information necessary to make a rules entry.
-    This message contains similar information to a standard airline CRS or GDS Low Fare Search Response message.
+    Each includes: - A set of available flights matching the client.s
+    request. - Pricing information including taxes and full fare breakdown
+    for each passenger type - Ticketing information - Fare Basis Codes and
+    the information necessary to make a rules entry. This message contains
+    similar information to a standard airline CRS or GDS Low Fare Search
+    Response message.
 
     Attributes:
         errors: In case of failure errors are returned.

@@ -14,15 +14,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinSlaveConfig:
-    """Node attributes of LIN slaves that are handled by the LinMaster.
+    """
+    Node attributes of LIN slaves that are handled by the LinMaster.
 
-    In the System Description LIN slaves may be described in the context
-    of the Lin Master. In an ECU Extract of the LinMaster the LinSlave
-    Ecus shall not be available. The information that is described here
-    is necessary in the ECU Extract for the configuration of the
-    LinMaster. The values of attributes of LinSlaveConfig and the
-    corresponding LinSlave shall be identical (if both are defined in a
-    System Description).
+    In the System Description LIN slaves may be described in the context of
+    the Lin Master. In an ECU Extract of the LinMaster the LinSlave Ecus
+    shall not be available. The information that is described here is
+    necessary in the ECU Extract for the configuration of the LinMaster.
+    The values of attributes of LinSlaveConfig and the corresponding
+    LinSlave shall be identical (if both are defined in a System
+    Description).
 
     :ivar configured_nad: To distinguish LIN slaves that are used twice
         or more within the same cluster.

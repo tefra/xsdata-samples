@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class SpeedPercentile:
     """
-    Details of percentage (from an observation set) of vehicles whose speeds fall
-    below a stated value.
+    Details of percentage (from an observation set) of vehicles whose
+    speeds fall below a stated value.
 
     :ivar vehicle_percentage: The percentage of vehicles from the
         observation set whose speeds fall below the stated speed

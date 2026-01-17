@@ -27,9 +27,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SenderReceiverCompositeElementToSignalMapping:
     """
-    Mapping of an Variable Data Prototype which is aggregated within a composite
-    datatype to a SystemSignal (only one element of the composite data type is
-    mapped).
+    Mapping of an Variable Data Prototype which is aggregated within a
+    composite datatype to a SystemSignal (only one element of the composite
+    data type is mapped).
 
     :ivar communication_direction: This attribute controls the direction
         into which the mapped SystemSignal is communicated with respect

@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcuMapping:
     """
-    ECUMapping allows to assign an ECU hardware type (defined in the ECU Resource
-    Template) to an ECUInstance used in a physical topology.
+    ECUMapping allows to assign an ECU hardware type (defined in the ECU
+    Resource Template) to an ECUInstance used in a physical topology.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CommunicationControllerMapping:
     """
-    CommunicationControllerMapping specifies the CommunicationPeripheral hardware
-    (defined in the ECU Resource Template) to realize the specified
-    CommunicationController in a physical topology.
+    CommunicationControllerMapping specifies the CommunicationPeripheral
+    hardware (defined in the ECU Resource Template) to realize the
+    specified CommunicationController in a physical topology.
 
     :ivar communication_controller_ref: Reference to the
         CommunicationController in the System Template

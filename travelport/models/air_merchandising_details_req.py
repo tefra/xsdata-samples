@@ -17,7 +17,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AirMerchandisingDetailsReq(BaseReq1):
     """
-    Request to retrieve brand details and optional services included in the brand.
+    Request to retrieve brand details and optional services included in the
+    brand.
     """
 
     class Meta:

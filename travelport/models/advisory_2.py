@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class Advisory2(TypeKeyElement2):
-    """A categorization of travel documents and other identification, or other
+    """
+    A categorization of travel documents and other identification, or other
     warnings that an agency may need to share with agents.
 
     Examples include visas requirements, travel permit requirements,

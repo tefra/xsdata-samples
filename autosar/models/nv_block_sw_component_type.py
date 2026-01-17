@@ -34,11 +34,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NvBlockSwComponentType:
-    """The NvBlockSwComponentType defines non volatile data which data can be
+    """
+    The NvBlockSwComponentType defines non volatile data which data can be
     shared between SwComponentPrototypes.
 
-    The non volatile data of the NvBlockSwComponentType are accessible
-    via provided and required ports.
+    The non volatile data of the NvBlockSwComponentType are accessible via
+    provided and required ports.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

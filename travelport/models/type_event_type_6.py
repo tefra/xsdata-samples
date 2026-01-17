@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 class TypeEventType6(Enum):
     """
-    The various reservation events (book, cancel, void, etc)
+    The various reservation events (book, cancel, void, etc).
     """
 
     CREATE = "Create"

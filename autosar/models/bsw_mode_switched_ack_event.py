@@ -32,8 +32,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswModeSwitchedAckEvent:
-    """The event is raised after a switch of the referenced mode group has been
-    acknowledged or an error occurs.
+    """
+    The event is raised after a switch of the referenced mode group has
+    been acknowledged or an error occurs.
 
     The referenced mode group shall be provided by this module.
 

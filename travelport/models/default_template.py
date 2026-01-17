@@ -11,8 +11,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class DefaultTemplate:
-    """The information about the default account and traveler templates for the
-    agency.
+    """
+    The information about the default account and traveler templates for
+    the agency.
 
     Only returned for agency hierarchy level.
 

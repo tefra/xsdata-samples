@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 @dataclass
 class ProviderReservationDetail5(TypeProviderReservationDetail5):
     """
-    Common element for mentioning provider reservation locator (PNR) details in
-    request.
+    common element for mentioning provider reservation locator (PNR)
+    details in request.
     """
 
     class Meta:

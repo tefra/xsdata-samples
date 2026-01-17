@@ -7,10 +7,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 @dataclass
 class TypeProviderReservationDetail2:
-    """Details of a provider reservation locator consisting of provider locator
-    code and provider code.
+    """
+    Details of a provider reservation locator consisting of provider
+    locator code and provider code.
 
-    To be used as a request element type while accessing a specific PNR
+    To be used as a request element type while accessing a specific PNR.
     """
 
     class Meta:

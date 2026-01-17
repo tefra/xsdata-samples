@@ -18,7 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Compiler:
-    """Specifies the compiler attributes.
+    """
+    Specifies the compiler attributes.
 
     In case of source code this specifies requirements how the compiler
     shall be invoked. In case of object code this documents the used

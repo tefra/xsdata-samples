@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EventObdReadinessGroup:
-    """This meta-class represents the ability to define the value of attribute
+    """
+    This meta-class represents the ability to define the value of attribute
     eventObdReadinessGroup.
 
     It is only introduced to allow for a variant modeling of this

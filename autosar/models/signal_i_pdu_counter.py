@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SignalIPduCounter:
-    """A PduCounter is included in a predefined set of Pdus and used to ensure that
-    a sequence of Pdus is maintained.
+    """
+    A PduCounter is included in a predefined set of Pdus and used to ensure
+    that a sequence of Pdus is maintained.
 
     The counter is incremented when a Pdu is transmitted. The receivers
     check if the received Pdu is the next one in sequence.

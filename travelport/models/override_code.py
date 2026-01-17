@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class OverrideCode:
     """
-    Code corresponding to the type of OverridableException the user wishes to
-    override.
+    Code corresponding to the type of OverridableException the user wishes
+    to override.
     """
 
     class Meta:

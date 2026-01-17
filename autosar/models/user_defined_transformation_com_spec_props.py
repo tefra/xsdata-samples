@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UserDefinedTransformationComSpecProps:
     """
-    The UserDefinedTransformationComSpecProps is used to specify port specific
-    configuration properties for custom transformers.
+    The UserDefinedTransformationComSpecProps is used to specify port
+    specific configuration properties for custom transformers.
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one

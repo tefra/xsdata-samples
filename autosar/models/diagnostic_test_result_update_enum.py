@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticTestResultUpdateEnum:
     """
-    This meta-class represents the ability to define the update behavior of a
-    DiagnosticTestResult.
+    This meta-class represents the ability to define the update behavior of
+    a DiagnosticTestResult.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

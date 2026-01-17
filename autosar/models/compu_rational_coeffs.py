@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompuRationalCoeffs:
     """
-    This meta-class represents the ability to express a rational function by
-    specifying the coefficients of nominator and denominator.
+    This meta-class represents the ability to express a rational function
+    by specifying the coefficients of nominator and denominator.
 
     :ivar compu_numerator: This is the numerator of the rational
         expression.

@@ -15,24 +15,25 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class StructuralRepositoryEventsType:
-    """StructuralRepositoryEventsType details the structural events for the
+    """
+    StructuralRepositoryEventsType details the structural events for the
     subscription.
 
-    At least one maintenance agency must be specified, although it may
-    be given a wildcard value (meaning the subscription is for the
-    structural events of all agencies). This can also be a list of
-    agencies to allow the subscription to subscribe the events of more
-    than one agency. It should be noted that when doing so, all of the
-    subsequent objects are assumed to apply to every agency in the list.
-    The subscription is then refined by detailing the structural objects
-    maintained by the agency for which the subscription should apply. It
-    is possible to explicitly select all object events, all objects of
-    given types, or to individually list out specific objects. Note that
-    for any object, it is also possible to provide an explicit URN to
-    reference a distinct object. In this case, the reference to
-    maintenance agency described above is ignored. Although it is not
-    required, if specific objects are being referenced by explicit URNs,
-    it is good practice to list the agencies.
+    At least one maintenance agency must be specified, although it may be
+    given a wildcard value (meaning the subscription is for the structural
+    events of all agencies). This can also be a list of agencies to allow
+    the subscription to subscribe the events of more than one agency. It
+    should be noted that when doing so, all of the subsequent objects are
+    assumed to apply to every agency in the list. The subscription is then
+    refined by detailing the structural objects maintained by the agency
+    for which the subscription should apply. It is possible to explicitly
+    select all object events, all objects of given types, or to
+    individually list out specific objects. Note that for any object, it is
+    also possible to provide an explicit URN to reference a distinct
+    object. In this case, the reference to maintenance agency described
+    above is ignored. Although it is not required, if specific objects are
+    being referenced by explicit URNs, it is good practice to list the
+    agencies.
 
     :ivar agency_id: AgencyID specifies a maintenance agency for the
         object or objects indicated in the other fields. This can be

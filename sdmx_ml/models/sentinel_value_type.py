@@ -9,10 +9,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class SentinelValueType:
-    """SentinelValueType defines the structure of a sentinel value.
+    """
+    SentinelValueType defines the structure of a sentinel value.
 
-    A sentinel is a value that has a special meaning within the text
-    format representation of a component. The value is associated with a
+    A sentinel is a value that has a special meaning within the text format
+    representation of a component. The value is associated with a
     multi-lingual name and description.
 
     :ivar name:

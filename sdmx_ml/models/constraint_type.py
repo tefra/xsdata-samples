@@ -11,8 +11,10 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ConstraintType(ConstraintBaseType):
-    """ConstraintType is an abstract base type that specific types of constraints
-    (data and metadata) restrict and extend to describe their details.
+    """
+    ConstraintType is an abstract base type that specific types of
+    constraints (data and metadata) restrict and extend to describe their
+    details.
 
     These constraint types both define a constraint attachment and a
     release calendar.

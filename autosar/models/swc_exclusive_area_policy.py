@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwcExclusiveAreaPolicy:
-    """Options how to generate the ExclusiveArea related APIs.
+    """
+    Options how to generate the ExclusiveArea related APIs.
 
     If no SwcExclusiveAreaPolicy is specified for an ExclusiveArea the
     default values apply.

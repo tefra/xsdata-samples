@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AliasNameSet:
-    """This meta-class represents a set of AliasNames.
+    """
+    This meta-class represents a set of AliasNames.
 
     The AliasNameSet can for example be an input to the A2L-Generator.
 

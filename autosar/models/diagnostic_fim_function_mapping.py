@@ -31,11 +31,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticFimFunctionMapping:
-    """This meta-class represents the ability to define a mapping between a
-    function identifier (FID) and the corresponding SwcServiceDependency in the
-    application software resp.
-
-    basic software.
+    """
+    This meta-class represents the ability to define a mapping between a
+    function identifier (FID) and the corresponding SwcServiceDependency in
+    the application software resp. basic software.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

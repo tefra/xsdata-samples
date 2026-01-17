@@ -10,9 +10,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 @dataclass
 class ConsolidatorRemark2:
-    """Authorization remark for Consolidator access to a PNR .
+    """
+    Authorization remark for Consolidator access to a PNR .
 
-    Contains PCC information created by retail agent to  allow a
+    Contains PCC information created by retail agent to allow a
     consolidator or other Axess users to service their PNR. PROVIDER
     SUPPORTED: Worldspan and JAL.
 

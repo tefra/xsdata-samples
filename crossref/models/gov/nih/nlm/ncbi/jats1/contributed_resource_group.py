@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class ContributedResourceGroup:
     """
-    <div> <h3>Contributed Resource Group</h3> </div>
+    <div> <h3>Contributed Resource Group</h3> </div>.
     """
 
     class Meta:

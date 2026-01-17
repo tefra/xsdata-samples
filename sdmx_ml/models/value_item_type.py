@@ -10,11 +10,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ValueItemType(AnnotableType):
-    """ValueItemType defines the structure of a value item.
+    """
+    ValueItemType defines the structure of a value item.
 
     A value must be provided, and a longer name and description can be
-    provided to provide additiona meaning to the value (similar to a
-    code in a code list).
+    provided to provide additiona meaning to the value (similar to a code
+    in a code list).
     """
 
     name: tuple[Name, ...] = field(

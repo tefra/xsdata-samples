@@ -5,11 +5,12 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class GroupTitle:
-    """Posted content may be organzed into groupings within a given publisher.
+    """
+    Posted content may be organzed into groupings within a given publisher.
 
     This element provides for naming the group. It is expected that
-    publishers will have a small number of groups each of which reflect
-    a topic or subject area.
+    publishers will have a small number of groups each of which reflect a
+    topic or subject area.
     """
 
     class Meta:

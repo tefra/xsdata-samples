@@ -20,12 +20,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwRecordLayoutGroup:
-    """Specifies how a record layout is set up.
+    """
+    Specifies how a record layout is set up.
 
-    Using SwRecordLayoutGroup it recursively models iterations through
-    axis values. The subelement swRecordLayoutGroupContentType may
-    reference other SwRecordLayouts, SwRecordLayoutVs and
-    SwRecordLayoutGroups for the modeled record layout.
+    Using SwRecordLayoutGroup it recursively models iterations through axis
+    values. The subelement swRecordLayoutGroupContentType may reference
+    other SwRecordLayouts, SwRecordLayoutVs and SwRecordLayoutGroups for
+    the modeled record layout.
 
     :ivar short_label: This attribute specifies a name which can be used
         e.g. when ECU code is generated from the record layout group.

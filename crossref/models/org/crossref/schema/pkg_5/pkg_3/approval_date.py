@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ApprovalDate(DateT):
     """
-    The date on which a dissertation was accepted by the institution awarding the
-    degree, a report was approved, or a standard was accepted.
+    The date on which a dissertation was accepted by the institution
+    awarding the degree, a report was approved, or a standard was accepted.
     """
 
     class Meta:

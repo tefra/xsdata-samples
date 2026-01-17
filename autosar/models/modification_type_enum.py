@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModificationTypeEnum:
     """
-    This enumerator expresses if an object has been changed in its content or in
-    its documentation.
+    This enumerator expresses if an object has been changed in its content
+    or in its documentation.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

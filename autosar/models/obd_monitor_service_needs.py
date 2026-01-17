@@ -30,11 +30,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ObdMonitorServiceNeeds:
-    """Specifies the abstract needs of a component or module on the configuration
-    of OBD Services in relation to a particular on-board monitoring test supported
-    by this component or module.
-
-    (OBD Service 06).
+    """
+    Specifies the abstract needs of a component or module on the
+    configuration of OBD Services in relation to a particular on-board
+    monitoring test supported by this component or module. (OBD Service
+    06).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -10,11 +10,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DataFilter:
-    """Base class for data filters.
+    """
+    Base class for data filters.
 
-    The type of the filter is specified in attribute dataFilterType.
-    Some of the filter types require additional arguments which are
-    specified as attributes of this class.
+    The type of the filter is specified in attribute dataFilterType. Some
+    of the filter types require additional arguments which are specified as
+    attributes of this class.
 
     :ivar data_filter_type: This attribute specifies the type of the
         filter.

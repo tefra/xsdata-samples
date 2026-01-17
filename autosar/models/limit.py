@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Limit:
-    """This class represents the ability to express a numerical limit.
+    """
+    This class represents the ability to express a numerical limit.
 
     Note that this is in fact a NumericalValuationPoint but has the
     additional attribute intervalType. Note that the xml.name is "LIMIT"

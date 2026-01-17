@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class AnnotationUrltype:
-    """AnnotationURLType defines an external resource.
+    """
+    AnnotationURLType defines an external resource.
 
     These can indicate localisation by specifying a language for the
     resource.

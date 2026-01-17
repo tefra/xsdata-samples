@@ -13,11 +13,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PostBuildVariantCriterionValue:
-    """This class specifies the value which shall be assigned to a particular
+    """
+    This class specifies the value which shall be assigned to a particular
     variant criterion in order to bind the variation point.
 
-    If multiple criterion/value pairs are specified, they all shall
-    match to bind the variation point.
+    If multiple criterion/value pairs are specified, they all shall match
+    to bind the variation point.
 
     :ivar variant_criterion_ref: This association selects the variant
         criterion whose value is specified.

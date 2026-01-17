@@ -8,8 +8,10 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class TransparentBridge:
-    """If this element is present, it indicates that the bus interface provides a
-    transparent bridge to another initiator bus interface on the same component.
+    """
+    If this element is present, it indicates that the bus interface
+    provides a transparent bridge to another initiator bus interface on the
+    same component.
 
     It has a initiatorRef attribute which contains the name of the other
     bus interface. Any target interface can bridge to multiple initiator

@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class CurrencyRateConversion:
-    """Currency rate conversion from the supplier’s source currency to a preferred
-    currency.
+    """
+    Currency rate conversion from the supplier’s source currency to a
+    preferred currency.
 
     For hotels, applicable only to Hotel Super Shopper (1G/1V).
 

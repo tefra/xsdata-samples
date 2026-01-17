@@ -27,9 +27,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FmFeatureMapElement:
     """
-    Defines value sets for system constants and postbuild variant criterions that
-    shall be chosen whenever a certain combination of features (and system
-    constants) is encountered.
+    Defines value sets for system constants and postbuild variant
+    criterions that shall be chosen whenever a certain combination of
+    features (and system constants) is encountered.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

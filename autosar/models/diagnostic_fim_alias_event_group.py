@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticFimAliasEventGroup:
-    """This meta-class represents the ability to define an alias for a Fim
+    """
+    This meta-class represents the ability to define an alias for a Fim
     summarized event.
 
     This alias can be used in early phases of the configuration process

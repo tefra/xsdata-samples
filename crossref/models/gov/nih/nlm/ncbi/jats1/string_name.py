@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class StringName:
     """
-    <div> <h3>Name of Person (Unstructured)</h3> </div>
+    <div> <h3>Name of Person (Unstructured)</h3> </div>.
     """
 
     class Meta:

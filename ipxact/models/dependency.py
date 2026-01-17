@@ -8,10 +8,10 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class Dependency(IpxactUri):
-    """Specifies a location on which  files or fileSets may be dependent.
+    """
+    Specifies a location on which files or fileSets may be dependent.
 
-    Typically, this would be a directory that would contain included
-    files.
+    Typically, this would be a directory that would contain included files.
     """
 
     class Meta:

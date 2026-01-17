@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegDescriptor:
     """
-    A collection of information providing descriptive references to locations using
-    the TPEG-Loc location referencing approach.
+    A collection of information providing descriptive references to
+    locations using the TPEG-Loc location referencing approach.
 
     :ivar descriptor: A text string which describes or elaborates the
         location.

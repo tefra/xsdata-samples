@@ -18,9 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DoIpPowerModeStatusNeeds:
     """
-    The DoIpPowerModeStatusNeeds indicates that the software-component owning this
-    ServiceNeeds is providing the PowerModeStatus for the DoIP service 0x4003
-    according to ISO 13400-2:2012.
+    The DoIpPowerModeStatusNeeds indicates that the software-component
+    owning this ServiceNeeds is providing the PowerModeStatus for the DoIP
+    service 0x4003 according to ISO 13400-2:2012.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -20,8 +20,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TriggerToSignalMapping:
-    """This meta-class represents the ability to map a trigger to a SystemSignal of
-    size 0.
+    """
+    This meta-class represents the ability to map a trigger to a
+    SystemSignal of size 0.
 
     The Trigger does not transport any other information than its
     existence, therefore the limitation in terms of signal length.

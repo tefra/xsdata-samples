@@ -26,13 +26,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticAccessPermission:
-    """This represents the specification of whether a given service can be accessed
-    according to the existence of meta-classes referenced by a particular
-    DiagnosticAccessPermission.
+    """
+    This represents the specification of whether a given service can be
+    accessed according to the existence of meta-classes referenced by a
+    particular DiagnosticAccessPermission.
 
     In other words, this meta-class acts as a mapping element between
-    several (otherwise unrelated) pieces of information that are put
-    into context for the purpose of checking for access rights.
+    several (otherwise unrelated) pieces of information that are put into
+    context for the purpose of checking for access rights.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

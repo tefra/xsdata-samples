@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileRetrieveBridgeBranchesRsp(BaseRsp5):
-    """Response to retreive an Agent's Bridge Branch Assignments.
+    """
+    Response to retreive an Agent's Bridge Branch Assignments.
 
     Returns the list of bridge branches that the agent is currently
     assigned to.

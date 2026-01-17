@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class CategorySchemesType:
-    """CategorySchemesType describes the structure of the category schemes
+    """
+    CategorySchemesType describes the structure of the category schemes
     container.
 
     It contains one or more category scheme, which can be explicitly
-    detailed or referenced from an external structure document or
-    registry service.
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar category_scheme: CategoryScheme provides the details of a
         category scheme, which is the descriptive information for an

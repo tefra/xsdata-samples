@@ -15,10 +15,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ComponentListType(IdentifiableType):
-    """ComponentListType is an abstract base type for all component lists.
+    """
+    ComponentListType is an abstract base type for all component lists.
 
-    It contains a collection of components. Concrete types should
-    restrict this to specific concrete components.
+    It contains a collection of components. Concrete types should restrict
+    this to specific concrete components.
     """
 
     choice: tuple[

@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class BaseGbotype(BaseIdentifiedComponentType):
     """
-    <description xmlns="">The base type of the business object.</description>
+    <description xmlns="">The base type of the business
+    object.</description>.
     """
 
     class Meta:

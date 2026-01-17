@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ApplicationDeferredDataType:
     """
-    An abstract placeholder data type in which the precise application data type is
-    deferred to a later stage.
+    An abstract placeholder data type in which the precise application data
+    type is deferred to a later stage.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

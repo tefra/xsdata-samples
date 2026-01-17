@@ -28,8 +28,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RestElementDef:
     """
-    This meta-class represents an element of a resource that in turn is owned by a
-    REST service.
+    This meta-class represents an element of a resource that in turn is
+    owned by a REST service.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

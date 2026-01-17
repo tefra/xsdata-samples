@@ -38,7 +38,8 @@ __NAMESPACE__ = "urn:vpro:media:2009"
 
 @dataclass
 class BaseMediaType:
-    """This is the abstract base entity for programs, groups and segments.
+    """
+    This is the abstract base entity for programs, groups and segments.
 
     Actually these objects are very similar and share most properties.
     """

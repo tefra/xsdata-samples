@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
 class TypeParentProfileLevel(Enum):
-    """Returns parent’s data up to specified hierarchy.
+    """
+    Returns parent’s data up to specified hierarchy.
 
     Valid values are ‘Agency’, ‘AgencyGroup’, ‘BranchGroup’, ‘Branch’,
     ‘Account’ and ‘Traveler Group’.

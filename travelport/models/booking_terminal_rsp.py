@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 @dataclass
 class BookingTerminalRsp(BookingBaseRsp):
     """
-    Returns the terminal response and UR with the changes based on the Terminal
-    Req.
+    Returns the terminal response and UR with the changes based on the
+    Terminal Req.
     """
 
     class Meta:

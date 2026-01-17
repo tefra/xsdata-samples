@@ -24,7 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RunnableEntityGroup:
-    """This meta-class represents the ability to define a collection of
+    """
+    This meta-class represents the ability to define a collection of
     RunnableEntities.
 
     The collection can be nested.

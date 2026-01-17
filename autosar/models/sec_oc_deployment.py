@@ -19,8 +19,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SecOcDeployment:
     """
-    The meta-class represents the ability to define a deployment of the SecOc
-    communication protocol configuration settings to crypto module entities.
+    The meta-class represents the ability to define a deployment of the
+    SecOc communication protocol configuration settings to crypto module
+    entities.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

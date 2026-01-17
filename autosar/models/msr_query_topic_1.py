@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MsrQueryTopic1:
     """
-    This meta-class represents the ability to specify a query which yields a set of
-    topics as a result.
+    This meta-class represents the ability to specify a query which yields
+    a set of topics as a result.
 
     :ivar msr_query_props: This is argument and properties of the topic
         query.

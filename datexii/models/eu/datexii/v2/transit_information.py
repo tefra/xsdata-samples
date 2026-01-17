@@ -20,11 +20,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class TransitInformation(NonRoadEventInformation):
-    """The availability of transit services and information relating to their
+    """
+    The availability of transit services and information relating to their
     departures.
 
-    This is limited to those transit services which are of direct
-    relevance to road users, e.g. connecting rail or ferry services.
+    This is limited to those transit services which are of direct relevance
+    to road users, e.g. connecting rail or ferry services.
 
     :ivar journey_destination: Indicates the stated termination point of
         the transit journey.

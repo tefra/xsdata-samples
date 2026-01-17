@@ -29,8 +29,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PassThroughSwConnector:
     """
-    This kind of SwConnector can be used inside a CompositionSwComponentType to
-    connect two delegation PortPrototypes.
+    This kind of SwConnector can be used inside a
+    CompositionSwComponentType to connect two delegation PortPrototypes.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

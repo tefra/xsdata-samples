@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class TypeProfileParentWithData2:
     """
-    A parent's profile, including the profile data (if specified in the request)
-    and a list of its parents as well.
+    A parent's profile, including the profile data (if specified in the
+    request) and a list of its parents as well.
 
     Parameters
     ----------
@@ -147,8 +147,8 @@ class TypeProfileParentWithData2:
 @dataclass
 class ProfileParent2(TypeProfileParentWithData2):
     """
-    A parent's profile, including the profile data (if specified in the request)
-    and a list of its parents as well.
+    A parent's profile, including the profile data (if specified in the
+    request) and a list of its parents as well.
     """
 
     class Meta:

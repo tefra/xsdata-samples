@@ -10,11 +10,12 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Citation(CitationT):
-    """Citation is used to deposit each reference in the reference list of the item
-    for which the DOI is being deposited.
+    """
+    citation is used to deposit each reference in the reference list of the
+    item for which the DOI is being deposited.
 
     For details see:
-    https://www.crossref.org/education/metadata-stewardship/maintaining-your-metadata/add-references/
+    https://www.crossref.org/education/metadata-stewardship/maintaining-your-metadata/add-references/.
     """
 
     class Meta:

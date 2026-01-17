@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NumericalValueVariationPoint:
-    """This class represents an attribute value variation point for Numerical
+    """
+    This class represents an attribute value variation point for Numerical
     attributes.
 
     Note that this class might be used in the extended meta-model only.

@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class PassiveCancelRsp(BaseRsp1):
-    """Response to a PassiveCancelReq.
+    """
+    Response to a PassiveCancelReq.
 
     The UniversalRecord returned reflects the requested modifications.
     """

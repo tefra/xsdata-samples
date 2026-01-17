@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class LifeCyclePeriod:
     """
-    This meta class represents the ability to specify a point of time within a
-    specified period, e.g. the starting or end point, in which a specific life
-    cycle state is valid/applies to.
+    This meta class represents the ability to specify a point of time
+    within a specified period, e.g. the starting or end point, in which a
+    specific life cycle state is valid/applies to.
 
     :ivar date: Date within period.
     :ivar ar_release_version: Version of the AUTOSAR Release the element

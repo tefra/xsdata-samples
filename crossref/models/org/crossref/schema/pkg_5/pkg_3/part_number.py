@@ -5,11 +5,12 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class PartNumber:
-    """The part number of a given volume.
+    """
+    The part number of a given volume.
 
     In some cases, a book set will have multiple parts, and then one or
-    more volumes within each part. The part number of a given volume
-    should be deposited in this element.
+    more volumes within each part. The part number of a given volume should
+    be deposited in this element.
     """
 
     class Meta:

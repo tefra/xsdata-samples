@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingRouteStatus:
     """
-    The status of a parking route (active/inactive) defined in the static part of
-    the model.
+    The status of a parking route (active/inactive) defined in the static
+    part of the model.
 
     :ivar parking_route_reference: A reference to a parking route.
     :ivar parking_route_active: Defines if this parking route is

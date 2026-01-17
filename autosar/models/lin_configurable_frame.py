@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinConfigurableFrame:
-    """Assignment of messageIds to Frames.
+    """
+    Assignment of messageIds to Frames.
 
     This element shall be used for the LIN 2.0 Assign-Frame command.
 

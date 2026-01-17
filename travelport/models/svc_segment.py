@@ -9,9 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class SvcSegment:
-    """Service segment added to collect additional fee.
-
-    1P only
+    """
+    Service segment added to collect additional fee. 1P only.
 
     Parameters
     ----------

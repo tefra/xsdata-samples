@@ -13,13 +13,14 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataAttributeUsageType(MetadataAttributeUsageBaseType):
-    """MetadataAttributeUsageType defines the structure of how a metadata attribute
-    is used in a data structure.
+    """
+    MetadataAttributeUsageType defines the structure of how a metadata
+    attribute is used in a data structure.
 
     This is a local reference to a metadata attribute from the metadata
-    structure referenced by the data structure. An attribute
-    relationship can be defined in order to describe the relationship of
-    the metadata attribute to the data structure components.
+    structure referenced by the data structure. An attribute relationship
+    can be defined in order to describe the relationship of the metadata
+    attribute to the data structure components.
 
     :ivar metadata_attribute_reference: MetadataAttributeReference is a
         local reference to a metadata attribute defined in the metadata

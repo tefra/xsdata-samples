@@ -17,16 +17,21 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AutosarVariableRef:
-    """This class represents a reference to a variable within AUTOSAR which can be one of the following use cases:
-    localVariable:
-    * localVariable which is used as whole (e.g. InterRunnableVariable, inputValue for curve)
-    autosarVariable:
-    * a variable provided via Port which is used as whole (e.g. dataAccesspoints)
-    * an element inside of a composite local variable typed by ApplicationDatatype (e.g. inputValue for a curve)
-    * an element inside of a composite variable provided via Port and typed by ApplicationDatatype (e.g. inputValue for a curve)
-    autosarVariableInImplDatatype:
-    * an element inside of a composite local variable typed by ImplementationDatatype  (e.g. nvramData mapping)
-    * an element inside of a composite variable provided via Port and typed by ImplementationDatatype (e.g. inputValue for a curve)
+    """
+    This class represents a reference to a variable within AUTOSAR which
+    can be one of the following use cases: localVariable: * localVariable
+    which is used as whole (e.g.
+
+    InterRunnableVariable, inputValue for curve) autosarVariable: * a
+    variable provided via Port which is used as whole (e.g.
+    dataAccesspoints) * an element inside of a composite local variable
+    typed by ApplicationDatatype (e.g. inputValue for a curve) * an element
+    inside of a composite variable provided via Port and typed by
+    ApplicationDatatype (e.g. inputValue for a curve)
+    autosarVariableInImplDatatype: * an element inside of a composite local
+    variable typed by ImplementationDatatype (e.g. nvramData mapping) * an
+    element inside of a composite variable provided via Port and typed by
+    ImplementationDatatype (e.g. inputValue for a curve).
 
     :ivar autosar_variable_in_impl_datatype: This is used if the target
         variable is inside of variableDataPrototype typed by an

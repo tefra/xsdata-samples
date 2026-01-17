@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpeningTimes:
     """
-    A specification of opening times (e.g. for a parking site, a service facility,
-    an access or the availability for equipment).
+    A specification of opening times (e.g. for a parking site, a service
+    facility, an access or the availability for equipment).
 
     :ivar last_updated: The date/time at which this information was last
         updated.

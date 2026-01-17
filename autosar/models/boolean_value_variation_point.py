@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BooleanValueVariationPoint:
-    """This class represents an attribute value variation point for Boolean
+    """
+    This class represents an attribute value variation point for Boolean
     attributes.
 
-    Note that this class might be used in the extended meta-model on
+    Note that this class might be used in the extended meta-model on.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

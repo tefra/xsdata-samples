@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class TravelerIdentityInformation2(TypeKeyElement2):
-    """An additional means to identify or verify a travelers profile when then are
-    duplicate traveler names.
+    """
+    An additional means to identify or verify a travelers profile when then
+    are duplicate traveler names.
 
     Security Questions and answers must come in pairs.
 

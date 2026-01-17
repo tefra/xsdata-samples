@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class TypeFarePenalty:
     """
-    Penalty applicable on a Fare for change/ cancellation etc- expressed in both
-    Money and Percentage.
+    Penalty applicable on a Fare for change/ cancellation etc- expressed in
+    both Money and Percentage.
 
     Parameters
     ----------

@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class PublisherName:
-    """The name of the publisher of a book or conference proceedings.
+    """
+    The name of the publisher of a book or conference proceedings.
 
     This name may differ from that of the organization registering or
     maintaining the metadata record.

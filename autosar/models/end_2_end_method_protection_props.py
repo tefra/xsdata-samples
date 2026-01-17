@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class End2EndMethodProtectionProps:
     """
-    This element allows to protect a method, a field setter or a field getter with
-    an E2E profile.
+    This element allows to protect a method, a field setter or a field
+    getter with an E2E profile.
 
     :ivar data_ids:
     :ivar data_length: Length of payload including E2E header in bits.

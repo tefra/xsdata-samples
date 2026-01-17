@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ApplicationRuleBasedValueSpecification:
     """
-    This meta-class represents rule based values for DataPrototypes typed by
-    ApplicationDataTypes (ApplicationArrayDataType or a compound
+    This meta-class represents rule based values for DataPrototypes typed
+    by ApplicationDataTypes (ApplicationArrayDataType or a compound
     ApplicationPrimitiveDataType which also boils down to an array-nature).
 
     :ivar short_label: This can be used to identify particular value

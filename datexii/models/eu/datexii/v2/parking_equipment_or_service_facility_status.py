@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingEquipmentOrServiceFacilityStatus:
-    """The number of E&amp;S can be overridden here (for example during
+    """
+    The number of E&amp;S can be overridden here (for example during
     restoration).
 
     Furthermore, the current availability of E&amp;S can be given (for

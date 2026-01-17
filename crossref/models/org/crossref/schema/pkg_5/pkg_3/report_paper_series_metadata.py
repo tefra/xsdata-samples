@@ -51,8 +51,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ReportPaperSeriesMetadata:
     """
-    Container for the metadata related to a Technical Report or Working Paper that
-    is part of a series.
+    Container for the metadata related to a Technical Report or Working
+    Paper that is part of a series.
     """
 
     class Meta:

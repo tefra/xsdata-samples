@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class BaseBaggageAllowanceInfo:
-    """This contains common elements that are used for Baggage Allowance info,
+    """
+    This contains common elements that are used for Baggage Allowance info,
     carry-on allowance info and embargo Info.
 
-    Supported providers are 1V/1G/1P
+    Supported providers are 1V/1G/1P.
 
     Parameters
     ----------

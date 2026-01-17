@@ -24,8 +24,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ConsumedProvidedServiceInstanceGroup:
-    """The AUTOSAR ServiceDiscovery is able to start and to stop ClientServices and
-    ServerServices,respectively, at runtime.
+    """
+    The AUTOSAR ServiceDiscovery is able to start and to stop
+    ClientServices and ServerServices,respectively, at runtime.
 
     A SdServiceGroup contains several ClientServices and ServerServices,
     respectively.

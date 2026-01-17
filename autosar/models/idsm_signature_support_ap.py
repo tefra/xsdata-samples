@@ -11,9 +11,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IdsmSignatureSupportAp:
     """
-    This meta-class defines, for the Adaptive Platform, the cryptographic algorithm
-    and key to be used by the IdsM instance for providing signature information in
-    QSEv messages.
+    This meta-class defines, for the Adaptive Platform, the cryptographic
+    algorithm and key to be used by the IdsM instance for providing
+    signature information in QSEv messages.
 
     :ivar crypto_primitive: This attribute defines the cryptographic
         algorithm to be used for providing authentication information in

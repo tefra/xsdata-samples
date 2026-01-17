@@ -15,8 +15,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 @dataclass
 class VehicleUpsellQualify:
-    """Qualify data of Vehicle against which Vehicle Availability search is matched
-    to get an upsell Offer.
+    """
+    Qualify data of Vehicle against which Vehicle Availability search is
+    matched to get an upsell Offer.
 
     Each qualify should have an offer.
 

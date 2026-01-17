@@ -9,10 +9,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class DoiBatch:
-    """Top level element for a metadata record submission.
+    """
+    Top level element for a metadata record submission.
 
-    This element indicates the start and end of the XML file. The
-    version number is fixed to the version of the schema.
+    This element indicates the start and end of the XML file. The version
+    number is fixed to the version of the schema.
     """
 
     class Meta:

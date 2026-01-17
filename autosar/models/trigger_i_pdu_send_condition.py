@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TriggerIPduSendCondition:
-    """The condition defined by this class evaluates to true if one of the
+    """
+    The condition defined by this class evaluates to true if one of the
     referenced modeDeclarations (OR associated) is active.
 
     The condition is used to define when the Pdu is triggered with the

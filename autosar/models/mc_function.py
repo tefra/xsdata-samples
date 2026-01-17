@@ -21,13 +21,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McFunction:
-    """Represents a functional element to be used as input to support measurement
-    and calibration.
+    """
+    Represents a functional element to be used as input to support
+    measurement and calibration.
 
-    It is used to
-    * assign calibration parameters to a logical function
-    * assign measurement variables to a logical function
-    * structure functions hierarchically
+    It is used to * assign calibration parameters to a logical function *
+    assign measurement variables to a logical function * structure
+    functions hierarchically.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

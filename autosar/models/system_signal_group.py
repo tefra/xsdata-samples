@@ -20,13 +20,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SystemSignalGroup:
-    """A signal group refers to a set of signals that shall always be kept
+    """
+    A signal group refers to a set of signals that shall always be kept
     together.
 
     A signal group is used to guarantee the atomic transfer of AUTOSAR
-    composite data types. The SystemSignalGroup defines a signal
-    grouping on VFB level. On cluster level the Signal grouping is
-    described by the ISignalGroup element.
+    composite data types. The SystemSignalGroup defines a signal grouping
+    on VFB level. On cluster level the Signal grouping is described by the
+    ISignalGroup element.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

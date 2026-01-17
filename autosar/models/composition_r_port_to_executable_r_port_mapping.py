@@ -27,9 +27,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompositionRPortToExecutableRPortMapping:
     """
-    This meta-class has the ability to associate an RPortPrototype defined in the
-    context of a SwClusterDesign to an RPortPrototype in the context of an
-    Executable.
+    This meta-class has the ability to associate an RPortPrototype defined
+    in the context of a SwClusterDesign to an RPortPrototype in the context
+    of an Executable.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -14,8 +14,9 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class QueryExpressionType:
     """
-    <description xmlns="">A query expression that allows complex queries to be
-    formulated out of a series of value expressions (criteria).</description>
+    <description xmlns="">A query expression that allows complex queries to
+    be formulated out of a series of value expressions
+    (criteria).</description>.
 
     :ivar value_expression: <description xmlns="">The value to be
         matched in a query criteria. The repeating structure allows more

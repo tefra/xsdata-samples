@@ -25,11 +25,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticJ1939SwMapping:
-    """This meta-class represents the ability to map a piece of application
+    """
+    This meta-class represents the ability to map a piece of application
     software to a J1939DiagnosticNode.
 
-    By this means the diagnostic configuration can be associated with
-    the application software.
+    By this means the diagnostic configuration can be associated with the
+    application software.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

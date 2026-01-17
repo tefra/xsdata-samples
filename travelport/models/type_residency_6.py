@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 class TypeResidency6(Enum):
     """
-    The passenger residency type.Residence Type can be Employee, National or
-    Resident.
+    The passenger residency type.Residence Type can be Employee, National
+    or Resident.
     """
 
     EMPLOYEE = "Employee"

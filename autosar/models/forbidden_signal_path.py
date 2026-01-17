@@ -15,12 +15,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ForbiddenSignalPath:
-    """The ForbiddenSignalPath describes the physical channels which an element
-    shall not take in the topology.
+    """
+    The ForbiddenSignalPath describes the physical channels which an
+    element shall not take in the topology.
 
     Such a signal path can be a constraint for the communication matrix,
-    because such a path has an effect on the frame generation and the
-    frame path.
+    because such a path has an effect on the frame generation and the frame
+    path.
 
     :ivar introduction: This represents introductory documentation about
         the signal path constraint.

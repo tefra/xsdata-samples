@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
     """
     Distance of a point along a linear element measured from the start node
-    expressed as a percentage of the whole length of the linear element, where
-    start node is relative to the element definition rather than the direction of
-    traffic flow.
+    expressed as a percentage of the whole length of the linear element,
+    where start node is relative to the element definition rather than the
+    direction of traffic flow.
 
     :ivar percentage_distance_along: A measure of distance along a
         linear element from the start of the element expressed as a

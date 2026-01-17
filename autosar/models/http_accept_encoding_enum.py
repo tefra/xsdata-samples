@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HttpAcceptEncodingEnum:
     """
-    This enumeration defines the value for the accept-encoding field of the HTTP
-    header.
+    This enumeration defines the value for the accept-encoding field of the
+    HTTP header.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BindingTimeEnum:
     """
-    This enumerator specifies the applicable binding times for the pre build
-    variation points.
+    This enumerator specifies the applicable binding times for the pre
+    build variation points.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

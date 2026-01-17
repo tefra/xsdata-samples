@@ -10,13 +10,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswDistinguishedPartition:
-    """Each instance of this meta-class represents an abstract partition in which
-    context the code of the enclosing  BswModuleBehavior can be executed.
+    """
+    Each instance of this meta-class represents an abstract partition in
+    which context the code of the enclosing BswModuleBehavior can be
+    executed.
 
-    The intended use case is to distinguish between several partitions
-    in order to implement different behavior per partition, for example
-    to behave either as a master or satellite in a multicore ECU with
-    shared BSW code.
+    The intended use case is to distinguish between several partitions in
+    order to implement different behavior per partition, for example to
+    behave either as a master or satellite in a multicore ECU with shared
+    BSW code.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

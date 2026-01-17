@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class EmailAddress:
     """
-    E-mail address to which batch success and/or error messages are sent.
+    e-mail address to which batch success and/or error messages are sent.
     """
 
     class Meta:

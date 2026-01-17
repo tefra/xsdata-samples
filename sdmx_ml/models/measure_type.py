@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MeasureType(MeasureBaseType):
-    """MeasureType defines the structure of a measure descriptor.
+    """
+    MeasureType defines the structure of a measure descriptor.
 
     In addition to the identifying concept and representation, a usage
     status and max occurs can be defined.

@@ -4,16 +4,17 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
 class ActionType(Enum):
-    """ActionType provides a list of actions, describing the intention of the data
-    transmission from the sender's side.
+    """
+    ActionType provides a list of actions, describing the intention of the
+    data transmission from the sender's side.
 
-    Each action provided at the data or metadata set level applies to
-    the entire data set for which it is given. Note that the actions
-    indicated in the Message Header are optional, and used to summarize
-    specific actions indicated with this data type for all registry
-    interactions. The "Informational" value is used when the message
-    contains information in response to a query, rather than being used
-    to invoke a maintenance activity.
+    Each action provided at the data or metadata set level applies to the
+    entire data set for which it is given. Note that the actions indicated
+    in the Message Header are optional, and used to summarize specific
+    actions indicated with this data type for all registry interactions.
+    The "Informational" value is used when the message contains information
+    in response to a query, rather than being used to invoke a maintenance
+    activity.
 
     :cvar APPEND: Append - this is an incremental update for an existing
         data/metadata set or the provision of new data or documentation

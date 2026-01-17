@@ -18,9 +18,12 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/org
 
 @dataclass
 class OrganisationGbotype:
-    """-				<xs:description xmlns:xs="http://www.w3.org/2001/XMLSchema">Documentation for the elements below can be found at
+    """
+    - <xs:description
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">Documentation for the
+    elements below can be found at
     https://itservices.generali.co.uk/workspace/display/BPR/Organization+Data+Dictionary
-    </xs:description>
+    </xs:description>.
 
     :ivar dunsnumber:
     :ivar gunsnumber:

@@ -24,7 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinSporadicFrame:
-    """A sporadic frame is a group of unconditional frames that share the same
+    """
+    A sporadic frame is a group of unconditional frames that share the same
     frame slot.
 
     The sporadic frame shall not contain any Pdus.

@@ -15,8 +15,8 @@ __NAMESPACE__ = (
 @dataclass
 class SourceType(BaseSystemTraceabilityType):
     """
-    <description xmlns="">The specification of the source country, locale, system
-    of the message.</description>
+    <description xmlns="">The specification of the source country, locale,
+    system of the message.</description>.
 
     :ivar sent_date_time: <description xmlns="">The date and time on
         which the message was sent.</description>

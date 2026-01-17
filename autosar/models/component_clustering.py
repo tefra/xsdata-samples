@@ -13,12 +13,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ComponentClustering:
-    """Constraint that forces the mapping of all referenced SW component instances
-    to the same ECU, Core, Partition depending on the defined mappingScope
-    attribute.
+    """
+    Constraint that forces the mapping of all referenced SW component
+    instances to the same ECU, Core, Partition depending on the defined
+    mappingScope attribute.
 
-    If mappingScope is not specified then mappingScopeEcu shall be
-    assumed.
+    If mappingScope is not specified then mappingScopeEcu shall be assumed.
 
     :ivar introduction: This represents introductory documentation about
         the mapping constraint.

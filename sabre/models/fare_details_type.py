@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class FareDetailsType:
-    """You don't need to specify all of these attributes for a given flight.
+    """
+    You don't need to specify all of these attributes for a given flight.
 
-    For some of them it is sufficient to be specified in the last flight
-    of a given fare component. For details, see notes below --- the
-    attributes are annotated with ,,last Flight in Fare Component''.
+    For some of them it is sufficient to be specified in the last flight of
+    a given fare component. For details, see notes below --- the attributes
+    are annotated with ,,last Flight in Fare Component''.
 
     Attributes:
         component_no: Fare component number

@@ -63,7 +63,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class ContentItem:
-    """A segment of a book, report, or standard for which a DOI is being
+    """
+    A segment of a book, report, or standard for which a DOI is being
     registered.
 
     Most commonly used for book chapters.

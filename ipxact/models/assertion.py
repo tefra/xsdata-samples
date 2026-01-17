@@ -11,11 +11,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class Assertion:
-    """Provides an expression for describing valid parameter value settings.
+    """
+    Provides an expression for describing valid parameter value settings.
 
-    If a assertion assert expression evaluates false, the name,
-    displayName and/or description can be used to communicate the
-    assertion failure.
+    If a assertion assert expression evaluates false, the name, displayName
+    and/or description can be used to communicate the assertion failure.
 
     :ivar name: Unique name
     :ivar display_name:

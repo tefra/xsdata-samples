@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class CustLoyaltyType:
     """
-    Program rewarding frequent use by accumulating credits for services provided by
-    vendors.
+    Program rewarding frequent use by accumulating credits for services
+    provided by vendors.
 
     Attributes:
         share_synch_ind:

@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class V2XMUserNeeds:
     """
-    This meta-class represents the ability to express service needs for the V2x
-    management.
+    This meta-class represents the ability to express service needs for the
+    V2x management.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

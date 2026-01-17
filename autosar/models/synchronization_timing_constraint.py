@@ -30,15 +30,30 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SynchronizationTimingConstraint:
-    """This constraint is used to restrict the timing behavior of different, but
-    correlated events or event chains, with regard to synchronization.
+    """
+    This constraint is used to restrict the timing behavior of different,
+    but correlated events or event chains, with regard to synchronization.
 
-    Thereby, in case of imposing a synchronization timing constraint on events or event chains the following two scenarios are supported:
-    1) [synchronizationConstraintType=responseSynchronization] Events: An arbitrary number of correlated events which play the role of responses shall occur synchronously with respect to a predefined tolerance. Event Chains: An arbitrary number of correlated event chains with a common stimulus, but different responses, where the responses shall occur synchronously with respect to a predefined tolerance.
-    2) [synchronizationConstraintType=stimulusSynchronization] Events: An arbitrary number of correlated events which play the role of stimuli shall occur synchronously with respect to a predefined tolerance. Event Chains: An arbitrary number of correlated event chains with a common response, but different stimuli, where the stimuli shall occur synchronously with respect to a predefined tolerance.
-    In case of imposing a synchronization timing constraint on events the following two scenarios are supported:
-    1) [eventOccurrenceKind=singleOccurrence] Any of the events shall occur only once in the given time interval.
-    2) [eventOccurrenceKind=multipleOccurrences] Any of the events may occur more than once in the given time interval. In other words multiple occurrences of an event within the given time interval are permitted.
+    Thereby, in case of imposing a synchronization timing constraint on
+    events or event chains the following two scenarios are supported: 1)
+    [synchronizationConstraintType=responseSynchronization] Events: An
+    arbitrary number of correlated events which play the role of responses
+    shall occur synchronously with respect to a predefined tolerance. Event
+    Chains: An arbitrary number of correlated event chains with a common
+    stimulus, but different responses, where the responses shall occur
+    synchronously with respect to a predefined tolerance. 2)
+    [synchronizationConstraintType=stimulusSynchronization] Events: An
+    arbitrary number of correlated events which play the role of stimuli
+    shall occur synchronously with respect to a predefined tolerance. Event
+    Chains: An arbitrary number of correlated event chains with a common
+    response, but different stimuli, where the stimuli shall occur
+    synchronously with respect to a predefined tolerance. In case of
+    imposing a synchronization timing constraint on events the following
+    two scenarios are supported: 1) [eventOccurrenceKind=singleOccurrence]
+    Any of the events shall occur only once in the given time interval. 2)
+    [eventOccurrenceKind=multipleOccurrences] Any of the events may occur
+    more than once in the given time interval. In other words multiple
+    occurrences of an event within the given time interval are permitted.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

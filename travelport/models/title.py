@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class Title(TypeTextElement):
-    """The additional titles associated to the brand or optional service.
+    """
+    The additional titles associated to the brand or optional service.
 
     Providers: ACH, RCH, 1G, 1V, 1P.
     """

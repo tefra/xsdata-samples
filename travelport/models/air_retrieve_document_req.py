@@ -13,11 +13,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirRetrieveDocumentReq(BaseReq1):
-    """Retrieve the post booking information for a PNR.
+    """
+    Retrieve the post booking information for a PNR.
 
-    ETRs will be returned for standard carriers. TCRs will be returned
-    for Ticketless carriers. If the locator is send on a standard
-    carrier, all ETRs will be retrieved.
+    ETRs will be returned for standard carriers. TCRs will be returned for
+    Ticketless carriers. If the locator is send on a standard carrier, all
+    ETRs will be retrieved.
 
     Parameters
     ----------

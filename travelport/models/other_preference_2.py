@@ -17,8 +17,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class OtherPreference2(TypeKeyTaggedElement2):
     """
-    Defines a preference for a particular set of criteria (e.g. dates, supplier,
-    etc.) that does not fall into the Air, Rail, Vehicle, or Hotel categories.
+    Defines a preference for a particular set of criteria (e.g. dates,
+    supplier, etc.) that does not fall into the Air, Rail, Vehicle, or
+    Hotel categories.
 
     Parameters
     ----------

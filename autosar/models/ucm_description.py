@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UcmDescription:
     """
-    This meta-class represents the ability to define an identifier for a given UCM.
+    This meta-class represents the ability to define an identifier for a
+    given UCM.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

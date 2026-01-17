@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 @dataclass
 class KeyMapping3:
     """
-    Element for which mapping key sent in the request is different from the mapping
-    key comes in the response.
+    Element for which mapping key sent in the request is different from the
+    mapping key comes in the response.
 
     Parameters
     ----------

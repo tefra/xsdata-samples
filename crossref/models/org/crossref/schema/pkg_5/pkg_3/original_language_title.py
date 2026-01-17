@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class OriginalLanguageTitle:
     """
-    The title of an item in its original language if the registration is for a
-    translation of a work.
+    The title of an item in its original language if the registration is
+    for a translation of a work.
     """
 
     class Meta:

@@ -37,8 +37,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcucInstanceReferenceDef:
     """
-    Specify a reference to an XML description of an entity described in another
-    AUTOSAR template using the INSTANCE REFERENCE semantics.
+    Specify a reference to an XML description of an entity described in
+    another AUTOSAR template using the INSTANCE REFERENCE semantics.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

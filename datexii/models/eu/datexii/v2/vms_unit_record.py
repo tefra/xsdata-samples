@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsUnitRecord:
     """
-    A versioned single VMS unit entry/record in the VMS Unit table that defines the
-    characteristics of the VMS unit.
+    A versioned single VMS unit entry/record in the VMS Unit table that
+    defines the characteristics of the VMS unit.
 
     :ivar number_of_vms: Number of variable message signs contolled by
         the unit.

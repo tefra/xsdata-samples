@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class CustomFieldDelete(TypeCustomFieldAndGroupDeleteRef2):
     """
-    Removes a Custom Field  from a Template.
+    Removes a Custom Field from a Template.
     """
 
     class Meta:

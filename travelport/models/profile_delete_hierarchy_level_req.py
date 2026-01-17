@@ -12,7 +12,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileDeleteHierarchyLevelReq(BaseReq5):
-    """Request to delete an existing Group level of an agency or account hierarchy.
+    """
+    Request to delete an existing Group level of an agency or account
+    hierarchy.
 
     Only permitted if no profiles exist for the level.
 

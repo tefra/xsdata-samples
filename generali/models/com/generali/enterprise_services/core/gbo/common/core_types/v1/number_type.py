@@ -8,13 +8,16 @@ __NAMESPACE__ = (
 
 @dataclass
 class NumberType:
-    """<ns1:DictionaryEntryName xmlns:ns1="urn:un:unece:uncefact:documentation:stan
-    dard:CoreComponentsTechnicalSpecification:2">Number.
+    """
+    <ns1:DictionaryEntryName
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Number.
 
-    Type</ns1:DictionaryEntryName>
-    <ns1:Version xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.00</ns1:Version>
-    <ns1:Definition xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A particular whole number.</ns1:Definition>
-    <ns1:PrimitiveType xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Integer</ns1:PrimitiveType>
+    Type</ns1:DictionaryEntryName> <ns1:Version
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.00</ns1:Version>
+    <ns1:Definition
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A
+    particular whole number.</ns1:Definition> <ns1:PrimitiveType
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Integer</ns1:PrimitiveType>.
     """
 
     value: Optional[int] = field(

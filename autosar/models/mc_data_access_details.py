@@ -9,11 +9,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McDataAccessDetails:
-    """This meta-class allows to attach detailed information about the usage of a
-    data buffer by the RTE to a corresponding McDataInstance.
+    """
+    This meta-class allows to attach detailed information about the usage
+    of a data buffer by the RTE to a corresponding McDataInstance.
 
-    Use Case:  Direct memory access to RTE internal buffers for rapid prototyping. In case of implicit communication, the various task local buffers need to be identified in relation to RTE events and variable access points.
-    Note that the SwComponentPrototype, the RunnableEntity and the VariableDataPrototype are implicitly given be the referred instances of RTEEvent and VariableAccess.
+    Use Case: Direct memory access to RTE internal buffers for rapid
+    prototyping. In case of implicit communication, the various task local
+    buffers need to be identified in relation to RTE events and variable
+    access points. Note that the SwComponentPrototype, the RunnableEntity
+    and the VariableDataPrototype are implicitly given be the referred
+    instances of RTEEvent and VariableAccess.
 
     :ivar rte_event_irefs: The RTE event used to receive the data via
         this buffer.

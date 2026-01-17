@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CanFrame:
-    """CAN specific Frame element.
+    """
+    CAN specific Frame element.
 
     This element shall also be used for TTCan.
 

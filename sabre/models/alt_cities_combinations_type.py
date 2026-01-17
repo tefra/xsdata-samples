@@ -12,7 +12,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class AltCitiesCombinationsType:
     """
-    Which (if any) alt cities locations should be handled in a special way (i.e.
+    Which (if any) alt cities locations should be handled in a special way
+    (i.e.
+
     Validate instead of precomputed path).
 
     Attributes:

@@ -19,12 +19,13 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class GroupOfParkingSpaces1(ParkingSpaceBasics):
-    """A group of parking spaces.
+    """
+    A group of parking spaces.
 
     All information provided has to be identical for all places in this
-    group. Can also be used just to give the number of lorry parkings,
-    for example. 'GroupOfParkingSpaces' may be multiple defined or
-    include each other.
+    group. Can also be used just to give the number of lorry parkings, for
+    example. 'GroupOfParkingSpaces' may be multiple defined or include each
+    other.
 
     :ivar parking_number_of_spaces: Number of parking spaces (attribute
         is used for a parking record as well as for a group of parking

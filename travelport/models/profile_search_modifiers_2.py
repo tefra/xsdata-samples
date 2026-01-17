@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileSearchModifiers2:
-    """Specifies the range of search results.
+    """
+    Specifies the range of search results.
 
     If omitted, the default values for each attriubute are used.
 

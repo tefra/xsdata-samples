@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/technical/v1"
 @dataclass
 class TransmissionResponseType(BaseGbmtype):
     """
-    <description xmlns="">The definition of the response message that supports
-    retrieve of a agreement</description>
+    <description xmlns="">The definition of the response message that
+    supports retrieve of a agreement</description>.
     """
 
     status: Optional[str] = field(

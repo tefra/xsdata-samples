@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BlueprintPolicyNotModifiable:
     """
-    The class represents that the related attribute is not modifiable during the
-    blueprinting.
+    The class represents that the related attribute is not modifiable
+    during the blueprinting.
 
     :ivar attribute_name: This identifies the related attribute of a
         BlueprintPolicy. For navigation over the model a subset of xpath

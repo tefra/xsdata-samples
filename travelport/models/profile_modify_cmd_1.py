@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class ProfileModifyCmd1:
     """
-    Wrapper for a set of modification commands to be applied to this profile.
+    Wrapper for a set of modification commands to be applied to this
+    profile.
 
     Parameters
     ----------

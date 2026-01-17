@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class FlightType:
     """
-    Modifier to request flight type options example non-stop only, non-stop and
-    direct only, include single online connection etc.
+    Modifier to request flight type options example non-stop only, non-stop
+    and direct only, include single online connection etc.
 
     Parameters
     ----------

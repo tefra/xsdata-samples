@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class TimeDimensionRepresentationType(SimpleDataStructureRepresentationType):
-    """TimeDimensionRepresentationType defines the representation for the time
+    """
+    TimeDimensionRepresentationType defines the representation for the time
     dimension.
 
     Enumerated values are not allowed.

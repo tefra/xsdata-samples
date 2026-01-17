@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirFareDisplayRuleKey:
-    """The Tariff Fare Rule requested using a Key.
+    """
+    The Tariff Fare Rule requested using a Key.
 
     The key is typically a provider specific string which is required to
     make either a following Air Fare Tariff request for Mileage/Routing

@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class RegistrationRequestType:
-    """RegistrationRequestType describes the structure of a single registration
-    request.
+    """
+    RegistrationRequestType describes the structure of a single
+    registration request.
 
     It contains the details of a registation and an action field to
     indicate the action to be taken on the contained registration.

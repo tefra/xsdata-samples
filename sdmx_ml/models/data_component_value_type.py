@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class DataComponentValueType(SimpleComponentValueType):
     """
-    DataComponentValueType derives from the SimpleValueType, but does not allow for
-    validity dates.
+    DataComponentValueType derives from the SimpleValueType, but does not
+    allow for validity dates.
     """
 
     valid_from: Any = field(

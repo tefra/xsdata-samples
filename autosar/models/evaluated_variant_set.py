@@ -22,21 +22,21 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EvaluatedVariantSet:
-    """This meta class represents the ability to express if a set of ARElements is
-    able to support one or more particular variants.
+    """
+    This meta class represents the ability to express if a set of
+    ARElements is able to support one or more particular variants.
 
     In other words, for a given set of evaluatedElements this meta class
-    represents a table of evaluated variants, where each
-    PredefinedVariant represents one column. In this column each
-    descendant swSystemconstantValue resp.
-    postbuildVariantCriterionValue represents one entry. In a graphical
-    representation each swSystemconstantValueSet /
-    postBuildVariantCriterionValueSet could be used as an intermediate
+    represents a table of evaluated variants, where each PredefinedVariant
+    represents one column. In this column each descendant
+    swSystemconstantValue resp. postbuildVariantCriterionValue represents
+    one entry. In a graphical representation each swSystemconstantValueSet
+    / postBuildVariantCriterionValueSet could be used as an intermediate
     headline in the table column. If the approvalStatus is "APPROVED" it
-    expresses that the collection of CollectableElements is known be
-    valid for the given evaluatedVariants. Note that the
-    EvaluatedVariantSet is a CollectableElement. This allows to
-    establish a hierarchy of EvaluatedVariantSets.
+    expresses that the collection of CollectableElements is known be valid
+    for the given evaluatedVariants. Note that the EvaluatedVariantSet is a
+    CollectableElement. This allows to establish a hierarchy of
+    EvaluatedVariantSets.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

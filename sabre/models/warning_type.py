@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class WarningType(FreeTextType):
     """
-    Standard way to indicate successful processing of an OTA message, but one in
-    which warnings are generated.
+    Standard way to indicate successful processing of an OTA message, but
+    one in which warnings are generated.
 
     Attributes:
         type_value: The Warning element MUST contain the Type attribute

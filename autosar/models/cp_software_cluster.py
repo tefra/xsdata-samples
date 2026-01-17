@@ -22,13 +22,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CpSoftwareCluster:
-    """This meta class provides the ability to define a CP Software Cluster.
+    """
+    This meta class provides the ability to define a CP Software Cluster.
 
-    Each CP Software Cluster can be integrated and build individually.
-    It defines the sub-set of hierarchical tree(s) of Software
-    Components belonging to this CP Software Cluster. Resources required
-    or provided by this CP Software Cluster are given in the according
-    mappings.
+    Each CP Software Cluster can be integrated and build individually. It
+    defines the sub-set of hierarchical tree(s) of Software Components
+    belonging to this CP Software Cluster. Resources required or provided
+    by this CP Software Cluster are given in the according mappings.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

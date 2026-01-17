@@ -26,9 +26,9 @@ __NAMESPACE__ = (
 class FaultType(BaseFaultType):
     """
     <description xmlns="">The fault object used to hold values for an error
-    occurring within a middleware component, intended to be used as part of a
-    SOAP:detail tag within the fault as per the SOAP 1.1
-    specification.</description>
+    occurring within a middleware component, intended to be used as part of
+    a SOAP:detail tag within the fault as per the SOAP 1.1
+    specification.</description>.
 
     :ivar name_text: <description xmlns="">A human readable short text
         name for the fault. Required if the Error Code &gt;= 100, may be

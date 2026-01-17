@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TdCpSoftwareClusterResourceMapping:
     """
-    This is used to assign an unequivocal global resource identification to a
-    temporal and dynamic resource.
+    This is used to assign an unequivocal global resource identification to
+    a temporal and dynamic resource.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -15,11 +15,12 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Head:
-    """Container for information related to the DOI batch submission.
+    """
+    Container for information related to the DOI batch submission.
 
     This element uniquely identifies the batch deposit to Crossref and
-    contains information that will be used as a reference in error
-    messages triggered during submission processing.
+    contains information that will be used as a reference in error messages
+    triggered during submission processing.
     """
 
     class Meta:

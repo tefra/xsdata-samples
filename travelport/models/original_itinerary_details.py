@@ -11,10 +11,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class OriginalItineraryDetails:
-    """Used for rapid reprice to provide additional information about the original
-    itinerary.
+    """
+    Used for rapid reprice to provide additional information about the
+    original itinerary.
 
-    Providers: 1G/1V/1P/1S/1A
+    Providers: 1G/1V/1P/1S/1A.
 
     Parameters
     ----------

@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class BookingRulesFareReference:
-    """Fare Reference associated with the BookingRules.
+    """
+    Fare Reference associated with the BookingRules.
 
     Containing a text container for vendor response text.
     """

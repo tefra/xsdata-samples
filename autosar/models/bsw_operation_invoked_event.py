@@ -32,12 +32,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswOperationInvokedEvent:
-    """This event is thrown on operation invocation in Client-Server-Communication
-    via the BSW Scheduler.
+    """
+    This event is thrown on operation invocation in
+    Client-Server-Communication via the BSW Scheduler.
 
-    Its "entry" reference provides the BswClientServerEntry that is
-    called subsequently. Note this event is not needed in case of direct
-    function calls.
+    Its "entry" reference provides the BswClientServerEntry that is called
+    subsequently. Note this event is not needed in case of direct function
+    calls.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

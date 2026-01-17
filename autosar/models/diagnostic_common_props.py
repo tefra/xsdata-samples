@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticCommonProps:
     """
-    This meta-class aggregates a number of common properties that are shared among
-    a diagnostic extract.
+    This meta-class aggregates a number of common properties that are
+    shared among a diagnostic extract.
 
     :ivar diagnostic_common_props_variants: This element was
         generated/modified due to an atpVariation stereotype.

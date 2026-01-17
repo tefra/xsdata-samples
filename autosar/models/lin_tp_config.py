@@ -25,7 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinTpConfig:
-    """This element defines exactly one Lin TP Configuration.
+    """
+    This element defines exactly one Lin TP Configuration.
 
     One LinTpConfig element shall be created for each Lin Network in the
     System.

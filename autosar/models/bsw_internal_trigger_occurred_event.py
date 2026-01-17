@@ -32,7 +32,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswInternalTriggerOccurredEvent:
-    """A BswEvent, which can happen sporadically.
+    """
+    A BswEvent, which can happen sporadically.
 
     The event is activated by explicit calls from the module to the BSW
     Scheduler. The main purpose for such an event is to cause a context

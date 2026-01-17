@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 class NotifyProgramGbmrequestType(BaseGbmheaderType):
     """
     <description xmlns="">The definition of the message used to retrieve an
-    agreement</description>
+    agreement</description>.
 
     :ivar program_gbo: <description xmlns="">The business object to
         retrieve</description>

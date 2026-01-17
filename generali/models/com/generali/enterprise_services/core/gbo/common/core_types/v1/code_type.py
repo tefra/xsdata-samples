@@ -8,20 +8,30 @@ __NAMESPACE__ = (
 
 @dataclass
 class CodeType:
-    """<ns1:UniqueID xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreCo
-    mponentsTechnicalSpecification:2">UNDT000003</ns1:UniqueID> <ns1:Acronym xmlns:
-    ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecif
-    ication:2">CCT</ns1:Acronym> <ns1:DictionaryEntryName xmlns:ns1="urn:un:unece:u
-    ncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Code.
+    """
+    <ns1:UniqueID
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">UNDT000003</ns1:UniqueID>
+    <ns1:Acronym
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">CCT</ns1:Acronym>
+    <ns1:DictionaryEntryName
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Code.
 
-    Type</ns1:DictionaryEntryName>
-    <ns1:Version xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.01</ns1:Version>
-    <ns1:Definition xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A character string (letters, figures, or symbols) that for brevity and/or languange independence may be used to represent or replace a definitive value or text of an attribute together with relevant supplementary information.
-    </ns1:Definition>
-    <ns1:PrimaryRepresentationTerm xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Code</ns1:PrimaryRepresentationTerm>
-    <ns1:PrimitiveType xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
-    <ns1:UsageRule xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Should not be used if the character string identifies an instance of an object class or an object in the real world, in which case the Identifier. Type should be used.
-    </ns1:UsageRule>
+    Type</ns1:DictionaryEntryName> <ns1:Version
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.01</ns1:Version>
+    <ns1:Definition
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A
+    character string (letters, figures, or symbols) that for brevity and/or
+    languange independence may be used to represent or replace a definitive
+    value or text of an attribute together with relevant supplementary
+    information. </ns1:Definition> <ns1:PrimaryRepresentationTerm
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Code</ns1:PrimaryRepresentationTerm>
+    <ns1:PrimitiveType
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
+    <ns1:UsageRule
+    xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Should
+    not be used if the character string identifies an instance of an object
+    class or an object in the real world, in which case the Identifier.
+    Type should be used. </ns1:UsageRule>.
 
     :ivar value:
     :ivar list_id: <ns1:Name

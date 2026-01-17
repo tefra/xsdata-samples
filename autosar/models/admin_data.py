@@ -46,13 +46,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AdminData:
-    """AdminData represents the ability to express administrative information for
-    an element.
+    """
+    AdminData represents the ability to express administrative information
+    for an element.
 
-    This administration information is to be treated as meta-data such as revision id or state of the file. There are basically four kinds of meta-data
-    * The language and/or used languages.
-    * Revision information covering e.g. revision number, state, release date, changes. Note that this information can be given in general as well as related to a particular company.
-    * Document meta-data specific for a company
+    This administration information is to be treated as meta-data such as
+    revision id or state of the file. There are basically four kinds of
+    meta-data * The language and/or used languages. * Revision information
+    covering e.g. revision number, state, release date, changes. Note that
+    this information can be given in general as well as related to a
+    particular company. * Document meta-data specific for a company.
 
     :ivar language: This attribute  specifies the master language of the
         document or the document fragment. The master language is the
@@ -231,10 +234,9 @@ class Annotation:
 
 @dataclass
 class BlueprintFormula:
-    """This class express the extension of the Formula Language to provide
-    formalized blueprint-Value resp.
-
-    blueprintCondition.
+    """
+    This class express the extension of the Formula Language to provide
+    formalized blueprint-Value resp. blueprintCondition.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
@@ -351,8 +353,8 @@ class BlueprintFormula:
 @dataclass
 class BlueprintGenerator:
     """
-    This class express the Extended Language to generate blueprint derivates in
-    complex descriptions.
+    This class express the Extended Language to generate blueprint
+    derivates in complex descriptions.
 
     :ivar introduction: This represents a description that documents how
         the blueprint generator shall be resolved when deriving objects
@@ -409,7 +411,8 @@ class BlueprintGenerator:
 
 @dataclass
 class DefItem:
-    """This represents an entry in a definition list.
+    """
+    This represents an entry in a definition list.
 
     The defined item is specified using shortName and longName.
 
@@ -629,10 +632,12 @@ class ReferrableRefConditional:
 
 @dataclass
 class DefList:
-    """This meta-class represents the ability to express a list of definitions.
+    """
+    This meta-class represents the ability to express a list of
+    definitions.
 
-    Note that a definition list might be rendered similar to a labeled
-    list but has a particular semantics to denote definitions.
+    Note that a definition list might be rendered similar to a labeled list
+    but has a particular semantics to denote definitions.
 
     :ivar def_item: This is one entry in the definition list. The upper
         multiplicity of this role has been increased to * due to
@@ -731,15 +736,17 @@ class DefList:
 
 @dataclass
 class Sdg:
-    """Sdg (SpecialDataGroup) is a generic model which can be used to keep
-    arbitrary information which is not explicitly modeled in the meta-model.
+    """
+    Sdg (SpecialDataGroup) is a generic model which can be used to keep
+    arbitrary information which is not explicitly modeled in the
+    meta-model.
 
     Sdg can have various contents as defined by sdgContentsType. Special
     Data should only be used moderately since all elements should be
     defined in the meta-model. Thereby SDG should be considered as a
     temporary solution when no explicit model is available. If an
-    sdgCaption is available, it is possible to establish a reference to
-    the sdg structure.
+    sdgCaption is available, it is possible to establish a reference to the
+    sdg structure.
 
     :ivar sdg_caption: This aggregation allows to assign the properties
         of Identifiable to the sdg. By this, a shortName etc. can be
@@ -890,10 +897,11 @@ class Sdg:
 
 @dataclass
 class DocumentationBlock:
-    """This class represents a documentation block.
+    """
+    This class represents a documentation block.
 
-    It is made of basic text structure elements which can be displayed
-    in a table cell.
+    It is made of basic text structure elements which can be displayed in a
+    table cell.
 
     :ivar msr_query_p_2: This represents automatically contributed
         contents provided by an msrquery in the context of
@@ -1057,8 +1065,8 @@ class DocumentationBlock:
 @dataclass
 class MsrQueryP2:
     """
-    This meta-class represents the ability to express a query which yields the
-    content of a DocumentationBlock as a result.
+    This meta-class represents the ability to express a query which yields
+    the content of a DocumentationBlock as a result.
 
     :ivar msr_query_props: This is argument and properties of the
         DocumentationBlock query.
@@ -1113,11 +1121,12 @@ class MsrQueryP2:
 
 @dataclass
 class VariationPoint:
-    """This meta-class represents the ability to express a "structural variation
-    point".
+    """
+    This meta-class represents the ability to express a "structural
+    variation point".
 
-    The container of the variation point is part of the selected variant
-    if swSyscond evaluates to true and each postBuildVariantCriterion is
+    The container of the variation point is part of the selected variant if
+    swSyscond evaluates to true and each postBuildVariantCriterion is
     fulfilled.
 
     :ivar short_label: This provides a name to the particular variation
@@ -1264,7 +1273,8 @@ class VariationPoint:
 @dataclass
 class MultiLanguageParagraph:
     """
-    This is the content model of a multilingual paragraph in a documentation.
+    This is the content model of a multilingual paragraph in a
+    documentation.
 
     :ivar l_1: This is the paragraph content in one partiucular
         language.
@@ -1373,7 +1383,8 @@ class MultiLanguageParagraph:
 
 @dataclass
 class MultiLanguageVerbatim:
-    """This class represents multilingual Verbatim.
+    """
+    This class represents multilingual Verbatim.
 
     Verbatim means, that white-space is maintained. When Verbatim is
     rendered in PDF or Online media, white-space is obeyed. Blanks are
@@ -1513,7 +1524,8 @@ class MultiLanguageVerbatim:
 
 @dataclass
 class StructuredReq:
-    """This represents a structured requirement.
+    """
+    This represents a structured requirement.
 
     This is intended for a case where specific requirements for features
     are collected. Note that this can be rendered as a labeled list.
@@ -2104,13 +2116,13 @@ class MlFigure:
 
 @dataclass
 class MlFormula:
-    """This meta-class represents the ability to express a formula in a
+    """
+    This meta-class represents the ability to express a formula in a
     documentation.
 
     The formula can be expressed by various means. If more than one
-    representation is available, they need to be consistent. The
-    rendering system can use the representation which is most
-    appropriate.
+    representation is available, they need to be consistent. The rendering
+    system can use the representation which is most appropriate.
 
     :ivar formula_caption: This element specifies the identification or
         heading of a formula.
@@ -2464,7 +2476,8 @@ class Item:
 
 @dataclass
 class List:
-    """This meta-class represents the ability to express a list.
+    """
+    This meta-class represents the ability to express a list.
 
     The kind of list is specified in the attribute.
 
@@ -2577,7 +2590,7 @@ class List:
 @dataclass
 class LabeledItem:
     """
-    This represents an item of a labeled list.
+    this represents an item of a labeled list.
 
     :ivar item_label: This is the label of the item.
     :ivar msr_query_p_2: This represents automatically contributed
@@ -2812,11 +2825,11 @@ class LabeledItem:
 
 @dataclass
 class LabeledList:
-    """This meta-class represents a labeled list, in which items have a label and a
-    content.
+    """
+    This meta-class represents a labeled list, in which items have a label
+    and a content.
 
-    The policy how to render such items is specified in the labeled
-    list.
+    The policy how to render such items is specified in the labeled list.
 
     :ivar indent_sample: This is a sample item. This sample is used by a
         rendering system to measure out the width of indentation. Since
@@ -2928,8 +2941,9 @@ class LabeledList:
 
 @dataclass
 class Note:
-    """This represents a note in a documentation, which may be used to highlight
-    specific issues such as hints or caution notes.
+    """
+    This represents a note in a documentation, which may be used to
+    highlight specific issues such as hints or caution notes.
 
     N.B., Documentation notes can be nested recursively, even if this is
     not really intended. In case of nested notes e.g. the note icon of
@@ -3167,13 +3181,13 @@ class Note:
 
 @dataclass
 class TraceableText:
-    """This meta-class represents the ability to denote a traceable text item such
-    as requirements etc.
+    """
+    This meta-class represents the ability to denote a traceable text item
+    such as requirements etc.
 
-    The following approach applies:
-    * '''shortName''' represents the tag for tracing
-    * '''longName''' represents the head line
-    * '''category''' represents the kind of the tagged text
+    The following approach applies: * '''shortName''' represents the tag
+    for tracing * '''longName''' represents the head line * '''category'''
+    represents the kind of the tagged text.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -26,12 +26,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PredefinedVariant:
-    """This specifies one predefined variant.
+    """
+    This specifies one predefined variant.
 
     It is characterized by the union of all system constant values and
     post-build variant criterion values aggregated within all referenced
-    system constant value sets and post build variant criterion value
-    sets plus the value sets of the included variants.
+    system constant value sets and post build variant criterion value sets
+    plus the value sets of the included variants.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

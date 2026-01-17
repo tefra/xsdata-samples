@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ConceptSchemeMapsType:
-    """ConceptSchemeMapsType describes the structure of the concept scheme maps
-    container.
+    """
+    ConceptSchemeMapsType describes the structure of the concept scheme
+    maps container.
 
     It contains one or more concept scheme map, which can be explicitly
-    detailed or referenced from an external structure document or
-    registry service.
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar concept_scheme_map: ConceptSchemeMap provides the details of a
         concept scheme map, which descibes mappings between concepts in

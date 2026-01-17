@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class OriginDestinationInformationType(TravelDateTimeType):
-    """Origin and Destination location, and time information for the request.
+    """
+    Origin and Destination location, and time information for the request.
 
     Also includes the ability to specify a connection location for the
     search.

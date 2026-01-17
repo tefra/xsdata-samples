@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AirPricePointList:
     """
-    Provides the list of AirPricePoint (Non Solutioned Result)
+    Provides the list of AirPricePoint (Non Solutioned Result).
 
     Parameters
     ----------

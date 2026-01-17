@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LimitValue:
-    """This class represents the ability to express a numerical limit.
+    """
+    This class represents the ability to express a numerical limit.
 
     Note that this is in fact a NumericalVariationPoint but has the
     additional attribute intervalType.

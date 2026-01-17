@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class ServiceFee1(TypeKeyElement1):
     """
-    A representation of the Service Fee given to an Agent or Agency within a
-    profile.
+    A representation of the Service Fee given to an Agent or Agency within
+    a profile.
 
     Parameters
     ----------

@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NmtokenString:
-    """This is an identifier as used in xml, e.g. xml-names.
+    """
+    This is an identifier as used in xml, e.g. xml-names.
 
     Basic difference to Identifier is the fact that it can contain "-".
 

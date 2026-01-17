@@ -17,12 +17,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class GenericModuleInstantiation:
-    """This meta-class defines the attributes for the generic module configuration
-    on a specific machine.
+    """
+    This meta-class defines the attributes for the generic module
+    configuration on a specific machine.
 
-    Different modules are distinguishable by the category attribute.
-    This element can also be used to describe modules that are not
-    standardized by AUTOSAR.
+    Different modules are distinguishable by the category attribute. This
+    element can also be used to describe modules that are not standardized
+    by AUTOSAR.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

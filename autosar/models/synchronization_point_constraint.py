@@ -26,9 +26,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SynchronizationPointConstraint:
     """
-    This constraint is used to specify a synchronization point either between
-    groups of executable entities or individual executable entities referenced via
-    their corresponding RTE or BSW events.
+    This constraint is used to specify a synchronization point either
+    between groups of executable entities or individual executable entities
+    referenced via their corresponding RTE or BSW events.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

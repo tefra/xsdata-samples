@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class AccountingReference2(TypeKeyElement2):
     """
-    Used by the Traveler's employer for budgeting, internal billing or other cost
-    accounting purposes.
+    Used by the Traveler's employer for budgeting, internal billing or
+    other cost accounting purposes.
 
     Parameters
     ----------

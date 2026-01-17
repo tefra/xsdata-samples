@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class FlightTypePrefType:
     """
-    Indicates preferences for certain types of flights, such as connections or
-    stopovers, when used for a specific travel situation.
+    Indicates preferences for certain types of flights, such as connections
+    or stopovers, when used for a specific travel situation.
 
     Attributes:
         prefer_level:

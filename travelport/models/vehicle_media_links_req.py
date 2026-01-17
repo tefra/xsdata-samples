@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 @dataclass
 class VehicleMediaLinksReq(BaseReq1):
     """
-    Used to request a list of images for a location (airport or city code) and
-    vendor.
+    Used to request a list of images for a location (airport or city code)
+    and vendor.
     """
 
     class Meta:

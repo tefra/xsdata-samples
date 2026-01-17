@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class SpecialNumbering:
-    """Issue level numbering for supplements or special issues.
+    """
+    Issue level numbering for supplements or special issues.
 
     Text defining the type of special issue (e.g. "suppl") should be
     included in this element along with the number.

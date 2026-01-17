@@ -30,8 +30,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PersistencyDataRequiredComSpec:
     """
-    This meta-class represents the ability to define port-specific attributes for
-    supporting use cases of data persistency on the required side.
+    This meta-class represents the ability to define port-specific
+    attributes for supporting use cases of data persistency on the required
+    side.
 
     :ivar data_element_ref: This refrence represents the
         PersistencyDataElement for which the

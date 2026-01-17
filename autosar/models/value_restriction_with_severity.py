@@ -11,10 +11,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ValueRestrictionWithSeverity:
-    """Specifies valid values of primitive data types.
+    """
+    Specifies valid values of primitive data types.
 
-    A value is valid if all rules defined by this ValueRestriction
-    evaluate to true.
+    A value is valid if all rules defined by this ValueRestriction evaluate
+    to true.
 
     :ivar severity: Severity level that is reported in case the
         restriction is violated.

@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinUnconditionalFrame:
-    """Unconditional frames carry signals.
+    """
+    Unconditional frames carry signals.
 
     The master sends a frame header in a scheduled frame slot and the
     designated slave node fills the frame with data.

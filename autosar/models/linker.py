@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Linker:
     """
-    Specifies the linker attributes used to describe how the linker shall be
-    invoked.
+    Specifies the linker attributes used to describe how the linker shall
+    be invoked.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

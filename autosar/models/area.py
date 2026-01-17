@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Area:
-    """This element specifies a region in an image map.
+    """
+    This element specifies a region in an image map.
 
     Image maps enable authors to specify regions in an object (e.g. a
-    graphic) and to assign a specific activity to each region (e.g. load
-    a document, launch a program etc.). For more details refer to the
+    graphic) and to assign a specific activity to each region (e.g. load a
+    document, launch a program etc.). For more details refer to the
     specification of HTML.
 
     :ivar s: Checksum calculated by the user's tool environment for an

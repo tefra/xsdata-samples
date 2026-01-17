@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class StructureHeaderType(BaseHeaderType):
     """
-    StructureHeaderType defines the structure for structural metadata messages.
+    StructureHeaderType defines the structure for structural metadata
+    messages.
 
     :ivar structure: Structure provides a reference to the structure
         (either explicitly or through a structure usage reference) that

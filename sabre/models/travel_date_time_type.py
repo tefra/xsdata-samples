@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class TravelDateTimeType:
     """
-    Date and time of trip, that allows specifying a time window before and after
-    the given date.
+    Date and time of trip, that allows specifying a time window before and
+    after the given date.
 
     Attributes:
         departure_date_time: This date should be of the form YYYY-MM-

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RptPreparationEnum:
     """
-    Determines the RP preparation level for access to VariableDataPrototypes within
-    the generated RTE implementation.
+    Determines the RP preparation level for access to
+    VariableDataPrototypes within the generated RTE implementation.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

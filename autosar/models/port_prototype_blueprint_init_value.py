@@ -29,7 +29,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PortPrototypeBlueprintInitValue:
-    """This meta-class represents the ability to express init values in
+    """
+    This meta-class represents the ability to express init values in
     PortPrototypeBlueprints.
 
     These init values act as a kind of blueprint from which for example

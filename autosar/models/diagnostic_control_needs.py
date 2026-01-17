@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticControlNeeds:
     """
-    This meta-class indicates a service use-case for reporting the controlled
-    status by diagnostic services.
+    This meta-class indicates a service use-case for reporting the
+    controlled status by diagnostic services.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

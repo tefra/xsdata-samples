@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class SeverityEnum(Enum):
     """
-    Levels of severity of a situation as whole assessed by the impact that the
-    situation may have on traffic flow as perceived by the supplier.
+    Levels of severity of a situation as whole assessed by the impact that
+    the situation may have on traffic flow as perceived by the supplier.
 
     :cvar HIGHEST: Perceived by supplier as being of the highest level.
     :cvar HIGH: Perceived by supplier as being of a high level.

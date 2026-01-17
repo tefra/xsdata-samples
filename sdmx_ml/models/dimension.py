@@ -10,9 +10,9 @@ class Dimension(DimensionType):
     """
     Dimension describes the structure of a dimension, which is defined as a
     statistical concept used (most probably together with other statistical
-    concepts) to identify a statistical series, such as a time series, e.g. a
-    statistical concept indicating certain economic activity or a geographical
-    reference area.
+    concepts) to identify a statistical series, such as a time series, e.g.
+    a statistical concept indicating certain economic activity or a
+    geographical reference area.
     """
 
     class Meta:

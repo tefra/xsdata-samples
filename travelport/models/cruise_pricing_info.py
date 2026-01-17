@@ -18,7 +18,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 @dataclass
 class CruisePricingInfo:
-    """Cruise pricing Information.
+    """
+    Cruise pricing Information.
 
     Contains all related pricing data for travelers.
 

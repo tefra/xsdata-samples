@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class MetadataStructureComponentsBaseType(GroupingType):
     """
-    MetadataStructureComponentsBaseType is an abstract base type that forms the
-    basis for the MetadataStructureComponentsType.
+    MetadataStructureComponentsBaseType is an abstract base type that forms
+    the basis for the MetadataStructureComponentsType.
     """
 
     choice: Any = field(

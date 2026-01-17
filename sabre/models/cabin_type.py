@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 class CabinType(Enum):
     """
-    A cabin is either Premium First (P), First (F), Premium Business (J), Business
-    (C), Premium Economy (S) or Economy (Y)
+    A cabin is either Premium First (P), First (F), Premium Business (J),
+    Business (C), Premium Economy (S) or Economy (Y).
     """
 
     PREMIUM_FIRST = "PremiumFirst"

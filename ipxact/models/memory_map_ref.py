@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class MemoryMapRef(MemoryMapRefType):
-    """References the memory map.
+    """
+    References the memory map.
 
     The name of the memory map is kept in its memoryMapRef attribute.
     """

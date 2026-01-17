@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Br:
     """
-    This element is the same as function here as in a HTML document i.e. it forces
-    a line break.
+    This element is the same as function here as in a HTML document i.e. it
+    forces a line break.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

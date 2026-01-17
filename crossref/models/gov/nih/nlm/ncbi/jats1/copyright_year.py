@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class CopyrightYear:
     """
-    <div> <h3>Copyright Year</h3> </div>
+    <div> <h3>Copyright Year</h3> </div>.
     """
 
     class Meta:

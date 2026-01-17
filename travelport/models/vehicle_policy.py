@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 @dataclass
 class VehiclePolicy:
-    """Policy information provided by the Vehicle Supplier.
+    """
+    Policy information provided by the Vehicle Supplier.
 
     Usually relative to a specific location.
     """

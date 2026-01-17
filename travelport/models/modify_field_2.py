@@ -18,13 +18,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ModifyField2:
-    """Details of a root-level field to be updated.
+    """
+    Details of a root-level field to be updated.
 
-    Root-level fields cannot be created or deleted with this service.
-    Child fields must be modified within ModifyFieldGroup. When updating
-    a field, to remove data from an optional attribute, omit the
-    attribute. Note that Display Order is not applicable to root-level
-    fields.
+    Root-level fields cannot be created or deleted with this service. Child
+    fields must be modified within ModifyFieldGroup. When updating a field,
+    to remove data from an optional attribute, omit the attribute. Note
+    that Display Order is not applicable to root-level fields.
 
     Parameters
     ----------

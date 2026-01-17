@@ -21,7 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class TlsDeployment:
     """
     The meta-class represents the ability to define a deployment of the TLS
-    communication protocol configuration settings to crypto module entities.
+    communication protocol configuration settings to crypto module
+    entities.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

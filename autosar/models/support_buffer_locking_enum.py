@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SupportBufferLockingEnum:
     """
-    This enumeration represents the ability to define the buffer locking behavior.
+    This enumeration represents the ability to define the buffer locking
+    behavior.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

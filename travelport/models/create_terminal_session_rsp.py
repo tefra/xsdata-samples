@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 @dataclass
 class CreateTerminalSessionRsp(BaseRsp4):
     """
-    The response containing your session token information to use with TerminalReq
-    Don't forget to EndSession when done with the HostToken!
+    The response containing your session token information to use with
+    TerminalReq Don't forget to EndSession when done with the HostToken!
 
     Parameters
     ----------

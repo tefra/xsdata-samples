@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class VariationRestrictionWithSeverity:
     """
-    Defines constraints on the usage of variation and on the valid binding times.
+    Defines constraints on the usage of variation and on the valid binding
+    times.
 
     :ivar severity: Severity level that is reported in case the
         restriction is violated.

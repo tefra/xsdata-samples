@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class TpegLoc03OtherPointDescriptorSubtypeEnum(Enum):
     """
-    Descriptors other than junction names and road descriptors which can help to
-    identify the location of points on the road network.
+    Descriptors other than junction names and road descriptors which can
+    help to identify the location of points on the road network.
 
     :cvar ADMINISTRATIVE_AREA_NAME: Name of an administrative area.
     :cvar ADMINISTRATIVE_REFERENCE_NAME: Reference name by which an

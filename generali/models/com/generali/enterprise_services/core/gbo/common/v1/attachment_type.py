@@ -20,9 +20,9 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class AttachmentType(BaseIdentifiedComponentType):
     """
-    <description xmlns="">A type that specifies an attachment to a business object
-    either as an embedded object or as a reference to an external
-    document.</description>
+    <description xmlns="">A type that specifies an attachment to a business
+    object either as an embedded object or as a reference to an external
+    document.</description>.
 
     :ivar size_measure: <description xmlns="">The size in Bytes of the
         of the document or attachment. If this component contains the

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 @dataclass
 class TypeAssociatedRemarkWithSegmentRef6(TypeAssociatedRemark6):
     """
-    A textual remark container to hold Associated itinerary remarks with segment
-    association.
+    A textual remark container to hold Associated itinerary remarks with
+    segment association.
 
     Parameters
     ----------

@@ -15,9 +15,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FlexrayFifoConfiguration:
     """
-    One First In First Out (FIFO) queued receive structure, defining the admittance
-    criteria to the FIFO, and mandating the ability to admit messages into the FIFO
-    based on Message Id filtering criteria.
+    One First In First Out (FIFO) queued receive structure, defining the
+    admittance criteria to the FIFO, and mandating the ability to admit
+    messages into the FIFO based on Message Id filtering criteria.
 
     :ivar admit_without_message_id: Boolean configuration which
         determines whether or not frames received in the dynamic segment

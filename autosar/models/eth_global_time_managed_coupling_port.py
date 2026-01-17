@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EthGlobalTimeManagedCouplingPort:
     """
-    Specifies a CouplingPort which is managed by an Ethernet Global Time Domain.
+    Specifies a CouplingPort which is managed by an Ethernet Global Time
+    Domain.
 
     :ivar coupling_port_ref: Defines which CouplingPort is managed by
         this EthGlobalTimeManagedCouplingPort.

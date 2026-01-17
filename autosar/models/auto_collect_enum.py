@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AutoCollectEnum:
     """
-    This enumerator defines the possible approaches to determine the final set of
-    elements in a collection.
+    This enumerator defines the possible approaches to determine the final
+    set of elements in a collection.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

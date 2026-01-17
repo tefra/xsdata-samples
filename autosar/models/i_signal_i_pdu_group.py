@@ -24,11 +24,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ISignalIPduGroup:
-    """The AUTOSAR COM Layer is able to start and to stop sending and receiving
-    configurable groups of I-Pdus during runtime.
+    """
+    The AUTOSAR COM Layer is able to start and to stop sending and
+    receiving configurable groups of I-Pdus during runtime.
 
-    An ISignalIPduGroup contains either ISignalIPdus or
-    ISignalIPduGroups.
+    An ISignalIPduGroup contains either ISignalIPdus or ISignalIPduGroups.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

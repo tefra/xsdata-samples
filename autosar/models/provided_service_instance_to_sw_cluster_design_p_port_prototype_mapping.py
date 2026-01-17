@@ -25,9 +25,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
-    """This concrete meta-class represents the ability to assign a transport-layer-
-    dependent ProvidedServiceInstance to a PPortPrototype in the context of the
-    SoftwareClusterDesign.
+    """
+    This concrete meta-class represents the ability to assign a
+    transport-layer-dependent ProvidedServiceInstance to a PPortPrototype
+    in the context of the SoftwareClusterDesign.
 
     With this mapping it is possible to define the list of provided and
     required AdaptivePlatformServiceInstances in the scope of the

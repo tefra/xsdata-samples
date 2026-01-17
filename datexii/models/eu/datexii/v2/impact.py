@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Impact:
     """
-    An assessment of the impact that an event or operator action defined by the
-    situation record has on the driving conditions.
+    An assessment of the impact that an event or operator action defined by
+    the situation record has on the driving conditions.
 
     :ivar capacity_remaining: The ratio of current capacity to the
         normal (free flow) road capacity in the defined direction,

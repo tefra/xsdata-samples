@@ -19,11 +19,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TdEventComplex:
-    """This is used to describe complex timing events.
+    """
+    This is used to describe complex timing events.
 
-    The context of a complex timing event either is described
-    informally, e.g. using the documentation block, or is described
-    formally by the associated TDEventOccurrenceExpression.
+    The context of a complex timing event either is described informally,
+    e.g. using the documentation block, or is described formally by the
+    associated TDEventOccurrenceExpression.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -16,7 +16,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class CheckType(BaseIdentifiedComponentType):
-    """The schema containing the declarations for the framework check object.
+    """
+    The schema containing the declarations for the framework check object.
 
     This is used to support the verification of a business object with a
     authoritative third-party reference, e.g. Dun and Bradstreet or a

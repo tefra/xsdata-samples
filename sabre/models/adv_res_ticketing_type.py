@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class AdvResTicketingType:
     """
-    Container used to hold information regarding advance reservation and/or advance
-    ticketing.
+    Container used to hold information regarding advance reservation and/or
+    advance ticketing.
 
     Attributes:
         adv_reservation: Specifies constraints on date of advance

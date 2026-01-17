@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DiagnosticParameterIdentifier:
     """
     This meta-class represents the ability to model a diagnostic parameter
-    identifier (PID) for the purpose of executing on-board diagnostics (OBD).
+    identifier (PID) for the purpose of executing on-board diagnostics
+    (OBD).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

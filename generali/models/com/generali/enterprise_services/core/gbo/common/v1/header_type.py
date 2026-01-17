@@ -16,8 +16,9 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class HeaderType:
-    """The header is mandatory for all messages and provides information that a
-    service may need in order to communicate or process the message.
+    """
+    The header is mandatory for all messages and provides information that
+    a service may need in order to communicate or process the message.
 
     It contains non-business fields which assist in the handling of the
     message, such as a ConversationID, for auditing/tracking.

@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class NonOrderedLocationGroupByList(NonOrderedLocations):
     """
-    A group of (i.e. more than one) physically separate locations which have no
-    specific order and where each location is explicitly listed.
+    A group of (i.e. more than one) physically separate locations which
+    have no specific order and where each location is explicitly listed.
 
     :ivar location_contained_in_group: A location contained in a non
         ordered group of locations.

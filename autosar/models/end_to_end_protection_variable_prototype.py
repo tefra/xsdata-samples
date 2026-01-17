@@ -12,10 +12,20 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EndToEndProtectionVariablePrototype:
-    """It is possible to protect the data exchanged between software components.
+    """
+    It is possible to protect the data exchanged between software
+    components.
 
-    For this purpose, for each communication to be protected,  the user defines a separate EndToEndProtection (specifying a set of protection settings) and refers to a variableDataPrototype in the role of sender and to one or many variableDataPrototypes in the role of receiver. For details, see EndToEnd Library.
-    Caveat: The E2E wrapper approach involves technologies that are not subjected to the AUTOSAR standard and is superseded by the superior E2E transformer approach (which is fully standardized by AUTOSAR). Hence, new projects (without legacy constraints due to carry-over parts) shall use the fully standardized E2E transformer approach.
+    For this purpose, for each communication to be protected, the user
+    defines a separate EndToEndProtection (specifying a set of protection
+    settings) and refers to a variableDataPrototype in the role of sender
+    and to one or many variableDataPrototypes in the role of receiver. For
+    details, see EndToEnd Library. Caveat: The E2E wrapper approach
+    involves technologies that are not subjected to the AUTOSAR standard
+    and is superseded by the superior E2E transformer approach (which is
+    fully standardized by AUTOSAR). Hence, new projects (without legacy
+    constraints due to carry-over parts) shall use the fully standardized
+    E2E transformer approach.
 
     :ivar receiver_irefs: This represents the receiver. Note that 1:n
         communication is supported for this use case.

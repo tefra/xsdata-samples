@@ -27,7 +27,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Component:
-    """Container for component metadata.
+    """
+    Container for component metadata.
 
     Supplemental materials, figures, tables, and other items that can be
     considered a citeable part of a registered item may be registered as

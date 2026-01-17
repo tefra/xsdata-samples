@@ -16,13 +16,14 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class CustomMetadata:
-    """Publishers are encouraged to provided any non-bibliographical metadata that
-    they feel might help the researcher evaluate and make better use of the content
-    that the Crossmark record refers to.
+    """
+    Publishers are encouraged to provided any non-bibliographical metadata
+    that they feel might help the researcher evaluate and make better use
+    of the content that the Crossmark record refers to.
 
     For example, publishers might want to provide funding information,
-    clinical trial numbers, information about the peer-review process or
-    a summary of the publication history of the document.
+    clinical trial numbers, information about the peer-review process or a
+    summary of the publication history of the document.
     """
 
     class Meta:

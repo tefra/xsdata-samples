@@ -18,7 +18,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class EmailAddressType:
     """
     <description xmlns="">A Email Address conforming to RFC5321 and
-    RFC5322.</description>
+    RFC5322.</description>.
 
     :ivar full_address_text: <description xmlns="">The full email
         address e.g. peter.jackson@vodafone.com</description>

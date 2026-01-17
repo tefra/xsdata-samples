@@ -17,13 +17,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SecureOnBoardCommunicationNeeds:
-    """Specifies the need for the existence of the SecOc module on the respective
-    ECU.
+    """
+    Specifies the need for the existence of the SecOc module on the
+    respective ECU.
 
-    This class currently contains no attributes. An instance of this
-    class is used to find out which ports of a software-component deal
-    with the administration of secure communication in order to group
-    the request and response ports.
+    This class currently contains no attributes. An instance of this class
+    is used to find out which ports of a software-component deal with the
+    administration of secure communication in order to group the request
+    and response ports.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

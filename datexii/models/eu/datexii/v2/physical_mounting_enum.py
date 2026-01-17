@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class PhysicalMountingEnum(Enum):
     """
-    The ways in which equipments such as VMS are mounted or deployed on the road.
+    The ways in which equipments such as VMS are mounted or deployed on the
+    road.
 
     :cvar CENTRAL_RESERVATION_MOUNTED: Equipment mounted in the central
         reservation.

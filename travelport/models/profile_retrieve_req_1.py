@@ -4,11 +4,11 @@ from dataclasses import dataclass, field
 
 from travelport.models.base_req_2 import BaseReq2
 from travelport.models.profile_data_filter_1 import ProfileDataFilter1
-from travelport.models.provisioning_code_profile_type_7 import (
-    ProvisioningCodeProfileType7,
+from travelport.models.provisioning_code_profile_type_1 import (
+    ProvisioningCodeProfileType1,
 )
-from travelport.models.unique_profile_id_profile_type_7 import (
-    UniqueProfileIdProfileType7,
+from travelport.models.unique_profile_id_profile_type_1 import (
+    UniqueProfileIdProfileType1,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -16,11 +16,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class ProfileRetrieveReq1(BaseReq2):
-    """Request to retrieve a particular profile.
+    """
+    Request to retrieve a particular profile.
 
-    Either the full parent profiles or a summary can also be requested
-    on the response.  Either ProfileID or ProvisioningCode are
-    mandatory.
+    Either the full parent profiles or a summary can also be requested on
+    the response. Either ProfileID or ProvisioningCode are mandatory.
 
     Parameters
     ----------
@@ -98,7 +98,7 @@ class ProfileRetrieveReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType7 = field(
+        profile_type: None | ProvisioningCodeProfileType1 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -131,7 +131,7 @@ class ProfileRetrieveReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType7 = field(
+        profile_type: None | UniqueProfileIdProfileType1 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

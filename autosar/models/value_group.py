@@ -12,10 +12,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ValueGroup:
-    """This element enables valules  to be grouped.
+    """
+    This element enables valules to be grouped.
 
-    It can be used to perform row and column-orientated groupings, so
-    that these can be rendered properly e.g. as a table.
+    It can be used to perform row and column-orientated groupings, so that
+    these can be rendered properly e.g. as a table.
 
     :ivar label: This label allows to give the valueGroup a partiluclar
         name. It can be usel if the Values are rendered as a table.

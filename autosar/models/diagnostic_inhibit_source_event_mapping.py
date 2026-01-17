@@ -26,14 +26,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticInhibitSourceEventMapping:
-    """This meta-class represents the ability to map a
-    DiagnosticFunctionInhibitSource directly to alternatively one DiagnosticEvent
-    or one DiagnosticFimSummaryEvent.
+    """
+    This meta-class represents the ability to map a
+    DiagnosticFunctionInhibitSource directly to alternatively one
+    DiagnosticEvent or one DiagnosticFimSummaryEvent.
 
-    This model element shall be used if the approach via the alias
-    events is not applicable, i.e. when diagnostic events defined by the
-    Dem are already available at the time the Fim configuration within
-    the diagnostic extract is created.
+    This model element shall be used if the approach via the alias events
+    is not applicable, i.e. when diagnostic events defined by the Dem are
+    already available at the time the Fim configuration within the
+    diagnostic extract is created.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

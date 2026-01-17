@@ -61,14 +61,14 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class StructuresType:
-    """StructuresType describes the structure of the container for all structural
-    metadata components.
+    """
+    StructuresType describes the structure of the container for all
+    structural metadata components.
 
     The structural components may be explicitly detailed, or referenced
-    from an external structure document or registry service. Best
-    practices dictate that, at a minimum, any structural component that
-    is referenced by another structural component be included by
-    reference.
+    from an external structure document or registry service. Best practices
+    dictate that, at a minimum, any structural component that is referenced
+    by another structural component be included by reference.
 
     :ivar agency_schemes: AgencySchemes contains a collection of agency
         scheme descriptions. The agency schemes may be detailed in full,

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticTroubleCodeJ1939DtcKindEnum:
     """
-    This meta-class represents the ability to further specify a J1939 DTC in terms
-    of its semantics.
+    This meta-class represents the ability to further specify a J1939 DTC
+    in terms of its semantics.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

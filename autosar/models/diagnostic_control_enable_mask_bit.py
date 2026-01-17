@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticControlEnableMaskBit:
     """
-    This meta-class has the ability to represent one bit in the control enable mask
-    record.
+    This meta-class has the ability to represent one bit in the control
+    enable mask record.
 
     :ivar bit_number: This attribute represents the bit number of the
         bit in the control mask record. Bit number 0 is the most

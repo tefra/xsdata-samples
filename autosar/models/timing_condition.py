@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TimingCondition:
-    """A TimingCondition describes a dependency on a specific condition.
+    """
+    A TimingCondition describes a dependency on a specific condition.
 
     The element owns an expression which describes the timing condition
     dependency.

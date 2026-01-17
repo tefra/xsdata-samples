@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DeterministicClient:
     """
     The meta-class DeterministicClient provides the ability to support the
-    deterministic execution of one or more processes with specific configuration
-    parameters for DeterministicClient library functions.
+    deterministic execution of one or more processes with specific
+    configuration parameters for DeterministicClient library functions.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

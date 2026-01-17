@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class ModifyFieldGroup1:
-    """Details of the field group and its child fields.
+    """
+    Details of the field group and its child fields.
 
     To remove data from an optional attribute, omit the attribute.
 

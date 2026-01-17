@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RemotingTechnology:
-    """This element is deprecated and will be removed in future.
+    """
+    This element is deprecated and will be removed in future.
 
     Old description: Defines the used remoting Technology.
 

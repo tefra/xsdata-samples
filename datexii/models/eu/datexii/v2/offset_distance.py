@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OffsetDistance:
     """
-    The non negative offset distance from the ALERT-C referenced point to the
-    actual point.
+    The non negative offset distance from the ALERT-C referenced point to
+    the actual point.
 
     :ivar offset_distance: The non negative offset distance from the
         ALERT-C referenced point to the actual point. The ALERT-C

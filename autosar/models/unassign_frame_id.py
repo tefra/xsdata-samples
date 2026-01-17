@@ -17,8 +17,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class UnassignFrameId:
-    """Schedule entry for an Unassign Frame Id master request where the protected
-    identifier is assigned the value 0x40.
+    """
+    Schedule entry for an Unassign Frame Id master request where the
+    protected identifier is assigned the value 0x40.
 
     This will disable reception/transmission of a previously dynamically
     assigned frame identifier.

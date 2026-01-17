@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class ProfileRetrieveHistoryReq1(BaseReq2):
     """
-    Request to retrieve history for the whole profile, a particular element, or a
-    date range.
+    Request to retrieve history for the whole profile, a particular
+    element, or a date range.
 
     Parameters
     ----------

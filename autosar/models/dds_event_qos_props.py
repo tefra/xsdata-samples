@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DdsEventQosProps:
     """
-    Configuration properties of the Event using DDS as the underlying network
-    binding.
+    Configuration properties of the Event using DDS as the underlying
+    network binding.
 
     :ivar qos_profile: Identifies a group of QoS Policies that apply to
         the DDS entities associated with the event, method, field, or

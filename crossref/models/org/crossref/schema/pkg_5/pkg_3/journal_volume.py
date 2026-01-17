@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class JournalVolume:
-    """Container for the journal volume and DOI assigned to an entire journal
+    """
+    Container for the journal volume and DOI assigned to an entire journal
     volume.
 
     You may register a DOI for an entire volume by including doi_data in

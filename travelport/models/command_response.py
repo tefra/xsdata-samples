@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 @dataclass
 class CommandResponse(TypeTextBlock1):
-    """The response from the host.
+    """
+    The response from the host.
 
     Usually pre-formatted.
     """

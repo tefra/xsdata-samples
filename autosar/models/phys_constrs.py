@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PhysConstrs:
-    """This meta-class represents the ability to express physical constraints.
+    """
+    This meta-class represents the ability to express physical constraints.
 
     Therefore it has (in opposite to InternalConstrs) a reference to a
     Unit.

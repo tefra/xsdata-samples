@@ -29,8 +29,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoKeySlot:
     """
-    This meta-class represents the ability to define a concrete key to be used for
-    a crypto operation.
+    This meta-class represents the ability to define a concrete key to be
+    used for a crypto operation.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

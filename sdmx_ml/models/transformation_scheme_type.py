@@ -10,7 +10,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class TransformationSchemeType(TransformationSchemeBaseType):
-    """TransformationSchemeType describes the structure of a transformation scheme.
+    """
+    TransformationSchemeType describes the structure of a transformation
+    scheme.
 
     A transformation scheme contains a set of transformations to be
     executed together (in the same run). It can contain any number of

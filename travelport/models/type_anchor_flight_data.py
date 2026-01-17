@@ -7,9 +7,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class TypeAnchorFlightData:
-    """To support Anchor flight search contain the anchor flight details.
+    """
+    To support Anchor flight search contain the anchor flight details.
 
-    Supported providers 1P
+    Supported providers 1P.
 
     Parameters
     ----------

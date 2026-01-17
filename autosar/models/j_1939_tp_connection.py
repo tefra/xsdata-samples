@@ -16,9 +16,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class J1939TpConnection:
-    """A J1939TpConnection represents an internal path for the transmission or
-    reception of a Pdu via J1939Tp and describes the sender and the receiver of
-    this particular communication.
+    """
+    A J1939TpConnection represents an internal path for the transmission or
+    reception of a Pdu via J1939Tp and describes the sender and the
+    receiver of this particular communication.
 
     The J1939Tp module routes a Pdu (J1939 PGN) through the connection.
 

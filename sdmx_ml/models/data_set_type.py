@@ -18,8 +18,43 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class DataSetType(AnnotableType):
-    """<ns1:p xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">DataSetType is the abstract type which defines the base structure for any data structure definition specific data set. A derived data set type will be created that is specific to a data structure definition and the details of the organisation of the data (i.e. which dimension is the observation dimension). Data is organised into either a collection of series (grouped observations) or a collection of un-grouped observations. The derived data set type will restrict this choice to be either grouped or un-grouped observations. If this dimension is "AllDimensions" then the derived data set type must consist of a collection of un-grouped observations; otherwise the data set will contain a collection of series with the observations in the series disambiguated by the specified dimension at the observation level. This data set is capable of containing data (observed values) and/or documentation (data and metadata attribute values) and can be used for incremental updates and deletions (i.e. only the relevant updates or deletes are exchanged). It is assumed that each series or un-grouped observation will be distinct in its purpose. For example, if series contains both data and documentation, it assumed that each series will have a unique key. If the series contains only data or only documentation, then it is possible that another series with the same key might exist, but with not with the same purpose (i.e. to provide data or documentation) as the first series.</ns1:p>
-    <ns1:p xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">This base type is designed such that derived types can be processed in a generic manner; it assures that data structure definition specific data will have a consistent structure. The group, series, obs, and atts elements are unqualified, meaning that they are not qualified with a namespace in an instance. This means that in the derived data set types, the elements will always be the same, regardless of the target namespace of the schemas which defines these derived types. This allows for consistent processing of the structure without regard to what the namespace might be for the data structure definition specific schema.</ns1:p>
+    """
+    <ns1:p
+    xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">DataSetType
+    is the abstract type which defines the base structure for any data
+    structure definition specific data set.
+
+    A derived data set type will be created that is specific to a data
+    structure definition and the details of the organisation of the data
+    (i.e. which dimension is the observation dimension). Data is organised
+    into either a collection of series (grouped observations) or a
+    collection of un-grouped observations. The derived data set type will
+    restrict this choice to be either grouped or un-grouped observations.
+    If this dimension is "AllDimensions" then the derived data set type
+    must consist of a collection of un-grouped observations; otherwise the
+    data set will contain a collection of series with the observations in
+    the series disambiguated by the specified dimension at the observation
+    level. This data set is capable of containing data (observed values)
+    and/or documentation (data and metadata attribute values) and can be
+    used for incremental updates and deletions (i.e. only the relevant
+    updates or deletes are exchanged). It is assumed that each series or
+    un-grouped observation will be distinct in its purpose. For example, if
+    series contains both data and documentation, it assumed that each
+    series will have a unique key. If the series contains only data or only
+    documentation, then it is possible that another series with the same
+    key might exist, but with not with the same purpose (i.e. to provide
+    data or documentation) as the first series.</ns1:p> <ns1:p
+    xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">This
+    base type is designed such that derived types can be processed in a
+    generic manner; it assures that data structure definition specific data
+    will have a consistent structure. The group, series, obs, and atts
+    elements are unqualified, meaning that they are not qualified with a
+    namespace in an instance. This means that in the derived data set
+    types, the elements will always be the same, regardless of the target
+    namespace of the schemas which defines these derived types. This allows
+    for consistent processing of the structure without regard to what the
+    namespace might be for the data structure definition specific
+    schema.</ns1:p>.
 
     :ivar data_provider: DataProvider contains a reference to the
         provider for the data set.

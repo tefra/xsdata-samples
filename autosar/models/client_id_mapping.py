@@ -9,10 +9,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ClientIdMapping:
-    """In case of a server on one ECU with multiple clients on other ECUs, the
-    client server communication shall use different unique COM signals and signal
-    groups for each client to allow the identification of the client associated
-    with each system signal.
+    """
+    In case of a server on one ECU with multiple clients on other ECUs, the
+    client server communication shall use different unique COM signals and
+    signal groups for each client to allow the identification of the client
+    associated with each system signal.
 
     The ClientId is mapped to the requestGroup and to the responseGroup.
 

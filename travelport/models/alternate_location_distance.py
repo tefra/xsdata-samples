@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AlternateLocationDistance:
     """
-    Information about the Original Search Airport to Alternate Search Airport.
+    Information about the Original Search Airport to Alternate Search
+    Airport.
 
     Parameters
     ----------

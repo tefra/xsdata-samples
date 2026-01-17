@@ -10,12 +10,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class RepresentationType:
-    """RepresentationType is an abstract type that defines a representation.
+    """
+    RepresentationType is an abstract type that defines a representation.
 
-    Because the type of item schemes that are allowed as the an
-    enumeration vary based on the object in which this is defined, this
-    type is abstract to force that the enumeration reference be
-    restricted to the proper type of item scheme reference.
+    Because the type of item schemes that are allowed as the an enumeration
+    vary based on the object in which this is defined, this type is
+    abstract to force that the enumeration reference be restricted to the
+    proper type of item scheme reference.
 
     :ivar text_format_or_enumeration_or_enumeration_format:
     :ivar min_occurs: The minOccurs attribute indicates the minimum

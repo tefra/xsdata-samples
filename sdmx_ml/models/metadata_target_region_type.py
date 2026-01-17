@@ -8,15 +8,16 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataTargetRegionType(RegionType):
-    """MetadataTargetRegionType defines the structure of a metadata target region.
+    """
+    MetadataTargetRegionType defines the structure of a metadata target
+    region.
 
     A metadata target region must define the report structure and the
-    metadata target from that structure on which the region is based.
-    This type is based on the abstract RegionType and simply refines the
-    key and attribute values to conform with what is applicable for
-    target objects and metadata attributes, respectively. See the
-    documentation of the base type for more details on how a region is
-    defined.
+    metadata target from that structure on which the region is based. This
+    type is based on the abstract RegionType and simply refines the key and
+    attribute values to conform with what is applicable for target objects
+    and metadata attributes, respectively. See the documentation of the
+    base type for more details on how a region is defined.
 
     :ivar key_value: KeyValue contains a reference to a component which
         disambiguates the data (i.e. a dimension) and provides a

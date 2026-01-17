@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class ExpertSolution:
     """
-    Information about Expert Solution Route component retrieved from Knowledge
-    Base.
+    Information about Expert Solution Route component retrieved from
+    Knowledge Base.
 
     Parameters
     ----------

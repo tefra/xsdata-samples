@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEventWindow:
     """
-    This represents the ability to define the characteristics of the applicable
-    event window.
+    This represents the ability to define the characteristics of the
+    applicable event window.
 
     :ivar event_window_time: This attribute clarifies the validity of
         the eventWindow

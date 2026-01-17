@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ItineraryByReference(Itinerary):
     """
-    Multiple (i.e. more than one) physically separate locations which are ordered
-    that constitute an itinerary or route where they are defined by reference to a
-    predefined itinerary.
+    Multiple (i.e. more than one) physically separate locations which are
+    ordered that constitute an itinerary or route where they are defined by
+    reference to a predefined itinerary.
 
     :ivar predefined_itinerary_reference: A reference to a versioned
         instance of a predefined itinerary as specified in a

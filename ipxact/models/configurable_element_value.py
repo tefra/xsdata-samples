@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class ConfigurableElementValue(ComplexBaseExpression):
-    """Describes the content of a configurable element.
+    """
+    Describes the content of a configurable element.
 
     The required referenceId attribute refers to the ID attribute of the
     configurable element.

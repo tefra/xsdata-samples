@@ -11,11 +11,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class TypeAdaptedRoomGuestAllocation:
-    """The allocation of guests per room assigned by the aggregator or supplier
-    (hotel property).
+    """
+    The allocation of guests per room assigned by the aggregator or
+    supplier (hotel property).
 
-    Returned only when the requested guest allocation is different from
-    the provider or supplier’s adapted guest allocation.
+    Returned only when the requested guest allocation is different from the
+    provider or supplier’s adapted guest allocation.
 
     Parameters
     ----------

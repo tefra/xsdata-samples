@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 @dataclass
 class BookingPnrElementReq(BookingBaseReq):
     """
-    Adds, Modifies PNR elemnts like OSI, FOP, review booking, remarks, and action
-    status.
+    Adds, Modifies PNR elemnts like OSI, FOP, review booking, remarks, and
+    action status.
     """
 
     class Meta:

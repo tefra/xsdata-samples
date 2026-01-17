@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class CurrencyAmountType:
     """
-    Provides a monetary amount and the code of the currency in which this amount is
-    expressed.
+    Provides a monetary amount and the code of the currency in which this
+    amount is expressed.
 
     Attributes:
         amount:

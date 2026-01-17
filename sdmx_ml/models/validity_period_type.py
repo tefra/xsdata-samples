@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 @dataclass(frozen=True)
 class ValidityPeriodType:
     """
-    ValidityPeriodType specifies inclusive start and end-dates for the subscription
-    period.
+    ValidityPeriodType specifies inclusive start and end-dates for the
+    subscription period.
 
     :ivar start_date: StartDate is an inclusive start date for the
         subscription.

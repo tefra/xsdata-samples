@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class EmdissuanceRsp(BaseRsp1):
     """
-    Electronic Miscellaneous Document issuance response.Supported providers are
-    1V/1G/1P.
+    Electronic Miscellaneous Document issuance response.Supported providers
+    are 1V/1G/1P.
 
     Parameters
     ----------

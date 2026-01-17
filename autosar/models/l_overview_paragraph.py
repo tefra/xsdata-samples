@@ -18,7 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LOverviewParagraph:
-    """MixedContentForOverviewParagraph in one particular language.
+    """
+    MixedContentForOverviewParagraph in one particular language.
 
     The language is denoted in the attribute l.
 

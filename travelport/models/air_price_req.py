@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirPriceReq(BaseAirPriceReq):
-    """Request to price an itinerary in one to many ways.
+    """
+    Request to price an itinerary in one to many ways.
 
     Pricing commands can be specified globally, or specifically per
     command.

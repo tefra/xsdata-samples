@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class StringValueType(ValueType):
-    """StringValueType is a refinement of SimpleValueType limiting the content to
-    be a string.
+    """
+    StringValueType is a refinement of SimpleValueType limiting the content
+    to be a string.
 
     This can be further refined with facets, patterns, etc.
     """

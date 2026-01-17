@@ -107,8 +107,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BswModuleDependency:
     """
-    This class collects the dependencies of a BSW module or cluster on a certain
-    other BSW module.
+    This class collects the dependencies of a BSW module or cluster on a
+    certain other BSW module.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

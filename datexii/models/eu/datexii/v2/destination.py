@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class Destination:
-    """The specification a destination.
+    """
+    The specification a destination.
 
     This may be either a point location or an area location.
     """

@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FramePort:
     """
-    Connectors reception or send port on the referenced channel referenced by a
-    FrameTriggering.
+    Connectors reception or send port on the referenced channel referenced
+    by a FrameTriggering.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class CodelistBaseType(ItemSchemeType):
-    """CodelistType defines the structure of a codelist.
+    """
+    CodelistType defines the structure of a codelist.
 
     A codelist is defined as a list from which some statistical concepts
     (coded concepts) take their values.

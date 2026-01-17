@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class SpeedManagement(NetworkManagement):
     """
-    Speed management action that is instigated by the network/road operator.
+    Speed management action that is instigated by the network/road
+    operator.
 
     :ivar speed_management_type: Type of speed management action
         instigated by operator.

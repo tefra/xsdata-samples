@@ -27,7 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BswDebugInfo:
     """
-    Collects the information on the data provided to the AUTOSAR debug module.
+    Collects the information on the data provided to the AUTOSAR debug
+    module.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

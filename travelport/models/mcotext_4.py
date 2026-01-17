@@ -9,7 +9,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 @dataclass
 class Mcotext4(TypeFreeFormText4):
-    """All type of free format text messages related to MCO like - Command Text, Agent Entry, MCO Modifiers, Text Message
+    """
+    All type of free format text messages related to MCO like - Command
+    Text, Agent Entry, MCO Modifiers, Text Message.
 
     Parameters
     ----------

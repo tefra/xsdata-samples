@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 @dataclass
 class VehicleRetrieveReq(BaseReq1):
-    """PNR Retrieve request for a vehicle booking.
+    """
+    PNR Retrieve request for a vehicle booking.
 
     Given a provider code and a provider locator code.
     """

@@ -41,8 +41,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class RegistryInterfaceType:
     """
-    This is a type which describes a structure for holding all of the various
-    dedicated registry interface message types.
+    This is a type which describes a structure for holding all of the
+    various dedicated registry interface message types.
     """
 
     header: Optional[BasicHeaderType] = field(

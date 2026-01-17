@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class XrefTarget:
     """
-    This element specifies a reference target which can be scattered throughout the
-    text.
+    This element specifies a reference target which can be scattered
+    throughout the text.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

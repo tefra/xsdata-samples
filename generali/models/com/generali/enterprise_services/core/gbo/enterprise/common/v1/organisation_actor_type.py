@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 class OrganisationActorType(BaseComponentType):
     """
     <description xmlns="">The definition of an Organisation parties basic
-    details</description>
+    details</description>.
 
     :ivar legal_name: The legal name of the Organisation
     :ivar gunsnumber: The Generali Universal Numbering System,

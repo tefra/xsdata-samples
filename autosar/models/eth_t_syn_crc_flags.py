@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EthTSynCrcFlags:
     """
-    Defines the fields of the message which shall be taken into account for CRC
-    calculation and verification.
+    Defines the fields of the message which shall be taken into account for
+    CRC calculation and verification.
 
     :ivar crc_correction_field: CorrectionField from the Follow_Up
         Message Header shall be included in CRC calculation.

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 @dataclass(frozen=True)
 class StructuralEventType:
     """
-    StructuralEventType provides the details of a structure event, specifically the
-    object that changed.
+    StructuralEventType provides the details of a structure event,
+    specifically the object that changed.
 
     :ivar structures: Structures contains the details of the structural
         object that has triggered the event. Although this container

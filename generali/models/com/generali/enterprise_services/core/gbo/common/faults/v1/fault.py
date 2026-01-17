@@ -13,7 +13,7 @@ __NAMESPACE__ = (
 class Fault(FaultType):
     """
     <description xmlns="">The fault object used to hold values for an
-    error.</description>
+    error.</description>.
     """
 
     class Meta:

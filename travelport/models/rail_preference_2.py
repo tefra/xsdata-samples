@@ -28,8 +28,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class RailPreference2(TypeBasePreference2):
     """
-    Defines a preference for a particular set of criteria for rail (e.g., dates,
-    compartment type).
+    Defines a preference for a particular set of criteria for rail (e.g.,
+    dates, compartment type).
 
     Parameters
     ----------

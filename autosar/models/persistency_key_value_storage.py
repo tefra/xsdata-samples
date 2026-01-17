@@ -29,7 +29,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PersistencyKeyValueStorage:
     """
-    This meta-class represents the ability to model a key-value storage  on
+    This meta-class represents the ability to model a key-value storage on
     deployment level.
 
     :ivar short_name: This specifies an identifying shortName for the

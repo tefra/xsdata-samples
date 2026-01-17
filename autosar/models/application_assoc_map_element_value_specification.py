@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ApplicationAssocMapElementValueSpecification:
     """
-    This meta-class represents the ability to define the initialization of the
-    elements of an ApplicationAssocMapDataType.
+    This meta-class represents the ability to define the initialization of
+    the elements of an ApplicationAssocMapDataType.
 
     :ivar key: This aggregation represents the initialization of the key
         part of an AssociativeElementValueSpecification.
@@ -317,8 +317,8 @@ class ApplicationAssocMapElementValueSpecification:
 @dataclass
 class ApplicationAssocMapValueSpecification:
     """
-    This meta-class represents the ability to define the initialization of an
-    ApplicationAssocMapDataType.
+    This meta-class represents the ability to define the initialization of
+    an ApplicationAssocMapDataType.
 
     :ivar short_label: This can be used to identify particular value
         specifications for human readers, for example elements of a
@@ -602,8 +602,8 @@ class ArrayValueSpecification:
 @dataclass
 class CompositeRuleBasedValueSpecification:
     """
-    This meta-class represents rule based values for DataPrototypes typed by
-    composite ApplicationDataTypes.
+    This meta-class represents rule based values for DataPrototypes typed
+    by composite ApplicationDataTypes.
 
     :ivar short_label: This can be used to identify particular value
         specifications for human readers, for example elements of a

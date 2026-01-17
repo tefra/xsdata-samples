@@ -25,12 +25,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PeriodicEventTriggering:
-    """The PeriodicEventTriggering describes the behavior of an event with a strict
-    periodic occurrence pattern, given by the period attribute.
+    """
+    The PeriodicEventTriggering describes the behavior of an event with a
+    strict periodic occurrence pattern, given by the period attribute.
 
-    Additionally, it is possible to soften the strictness of the
-    periodic occurrence behavior by specifying a jitter, so that there
-    can be a deviation from the period up to the size of the jitter.
+    Additionally, it is possible to soften the strictness of the periodic
+    occurrence behavior by specifying a jitter, so that there can be a
+    deviation from the period up to the size of the jitter.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

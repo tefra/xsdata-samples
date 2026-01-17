@@ -17,13 +17,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SyncTimeBaseMgrUserNeeds:
-    """Specifies the needs on the configuration of the Synchronized Time-base
+    """
+    Specifies the needs on the configuration of the Synchronized Time-base
     Manager for one time-base.
 
-    This class currently contains no attributes. An instance of this
-    class is used to find out which ports of a software-component belong
-    to this time-base in order to group the request and response ports
-    of the same time-base. The actual time-base value is stored in the
+    This class currently contains no attributes. An instance of this class
+    is used to find out which ports of a software-component belong to this
+    time-base in order to group the request and response ports of the same
+    time-base. The actual time-base value is stored in the
     PortDefinedArgumentValue of the respective port specification.
 
     :ivar short_name: This specifies an identifying shortName for the

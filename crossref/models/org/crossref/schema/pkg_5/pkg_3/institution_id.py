@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class InstitutionId:
-    """Identifier for an institution or organization (currently supported: ROR,
-    ISNI, Wikidata).
+    """
+    Identifier for an institution or organization (currently supported:
+    ROR, ISNI, Wikidata).
 
-    Identifiers must be included as a URI
+    Identifiers must be included as a URI.
     """
 
     class Meta:

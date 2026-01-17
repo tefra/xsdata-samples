@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class SortExpressionType:
     """
-    A component holding the specification of the sorting required on the query.
+    A component holding the specification of the sorting required on the
+    query.
 
     :ivar path_text: The path by which to sort the result set returned
         from the query.

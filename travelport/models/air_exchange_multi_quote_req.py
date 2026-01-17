@@ -11,9 +11,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirExchangeMultiQuoteReq(BaseAirExchangeMultiQuoteReq):
-    """Request multiple quotes for the exchange of an itinerary.
-
-    1P transactions only
+    """
+    Request multiple quotes for the exchange of an itinerary. 1P
+    transactions only.
 
     Parameters
     ----------

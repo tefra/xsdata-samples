@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 @dataclass
 class RailSpecificSeatAssignment:
     """
-    Request object used to request a specific coach and seat number or a seat near-
-    to a specific seat number.
+    Request object used to request a specific coach and seat number or a
+    seat near-to a specific seat number.
 
     Parameters
     ----------

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsSetting:
     """
-    Provides information on variable message signs and the information currently
-    displayed.
+    Provides information on variable message signs and the information
+    currently displayed.
     """
 
     vms_setting_extension: Optional[ExtensionType] = field(

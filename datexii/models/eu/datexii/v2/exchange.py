@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Exchange:
     """
-    Details associated with the management of the exchange between the supplier and
-    the client.
+    Details associated with the management of the exchange between the
+    supplier and the client.
 
     :ivar changed_flag: Indicates that either a filter or a catalogue
         has been changed.

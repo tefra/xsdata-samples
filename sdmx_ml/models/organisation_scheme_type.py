@@ -18,7 +18,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class OrganisationSchemeType(OrganisationSchemeBaseType):
     """
-    OrganisationSchemeType describes the structure of an organisation scheme.
+    OrganisationSchemeType describes the structure of an organisation
+    scheme.
     """
 
     choice_1: tuple[

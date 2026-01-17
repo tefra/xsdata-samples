@@ -17,12 +17,13 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class ExecutableImage:
-    """Specifies an executable software image to be loaded into a processors
+    """
+    Specifies an executable software image to be loaded into a processors
     address space.
 
-    The format of the image is not specified. It could, for example, be
-    an ELF loadfile, or it could be raw binary or ascii hex data for
-    loading directly into a memory model instance.
+    The format of the image is not specified. It could, for example, be an
+    ELF loadfile, or it could be raw binary or ascii hex data for loading
+    directly into a memory model instance.
 
     :ivar name: Unique name
     :ivar display_name:

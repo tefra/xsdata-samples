@@ -25,13 +25,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TimingDescriptionEventChain:
-    """An event chain describes the causal order for a set of functionally
+    """
+    An event chain describes the causal order for a set of functionally
     dependent timing events.
 
     Each event chain has a well defined stimulus and response, which
-    describe its start and end point. Furthermore, it can be
-    hierarchically decomposed into an arbitrary number of sub-chains, so
-    called ''event chain segments''.
+    describe its start and end point. Furthermore, it can be hierarchically
+    decomposed into an arbitrary number of sub-chains, so called ''event
+    chain segments''.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

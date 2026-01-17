@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class CharacteristicsType:
     """
     <description xmlns="">The set of characteristics for a business
-    object.</description>
+    object.</description>.
 
     :ivar characteristic: <description xmlns="">A characteristic, a name
         and value. An Example might be Colour="Black" or Memory="32

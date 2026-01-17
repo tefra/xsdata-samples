@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class ParkingModeEnum(Enum):
     """
-    The arrangement of the parking space or the group of parking spaces in relation
-    to the road.
+    The arrangement of the parking space or the group of parking spaces in
+    relation to the road.
 
     :cvar PERPENDICULAR_PARKING: Parking spaces are located in an angle
         of nearly 90 degree to the road.

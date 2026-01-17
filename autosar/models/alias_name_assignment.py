@@ -15,13 +15,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AliasNameAssignment:
-    """This meta-class represents the ability to associate an alternative name to a
-    flat representations or an Identifiable.
+    """
+    This meta-class represents the ability to associate an alternative name
+    to a flat representations or an Identifiable.
 
-    The usage of this name is defined outside of AUTOSAR. For example
-    this name can be used by MCD tools or as a name for component
-    instances in the ECU extract. Note that flatInstance and
-    identifiable are mutually exclusive.
+    The usage of this name is defined outside of AUTOSAR. For example this
+    name can be used by MCD tools or as a name for component instances in
+    the ECU extract. Note that flatInstance and identifiable are mutually
+    exclusive.
 
     :ivar short_label: This attribute represents the alias name. It is
         modeled as string because the alias name is used outside of

@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class CategorisationsType:
-    """CategorisationsType describes the structure of the categorisations
+    """
+    CategorisationsType describes the structure of the categorisations
     container.
 
-    It contains one or more categorisation of a specific object type,
-    which can be explicitly detailed or referenced from an external
-    structure document or registry service. This container may contain
+    It contains one or more categorisation of a specific object type, which
+    can be explicitly detailed or referenced from an external structure
+    document or registry service. This container may contain
     categorisations for multiple types of structural objects.
 
     :ivar categorisation: Categorisation allows for the association of

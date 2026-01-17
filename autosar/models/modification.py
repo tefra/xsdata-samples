@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Modification:
     """
-    This meta-class represents the ability  to record what has changed in a
+    This meta-class represents the ability to record what has changed in a
     document in comparison to its predecessor.
 
     :ivar change: This property denotes the one particular change which

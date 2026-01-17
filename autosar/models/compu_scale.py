@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompuScale:
     """
-    This meta-class represents the ability to specify one segment of a segmented
-    computation method.
+    This meta-class represents the ability to specify one segment of a
+    segmented computation method.
 
     :ivar short_label: This element specifies a short name for the
         particular scale. The name can for example be used to derive a

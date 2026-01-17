@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class ItemSchemeMapType(ItemSchemeMapBaseType):
     """
-    ItemSchemeMapType is an abstract base type which forms the basis for mapping
-    items between item schemes of the same type.
+    ItemSchemeMapType is an abstract base type which forms the basis for
+    mapping items between item schemes of the same type.
 
     :ivar source: Source provides a reference to the item scheme which
         items are mapped from.

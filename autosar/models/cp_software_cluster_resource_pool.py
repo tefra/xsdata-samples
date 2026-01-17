@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CpSoftwareClusterResourcePool:
     """
-    Represents the pool of resources which can be provided or required by CP
-    Software Clusters.
+    Represents the pool of resources which can be provided or required by
+    CP Software Clusters.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

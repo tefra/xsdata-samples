@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class StatusMessageType1:
-    """StatusMessageType describes the structure of an error or warning message.
+    """
+    StatusMessageType describes the structure of an error or warning
+    message.
 
     A message contains the text of the message, as well as an optional
     language indicator and an optional code.

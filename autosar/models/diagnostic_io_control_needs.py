@@ -25,12 +25,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticIoControlNeeds:
-    """Specifies the general needs on the configuration of the  Diagnostic
-    Communication Manager (DCM) which are not related to a particular item (e.g. a
-    PID).
+    """
+    Specifies the general needs on the configuration of the Diagnostic
+    Communication Manager (DCM) which are not related to a particular item
+    (e.g. a PID).
 
-    The main use case is the mapping of service ports to the Dcm which
-    are not related to a particular item.
+    The main use case is the mapping of service ports to the Dcm which are
+    not related to a particular item.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

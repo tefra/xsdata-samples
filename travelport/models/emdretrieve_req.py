@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class EmdretrieveReq(BaseReq1):
     """
-    Electronic Miscellaneous Document retrieve request.Supported providers are
-    1G/1V/1P.
+    Electronic Miscellaneous Document retrieve request.Supported providers
+    are 1G/1V/1P.
 
     Parameters
     ----------

@@ -16,7 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class VlanMembership:
-    """Static logical channel or VLAN binding to a switch-port.
+    """
+    Static logical channel or VLAN binding to a switch-port.
 
     The reference to an EthernetPhysicalChannel without a VLAN defined
     represents the handling of untagged frames.

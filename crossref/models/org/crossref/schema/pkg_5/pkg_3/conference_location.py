@@ -5,10 +5,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class ConferenceLocation:
-    """The location of the conference.
+    """
+    The location of the conference.
 
-    The city, state, province or country of the conference may be
-    provided as appropriate.
+    The city, state, province or country of the conference may be provided
+    as appropriate.
     """
 
     class Meta:

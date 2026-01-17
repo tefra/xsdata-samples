@@ -8,7 +8,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwBitRepresentation:
-    """Description of the structure of a bit variable: Comprises of the bitPosition in a memory object (e.g. swHostVariable, which stands parallel to swBitRepresentation) and the numberOfBits . In this way, interrelated memory areas can be described. Non-related memory areas are not supported.
+    """
+    Description of the structure of a bit variable: Comprises of the
+    bitPosition in a memory object (e.g. swHostVariable, which stands
+    parallel to swBitRepresentation) and the numberOfBits .
+
+    In this way, interrelated memory areas can be described. Non-related
+    memory areas are not supported.
 
     :ivar bit_position: If the "bit data object" is hosted within
         another data object (e.g. if the memory can be accessed via byte

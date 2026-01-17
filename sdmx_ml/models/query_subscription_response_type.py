@@ -9,13 +9,14 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class QuerySubscriptionResponseType:
-    """QuerySubscriptionResponseType describes the structure of a subscription
+    """
+    QuerySubscriptionResponseType describes the structure of a subscription
     query response.
 
     A status will describe the success or failure of the request (and
     provide error or warning messages if necessary). If the query was
-    successful, details of all of the organisation's subscriptions will
-    be provided.
+    successful, details of all of the organisation's subscriptions will be
+    provided.
 
     :ivar status_message: StatusMessage provides that status for the
         query subscription request, and if necessary, any error or

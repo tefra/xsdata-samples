@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class FareRulesFilter:
-    """Fare Rules Filter about this fare component.
+    """
+    Fare Rules Filter about this fare component.
 
     Applicable Providers are 1P,1G,1V.
 

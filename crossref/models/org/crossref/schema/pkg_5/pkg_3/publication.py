@@ -13,11 +13,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Publication:
-    """Used to define a publication (book, journal, etc) for pending publication
-    content.
+    """
+    Used to define a publication (book, journal, etc) for pending
+    publication content.
 
-    A title must be supplied, as well as an ISSN, ISBN, or title-level
-    DOI
+    A title must be supplied, as well as an ISSN, ISBN, or title-level DOI.
     """
 
     class Meta:

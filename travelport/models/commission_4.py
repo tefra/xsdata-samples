@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class Commission4(TypeKeyElement1):
     """
-    A representation of the commision given to an Agent or Agency within a profile.
+    A representation of the commision given to an Agent or Agency within a
+    profile.
 
     Parameters
     ----------

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class CubeKeyValueType(SimpleComponentValueType):
     """
-    CubeKeyValueType derives from the SimpleValueType, but does not allow for a
-    locale (xml:lang).
+    CubeKeyValueType derives from the SimpleValueType, but does not allow
+    for a locale (xml:lang).
     """
 
     lang: Any = field(

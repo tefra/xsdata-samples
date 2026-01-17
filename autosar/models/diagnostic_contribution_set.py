@@ -27,12 +27,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticContributionSet:
-    """This meta-class represents a root node of a diagnostic extract.
+    """
+    This meta-class represents a root node of a diagnostic extract.
 
-    It bundles a given set of diagnostic model elements. The granularity
-    of the DiagonsticContributionSet is arbitrary in order to support
-    the aspect of decentralized configuration, i.e. different
-    contributors can come up with an own DiagnosticContributionSet.
+    It bundles a given set of diagnostic model elements. The granularity of
+    the DiagonsticContributionSet is arbitrary in order to support the
+    aspect of decentralized configuration, i.e. different contributors can
+    come up with an own DiagnosticContributionSet.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

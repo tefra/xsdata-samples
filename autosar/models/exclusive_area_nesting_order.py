@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ExclusiveAreaNestingOrder:
-    """This meta-class represents the ability to define a nesting order of
+    """
+    This meta-class represents the ability to define a nesting order of
     ExclusiveAreas.
 
     A nesting order (that may occur in the executable code) is formally

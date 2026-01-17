@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataConstraintBaseType(ConstraintType):
-    """MetadataConstraintBaseType is an abstract base refinement of ConstraintType.
+    """
+    MetadataConstraintBaseType is an abstract base refinement of
+    ConstraintType.
 
     The constraint attachment is restricted to constrainable artefacts
     related to metadata, and the only possible role is "Allowed".

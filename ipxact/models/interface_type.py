@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class InterfaceType:
     """
-    A representation of a component/bus interface relation; i.e. a bus interface
-    belonging to a certain component.
+    A representation of a component/bus interface relation; i.e. a bus
+    interface belonging to a certain component.
 
     :ivar component_instance_ref: Reference to a component instance
         name.

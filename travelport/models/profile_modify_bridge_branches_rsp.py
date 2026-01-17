@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileModifyBridgeBranchesRsp(BaseRsp5):
-    """Response to add or delete an Agent's Bridge Branch Assignments.
+    """
+    Response to add or delete an Agent's Bridge Branch Assignments.
 
     Returns the list of bridge branches that the agent is currently
     assigned to.

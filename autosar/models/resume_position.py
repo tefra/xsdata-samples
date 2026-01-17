@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ResumePosition:
     """
-    Defines, where a schedule table shall be proceeded in case if it has been
-    interrupted by a run-once table or MRF/SRF.
+    Defines, where a schedule table shall be proceeded in case if it has
+    been interrupted by a run-once table or MRF/SRF.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

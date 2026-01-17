@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class ContinuityOverrideRemark:
-    """A textual remark container to hold any printable text.
-
-    (max 512 chars)
+    """
+    A textual remark container to hold any printable text. (max 512 chars).
 
     Parameters
     ----------

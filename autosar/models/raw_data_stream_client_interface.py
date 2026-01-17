@@ -25,15 +25,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RawDataStreamClientInterface:
-    """This meta-class represents the necessary capabilities for raw data streaming
-    on the client side, i.e. the streaming of data that do not undergo any
-    serialization.
+    """
+    This meta-class represents the necessary capabilities for raw data
+    streaming on the client side, i.e. the streaming of data that do not
+    undergo any serialization.
 
-    Each RawDataStreamClientInterface supports the following capabilities without further modeling:
-    * connect: set up the communication channel
-    * shutdown: close the communication channel
-    * write: send data down the communication channel
-    * read: access incoming data on the communication channel
+    Each RawDataStreamClientInterface supports the following capabilities
+    without further modeling: * connect: set up the communication channel *
+    shutdown: close the communication channel * write: send data down the
+    communication channel * read: access incoming data on the communication
+    channel.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

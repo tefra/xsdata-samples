@@ -24,17 +24,18 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DocumentElementScope:
-    """Specifies if a specification element such as a requirement, specification,
-    deliverable, artifact, task definition or activity is in scope of this data
-    exchange point.
+    """
+    Specifies if a specification element such as a requirement,
+    specification, deliverable, artifact, task definition or activity is in
+    scope of this data exchange point.
 
-    The DocumentElementScope may reference all specification elements
-    that have a name or ID. The only exception are Meta Classes, Meta
-    Attribute and constraints which are handled in the Data Format
-    Tailoring section of the Profile of Data Exchange Point. Elements of
-    Autosar specification documents are referenced via their ID
-    (requirement, specification items) or name (deliverable, artifact,
-    task definition or activity)
+    The DocumentElementScope may reference all specification elements that
+    have a name or ID. The only exception are Meta Classes, Meta Attribute
+    and constraints which are handled in the Data Format Tailoring section
+    of the Profile of Data Exchange Point. Elements of Autosar
+    specification documents are referenced via their ID (requirement,
+    specification items) or name (deliverable, artifact, task definition or
+    activity).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticJ1939Spn:
     """
-    This meta-class represents the ability to model a J1939 Suspect Parameter
-    Number (SPN).
+    This meta-class represents the ability to model a J1939 Suspect
+    Parameter Number (SPN).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

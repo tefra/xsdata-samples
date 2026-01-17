@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class SubmitSubscriptionsResponseType:
-    """SubmitSubscriptionsResponseType describes the structure of the response to a
-    new subscription submission.
+    """
+    SubmitSubscriptionsResponseType describes the structure of the response
+    to a new subscription submission.
 
     A status is provided for each subscription in the request.
 

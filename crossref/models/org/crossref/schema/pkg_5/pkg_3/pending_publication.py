@@ -41,7 +41,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class PendingPublication:
-    """Container for 'pending publication' metadata.
+    """
+    Container for 'pending publication' metadata.
 
     Pending publication DOIs are used to create a DOI for a content item
     that is not yet available online or in print.

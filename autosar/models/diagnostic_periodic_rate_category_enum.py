@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticPeriodicRateCategoryEnum:
     """
-    This meta-class provides possible values for the setting of the periodic rate.
+    This meta-class provides possible values for the setting of the
+    periodic rate.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

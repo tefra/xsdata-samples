@@ -13,8 +13,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class TrafficHeadway(TrafficData):
-    """Averaged measurements or calculations of traffic headway, i.e. the distance
-    or time interval between vehicles.
+    """
+    Averaged measurements or calculations of traffic headway, i.e. the
+    distance or time interval between vehicles.
 
     This measure is measured from the head of one vehicle to the head of
     the following vehicle.

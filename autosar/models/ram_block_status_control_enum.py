@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RamBlockStatusControlEnum:
     """
-    This enumeration type defines options for how the management of the ramBlock
-    status is controlled.
+    This enumeration type defines options for how the management of the
+    ramBlock status is controlled.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

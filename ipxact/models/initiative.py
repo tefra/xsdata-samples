@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class Initiative:
     """
-    If this element is present, the type of access is restricted to the specified
-    value.
+    If this element is present, the type of access is restricted to the
+    specified value.
     """
 
     class Meta:

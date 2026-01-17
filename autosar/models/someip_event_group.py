@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SomeipEventGroup:
     """
-    Grouping of events and notification events inside a ServiceInterface in order
-    to allow subscriptions.
+    Grouping of events and notification events inside a ServiceInterface in
+    order to allow subscriptions.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

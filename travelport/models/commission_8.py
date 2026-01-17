@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class Commission8(TypeKeyElement2):
     """
-    A representation of the commision given to an Agent or Agency within a profile.
+    A representation of the commision given to an Agent or Agency within a
+    profile.
 
     Parameters
     ----------

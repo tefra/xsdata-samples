@@ -7,11 +7,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class AgencySchemesType:
-    """AgencySchemesType describes the structure of the agency schemes container.
+    """
+    AgencySchemesType describes the structure of the agency schemes
+    container.
 
-    It contains one or more agency scheme, which can be explicitly
-    detailed or referenced from an external structure document or
-    registry service.
+    It contains one or more agency scheme, which can be explicitly detailed
+    or referenced from an external structure document or registry service.
 
     :ivar agency_scheme: AgencyScheme provides the details of an agency
         scheme, in which agencies are described.

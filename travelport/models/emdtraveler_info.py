@@ -7,9 +7,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class EmdtravelerInfo:
-    """EMD traveler information.
+    """
+    EMD traveler information.
 
-    Supported providers are 1G/1V/1P
+    Supported providers are 1G/1V/1P.
 
     Parameters
     ----------

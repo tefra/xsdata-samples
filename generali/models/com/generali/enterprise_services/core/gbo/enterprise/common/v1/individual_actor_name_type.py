@@ -19,7 +19,7 @@ __NAMESPACE__ = (
 @dataclass
 class IndividualActorNameType(BaseComponentType):
     """
-    <description xmlns=""/>
+    <description xmlns=""/>.
 
     :ivar title_code: <description xmlns="">Is the title of the person.
         e.g. Mr., Dr. Ms. </description>

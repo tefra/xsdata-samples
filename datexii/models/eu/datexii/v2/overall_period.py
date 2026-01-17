@@ -12,10 +12,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OverallPeriod:
     """
-    A continuous or discontinuous period of validity defined by overall bounding
-    start and end times and the possible intersection of valid periods (potentially
-    recurring) with the complement of exception periods (also potentially
-    recurring).
+    A continuous or discontinuous period of validity defined by overall
+    bounding start and end times and the possible intersection of valid
+    periods (potentially recurring) with the complement of exception
+    periods (also potentially recurring).
 
     :ivar overall_start_time: Start of bounding period of validity
         defined by date and time.

@@ -10,15 +10,16 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class RegistrationType:
-    """Registration provides the information needed for data and reference metadata
-    set registration.
+    """
+    Registration provides the information needed for data and reference
+    metadata set registration.
 
     A data source must be supplied here if not already provided in the
     provision agreement. The data set or metadata set must be associated
-    with a provision agreement,  a metadata flow, or a dataflow
-    definition. If possible, the provision agreement should be
-    specified. Only in cases where this is not possible should the
-    dataflow or metadata flow be used.
+    with a provision agreement, a metadata flow, or a dataflow definition.
+    If possible, the provision agreement should be specified. Only in cases
+    where this is not possible should the dataflow or metadata flow be
+    used.
 
     :ivar provision_agreement: ProvisionAgreement provides a reference
         to the provision agreement that the data is being registered

@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class UnsignedBitVectorExpression(ComplexBaseExpression):
-    """Represents a bit-string.
+    """
+    Represents a bit-string.
 
     It supports an expression value.
     """

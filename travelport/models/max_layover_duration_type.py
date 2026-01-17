@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class MaxLayoverDurationType:
-    """User can specify its attribute's value in Minutes.
+    """
+    User can specify its attribute's value in Minutes.
 
     Maximum size of each attribute is 4.
 

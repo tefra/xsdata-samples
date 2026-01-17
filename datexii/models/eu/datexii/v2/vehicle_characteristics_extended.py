@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VehicleCharacteristicsExtended:
     """
-    Extension point for 'VehicleCharacteristics' to support additional attributes
-    and literals like additional fuel types, load types etc.
+    Extension point for 'VehicleCharacteristics' to support additional
+    attributes and literals like additional fuel types, load types etc.
 
     :ivar emission_classification: The valid list of entries for this
         attribute has to be specified between the communication-

@@ -39,7 +39,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class Corresp:
     """
-    <div> <h3>Correspondence Information</h3> </div>
+    <div> <h3>Correspondence Information</h3> </div>.
     """
 
     class Meta:

@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class BaseAddress(UnsignedLongintExpression):
-    """Base of an address block, bank or address space.
+    """
+    Base of an address block, bank or address space.
 
     Expressed as the number of addressable units from the containing
     memoryMap or localMemoryMap.

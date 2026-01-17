@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class Format:
     """
-    A narrative description of a component's file format and/or file extension.
+    A narrative description of a component's file format and/or file
+    extension.
     """
 
     class Meta:

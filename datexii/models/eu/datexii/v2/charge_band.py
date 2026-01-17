@@ -18,9 +18,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ChargeBand:
     """
-    A charge band in accordance with the specified conditions, possibly up to a
-    maximum duration, during a specified period and for a vehicle of specified
-    characteristics (in case of parking).
+    A charge band in accordance with the specified conditions, possibly up
+    to a maximum duration, during a specified period and for a vehicle of
+    specified characteristics (in case of parking).
 
     :ivar charge_currency: A three-character code according to ISO 4217
         for the currency in which the parking charge is specified (e.g.

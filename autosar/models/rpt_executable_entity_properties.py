@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RptExecutableEntityProperties:
     """
-    Describes the code preparation for rapid prototyping at ExecutableEntity
-    invocation.
+    Describes the code preparation for rapid prototyping at
+    ExecutableEntity invocation.
 
     :ivar max_rpt_event_id: Highest RPT event id useable for RTE
         generated service points. This attribute is relevant, if

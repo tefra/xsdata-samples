@@ -27,7 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ImplementationDataType:
-    """Describes a reusable data type on the implementation level.
+    """
+    Describes a reusable data type on the implementation level.
 
     This will typically correspond to a typedef in C-code.
 

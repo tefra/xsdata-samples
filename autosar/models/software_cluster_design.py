@@ -39,8 +39,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SoftwareClusterDesign:
     """
-    This meta-class represents the ability for the OEM to design the grouping of
-    software uploadable to a specific target Machine.
+    This meta-class represents the ability for the OEM to design the
+    grouping of software uploadable to a specific target Machine.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

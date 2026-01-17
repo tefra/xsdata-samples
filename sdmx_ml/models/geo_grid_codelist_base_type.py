@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class GeoGridCodelistBaseType(GeoCodelistType):
     """
-    GeoGridCodelistBaseType is the abstract base refinement for a geographic grid
-    codelist.
+    GeoGridCodelistBaseType is the abstract base refinement for a
+    geographic grid codelist.
     """
 
     choice_3: Any = field(

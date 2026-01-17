@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class MetadataConstraintAttachmentType:
     """
-    MetadataConstraintAttachmentType restricts the base ConstraintAttachmentType to
-    only allow artefacts related to metadata.
+    MetadataConstraintAttachmentType restricts the base
+    ConstraintAttachmentType to only allow artefacts related to metadata.
     """
 
     choice: tuple[

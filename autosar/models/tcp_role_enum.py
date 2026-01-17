@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TcpRoleEnum:
     """
-    This enumeration defines whether a TCP node has the tcp server role or the
-    client role.
+    This enumeration defines whether a TCP node has the tcp server role or
+    the client role.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

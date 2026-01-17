@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TpAddress:
-    """An ECUs TP address on the referenced channel.
+    """
+    An ECUs TP address on the referenced channel.
 
     This represents the diagnostic Address.
 

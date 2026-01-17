@@ -11,12 +11,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class FlexExploreModifiers:
-    """This is the container for a set of modifiers which allow the user to perform
-    a special kind of low fare search, depicted as flex explore, based on different
-    parameters like Area, Zone, Country, State, Specific locations, Distance around
-    the actual destination of the itinerary.
+    """
+    This is the container for a set of modifiers which allow the user to
+    perform a special kind of low fare search, depicted as flex explore,
+    based on different parameters like Area, Zone, Country, State, Specific
+    locations, Distance around the actual destination of the itinerary.
 
-    Applicable for providers 1G,1V,1P
+    Applicable for providers 1G,1V,1P.
 
     Parameters
     ----------

@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class DoiBatchId:
     """
-    Publisher generated ID that uniquely identifies the DOI submission batch.
+    Publisher generated ID that uniquely identifies the DOI submission
+    batch.
     """
 
     class Meta:

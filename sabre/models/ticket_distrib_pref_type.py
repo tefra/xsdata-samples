@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class TicketDistribPrefType:
     """
-    Type of ticket distribution to be used with this collection of preferences.
+    Type of ticket distribution to be used with this collection of
+    preferences.
 
     Attributes:
         value:

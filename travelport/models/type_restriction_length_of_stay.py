@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class TypeRestrictionLengthOfStay:
     """
-    Length Of Stay Restriction ( e.g. 2 day minimum..)
+    Length Of Stay Restriction ( e.g. 2 day minimum..).
 
     Parameters
     ----------

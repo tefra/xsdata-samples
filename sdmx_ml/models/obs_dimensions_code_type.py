@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 class ObsDimensionsCodeType(Enum):
     """
-    ObsDimensionsCodeType is an enumeration containing the values "TimeDimension"
-    and "AllDimensions".
+    ObsDimensionsCodeType is an enumeration containing the values
+    "TimeDimension" and "AllDimensions".
 
     :cvar ALL_DIMENSIONS: AllDimensions notes that the cross sectional
         format shall be flat; that is all dimensions should be contained

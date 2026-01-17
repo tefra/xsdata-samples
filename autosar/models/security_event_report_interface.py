@@ -27,7 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class SecurityEventReportInterface:
     """
     This meta-class provides the ability to define a PortInterface for the
-    reporting of security events in the context of the intrusion detection system.
+    reporting of security events in the context of the intrusion detection
+    system.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

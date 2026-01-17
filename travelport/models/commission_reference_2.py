@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class CommissionReference2(TypeKeyElement2):
-    """Data refering to an external or internal Agent who receives commission with
-    relation to this profile.
+    """
+    Data refering to an external or internal Agent who receives commission
+    with relation to this profile.
 
     Agent Name or Number is required.
 

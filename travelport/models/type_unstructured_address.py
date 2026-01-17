@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 @dataclass
 class TypeUnstructuredAddress:
     """
-    A simple unstructured address (e.g. 123 South State Avenue, Chicago, IL 60612)
+    A simple unstructured address (e.g. 123 South State Avenue, Chicago, IL
+    60612).
     """
 
     class Meta:

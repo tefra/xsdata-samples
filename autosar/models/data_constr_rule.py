@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataConstrRule:
     """
-    This meta-class represents the ability to express one specific data constraint
-    rule.
+    This meta-class represents the ability to express one specific data
+    constraint rule.
 
     :ivar constr_level: This attribute describes the category of a
         constraint. One of its functions is in the area of constraint

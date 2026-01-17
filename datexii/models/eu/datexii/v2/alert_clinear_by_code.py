@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class AlertCLinearByCode(AlertCLinear):
     """
-    A linear section along a road defined by reference to a linear section in a
-    pre-defined ALERT-C location table.
+    A linear section along a road defined by reference to a linear section
+    in a pre-defined ALERT-C location table.
 
     :ivar alert_cdirection:
     :ivar location_code_for_linear_location: Linear location defined by

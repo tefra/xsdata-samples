@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 @dataclass(frozen=True)
 class MaintainableEventType:
     """
-    MaintainableEventType provides a reference to a maintainable object's event
-    with either the URN of the specific object, or a set of potentially wild-carded
-    reference fields.
+    MaintainableEventType provides a reference to a maintainable object's
+    event with either the URN of the specific object, or a set of
+    potentially wild-carded reference fields.
     """
 
     urn_or_ref: Optional[Union[str, MaintainableQueryType]] = field(

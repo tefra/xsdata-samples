@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SoAdConnectorType:
-    """Availability of protocol plug-ins.
+    """
+    Availability of protocol plug-ins.
 
     Entries in the Socket and PDU Routing Tables.
 

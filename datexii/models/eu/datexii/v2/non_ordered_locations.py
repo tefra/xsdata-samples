@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class NonOrderedLocations(GroupOfLocations):
     """
-    Multiple (i.e. more than one) physically separate locations which have no
-    specific order.
+    Multiple (i.e. more than one) physically separate locations which have
+    no specific order.
     """
 
     non_ordered_locations_extension: Optional[ExtensionType] = field(

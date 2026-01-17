@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 class CarrierType(Enum):
     """
-    Used to specify if carrier type is  marketing or operating.
+    Used to specify if carrier type is marketing or operating.
     """
 
     MARKETING = "Marketing"

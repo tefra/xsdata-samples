@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class TypeTicketModifierAccountingType:
-    """Ticketing Modifier used to add accounting
-    - discount information."""
+    """
+    Ticketing Modifier used to add accounting - discount information.
+    """
 
     class Meta:
         name = "typeTicketModifierAccountingType"

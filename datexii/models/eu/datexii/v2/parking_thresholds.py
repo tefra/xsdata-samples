@@ -11,11 +11,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingThresholds:
-    """Configuration parameters of the parking site, used among others for the
+    """
+    Configuration parameters of the parking site, used among others for the
     dynamic attribute 'parkingStatus'.
 
-    This component or all elements of it can be overridden in the
-    dynamic model.
+    This component or all elements of it can be overridden in the dynamic
+    model.
 
     :ivar almost_full_decreasing: The number of available spaces above
         which the state of the parking site is considered to change from

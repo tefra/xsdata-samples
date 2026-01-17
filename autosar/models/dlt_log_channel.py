@@ -36,9 +36,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DltLogChannel:
     """
-    This element contains the settings for the log/trace message output for a tuple
-    of ApplicationId and ContextId (verbose mode) or a SessionId (non-verbose
-    mode).
+    This element contains the settings for the log/trace message output for
+    a tuple of ApplicationId and ContextId (verbose mode) or a SessionId
+    (non-verbose mode).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

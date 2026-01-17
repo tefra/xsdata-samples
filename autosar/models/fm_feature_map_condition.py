@@ -20,11 +20,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FmFeatureMapCondition:
-    """Defines a condition which needs to be fulfilled for this mapping to become
-    active.
+    """
+    Defines a condition which needs to be fulfilled for this mapping to
+    become active.
 
-    The condition is implemented as formula that is based on features
-    and attributes and is defined by fmCond.
+    The condition is implemented as formula that is based on features and
+    attributes and is defined by fmCond.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

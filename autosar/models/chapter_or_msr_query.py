@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ChapterOrMsrQuery:
     """
-    This meta-class represents the ability to denote a particular chapter or a
-    query returning a chapter.
+    This meta-class represents the ability to denote a particular chapter
+    or a query returning a chapter.
 
     :ivar chapter: This establishes a subschapter. The upper
         multiplicity of this role has been increased to * due to

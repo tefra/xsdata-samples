@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegFramedPoint(TpegPointLocation):
     """
-    A point on the road network which is framed between two other points on the
-    same road.
+    A point on the road network which is framed between two other points on
+    the same road.
 
     :ivar tpeg_framed_point_location_type: The type of TPEG location.
     :ivar framed_point: A single non junction point on the road network

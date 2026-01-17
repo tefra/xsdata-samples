@@ -8,15 +8,15 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataConsumerSchemeType(OrganisationSchemeType):
-    """DataConsumerSchemeType defines a type of organisation scheme which contains
-    only data consumers.
+    """
+    DataConsumerSchemeType defines a type of organisation scheme which
+    contains only data consumers.
 
-    The data consumer scheme maintained by a particular maintenance
-    agency is always provided a fixed identifier and is never versioned.
+    The data consumer scheme maintained by a particular maintenance agency
+    is always provided a fixed identifier and is never versioned.
     Therefore, consumers can be added or removed without have to version
-    the scheme. This scheme has no hierarchy, meaning that no
-    organisation may define a relationship with another organisation in
-    the scheme.
+    the scheme. This scheme has no hierarchy, meaning that no organisation
+    may define a relationship with another organisation in the scheme.
     """
 
     choice_2: Any = field(

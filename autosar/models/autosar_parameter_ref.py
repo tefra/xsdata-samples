@@ -12,16 +12,19 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AutosarParameterRef:
-    """This class represents a reference to a parameter within AUTOSAR which can be one of the following use cases:
-    localParameter:
-    * localParameter which is used as whole (e.g.  sharedAxis for curve)
-    autosarVariable:
-    * a parameter provided via PortPrototype which is used as whole (e.g. parameterAccess)
-    * an element inside of a composite local parameter typed by ApplicationDatatype (e.g. sharedAxis for a curve)
-    * an element inside of a composite parameter provided via Port and typed by ApplicationDatatype (e.g. sharedAxis for a curve)
-    autosarParameterInImplDatatype:
-    * an element inside of a composite local parameter typed by ImplementationDatatype
-    * an element inside of a composite parameter provided via PortPrototype and typed by ImplementationDatatype
+    """
+    This class represents a reference to a parameter within AUTOSAR which
+    can be one of the following use cases: localParameter: * localParameter
+    which is used as whole (e.g. sharedAxis for curve) autosarVariable: * a
+    parameter provided via PortPrototype which is used as whole (e.g.
+    parameterAccess) * an element inside of a composite local parameter
+    typed by ApplicationDatatype (e.g. sharedAxis for a curve) * an element
+    inside of a composite parameter provided via Port and typed by
+    ApplicationDatatype (e.g. sharedAxis for a curve)
+    autosarParameterInImplDatatype: * an element inside of a composite
+    local parameter typed by ImplementationDatatype * an element inside of
+    a composite parameter provided via PortPrototype and typed by
+    ImplementationDatatype.
 
     :ivar autosar_parameter_iref: This instance reference is used if the
         callibration parameter is either imported via a port or is part

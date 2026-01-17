@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ServiceFacility(ParkingEquipmentOrServiceFacility):
-    """One type of service facility that is available on the parking site or
+    """
+    One type of service facility that is available on the parking site or
     located next to it.
 
     You can specify the number of this service facility type (e.g. 5

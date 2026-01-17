@@ -15,10 +15,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 @dataclass(frozen=True)
 class BaseHeaderType:
-    """BaseHeaderType in an abstract base type that defines the basis for all
+    """
+    BaseHeaderType in an abstract base type that defines the basis for all
     message headers.
 
-    Specific message formats will refine this
+    Specific message formats will refine this.
 
     :ivar id: ID identifies an identification for the message, assigned
         by the sender.

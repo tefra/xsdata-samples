@@ -7,10 +7,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class BookingCodeInfo:
-    """Details Cabin class info and class of service information with availability
-    counts.
+    """
+    Details Cabin class info and class of service information with
+    availability counts.
 
-    Only provided on search results and grouped by Cabin class
+    Only provided on search results and grouped by Cabin class.
 
     Parameters
     ----------

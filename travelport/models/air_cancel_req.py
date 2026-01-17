@@ -18,11 +18,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class AirCancelReq(BaseReq1):
-    """Air Cancel request is used to cancel all or part of an AirReservation.
+    """
+    Air Cancel request is used to cancel all or part of an AirReservation.
 
-    Given only a locator code, everything within the AirReservation
-    would be canceled. If particular segments are specified, then only
-    those segments will be canceled.
+    Given only a locator code, everything within the AirReservation would
+    be canceled. If particular segments are specified, then only those
+    segments will be canceled.
 
     Parameters
     ----------

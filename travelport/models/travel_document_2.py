@@ -28,8 +28,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class TravelDocument2(TypeKeyTaggedElement2):
     """
-    Information about travel-related documents (e.g., passports, driver's license,
-    travel visas, military ID cards).
+    Information about travel-related documents (e.g., passports, driver's
+    license, travel visas, military ID cards).
 
     Parameters
     ----------

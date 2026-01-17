@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TrafficStatusValue(DataValue):
     """
-    A measured or calculated value of the status of traffic conditions on a section
-    of road in a specified direction.
+    A measured or calculated value of the status of traffic conditions on a
+    section of road in a specified direction.
 
     :ivar traffic_status_value: A status value of traffic conditions on
         the identified section of road in the specified direction.

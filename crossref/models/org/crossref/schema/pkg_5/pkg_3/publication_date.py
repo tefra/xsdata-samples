@@ -7,10 +7,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class PublicationDate(DateT):
-    """The date of publication.
+    """
+    The date of publication.
 
-    Multiple dates are allowed to allow for different dates of
-    publication for online and print versions.
+    Multiple dates are allowed to allow for different dates of publication
+    for online and print versions.
     """
 
     class Meta:

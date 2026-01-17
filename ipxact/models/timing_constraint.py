@@ -9,12 +9,13 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class TimingConstraint:
-    """Defines a timing constraint for the associated port.
+    """
+    Defines a timing constraint for the associated port.
 
     The constraint is relative to the clock specified by the clockName
-    attribute. The clockEdge indicates which clock edge the constraint
-    is associated with (default is rising edge). The delayType attribute
-    can be specified to further refine the constraint.
+    attribute. The clockEdge indicates which clock edge the constraint is
+    associated with (default is rising edge). The delayType attribute can
+    be specified to further refine the constraint.
 
     :ivar value:
     :ivar clock_edge: Indicates the clock edge that a timing constraint

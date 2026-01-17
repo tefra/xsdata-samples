@@ -38,8 +38,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcucAddInfoParamDef:
     """
-    Configuration Parameter Definition for the specification of formatted text in
-    the ECU Configuration Parameter Description.
+    Configuration Parameter Definition for the specification of formatted
+    text in the ECU Configuration Parameter Description.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

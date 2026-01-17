@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class PublisherPlace:
-    """publisher_place gives the primary city location of the publisher.
+    """
+    publisher_place gives the primary city location of the publisher.
 
     If the city is not a major city, the appropriate country, state, or
     province should be added.

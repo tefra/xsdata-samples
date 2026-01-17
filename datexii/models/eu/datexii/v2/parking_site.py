@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingSite(ParkingRecord):
-    """A record containing static details of a parking site.
+    """
+    A record containing static details of a parking site.
 
     Must be specialised as an 'Urban-' or 'InterUrbanParkingSite' or a
     'SpecialLocationParkingSite'.

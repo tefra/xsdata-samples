@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BaseTypeDirectDefinition:
     """
-    This BaseType is defined directly (as opposite to a derived BaseType)
+    This BaseType is defined directly (as opposite to a derived BaseType).
 
     :ivar base_type_size: Describes the length of the data type
         specified in the container in bits.

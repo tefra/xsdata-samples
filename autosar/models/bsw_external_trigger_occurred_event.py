@@ -31,7 +31,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BswExternalTriggerOccurredEvent:
     """
-    A BswEvent resulting from a trigger released by another module or cluster.
+    A BswEvent resulting from a trigger released by another module or
+    cluster.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class SimpleKeyValueType(SimpleComponentValueType):
     """
-    SimpleKeyValueType derives from the SimpleValueType, but does not allow for the
-    cascading of value in the hierarchy, as keys are meant to describe a distinct
-    full or partial key.
+    SimpleKeyValueType derives from the SimpleValueType, but does not allow
+    for the cascading of value in the hierarchy, as keys are meant to
+    describe a distinct full or partial key.
     """
 
     cascade_values: Any = field(

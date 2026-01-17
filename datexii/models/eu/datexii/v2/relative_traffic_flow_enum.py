@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class RelativeTrafficFlowEnum(Enum):
     """
-    Levels of assessment of the traffic flow conditions relative to normally
-    expected conditions at this date/time.
+    Levels of assessment of the traffic flow conditions relative to
+    normally expected conditions at this date/time.
 
     :cvar TRAFFIC_VERY_MUCH_HEAVIER_THAN_NORMAL: Traffic is very much
         heavier than normally expected at the specified location at this

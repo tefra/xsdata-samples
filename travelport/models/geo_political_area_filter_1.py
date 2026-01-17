@@ -15,10 +15,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class GeoPoliticalAreaFilter1:
     """
-    Retrieve part or parts of profile by a particular geographic location for the
-    specified data category.Geographical location is only applicable to the
-    following categories:- All Preferences, Air Preference, Vehicle Preference,
-    Hotel Preference, Rail Preference and Other Preference.
+    Retrieve part or parts of profile by a particular geographic location
+    for the specified data category.Geographical location is only
+    applicable to the following categories:- All Preferences, Air
+    Preference, Vehicle Preference, Hotel Preference, Rail Preference and
+    Other Preference.
     """
 
     class Meta:

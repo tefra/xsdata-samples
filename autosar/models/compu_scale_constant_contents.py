@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompuScaleConstantContents:
     """
-    This meta-class represents the fact that a particular scale of the computation
-    method is constant.
+    This meta-class represents the fact that a particular scale of the
+    computation method is constant.
 
     :ivar compu_const: This represents the fact that the scale is a
         constant. The use case is mainly a non interpolated scale. It is

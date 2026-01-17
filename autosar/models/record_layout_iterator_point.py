@@ -6,12 +6,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RecordLayoutIteratorPoint:
-    """This meta-class denotes a start / endpoint for the iteration of a
+    """
+    This meta-class denotes a start / endpoint for the iteration of a
     SwRecordLayoutGroup.
 
-    It can be an integer or one of the keywords MAX-TEXT-SIZE|ARRAY-
-    SIZE. Note that negative numbers are counted backwards. Therefore
-    e.g. -1 refers to the last value.
+    It can be an integer or one of the keywords MAX-TEXT-SIZE|ARRAY-SIZE.
+    Note that negative numbers are counted backwards. Therefore e.g. -1
+    refers to the last value.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

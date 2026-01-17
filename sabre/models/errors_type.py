@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class ErrorsType:
     """
-    A collection of errors that occurred during the processing of a message.
+    A collection of errors that occurred during the processing of a
+    message.
 
     Attributes:
         error: Describes an error that occurred during the processing of

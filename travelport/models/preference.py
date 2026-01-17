@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class Preference:
     """
-    Preferences of the segment related to the profile (Agent, Branch, etc.).
+    Preferences of the segment related to the profile (Agent, Branch,
+    etc.).
     """
 
     class Meta:

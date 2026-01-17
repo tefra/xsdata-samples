@@ -23,12 +23,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PersistencyDataElement:
-    """This meta-class represents the ability to formally specify a piece of data
-    that is subject to persistency in the context of the enclosing
+    """
+    This meta-class represents the ability to formally specify a piece of
+    data that is subject to persistency in the context of the enclosing
     PersistencyKeyValueStorageInterface.
 
-    PersistencyDataElement represents also a key-value pair of the
-    deployed PersistencyKeyValueStorage and provides an initial value.
+    PersistencyDataElement represents also a key-value pair of the deployed
+    PersistencyKeyValueStorage and provides an initial value.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

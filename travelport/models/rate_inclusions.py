@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 @dataclass
 class RateInclusions:
-    """Provides the list of additional charges included in Rate.
-
-    e.g Tax, Airport Surcharge, CDW etc
+    """
+    Provides the list of additional charges included in Rate. e.g Tax,
+    Airport Surcharge, CDW etc.
     """
 
     class Meta:

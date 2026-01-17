@@ -10,8 +10,8 @@ __NAMESPACE__ = (
 @dataclass
 class SessionContext:
     """
-    A XML payload that contains either the Session Context Token or the Session
-    Properties.
+    A XML payload that contains either the Session Context Token or the
+    Session Properties.
 
     Parameters
     ----------

@@ -273,7 +273,8 @@ class BaggageDetailsType:
 @dataclass
 class BagtagDetailsType:
     """
-    To identify baggage by company identification, serial numbers, and destination.
+    To identify baggage by company identification, serial numbers, and
+    destination.
 
     :ivar identifier: Identifier
     :ivar number: Number
@@ -790,7 +791,8 @@ class CompanyIdentificationTypeI:
 @dataclass
 class CompanyRoleIdentificationType:
     """
-    To indicate commercial agreements related to the service being provided.
+    To indicate commercial agreements related to the service being
+    provided.
 
     :ivar code_share_type: Type of code share agreement.
     :ivar airline_designator: company identification
@@ -831,7 +833,8 @@ class CompanyRoleIdentificationType:
 @dataclass
 class CompanyRoleIdentificationType120771C:
     """
-    To indicate commercial agreements related to the service being provided.
+    To indicate commercial agreements related to the service being
+    provided.
 
     :ivar transport_stage_qualifier: Type of code share agreement.
     :ivar company: company identification
@@ -966,7 +969,9 @@ class ConversionRateDetailsTypeI179848C:
 
 @dataclass
 class CriteriaDetailsType:
-    """Criteria details : weights/parameters list"""
+    """
+    Criteria details : weights/parameters list.
+    """
 
     class Meta:
         name = "CriteriaiDetaislType"
@@ -1014,7 +1019,8 @@ class DataInformationType:
 @dataclass
 class DataTypeInformationType:
     """
-    To identify the type of data to be sent and to qualify the data when required.
+    To identify the type of data to be sent and to qualify the data when
+    required.
 
     :ivar sub_type: service group/sub-group/sub-code information
     :ivar option: Status (automated, manually added, exempted). Default
@@ -1234,8 +1240,8 @@ class DiscountPenaltyInformationType:
 @dataclass
 class DiscountPenaltyMonetaryInformationType:
     """
-    To specify the type of discount and penalty information, the monetary amount,
-    and associated information.
+    To specify the type of discount and penalty information, the monetary
+    amount, and associated information.
 
     :ivar fee_type: Type of discount/penalty
     :ivar fee_amount_type: The amount Type can be a percentage or an
@@ -1287,8 +1293,8 @@ class DiscountPenaltyMonetaryInformationType:
 @dataclass
 class DummySegmentTypeI:
     """
-    To serve the purpose of a mandatory segment at the beginning of a group and to
-    avoid segment collision.
+    To serve the purpose of a mandatory segment at the beginning of a group
+    and to avoid segment collision.
     """
 
 
@@ -1662,8 +1668,8 @@ class FreeTextQualificationType:
 @dataclass
 class FreeTextQualificationTypeI:
     """
-    To specify the type, purpose, and language of free text and whether any action
-    is required.
+    To specify the type, purpose, and language of free text and whether any
+    action is required.
 
     :ivar text_subject_qualifier: Text subject qualifier
     """
@@ -2242,7 +2248,8 @@ class MonetaryInformationDetailsType:
 @dataclass
 class MonetaryInformationDetailsTypeI:
     """
-    To specify the type of monetary amount, the amount, and the currency code.
+    To specify the type of monetary amount, the amount, and the currency
+    code.
 
     :ivar type_qualifier: type Qualifier
     :ivar amount: Amount
@@ -2283,7 +2290,8 @@ class MonetaryInformationDetailsTypeI:
 @dataclass
 class MonetaryInformationDetailsType245528C:
     """
-    To specify the type of monetary amount, the amount, and the currency code.
+    To specify the type of monetary amount, the amount, and the currency
+    code.
 
     :ivar type_qualifier:
     :ivar amount: Amount
@@ -2793,8 +2801,8 @@ class ProposedSegmentDetailsType:
 @dataclass
 class ReferenceType:
     """
-    To specify which number in a sequence of references and/or the reference
-    number.
+    To specify which number in a sequence of references and/or the
+    reference number.
 
     :ivar ref_of_leg: Reference  of leg
     :ivar first_item_identifier: Reference of segment starting range
@@ -3270,8 +3278,8 @@ class StatusDetailsType:
 @dataclass
 class StatusDetailsType256255C:
     """
-    To specify a status, the action to be taken, and an additional qualification of
-    the status.
+    To specify a status, the action to be taken, and an additional
+    qualification of the status.
 
     :ivar indicator: list of status/qualifiers Either His for Historical
         or     Crt for Current
@@ -3394,7 +3402,8 @@ class TravellerDetailsType:
 @dataclass
 class ActionDetailsType:
     """
-    To specify the action that should be taken on a selected reference number.
+    To specify the action that should be taken on a selected reference
+    number.
 
     :ivar number_of_items_details: Number of items details
     :ivar last_items_details: Range of segments
@@ -3575,8 +3584,8 @@ class CodedAttributeType:
 @dataclass
 class CommercialAgreementsType:
     """
-    To specify commercial agreements between two  or more companies related to
-    joint, shared, lease operations etc.
+    To specify commercial agreements between two or more companies related
+    to joint, shared, lease operations etc.
 
     :ivar codeshare_details: Codeshare Details
     :ivar other_codeshare_details: Other codeshare details
@@ -3648,7 +3657,7 @@ class ConversionRateTypeI78562S:
 @dataclass
 class DateAndTimeInformationType:
     """
-    Not the standard only used in fare quote message.
+    not the standard only used in fare quote message.
 
     :ivar stop_details: Details on date and time
     """
@@ -4894,8 +4903,8 @@ class ReferenceInfoType:
 @dataclass
 class ReferenceInfoType133176S:
     """
-    To specify an association between references given to travelers, to products,
-    to services.
+    To specify an association between references given to travelers, to
+    products, to services.
 
     :ivar referencing_detail: Referencing details
     """
@@ -4983,8 +4992,8 @@ class ReferenceInfoType165972S:
 @dataclass
 class ReferenceInfoType176658S:
     """
-    To specify an association between references given to travelers, to products,
-    to services.
+    To specify an association between references given to travelers, to
+    products, to services.
 
     :ivar referencing_detail: Referencing details
     """
@@ -5064,7 +5073,8 @@ class SequenceDetailsTypeU:
 @dataclass
 class SpecialRequirementsDetailsType:
     """
-    To specify special requests or service s information relating to a traveller.
+    To specify special requests or service s information relating to a
+    traveller.
 
     :ivar service_requirements_info: To specify the Service Requirement
         of the customer
@@ -5096,8 +5106,8 @@ class SpecialRequirementsDetailsType:
 @dataclass
 class SpecificDataInformationType:
     """
-    To specify miscellaneous data by first identifying the type of data to be sent
-    and then the actual data.
+    To specify miscellaneous data by first identifying the type of data to
+    be sent and then the actual data.
 
     :ivar data_type_information: Carrier fee description
     :ivar data_information: Data information
@@ -5217,7 +5227,8 @@ class TaxType:
 @dataclass
 class TransportIdentifierType:
     """
-    To specify the transport service(s) which is /are to be updated or cancelled.
+    To specify the transport service(s) which is /are to be updated or
+    cancelled.
 
     :ivar company_identification: Company identification
     """
@@ -5235,8 +5246,8 @@ class TransportIdentifierType:
 @dataclass
 class TravelProductType:
     """
-    Contains flight travel (date, time, flight number,...) and posting avaibility
-    information.
+    Contains flight travel (date, time, flight number,...) and posting
+    avaibility information.
 
     :ivar product_date_time: Date and time of departure and arrival
     :ivar location: Location of departure and arrival

@@ -21,15 +21,18 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlatInstanceDescriptor:
-    """Represents exactly one node (e.g. a component instance or data element) of
-    the instance tree of a software system.
+    """
+    Represents exactly one node (e.g. a component instance or data element)
+    of the instance tree of a software system.
 
-    The purpose of this element is to map the various nested representations of this instance to a flat representation and assign a unique name (shortName) to it.
-    Use cases:
-    * Specify unique names of measurable data to be used by MCD tools
-    * Specify unique names of calibration data to be used by MCD tool
-    * Specify a unique name for an instance of a component prototype in the ECU extract of the system description
-    Note that in addition it is possible to assign alias names via AliasNameAssignment.
+    The purpose of this element is to map the various nested
+    representations of this instance to a flat representation and assign a
+    unique name (shortName) to it. Use cases: * Specify unique names of
+    measurable data to be used by MCD tools * Specify unique names of
+    calibration data to be used by MCD tool * Specify a unique name for an
+    instance of a component prototype in the ECU extract of the system
+    description Note that in addition it is possible to assign alias names
+    via AliasNameAssignment.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

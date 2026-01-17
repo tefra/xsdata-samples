@@ -10,13 +10,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ConditionByFormula:
-    """This class represents a condition which is computed based on system
+    """
+    This class represents a condition which is computed based on system
     constants according to the specified expression.
 
-    The expected result is considered as boolean value.
-    The result of the expression is interpreted as a condition.
-    * "0" represents "false";
-    * a value other than zero is considered "true"
+    The expected result is considered as boolean value. The result of the
+    expression is interpreted as a condition. * "0" represents "false"; * a
+    value other than zero is considered "true".
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

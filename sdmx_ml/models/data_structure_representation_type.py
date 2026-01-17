@@ -8,11 +8,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataStructureRepresentationType(RepresentationType):
-    """DataStructureRepresentationType is an abstract base type which defines the
-    allowable representations for any data structure definition component.
+    """
+    DataStructureRepresentationType is an abstract base type which defines
+    the allowable representations for any data structure definition
+    component.
 
-    The enumeration must be restricted to the proper type for item
-    scheme for a given component.
+    The enumeration must be restricted to the proper type for item scheme
+    for a given component.
     """
 
     min_occurs: Any = field(

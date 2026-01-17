@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class BusDefinition:
     """
-    Defines the structural information associated with a bus type, independent of
-    the abstraction level.
+    Defines the structural information associated with a bus type,
+    independent of the abstraction level.
 
     :ivar vendor: Name of the vendor who supplies this file.
     :ivar library: Name of the logical library this element belongs to.

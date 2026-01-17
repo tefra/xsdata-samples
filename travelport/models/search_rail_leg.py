@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 @dataclass
 class SearchRailLeg:
     """
-    Holds Origin, Destination, and Departure times for a Rail Leg to search for.
+    Holds Origin, Destination, and Departure times for a Rail Leg to search
+    for.
     """
 
     class Meta:

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticValueAccessEnum:
     """
-    Defines the access of the configured diagnostic current values which will be
-    used by the Dem or Dcm module.
+    Defines the access of the configured diagnostic current values which
+    will be used by the Dem or Dcm module.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

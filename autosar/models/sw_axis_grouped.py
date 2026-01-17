@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwAxisGrouped:
     """
-    An SwAxisGrouped is an axis which is shared between multiple calibration
-    parameters.
+    An SwAxisGrouped is an axis which is shared between multiple
+    calibration parameters.
 
     :ivar max_gradient: This attribute defines the maximum permissible
         gradient for an adjustable object (curve, map or cuboid) with

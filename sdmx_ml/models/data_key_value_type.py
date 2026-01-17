@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataKeyValueType(MemberSelectionType):
-    """DataKeyValueType is a type for providing a dimension value for the purpose
-    of defining a distinct data key.
+    """
+    DataKeyValueType is a type for providing a dimension value for the
+    purpose of defining a distinct data key.
 
     Only a single value can be provided for the dimension.
 

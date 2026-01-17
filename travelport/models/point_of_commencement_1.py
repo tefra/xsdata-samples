@@ -7,10 +7,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class PointOfCommencement1:
-    """Point of Commencement is optional.
+    """
+    Point of Commencement is optional.
 
-    CityOrAirportCode and date portion of the Time attribute is
-    mandatory.
+    CityOrAirportCode and date portion of the Time attribute is mandatory.
 
     Parameters
     ----------

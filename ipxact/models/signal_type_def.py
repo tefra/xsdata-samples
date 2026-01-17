@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class SignalTypeDef:
     """
-    Definition of a single signal type defintion that can relate to multiple views.
+    Definition of a single signal type defintion that can relate to
+    multiple views.
 
     :ivar signal_type: defines the signal type for the port. Continuous-
         conservative is a signal which is continuous in time and

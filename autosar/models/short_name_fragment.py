@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ShortNameFragment:
     """
-    This class describes how the Referrable.shortName is composed of several
-    shortNameFragments.
+    This class describes how the Referrable.shortName is composed of
+    several shortNameFragments.
 
     :ivar role: This specifies the role of fragment to define e.g. the
         order of the fragments.

@@ -33,14 +33,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ISignalGroup:
-    """SignalGroup of the Interaction Layer.
+    """
+    SignalGroup of the Interaction Layer.
 
-    The RTE supports a "signal fan-out" where the same System Signal
-    Group is sent in different SignalIPdus to multiple receivers. An
-    ISignalGroup refers to a set of ISignals that shall always be kept
-    together. A ISignalGroup represents a COM Signal Group. Therefore it
-    is recommended to put the ISignalGroup in the same Package as
-    ISignals (see atp.recommendedPackage)
+    The RTE supports a "signal fan-out" where the same System Signal Group
+    is sent in different SignalIPdus to multiple receivers. An ISignalGroup
+    refers to a set of ISignals that shall always be kept together. A
+    ISignalGroup represents a COM Signal Group. Therefore it is recommended
+    to put the ISignalGroup in the same Package as ISignals (see
+    atp.recommendedPackage).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

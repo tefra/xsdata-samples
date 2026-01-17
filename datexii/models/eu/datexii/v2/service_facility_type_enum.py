@@ -4,8 +4,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class ServiceFacilityTypeEnum(Enum):
-    """Service facilities available on the parking site, parking space or group of
-    parking spaces.
+    """
+    Service facilities available on the parking site, parking space or
+    group of parking spaces.
 
     In distinction to equipment, a service is mostly manned.
 

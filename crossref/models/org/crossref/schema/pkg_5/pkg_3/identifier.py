@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class Identifier:
     """
-    A public standard identifier that can be used to uniquely identify the item
-    being registered.
+    A public standard identifier that can be used to uniquely identify the
+    item being registered.
     """
 
     class Meta:

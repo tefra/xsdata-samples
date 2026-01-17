@@ -11,9 +11,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class UrlLink:
     """
-    Details of a Uniform Resource Locator (URL) address pointing to a resource
-    available on the Internet from where further relevant information may be
-    obtained.
+    Details of a Uniform Resource Locator (URL) address pointing to a
+    resource available on the Internet from where further relevant
+    information may be obtained.
 
     :ivar url_link_address: A Uniform Resource Locator (URL) address
         pointing to a resource available on the Internet from where

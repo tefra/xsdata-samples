@@ -8,9 +8,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class TravelerCountType:
     """
-    Defines the number of travelers of a specific type (e.g. a driver type can be
-    either one of: Adult, YoungDriver, YoungerDriver, or it may be a code that is
-    acceptable to both Trading Partners).
+    Defines the number of travelers of a specific type (e.g. a driver type
+    can be either one of: Adult, YoungDriver, YoungerDriver, or it may be a
+    code that is acceptable to both Trading Partners).
 
     Attributes:
         age:

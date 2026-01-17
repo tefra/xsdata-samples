@@ -18,10 +18,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class HwElementConnector:
-    """This meta-class represents the ability to connect two hardware elements.
+    """
+    This meta-class represents the ability to connect two hardware
+    elements.
 
-    The details of the connection can be refined by
-    hwPinGroupConnection.
+    The details of the connection can be refined by hwPinGroupConnection.
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one

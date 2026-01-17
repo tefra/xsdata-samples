@@ -44,14 +44,15 @@ class OtherHeiIdValue(Enum):
 
 @dataclass
 class ApisImplemented:
-    """This section describes all APIs implemented by a particular EWP host.
+    """
+    This section describes all APIs implemented by a particular EWP host.
 
     Please note, that each API can be implemented a multiple number of
     times. Usually, you will have only a single entry for each of your
-    APIs, but there are some use cases when serving two or more
-    different versions of the same API is desirable. More background and
-    discussion here:
-    https://github.com/erasmus-without-paper/ewp-specs-architecture/issues/6
+    APIs, but there are some use cases when serving two or more different
+    versions of the same API is desirable. More background and discussion
+    here:
+    https://github.com/erasmus-without-paper/ewp-specs-architecture/issues/6.
 
     :ivar other_element: Manifest entries for each of the APIs are
         defined in separate schemas, within repositories describing
@@ -79,10 +80,10 @@ class ApisImplemented:
 
 @dataclass
 class Empty:
-    """Just a reusable empty element type, with no content nor attributes.
+    """
+    Just a reusable empty element type, with no content nor attributes.
 
-    See:
-    http://stackoverflow.com/questions/20751782/
+    See: http://stackoverflow.com/questions/20751782/.
     """
 
     class Meta:
@@ -91,14 +92,16 @@ class Empty:
 
 @dataclass
 class MultilineString:
-    """This is very similar to a regular xs:string, but whenever this type is used
-    it indicates that the content MAY contain basic whitespace formatting, such us
-    line breaks and double line breaks (for splitting paragraphs).
+    """
+    This is very similar to a regular xs:string, but whenever this type is
+    used it indicates that the content MAY contain basic whitespace
+    formatting, such us line breaks and double line breaks (for splitting
+    paragraphs).
 
     The values still MUST be in plaintext though (no HTML is allowed).
-    Clients which process data of this type SHOULD respect line breaks
-    when they display the data to the end user (e.g. replace CRs and LFs
-    with &lt;br&gt;s when rendering to HTML).
+    Clients which process data of this type SHOULD respect line breaks when
+    they display the data to the end user (e.g. replace CRs and LFs with
+    &lt;br&gt;s when rendering to HTML).
     """
 
     class Meta:
@@ -114,8 +117,9 @@ class MultilineString:
 
 @dataclass
 class AdminEmail:
-    """Address of a developer (or server administrator) who may be contacted in
-    case of problems.
+    """
+    Address of a developer (or server administrator) who may be contacted
+    in case of problems.
 
     This element was placed in the common-types namespace because it is
     being used in multiple schemas throughout the EWP project (most
@@ -165,14 +169,15 @@ class OtherHeiId:
 
 @dataclass
 class HttpwithOptionalLang:
-    """An absolute URL (might be either HTTP or HTTPS) with an optional xml:lang
-    attribute.
+    """
+    An absolute URL (might be either HTTP or HTTPS) with an optional
+    xml:lang attribute.
 
-    This type is used in places where a single website can be provided
-    in multiple language versions. However, as a general rule, if the
-    website can correctly auto-detect client browser's preferred
-    language, then server implementers SHOULD supply this element only
-    once, and *without* the xml:lang attribute.
+    This type is used in places where a single website can be provided in
+    multiple language versions. However, as a general rule, if the website
+    can correctly auto-detect client browser's preferred language, then
+    server implementers SHOULD supply this element only once, and *without*
+    the xml:lang attribute.
 
     :ivar value:
     :ivar lang: If given, it contains the language code the client
@@ -202,11 +207,12 @@ class HttpwithOptionalLang:
 
 @dataclass
 class MultilineStringWithOptionalLang(MultilineString):
-    """A multiline string (as defined in the MultilineString) with an optional (but
-    RECOMMENDED) xml:lang attribute.
+    """
+    A multiline string (as defined in the MultilineString) with an optional
+    (but RECOMMENDED) xml:lang attribute.
 
-    It is used in places where a description of some entity can be
-    provided in multiple languages.
+    It is used in places where a description of some entity can be provided
+    in multiple languages.
 
     :ivar lang: Also see comments on xml:lang attribute in
         StringWithOptionalLang type.
@@ -226,7 +232,8 @@ class MultilineStringWithOptionalLang(MultilineString):
 
 @dataclass
 class StringWithOptionalLang:
-    """A string with an optional (but RECOMMENDED) xml:lang attribute.
+    """
+    A string with an optional (but RECOMMENDED) xml:lang attribute.
 
     It is used in places where a name of some entity can be provided in
     multiple languages.
@@ -264,7 +271,8 @@ class StringWithOptionalLang:
 
 @dataclass
 class AdminNotes(MultilineString):
-    """Additional information provided by administrators and/or developers.
+    """
+    Additional information provided by administrators and/or developers.
 
     This element was placed in the common-types namespace because it is
     being used in multiple schemas throughout the EWP project (most
@@ -278,11 +286,12 @@ class AdminNotes(MultilineString):
 
 @dataclass
 class Hei:
-    """Briefly describes a single Higher Education Institution (HEI).
+    """
+    Briefly describes a single Higher Education Institution (HEI).
 
-    These elements are listed in the Registry Service's cataloge, in
-    order to allow the clients to identify all the HEIs by various types
-    of identifiers.
+    These elements are listed in the Registry Service's cataloge, in order
+    to allow the clients to identify all the HEIs by various types of
+    identifiers.
 
     :ivar other_id: SCHAC identifier (provided in the `id` attribute
         described below) is the primary HEI identifier, but manifest
@@ -336,14 +345,17 @@ class Hei:
 
 @dataclass
 class ManifestApiEntryBase:
-    """A common base type for children of the `apis-implemented` element of the.
+    """
+    A common base type for children of the `apis-implemented` element of
+    the manifest file.
 
-    manifest file. We declare it here (as opposed to declaring in the Discovery
-    API's namespace) because it is shared between all the APIs - we want it to
-    stay backwards-compatible when new releases of the Discovery API are published.
-    IMPORTANT: Clients MUST NOT assume that all children of `apis-implemented` will
-    "inherit" these properties. It is true that most EWP-related APIs do, but
-    manifest files may contain references to *any* APIs.
+    We declare it here (as opposed to declaring in the Discovery API's
+    namespace) because it is shared between all the APIs - we want it to
+    stay backwards-compatible when new releases of the Discovery API are
+    published. IMPORTANT: Clients MUST NOT assume that all children of
+    `apis-implemented` will "inherit" these properties. It is true that
+    most EWP-related APIs do, but manifest files may contain references to
+    *any* APIs.
 
     :ivar admin_email: RECOMMENDED element. Address of a developer or
         server administrator who may be contacted in case of problems
@@ -398,7 +410,8 @@ class ManifestApiEntryBase:
 
 @dataclass
 class ErrorResponse:
-    """A generic envelope for all kinds of errors.
+    """
+    A generic envelope for all kinds of errors.
 
     Servers SHOULD return this element as the body of all their HTTP 4xx
     and HTTP 5xx responses.
@@ -451,25 +464,26 @@ class ErrorResponse:
 
 @dataclass
 class SuccessUserMessage(MultilineStringWithOptionalLang):
-    """This element is sometimes added to regular HTTP 200 responses.
+    """
+    This element is sometimes added to regular HTTP 200 responses.
 
-    This serves as
-    an equivalent of the `user-message` element introduced in the `error-response`
-    above, but this one is for HTTP 200 responses (not error responses).
-    If the server includes this element in the response, then it indicates that it
-    wants this message to be displayed for the human who had initiated the request.
-    If it's given, then clients SHOULD display this message for their end users (if
-    it is possible to display it).
-    In case of most APIs no such extra message is necessary, because HTTP 200 means
-    "success" in itself. However, in cases of some other APIs, the server is
-    allowed some more flexibility in how the request is being processed. This
-    element allows to developers to inform end users about irregularieties in this
-    process.
-    In places where we expect this element to appear, it will be referred to in a
-    proper `response.xsd` file, along with some additional explanations. Usually it
-    will be used along with minOccurs="0" and maxOccurs="unbounded" attributes, in
-    order to allow servers to provide the message in multiple languages. It is
-    RECOMMENDED for the server to provide it at least in English.
+    This serves as an equivalent of the `user-message` element introduced
+    in the `error-response` above, but this one is for HTTP 200 responses
+    (not error responses). If the server includes this element in the
+    response, then it indicates that it wants this message to be displayed
+    for the human who had initiated the request. If it's given, then
+    clients SHOULD display this message for their end users (if it is
+    possible to display it). In case of most APIs no such extra message is
+    necessary, because HTTP 200 means "success" in itself. However, in
+    cases of some other APIs, the server is allowed some more flexibility
+    in how the request is being processed. This element allows to
+    developers to inform end users about irregularieties in this process.
+    In places where we expect this element to appear, it will be referred
+    to in a proper `response.xsd` file, along with some additional
+    explanations. Usually it will be used along with minOccurs="0" and
+    maxOccurs="unbounded" attributes, in order to allow servers to provide
+    the message in multiple languages. It is RECOMMENDED for the server to
+    provide it at least in English.
     """
 
     class Meta:
@@ -479,20 +493,22 @@ class SuccessUserMessage(MultilineStringWithOptionalLang):
 
 @dataclass
 class Host:
-    """Defines a single EWP Host.
+    """
+    Defines a single EWP Host.
 
-    EWP Host defines relationships between HEIs, APIs, server administrators and
-    client credentials. One EWP Host defines a single Cartesian product (a "join")
-    of all these sets. (E.g. if a client certificate X and a HEI Y is present in
-    the same host, then it means that server which signs its requests with X is
-    allowed to request resources visible to HEI Y. Similar statement is true for
-    every other pair of sets.)
-    Most partners will have exactly one `host` entry. However, in some cases you
-    might need to describe more than one. For example, when you server covers
-    two HEIs, but one of your APIs is available for only one of these two HEIs,
-    then it's impossible to describe such relationship with a single Cartesian
-    product. You will need to use a sum of at least two Cartesian products. (which
-    is expressed by two `host` entries).
+    EWP Host defines relationships between HEIs, APIs, server
+    administrators and client credentials. One EWP Host defines a single
+    Cartesian product (a "join") of all these sets. (E.g. if a client
+    certificate X and a HEI Y is present in the same host, then it means
+    that server which signs its requests with X is allowed to request
+    resources visible to HEI Y. Similar statement is true for every other
+    pair of sets.) Most partners will have exactly one `host` entry.
+    However, in some cases you might need to describe more than one. For
+    example, when you server covers two HEIs, but one of your APIs is
+    available for only one of these two HEIs, then it's impossible to
+    describe such relationship with a single Cartesian product. You will
+    need to use a sum of at least two Cartesian products. (which is
+    expressed by two `host` entries).
 
     :ivar admin_email: RECOMMENDED element. Address of a developer or
         server administrator who may be contacted in case of problems
@@ -666,7 +682,8 @@ class Host:
 
 @dataclass
 class Catalogue:
-    """The EWP Registry catalogue response.
+    """
+    The EWP Registry catalogue response.
 
     Most of the data published here is copied from the hosts' manifests,
     but the data is additionally verified (and portions of it may be
@@ -1005,10 +1022,11 @@ class Catalogue:
 
 @dataclass
 class Manifest:
-    """EWP Discovery Manifest.
+    """
+    EWP Discovery Manifest.
 
-    Manifest files describe a set of EWP Hosts. Manifest files are
-    usually read by the EWP Registry Service only.
+    Manifest files describe a set of EWP Hosts. Manifest files are usually
+    read by the EWP Registry Service only.
 
     :ivar host: One v5 manifest file can describe multiple EWP Hosts
         (this is the primary difference between v4 and v5 of Discovery

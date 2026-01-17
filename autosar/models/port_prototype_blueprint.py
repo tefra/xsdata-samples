@@ -42,14 +42,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PortPrototypeBlueprint:
-    """This meta-class represents the ability to express a blueprint of a
+    """
+    This meta-class represents the ability to express a blueprint of a
     PortPrototype by referring to a particular PortInterface.
 
     This blueprint can then be used as a guidance to create particular
-    PortPrototypes which are defined according to this blueprint. By
-    this it is possible to standardize application interfaces without
-    the need to also standardize software-components with PortPrototypes
-    typed by the standardized PortInterfaces.
+    PortPrototypes which are defined according to this blueprint. By this
+    it is possible to standardize application interfaces without the need
+    to also standardize software-components with PortPrototypes typed by
+    the standardized PortInterfaces.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

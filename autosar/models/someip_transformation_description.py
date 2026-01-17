@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SomeipTransformationDescription:
     """
-    The SOMEIPTransformationDescription is used to specify SOME/IP transformer
-    specific attributes.
+    The SOMEIPTransformationDescription is used to specify SOME/IP
+    transformer specific attributes.
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one

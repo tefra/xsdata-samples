@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class MemberValueType:
     """
-    Allows for a ditinct reference or a wildcard expression for selecting codes
-    from a codelist.
+    Allows for a ditinct reference or a wildcard expression for selecting
+    codes from a codelist.
 
     :ivar value:
     :ivar cascade_values: Indicates whether child codes should be

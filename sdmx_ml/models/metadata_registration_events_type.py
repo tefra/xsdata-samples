@@ -9,14 +9,15 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class MetadataRegistrationEventsType:
-    """MetadataRegistrationEventsType details the metadata registration events for
-    the subscription.
+    """
+    MetadataRegistrationEventsType details the metadata registration events
+    for the subscription.
 
-    It is possible to subscribe to all metadata registration events in
-    the repository, or specific events for; single registrations,
-    provision agreements, data providers, metadata flows, metadata
-    structure definitions, and categories that categorize metadata flows
-    or metadata structure definitions.
+    It is possible to subscribe to all metadata registration events in the
+    repository, or specific events for; single registrations, provision
+    agreements, data providers, metadata flows, metadata structure
+    definitions, and categories that categorize metadata flows or metadata
+    structure definitions.
 
     :ivar choice:
     :ivar type_value: TYPE is a fixed attribute that is used to ensure

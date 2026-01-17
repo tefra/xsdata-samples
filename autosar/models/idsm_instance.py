@@ -36,8 +36,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class IdsmInstance:
     """
     This meta-class provides the ability to create a relation between an
-    EcuInstance and a specific class of filters for security events that apply for
-    all security events reported on the referenced EcuInstance.
+    EcuInstance and a specific class of filters for security events that
+    apply for all security events reported on the referenced EcuInstance.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -59,8 +59,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class Dissertation:
     """
-    Dissertation is the top level element for deposit of metadata about one or more
-    dissertations.
+    dissertation is the top level element for deposit of metadata about one
+    or more dissertations.
     """
 
     class Meta:

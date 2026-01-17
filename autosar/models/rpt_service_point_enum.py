@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RptServicePointEnum:
     """
-    Specifies whether the invocation of ExecutableEntitys due to activation of
-    specific RteEvents/BswEvents requires the insertion of Service Points.
+    Specifies whether the invocation of ExecutableEntitys due to activation
+    of specific RteEvents/BswEvents requires the insertion of Service
+    Points.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

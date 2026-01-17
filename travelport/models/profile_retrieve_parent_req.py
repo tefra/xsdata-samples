@@ -4,12 +4,12 @@ from dataclasses import dataclass, field
 
 from travelport.models.base_req_2 import BaseReq2
 from travelport.models.profile_data_filter_1 import ProfileDataFilter1
-from travelport.models.provisioning_code_profile_type_3 import (
-    ProvisioningCodeProfileType3,
+from travelport.models.provisioning_code_profile_type_1 import (
+    ProvisioningCodeProfileType1,
 )
 from travelport.models.type_parent_profile_level import TypeParentProfileLevel
-from travelport.models.unique_profile_id_profile_type_3 import (
-    UniqueProfileIdProfileType3,
+from travelport.models.unique_profile_id_profile_type_1 import (
+    UniqueProfileIdProfileType1,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -128,7 +128,7 @@ class ProfileRetrieveParentReq(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType3 = field(
+        profile_type: None | ProvisioningCodeProfileType1 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -161,7 +161,7 @@ class ProfileRetrieveParentReq(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType3 = field(
+        profile_type: None | UniqueProfileIdProfileType1 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

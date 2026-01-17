@@ -6,8 +6,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Integer:
-    """An instance of Integer is an element in the set of integer numbers ( ...,
-    -2, -1, 0, 1, 2, ...).
+    """
+    An instance of Integer is an element in the set of integer numbers (
+    ..., -2, -1, 0, 1, 2, ...).
 
     The value can be expressed in decimal, octal, hexadecimal and binary
     representation. Negative numbers can only be expressed in decimal

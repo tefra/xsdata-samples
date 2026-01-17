@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SignalServiceTranslationControlEnum:
     """
-    This enumeration allows to define how the service instance offer/subscribe
-    control shall behave.
+    This enumeration allows to define how the service instance
+    offer/subscribe control shall behave.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -9,12 +9,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class IdentifiableObjectEventType:
-    """IdentifiableObjectEventType describes the structure of a reference to an
-    identifiable object's events.
+    """
+    IdentifiableObjectEventType describes the structure of a reference to
+    an identifiable object's events.
 
-    Either all instances of the object matching the inherited criteria,
-    a specific instance, or specific instances of the object may be
-    selected.
+    Either all instances of the object matching the inherited criteria, a
+    specific instance, or specific instances of the object may be selected.
     """
 
     all_or_urn_or_id: Optional[

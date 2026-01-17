@@ -8,10 +8,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class StructureUsageType(MaintainableType):
-    """StructureUsageType is an abstract base type for all structure usages.
+    """
+    StructureUsageType is an abstract base type for all structure usages.
 
-    It contains a reference to a structure. Concrete instances of this
-    type should restrict the type of structure referenced.
+    It contains a reference to a structure. Concrete instances of this type
+    should restrict the type of structure referenced.
 
     :ivar structure: Structure references the structure (data structure
         or metadata structure definition) which the structure usage is

@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 @dataclass
 class SellMessage6:
-    """Sell Message from Vendor.
+    """
+    Sell Message from Vendor.
 
     This is applicable in response messages only, any input in request
     message will be ignored.

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticIumprGroupIdentifier:
     """
-    This meta-class provides the ability to the define the group identifier for an
-    IumprGroup.
+    This meta-class provides the ability to the define the group identifier
+    for an IumprGroup.
 
     :ivar group_id: This attribute shall be taken to define an
         identifier for the IUMPR group. Please note that the value of

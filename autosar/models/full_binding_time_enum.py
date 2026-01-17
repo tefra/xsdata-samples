@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FullBindingTimeEnum:
     """
-    This enumeration specifies the BindingTimes that can be used in AUTOSAR models.
+    This enumeration specifies the BindingTimes that can be used in AUTOSAR
+    models.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

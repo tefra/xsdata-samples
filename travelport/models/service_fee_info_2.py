@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 @dataclass
 class ServiceFeeInfo2:
     """
-    Travel Agency Service Fees (TASF) are charged by the agency through BSP or
-    Airline Reporting Corporation (ARC).
+    Travel Agency Service Fees (TASF) are charged by the agency through BSP
+    or Airline Reporting Corporation (ARC).
 
     Parameters
     ----------

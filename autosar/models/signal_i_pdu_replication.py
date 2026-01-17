@@ -11,12 +11,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SignalIPduReplication:
-    """PduReplication is a form of redundancy where the data content of one
-    ISignalIPdu (source) is transmitted inside a set of replica ISignalIPdus.
+    """
+    PduReplication is a form of redundancy where the data content of one
+    ISignalIPdu (source) is transmitted inside a set of replica
+    ISignalIPdus.
 
     These ISignalIPdus (copies) have different Pdu IDs, identical
-    PduCounters, identical data content and are transmitted with the
-    same frequency.
+    PduCounters, identical data content and are transmitted with the same
+    frequency.
 
     :ivar pdu_replication_voting: Number of identical IPdus needed for
         successful voting (1-3).

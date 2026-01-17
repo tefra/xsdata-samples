@@ -20,7 +20,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class NoteType(BaseSimpleComponentType):
     """
-    <description xmlns="">Notes related to the entity</description>
+    <description xmlns="">Notes related to the entity</description>.
 
     :ivar text: <description xmlns="">Textual content of the
         Note</description>

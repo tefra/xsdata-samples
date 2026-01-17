@@ -24,12 +24,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DoIpTpConfig:
-    """This element defines exactly one DoIpTp Configuration that is used to
+    """
+    This element defines exactly one DoIpTp Configuration that is used to
     configure all DoIPChannels available in a DoIpInterface.
 
-    Each DoIPChannel describes a connection between a doIpSourceAddress
-    and a doIpTargetAddress and the exchange of DcmIPdus between the
-    PduR and DoIP.
+    Each DoIPChannel describes a connection between a doIpSourceAddress and
+    a doIpTargetAddress and the exchange of DcmIPdus between the PduR and
+    DoIP.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

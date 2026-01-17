@@ -30,15 +30,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
-    """This represents a mapping between one ClientServerInterface blueprint and
-    BswModuleEntry blueprint in order to express the intended implementation of
-    ClientServerOperations by specific BswModuleEntries under consideration of
-    PortDefinedArguments.
+    """
+    This represents a mapping between one ClientServerInterface blueprint
+    and BswModuleEntry blueprint in order to express the intended
+    implementation of ClientServerOperations by specific BswModuleEntries
+    under consideration of PortDefinedArguments.
 
-    Such a mapping enables the formal check whether the number of
-    arguments and the data types of arguments of the operation +
-    additional PortDefinedArguments matches the signature of the
-    BswModuleEntry.
+    Such a mapping enables the formal check whether the number of arguments
+    and the data types of arguments of the operation + additional
+    PortDefinedArguments matches the signature of the BswModuleEntry.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -11,8 +11,9 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class Dim(UnsignedPositiveLongintExpression):
     """
-    Dimensions a register array, the semantics for dim elements are the same as the
-    C language standard for the  layout of memory in multidimensional arrays.
+    Dimensions a register array, the semantics for dim elements are the
+    same as the C language standard for the layout of memory in
+    multidimensional arrays.
 
     :ivar id:
     :ivar index_var: Name for the index to allow referring to it in

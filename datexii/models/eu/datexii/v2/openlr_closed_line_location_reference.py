@@ -17,10 +17,11 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class OpenlrClosedLineLocationReference(OpenlrAreaLocationReference):
-    """The openLR method of areadefinition by providing a closed path (i.e. a
+    """
+    the openLR method of areadefinition by providing a closed path (i.e. a
     circuit) in the road network.
 
-    The boundary always consists of road segments
+    The boundary always consists of road segments.
     """
 
     openlr_location_reference_point: list[OpenlrLocationReferencePoint] = (

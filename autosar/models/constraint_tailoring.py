@@ -22,11 +22,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ConstraintTailoring:
-    """Tailoring of constraints.
+    """
+    Tailoring of constraints.
 
     If a constraint is in scope, then the severity defines its Error
-    Severity Level. If it is not in scope, then the constraint is
-    disabled.
+    Severity Level. If it is not in scope, then the constraint is disabled.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

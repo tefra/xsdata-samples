@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class GlobalTimeCrcSupportEnum:
     """
-    This enumeration is used to define whether and how CRC on the TX side shall be
-    utilized.
+    This enumeration is used to define whether and how CRC on the TX side
+    shall be utilized.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

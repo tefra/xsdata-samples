@@ -17,12 +17,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DoIpGidNeeds:
-    """The DoIpGidNeeds indicates that the software-component owning this
-    ServiceNeeds is providing the GID number either after a GID Synchronisation or
-    by other means like e.g. flashed EEPROM parameter.
+    """
+    The DoIpGidNeeds indicates that the software-component owning this
+    ServiceNeeds is providing the GID number either after a GID
+    Synchronisation or by other means like e.g. flashed EEPROM parameter.
 
-    This need can be used independent from DoIpGidSynchronizationNeeds
-    and is necessary if the GID can not be provided out of the DoIP
+    This need can be used independent from DoIpGidSynchronizationNeeds and
+    is necessary if the GID can not be provided out of the DoIP
     configuration options.
 
     :ivar short_name: This specifies an identifying shortName for the

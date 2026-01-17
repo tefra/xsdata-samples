@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class MeasurementSpecificCharacteristics:
     """
-    Characteristics which are specific to an individual measurement type (specified
-    in a known order) at the given measurement site.
+    Characteristics which are specific to an individual measurement type
+    (specified in a known order) at the given measurement site.
 
     :ivar accuracy: The extent to which the value is expected to be free
         from error, measured as a percentage of the data value. 100%

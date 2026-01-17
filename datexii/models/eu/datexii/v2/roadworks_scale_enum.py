@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class RoadworksScaleEnum(Enum):
     """
-    Coarse classifications of the scale of roadworks in terms of the traffic
-    disruption they are likely to cause.
+    Coarse classifications of the scale of roadworks in terms of the
+    traffic disruption they are likely to cause.
 
     :cvar MAJOR: The roadworks are likely to cause major traffic
         disruption.

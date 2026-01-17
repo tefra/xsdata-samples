@@ -31,7 +31,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class ProfileSummary1:
-    """Profile summary information.
+    """
+    Profile summary information.
 
     The data returned is what was matched from the search request plus a
     subset of required identification info.

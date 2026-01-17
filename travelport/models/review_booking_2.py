@@ -11,11 +11,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 @dataclass
 class ReviewBooking2:
-    """Review Booking or Queue Minders is to add the reminders in the Provider
+    """
+    Review Booking or Queue Minders is to add the reminders in the Provider
     Reservation along with the date time and Queue details.
 
-    On the date time defined in reminders, the message along with the
-    PNR goes to the desired Queue.
+    On the date time defined in reminders, the message along with the PNR
+    goes to the desired Queue.
 
     Parameters
     ----------

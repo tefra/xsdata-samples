@@ -26,8 +26,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class CryptoKeySlotToPortPrototypeMapping:
     """
     This meta-class represents the ability to define a mapping between a
-    CryptoKeySlot on deployment level to a given PortPrototype that is typed by a
-    CryptoKeySlotInterface.
+    CryptoKeySlot on deployment level to a given PortPrototype that is
+    typed by a CryptoKeySlotInterface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

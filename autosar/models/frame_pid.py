@@ -9,10 +9,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FramePid:
-    """Frame_PIDs that are included in the request.
+    """
+    Frame_PIDs that are included in the request.
 
-    The "pid" attribute describes the value and the "index" attribute
-    the position of the frame_PID in the request.
+    The "pid" attribute describes the value and the "index" attribute the
+    position of the frame_PID in the request.
 
     :ivar index: This attribute is used to order the frame_PIDs. The
         values of index shall be unique within one AssignFrameIdRange.

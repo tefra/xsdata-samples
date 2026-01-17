@@ -12,9 +12,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirPricingPayment:
-    """AirPricing Payment information - used to
-    associate a FormOfPayment withiin the UR with one or more
-    AirPricingInfos"""
+    """
+    AirPricing Payment information - used to associate a FormOfPayment
+    withiin the UR with one or more AirPricingInfos.
+    """
 
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

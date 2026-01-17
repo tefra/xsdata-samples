@@ -7,10 +7,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MimeTypeString:
     """
-    This primitive denotes the an Internet media type, originally called a MIME
-    type after MIME and sometimes a Content-type after the name of a header in
-    several protocols whose value is such a type, is a two-part identifier for file
-    formats on the Internet.
+    This primitive denotes the an Internet media type, originally called a
+    MIME type after MIME and sometimes a Content-type after the name of a
+    header in several protocols whose value is such a type, is a two-part
+    identifier for file formats on the Internet.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

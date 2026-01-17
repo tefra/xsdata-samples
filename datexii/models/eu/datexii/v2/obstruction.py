@@ -11,10 +11,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Obstruction(TrafficElement):
     """
-    Any stationary or moving obstacle of a physical nature (e.g. obstacles or
-    vehicles from an earlier accident, shed loads on carriageway, rock fall,
-    abnormal or dangerous loads, or animals etc.) which could disrupt or endanger
-    traffic.
+    Any stationary or moving obstacle of a physical nature (e.g. obstacles
+    or vehicles from an earlier accident, shed loads on carriageway, rock
+    fall, abnormal or dangerous loads, or animals etc.) which could disrupt
+    or endanger traffic.
 
     :ivar number_of_obstructions: The number of obstructions that are
         partly or wholly blocking the road.

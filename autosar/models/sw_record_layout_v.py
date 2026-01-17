@@ -19,15 +19,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwRecordLayoutV:
-    """This element specifies which values are stored for the current
+    """
+    This element specifies which values are stored for the current
     SwRecordLayoutGroup.
 
-    If no baseType is present, the SwBaseType referenced initially in
-    the parent SwRecordLayoutGroup is valid. The specification of
-    swRecordLayoutVAxis gives the axis of the values which shall be
-    stored in accordance with the current record layout
-    SwRecordLayoutGroup. In swRecordLayoutVProp one can specify the
-    information which shall be stored.
+    If no baseType is present, the SwBaseType referenced initially in the
+    parent SwRecordLayoutGroup is valid. The specification of
+    swRecordLayoutVAxis gives the axis of the values which shall be stored
+    in accordance with the current record layout SwRecordLayoutGroup. In
+    swRecordLayoutVProp one can specify the information which shall be
+    stored.
 
     :ivar short_label: This attribute specifies a name which can be used
         e.g. when ECU code is generated from the record layout value.

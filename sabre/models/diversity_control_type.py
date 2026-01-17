@@ -11,9 +11,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class DiversityControlType:
     """
-    These parameters control how IntellSell should select itineraries based not
-    necessarily on cheapest price, but also on other criteria that guarantee a
-    diverse response.
+    These parameters control how IntellSell should select itineraries based
+    not necessarily on cheapest price, but also on other criteria that
+    guarantee a diverse response.
     """
 
     low_fare_bucket: None | DiversityControlType.LowFareBucket = field(
@@ -328,7 +328,9 @@ class DiversityControlType:
 
                 @dataclass
                 class Range:
-                    """Either all Range elements shall contain attribute Options or none.
+                    """
+                    Either all Range elements shall contain attribute
+                    Options or none.
 
                     Ranges shall not overlap.
                     """

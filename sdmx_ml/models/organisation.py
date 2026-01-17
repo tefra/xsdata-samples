@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class Organisation(OrganisationType):
     """
-    Organisation is an abstract substitution head for a generic organisation.
+    Organisation is an abstract substitution head for a generic
+    organisation.
     """
 
     class Meta:

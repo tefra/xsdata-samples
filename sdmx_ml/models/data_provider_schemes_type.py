@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class DataProviderSchemesType:
-    """DataProviderSchemesType describes the structure of the data provider schemes
-    container.
+    """
+    DataProviderSchemesType describes the structure of the data provider
+    schemes container.
 
-    It contains one or more data provider scheme, which can be
-    explicitly detailed or referenced from an external structure
-    document or registry service.
+    It contains one or more data provider scheme, which can be explicitly
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar data_provider_scheme: DataProviderScheme provides the details
         of an data provider scheme, in which data providers are

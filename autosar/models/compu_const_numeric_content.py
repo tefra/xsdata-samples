@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CompuConstNumericContent:
-    """This meta-class represents the fact that the constant value of the
+    """
+    This meta-class represents the fact that the constant value of the
     computation method is a numerical value.
 
-    It is separated from CompuConstFormulaContent to support
-    compatibility with ASAM HDO.
+    It is separated from CompuConstFormulaContent to support compatibility
+    with ASAM HDO.
 
     :ivar v: This represents the numerical value.
     :ivar s: Checksum calculated by the user's tool environment for an

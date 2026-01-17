@@ -12,11 +12,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class ProfileDataFilter1:
-    """Filters the data in the profile so that only the specified data is returned.
+    """
+    Filters the data in the profile so that only the specified data is
+    returned.
 
     Multiple categories can be applied if more data is needed on the
-    response.  If no filter is specified then "General Information" is
-    defaulted.  If duplicate categories are specifed they are ignored.
+    response. If no filter is specified then "General Information" is
+    defaulted. If duplicate categories are specifed they are ignored.
     """
 
     class Meta:

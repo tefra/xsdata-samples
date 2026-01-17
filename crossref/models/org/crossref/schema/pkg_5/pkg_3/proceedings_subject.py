@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ProceedingsSubject:
     """
-    The subject of the conference proceeding, e.g. "Computer Graphics" is the
-    subject matter of SIGGRAPH.
+    The subject of the conference proceeding, e.g. "Computer Graphics" is
+    the subject matter of SIGGRAPH.
     """
 
     class Meta:

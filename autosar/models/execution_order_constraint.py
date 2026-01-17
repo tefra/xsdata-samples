@@ -31,34 +31,33 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ExecutionOrderConstraint:
-    """This constraint is used to restrict the order of execution for a set of
+    """
+    This constraint is used to restrict the order of execution for a set of
     ExecutableEntities.
 
     The ExecutionOrderConstraint can be used in any timing view. The
     various scopes for ExecutionOrderConstraint are described below.
     Generally, each ExecutionOrderConstraint has a scope of software
-    components and can reference all executable entities available in
-    the corresponding internal behavior (RunnableEntity and
-    BswModuleEntity) either directly or by the events activating
-    respectively starting them (RteEvent and BswEvent). On VFB level an
-    ExecutionOrderConstraint can be specified for RunnableEntities part
-    of the composition hierarchy referenced by the VfbTiming. The
-    ExecutionOrderConstraint is aggregated by the VfbTiming. On SW-C
-    level an ExecutionOrderConstraint can be specified for
-    RunnableEntities part of the InternalBehavior referenced by the
-    SwcTiming. The ExecutionOrderConstraint is aggregated by the
-    SwcTiming. On System level an ExecutionOrderConstraint can be
-    specified for RunnableEntities part of the composition hierarchy of
-    the system referenced by the SystemTiming. The
-    ExecutionOrderConstraint is aggregated by the SystemTiming. On BSW
-    Module level, an ExectionOrderConstraint can be specified for
-    BswModuleEntities part of an BswInternalBehavior referenced by the
-    BswModuleTiming. The ExecutionOrderConstraint is aggregated by the
-    BswModuleTiming. On ECU level an ExecutionOrderConstraint can be
-    specified for all ExecutableEntities and Events available via the
-    EcucValueCollection, covering ECU Extract and BSW Module
-    Configuration, referenced by the EcuTiming. The
-    ExecutionOrderConstraint is aggregated by the EcuTiming.
+    components and can reference all executable entities available in the
+    corresponding internal behavior (RunnableEntity and BswModuleEntity)
+    either directly or by the events activating respectively starting them
+    (RteEvent and BswEvent). On VFB level an ExecutionOrderConstraint can
+    be specified for RunnableEntities part of the composition hierarchy
+    referenced by the VfbTiming. The ExecutionOrderConstraint is aggregated
+    by the VfbTiming. On SW-C level an ExecutionOrderConstraint can be
+    specified for RunnableEntities part of the InternalBehavior referenced
+    by the SwcTiming. The ExecutionOrderConstraint is aggregated by the
+    SwcTiming. On System level an ExecutionOrderConstraint can be specified
+    for RunnableEntities part of the composition hierarchy of the system
+    referenced by the SystemTiming. The ExecutionOrderConstraint is
+    aggregated by the SystemTiming. On BSW Module level, an
+    ExectionOrderConstraint can be specified for BswModuleEntities part of
+    an BswInternalBehavior referenced by the BswModuleTiming. The
+    ExecutionOrderConstraint is aggregated by the BswModuleTiming. On ECU
+    level an ExecutionOrderConstraint can be specified for all
+    ExecutableEntities and Events available via the EcucValueCollection,
+    covering ECU Extract and BSW Module Configuration, referenced by the
+    EcuTiming. The ExecutionOrderConstraint is aggregated by the EcuTiming.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

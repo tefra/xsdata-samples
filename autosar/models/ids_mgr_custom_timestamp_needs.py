@@ -18,9 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IdsMgrCustomTimestampNeeds:
     """
-    This meta-class is used to indicate that the enclosing SwcServiceDependency
-    represents a service use case for the retrieval of a custom timestamp by the
-    Intrusion Detection System Manager.
+    This meta-class is used to indicate that the enclosing
+    SwcServiceDependency represents a service use case for the retrieval of
+    a custom timestamp by the Intrusion Detection System Manager.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

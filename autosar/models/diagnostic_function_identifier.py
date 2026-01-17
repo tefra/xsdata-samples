@@ -18,7 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticFunctionIdentifier:
-    """This meta-class represents a diagnostic function identifier (a.k.a.
+    """
+    This meta-class represents a diagnostic function identifier (a.k.a.
 
     FID).
 

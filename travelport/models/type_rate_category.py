@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 class TypeRateCategory(Enum):
     """
-    The category of the rate (Best, etc)
+    The category of the rate (Best, etc).
     """
 
     ASSOCIATION = "Association"

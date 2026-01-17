@@ -11,12 +11,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MemberSelectionType:
-    """MemberSelectionType is an abstract base type which is used to provide a set
-    of values for a referenced component.
+    """
+    MemberSelectionType is an abstract base type which is used to provide a
+    set of values for a referenced component.
 
     Implementations of this type will be based on a particular component
-    type and refine the allowed values to reflect the types of values
-    that are possible for that type of component.
+    type and refine the allowed values to reflect the types of values that
+    are possible for that type of component.
 
     :ivar value_or_time_range:
     :ivar id: The id attribute provides the identifier for the component

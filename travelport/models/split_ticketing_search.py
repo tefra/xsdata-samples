@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class SplitTicketingSearch:
-    """SplitTicketingSearch is optional.
+    """
+    SplitTicketingSearch is optional.
 
     Used to return both One-Way and Roundtrip fares in a single search
-    response. Applicable to 1G, 1V, 1P only, the price points results
-    path, and a simple roundtrip search only. Cannot be used in
-    combination with Flex options.
+    response. Applicable to 1G, 1V, 1P only, the price points results path,
+    and a simple roundtrip search only. Cannot be used in combination with
+    Flex options.
 
     Parameters
     ----------

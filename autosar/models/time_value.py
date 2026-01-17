@@ -6,10 +6,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TimeValue:
-    """This primitive type is taken for expressing time values.
+    """
+    This primitive type is taken for expressing time values.
 
-    The numerical value is supposed to be interpreted in the physical
-    unit second.
+    The numerical value is supposed to be interpreted in the physical unit
+    second.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

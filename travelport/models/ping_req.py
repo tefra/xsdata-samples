@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 @dataclass
 class PingReq(BaseReq3):
     """
-    A simple request to test connectivity to the system without imposing any
-    actions.
+    A simple request to test connectivity to the system without imposing
+    any actions.
     """
 
     class Meta:

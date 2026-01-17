@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsManagedLogicalLocation:
     """
-    The logical location (e.g. a car park, a section of road, a junction etc.)
-    which a VMS contributes to the management of.
+    The logical location (e.g. a car park, a section of road, a junction
+    etc.) which a VMS contributes to the management of.
 
     :ivar managed_logical_location: Identification of the logical
         location (e.g. a car park, a section of road , a junction etc.)

@@ -9,7 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucConditionFormula:
-    """This formula shall yield a boolean expression depending on ecuc queries.
+    """
+    This formula shall yield a boolean expression depending on ecuc
+    queries.
 
     Note that the EcucConditionFormula is a mixed string. Therefore, the
     properties have the upper multiplicity 1.

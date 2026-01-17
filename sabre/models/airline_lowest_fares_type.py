@@ -10,9 +10,10 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class AirlineLowestFaresType:
-    """IntelliSell Type .
+    """
+    IntelliSell Type . lowest fare for airline.
 
-    lowest fare for airline. Currently not used.
+    Currently not used.
     """
 
     airline: None | CompanyNameType = field(

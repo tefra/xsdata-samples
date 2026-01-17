@@ -29,8 +29,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RestHttpPortPrototypeMapping:
     """
-    This meta-class represents the ability to define pieces of a URI for the REST
-    service that cannot be contributed from the design point of view.
+    This meta-class represents the ability to define pieces of a URI for
+    the REST service that cannot be contributed from the design point of
+    view.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

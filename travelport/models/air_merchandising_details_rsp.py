@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AirMerchandisingDetailsRsp(BaseRsp1):
     """
-    Response for retrieved brand details and optional services included in them.
+    Response for retrieved brand details and optional services included in
+    them.
 
     Parameters
     ----------

@@ -21,9 +21,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ObdControlServiceNeeds:
     """
-    Specifies the abstract needs of a component or module on the configuration of
-    OBD Service 08 (request control of on-board system) in relation to a particular
-    test-Identifier (TID) supported by this component or module.
+    Specifies the abstract needs of a component or module on the
+    configuration of OBD Service 08 (request control of on-board system) in
+    relation to a particular test-Identifier (TID) supported by this
+    component or module.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

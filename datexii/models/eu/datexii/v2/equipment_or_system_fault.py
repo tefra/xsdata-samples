@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 class EquipmentOrSystemFault(TrafficElement):
     """
     Equipment or system which is faulty, malfunctioning or not in a fully
-    operational state that may be of interest or concern to road operators and road
-    users.
+    operational state that may be of interest or concern to road operators
+    and road users.
 
     :ivar equipment_or_system_fault_type: Failure, malfunction or non
         operational condition of equipment or system.

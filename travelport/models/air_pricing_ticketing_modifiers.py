@@ -10,9 +10,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirPricingTicketingModifiers:
-    """AirPricing TicketingModifier information
-    - used to associate Ticketing Modifiers with one or more
-    AirPricingInfos/ProviderReservationInfo"""
+    """
+    AirPricing TicketingModifier information - used to associate Ticketing
+    Modifiers with one or more AirPricingInfos/ProviderReservationInfo.
+    """
 
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

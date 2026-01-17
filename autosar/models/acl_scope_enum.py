@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AclScopeEnum:
     """
-    This enumerator represents the scope of a definition in context of access
-    control.
+    This enumerator represents the scope of a definition in context of
+    access control.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

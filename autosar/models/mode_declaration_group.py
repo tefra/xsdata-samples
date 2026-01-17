@@ -28,7 +28,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ModeDeclarationGroup:
-    """A collection of Mode Declarations.
+    """
+    A collection of Mode Declarations.
 
     Also, the initial mode is explicitly identified.
 

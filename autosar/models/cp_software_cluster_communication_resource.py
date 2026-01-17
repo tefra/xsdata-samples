@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CpSoftwareClusterCommunicationResource:
     """
-    Represents a single resource required or provided by a CP Software Cluster
-    which relates to the port based communication on VFB level.
+    Represents a single resource required or provided by a CP Software
+    Cluster which relates to the port based communication on VFB level.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

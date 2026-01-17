@@ -46,7 +46,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class Body:
     """
-    <div> <h3>Body of the Article</h3> </div>
+    <div> <h3>Body of the Article</h3> </div>.
     """
 
     class Meta:

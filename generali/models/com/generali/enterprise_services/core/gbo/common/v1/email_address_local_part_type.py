@@ -11,5 +11,5 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class EmailAddressLocalPartType(TextType):
     """
     <description xmlns="">The definition of the local part of an Email
-    Address.</description>
+    Address.</description>.
     """

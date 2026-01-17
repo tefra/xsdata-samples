@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class ProfileRetrieveHierarchyReq(BaseReq5):
     """
-    Request to retrieve the superset of profile levels within an agency,agency
-    group or an account.
+    Request to retrieve the superset of profile levels within an
+    agency,agency group or an account.
 
     Parameters
     ----------

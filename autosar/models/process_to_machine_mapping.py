@@ -27,7 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ProcessToMachineMapping:
-    """This meta-class has the ability to associate a Process with a Machine.
+    """
+    This meta-class has the ability to associate a Process with a Machine.
 
     This relation involves the definition of further properties, e.g.
     timeouts.

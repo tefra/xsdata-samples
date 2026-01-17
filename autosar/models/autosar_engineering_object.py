@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AutosarEngineeringObject:
-    """This denotes an engineering object being part of the process.
+    """
+    This denotes an engineering object being part of the process.
 
     It is a specialization of the abstract class EngineeringObject for
     usage within AUTOSAR.

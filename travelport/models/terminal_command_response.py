@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 
 @dataclass
 class TerminalCommandResponse(TypeTextBlock2):
-    """The response from the host.
+    """
+    The response from the host.
 
     Usually pre-formatted.
     """

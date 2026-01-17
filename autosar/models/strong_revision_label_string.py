@@ -6,14 +6,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class StrongRevisionLabelString:
-    """This primitive represents a revision label which identifies an object under
-    version control.
+    """
+    This primitive represents a revision label which identifies an object
+    under version control.
 
-    It represents a pattern which requires three integer numbers separated by a dot, representing from left to right MajorVersion, MinorVersion, PatchVersion and additional labels for pre-release version and build metadata.
-    Legal patterns are for example:
-    1.0.0-alpha+001
-    1.0.0+20130313144700
-    1.0.0-beta+exp.sha.5114f85
+    It represents a pattern which requires three integer numbers separated
+    by a dot, representing from left to right MajorVersion, MinorVersion,
+    PatchVersion and additional labels for pre-release version and build
+    metadata. Legal patterns are for example: 1.0.0-alpha+001
+    1.0.0+20130313144700 1.0.0-beta+exp.sha.5114f85.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

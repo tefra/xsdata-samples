@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SendIndicationEnum:
     """
-    This meta-class provides a way to specify in which way redundancy shall be
-    applied on collection level.
+    This meta-class provides a way to specify in which way redundancy shall
+    be applied on collection level.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

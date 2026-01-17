@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirSegmentPricingModifiers:
-    """Specifies modifiers that a particular segment should be priced in.
+    """
+    Specifies modifiers that a particular segment should be priced in.
 
     If this is used, then there must be one for each AirSegment in the
     AirItinerary.

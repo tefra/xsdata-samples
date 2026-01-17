@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class EmbargoList:
-    """List of embargoes.
+    """
+    List of embargoes.
 
-    Provider: 1G, 1V, 1P
+    Provider: 1G, 1V, 1P.
     """
 
     class Meta:

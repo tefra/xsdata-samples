@@ -9,10 +9,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 @dataclass
 class RailSegmentInfo:
-    """A textual remark container to hold any printable text.
-
-    (max 512 chars) Holds the ExtraSegmentInfo and VendorMessages from
-    RCH response.
+    """
+    A textual remark container to hold any printable text. (max 512 chars)
+    Holds the ExtraSegmentInfo and VendorMessages from RCH response.
 
     Parameters
     ----------

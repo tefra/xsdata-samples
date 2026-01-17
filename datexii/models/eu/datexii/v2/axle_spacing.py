@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class AxleSpacing:
     """
-    The spacing details between the axle sets of an individual vehicle numbered
-    from the front to the back of the vehicle.
+    The spacing details between the axle sets of an individual vehicle
+    numbered from the front to the back of the vehicle.
 
     :ivar axle_spacing: The spacing interval, indicated by the
         axleSpacingSequenceIdentifier, between the axles of an

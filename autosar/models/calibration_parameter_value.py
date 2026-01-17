@@ -30,14 +30,22 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CalibrationParameterValue:
-    """Specifies instance specific calibration parameter values used to initialize
-    the memory objects implementing calibration parameters in the generated RTE
-    code.
+    """
+    Specifies instance specific calibration parameter values used to
+    initialize the memory objects implementing calibration parameters in
+    the generated RTE code.
 
-    RTE generator will use the implInitValue to override the initial values specified for the DataPrototypes of a component type.
-    The applInitValue is used to exchange init values with the component vendor not publishing the transformation algorithm between ApplicationDataTypes and ImplementationDataTypes or defining an instance specific initialization of components which are only defined with ApplicationDataTypes.
-    Note: If both representations of init values are available these need to represent the same content.
-    Note further that in this case an explicit mapping of ValueSpecification is not implemented because calibration parameters are delivered back after the calibration phase.
+    RTE generator will use the implInitValue to override the initial values
+    specified for the DataPrototypes of a component type. The applInitValue
+    is used to exchange init values with the component vendor not
+    publishing the transformation algorithm between ApplicationDataTypes
+    and ImplementationDataTypes or defining an instance specific
+    initialization of components which are only defined with
+    ApplicationDataTypes. Note: If both representations of init values are
+    available these need to represent the same content. Note further that
+    in this case an explicit mapping of ValueSpecification is not
+    implemented because calibration parameters are delivered back after the
+    calibration phase.
 
     :ivar appl_init_value: This is the initial value specification
         structured according to the ApplicationDataType

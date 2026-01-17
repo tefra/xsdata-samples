@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
 class TypeContactType1(Enum):
-    """A code for categorizing contactees based on a role they might play.
+    """
+    A code for categorizing contactees based on a role they might play.
 
     Examples include Emergency Contact, Regular Contact, Backup Contact,
     etc.

@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class PostalCode:
     """
-    <div> <h3>Postal Code: in an Address</h3> </div>
+    <div> <h3>Postal Code: in an Address</h3> </div>.
     """
 
     class Meta:

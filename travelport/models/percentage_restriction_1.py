@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class PercentageRestriction1(TypeFloatRestriction1):
-    """Restrictions on profile data for fields with a data type of percentage.
+    """
+    Restrictions on profile data for fields with a data type of percentage.
 
     Min and max values are inclusive.
     """

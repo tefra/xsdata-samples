@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 class TypeProfileDataCategory2(Enum):
     """
-    The category of data that controls what data will be returned in the response.
+    The category of data that controls what data will be returned in the
+    response.
 
     Properties
     ----------

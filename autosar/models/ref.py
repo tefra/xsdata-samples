@@ -6,13 +6,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Ref:
-    """This primitive denotes a name based reference.
+    """
+    This primitive denotes a name based reference.
 
-    For detailed syntax see the xsd.pattern.
-    * first slash (relative or absolute reference) [optional]
-    * Identifier  [required]
-    * a sequence of slashes and Identifiers [optional]
-    This primitive is used by the meta-model tools to create the references.
+    For detailed syntax see the xsd.pattern. * first slash (relative or
+    absolute reference) [optional] * Identifier [required] * a sequence of
+    slashes and Identifiers [optional] This primitive is used by the
+    meta-model tools to create the references.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

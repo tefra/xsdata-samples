@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ComManagementMapping:
     """
-    Describes a mapping between one or several Mode Management PortGroups and
-    communication channels.
+    Describes a mapping between one or several Mode Management PortGroups
+    and communication channels.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class SubmissionResultType:
-    """SubmissionResultType provides the status of the structural object submission
-    request.
+    """
+    SubmissionResultType provides the status of the structural object
+    submission request.
 
     It will identify the object submitted, report back the action
     requested, and convey the status and any error messages which are

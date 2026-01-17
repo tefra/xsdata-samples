@@ -45,8 +45,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class SavedTrip:
     """
-    SavedTrip holds a draft Itinerary/booking which can be used at later point of
-    time to do a booking.
+    SavedTrip holds a draft Itinerary/booking which can be used at later
+    point of time to do a booking.
 
     Parameters
     ----------

@@ -8,9 +8,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class HostReservation:
     """
-    Defines a reservation that already exists in the host system (e.g an agent
-    using Galileo Desktop already booked a reservation on Midwest in Sabre host
-    system).
+    Defines a reservation that already exists in the host system (e.g an
+    agent using Galileo Desktop already booked a reservation on Midwest in
+    Sabre host system).
 
     Parameters
     ----------

@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class SpecialLocationParkingSite(ParkingSite):
     """
-    A parking site which is located at a special location, often associated with
-    some building.
+    A parking site which is located at a special location, often associated
+    with some building.
 
     :ivar parking_special_location: The special location of the parking
         site.

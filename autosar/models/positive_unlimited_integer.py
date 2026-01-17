@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PositiveUnlimitedInteger:
     """
-    This is a positive unlimited integer which can be denoted in decimal, binary,
-    octal and hexadecimal.
+    This is a positive unlimited integer which can be denoted in decimal,
+    binary, octal and hexadecimal.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

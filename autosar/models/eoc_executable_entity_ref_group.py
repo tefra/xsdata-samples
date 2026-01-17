@@ -29,9 +29,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EocExecutableEntityRefGroup:
     """
-    This is used to specify a group (composite) consisting of Execution Order
-    Constraint Executable Entity References (leaves) and/or further Execution Order
-    Constraint Executable Entity Reference Groups (composite).
+    This is used to specify a group (composite) consisting of Execution
+    Order Constraint Executable Entity References (leaves) and/or further
+    Execution Order Constraint Executable Entity Reference Groups
+    (composite).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

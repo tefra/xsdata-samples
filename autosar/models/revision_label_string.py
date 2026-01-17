@@ -6,17 +6,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RevisionLabelString:
-    """This primitive represents an internal AUTOSAR revision label which
+    """
+    This primitive represents an internal AUTOSAR revision label which
     identifies an engineering object.
 
-    It represents a pattern which
-    * supports three integers representing from left to right MajorVersion, MinorVersion, PatchVersion.
-    * may add an application specific suffix separated by one of ".", "_", ";".
-    Legal patterns are for example:
-    * 4.0.0
-    * 4.0.0.1234565
-    * 4.0.0_vendor specific;13
-    * 4.0.0;12
+    It represents a pattern which * supports three integers representing
+    from left to right MajorVersion, MinorVersion, PatchVersion. * may add
+    an application specific suffix separated by one of ".", "_", ";". Legal
+    patterns are for example: * 4.0.0 * 4.0.0.1234565 * 4.0.0_vendor
+    specific;13 * 4.0.0;12.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

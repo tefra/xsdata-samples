@@ -12,13 +12,14 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class AttributeType1(AnnotableType):
-    """AttributeType defines the structure for a reported metadata attribute.
+    """
+    AttributeType defines the structure for a reported metadata attribute.
 
     A value for the attribute can be supplied as either a single value
     (enumerated or non-enumerated single value), or multi-lingual text
-    values (either structured or unstructured). Optional child
-    attributes ar also available if the metadata attribute definition
-    defines nested metadata attributes.
+    values (either structured or unstructured). Optional child attributes
+    ar also available if the metadata attribute definition defines nested
+    metadata attributes.
 
     :ivar value_or_text_or_structured_text:
     :ivar attribute: Att contains the reported metadata attribute values
@@ -75,7 +76,8 @@ class AttributeType1(AnnotableType):
 
 @dataclass(frozen=True)
 class Attribute1(AttributeType1):
-    """Att elements hold the reported values for a given metadata attribute.
+    """
+    Att elements hold the reported values for a given metadata attribute.
 
     These values conform to the definition of the meatadata attribute in
     the metadata structure definition.

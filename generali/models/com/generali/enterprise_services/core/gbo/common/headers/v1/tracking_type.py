@@ -13,7 +13,8 @@ __NAMESPACE__ = (
 @dataclass
 class TrackingType(BaseHeaderType):
     """
-    <description xmlns="">Holds in-flight tracking information.</description>
+    <description xmlns="">Holds in-flight tracking
+    information.</description>.
 
     :ivar tracking_id: <description xmlns="">A identifier used to track
         a set of messages across a number of individual request/response

@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class GeneralPurposeConnection:
     """
     This meta-class allows to describe the relationship between several
-    PduTriggerings that are defined on the same PhysicalChannel, e.g. to create a
-    link between Rx and Tx Pdu that are used for request/response.
+    PduTriggerings that are defined on the same PhysicalChannel, e.g. to
+    create a link between Rx and Tx Pdu that are used for request/response.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

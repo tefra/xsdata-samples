@@ -12,11 +12,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class VehicleCancelReq(BaseReq1):
-    """PNR Cancel request for a vehicle booking.
+    """
+    PNR Cancel request for a vehicle booking.
 
-    Given a provider code and a provider locator code. This will cancel
-    one or more vehicle segments based on the criteria given.  If more
-    than one segment matches, then all matching will be removed.
+    Given a provider code and a provider locator code. This will cancel one
+    or more vehicle segments based on the criteria given. If more than one
+    segment matches, then all matching will be removed.
     """
 
     class Meta:

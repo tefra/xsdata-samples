@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BinaryManifestItemPointerValue:
     """
-    This meta-class has the ability to provide a value for a pointer in the context
-    of a binary manifest item.
+    This meta-class has the ability to provide a value for a pointer in the
+    context of a binary manifest item.
 
     :ivar address: This attribute represents the address value of the
         enclosing pointer value.

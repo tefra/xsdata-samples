@@ -11,8 +11,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class StaticPart:
-    """Some parts/signals of the I-PDU may be the same regardless of the selector
-    field.
+    """
+    Some parts/signals of the I-PDU may be the same regardless of the
+    selector field.
 
     Such a part is called static part. The static part is optional.
 

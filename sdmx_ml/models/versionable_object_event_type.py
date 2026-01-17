@@ -10,12 +10,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class VersionableObjectEventType:
-    """VersionableObjectEventType describes the structure of a reference to a
+    """
+    VersionableObjectEventType describes the structure of a reference to a
     versionable object's events.
 
-    Either all instances of the object matching the inherited criteria,
-    a specific instance, or specific instances of the object may be
-    selected.
+    Either all instances of the object matching the inherited criteria, a
+    specific instance, or specific instances of the object may be selected.
     """
 
     choice: tuple[

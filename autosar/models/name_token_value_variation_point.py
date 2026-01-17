@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class NameTokenValueVariationPoint:
     """
-    This class represents the ability to express a formula for a name token.
+    This class represents the ability to express a formula for a name
+    token.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

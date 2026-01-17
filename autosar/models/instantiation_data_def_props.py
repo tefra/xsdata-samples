@@ -11,22 +11,23 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class InstantiationDataDefProps:
-    """This is a general class allowing to apply additional SwDataDefProps to
+    """
+    This is a general class allowing to apply additional SwDataDefProps to
     particular instantiations of a DataPrototype.
 
     Typically the accessibility and further information like alias names
-    for a  particular data is modeled on the level of DataPrototypes
-    (especially  VariableDataPrototypes, ParameterDataPrototypes). But
-    due to the recursive  structure of the meta-model concerning data
-    types (a composite (data) type consists  out of data prototypes) a
-    part of the MCD information is described in the data  type (in case
-    of ApplicationCompositeDataType). This is a strong restriction in
-    the reuse of data typed because the data type should be re-used  for
+    for a particular data is modeled on the level of DataPrototypes
+    (especially VariableDataPrototypes, ParameterDataPrototypes). But due
+    to the recursive structure of the meta-model concerning data types (a
+    composite (data) type consists out of data prototypes) a part of the
+    MCD information is described in the data type (in case of
+    ApplicationCompositeDataType). This is a strong restriction in the
+    reuse of data typed because the data type should be re-used for
     different VariableDataPrototypes and ParameterDataPrototypes to
-    guarantee type  compatibility on C-implementation level (e.g. data
-    of a Port is stored in PIM  or a ParameterDataPrototype used as ROM
-    Block and shall be typed by the same data type as NVRAM Block). This
-    class overcomes such a restriction if applied properly.
+    guarantee type compatibility on C-implementation level (e.g. data of a
+    Port is stored in PIM or a ParameterDataPrototype used as ROM Block and
+    shall be typed by the same data type as NVRAM Block). This class
+    overcomes such a restriction if applied properly.
 
     :ivar parameter_instance: This is the particular
         ParameterDataPrototypes on which the swDataDefProps shall be

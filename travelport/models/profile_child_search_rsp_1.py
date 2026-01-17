@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class ProfileChildSearchRsp1(BaseRsp2):
     """
-    Response to allow a user to retrieve the immediate children of a given profile.
+    Response to allow a user to retrieve the immediate children of a given
+    profile.
 
     Parameters
     ----------

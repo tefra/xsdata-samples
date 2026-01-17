@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class BaseComponentType:
     """
     <description xmlns="">Base type for all business objects and
-    components.</description>
+    components.</description>.
 
     :ivar action_code: <description xmlns="">The @actionCode attribute
         is used within a modification operation to indicate the action

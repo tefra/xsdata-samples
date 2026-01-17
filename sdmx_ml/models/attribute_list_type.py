@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class AttributeListType(AttributeListBaseType):
     """
-    AttributeListType describes the attribute descriptor for the data structure
-    definition.
+    AttributeListType describes the attribute descriptor for the data
+    structure definition.
     """
 
     attribute_or_metadata_attribute_usage: tuple[

@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 @dataclass(frozen=True)
 class MessageType:
-    """MessageType is an abstract type which is used by all of the messages, to
-    allow inheritance of common features.
+    """
+    MessageType is an abstract type which is used by all of the messages,
+    to allow inheritance of common features.
 
     Every message consists of a mandatory header, followed by optional
     payload (which may occur multiple times), and finally an optional

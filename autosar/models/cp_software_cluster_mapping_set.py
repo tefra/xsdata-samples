@@ -30,7 +30,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CpSoftwareClusterMappingSet:
-    """This meta-class represents the ability to aggregate a collection of CP
+    """
+    This meta-class represents the ability to aggregate a collection of CP
     Software Cluster relevant mappings.
 
     This is applicable if a CP Software Cluster is described besides a

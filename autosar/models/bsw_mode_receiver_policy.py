@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BswModeReceiverPolicy:
     """
-    Specifies the details for the reception of a mode switch for the referred mode
-    group.
+    Specifies the details for the reception of a mode switch for the
+    referred mode group.
 
     :ivar enhanced_mode_api: This controls the creation of the enhanced
         mode API that returns information about the previous mode and

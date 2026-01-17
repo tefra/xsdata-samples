@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UserDefinedEthernetFrame:
     """
-    UserDefinedEthernetFrame allows the description of a frame-based communication
-    to Complex Drivers that are located above the EthDrv.
+    UserDefinedEthernetFrame allows the description of a frame-based
+    communication to Complex Drivers that are located above the EthDrv.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ExecutionStateReportingBehaviorEnum:
     """
-    This enumeration provides options for controlling of how an Executable reports
-    its execution state to the Execution Management.
+    This enumeration provides options for controlling of how an Executable
+    reports its execution state to the Execution Management.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

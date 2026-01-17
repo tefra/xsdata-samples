@@ -6,9 +6,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Ip4AddressString:
-    """This is used to specify an IP4 address.
+    """
+    This is used to specify an IP4 address.
 
-    Notation: 255.255.255.255
+    Notation: 255.255.255.255.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DisplayPresentationEnum:
     """
-    This meta-class represents the ability to provide values for controlling the
-    presentation of data within measurement and calibration tools.
+    This meta-class represents the ability to provide values for
+    controlling the presentation of data within measurement and calibration
+    tools.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

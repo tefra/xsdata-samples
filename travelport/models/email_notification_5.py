@@ -11,9 +11,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 @dataclass
 class EmailNotification5:
-    """Send Email Notification to the emails specified in Booking Traveler.
+    """
+    Send Email Notification to the emails specified in Booking Traveler.
 
-    Supported Provider : 1G/1V
+    Supported Provider : 1G/1V.
 
     Parameters
     ----------

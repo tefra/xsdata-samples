@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BlueprintPolicyList:
-    """The class represents that the related attribute is modifiable during the
-    blueprinting.
+    """
+    The class represents that the related attribute is modifiable during
+    the blueprinting.
 
     It applies only to attribute with upper multiplicity greater than 1.
 

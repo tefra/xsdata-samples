@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class Fpage:
     """
-    <div> <h3>First Page</h3> </div>
+    <div> <h3>First Page</h3> </div>.
     """
 
     class Meta:

@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class Rows:
-    """A wrapper for all the information regarding each of the rows.
+    """
+    A wrapper for all the information regarding each of the rows.
 
-    Providers: ACH, 1G, 1V, 1P
+    Providers: ACH, 1G, 1V, 1P.
 
     Parameters
     ----------

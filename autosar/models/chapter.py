@@ -38,7 +38,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Chapter:
-    """This meta-class represents a chapter of a document.
+    """
+    This meta-class represents a chapter of a document.
 
     Chapters are the primary structuring element in documentation.
 
@@ -489,7 +490,8 @@ class Chapter:
 @dataclass
 class MsrQueryResultChapter:
     """
-    This metaclass represents the result of an msrquery which is a set of chapters.
+    This metaclass represents the result of an msrquery which is a set of
+    chapters.
 
     :ivar chapter: This is one particular chapter in the query result.
     :ivar s: Checksum calculated by the user's tool environment for an
@@ -535,8 +537,8 @@ class MsrQueryResultChapter:
 @dataclass
 class MsrQueryChapter:
     """
-    This meta-class represents the ability to express a query which yields a set of
-    chapters as a result.
+    This meta-class represents the ability to express a query which yields
+    a set of chapters as a result.
 
     :ivar msr_query_props: This is argument and properties of the
         chapter query.

@@ -22,8 +22,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgForeignReferenceWithVariation:
-    """A reference with variation support that can point to any referrable object
-    in an AUTOSAR Model.
+    """
+    A reference with variation support that can point to any referrable
+    object in an AUTOSAR Model.
 
     This class accepts the special data "Sdxf" reference.
 

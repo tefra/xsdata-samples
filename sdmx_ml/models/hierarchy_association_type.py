@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class HierarchyAssociationType(MaintainableType):
     """
-    HierarchyAssociationType defines the structure of a hiearchy association, which
-    links a hierarchy with and identifiable object in the context of another object
-    (e.g. a dimension within the context of a dataflow).
+    HierarchyAssociationType defines the structure of a hiearchy
+    association, which links a hierarchy with and identifiable object in
+    the context of another object (e.g. a dimension within the context of a
+    dataflow).
 
     :ivar linked_hierarchy: The associated hierarchy.
     :ivar linked_object: Associates the Identifiable Artefact that needs

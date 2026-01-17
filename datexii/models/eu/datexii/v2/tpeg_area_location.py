@@ -13,8 +13,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegAreaLocation:
     """
-    A geographic or geometric area defined by a TPEG-Loc structure which may
-    include height information for additional geospatial discrimination.
+    A geographic or geometric area defined by a TPEG-Loc structure which
+    may include height information for additional geospatial
+    discrimination.
 
     :ivar tpeg_area_location_type: The type of TPEG location.
     :ivar tpeg_height:

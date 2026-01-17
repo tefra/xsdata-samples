@@ -11,13 +11,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwcBswRunnableMapping:
-    """Maps a BswModuleEntity to a RunnableEntity if it is implemented as part of a
-    BSW module (in the case of an AUTOSAR Service, a Complex Driver or an ECU
-    Abstraction).
+    """
+    Maps a BswModuleEntity to a RunnableEntity if it is implemented as part
+    of a BSW module (in the case of an AUTOSAR Service, a Complex Driver or
+    an ECU Abstraction).
 
-    The mapping can be used by a tool to find relevant information on
-    the behavior, e.g. whether the bswEntity shall be running in
-    interrupt context.
+    The mapping can be used by a tool to find relevant information on the
+    behavior, e.g. whether the bswEntity shall be running in interrupt
+    context.
 
     :ivar bsw_entity_ref: The mapped BswModuleEntity
     :ivar swc_runnable_ref: The mapped SWC runnable.

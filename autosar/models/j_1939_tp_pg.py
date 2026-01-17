@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class J1939TpPg:
     """
-    A J1939TpPg represents one J1939 message (parameter group, PG) identified by
-    the PGN (parameter group number) that can be received or transmitted via
-    J1939Tp.
+    A J1939TpPg represents one J1939 message (parameter group, PG)
+    identified by the PGN (parameter group number) that can be received or
+    transmitted via J1939Tp.
 
     :ivar direct_pdu_ref: In case of variable length IPdus (with system
         signals of variable length), an additional NPdu (with the PGN in

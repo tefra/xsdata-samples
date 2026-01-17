@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Prms:
-    """This metaclass represents the ability to specify a parameter table.
+    """
+    This metaclass represents the ability to specify a parameter table.
 
     It can be used e.g. to specify parameter tables in a data sheet.
 

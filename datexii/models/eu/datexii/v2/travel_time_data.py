@@ -19,10 +19,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TravelTimeData(BasicData):
     """
-    Derived/computed travel time information relating to a linear section of the
-    road network; forecast = true means a forecast for a vehicle at the start of
-    the specified location, forecast = false means calculation/measurement at the
-    end.
+    Derived/computed travel time information relating to a linear section
+    of the road network; forecast = true means a forecast for a vehicle at
+    the start of the specified location, forecast = false means
+    calculation/measurement at the end.
 
     :ivar travel_time_trend_type: The current trend in the travel time
         between the defined locations in the specified direction.

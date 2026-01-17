@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PrecipitationIntensityValue(DataValue):
     """
-    A measured or calculated value of the accumulation rate of precipitation.
+    A measured or calculated value of the accumulation rate of
+    precipitation.
 
     :ivar millimetres_per_hour_intensity: A value of precipitation
         intensity expressed in units of millimetres per hour.

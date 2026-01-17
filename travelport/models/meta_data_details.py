@@ -7,9 +7,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class MetaDataDetails:
-    """<xs:annotation xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:documentation>An element under which all other respective attributes for defining the settings are addressed.</xs:documentation>
-    </xs:annotation>
+    """
+    <xs:annotation xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:documentation>An element under which all other respective
+    attributes for defining the settings are addressed.</xs:documentation>
+    </xs:annotation>.
 
     Parameters
     ----------

@@ -9,12 +9,13 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class FooterType:
-    """FooterType describes the structure of a message footer.
+    """
+    FooterType describes the structure of a message footer.
 
     The footer is used to convey any error, information, or warning
     messages. This is to be used when the message has payload, but also
-    needs to communicate additional information. If an error occurs and
-    no payload is generated, an Error message should be returned.
+    needs to communicate additional information. If an error occurs and no
+    payload is generated, an Error message should be returned.
 
     :ivar message: Message contains a single error, information, or
         warning message. A code is provided along with an optional

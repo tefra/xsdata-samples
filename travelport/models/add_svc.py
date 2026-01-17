@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class AddSvc:
-    """1P - Add SVC segments to collect additional fee
+    """
+    1P - Add SVC segments to collect additional fee.
 
     Parameters
     ----------

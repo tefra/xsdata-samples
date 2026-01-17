@@ -25,18 +25,18 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucModuleConfigurationValues:
-    """Head of the configuration of one Module.
+    """
+    Head of the configuration of one Module.
 
-    A Module can be a BSW module as well as the RTE and ECU
-    Infrastructure. As part of the BSW module description, the
+    A Module can be a BSW module as well as the RTE and ECU Infrastructure.
+    As part of the BSW module description, the
     EcucModuleConfigurationValues element has two different roles: The
-    recommendedConfiguration contains parameter values recommended by
-    the BSW module vendor. The preconfiguredConfiguration contains
-    values for those parameters which are fixed by the implementation
-    and cannot be changed. These two EcucModuleConfigurationValues are
-    used when the base EcucModuleConfigurationValues (as part of the
-    base ECU configuration) is created to fill parameters with initial
-    values.
+    recommendedConfiguration contains parameter values recommended by the
+    BSW module vendor. The preconfiguredConfiguration contains values for
+    those parameters which are fixed by the implementation and cannot be
+    changed. These two EcucModuleConfigurationValues are used when the base
+    EcucModuleConfigurationValues (as part of the base ECU configuration)
+    is created to fill parameters with initial values.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -39,7 +39,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucUriReferenceDef:
-    """Definition of reference with a destination that is specified via a
+    """
+    Definition of reference with a destination that is specified via a
     destinationUri.
 
     With such a reference it is possible to define a reference to a

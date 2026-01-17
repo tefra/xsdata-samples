@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 @dataclass
 class AgentIdoverride3:
     """
-    Vendor specific agent identifier overrides to be used to access vendor systems.
+    Vendor specific agent identifier overrides to be used to access vendor
+    systems.
 
     Parameters
     ----------

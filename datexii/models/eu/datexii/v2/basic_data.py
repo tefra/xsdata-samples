@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class BasicData:
     """
-    Data that is either measured or calculated (elaborated) at the same time or
-    over the same time period.
+    Data that is either measured or calculated (elaborated) at the same
+    time or over the same time period.
 
     :ivar measurement_or_calculation_period: The time elapsed between
         the beginning and the end of the sampling or measurement period.

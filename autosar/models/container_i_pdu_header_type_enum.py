@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ContainerIPduHeaderTypeEnum:
-    """Is used to define the header type and size of ContainerIPdus.
+    """
+    Is used to define the header type and size of ContainerIPdus.
 
     The header size includes the header id and the length information.
 

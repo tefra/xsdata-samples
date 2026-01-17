@@ -6,10 +6,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class MemoryMapRefType:
-    """Base type for an element which references an memory map.
+    """
+    Base type for an element which references an memory map.
 
-    Reference is kept in an attribute rather than the text value, so
-    that the type may be extended with child elements if necessary.
+    Reference is kept in an attribute rather than the text value, so that
+    the type may be extended with child elements if necessary.
 
     :ivar mode_ref:
     :ivar memory_map_ref: A reference to a unique memory map.

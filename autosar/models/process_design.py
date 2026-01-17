@@ -23,11 +23,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ProcessDesign:
-    """This meta-class has the ability to stand in for a Process at the time when
-    the Process does not yet exist.
+    """
+    This meta-class has the ability to stand in for a Process at the time
+    when the Process does not yet exist.
 
-    But its future existence already needs to be considered during
-    design phase and for that a dedicated model element is required..
+    But its future existence already needs to be considered during design
+    phase and for that a dedicated model element is required..
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

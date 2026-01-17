@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class BrandedFareAdminRsp(BaseRsp1):
     """
-    Response to BrandedFareAdminReq containing the FareFamily being added, deleted
-    or updated.
+    Response to BrandedFareAdminReq containing the FareFamily being added,
+    deleted or updated.
     """
 
     class Meta:

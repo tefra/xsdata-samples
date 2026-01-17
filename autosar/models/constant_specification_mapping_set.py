@@ -19,8 +19,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ConstantSpecificationMappingSet:
-    """This meta-class represents the ability to map two ConstantSpecifications to
-    each others.
+    """
+    This meta-class represents the ability to map two
+    ConstantSpecifications to each others.
 
     One ConstantSpecification is supposed to be described in the
     application domain and the other should be described in the

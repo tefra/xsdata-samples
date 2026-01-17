@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class ParkingSpaceAccessibilityEnum(Enum):
     """
-    Easements for handicapped people expecially related to a parking space or a
-    group of parking spaces.
+    Easements for handicapped people expecially related to a parking space
+    or a group of parking spaces.
 
     :cvar EXTRA_SPACE_LEFT_SIDE: There is some extra space on the left
         side of the parking space (in parking direction point of view),

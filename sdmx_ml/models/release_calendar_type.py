@@ -6,8 +6,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ReleaseCalendarType:
-    """ReleaseCalendarType describes information about the timing of releases of
-    the constrained data.
+    """
+    ReleaseCalendarType describes information about the timing of releases
+    of the constrained data.
 
     All of these values use the standard "P7D" - style format.
 

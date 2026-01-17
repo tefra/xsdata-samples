@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrPointLocationReference:
     """
-    A point location is a zero-dimensional element in a map that specifies a
-    geometric location.
+    A point location is a zero-dimensional element in a map that specifies
+    a geometric location.
     """
 
     openlr_geo_coordinate: Optional[OpenlrGeoCoordinate] = field(

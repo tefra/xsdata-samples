@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticResponseOnEventActionEnum:
     """
-    This meta-class has the ability to define sub-functions of the UDS service
-    ResponseOnEvent.
+    This meta-class has the ability to define sub-functions of the UDS
+    service ResponseOnEvent.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

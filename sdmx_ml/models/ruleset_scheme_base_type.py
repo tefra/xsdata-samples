@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class RulesetSchemeBaseType(VtlDefinitionSchemeType):
-    """RulesetSchemeBaseType is an abstract base type for the RulesetSchemeType.
+    """
+    RulesetSchemeBaseType is an abstract base type for the
+    RulesetSchemeType.
 
     It restricts the item types to be only rulesets.
     """

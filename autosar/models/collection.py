@@ -22,17 +22,17 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Collection:
-    """This meta-class specifies a collection of elements.
+    """
+    This meta-class specifies a collection of elements.
 
-    A collection can be utilized to express additional aspects for a set
-    of elements. Note that Collection is an ARElement. Therefore it is
+    A collection can be utilized to express additional aspects for a set of
+    elements. Note that Collection is an ARElement. Therefore it is
     applicable e.g. for EvaluatedVariant, even if this is not obvious.
     Usually the category of a Collection is "SET". On the other hand, a
-    Collection can also express an arbitrary relationship between
-    elements. This is denoted by the category "RELATION" (see also
-    [TPS_GST_00347]). In this case the collection represents an
-    association from "sourceElement" to "targetElement" in the role
-    "role".
+    Collection can also express an arbitrary relationship between elements.
+    This is denoted by the category "RELATION" (see also [TPS_GST_00347]).
+    In this case the collection represents an association from
+    "sourceElement" to "targetElement" in the role "role".
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

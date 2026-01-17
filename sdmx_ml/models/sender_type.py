@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class SenderType(PartyType):
     """
-    SenderType extends the basic party structure to add an optional time zone
-    declaration.
+    SenderType extends the basic party structure to add an optional time
+    zone declaration.
 
     :ivar timezone: Timezone specifies the time zone of the sender, and
         if specified can be applied to all un-time zoned time values in

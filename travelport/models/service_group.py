@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class ServiceGroup:
-    """The Service Group of the Ancillary Service.
+    """
+    The Service Group of the Ancillary Service.
 
-    Providers: 1G, 1V, 1P, ACH
+    Providers: 1G, 1V, 1P, ACH.
 
     Parameters
     ----------

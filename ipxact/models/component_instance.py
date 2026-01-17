@@ -16,7 +16,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class ComponentInstance:
-    """Component instance element.
+    """
+    Component instance element.
 
     The instance name is contained in the unique-value instanceName
     attribute.

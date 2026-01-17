@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FileInfoComment:
     """
-    This class supports StructuredComment to provide auxiliary information with the
-    goal to create a comment.
+    This class supports StructuredComment to provide auxiliary information
+    with the goal to create a comment.
 
     :ivar sdgs: This property allows to keep special data which is not
         represented by the standard model. It can be utilized to keep

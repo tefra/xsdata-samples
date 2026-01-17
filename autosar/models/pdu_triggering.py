@@ -28,15 +28,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PduTriggering:
-    """The PduTriggering describes on which channel the IPdu is transmitted.
+    """
+    The PduTriggering describes on which channel the IPdu is transmitted.
 
     The Pdu routing by the PduR is only allowed for subclasses of IPdu.
-    Depending on its relation to entities such channels and clusters it
-    can be unambiguously deduced whether a fan-out is handled by the Pdu
-    router or the Bus Interface. If the fan-out is specified between
-    different clusters it shall be handled by the Pdu Router. If the
-    fan-out is specified between different channels of the same cluster
-    it shall be handled by the Bus Interface.
+    Depending on its relation to entities such channels and clusters it can
+    be unambiguously deduced whether a fan-out is handled by the Pdu router
+    or the Bus Interface. If the fan-out is specified between different
+    clusters it shall be handled by the Pdu Router. If the fan-out is
+    specified between different channels of the same cluster it shall be
+    handled by the Bus Interface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

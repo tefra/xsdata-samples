@@ -10,7 +10,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
-    """ProvisionAgreementType describes the structure of a provision agreement.
+    """
+    ProvisionAgreementType describes the structure of a provision
+    agreement.
 
     A provision agreement defines an agreement for a data provider to
     report data or reference metadata against a flow. Attributes which

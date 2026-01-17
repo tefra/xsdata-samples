@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PhmRecoveryActionInterface:
     """
-    This meta-class represents a PortInterface that can be taken for implementing a
-    PHM recovery action on application software level.
+    This meta-class represents a PortInterface that can be taken for
+    implementing a PHM recovery action on application software level.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

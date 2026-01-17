@@ -4,11 +4,11 @@ from dataclasses import dataclass, field
 
 from travelport.models.base_req_5 import BaseReq5
 from travelport.models.profile_modify_cmd_2 import ProfileModifyCmd2
-from travelport.models.provisioning_code_profile_type_12 import (
-    ProvisioningCodeProfileType12,
+from travelport.models.provisioning_code_profile_type_2 import (
+    ProvisioningCodeProfileType2,
 )
-from travelport.models.unique_profile_id_profile_type_12 import (
-    UniqueProfileIdProfileType12,
+from travelport.models.unique_profile_id_profile_type_2 import (
+    UniqueProfileIdProfileType2,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -16,7 +16,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileModifyReq2(BaseReq5):
-    """Request to add, change, or remove data on a specific profile.
+    """
+    Request to add, change, or remove data on a specific profile.
 
     Either ProfileID or ProvisioningCode are mandatory.
 
@@ -121,7 +122,7 @@ class ProfileModifyReq2(BaseReq5):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType12 = field(
+        profile_type: None | ProvisioningCodeProfileType2 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -154,7 +155,7 @@ class ProfileModifyReq2(BaseReq5):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType12 = field(
+        profile_type: None | UniqueProfileIdProfileType2 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

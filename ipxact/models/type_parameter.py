@@ -7,10 +7,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class TypeParameter(ModuleParameterType):
-    """A typed parameter name value pair.
+    """
+    A typed parameter name value pair.
 
-    The optional attribute dataType defines the type of the value and
-    the usageType attribute indicates how the parameter is to be used.
+    The optional attribute dataType defines the type of the value and the
+    usageType attribute indicates how the parameter is to be used.
     """
 
     class Meta:

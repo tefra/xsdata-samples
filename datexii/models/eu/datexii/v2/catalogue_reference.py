@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class CatalogueReference:
     """
-    Identification of the supplier's data catalogue in a data exchange context.
+    Identification of the supplier's data catalogue in a data exchange
+    context.
 
     :ivar key_catalogue_reference: Identification of the supplier's data
         catalogue in a data exchange context.

@@ -13,15 +13,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ComponentSeparation:
-    """Constraint that forces the two referenced SW components (called A and B in
-    the following) not to be mapped to the same ECU, Core, Partition depending on
-    the defined mappingScope attribute.
+    """
+    Constraint that forces the two referenced SW components (called A and B
+    in the following) not to be mapped to the same ECU, Core, Partition
+    depending on the defined mappingScope attribute.
 
-    If mappingScope is not specified then mappingScopeEcu shall be
-    assumed. If a SW component (e.g. A) is a composition, none of the
-    atomic SW components making up the A composition shall be mapped
-    together with any of the atomic SW components making up the B
-    composition. Furthermore, A and B shall be disjoint.
+    If mappingScope is not specified then mappingScopeEcu shall be assumed.
+    If a SW component (e.g. A) is a composition, none of the atomic SW
+    components making up the A composition shall be mapped together with
+    any of the atomic SW components making up the B composition.
+    Furthermore, A and B shall be disjoint.
 
     :ivar introduction: This represents introductory documentation about
         the mapping constraint.

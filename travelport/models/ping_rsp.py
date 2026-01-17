@@ -10,9 +10,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
 @dataclass
 class PingRsp(BaseRsp3):
-    """Response to the PingReq.
+    """
+    Response to the PingReq.
 
-    Will contain the exact payload (if any) that was sent in
+    Will contain the exact payload (if any) that was sent in.
     """
 
     class Meta:

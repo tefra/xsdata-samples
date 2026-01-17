@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class KilogramsConcentrationValue(DataValue):
     """
-    A measured or calculated value of concentration of a substance in grams per
-    unit volume.
+    A measured or calculated value of concentration of a substance in grams
+    per unit volume.
 
     :ivar kilograms_concentration: A value defining the amount of a
         substance in a given volume (concentration) expressed in

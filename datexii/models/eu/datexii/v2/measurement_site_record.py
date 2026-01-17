@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class MeasurementSiteRecord:
     """
-    An identifiable single measurement site entry/record in the Measurement Site
-    table.
+    An identifiable single measurement site entry/record in the Measurement
+    Site table.
 
     :ivar measurement_site_record_version_time: The date/time that this
         version of the measurement site record was defined. The identity

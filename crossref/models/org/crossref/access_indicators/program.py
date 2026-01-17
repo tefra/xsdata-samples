@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://www.crossref.org/AccessIndicators.xsd"
 
 @dataclass
 class Program:
-    """Accommodates deposit of license metadata.
+    """
+    Accommodates deposit of license metadata.
 
     The license_ref value will be a URL. Values for the "applies_to"
     attribute are vor (version of record),am (accepted manuscript), tdm

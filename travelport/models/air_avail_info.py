@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class AirAvailInfo:
-    """Matches class of service information with availability counts.
+    """
+    Matches class of service information with availability counts.
 
     Only provided on search results.
 

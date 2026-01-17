@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class RecordIdentifier:
     """
-    The information that uniquly identifies a particular supplier reservation.
+    The information that uniquly identifies a particular supplier
+    reservation.
     """
 
     class Meta:

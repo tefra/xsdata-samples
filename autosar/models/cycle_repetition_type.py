@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CycleRepetitionType:
-    """The number of communication cycles (after the first cycle) whenever the
+    """
+    The number of communication cycles (after the first cycle) whenever the
     frame is sent again.
 
     The FlexRay communication controller allows only determined values.

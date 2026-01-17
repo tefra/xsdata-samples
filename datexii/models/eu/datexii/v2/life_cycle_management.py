@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class LifeCycleManagement:
     """
-    Information relating to the life cycle management of the situation record.
+    Information relating to the life cycle management of the situation
+    record.
 
     :ivar cancel: Indication that all the element information previously
         sent is not considered valid, due to an incorrect content.

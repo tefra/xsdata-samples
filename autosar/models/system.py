@@ -36,16 +36,18 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class System:
-    """@RESTRICT_TO_STANDARD:CP!
-    The top level element of the System Description.
-    The System description defines five major elements: Topology, Software, Communication, Mapping and Mapping Constraints.
-    The System element directly aggregates the elements describing the Software, Mapping and Mapping Constraints; it contains a reference to an ASAM FIBEX description specifying Communication and Topology.
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:AP!
-    The top level element of the System Description.
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:FO!
-    The top level element of the Abstract Platform System Description.
+    """
+    @RESTRICT_TO_STANDARD:CP!
+
+    The top level element of the System Description. The System description
+    defines five major elements: Topology, Software, Communication, Mapping
+    and Mapping Constraints. The System element directly aggregates the
+    elements describing the Software, Mapping and Mapping Constraints; it
+    contains a reference to an ASAM FIBEX description specifying
+    Communication and Topology. @END_RESTRICT_TO_STANDARD!
+    @RESTRICT_TO_STANDARD:AP! The top level element of the System
+    Description. @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:FO! The
+    top level element of the Abstract Platform System Description.
     @END_RESTRICT_TO_STANDARD!
 
     :ivar short_name: This specifies an identifying shortName for the

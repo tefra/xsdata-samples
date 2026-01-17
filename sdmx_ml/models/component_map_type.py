@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class ComponentMapType(AnnotableType):
     """
-    ComponentMapType defines the structure for relating a component in a source
-    structure to a component in a target structure.
+    ComponentMapType defines the structure for relating a component in a
+    source structure to a component in a target structure.
     """
 
     source: tuple[str, ...] = field(

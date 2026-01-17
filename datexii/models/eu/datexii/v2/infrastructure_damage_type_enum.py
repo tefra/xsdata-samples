@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class InfrastructureDamageTypeEnum(Enum):
     """
-    Types of infrastructure damage which may have an effect on the road network.
+    Types of infrastructure damage which may have an effect on the road
+    network.
 
     :cvar BURST_PIPE: The road surface has sunken or collapsed in places
         due to burst pipes.

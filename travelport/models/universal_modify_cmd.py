@@ -24,7 +24,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class UniversalModifyCmd:
     """
-    Container for the elements that will be batch updated to a UniversalRecord.
+    Container for the elements that will be batch updated to a
+    UniversalRecord.
 
     Parameters
     ----------

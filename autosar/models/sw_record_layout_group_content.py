@@ -11,11 +11,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwRecordLayoutGroupContent:
-    """This is the contents of a RecordLayout which is inserted for every
+    """
+    This is the contents of a RecordLayout which is inserted for every
     iteration.
 
-    Note that since this is atpMixed, multiple properties can be
-    inserted for each iteration.
+    Note that since this is atpMixed, multiple properties can be inserted
+    for each iteration.
 
     :ivar sw_record_layout_ref: This association allows to support
         reusable "sub"-record layouts. In particluar, the contents of

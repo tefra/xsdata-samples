@@ -7,11 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class RulesetSchemesType:
-    """RulesetSchemesType describes the structure of the ruleset schemes container.
+    """
+    RulesetSchemesType describes the structure of the ruleset schemes
+    container.
 
     It contains one or more ruleset scheme, which can be explicitly
-    detailed or referenced from an external structure document or
-    registry service.
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar ruleset_scheme: RulesetScheme provides the details of a
         ruleset scheme, in which rulesets are described.

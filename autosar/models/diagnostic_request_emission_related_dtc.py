@@ -26,8 +26,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticRequestEmissionRelatedDtc:
     """
-    This meta-class represents the ability to model an instance of the OBD mode
-    0x03/0x07 service.
+    This meta-class represents the ability to model an instance of the OBD
+    mode 0x03/0x07 service.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

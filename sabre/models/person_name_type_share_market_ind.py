@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 class PersonNameTypeShareMarketInd(Enum):
     """
-    Value="Inherit" Permission for sharing data for marketing purposes.
+    value="Inherit" Permission for sharing data for marketing purposes.
     """
 
     YES = "Yes"

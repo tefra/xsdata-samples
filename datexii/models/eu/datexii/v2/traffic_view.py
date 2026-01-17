@@ -15,9 +15,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TrafficView:
     """
-    An identifiable instance of a traffic view at a single point in time relating
-    to a predefined location set, comprising one or more linear traffic views each
-    of which comprise one or more traffic view records.
+    An identifiable instance of a traffic view at a single point in time
+    relating to a predefined location set, comprising one or more linear
+    traffic views each of which comprise one or more traffic view records.
 
     :ivar traffic_view_time: The time to which the traffic view relates,
         i.e. the instance in time at which the traffic view was taken

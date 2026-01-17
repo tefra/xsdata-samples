@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class ParkingSpecialLocationEnum(Enum):
     """
-    Locations, often associated with a building, for a SpecialLocationParkingSite.
+    Locations, often associated with a building, for a
+    SpecialLocationParkingSite.
 
     :cvar AIRPORT_TERMINAL: The parking site is associated with an
         airport terminal.

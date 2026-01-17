@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class EquipmentOrSystemTypeEnum(Enum):
     """
-    Types of equipment and systems used to support the operation of the road
-    network.
+    Types of equipment and systems used to support the operation of the
+    road network.
 
     :cvar ANPR_CAMERAS: Automatic number plate recognition cameras.
     :cvar AUTOMATED_TOLL_SYSTEM: Automated toll system.

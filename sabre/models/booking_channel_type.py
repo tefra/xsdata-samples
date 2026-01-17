@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class BookingChannelType:
     """
-    Specifies the booking channel types and whether it is the primary means of
-    connectivity of the source.
+    Specifies the booking channel types and whether it is the primary means
+    of connectivity of the source.
 
     Attributes:
         type_value: The type of booking channel (e.g. Global

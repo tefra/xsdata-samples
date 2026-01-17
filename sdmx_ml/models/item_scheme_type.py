@@ -27,7 +27,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ItemSchemeType(MaintainableType):
-    """ItemSchemeType is an abstract base type for all item scheme objects.
+    """
+    ItemSchemeType is an abstract base type for all item scheme objects.
 
     It contains a collection of items. Concrete instances of this type
     should restrict the actual types of items allowed within the scheme.

@@ -13,9 +13,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 @dataclass
 class VehicleTypeIdentifier:
-    """Used to update Vehicle segment details of existing Vehicle Booking.
+    """
+    Used to update Vehicle segment details of existing Vehicle Booking.
 
-    Modify operation : Only modification of Vehicle segment details is supported.
+    Modify operation : Only modification of Vehicle segment details is
+    supported.
 
     Parameters
     ----------

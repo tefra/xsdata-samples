@@ -19,8 +19,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CryptoServiceNeeds:
-    """Specifies the needs on the configuration of the CryptoServiceManager for one
-    ConfigID (see Specification AUTOSAR_SWS_CSM.doc).
+    """
+    Specifies the needs on the configuration of the CryptoServiceManager
+    for one ConfigID (see Specification AUTOSAR_SWS_CSM.doc).
 
     An instance of this class is used to find out which ports of a
     software-component belong to this ConfigID.

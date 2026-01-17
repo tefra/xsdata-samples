@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class ConstraintAttachmentType:
     """
-    ConstraintAttachmentType describes a collection of references to constrainable
-    artefacts.
+    ConstraintAttachmentType describes a collection of references to
+    constrainable artefacts.
     """
 
     choice: tuple[

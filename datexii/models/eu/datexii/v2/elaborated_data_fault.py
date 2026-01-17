@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ElaboratedDataFault(Fault):
     """
-    Details of a fault which is being reported for the related elaborated data.
+    Details of a fault which is being reported for the related elaborated
+    data.
 
     :ivar elaborated_data_fault: The type of fault which is being
         reported for the specified elaborated data.

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class BaseSearchModifiers:
     """
-    Controls and switches for the Universal Record Search and Saved Trip search
-    request.
+    Controls and switches for the Universal Record Search and Saved Trip
+    search request.
 
     Parameters
     ----------

@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EndToEndTransformationDescription:
     """
-    EndToEndTransformationDescription holds these attributes which are profile
-    specific and have the same value for all E2E transformers.
+    EndToEndTransformationDescription holds these attributes which are
+    profile specific and have the same value for all E2E transformers.
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one

@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class ProprietaryData1(TypeKeyElement1):
     """
-    ProprietaryData for a Traveler which can be overridden for immediate parent
-    like BranchGroup,Branch,Account and TravelerGroup.
+    ProprietaryData for a Traveler which can be overridden for immediate
+    parent like BranchGroup,Branch,Account and TravelerGroup.
 
     Parameters
     ----------

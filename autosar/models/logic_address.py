@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LogicAddress:
-    """The logical DoIP address.
+    """
+    The logical DoIP address.
 
     This element shall only be used for DoIP (Diagnosis over IP).
 

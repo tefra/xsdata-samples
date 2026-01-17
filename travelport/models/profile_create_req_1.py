@@ -5,15 +5,15 @@ from dataclasses import dataclass, field
 from travelport.models.base_req_2 import BaseReq2
 from travelport.models.profile_data_1 import ProfileData1
 from travelport.models.profile_link_1 import ProfileLink1
-from travelport.models.provisioning_code_profile_type_5 import (
-    ProvisioningCodeProfileType5,
+from travelport.models.provisioning_code_profile_type_1 import (
+    ProvisioningCodeProfileType1,
 )
 from travelport.models.type_profile_entity_status_1 import (
     TypeProfileEntityStatus1,
 )
 from travelport.models.type_profile_type_3 import TypeProfileType3
-from travelport.models.unique_profile_id_profile_type_5 import (
-    UniqueProfileIdProfileType5,
+from travelport.models.unique_profile_id_profile_type_1 import (
+    UniqueProfileIdProfileType1,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -165,7 +165,7 @@ class ProfileCreateReq1(BaseReq2):
                     "max_length": 128,
                 },
             )
-            profile_type: None | ProvisioningCodeProfileType5 = field(
+            profile_type: None | ProvisioningCodeProfileType1 = field(
                 default=None,
                 metadata={
                     "name": "ProfileType",
@@ -198,7 +198,7 @@ class ProfileCreateReq1(BaseReq2):
                     "max_length": 128,
                 },
             )
-            profile_type: None | UniqueProfileIdProfileType5 = field(
+            profile_type: None | UniqueProfileIdProfileType1 = field(
                 default=None,
                 metadata={
                     "name": "ProfileType",

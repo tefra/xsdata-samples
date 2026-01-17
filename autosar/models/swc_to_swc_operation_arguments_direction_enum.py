@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwcToSwcOperationArgumentsDirectionEnum:
     """
-    Direction addressed by this  element.
+    Direction addressed by this element.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

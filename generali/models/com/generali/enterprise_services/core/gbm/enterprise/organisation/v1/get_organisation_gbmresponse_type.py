@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/enterprise/org
 @dataclass
 class GetOrganisationGbmresponseType(BaseGbmheaderType):
     """
-    <description xmlns="">The definition of the response message that supports
-    retrieval of an Organisation</description>
+    <description xmlns="">The definition of the response message that
+    supports retrieval of an Organisation</description>.
 
     :ivar organisation_gbo: <description xmlns="">The business object to
         retrieve</description>

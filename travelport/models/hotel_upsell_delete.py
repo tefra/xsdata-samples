@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class HotelUpsellDelete:
     """
-    Delete command for deleting HotelUpsellQualify,HotelUpsellOffer using there
-    persisted keys.
+    Delete command for deleting HotelUpsellQualify,HotelUpsellOffer using
+    there persisted keys.
     """
 
     class Meta:

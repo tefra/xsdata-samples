@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class LevelBaseType(NameableType):
-    """LevelBaseType is an abstract base type that makes up the basis for the
+    """
+    LevelBaseType is an abstract base type that makes up the basis for the
     LevelType.
 
     It requires a name and id.

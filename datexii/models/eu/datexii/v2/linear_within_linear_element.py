@@ -19,9 +19,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class LinearWithinLinearElement:
     """
-    A linear section along a linear element where the linear element is either a
-    part of or the whole of a linear object (i.e. a road), consistent with ISO
-    19148 definitions.
+    A linear section along a linear element where the linear element is
+    either a part of or the whole of a linear object (i.e. a road),
+    consistent with ISO 19148 definitions.
 
     :ivar administrative_area_of_linear_section: Identification of the
         road administration area which contains the specified linear

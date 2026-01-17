@@ -9,9 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class DisplayDetail:
-    """Display the contents for requested MCO,Cruise etc.
-
-    details
+    """
+    Display the contents for requested MCO,Cruise etc. details.
     """
 
     class Meta:

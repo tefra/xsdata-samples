@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class PortType:
     """
-    A port description, giving a name and an access type for high level ports.
+    A port description, giving a name and an access type for high level
+    ports.
 
     :ivar name: Unique name
     :ivar display_name:

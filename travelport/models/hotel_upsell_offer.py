@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 @dataclass
 class HotelUpsellOffer:
-    """Offer data of Hotel which is used to send a Hotel Upsell request and match a
-    hotel property in the response.
+    """
+    Offer data of Hotel which is used to send a Hotel Upsell request and
+    match a hotel property in the response.
 
     Offer is found for a matching qualify.
 

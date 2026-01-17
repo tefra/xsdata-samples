@@ -26,8 +26,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataSendCompletedEvent:
     """
-    The event is raised when the referenced data elements have been sent or an
-    error occurs.
+    The event is raised when the referenced data elements have been sent or
+    an error occurs.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

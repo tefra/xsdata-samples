@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FmFeature:
-    """A FMFeature describes an essential characteristic of a product.
+    """
+    A FMFeature describes an essential characteristic of a product.
 
     Each FMFeature is contained in exactly one FMFeatureModel.
 

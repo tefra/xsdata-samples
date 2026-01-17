@@ -9,7 +9,8 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class MetadataSetBaseType(MaintainableType):
-    """MetadataSetBaseType defines the base refinement of the MetadataSetType.
+    """
+    MetadataSetBaseType defines the base refinement of the MetadataSetType.
 
     Its purpose is to restrict the urn attribute.
     """

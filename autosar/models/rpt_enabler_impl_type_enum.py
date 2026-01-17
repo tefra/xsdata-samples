@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RptEnablerImplTypeEnum:
     """
-    Describes the required / implemented usage of enabler flags for data access in
-    the code.
+    Describes the required / implemented usage of enabler flags for data
+    access in the code.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

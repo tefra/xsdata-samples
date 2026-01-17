@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BuildTypeEnum:
     """
-    This enumeration defines the possible buildTypes a software module may be
-    implemented.
+    This enumeration defines the possible buildTypes a software module may
+    be implemented.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -16,10 +16,13 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class GroupOfParkingSites(ParkingRecord):
-    """A logical composition of parking sites with aggregated properties (e.g.
+    """
+    A logical composition of parking sites with aggregated properties (e.g.
     number of spaces).
 
-    Examples: Urban parking area "West" or all truck parkings along a motorway. The included parking sites may -but must not- be specified as subcomponents.
+    Examples: Urban parking area "West" or all truck parkings along a
+    motorway. The included parking sites may -but must not- be specified as
+    subcomponents.
 
     :ivar group_of_parking_sites_type: The type of this group of parking
         sites.

@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BswAsynchronousServerCallResultPoint:
     """
-    The callback point for an BswAsynchronousServerCallPoint i.e. the point at
-    which the result can be retrieved from the BSW Scheduler.
+    The callback point for an BswAsynchronousServerCallPoint i.e. the point
+    at which the result can be retrieved from the BSW Scheduler.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

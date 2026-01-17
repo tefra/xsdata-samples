@@ -11,12 +11,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RoleBasedPortAssignment:
-    """This class specifies an assignment of a role to a particular service port
-    (RPortPrototype or PPortPrototype) of an AtomicSwComponentType.
+    """
+    This class specifies an assignment of a role to a particular service
+    port (RPortPrototype or PPortPrototype) of an AtomicSwComponentType.
 
-    With this assignment, the role of the service port can be mapped to
-    a specific ServiceNeeds element, so that a tool is able to create
-    the correct connector.
+    With this assignment, the role of the service port can be mapped to a
+    specific ServiceNeeds element, so that a tool is able to create the
+    correct connector.
 
     :ivar port_prototype_ref: Service PortPrototype used in the assigned
         role. This PortPrototype shall either belong to the same

@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ApplicationCompositeDataTypeSubElementRef:
     """
-    This meta-class represents the specialization of SubElementMapping with respect
-    to ApplicationCompositeDataTypes.
+    This meta-class represents the specialization of SubElementMapping with
+    respect to ApplicationCompositeDataTypes.
 
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

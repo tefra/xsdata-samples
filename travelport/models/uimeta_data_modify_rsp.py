@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class UimetaDataModifyRsp(BaseRsp2):
     """
-    Service for Response to modify the entry in action by Admin in Admin login view
-    in Profile Settings.
+    Service for Response to modify the entry in action by Admin in Admin
+    login view in Profile Settings.
 
     Parameters
     ----------

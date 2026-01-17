@@ -27,10 +27,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SecurityEventContextMappingCommConnector:
     """
-    This meta-class represents the ability to associate a collection of security
-    events with an IdsM instance and with the executional context related to a
-    CommunicationConnector in which this IdsM instance can receive reports for
-    these security events.
+    This meta-class represents the ability to associate a collection of
+    security events with an IdsM instance and with the executional context
+    related to a CommunicationConnector in which this IdsM instance can
+    receive reports for these security events.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

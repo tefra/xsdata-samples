@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 @dataclass
 class TypeFlexibleTimeSpec2(TypeTimeSpec2):
     """
-    A type which can be used for flexible date/time specification -extends the
-    generic type typeTimeSpec to provide extra options for search.
+    A type which can be used for flexible date/time specification -extends
+    the generic type typeTimeSpec to provide extra options for search.
 
     Parameters
     ----------

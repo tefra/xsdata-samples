@@ -18,8 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FurtherActionByteNeeds:
     """
-    The FurtherActionByteNeeds indicates that the software-component is able to
-    provide the "further action byte" to the DoIp Service Component.
+    The FurtherActionByteNeeds indicates that the software-component is
+    able to provide the "further action byte" to the DoIp Service
+    Component.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

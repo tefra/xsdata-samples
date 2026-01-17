@@ -37,7 +37,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucBooleanParamDef:
-    """Configuration parameter type for Boolean.
+    """
+    Configuration parameter type for Boolean.
 
     Allowed values are true and false.
 

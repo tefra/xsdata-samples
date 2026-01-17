@@ -33,10 +33,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PortElementToCommunicationResourceMapping:
-    """This meta class maps a communication resource to CP Software Clusters.
+    """
+    This meta class maps a communication resource to CP Software Clusters.
 
-    In this case the kind of PortPrototype specified whether the
-    Software Cluster has to provide or to require the resource.
+    In this case the kind of PortPrototype specified whether the Software
+    Cluster has to provide or to require the resource.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

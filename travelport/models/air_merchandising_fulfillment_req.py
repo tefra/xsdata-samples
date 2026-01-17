@@ -21,10 +21,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class AirMerchandisingFulfillmentReq(BaseReq1):
-    """This will fulfill the merchandised items as specified in the request.
+    """
+    This will fulfill the merchandised items as specified in the request.
 
-    The host PNR will be updated with the services and any required
-    charges will be added.
+    The host PNR will be updated with the services and any required charges
+    will be added.
 
     Parameters
     ----------

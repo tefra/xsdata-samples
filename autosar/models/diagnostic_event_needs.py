@@ -32,13 +32,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticEventNeeds:
-    """Specifies the abstract needs on the configuration of the Diagnostic Event
-    Manager for one diagnostic event.
+    """
+    Specifies the abstract needs on the configuration of the Diagnostic
+    Event Manager for one diagnostic event.
 
     Its shortName can be regarded as a symbol identifying the diagnostic
     event from the viewpoint of the component or module which owns this
-    element. In case the diagnostic event specifies a production error,
-    the shortName shall be the name of the production error.
+    element. In case the diagnostic event specifies a production error, the
+    shortName shall be the name of the production error.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

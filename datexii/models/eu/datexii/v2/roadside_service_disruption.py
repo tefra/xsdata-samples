@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class RoadsideServiceDisruption(NonRoadEventInformation):
     """
-    Details of disruption to normal roadside services (e.g. specific services at a
-    service area).
+    Details of disruption to normal roadside services (e.g. specific
+    services at a service area).
 
     :ivar roadside_service_disruption_type: The type of roadside service
         which is disrupted.

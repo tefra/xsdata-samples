@@ -9,8 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UdpCollectionTriggerEnum:
     """
-    Defines whether the ServiceInterface element (event or method) contributes to
-    the triggering of the udp data transmission if data collection is enabled.
+    Defines whether the ServiceInterface element (event or method)
+    contributes to the triggering of the udp data transmission if data
+    collection is enabled.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

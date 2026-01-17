@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Conditions(TrafficElement):
     """
-    Any conditions which have the potential to degrade normal driving conditions.
+    Any conditions which have the potential to degrade normal driving
+    conditions.
 
     :ivar driving_condition_type: Description of the driving conditions
         at the specified location.

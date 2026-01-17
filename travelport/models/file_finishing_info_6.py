@@ -16,7 +16,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 @dataclass
 class FileFinishingInfo6:
-    """Misc Data required for File Finishing.
+    """
+    Misc Data required for File Finishing.
 
     This data is transient and not saved in database.
 

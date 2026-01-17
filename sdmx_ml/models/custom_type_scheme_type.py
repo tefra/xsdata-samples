@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class CustomTypeSchemeType(VtlDefinitionSchemeType):
     """
-    CustomTypeSchemeType defines a collection of custom types that are used in
-    transformations.
+    CustomTypeSchemeType defines a collection of custom types that are used
+    in transformations.
     """
 
     choice_1: Any = field(

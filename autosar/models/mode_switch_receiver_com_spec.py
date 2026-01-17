@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModeSwitchReceiverComSpec:
     """
-    Communication attributes of RPortPrototypes with respect to mode communication.
+    Communication attributes of RPortPrototypes with respect to mode
+    communication.
 
     :ivar enhanced_mode_api: This controls the creation of the enhanced
         mode API that returns information about the previous mode and

@@ -7,11 +7,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class FareRuleKey:
-    """The Fare Rule requested using a Key.
+    """
+    The Fare Rule requested using a Key.
 
     The key is typically a provider specific string which is required to
     make a following Air Fare Rule Request. This Key is returned in Low
-    Fare Shop or Air Price Response
+    Fare Shop or Air Price Response.
 
     Parameters
     ----------

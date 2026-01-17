@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 @dataclass
 class BookingTravelerInfo2:
     """
-    Container that will allow modifying Universal record data that is not product
-    specific.
+    Container that will allow modifying Universal record data that is not
+    product specific.
 
     Parameters
     ----------

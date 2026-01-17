@@ -29,7 +29,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TransformationPropsToServiceInterfaceElementMapping:
-    """This meta-class represents the ability to associate a ServiceInterface
+    """
+    This meta-class represents the ability to associate a ServiceInterface
     element with TransformationProps.
 
     The referenced elements of the Service Interface will be serialized

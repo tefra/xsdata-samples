@@ -8,10 +8,11 @@ from tpdb.models.yes import Yes
 
 @dataclass
 class Status:
-    """This tag shows the termination status of this problem, if known.
+    """
+    This tag shows the termination status of this problem, if known.
 
-    The reason for using sub-elements is that &lt;yes/&gt; can
-    optionally be extended by complexity bound information.
+    The reason for using sub-elements is that &lt;yes/&gt; can optionally
+    be extended by complexity bound information.
     """
 
     class Meta:

@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 @dataclass
 class Email4:
     """
-    Container for an email address with a type specifier (max 128 chars)
+    Container for an email address with a type specifier (max 128 chars).
 
     Parameters
     ----------

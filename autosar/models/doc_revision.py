@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DocRevision:
     """
-    This meta-class represents the ability to maintain information which relates to
-    revision management of documents or objects.
+    This meta-class represents the ability to maintain information which
+    relates to revision management of documents or objects.
 
     :ivar revision_label: This attribute represents the version number
         of the object.

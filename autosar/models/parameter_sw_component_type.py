@@ -35,11 +35,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ParameterSwComponentType:
-    """The ParameterSwComponentType defines parameters and characteristic values
-    accessible via provided Ports.
+    """
+    The ParameterSwComponentType defines parameters and characteristic
+    values accessible via provided Ports.
 
     The provided values are the same for all connected
-    SwComponentPrototypes
+    SwComponentPrototypes.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

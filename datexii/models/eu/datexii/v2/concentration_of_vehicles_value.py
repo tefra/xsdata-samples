@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ConcentrationOfVehiclesValue(DataValue):
     """
-    A measured or calculated value of the concentration of vehicles on a unit
-    stretch of road in a given direction.
+    A measured or calculated value of the concentration of vehicles on a
+    unit stretch of road in a given direction.
 
     :ivar concentration_of_vehicles: A value of traffic density
         expressed in the number of vehicles per kilometre of road.

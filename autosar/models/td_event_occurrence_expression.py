@@ -15,8 +15,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TdEventOccurrenceExpression:
-    """This is used to specify a filter on the occurrences of
-    TimingDescriptionEvents by means of a TDEventOccurrenceExpressionFormula.
+    """
+    This is used to specify a filter on the occurrences of
+    TimingDescriptionEvents by means of a
+    TDEventOccurrenceExpressionFormula.
 
     Filter criteria can be variable and argument values, i.e. the timing
     event only occurs for specific values, as well as the temporal

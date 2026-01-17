@@ -22,8 +22,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EventMapping:
     """
-    Mapping of a VariableDataPrototype that is located in a SenderReceiverInterface
-    to an Event that is located in a ServiceInterface.
+    Mapping of a VariableDataPrototype that is located in a
+    SenderReceiverInterface to an Event that is located in a
+    ServiceInterface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -12,10 +12,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 @dataclass
 class GdsQueueCountReq(BaseReq1):
-    """Use this request to get the number of pnrs on a queue.
+    """
+    Use this request to get the number of pnrs on a queue.
 
     If no queue is given, all queues for the pcc will be returned If no
-    pseudocitycode is
+    pseudocitycode is.
 
     Parameters
     ----------

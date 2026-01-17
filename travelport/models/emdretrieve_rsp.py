@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class EmdretrieveRsp(BaseRsp1):
     """
-    Electronic Miscellaneous Document list and detail retrieve response.Supported
-    providers are 1G/1V/1P.
+    Electronic Miscellaneous Document list and detail retrieve
+    response.Supported providers are 1G/1V/1P.
 
     Parameters
     ----------

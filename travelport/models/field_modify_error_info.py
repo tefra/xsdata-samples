@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class FieldModifyErrorInfo(TypeErrorInfo5):
     """
-    When field or field groups cannot be modified, we see the templates that use
-    the fields and field groups.
+    When field or field groups cannot be modified, we see the templates
+    that use the fields and field groups.
 
     Parameters
     ----------

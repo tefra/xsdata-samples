@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class FareNoteRef:
-    """A reference to a fare note from a shared list.
+    """
+    A reference to a fare note from a shared list.
 
     Used to minimize xml results.
     """

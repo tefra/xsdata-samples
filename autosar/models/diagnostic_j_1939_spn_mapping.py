@@ -24,8 +24,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticJ1939SpnMapping:
-    """This meta-class represents the ability to define a mapping between an SPN
-    and a SystemSignal.
+    """
+    This meta-class represents the ability to define a mapping between an
+    SPN and a SystemSignal.
 
     The existence of a mapping means that neither the SPN nor the
     SystemSignal need to be updated if the relation between the two

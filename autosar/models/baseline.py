@@ -11,14 +11,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Baseline:
-    """Specification of the baseline of the AUTOSAR standard this Data Exchange
-    Point relates to.
+    """
+    Specification of the baseline of the AUTOSAR standard this Data
+    Exchange Point relates to.
 
     The baseline is specified by listing the AUTOSAR products and their
-    revisions. Custom defined functionality and deviations to the
-    standard can be provided as well. All references to specification
-    elements in this Data Exchange Point refer to specification elements
-    that are part of this specification baseline.
+    revisions. Custom defined functionality and deviations to the standard
+    can be provided as well. All references to specification elements in
+    this Data Exchange Point refer to specification elements that are part
+    of this specification baseline.
 
     :ivar standard_revisions:
     :ivar custom_specification_refs: Reference tof custom specifications

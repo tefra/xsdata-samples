@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class FareInfoMessage:
     """
-    A simple textual fare information message.Providers supported : 1G/1V/1P.
+    A simple textual fare information message.Providers supported :
+    1G/1V/1P.
     """
 
     class Meta:

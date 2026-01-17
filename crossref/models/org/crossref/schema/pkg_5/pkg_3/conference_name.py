@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ConferenceName:
     """
-    The official name of the conference, excluding numbers commonly provided in
-    conference.
+    The official name of the conference, excluding numbers commonly
+    provided in conference.
     """
 
     class Meta:

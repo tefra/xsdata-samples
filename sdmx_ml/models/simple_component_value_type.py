@@ -11,9 +11,10 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class SimpleComponentValueType:
     """
-    SimpleValueType contains a simple value for a component, and if that value is
-    from a code list, the ability to indicate that child codes in a simple
-    hierarchy are part of the value set of the component for the region.
+    SimpleValueType contains a simple value for a component, and if that
+    value is from a code list, the ability to indicate that child codes in
+    a simple hierarchy are part of the value set of the component for the
+    region.
 
     :ivar value:
     :ivar cascade_values: The cascadeValues attribute, if true,

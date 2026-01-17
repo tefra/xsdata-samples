@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgDef:
-    """A SdgDef groups several SdgClasses which belong to the same extension.
+    """
+    A SdgDef groups several SdgClasses which belong to the same extension.
 
     The concept of an SdgDef is similiar to an UML Profile.
 

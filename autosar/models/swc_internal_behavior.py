@@ -61,9 +61,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwcInternalBehavior:
     """
-    The SwcInternalBehavior of an AtomicSwComponentType describes the relevant
-    aspects of the software-component with respect to the RTE, i.e. the
-    RunnableEntities and the RTEEvents they respond to.
+    The SwcInternalBehavior of an AtomicSwComponentType describes the
+    relevant aspects of the software-component with respect to the RTE,
+    i.e. the RunnableEntities and the RTEEvents they respond to.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

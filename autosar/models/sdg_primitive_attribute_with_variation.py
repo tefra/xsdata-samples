@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgPrimitiveAttributeWithVariation:
-    """Describes a primitive numerical special data attribute with variation.
+    """
+    Describes a primitive numerical special data attribute with variation.
 
     This class accepts a special data "sdf" element.
 

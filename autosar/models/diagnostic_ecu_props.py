@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEcuProps:
     """
-    This meta-class is defined to gather diagnostic-related properties that apply
-    in the scope of an entire ECU.
+    This meta-class is defined to gather diagnostic-related properties that
+    apply in the scope of an entire ECU.
 
     :ivar is_obd_relevant: This attribute indicates whether the ECU
         makes any contribution to the OBD.

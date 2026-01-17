@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticComControlSubNodeChannel:
     """
-    This represents the ability to add further attributes to the definition of a
-    specific sub-node channel that is subject to the diagnostic service
-    "communication control".
+    This represents the ability to add further attributes to the definition
+    of a specific sub-node channel that is subject to the diagnostic
+    service "communication control".
 
     :ivar sub_node_channel_ref: This represents the affected
         CommunicationClusters in the role subNodeChannel

@@ -14,14 +14,21 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McSwEmulationMethodSupport:
-    """This denotes the method used by the RTE to handle the calibration data.
+    """
+    This denotes the method used by the RTE to handle the calibration data.
 
-    It is published by the RTE generator and can be used e.g. to generate the corresponding emulation method in a Complex Driver.
-    According to the actual method given by the category attribute,  not all attributes are always needed:
-    * double pointered method: only baseReference is mandatory
-    * single pointered method: only referenceTable is mandatory
-    * initRam method: only elementGroup(s) are mandatory
-    Note: For single/double pointered method the group locations are implicitly accessed via the reference table and their location can be found from the initial values in the M1 model of the respective pointers. Therefore, the description of elementGroups is not needed in these cases.  Likewise, for double pointered method the reference table description can be accessed via the M1 model under baseReference.
+    It is published by the RTE generator and can be used e.g. to generate
+    the corresponding emulation method in a Complex Driver. According to
+    the actual method given by the category attribute, not all attributes
+    are always needed: * double pointered method: only baseReference is
+    mandatory * single pointered method: only referenceTable is mandatory *
+    initRam method: only elementGroup(s) are mandatory Note: For
+    single/double pointered method the group locations are implicitly
+    accessed via the reference table and their location can be found from
+    the initial values in the M1 model of the respective pointers.
+    Therefore, the description of elementGroups is not needed in these
+    cases. Likewise, for double pointered method the reference table
+    description can be accessed via the M1 model under baseReference.
 
     :ivar short_label: Assigns a name to this element.
     :ivar category: Identifies the actual method. The possible names

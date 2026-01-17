@@ -6,10 +6,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class MsrQueryArg:
-    """This represents an argument to the query.
+    """
+    This represents an argument to the query.
 
-    Note that the arguments are not standardized and therefore subject
-    to mutual agreement.
+    Note that the arguments are not standardized and therefore subject to
+    mutual agreement.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

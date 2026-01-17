@@ -14,7 +14,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RptHook:
-    """This meta class provide the ability to describe a rapid prototyping hook.
+    """
+    This meta class provide the ability to describe a rapid prototyping
+    hook.
 
     This can either be described by an other AUTOSAR system with the
     category RPT_SYSTEM or as a non AUTOSAR software.

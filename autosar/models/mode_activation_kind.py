@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModeActivationKind:
     """
-    Kind of mode switch condition used for activation of an event, as further
-    described for each enumeration field.
+    Kind of mode switch condition used for activation of an event, as
+    further described for each enumeration field.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

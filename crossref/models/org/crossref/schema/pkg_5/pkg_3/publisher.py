@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class Publisher:
     """
-    A container for information about the publisher of the item being registered.
+    A container for information about the publisher of the item being
+    registered.
     """
 
     class Meta:

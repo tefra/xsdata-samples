@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class InnerRunnableEntityGroupInCompositionInstanceRef:
     """
-    This meta-class represents the ability to define an InstanceRef to a nested
-    RunnableEntityGroup.
+    This meta-class represents the ability to define an InstanceRef to a
+    nested RunnableEntityGroup.
 
     :ivar context_sw_component_prototype_ref: This represents the nested
         structure of SwComponentPrototypes.

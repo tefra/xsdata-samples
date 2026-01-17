@@ -25,8 +25,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TdEventIPdu:
     """
-    This is used to describe timing events related to the exchange of I-PDUs
-    between the bus specific (FlexRay / CAN / LIN) Interface BSW module and COM.
+    This is used to describe timing events related to the exchange of
+    I-PDUs between the bus specific (FlexRay / CAN / LIN) Interface BSW
+    module and COM.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

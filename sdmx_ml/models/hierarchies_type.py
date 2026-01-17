@@ -7,11 +7,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class HierarchiesType:
-    """HierarchiesType describes the structure of the hierarchies container.
+    """
+    HierarchiesType describes the structure of the hierarchies container.
 
-    It contains one or more hierarchy, which can be explicitly detailed
-    or referenced from an external structure document or registry
-    service.
+    It contains one or more hierarchy, which can be explicitly detailed or
+    referenced from an external structure document or registry service.
 
     :ivar hierarchy: Hierarchy provides the details of a hierarchy,
         which is defined as an organised collection of codes that may

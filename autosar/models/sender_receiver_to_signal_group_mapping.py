@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SenderReceiverToSignalGroupMapping:
     """
-    Mapping of a sender receiver communication data element with a composite
-    datatype to a signal group.
+    Mapping of a sender receiver communication data element with a
+    composite datatype to a signal group.
 
     :ivar communication_direction: This attribute controls the direction
         into which the mapped SystemSignal is communicated with respect

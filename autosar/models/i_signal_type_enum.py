@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ISignalTypeEnum:
     """
-    This enumeration defines ISignal types that are used for derivation of the
-    ComSignalType in the COM configuration.
+    This enumeration defines ISignal types that are used for derivation of
+    the ComSignalType in the COM configuration.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -31,12 +31,17 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PncMapping:
-    """@RESTRICT_TO_STANDARD:CP!
-    Describes a mapping between one or several Virtual Function Clusters onto Partial Network Clusters. A Virtual Function Cluster is realized by a PortGroup. A Partial Network Cluster is realized by one or more IPduGroups.
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:AP!
-    Describes a mapping between one or several Virtual Function Clusters onto Partial Network Clusters. A Virtual Function Cluster is realized by a PortGroup. A Partial Network Cluster is realized by one or more ServiceInstances.
-    @END_RESTRICT_TO_STANDARD!
+    """
+    @RESTRICT_TO_STANDARD:CP!
+
+    Describes a mapping between one or several Virtual Function Clusters
+    onto Partial Network Clusters. A Virtual Function Cluster is realized
+    by a PortGroup. A Partial Network Cluster is realized by one or more
+    IPduGroups. @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:AP!
+    Describes a mapping between one or several Virtual Function Clusters
+    onto Partial Network Clusters. A Virtual Function Cluster is realized
+    by a PortGroup. A Partial Network Cluster is realized by one or more
+    ServiceInstances. @END_RESTRICT_TO_STANDARD!
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one

@@ -9,12 +9,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SegmentPosition:
-    """The StaticPart and the DynamicPart can be separated in multiple segments
-    within the multiplexed PDU.
+    """
+    The StaticPart and the DynamicPart can be separated in multiple
+    segments within the multiplexed PDU.
 
-    The ISignalIPdus are copied bit by bit into the MultiplexedIPdu. If
-    the space of the first segment is 5 bits large than the first 5 bits
-    of the ISignalIPdu are copied into this first segment and so on.
+    The ISignalIPdus are copied bit by bit into the MultiplexedIPdu. If the
+    space of the first segment is 5 bits large than the first 5 bits of the
+    ISignalIPdu are copied into this first segment and so on.
 
     :ivar segment_byte_order: This attribute defines the order of the
         bytes of the segment and the packing into the MultiplexedIPdu.

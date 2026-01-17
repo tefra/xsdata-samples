@@ -5,10 +5,9 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class ConferenceNumber:
-    """The number of a conference.
-
-    conference_number should include only the number of the conference
-    without any extra text
+    """
+    The number of a conference. conference_number should include only the
+    number of the conference without any extra text.
     """
 
     class Meta:

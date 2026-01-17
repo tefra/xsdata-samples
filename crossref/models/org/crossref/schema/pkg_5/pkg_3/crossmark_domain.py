@@ -9,17 +9,17 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class CrossmarkDomain:
-    """This should be a simple Internet domain name or subdomain name (e.g.
+    """
+    This should be a simple Internet domain name or subdomain name (e.g.
     www.psychoceramics.org or psychoceramics.org).
 
-    It is used to identify when a referring URL is coming from a
-    Crossmark domain. A "crossmark_domain" is made up of two
-    subelements; a "domain" and a "filter". The filter is only needed
-    for use in situations where content from multiple
-    publishers/publications is on the same host with the same domain
-    name (e.g. an aggregator) and one needs to use the referrer's URI
-    "path" to further determine whether the content in a crossmark
-    domain.
+    It is used to identify when a referring URL is coming from a Crossmark
+    domain. A "crossmark_domain" is made up of two subelements; a "domain"
+    and a "filter". The filter is only needed for use in situations where
+    content from multiple publishers/publications is on the same host with
+    the same domain name (e.g. an aggregator) and one needs to use the
+    referrer's URI "path" to further determine whether the content in a
+    crossmark domain.
     """
 
     class Meta:

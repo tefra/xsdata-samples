@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ApiPrincipleEnum:
     """
-    This enumeration represents the ability to control the granularity of API
-    generation.
+    This enumeration represents the ability to control the granularity of
+    API generation.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

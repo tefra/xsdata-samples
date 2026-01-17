@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class IndexTermRangeEnd:
     """
-    <div> <h3>Index Term Range End</h3> </div>
+    <div> <h3>Index Term Range End</h3> </div>.
     """
 
     class Meta:

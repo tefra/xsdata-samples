@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ReferenceCondition:
     """
-    The ReferenceCondition evaluates to true, if the referenced reference is
-    accepted by all rules of this condition.
+    The ReferenceCondition evaluates to true, if the referenced reference
+    is accepted by all rules of this condition.
 
     :ivar lower_multiplicity: Specifies the minimal number of times an
         object shall occur. If this primitive attribute is not set, then

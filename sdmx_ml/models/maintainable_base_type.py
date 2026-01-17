@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class MaintainableBaseType(VersionableType):
-    """MaintainableBaseType is an abstract type that only serves the purpose of
-    forming the base for the actual MaintainableType.
+    """
+    MaintainableBaseType is an abstract type that only serves the purpose
+    of forming the base for the actual MaintainableType.
 
-    The purpose of this type is to restrict the VersionableType to
-    require the id attribute.
+    The purpose of this type is to restrict the VersionableType to require
+    the id attribute.
     """
 
     id: Optional[str] = field(

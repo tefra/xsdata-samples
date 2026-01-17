@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class SavedTripCreateRsp(BaseRsp1):
-    """Response to SavedTripCreateReq.
+    """
+    Response to SavedTripCreateReq.
 
     Contains the SavedTrip successfully created.
     """

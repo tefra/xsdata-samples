@@ -11,13 +11,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwAxisGeneric:
-    """This meta-class defines a generic axis.
+    """
+    This meta-class defines a generic axis.
 
-    In a generic axis the axispoints points are calculated in the ECU.
-    The ECU is equipped with a fixed calculation algorithm. Parameters
-    for the algorithm can be stored in the data component of the ECU.
-    Therefore these parameters are specified in the data declaration,
-    not in the calibration data.
+    In a generic axis the axispoints points are calculated in the ECU. The
+    ECU is equipped with a fixed calculation algorithm. Parameters for the
+    algorithm can be stored in the data component of the ECU. Therefore
+    these parameters are specified in the data declaration, not in the
+    calibration data.
 
     :ivar sw_axis_type_ref: Associated axis calculation strategy.
     :ivar sw_number_of_axis_points: The number of base points to be

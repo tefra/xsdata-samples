@@ -12,12 +12,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class FareRestrictionDate:
-    """Fare restriction based on date ranges.
+    """
+    Fare restriction based on date ranges.
 
-    StartDate and EndDate are strings representing respective dates. If
-    a year component is present then it signifies an exact date. If only
-    day and month components are present then it signifies a seasonal
-    date, which means applicable for that date in any year
+    StartDate and EndDate are strings representing respective dates. If a
+    year component is present then it signifies an exact date. If only day
+    and month components are present then it signifies a seasonal date,
+    which means applicable for that date in any year.
 
     Parameters
     ----------

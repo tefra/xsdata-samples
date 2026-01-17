@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PerInstanceMemorySize:
-    """Resources needed by the allocation of PerInstanceMemory for each SWC
+    """
+    Resources needed by the allocation of PerInstanceMemory for each SWC
     instance.
 
     Note that these resources are not covered by an ObjectFileSection,

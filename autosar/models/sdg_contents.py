@@ -15,10 +15,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgContents:
-    """This meta-class represents the possible contents of a special data group.
+    """
+    This meta-class represents the possible contents of a special data
+    group.
 
-    It can be an arbitrary mix of references, of primitive special data
-    and nested special data groups.
+    It can be an arbitrary mix of references, of primitive special data and
+    nested special data groups.
 
     :ivar sdx_ref: Reference to any identifiable element. This allows to
         use Sdg even to establish arbitrary relationships.

@@ -20,12 +20,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ClientComSpec:
-    """@RESTRICT_TO_STANDARD:CP!
-    Client-specific communication attributes (RPortPrototype typed by ClientServerInterface).
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:AP!
-    Client-specific communication attributes (RPortPrototype typed by ServiceInterface) that are relevant for methods and field getters and setters.
-    @END_RESTRICT_TO_STANDARD!
+    """
+    @RESTRICT_TO_STANDARD:CP!
+
+    Client-specific communication attributes (RPortPrototype typed by
+    ClientServerInterface). @END_RESTRICT_TO_STANDARD!
+    @RESTRICT_TO_STANDARD:AP! Client-specific communication attributes
+    (RPortPrototype typed by ServiceInterface) that are relevant for
+    methods and field getters and setters. @END_RESTRICT_TO_STANDARD!
 
     :ivar client_intent: This attribute represents the expressed intent
         of the sender. The sender may decide to claim that existing

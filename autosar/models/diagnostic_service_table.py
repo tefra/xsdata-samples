@@ -28,8 +28,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticServiceTable:
     """
-    This meta-class represents a model of a diagnostic service table, i.e. the UDS
-    services applicable for a given ECU.
+    This meta-class represents a model of a diagnostic service table, i.e.
+    the UDS services applicable for a given ECU.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

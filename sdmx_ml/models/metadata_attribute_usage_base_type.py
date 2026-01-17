@@ -11,13 +11,14 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataAttributeUsageBaseType(ComponentType):
-    """MetadataAttributeUsageBaseType is the abstract base refinement of a metadata
-    attribute usage.
+    """
+    MetadataAttributeUsageBaseType is the abstract base refinement of a
+    metadata attribute usage.
 
-    Since this is a usage of metadata attribute already defined in
-    metadata structure, the typical id, concept identity, and
-    representation are excluded in place of a local refernce to the
-    metadata attribute being used.
+    Since this is a usage of metadata attribute already defined in metadata
+    structure, the typical id, concept identity, and representation are
+    excluded in place of a local refernce to the metadata attribute being
+    used.
     """
 
     concept_identity: Any = field(

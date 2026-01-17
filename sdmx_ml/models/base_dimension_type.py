@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class BaseDimensionType(BaseDimensionBaseType):
     """
-    BaseDimensionType is an abstract base type which defines the basic structure of
-    all dimensions.
+    BaseDimensionType is an abstract base type which defines the basic
+    structure of all dimensions.
 
     :ivar concept_role: ConceptRole references concepts which define
         roles which this dimension serves.

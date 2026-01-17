@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class IntValueType(ValueType):
-    """IntValueType is a refinement of SimpleValueType limiting the content to be
-    an integer.
+    """
+    IntValueType is a refinement of SimpleValueType limiting the content to
+    be an integer.
 
     This can be further refined ranges, etc.
     """

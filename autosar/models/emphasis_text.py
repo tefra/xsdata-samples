@@ -11,10 +11,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EmphasisText:
-    """This is an emphasized text.
+    """
+    This is an emphasized text.
 
-    As a compromise it contains some rendering oriented attributes such
-    as color and font.
+    As a compromise it contains some rendering oriented attributes such as
+    color and font.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

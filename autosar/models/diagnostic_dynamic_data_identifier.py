@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticDynamicDataIdentifier:
     """
-    This meta-class represents the ability to define a diagnostic data identifier
-    (DID) at run-time.
+    This meta-class represents the ability to define a diagnostic data
+    identifier (DID) at run-time.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -20,8 +20,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EthernetWakeupSleepOnDatalineConfig:
-    """EthernetWakeupSleepOnDatalineConfigSet is the main element that aggregates
-    different config set regarding the wakeup and sleep on data line.
+    """
+    EthernetWakeupSleepOnDatalineConfigSet is the main element that
+    aggregates different config set regarding the wakeup and sleep on data
+    line.
 
     An EthernetWakeupSleepOnDatalineConfigSet could aggregate multiple
     different configurations regarding the wakeup and sleep on dataline

@@ -22,8 +22,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FunctionInhibitionAvailabilityNeeds:
     """
-    Specifies the abstract needs on the configuration of the Function Inhibition
-    Manager to provide the control function for one Function Identifier (FID).
+    Specifies the abstract needs on the configuration of the Function
+    Inhibition Manager to provide the control function for one Function
+    Identifier (FID).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

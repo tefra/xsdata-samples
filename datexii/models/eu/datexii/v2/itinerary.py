@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Itinerary(GroupOfLocations):
     """
-    Multiple (i.e. more than one) physically separate locations arranged as an
-    ordered set that defines an itinerary or route.
+    Multiple (i.e. more than one) physically separate locations arranged as
+    an ordered set that defines an itinerary or route.
 
     :ivar route_destination: Destination of a route or final location in
         an itinerary.

@@ -9,15 +9,16 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 @dataclass
 class HostToken4:
-    """This is a host token.
+    """
+    This is a host token.
 
-    It contains some kind of payload we got from a host that must be
-    passed in on successive calls they know who you are as our system
-    does not maintain state. The format of this string isn't important
-    as long as it is not altered in any way between calls. Since a host
-    token is only valid on the host it is assocated with, there is also
-    an attribute called Host so we know how to route the command(s). You
-    can have multiple active sessions between one or more hosts
+    It contains some kind of payload we got from a host that must be passed
+    in on successive calls they know who you are as our system does not
+    maintain state. The format of this string isn't important as long as it
+    is not altered in any way between calls. Since a host token is only
+    valid on the host it is assocated with, there is also an attribute
+    called Host so we know how to route the command(s). You can have
+    multiple active sessions between one or more hosts.
 
     Parameters
     ----------

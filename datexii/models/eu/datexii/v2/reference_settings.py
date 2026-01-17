@@ -12,11 +12,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ReferenceSettings:
-    """Specification of the default value for traffic status on a group of
+    """
+    Specification of the default value for traffic status on a group of
     predefined locations on the road network.
 
-    Only when traffic status differs from this value at a location in
-    the group need a value be sent.
+    Only when traffic status differs from this value at a location in the
+    group need a value be sent.
 
     :ivar predefined_non_ordered_location_group_reference: A reference
         to a versioned instance of a predefined non ordered location

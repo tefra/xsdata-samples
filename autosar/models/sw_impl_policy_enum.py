@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwImplPolicyEnum:
     """
-    Specifies the implementation strategy with respect to consistency mechanisms of
-    variables.
+    Specifies the implementation strategy with respect to consistency
+    mechanisms of variables.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -14,9 +14,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class AlertCMethod4Point(AlertCPoint):
     """
-    A single point on the road network defined by reference to a point in a pre-
-    defined ALERT-C location table plus an offset distance and which has an
-    associated direction of traffic flow.
+    A single point on the road network defined by reference to a point in a
+    pre-defined ALERT-C location table plus an offset distance and which
+    has an associated direction of traffic flow.
     """
 
     alert_cdirection: Optional[AlertCDirection] = field(

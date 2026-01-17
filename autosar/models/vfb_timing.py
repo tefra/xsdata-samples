@@ -64,12 +64,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class VfbTiming:
-    """A model element used to define timing descriptions and constraints at VFB
-    level.
+    """
+    A model element used to define timing descriptions and constraints at
+    VFB level.
 
     TimingDescriptions aggregated by VfbTiming are restricted to event
-    chains referring to events which are derived from the class
-    TDEventVfb.
+    chains referring to events which are derived from the class TDEventVfb.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -7,13 +7,14 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class ClientDataList:
-    """A list of Name Value pairs that can be used to store data specific to a
+    """
+    A list of Name Value pairs that can be used to store data specific to a
     Client.
 
-    Name must be unique within a ClientDataList. This element will only
-    be added to ProfileCreate, ProfileModify and ProfileRetrieve (Search
-    and Delete will not be supported). The ClientDataList will be
-    deleted when the element is deleted or the profile is deleted.
+    Name must be unique within a ClientDataList. This element will only be
+    added to ProfileCreate, ProfileModify and ProfileRetrieve (Search and
+    Delete will not be supported). The ClientDataList will be deleted when
+    the element is deleted or the profile is deleted.
 
     Parameters
     ----------

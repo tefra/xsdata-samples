@@ -24,8 +24,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class VmsRecord:
-    """A sub-record in the VMS Unit table defining the characteristics of a single
-    variable message sign that is controlled by a specific VMS unit.
+    """
+    A sub-record in the VMS Unit table defining the characteristics of a
+    single variable message sign that is controlled by a specific VMS unit.
 
     Locations are on or adjacent to the road network but may be updated
     over time if relating to a mobile VMS unit.

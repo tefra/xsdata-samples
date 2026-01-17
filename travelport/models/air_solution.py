@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AirSolution:
     """
-    Defines an air solution that is comprised of an itinerary (the segments) along
-    with the passengers.
+    Defines an air solution that is comprised of an itinerary (the
+    segments) along with the passengers.
     """
 
     class Meta:

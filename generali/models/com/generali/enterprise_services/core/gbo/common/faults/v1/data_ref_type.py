@@ -9,8 +9,8 @@ __NAMESPACE__ = (
 @dataclass
 class DataRefType:
     """
-    <description xmlns="">A reference to the specific field or component within the
-    GBO that generated the failure.</description>
+    <description xmlns="">A reference to the specific field or component
+    within the GBO that generated the failure.</description>.
 
     :ivar path_name_text: <description xmlns="">The pseudo-XPath
         reference to the specific field or component within the

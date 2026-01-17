@@ -14,9 +14,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TextTableMapping:
     """
-    Defines the mapping of two DataPrototypes typed by AutosarDataTypes that refer
-    to CompuMethods of category TEXTTABLE, SCALE_LINEAR_AND_TEXTTABLE or
-    BITFIELD_TEXTTABLE.
+    Defines the mapping of two DataPrototypes typed by AutosarDataTypes
+    that refer to CompuMethods of category TEXTTABLE,
+    SCALE_LINEAR_AND_TEXTTABLE or BITFIELD_TEXTTABLE.
 
     :ivar bitfield_text_table_mask_first: This attribute can be used to
         support the mapping of bit field to bit field, boolean values to

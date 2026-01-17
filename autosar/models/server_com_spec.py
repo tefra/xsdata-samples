@@ -19,12 +19,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ServerComSpec:
-    """@RESTRICT_TO_STANDARD:CP!
-    Communication attributes for a server port (PPortPrototype and ClientServerInterface).
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:AP!
-    Server-specific communication attributes (PPortPrototype typed by ServiceInterface) that are relevant for methods and field getters and setters.
-    @END_RESTRICT_TO_STANDARD!
+    """
+    @RESTRICT_TO_STANDARD:CP!
+
+    Communication attributes for a server port (PPortPrototype and
+    ClientServerInterface). @END_RESTRICT_TO_STANDARD!
+    @RESTRICT_TO_STANDARD:AP! Server-specific communication attributes
+    (PPortPrototype typed by ServiceInterface) that are relevant for
+    methods and field getters and setters. @END_RESTRICT_TO_STANDARD!
 
     :ivar getter_ref: The existence of this reference indicates that the
         ServerComSpec refers to the getter of a Field.

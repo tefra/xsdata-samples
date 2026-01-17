@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class PriceRequestInformationType:
     """
-    Identify pricing source, if negotiated fares are requested and if it is a
-    reprice request.
+    Identify pricing source, if negotiated fares are requested and if it is
+    a reprice request.
 
     Attributes:
         negotiated_fare_code:

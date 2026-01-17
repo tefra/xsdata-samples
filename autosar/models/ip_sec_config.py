@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IpSecConfig:
     """
-    IPsec is a protocol that is designed to provide "end-to-end" cryptographically-
-    based security for IP network connections.
+    IPsec is a protocol that is designed to provide "end-to-end"
+    cryptographically-based security for IP network connections.
 
     :ivar ip_sec_config_props_ref: Global IPsec configuration settings
         that are valid for all IPSecRules that are defined on the

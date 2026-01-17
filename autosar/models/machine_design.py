@@ -34,8 +34,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MachineDesign:
     """
-    This meta-class represents the ability to define requirements on a Machine in
-    the context of designing a system.
+    This meta-class represents the ability to define requirements on a
+    Machine in the context of designing a system.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

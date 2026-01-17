@@ -12,10 +12,10 @@ __NAMESPACE__ = (
 @dataclass
 class Cache(CacheType):
     """
-    <description xmlns="">Mandatory cache parameter support by all services (a
-    service must understand the directive even if no caching support in the service
-    – this allows for future extensibility of the service
-    implementation)</description>
+    <description xmlns="">Mandatory cache parameter support by all services
+    (a service must understand the directive even if no caching support in
+    the service – this allows for future extensibility of the service
+    implementation)</description>.
     """
 
     class Meta:

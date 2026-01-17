@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PortPrototypeBlueprintMapping:
     """
-    This meta-class represents the ability to map a PortPrototypeBlueprint to a
-    PortProtoype of which one acts as the blueprint for the other.
+    This meta-class represents the ability to map a PortPrototypeBlueprint
+    to a PortProtoype of which one acts as the blueprint for the other.
 
     :ivar port_prototype_blueprint_ref: The PortPrototypeBlueprint in
         the context of the mapping.

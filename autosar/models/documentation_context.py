@@ -13,11 +13,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DocumentationContext:
-    """This class represents the ability to denote a context of a so called
-    standalone  documentation.
+    """
+    This class represents the ability to denote a context of a so called
+    standalone documentation.
 
-    Note that this is an &lt;&lt;atpMixed&gt;&gt;. The contents needs to
-    be considered as ordered.
+    Note that this is an &lt;&lt;atpMixed&gt;&gt;. The contents needs to be
+    considered as ordered.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -23,12 +23,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwcToEcuMapping:
-    """Map software components to a specific ECU Instance and optionally to a
+    """
+    Map software components to a specific ECU Instance and optionally to a
     processing unit and to an EcuPartition.
 
-    For each combination of ECUInstance and the optional ProcessingUnit
-    and the optional EcuPartition and the optional SensorActuator only
-    one SwcToEcuMapping shall be used.
+    For each combination of ECUInstance and the optional ProcessingUnit and
+    the optional EcuPartition and the optional SensorActuator only one
+    SwcToEcuMapping shall be used.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

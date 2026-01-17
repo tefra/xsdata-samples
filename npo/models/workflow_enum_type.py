@@ -6,7 +6,8 @@ __NAMESPACE__ = "urn:vpro:shared:2009"
 
 
 class WorkflowEnumType(Enum):
-    """These are the possible values of several 'workflow' fields.
+    """
+    These are the possible values of several 'workflow' fields.
 
     These serve administrative purposes only. In the Frontent API you
     should only encounter 'PUBLISHED'.

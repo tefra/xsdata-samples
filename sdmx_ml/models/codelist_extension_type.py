@@ -8,12 +8,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class CodelistExtensionType:
-    """CodelistExtensionType defines the structure of a codelist to be extended by
-    the codelist defining the extension.
+    """
+    CodelistExtensionType defines the structure of a codelist to be
+    extended by the codelist defining the extension.
 
-    It provides a reference to the extended codelist and selection
-    criteria to indicate the codes to be included in the extending
-    codelist.
+    It provides a reference to the extended codelist and selection criteria
+    to indicate the codes to be included in the extending codelist.
 
     :ivar codelist:
     :ivar inclusive_code_selection_or_exclusive_code_selection:

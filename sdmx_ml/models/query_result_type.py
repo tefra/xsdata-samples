@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class QueryResultType:
-    """QueryResultType describes the structure of a query result for a single data
-    source.
+    """
+    QueryResultType describes the structure of a query result for a single
+    data source.
 
-    Either a data result or metadata result is detailed, depending on
-    the data source.
+    Either a data result or metadata result is detailed, depending on the
+    data source.
 
     :ivar data_result_or_metadata_result:
     :ivar time_series_match: The timeSeriesMatch attribute is true when

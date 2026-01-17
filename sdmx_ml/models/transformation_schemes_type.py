@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class TransformationSchemesType:
-    """TransformationSchemesType describes the structure of the transformations
-    container.
+    """
+    TransformationSchemesType describes the structure of the
+    transformations container.
 
-    It contains one or more transformation schemes, which can be
-    explicitly detailed or referenced from an external structure
-    document or registry service.
+    It contains one or more transformation schemes, which can be explicitly
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar transformation_scheme: TransformationScheme provides the
         details of a transformation scheme, in which transformations are

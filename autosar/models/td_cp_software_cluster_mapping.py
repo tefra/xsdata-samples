@@ -22,9 +22,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TdCpSoftwareClusterMapping:
     """
-    This is used to specify a mapping between a software cluster that provides
-    temporal and dynamic resources and the software clusters that need these
-    resources.
+    This is used to specify a mapping between a software cluster that
+    provides temporal and dynamic resources and the software clusters that
+    need these resources.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class ReferenceDataSearchItem:
     """
-    Container for a Reference Data search item that includes its type and how to
-    search / identify the item either via code or value.
+    Container for a Reference Data search item that includes its type and
+    how to search / identify the item either via code or value.
 
     Parameters
     ----------

@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AirScheduleChangedInfo:
     """
-    Returned when the requested schedule does not match the host system schedule
-    Contents will be a new AirPricingSolution that contains all the new schedule
-    information as well as the pricing information.
+    Returned when the requested schedule does not match the host system
+    schedule Contents will be a new AirPricingSolution that contains all
+    the new schedule information as well as the pricing information.
     """
 
     class Meta:

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OccupancyChangeValue(DataValue):
     """
-    A measured or calculated value of change of occupied parking spaces expressed
-    as integer.
+    A measured or calculated value of change of occupied parking spaces
+    expressed as integer.
 
     :ivar occupancy_change: A measured or calculated absolut change of
         occupied parking spaces within a specified time expressed as

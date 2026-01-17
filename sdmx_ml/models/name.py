@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 @dataclass(frozen=True)
 class Name(TextType):
     """
-    Name is a reusable element, used for providing a human-readable name for an
-    object.
+    Name is a reusable element, used for providing a human-readable name
+    for an object.
     """
 
     class Meta:

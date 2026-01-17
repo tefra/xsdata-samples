@@ -21,12 +21,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class HwAttributeDef:
-    """This metaclass represents the ability to define a particular hardware
+    """
+    This metaclass represents the ability to define a particular hardware
     attribute.
 
-    The category of this element defines the type of the attributeValue.
-    If the category is Enumeration the hwAttributeEnumerationLiterals
-    specify the available literals.
+    The category of this element defines the type of the attributeValue. If
+    the category is Enumeration the hwAttributeEnumerationLiterals specify
+    the available literals.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

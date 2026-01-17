@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 @dataclass
 class VendorLocation4(TypeVendorLocation4):
     """
-    Location definition specific to a Vendor in a specific provider (e.g. 1G)
-    system.
+    Location definition specific to a Vendor in a specific provider (e.g.
+    1G) system.
     """
 
     class Meta:

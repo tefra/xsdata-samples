@@ -10,12 +10,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class SubscriptionType:
-    """SubscriptionType describes the details of a subscription to a registration
-    or change event for registry resources.
+    """
+    SubscriptionType describes the details of a subscription to a
+    registration or change event for registry resources.
 
-    When it occurs as the content of a response message, the registry
-    URN must be provide, unless the response is a failure notification
-    for the creation of a new subscription.
+    When it occurs as the content of a response message, the registry URN
+    must be provide, unless the response is a failure notification for the
+    creation of a new subscription.
 
     :ivar organisation: Organisation provides a reference to the
         organisation that owns this subscription. The reference is

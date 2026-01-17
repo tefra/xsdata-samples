@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 class SimpleComponentTextFormatType(BasicComponentTextFormatType):
     """
     SimpleComponentTextFormatType is a restricted version of the
-    BasicComponentTextFormatType that does not allow for multi-lingual values.
+    BasicComponentTextFormatType that does not allow for multi-lingual
+    values.
     """
 
     text_type: SimpleDataType = field(

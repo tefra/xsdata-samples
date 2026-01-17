@@ -12,9 +12,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PictogramDisplayAreaSettings:
     """
-    Settings specific to a distinct pictogram display area on the VMS (where
-    pictogramIndex indicates which pictogram area it relates to if there is more
-    than one pictogram display area on the VMS).
+    Settings specific to a distinct pictogram display area on the VMS
+    (where pictogramIndex indicates which pictogram area it relates to if
+    there is more than one pictogram display area on the VMS).
 
     :ivar pictogram_lanterns_on: Indicates if the lanterns are turned on
         or off for the pictogram display area.

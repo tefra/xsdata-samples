@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class ParkingSecurityEnum(Enum):
     """
-    Specifies security measures related to the parking site or particular spaces.
+    Specifies security measures related to the parking site or particular
+    spaces.
 
     :cvar SOCIAL_CONTROL: Social control e.g. parking situated in a
         neighbourhood.

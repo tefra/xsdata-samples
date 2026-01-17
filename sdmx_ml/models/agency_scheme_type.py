@@ -8,16 +8,17 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class AgencySchemeType(OrganisationSchemeType):
-    """AgencySchemeType defines a specific type of organisation scheme which
+    """
+    AgencySchemeType defines a specific type of organisation scheme which
     contains only maintenance agencies.
 
     The agency scheme maintained by a particular maintenance agency is
-    always provided a fixed identifier and is never versioned.
-    Therefore, agencies can be added or removed without have to version
-    the scheme. Agencies schemes have no hierarchy, meaning that no
-    agency may define a relationship with another agency in the scheme.
-    In fact, the actual parent agency for an agency in a scheme is the
-    agency which defines the scheme.
+    always provided a fixed identifier and is never versioned. Therefore,
+    agencies can be added or removed without have to version the scheme.
+    Agencies schemes have no hierarchy, meaning that no agency may define a
+    relationship with another agency in the scheme. In fact, the actual
+    parent agency for an agency in a scheme is the agency which defines the
+    scheme.
     """
 
     choice_2: Any = field(

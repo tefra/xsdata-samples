@@ -25,8 +25,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class NetworkEndpoint:
     """
-    The network endpoint defines the network addressing (e.g. IP-Address or MAC
-    multicast address).
+    The network endpoint defines the network addressing (e.g.
+
+    IP-Address or MAC multicast address).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

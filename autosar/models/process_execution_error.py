@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ProcessExecutionError:
     """
-    This meta-class has the ability to describe the value of a execution error
-    along with a documentation of its semantics.
+    This meta-class has the ability to describe the value of a execution
+    error along with a documentation of its semantics.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

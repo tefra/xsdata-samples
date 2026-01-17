@@ -18,11 +18,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ApplicationError:
-    """This is a user-defined error that is associated with an element of an
+    """
+    This is a user-defined error that is associated with an element of an
     AUTOSAR interface.
 
-    It is specific for the particular functionality or service provided
-    by the AUTOSAR software component.
+    It is specific for the particular functionality or service provided by
+    the AUTOSAR software component.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

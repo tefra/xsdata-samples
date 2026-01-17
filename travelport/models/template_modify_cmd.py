@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class TemplateModifyCmd:
     """
-    Wrapper for a set of modification commands to be applied to this template.
+    Wrapper for a set of modification commands to be applied to this
+    template.
 
     Parameters
     ----------

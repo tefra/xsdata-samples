@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 @dataclass(frozen=True)
 class QueryableDataSourceType1:
     """
-    QueryableDataSourceType describes a data source which is accepts an standard
-    SDMX Query message and responds appropriately.
+    QueryableDataSourceType describes a data source which is accepts an
+    standard SDMX Query message and responds appropriately.
 
     :ivar data_url: DataURL contains the URL of the data source.
     :ivar wsdlurl: WSDLURL provides the location of a WSDL instance on

@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class SingleValueMappingType(AnnotableType):
     """
-    SingleValueMappingType defines a mapping with a single source and optional
-    target.
+    SingleValueMappingType defines a mapping with a single source and
+    optional target.
 
     :ivar source_value: There should be a source value for each source
         represention (e.g. codelist, data type). Source values can be

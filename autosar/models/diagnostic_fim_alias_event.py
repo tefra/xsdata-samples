@@ -18,13 +18,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticFimAliasEvent:
-    """This meta-class is used to represent a given event semantics.
+    """
+    This meta-class is used to represent a given event semantics.
 
     However, the name of the actual events used in a specific project is
     sometimes not defined yet, not known or not in the responsibility of
-    the author. Therefore, the DiagnosticFimAliasEvent has a reference
-    to the actual DiagnosticEvent and by this the final connection is
-    created.
+    the author. Therefore, the DiagnosticFimAliasEvent has a reference to
+    the actual DiagnosticEvent and by this the final connection is created.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

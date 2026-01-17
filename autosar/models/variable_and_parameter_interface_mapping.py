@@ -24,9 +24,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class VariableAndParameterInterfaceMapping:
     """
-    Defines the mapping of VariableDataPrototypes or ParameterDataPrototypes in
-    context of two different SenderReceiverInterfaces, NvDataInterfaces or
-    ParameterInterfaces.
+    Defines the mapping of VariableDataPrototypes or
+    ParameterDataPrototypes in context of two different
+    SenderReceiverInterfaces, NvDataInterfaces or ParameterInterfaces.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

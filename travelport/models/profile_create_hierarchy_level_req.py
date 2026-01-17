@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileCreateHierarchyLevelReq(BaseReq5):
-    """Request to create a new level within an existing agency or account
+    """
+    Request to create a new level within an existing agency or account
     hierarchy.
 
     The template of the hierarchy level will be auto-generated.

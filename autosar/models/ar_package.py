@@ -751,13 +751,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ArPackage:
-    """AUTOSAR package, allowing to create top level packages to structure the
+    """
+    AUTOSAR package, allowing to create top level packages to structure the
     contained ARElements.
 
-    ARPackages are open sets. This means that in a file based
-    description system multiple files can be used to partially describe
-    the contents of a package. This is an extended version of MSR's SW-
-    SYSTEM.
+    ARPackages are open sets. This means that in a file based description
+    system multiple files can be used to partially describe the contents of
+    a package. This is an extended version of MSR's SW-SYSTEM.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

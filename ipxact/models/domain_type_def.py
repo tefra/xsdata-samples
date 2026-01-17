@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class DomainTypeDef:
     """
-    Definition of a single domain type defintion that can relate to multiple views.
+    Definition of a single domain type defintion that can relate to
+    multiple views.
 
     :ivar type_name: The name of the domain.
     :ivar type_definition: Where the definition of the type is

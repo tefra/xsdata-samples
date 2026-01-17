@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class Payload:
     """
-    Defines the structure of data transported by this port.
+    defines the structure of data transported by this port.
 
     :ivar name: Defines the name of the payload. For example: TLM2 or
         TLM1

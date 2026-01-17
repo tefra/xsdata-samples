@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataConstraintType(MetadataConstraintBaseType):
-    """MetadataConstraintType defines the structure of a metadata constraint.
+    """
+    MetadataConstraintType defines the structure of a metadata constraint.
 
-    A metadata constraint can specify allowed attribute values for
-    metadata described by the constrained artefact.
+    A metadata constraint can specify allowed attribute values for metadata
+    described by the constrained artefact.
 
     :ivar metadata_target_region: MetadataTargetRegion describes the
         values allowed for metadata attributes.

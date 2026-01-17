@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 @dataclass
 class CollectionAddress(TypeStructuredAddress1):
     """
-    An address from which a rental car should be picked up at the end of a rental
-    period and a phone number associated with the address.
+    An address from which a rental car should be picked up at the end of a
+    rental period and a phone number associated with the address.
     """
 
     class Meta:

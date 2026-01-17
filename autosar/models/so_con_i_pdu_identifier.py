@@ -15,10 +15,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SoConIPduIdentifier:
-    """Identification of Pdu content on a socket connection.
+    """
+    Identification of Pdu content on a socket connection.
 
-    This Identifier is required in case that multiple Pdus are
-    transmitted over the same socket connection.
+    This Identifier is required in case that multiple Pdus are transmitted
+    over the same socket connection.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

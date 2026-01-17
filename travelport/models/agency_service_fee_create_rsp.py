@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class AgencyServiceFeeCreateRsp(BaseRsp1):
     """
-    Agency Service Fee issued through BSP or Airline Reporting Corporation (ARC)..
+    Agency Service Fee issued through BSP or Airline Reporting Corporation
+    (ARC)..
     """
 
     class Meta:

@@ -10,11 +10,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class GroupSelector:
-    """Specifies a set of group names used to select subsequent generators.
+    """
+    Specifies a set of group names used to select subsequent generators.
 
-    The attribute "multipleGroupOperator" specifies the OR or AND
-    selection operator if there is more than one group name
-    (default=OR).
+    The attribute "multipleGroupOperator" specifies the OR or AND selection
+    operator if there is more than one group name (default=OR).
 
     :ivar name: Specifies a generator group name or a generator chain
         group name to be selected for inclusion in the generator chain.

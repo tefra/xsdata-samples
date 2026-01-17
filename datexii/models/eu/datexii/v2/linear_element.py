@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class LinearElement:
     """
-    A linear element along a single linear object, consistent with ISO 19148
-    definitions.
+    A linear element along a single linear object, consistent with ISO
+    19148 definitions.
 
     :ivar road_name: Name of the road of which the linear element forms
         a part.

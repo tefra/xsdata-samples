@@ -12,8 +12,8 @@ __NAMESPACE__ = (
 @dataclass
 class GetProgramGbmresponse(GetProgramGbmresponseType):
     """
-    <description xmlns="">The definition of the response message that supports
-    retrieve of a program</description>
+    <description xmlns="">The definition of the response message that
+    supports retrieve of a program</description>.
     """
 
     class Meta:

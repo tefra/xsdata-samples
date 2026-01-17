@@ -24,8 +24,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SignalBasedFieldToISignalTriggeringMapping:
-    """This meta-class defines the mapping of a ServiceInterface field to ISignalTriggerings that represent the notifier elements, the getter call and response, the setter call and response on a signal-based communication channel.
-    .
+    """
+    This meta-class defines the mapping of a ServiceInterface field to
+    ISignalTriggerings that represent the notifier elements, the getter
+    call and response, the setter call and response on a signal-based
+    communication channel. .
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

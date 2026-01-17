@@ -11,9 +11,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class CancelInfo:
-    """Returns cancellation information for certain hotel returned in response.
+    """
+    Returns cancellation information for certain hotel returned in
+    response.
 
-    This information is available through GDS transactions
+    This information is available through GDS transactions.
 
     Parameters
     ----------

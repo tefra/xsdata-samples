@@ -13,19 +13,19 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class QueryRegistrationRequestType:
-    """QueryRegistrationRequestType describes the structure of a registration query
-    request.
+    """
+    QueryRegistrationRequestType describes the structure of a registration
+    query request.
 
     The type of query (data, reference metadata, or both) must be
-    specified. It is possible to query for registrations for a
-    particular provision agreement, data provider, or structure usage,
-    or to query for all registrations in the registry. In addition the
-    search can be refined by providing constraints in the form of
-    explicit time periods, constraint regions, and key sets. When
-    constraint regions and key sets are provided they will be
-    effectively processed by first matching all data for the included
-    keys and regions (all available data if there are none) and then
-    removing any data matching the excluded keys or regions.
+    specified. It is possible to query for registrations for a particular
+    provision agreement, data provider, or structure usage, or to query for
+    all registrations in the registry. In addition the search can be
+    refined by providing constraints in the form of explicit time periods,
+    constraint regions, and key sets. When constraint regions and key sets
+    are provided they will be effectively processed by first matching all
+    data for the included keys and regions (all available data if there are
+    none) and then removing any data matching the excluded keys or regions.
 
     :ivar query_type: QueryType defines the type of sets (data,
         metadata, or both) that are being queried for.

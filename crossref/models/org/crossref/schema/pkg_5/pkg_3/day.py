@@ -6,10 +6,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Day:
-    """Day of publication.
+    """
+    Day of publication.
 
-    The should must be expressed with a leading zero if it is less than
-    10 (e.g. submit "05", not "5").
+    The should must be expressed with a leading zero if it is less than 10
+    (e.g. submit "05", not "5").
     """
 
     class Meta:

@@ -15,12 +15,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 @dataclass
 class ProfileSearchReq1(BaseReq2):
-    """Request to search for profiles of a specified type, within a specified
+    """
+    Request to search for profiles of a specified type, within a specified
     parent.
 
-    No more than 5 parameters can be specified for a given search
-    request (in addition to ProfileSearchModifiers and a parent ID and
-    Type). Returns any profiles that match all the parameters specified.
+    No more than 5 parameters can be specified for a given search request
+    (in addition to ProfileSearchModifiers and a parent ID and Type).
+    Returns any profiles that match all the parameters specified.
 
     Parameters
     ----------

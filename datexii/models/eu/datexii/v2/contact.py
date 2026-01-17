@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Contact:
     """
-    Address and contact information about some person, service or the parking site,
-    provided in detail or via reference.
+    Address and contact information about some person, service or the
+    parking site, provided in detail or via reference.
 
     :ivar contact_unknown: When true, the contact for the selected role
         and/or timeframe is unknown. Don't use the specialisations in

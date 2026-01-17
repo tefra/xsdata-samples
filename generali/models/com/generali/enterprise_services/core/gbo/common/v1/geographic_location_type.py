@@ -21,7 +21,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class GeographicLocationType(BaseSimpleComponentType):
     """
     <description xmlns="">A geographic location, latitude and
-    longitude</description>
+    longitude</description>.
 
     :ivar altitude_measure: <description xmlns="">The measure of the
         altitude that reflects the vertical elevation of an object above

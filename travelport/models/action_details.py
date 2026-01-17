@@ -9,7 +9,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class ActionDetails:
-    """Information related to the storing of the fare: Agent, Date and Action for Provider: 1P
+    """
+    Information related to the storing of the fare: Agent, Date and Action
+    for Provider: 1P.
 
     Parameters
     ----------

@@ -16,12 +16,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class Situation:
-    """An identifiable instance of a traffic/travel situation comprising one or
-    more traffic/travel circumstances which are linked by one or more causal
-    relationships.
+    """
+    An identifiable instance of a traffic/travel situation comprising one
+    or more traffic/travel circumstances which are linked by one or more
+    causal relationships.
 
-    Each traffic/travel circumstance is represented by a Situation
-    Record.
+    Each traffic/travel circumstance is represented by a Situation Record.
 
     :ivar overall_severity: The overall assessment of the impact (in
         terms of severity) that the situation as a whole is having, or

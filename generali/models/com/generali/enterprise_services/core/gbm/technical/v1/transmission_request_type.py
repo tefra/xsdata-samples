@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/technical/v1"
 class TransmissionRequestType(BaseGbmheaderType):
     """
     <description xmlns="">The definition of the message used to retrieve an
-    agreement</description>
+    agreement</description>.
 
     :ivar payload: <description xmlns="">The business object to
         retrieve</description>

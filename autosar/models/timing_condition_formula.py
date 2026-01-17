@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TimingConditionFormula:
-    """A TimingConditionFormula describes a specific dependency.
+    """
+    A TimingConditionFormula describes a specific dependency.
 
     The expression shall be a boolean expression addressing modes,
     variables, arguments, and/or events.

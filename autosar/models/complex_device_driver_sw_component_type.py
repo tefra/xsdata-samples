@@ -35,9 +35,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ComplexDeviceDriverSwComponentType:
-    """The ComplexDeviceDriverSwComponentType is a special AtomicSwComponentType
-    that has direct access to hardware on an ECU and which is therefore linked to a
-    specific ECU or specific hardware.
+    """
+    The ComplexDeviceDriverSwComponentType is a special
+    AtomicSwComponentType that has direct access to hardware on an ECU and
+    which is therefore linked to a specific ECU or specific hardware.
 
     The ComplexDeviceDriverSwComponentType introduces the possibility to
     link from the software representation to its hardware description

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class ProviderReservationDisplayDetailsList:
     """
-    Response to display the addtional details of provider reservation information
-    .
+    Response to display the addtional details of provider reservation
+    information .
     """
 
     class Meta:

@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ReportingTaxonomyMapsType:
-    """ReportingTaxonomyMapsType describes the structure of the reporting taxonomy
-    maps container.
+    """
+    ReportingTaxonomyMapsType describes the structure of the reporting
+    taxonomy maps container.
 
     It contains one or reporting taxonomy map, which can be explicitly
-    detailed or referenced from an external structure document or
-    registry service.
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar reporting_taxonomy_map: ReportingTaxonomyMap provides the
         details of a reporting taxonomy map, which descibes mappings

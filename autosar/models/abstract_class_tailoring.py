@@ -514,10 +514,11 @@ class AggregationTailoring:
 
 @dataclass
 class ClassContentConditional:
-    """Specifies the valid content of the class.
+    """
+    Specifies the valid content of the class.
 
     The content can optionally depend on a condition. (E.g. value of
-    attribute 'category')
+    attribute 'category').
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

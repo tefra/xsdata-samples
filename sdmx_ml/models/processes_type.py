@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ProcessesType:
-    """ProcessesType describes the structure of the processes container.
+    """
+    ProcessesType describes the structure of the processes container.
 
     It contains one or more process, which can be explicitly detailed or
     referenced from an external structure document or registry service.

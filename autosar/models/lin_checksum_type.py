@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class LinChecksumType:
     """
-    Use of classic or enhanced checksum is managed by the master node and it is
-    determined per frame identifier;
+    Use of classic or enhanced checksum is managed by the master node and
+    it is determined per frame identifier;.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

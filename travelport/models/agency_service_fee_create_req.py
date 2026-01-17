@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class AgencyServiceFeeCreateReq(BaseReq1):
     """
-    Creates an Agency Service Fee to be charged through BSP or Airline Reporting
-    Corporation (ARC)..
+    Creates an Agency Service Fee to be charged through BSP or Airline
+    Reporting Corporation (ARC)..
 
     Parameters
     ----------

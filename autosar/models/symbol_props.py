@@ -10,18 +10,22 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SymbolProps:
-    """@RESTRICT_TO_STANDARD:CP!
-    This meta-class represents the ability to attach with the symbol attribute a symbolic name that is conform to C language requirements to another meta-class, e.g. AtomicSwComponentType, that is a potential subject to a name clash on the level of RTE source code.
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:AP!
-    This meta-class represents the ability to contribute a part of a namespace.
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:FO!
-    If applied to Classic Platform:
-    This meta-class represents the ability to attach with the symbol attribute a symbolic name that is conform to C language requirements to another meta-class, e.g. AtomicSwComponentType, that is a potential subject to a name clash on the level of RTE source code.
-    If applied to Adaptive Platform:
-    This meta-class represents the ability to contribute a part of a namespace.
-    @END_RESTRICT_TO_STANDARD!
+    """
+    @RESTRICT_TO_STANDARD:CP!
+
+    This meta-class represents the ability to attach with the symbol
+    attribute a symbolic name that is conform to C language requirements to
+    another meta-class, e.g. AtomicSwComponentType, that is a potential
+    subject to a name clash on the level of RTE source code.
+    @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:AP! This meta-class
+    represents the ability to contribute a part of a namespace.
+    @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:FO! If applied to
+    Classic Platform: This meta-class represents the ability to attach with
+    the symbol attribute a symbolic name that is conform to C language
+    requirements to another meta-class, e.g. AtomicSwComponentType, that is
+    a potential subject to a name clash on the level of RTE source code. If
+    applied to Adaptive Platform: This meta-class represents the ability to
+    contribute a part of a namespace. @END_RESTRICT_TO_STANDARD!
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

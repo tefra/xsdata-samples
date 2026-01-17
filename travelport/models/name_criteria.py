@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class NameCriteria:
     """
-    Traveler First Name and Last Name for Searching misc traveler information.
+    Traveler First Name and Last Name for Searching misc traveler
+    information.
 
     Parameters
     ----------

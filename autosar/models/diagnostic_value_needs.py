@@ -23,18 +23,19 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticValueNeeds:
-    """Specifies the general needs on the configuration of the  Diagnostic
-    Communication Manager (DCM) which are not related to a particular item (e.g. a
-    PID).
+    """
+    Specifies the general needs on the configuration of the Diagnostic
+    Communication Manager (DCM) which are not related to a particular item
+    (e.g. a PID).
 
-    The main use case is the mapping of service ports to the DCM which
-    are not related to a particular item. In the case of using a sender
+    The main use case is the mapping of service ports to the DCM which are
+    not related to a particular item. In the case of using a sender
     receiver communicated value, the related value shall be taken via
-    assignedData in the role "signalBasedDiagnostics". In case of using
-    a client/server communicated value, the related value shall be
-    communicated via the port referenced by asssignedPort. The details
-    of this communication (e.g. appropriate naming conventions) are
-    specified in the related software specifications (SWS).
+    assignedData in the role "signalBasedDiagnostics". In case of using a
+    client/server communicated value, the related value shall be
+    communicated via the port referenced by asssignedPort. The details of
+    this communication (e.g. appropriate naming conventions) are specified
+    in the related software specifications (SWS).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

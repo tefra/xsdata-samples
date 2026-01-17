@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class WriteValueConstraintType:
-    """A constraint on the values that can be written to this field.
+    """
+    A constraint on the values that can be written to this field.
 
-    Absence of this element implies that any value that fits can be
-    written to it.
+    Absence of this element implies that any value that fits can be written
+    to it.
 
     :ivar write_as_read: writeAsRead indicates that only a value
         immediately read before a write is a legal value to be written.

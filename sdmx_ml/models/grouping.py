@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class Grouping(GroupingType):
-    """Grouping is an abstract element that serves as a substitution head for all
-    structure groupings.
+    """
+    Grouping is an abstract element that serves as a substitution head for
+    all structure groupings.
 
     Groupings contain a collection of component lists for a structure.
     Concrete instances of this must use a concrete instance of

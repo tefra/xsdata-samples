@@ -25,19 +25,36 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class MemorySection:
-    """Provides a description of an abstract memory section used in the
+    """
+    Provides a description of an abstract memory section used in the
     Implementation for code or data.
 
-    It shall be declared by the Implementation Description of the module or component, which actually allocates the memory in its code. This means in case of data prototypes which are allocated by the RTE, that the generated Implementation Description of the RTE shall contain the corresponding MemorySections.
-    The attribute "symbol" (if symbol is missing: "shortName") defines the module or component specific section name used in the code. For details see the document "Specification of Memory Mapping".
-    Typically the section name is build according the pattern:
-    &lt;SwAddrMethod shortName&gt;[_&lt;further specialization nominator&gt;][_&lt;alignment&gt;]
-    where
-    * '''[&lt;SwAddrMethod shortName&gt;]''' is the shortName of the referenced SwAddrMethod
-    * '''[_&lt;further specialization nominator&gt;]''' is an optional infix to indicate the specialization in the case that several MemorySections for different purpose of the same Implementation Description referring to the same or equally named SwAddrMethods.
-    * '''[_&lt;alignment&gt;]''' is the alignment attributes value and is only applicable in the case that the memoryAllocationKeywordPolicy value of the referenced SwAddrMethod is set to addrMethodShortNameAndAlignment
-    MemorySection used to Implement the code of RunnableEntitys and BswSchedulableEntitys shall have a symbol (if missing: shortName) identical to the referred SwAddrMethod to conform to the generated RTE header files.
-    In addition to the section name described above, a prefix is used in the corresponding macro code in order to define a name space. This prefix is by default given by the shortName of the BswModuleDescription resp. the SwComponentType. It can be superseded by  the prefix attribute.
+    It shall be declared by the Implementation Description of the module or
+    component, which actually allocates the memory in its code. This means
+    in case of data prototypes which are allocated by the RTE, that the
+    generated Implementation Description of the RTE shall contain the
+    corresponding MemorySections. The attribute "symbol" (if symbol is
+    missing: "shortName") defines the module or component specific section
+    name used in the code. For details see the document "Specification of
+    Memory Mapping". Typically the section name is build according the
+    pattern: &lt;SwAddrMethod shortName&gt;[_&lt;further specialization
+    nominator&gt;][_&lt;alignment&gt;] where * '''[&lt;SwAddrMethod
+    shortName&gt;]''' is the shortName of the referenced SwAddrMethod *
+    '''[_&lt;further specialization nominator&gt;]''' is an optional infix
+    to indicate the specialization in the case that several MemorySections
+    for different purpose of the same Implementation Description referring
+    to the same or equally named SwAddrMethods. *
+    '''[_&lt;alignment&gt;]''' is the alignment attributes value and is
+    only applicable in the case that the memoryAllocationKeywordPolicy
+    value of the referenced SwAddrMethod is set to
+    addrMethodShortNameAndAlignment MemorySection used to Implement the
+    code of RunnableEntitys and BswSchedulableEntitys shall have a symbol
+    (if missing: shortName) identical to the referred SwAddrMethod to
+    conform to the generated RTE header files. In addition to the section
+    name described above, a prefix is used in the corresponding macro code
+    in order to define a name space. This prefix is by default given by the
+    shortName of the BswModuleDescription resp. the SwComponentType. It can
+    be superseded by the prefix attribute.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

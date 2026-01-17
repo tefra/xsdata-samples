@@ -62,8 +62,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcuTiming:
-    """A model element used to define timing descriptions and constraints within
-    the scope of one ECU configuration.
+    """
+    A model element used to define timing descriptions and constraints
+    within the scope of one ECU configuration.
 
     TimingDescriptions aggregated by EcuTiming are allowed to use all
     events derived from the class TimingDescriptionEvent.

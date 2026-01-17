@@ -18,11 +18,12 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingAssignment:
-    """One set of prohibited/only allowed/convenient assignment for parking
+    """
+    One set of prohibited/only allowed/convenient assignment for parking
     space(s), parking site(s) or an access.
 
-    Same kind of data forms a union (e.g. lorries OR buses), different
-    kind of data forms an intersection (e.g. residents AND long-term).
+    Same kind of data forms a union (e.g. lorries OR buses), different kind
+    of data forms an intersection (e.g. residents AND long-term).
 
     :ivar applicable_for_user: Limitation to a set of special users.
     :ivar parking_duration: Temporal parking classification for this

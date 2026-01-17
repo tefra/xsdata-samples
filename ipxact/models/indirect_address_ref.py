@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class IndirectAddressRef:
     """
-    A reference to a field used for addressing the indirectly accessible memoryMap.
+    A reference to a field used for addressing the indirectly accessible
+    memoryMap.
     """
 
     class Meta:

@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FmFeatureRelation:
-    """Defines relations for FMFeatures, for example dependencies on other
+    """
+    Defines relations for FMFeatures, for example dependencies on other
     FMFeatures, or conflicts with other FMFeatures.
 
     A FMFeature can only be part of a FMFeatureSelectionSet if all its

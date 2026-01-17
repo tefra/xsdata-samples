@@ -19,15 +19,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SerializationTechnology:
-    """&lt;font color="#0f0f0f"&gt;This element is deprecated and will be removed
-    in future.
+    """
+    &lt;font color="#0f0f0f"&gt;This element is deprecated and will be
+    removed in future.
 
     This information is replaced by the TransformationTechnology
     element.&lt;/font&gt; &lt;font color="#0f0f0f"&gt;
     &lt;/font&gt;&lt;font color="#0f0f0f"&gt;Old description: Identifies
     the used serialization technology. The corresponding serialization
     plugin has to be provided on each affected ECU by the integrator.
-    &lt;/font&gt;
+    &lt;/font&gt;.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

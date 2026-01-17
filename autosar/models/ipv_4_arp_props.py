@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Ipv4ArpProps:
     """
-    Specifies the configuration options for the ARP (Address Resolution Protocol).
+    Specifies the configuration options for the ARP (Address Resolution
+    Protocol).
 
     :ivar tcp_ip_arp_num_gratuitous_arp_on_startup: This attribute
         specifies the number of gratuitous ARP replies which shall be

@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucImplementationConfigurationClass:
-    """Specifies which ConfigurationClass this parameter has in the individual
+    """
+    Specifies which ConfigurationClass this parameter has in the individual
     ConfigurationVariants.
 
-    This element is removed from the specifications and therefore it
-    shall not be used.
+    This element is removed from the specifications and therefore it shall
+    not be used.
 
     :ivar config_class: Specifies the ConfigurationClass for the given
         ConfigurationVariant.

@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class GeneralNetworkManagement(NetworkManagement):
-    """Network management action that is instigated either manually or
+    """
+    Network management action that is instigated either manually or
     automatically by the network/road operator.
 
     Compliance with any resulting control may be advisory or mandatory.

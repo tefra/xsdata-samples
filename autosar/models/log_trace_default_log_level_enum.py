@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class LogTraceDefaultLogLevelEnum:
     """
-    This enum defines available log&amp;trace log levels that may be used to define
-    the severity level of a log message.
+    This enum defines available log&amp;trace log levels that may be used
+    to define the severity level of a log message.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

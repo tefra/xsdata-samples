@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class ExemptTaxes:
     """
-    Request tax exemption for specific tax category and/or all taxes of a specific
-    country.
+    Request tax exemption for specific tax category and/or all taxes of a
+    specific country.
 
     Parameters
     ----------

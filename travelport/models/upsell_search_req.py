@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class UpsellSearchReq(BaseReq1):
     """
-    Request to retrieve all upsell qualify/offers based on search criteria for
-    air,hotel and vehicle.
+    Request to retrieve all upsell qualify/offers based on search criteria
+    for air,hotel and vehicle.
     """
 
     class Meta:

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 @dataclass
 class RequestKeyMappings4:
     """
-    All the elements for which mapping key sent in the request is different from
-    the mapping key comes in the response.
+    All the elements for which mapping key sent in the request is different
+    from the mapping key comes in the response.
     """
 
     class Meta:

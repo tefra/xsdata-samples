@@ -26,9 +26,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FireAndForgetMapping:
     """
-    Mapping of a Fire&amp;Forget Method that is located in a ServiceInterface to a
-    VariableDataPrototype in a SenderReceiverInterface or to a Trigger in a
-    TriggerInterface.
+    Mapping of a Fire&amp;Forget Method that is located in a
+    ServiceInterface to a VariableDataPrototype in a
+    SenderReceiverInterface or to a Trigger in a TriggerInterface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

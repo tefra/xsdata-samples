@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class AddressSpaces:
     """
-    If this component is a bus initiator, this lists all the address spaces defined
-    by the component.
+    If this component is a bus initiator, this lists all the address spaces
+    defined by the component.
 
     :ivar address_space: This defines a logical space, referenced by a
         bus initiator.

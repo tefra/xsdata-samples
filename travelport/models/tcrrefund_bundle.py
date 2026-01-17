@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class TcrrefundBundle:
     """
-    Bundle refund, pricing, and penalty information for a TCR reservation Used both
-    in request and response.
+    Bundle refund, pricing, and penalty information for a TCR reservation
+    Used both in request and response.
 
     Parameters
     ----------

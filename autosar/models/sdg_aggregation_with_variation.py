@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgAggregationWithVariation:
-    """Describes that the Sdg may contain another Sdg.
+    """
+    Describes that the Sdg may contain another Sdg.
 
     The gid of the nested Sdg is defined by subSdg. Represents 'sdg'.
 

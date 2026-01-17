@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class SingleProfileMigrationRsp2(BaseRsp5):
     """
-    Response of migration process of a single Account or Traveler profile from host
-    to uProfile.
+    Response of migration process of a single Account or Traveler profile
+    from host to uProfile.
 
     Parameters
     ----------

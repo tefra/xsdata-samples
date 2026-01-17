@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DynamicPart:
-    """Dynamic part of a multiplexed I-Pdu.
+    """
+    Dynamic part of a multiplexed I-Pdu.
 
     Reserved space which is used to transport varying SignalIPdus at the
     same position, controlled by the corresponding selectorFieldCode.

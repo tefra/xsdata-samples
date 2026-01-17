@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class TypeCommissionReferenceHistory2(TypeKeyElement2):
     """
-    Data refering to an external or internal Agent who recieves commission with
-    relation to this profile.
+    Data refering to an external or internal Agent who recieves commission
+    with relation to this profile.
 
     Parameters
     ----------

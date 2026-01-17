@@ -18,9 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoCertificateKeySlotNeeds:
     """
-    This meta-class shall be taken to indicate that the SwcServiceDependecy modeled
-    with this kind of ServiceNeeds defines a relationship between a CryptoKeySlot
-    and a CryptoCertificate.
+    This meta-class shall be taken to indicate that the SwcServiceDependecy
+    modeled with this kind of ServiceNeeds defines a relationship between a
+    CryptoKeySlot and a CryptoCertificate.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

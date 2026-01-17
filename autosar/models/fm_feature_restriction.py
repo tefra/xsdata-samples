@@ -20,10 +20,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FmFeatureRestriction:
-    """Defines restrictions for FMFeatures.
+    """
+    Defines restrictions for FMFeatures.
 
-    A FMFeature can only be part of a FMFeatureSelectionSet if at least
-    one of its restrictions evaluate to true.
+    A FMFeature can only be part of a FMFeatureSelectionSet if at least one
+    of its restrictions evaluate to true.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

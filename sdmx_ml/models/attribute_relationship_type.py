@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class AttributeRelationshipType:
     """
-    AttributeRelationshipType defines the structure for stating the relationship
-    between an attribute and other data structure definition components.
+    AttributeRelationshipType defines the structure for stating the
+    relationship between an attribute and other data structure definition
+    components.
     """
 
     choice: tuple[

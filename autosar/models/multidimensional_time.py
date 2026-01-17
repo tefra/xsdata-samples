@@ -9,14 +9,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class MultidimensionalTime:
-    """This is used to specify a multidimensional time value based on ASAM CSE
+    """
+    This is used to specify a multidimensional time value based on ASAM CSE
     codes.
 
     It is specified by a code which defined the basis of the time and a
-    scaling factor which finally determines the time value. If for
-    example the cseCode is 100 and the cseCodeFactor is 360, it
-    represents 360 angular degrees. If the cseCode is 0 and the
-    cseCodeFactor is 50 it represents 50 microseconds.
+    scaling factor which finally determines the time value. If for example
+    the cseCode is 100 and the cseCodeFactor is 360, it represents 360
+    angular degrees. If the cseCode is 0 and the cseCodeFactor is 50 it
+    represents 50 microseconds.
 
     :ivar cse_code: Specifies the time base by means of CSE codes.
     :ivar cse_code_factor: The scaling factor for the time value based

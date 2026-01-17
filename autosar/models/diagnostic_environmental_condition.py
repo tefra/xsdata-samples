@@ -22,10 +22,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEnvironmentalCondition:
     """
-    The meta-class DiagnosticEnvironmentalCondition formalizes the idea of a
-    condition which is evaluated during runtime of the ECU by looking at
-    "environmental" states (e.g. one such condition is that the vehicle is not
-    driving, i.e. vehicle speed == 0).
+    The meta-class DiagnosticEnvironmentalCondition formalizes the idea of
+    a condition which is evaluated during runtime of the ECU by looking at
+    "environmental" states (e.g. one such condition is that the vehicle is
+    not driving, i.e. vehicle speed == 0).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

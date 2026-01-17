@@ -10,15 +10,16 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class HierarchicalCodeType(HierarchicalCodeBaseType):
-    """HierarchicalCodeType describes the structure of a hierarchical code.
+    """
+    HierarchicalCodeType describes the structure of a hierarchical code.
 
     A hierarchical code provides for a reference to a code that is
     referenced within the hierarchical code list via either a complete
     reference to a code through either a URN or full set of reference
-    fields. Codes are arranged in a hierarchy by this reference. Note
-    that it is possible to reference a single code such that it has
-    multiple parents within the hierarchy. Further, the hierarchy may or
-    may not be a leveled one.
+    fields. Codes are arranged in a hierarchy by this reference. Note that
+    it is possible to reference a single code such that it has multiple
+    parents within the hierarchy. Further, the hierarchy may or may not be
+    a leveled one.
 
     :ivar code: Code provides a complete, explicit reference to a code
         through either its URN, or a complete reference to the codelist

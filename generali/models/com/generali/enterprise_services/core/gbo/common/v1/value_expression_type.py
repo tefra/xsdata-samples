@@ -13,12 +13,13 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class ValueExpressionType:
-    """<description xmlns="">A component representing an expression of a query
+    """
+    <description xmlns="">A component representing an expression of a query
     criteria used in a Get List.
 
     For example, find me the matching set of business objects where the
-    Path Equals the Value. The Equals being the operator code, e.g.
-    equals, less than, etc.</description>
+    Path Equals the Value. The Equals being the operator code, e.g. equals,
+    less than, etc.</description>.
 
     :ivar value: <description xmlns="">The value to be matched in a
         query criteria. The repeating structure allows more than one

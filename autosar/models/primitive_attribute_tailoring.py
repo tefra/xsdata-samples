@@ -29,11 +29,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PrimitiveAttributeTailoring:
-    """Tailoring of primitive attributes.
+    """
+    Tailoring of primitive attributes.
 
-    Primitive attributes are attributes that have a type which is marked
-    by the stereotype &lt;&lt;primitive&gt;&gt; or
-    &lt;&lt;enumeration&gt;&gt;
+    Primitive attributes are attributes that have a type which is marked by
+    the stereotype &lt;&lt;primitive&gt;&gt; or
+    &lt;&lt;enumeration&gt;&gt;.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

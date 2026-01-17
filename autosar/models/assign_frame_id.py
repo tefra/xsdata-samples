@@ -18,7 +18,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AssignFrameId:
     """
-    Schedule entry for an  Assign Frame Id master request.
+    Schedule entry for an Assign Frame Id master request.
 
     :ivar introduction: This represents introductory documentation about
         the schedule table entry.

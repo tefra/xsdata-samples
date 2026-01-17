@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TimeRangeType:
-    """The timeRange can be specified with the value attribute.
+    """
+    The timeRange can be specified with the value attribute.
 
     Optionally a tolerance can be defined.
 

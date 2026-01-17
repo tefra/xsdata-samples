@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class VolumeId:
     """
-    <div> <h3>Volume Identifier</h3> </div>
+    <div> <h3>Volume Identifier</h3> </div>.
     """
 
     class Meta:

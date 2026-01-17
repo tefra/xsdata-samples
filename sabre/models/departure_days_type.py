@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class DepartureDaysType:
     """
-    Specify which days of week  to consider for departure.
+    Specify which days of week to consider for departure.
 
     Attributes:
         value: Value format: First letter of the name of the day or '_',

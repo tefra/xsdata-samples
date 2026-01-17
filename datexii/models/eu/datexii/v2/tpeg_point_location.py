@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegPointLocation:
     """
-    A single point on the road network defined by a TPEG-Loc structure and which
-    has an associated direction of traffic flow.
+    A single point on the road network defined by a TPEG-Loc structure and
+    which has an associated direction of traffic flow.
 
     :ivar tpeg_direction: The direction of traffic flow.
     :ivar tpeg_point_location_extension:

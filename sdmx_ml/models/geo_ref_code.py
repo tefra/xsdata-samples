@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class GeoRefCode(GeoRefCodeType):
     """
-    GeoRefCode is the abstract base from which specific types of geographic codes
-    will be derived.
+    GeoRefCode is the abstract base from which specific types of geographic
+    codes will be derived.
     """
 
     class Meta:

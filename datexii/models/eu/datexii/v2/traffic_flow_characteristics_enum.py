@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class TrafficFlowCharacteristicsEnum(Enum):
     """
-    A collection of terms for describing the characteristics of traffic flow.
+    A collection of terms for describing the characteristics of traffic
+    flow.
 
     :cvar ERRATIC_FLOW: Traffic flow is of an irregular nature, subject
         to sudden changes in rates.

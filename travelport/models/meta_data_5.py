@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 @dataclass
 class MetaData5:
-    """Extra data to elaborate the parent element.
+    """
+    Extra data to elaborate the parent element.
 
     This data is primarily informative and is not persisted.
     """

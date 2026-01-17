@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class FixedGroupUpdate(TypeCommonEditableGroup2):
-    """Update the agency-defined attributes for a fixed field group.
+    """
+    Update the agency-defined attributes for a fixed field group.
 
     To remove a value, omit the attribute entirely.
 

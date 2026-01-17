@@ -19,12 +19,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SecurityEventThresholdFilter:
-    """This meta-class represents the threshold filter that drops (repeatedly at
-    each beginning of a configurable time interval) a configurable number of
-    security events .
+    """
+    This meta-class represents the threshold filter that drops (repeatedly
+    at each beginning of a configurable time interval) a configurable
+    number of security events .
 
-    All subsequently arriving security events (within the configured
-    time interval) pass the filter.
+    All subsequently arriving security events (within the configured time
+    interval) pass the filter.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

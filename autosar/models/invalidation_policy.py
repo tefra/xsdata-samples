@@ -12,12 +12,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class InvalidationPolicy:
-    """Specifies whether the component can actively invalidate a particular
+    """
+    Specifies whether the component can actively invalidate a particular
     dataElement.
 
-    If no invalidationPolicy points to a dataElement this is considered
-    to yield the identical result as if the handleInvalid attribute was
-    set to dontInvalidate.
+    If no invalidationPolicy points to a dataElement this is considered to
+    yield the identical result as if the handleInvalid attribute was set to
+    dontInvalidate.
 
     :ivar data_element_ref: Reference to the dataElement for which the
         InvalidationPolicy applies.

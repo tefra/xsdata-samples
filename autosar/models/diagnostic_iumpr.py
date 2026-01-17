@@ -20,12 +20,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticIumpr:
-    """This meta-class represents he ability to model the in-us monitor performance
-    ratio.
+    """
+    This meta-class represents he ability to model the in-us monitor
+    performance ratio.
 
     The latter computes to the number of times a fault could have been
-    found divided by the number of times the vehicle conditions have
-    been properly fulfilled.
+    found divided by the number of times the vehicle conditions have been
+    properly fulfilled.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

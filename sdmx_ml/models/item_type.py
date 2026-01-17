@@ -15,10 +15,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ItemType(ItemBaseType):
-    """ItemType is an abstract base type for all items with in an item scheme.
+    """
+    ItemType is an abstract base type for all items with in an item scheme.
 
-    Concrete instances of this type may or may not utilize the nested
-    item, but if so should restrict the actual types of item allowed.
+    Concrete instances of this type may or may not utilize the nested item,
+    but if so should restrict the actual types of item allowed.
     """
 
     choice: tuple[
@@ -147,8 +148,8 @@ class ItemType(ItemBaseType):
 @dataclass(frozen=True)
 class BaseOrganisationType(ItemType):
     """
-    BaseOrganisationType is an abstract base type the forms the basis for the
-    OrganisationType.
+    BaseOrganisationType is an abstract base type the forms the basis for
+    the OrganisationType.
     """
 
     choice_1: Any = field(
@@ -162,11 +163,12 @@ class BaseOrganisationType(ItemType):
 
 @dataclass(frozen=True)
 class CategoryType(ItemType):
-    """CategoryType describes the details of a category.
+    """
+    CategoryType describes the details of a category.
 
-    A category is defined as an item at any level in a classification.
-    The Category element represents a set of nested categories which are
-    child categories.
+    A category is defined as an item at any level in a classification. The
+    Category element represents a set of nested categories which are child
+    categories.
     """
 
     choice_1: Any = field(
@@ -180,12 +182,13 @@ class CategoryType(ItemType):
 
 @dataclass(frozen=True)
 class CodeType(ItemType):
-    """CodeType describes the structure of a code.
+    """
+    CodeType describes the structure of a code.
 
-    A code is defined as a language independent set of letters, numbers
-    or symbols that represent a concept whose meaning is described in a
-    natural language. Presentational information not present may be
-    added through the use of annotations.
+    A code is defined as a language independent set of letters, numbers or
+    symbols that represent a concept whose meaning is described in a
+    natural language. Presentational information not present may be added
+    through the use of annotations.
     """
 
     choice_1: Any = field(
@@ -200,8 +203,9 @@ class CodeType(ItemType):
 @dataclass(frozen=True)
 class ConceptBaseType(ItemType):
     """
-    ConceptBaseType is an abstract base type the forms the basis of the ConceptType
-    by requiring a name and id, and restricting the content of the id.
+    ConceptBaseType is an abstract base type the forms the basis of the
+    ConceptType by requiring a name and id, and restricting the content of
+    the id.
     """
 
     choice_1: Any = field(
@@ -216,8 +220,8 @@ class ConceptBaseType(ItemType):
 @dataclass(frozen=True)
 class ReportingCategoryBaseType(ItemType):
     """
-    ReportingCategoryBaseType is an abstract base type that serves as the basis for
-    the ReportingCategoryType.
+    ReportingCategoryBaseType is an abstract base type that serves as the
+    basis for the ReportingCategoryType.
     """
 
     choice_1: Any = field(
@@ -232,8 +236,8 @@ class ReportingCategoryBaseType(ItemType):
 @dataclass(frozen=True)
 class UnnestedItemType(ItemType):
     """
-    UnnestedItemType is an abstract base type for all items with in an item scheme
-    that do not contain nested items.
+    UnnestedItemType is an abstract base type for all items with in an item
+    scheme that do not contain nested items.
     """
 
     choice: Any = field(
@@ -260,7 +264,8 @@ class Category(CategoryType):
 
 @dataclass(frozen=True)
 class Code(CodeType):
-    """Code describes a code in a codelist.
+    """
+    Code describes a code in a codelist.
 
     In addition to the identification and description of the code, basic
     presentational information is also available. Presentational
@@ -275,7 +280,8 @@ class Code(CodeType):
 
 @dataclass(frozen=True)
 class ConceptType(ConceptBaseType):
-    """ConceptType describes the details of a concept.
+    """
+    ConceptType describes the details of a concept.
 
     A concept is defined as a unit of knowledge created by a unique
     combination of characteristics. If a concept does not specify a
@@ -308,7 +314,8 @@ class ConceptType(ConceptBaseType):
 
 @dataclass(frozen=True)
 class CustomTypeBaseType(UnnestedItemType):
-    """CustomTypeBaseType defines the base refinement of the CustomTypeType.
+    """
+    CustomTypeBaseType defines the base refinement of the CustomTypeType.
 
     Its purpose is to retrict the urn attribute.
     """
@@ -325,14 +332,15 @@ class CustomTypeBaseType(UnnestedItemType):
 @dataclass(frozen=True)
 class GeoRefCodeType(CodeType):
     """
-    GeoRefCodeType is the abstract base type defining the structure of geographic
-    codes.
+    GeoRefCodeType is the abstract base type defining the structure of
+    geographic codes.
     """
 
 
 @dataclass(frozen=True)
 class NamePersonalisationBaseType(UnnestedItemType):
-    """NamePersonalisationBaseType defines the base refinement of the
+    """
+    NamePersonalisationBaseType defines the base refinement of the
     NamePersonalisationType.
 
     Its purpose is to retrict the urn attribute.
@@ -349,11 +357,12 @@ class NamePersonalisationBaseType(UnnestedItemType):
 
 @dataclass(frozen=True)
 class OrganisationType(BaseOrganisationType):
-    """OrganisationType in an abstract type which describes the structure of the
-    details of an organisation.
+    """
+    OrganisationType in an abstract type which describes the structure of
+    the details of an organisation.
 
-    In addition to the basic organisation identification, contact
-    details can be provided.
+    In addition to the basic organisation identification, contact details
+    can be provided.
 
     :ivar contact: Contact describes a contact for the organisation,
     """
@@ -370,8 +379,9 @@ class OrganisationType(BaseOrganisationType):
 
 @dataclass(frozen=True)
 class ReportingCategoryType(ReportingCategoryBaseType):
-    """ReportingCategoryType describes the structure of a reporting category, which
-    groups structure usages into useful sub-packages.
+    """
+    ReportingCategoryType describes the structure of a reporting category,
+    which groups structure usages into useful sub-packages.
 
     Sub ordinate reporting categories can be nested within the category
     definition.
@@ -429,7 +439,8 @@ class ReportingCategoryType(ReportingCategoryBaseType):
 
 @dataclass(frozen=True)
 class RulesetBaseType(UnnestedItemType):
-    """RulesetBaseType defines the base refinement of the RulesetType.
+    """
+    RulesetBaseType defines the base refinement of the RulesetType.
 
     Its purpose is to retrict the urn attribute.
     """
@@ -445,7 +456,8 @@ class RulesetBaseType(UnnestedItemType):
 
 @dataclass(frozen=True)
 class TransformationBaseType(UnnestedItemType):
-    """TransformationBaseType defines the base refinement of the
+    """
+    TransformationBaseType defines the base refinement of the
     TransformationType.
 
     Its purpose is to retrict the urn attribute.
@@ -462,7 +474,8 @@ class TransformationBaseType(UnnestedItemType):
 
 @dataclass(frozen=True)
 class UserDefinedOperatorBaseType(UnnestedItemType):
-    """UserDefinedOperatorBaseType defines the base refinement of the
+    """
+    UserDefinedOperatorBaseType defines the base refinement of the
     UserDefinedOperatorType.
 
     Its purpose is to retrict the urn attribute.
@@ -479,7 +492,8 @@ class UserDefinedOperatorBaseType(UnnestedItemType):
 
 @dataclass(frozen=True)
 class VtlMappingBaseType(UnnestedItemType):
-    """VtlMappingBaseType defines the base refinement of the VtlMappingType.
+    """
+    VtlMappingBaseType defines the base refinement of the VtlMappingType.
 
     Its purpose is to retrict the urn attribute.
     """
@@ -495,7 +509,8 @@ class VtlMappingBaseType(UnnestedItemType):
 
 @dataclass(frozen=True)
 class AgencyType(OrganisationType):
-    """AgencyType defines the structure of an agency description.
+    """
+    AgencyType defines the structure of an agency description.
 
     The contacts defined for the organisation are specific to the agency
     role the organisation is serving.
@@ -524,11 +539,11 @@ class Concept(ConceptType):
 
 @dataclass(frozen=True)
 class CustomTypeType(CustomTypeBaseType):
-    """CustomTypeType defines the structure of a custom type.
+    """
+    CustomTypeType defines the structure of a custom type.
 
-    A custom type specifies a custom conversion for a VTL scalar type to
-    a resulting data type. This conversion overrides the default
-    conversion.
+    A custom type specifies a custom conversion for a VTL scalar type to a
+    resulting data type. This conversion overrides the default conversion.
 
     :ivar vtl_scalar_type: Identifies the VTL scalar type that is to be
         converted to an resulting output data type.
@@ -594,7 +609,8 @@ class CustomTypeType(CustomTypeBaseType):
 
 @dataclass(frozen=True)
 class DataConsumerType(OrganisationType):
-    """DataConsumerType defines the structure of a data consumer description.
+    """
+    DataConsumerType defines the structure of a data consumer description.
 
     The contacts defined for the organisation are specific to the data
     consumer role the organisation is serving.
@@ -611,7 +627,8 @@ class DataConsumerType(OrganisationType):
 
 @dataclass(frozen=True)
 class DataProviderType(OrganisationType):
-    """DataProviderType defines the structure of a data provider description.
+    """
+    DataProviderType defines the structure of a data provider description.
 
     The contacts defined for the organisation are specific to the data
     provider role the organisation is serving.
@@ -667,11 +684,12 @@ class GeoGridCodeType(GeoRefCodeType):
 
 @dataclass(frozen=True)
 class MetadataProviderType(OrganisationType):
-    """MetadataProviderType defines the structure of a metadata provider
+    """
+    MetadataProviderType defines the structure of a metadata provider
     description.
 
-    The contacts defined for the organisation are specific to the
-    metadata provider role the organisation is serving.
+    The contacts defined for the organisation are specific to the metadata
+    provider role the organisation is serving.
     """
 
     choice: Any = field(
@@ -685,7 +703,9 @@ class MetadataProviderType(OrganisationType):
 
 @dataclass(frozen=True)
 class NamePersonalisationType(NamePersonalisationBaseType):
-    """NamePersonalisationType defines the structure of a name personalisation.
+    """
+    NamePersonalisationType defines the structure of a name
+    personalisation.
 
     A name personalisation is is used in place of a standard VTL name in
     some VTL operations.
@@ -730,13 +750,13 @@ class NamePersonalisationType(NamePersonalisationBaseType):
 
 @dataclass(frozen=True)
 class OrganisationUnitType(OrganisationType):
-    """OrganisationUnitType defines the structure of an organisation unit
+    """
+    OrganisationUnitType defines the structure of an organisation unit
     description.
 
     In addition to general identification and contact information, an
-    organisation unit can specify a relationship with another
-    organisation unit from the same scheme which is its parent
-    organisation.
+    organisation unit can specify a relationship with another organisation
+    unit from the same scheme which is its parent organisation.
     """
 
     choice_1: Any = field(
@@ -763,7 +783,8 @@ class ReportingCategory(ReportingCategoryType):
 
 @dataclass(frozen=True)
 class RulesetType(RulesetBaseType):
-    """RulesetType defines the structure of a ruleset.
+    """
+    RulesetType defines the structure of a ruleset.
 
     A ruleset is a persistent set of rules which can be invoked by using
     appropriate VTL operators.
@@ -806,7 +827,8 @@ class RulesetType(RulesetBaseType):
 
 @dataclass(frozen=True)
 class TransformationType(TransformationBaseType):
-    """TransformationType defines the structure of a transformation.
+    """
+    TransformationType defines the structure of a transformation.
 
     A transformation is an assignment of a VTL expression to a specific
     result.
@@ -859,12 +881,14 @@ class TransformationType(TransformationBaseType):
 
 @dataclass(frozen=True)
 class UserDefinedOperatorType(UserDefinedOperatorBaseType):
-    """UserDefinedOperatorType defines the structure of a user defined operator.
+    """
+    UserDefinedOperatorType defines the structure of a user defined
+    operator.
 
-    A user defined operator is a custom VTL operator (not existing in
-    the standard library) that extends the VTL standard library for
-    specific purposes. In addition to its identification and name, and
-    definition of the operator must be provided.
+    A user defined operator is a custom VTL operator (not existing in the
+    standard library) that extends the VTL standard library for specific
+    purposes. In addition to its identification and name, and definition of
+    the operator must be provided.
 
     :ivar operator_definition: A VTL statement for the definition of a
         new operator: it specifies the operator name, its parameters and
@@ -884,17 +908,18 @@ class UserDefinedOperatorType(UserDefinedOperatorBaseType):
 
 @dataclass(frozen=True)
 class VtlMappingType(VtlMappingBaseType):
-    """VtlMappingType defines the structure of a single mapping between the
-    reference to a SDMX artefact made from VTL transformations, rulesets, user
-    defined operators and the corresponding SDMX structure identifier.
+    """
+    VtlMappingType defines the structure of a single mapping between the
+    reference to a SDMX artefact made from VTL transformations, rulesets,
+    user defined operators and the corresponding SDMX structure identifier.
 
     These are used to assign an alternative names to SDMX Dataflows,
-    Codelists, Concept Schemes, or Concepts. Although are distinct sub-
-    classes in the Information Model, this structure serves to express
-    them all. The references SDMX artefact serves to distinguish which
-    type of sub-class (VtlDatflowMapping or VtlCodelistMapping, or
-    VtlConceptMapping) is being described. When this is used to assign
-    an alias for a SDMX Dataflow, this can also be used to indicate the
+    Codelists, Concept Schemes, or Concepts. Although are distinct
+    sub-classes in the Information Model, this structure serves to express
+    them all. The references SDMX artefact serves to distinguish which type
+    of sub-class (VtlDatflowMapping or VtlCodelistMapping, or
+    VtlConceptMapping) is being described. When this is used to assign an
+    alias for a SDMX Dataflow, this can also be used to indicate the
     methods used to convert the data structure from SDMX to VTL and
     vice-versa. Finally, this can be used to override the deault Basic
     mapping methods used for Dataflows by utilizing the GenericDataflow
@@ -1046,7 +1071,8 @@ class DataProvider(DataProviderType):
 
 @dataclass(frozen=True)
 class GeoFeatureSetCode(GeoFeatureSetCodeType):
-    """Is a geographic code in a geographic codelist.
+    """
+    Is a geographic code in a geographic codelist.
 
     It adds a value to a code that folows a pattern to represent a geo
     feature set.
@@ -1061,8 +1087,8 @@ class GeoFeatureSetCode(GeoFeatureSetCodeType):
 @dataclass(frozen=True)
 class GeoGridCode(GeoGridCodeType):
     """
-    GeoGridCode is a code the represents a geographic grid cell that belongs to a
-    specific grid definition.
+    GeoGridCode is a code the represents a geographic grid cell that
+    belongs to a specific grid definition.
     """
 
     class Meta:
@@ -1099,8 +1125,8 @@ class NamePersonalisation(NamePersonalisationType):
 @dataclass(frozen=True)
 class OrganisationUnit(OrganisationUnitType):
     """
-    OrganisationUnit describes a generic organisation, which serves not predefined
-    role in SDMX.
+    OrganisationUnit describes a generic organisation, which serves not
+    predefined role in SDMX.
     """
 
     class Meta:
@@ -1124,8 +1150,8 @@ class Ruleset(RulesetType):
 @dataclass(frozen=True)
 class Transformation(TransformationType):
     """
-    Transformation describes the details of a single transformation within a
-    transformation scheme.
+    Transformation describes the details of a single transformation within
+    a transformation scheme.
     """
 
     class Meta:
@@ -1137,8 +1163,8 @@ class Transformation(TransformationType):
 @dataclass(frozen=True)
 class UserDefinedOperator(UserDefinedOperatorType):
     """
-    UserDefinedOperator details a user defined operators within a user defined
-    operator scheme.
+    UserDefinedOperator details a user defined operators within a user
+    defined operator scheme.
     """
 
     class Meta:

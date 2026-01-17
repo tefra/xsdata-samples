@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 @dataclass
 class ExchangedCoupon1:
     """
-    The coupon numbers that were used in the exchange process to create the MCO.
+    The coupon numbers that were used in the exchange process to create the
+    MCO.
 
     Parameters
     ----------

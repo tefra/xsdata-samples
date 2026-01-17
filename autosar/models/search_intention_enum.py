@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SearchIntentionEnum:
     """
-    This meta-class allows for the definition of a dedicated search intention from
-    the application's point of view.
+    This meta-class allows for the definition of a dedicated search
+    intention from the application's point of view.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

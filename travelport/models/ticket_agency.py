@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class TicketAgency:
-    """This modifier will override the pseudo of the ticketing agency found in the
-    AAT (TKAG).
+    """
+    This modifier will override the pseudo of the ticketing agency found in
+    the AAT (TKAG).
 
     Used for all plating carrier validation.
 

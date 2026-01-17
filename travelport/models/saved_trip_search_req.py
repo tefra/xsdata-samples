@@ -26,7 +26,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class SavedTripSearchReq(BaseReq1):
     """
-    Request to retrieve a summary information for reservations under a SavedTrip.
+    Request to retrieve a summary information for reservations under a
+    SavedTrip.
     """
 
     class Meta:

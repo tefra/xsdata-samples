@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class UniversalRecordImportRsp(BaseRsp1):
     """
-    Return the new Universal Record that was created from an external reservation.
+    Return the new Universal Record that was created from an external
+    reservation.
     """
 
     class Meta:

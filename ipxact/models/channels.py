@@ -12,7 +12,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class Channels:
     """
-    Lists all channel connections between mirror interfaces of this component.
+    Lists all channel connections between mirror interfaces of this
+    component.
 
     :ivar channel: Defines a set of mirrored interfaces of this
         component that are connected to one another.

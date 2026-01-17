@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class ValidityStatusEnum(Enum):
     """
-    Values of validity status that can be assigned to a described event, action or
-    item.
+    Values of validity status that can be assigned to a described event,
+    action or item.
 
     :cvar ACTIVE: The described event, action or item is currently
         active regardless of the definition of the validity time

@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UserDefinedTransformationProps:
     """
-    The class UserDefinedTransformationProps specifies  specific configuration
-    properties of a user defined serializer.
+    The class UserDefinedTransformationProps specifies specific
+    configuration properties of a user defined serializer.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

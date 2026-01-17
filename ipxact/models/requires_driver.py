@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class RequiresDriver:
-    """Specifies if a port requires a driver.
+    """
+    Specifies if a port requires a driver.
 
     Default is false. The attribute driverType can further qualify what
     type of driver is required. Undefined behaviour if direction is not
-    input or inout. Driver type any indicates that any unspecified type
-    of driver must be connected
+    input or inout. Driver type any indicates that any unspecified type of
+    driver must be connected.
 
     :ivar value:
     :ivar driver_type: Defines the type of driver that is required. The

@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 class DataType(Enum):
     """
-    DataTypeType provides an enumerated list of the types of data formats allowed
-    as the for the representation of an object.
+    DataTypeType provides an enumerated list of the types of data formats
+    allowed as the for the representation of an object.
 
     :cvar STRING: A string datatype corresponding to W3C XML Schema's
         xs:string datatype.

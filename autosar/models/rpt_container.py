@@ -25,15 +25,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RptContainer:
-    """This meta class defines a byPassPoint and the relation to a rptHook.
+    """
+    This meta class defines a byPassPoint and the relation to a rptHook.
 
-    Additionally it may contain further rptContainers if the byPassPoint
-    is not atomic. For example a byPassPoint refereing to a
-    RunnableEntity may contain rptContainers referring to the data
-    access points of the RunnableEntity. The RptContainer structure on
-    M1 shall follow the M1 structure of the Software Component
-    Descriptions. The category attribute denotes which level of the
-    Software Component Description is annotated.
+    Additionally it may contain further rptContainers if the byPassPoint is
+    not atomic. For example a byPassPoint refereing to a RunnableEntity may
+    contain rptContainers referring to the data access points of the
+    RunnableEntity. The RptContainer structure on M1 shall follow the M1
+    structure of the Software Component Descriptions. The category
+    attribute denotes which level of the Software Component Description is
+    annotated.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

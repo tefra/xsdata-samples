@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class BaseGborelatedType(BaseReferenceComponentType):
     """
     <description xmlns="">The base type for the business object related
-    components.</description>
+    components.</description>.
     """
 
     class Meta:

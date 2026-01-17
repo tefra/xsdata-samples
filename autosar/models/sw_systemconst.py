@@ -19,13 +19,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwSystemconst:
-    """This element defines a system constant which serves an input to select a
-    particular variation point.
+    """
+    This element defines a system constant which serves an input to select
+    a particular variation point.
 
     In particular a system constant serves as an operand of the binding
     function (swSyscond) in a Variation point. Note that the binding
-    process can only happen  if a value was assigned to to the
-    referenced system constants.
+    process can only happen if a value was assigned to to the referenced
+    system constants.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

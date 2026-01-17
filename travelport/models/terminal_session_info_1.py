@@ -7,10 +7,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class TerminalSessionInfo1:
-    """Travelport use only.
+    """
+    Travelport use only.
 
     This element contains CDATA information representing existing GDS
-    session data or ACH credentials information of the terminal user
+    session data or ACH credentials information of the terminal user.
     """
 
     class Meta:

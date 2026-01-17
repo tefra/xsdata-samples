@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PointByCoordinates:
     """
-    A single point defined only by a coordinate set with an optional bearing
-    direction.
+    A single point defined only by a coordinate set with an optional
+    bearing direction.
 
     :ivar bearing: A bearing at the point measured in degrees (0 - 359).
         Unless otherwise specified the reference direction corresponding

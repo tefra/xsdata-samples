@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IdsmSignatureSupportCp:
     """
-    This meta-class defines, for the Classic Platform, the cryptographic algorithm
-    and key to be used by the IdsM instance for providing signature information in
-    QSEv messages.
+    This meta-class defines, for the Classic Platform, the cryptographic
+    algorithm and key to be used by the IdsM instance for providing
+    signature information in QSEv messages.
 
     :ivar authentication_ref: This reference dennotes the cryptographic
         primitives for providing authentication information in QSEv

@@ -9,7 +9,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class AttributeRepresentationType(RepresentationType):
-    """AttributeRepresentationType defines the representation for a data attribute.
+    """
+    AttributeRepresentationType defines the representation for a data
+    attribute.
 
     A data attribute can be text (including XHTML and multi-lingual
     values), a simple value, or an enumerated value.

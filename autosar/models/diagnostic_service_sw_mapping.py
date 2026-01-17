@@ -41,11 +41,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticServiceSwMapping:
-    """This represents the ability to define a mapping of a diagnostic service to a
-    software-component or a basic-software module.
+    """
+    This represents the ability to define a mapping of a diagnostic service
+    to a software-component or a basic-software module.
 
-    If the former is used then this kind of service mapping is
-    applicable for the usage of ClientServerInterfaces.
+    If the former is used then this kind of service mapping is applicable
+    for the usage of ClientServerInterfaces.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

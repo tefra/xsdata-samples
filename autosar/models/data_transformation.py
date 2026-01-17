@@ -24,7 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DataTransformation:
-    """A DataTransformation represents a transformer chain.
+    """
+    A DataTransformation represents a transformer chain.
 
     It is an ordered list of transformers.
 

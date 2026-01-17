@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 @dataclass(frozen=True)
 class DataSourceType:
-    """DataSourceType specifies the properties of a data or metadata source.
+    """
+    DataSourceType specifies the properties of a data or metadata source.
 
-    Either a simple data source, a queryable data source, or both must
-    be specified.
+    Either a simple data source, a queryable data source, or both must be
+    specified.
     """
 
     simple_data_source_or_queryable_data_source: tuple[

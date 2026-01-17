@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AlternateLocationDistanceList:
     """
-    Provides the Distance Information between Original Search Airports or City to
-    Alternate Search Airports.
+    Provides the Distance Information between Original Search Airports or
+    City to Alternate Search Airports.
     """
 
     class Meta:

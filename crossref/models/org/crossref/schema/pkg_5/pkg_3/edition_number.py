@@ -5,11 +5,12 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class EditionNumber:
-    """The edition number of a book.
+    """
+    The edition number of a book. edition_number should include only a
+    number and not additional text such as "edition".
 
-    edition_number should include only a number and not additional text
-    such as "edition". For example, you should submit "3", not "third
-    edition" or "3rd edition". Roman numerals are acceptable.
+    For example, you should submit "3", not "third edition" or "3rd
+    edition". Roman numerals are acceptable.
     """
 
     class Meta:

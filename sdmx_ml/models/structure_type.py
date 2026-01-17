@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 @dataclass(frozen=True)
 class StructureType:
-    """StructureType defines the contents of a structure message.
+    """
+    StructureType defines the contents of a structure message.
 
-    The payload is optional since this message may be returned from a
-    web service with only information in the footer.
+    The payload is optional since this message may be returned from a web
+    service with only information in the footer.
     """
 
     header: Optional[StructureHeaderType] = field(

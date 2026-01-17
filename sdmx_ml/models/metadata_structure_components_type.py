@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class MetadataStructureComponentsType(MetadataStructureComponentsBaseType):
     """
-    MetadataStructureComponentsType describes the structure of the grouping of the
-    sets of the components that make up the metadata structure definition.
+    MetadataStructureComponentsType describes the structure of the grouping
+    of the sets of the components that make up the metadata structure
+    definition.
     """
 
     metadata_attribute_list: Optional[MetadataAttributeList] = field(

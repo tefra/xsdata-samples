@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingTable:
     """
-    A collection of parking records, which can be parking sites or groups of
-    parking sites.
+    A collection of parking records, which can be parking sites or groups
+    of parking sites.
 
     :ivar parking_table_name: The name of the parking table.
     :ivar parking_table_version_time: The date/time that this version of

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class FixedValueMapType(AnnotableType):
     """
-    FixedValueMapType defines the structure for providing a fixed value for a
-    source or target component.
+    FixedValueMapType defines the structure for providing a fixed value for
+    a source or target component.
 
     :ivar source_or_target:
     :ivar value: The fixed value for the component.

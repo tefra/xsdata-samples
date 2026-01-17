@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ShowResourceTypeEnum:
     """
-    This enumerator specifies if the type (e.g. derived from the class) of the
-    reference target shall be rendered with the xref.
+    This enumerator specifies if the type (e.g. derived from the class) of
+    the reference target shall be rendered with the xref.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -7,9 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 @dataclass
 class Mcoremark5:
-    """Information related to fare construction, free form text etc.
-
-    of the MCO
+    """
+    Information related to fare construction, free form text etc. of the
+    MCO.
 
     Parameters
     ----------

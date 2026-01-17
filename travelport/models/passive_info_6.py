@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 @dataclass
 class PassiveInfo6:
     """
-    Used by CreateReservationReq for passing in elements normally found post-
-    booking.
+    Used by CreateReservationReq for passing in elements normally found
+    post-booking.
     """
 
     class Meta:

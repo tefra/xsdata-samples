@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CIdentifierWithIndex:
     """
-    This datatype represents a string, that follows the rules of C-identifiers with
-    an index.
+    This datatype represents a string, that follows the rules of
+    C-identifiers with an index.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

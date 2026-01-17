@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class TransitionType(TransitionBaseType):
     """
-    TransitionType describes the details of a transition, which is an expression in
-    a textual or formalised way of the transformation of data between two specific
-    operations performed on the data.
+    TransitionType describes the details of a transition, which is an
+    expression in a textual or formalised way of the transformation of data
+    between two specific operations performed on the data.
 
     :ivar target_step: TargetStep references a process step within the
         process that should be transitioned to, should the conditions

@@ -4,7 +4,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class ParkingSiteOvercrowdingStatusEnum(Enum):
-    """The overcrowding status of the parking site.
+    """
+    The overcrowding status of the parking site.
 
     Choose between two levels or simply (no) overcrowding.
 

@@ -18,8 +18,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagEventDebounceTimeBased:
-    """This meta-class represents the ability to indicate that the time-based pre-
-    debounce algorithm shall be used by the Dem for this diagnostic monitor.
+    """
+    This meta-class represents the ability to indicate that the time-based
+    pre-debounce algorithm shall be used by the Dem for this diagnostic
+    monitor.
 
     This is related to set the EcuC choice container
     DemDebounceAlgorithmClass to DemDebounceTimeBase.

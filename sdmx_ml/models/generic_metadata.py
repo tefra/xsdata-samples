@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 @dataclass(frozen=True)
 class GenericMetadata(GenericMetadataType):
     """
-    GenericMetadata contains reported metadata in a format which supports any
-    metadata structure definition.
+    GenericMetadata contains reported metadata in a format which supports
+    any metadata structure definition.
     """
 
     class Meta:

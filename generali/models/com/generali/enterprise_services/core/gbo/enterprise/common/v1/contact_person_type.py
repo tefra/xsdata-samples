@@ -19,7 +19,7 @@ __NAMESPACE__ = (
 @dataclass
 class ContactPersonType(BaseIdentifiedComponentType):
     """
-    <description xmlns=""/>
+    <description xmlns=""/>.
 
     :ivar individual: <description xmlns="">The details of the
         individual who is the contact.</description>

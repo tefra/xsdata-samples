@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ItemLabelPosEnum:
     """
-    This enumerator specifies, how the label of a labeled list shall be rendered.
+    This enumerator specifies, how the label of a labeled list shall be
+    rendered.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

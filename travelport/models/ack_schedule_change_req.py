@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class AckScheduleChangeReq(BaseReq1):
     """
-    Request to acknowledge you have received the schedule change notification.
+    Request to acknowledge you have received the schedule change
+    notification.
     """
 
     class Meta:

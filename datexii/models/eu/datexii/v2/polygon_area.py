@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PolygonArea:
     """
-    Defines points for a closed polygon-shape describing the area.
+    defines points for a closed polygon-shape describing the area.
 
     :ivar section_name: Name of the polygon area. Especially useful when
         the area consists of more than one polygon.

@@ -10,13 +10,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EthernetPriorityRegeneration:
-    """Defines a priority regeneration where the ingressPriority is replaced by
-    regeneratedPriority.
+    """
+    Defines a priority regeneration where the ingressPriority is replaced
+    by regeneratedPriority.
 
     The ethernetPriorityRegeneration is optional in case no priority
-    regeneration shall be performed. In case a
-    ethernetPriorityRegeneration is defined it shall have 8 mappings,
-    one for each priority.
+    regeneration shall be performed. In case a ethernetPriorityRegeneration
+    is defined it shall have 8 mappings, one for each priority.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

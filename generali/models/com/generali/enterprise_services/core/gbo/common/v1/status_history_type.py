@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class StatusHistoryType:
-    """<description xmlns="">A history of the lifecycle state transistions of a
-    business object.
+    """
+    <description xmlns="">A history of the lifecycle state transistions of
+    a business object.
 
-    Each transition records the date and time and should record the
-    target lifecycle status.</description>
+    Each transition records the date and time and should record the target
+    lifecycle status.</description>.
     """
 
     state_transition: list[StatusHistoryTypeStateTransition] = field(

@@ -48,11 +48,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucChoiceContainerDef:
-    """Used to define configuration containers that provide a choice between
+    """
+    Used to define configuration containers that provide a choice between
     several EcucParamConfContainerDef.
 
-    But in the actual ECU Configuration Values only one instance from
-    the choice list will be present.
+    But in the actual ECU Configuration Values only one instance from the
+    choice list will be present.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -464,8 +465,8 @@ class EcucChoiceContainerDef:
 @dataclass
 class EcucParamConfContainerDef:
     """
-    Used to define configuration containers that can hierarchically contain other
-    containers and/or parameter definitions.
+    Used to define configuration containers that can hierarchically contain
+    other containers and/or parameter definitions.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

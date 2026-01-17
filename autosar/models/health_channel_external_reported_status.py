@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HealthChannelExternalReportedStatus:
     """
-    This element defines a health channel representing the status of an external
-    health channel.
+    This element defines a health channel representing the status of an
+    external health channel.
 
     :ivar status_id: Defines the numeric value which is used to identify
         the reporting of this HealthChannelExternalReportedStatus to the

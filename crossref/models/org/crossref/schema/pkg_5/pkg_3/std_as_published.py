@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class StdAsPublished(StdDesignatorT):
     """
-    Designator or other primary identifier for the standard being deposited.
+    Designator or other primary identifier for the standard being
+    deposited.
     """
 
     class Meta:

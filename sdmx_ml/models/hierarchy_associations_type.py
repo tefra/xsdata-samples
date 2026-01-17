@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class HierarchyAssociationsType:
-    """HiearchyAssociationsType describes the structure of the hierarchy
+    """
+    HiearchyAssociationsType describes the structure of the hierarchy
     assoications container.
 
-    It contains one or more hiearchy associations, which can be
-    explicitly detailed or referenced from an external structure
-    document or registry service.
+    It contains one or more hiearchy associations, which can be explicitly
+    detailed or referenced from an external structure document or registry
+    service.
 
     :ivar hierarchy_association: HierarchyAssociation provides the
         details of a hiearchy assoication, which associates a hiearchy

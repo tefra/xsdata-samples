@@ -4,8 +4,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
 class SimpleCodeDataType(Enum):
-    """SimpleCodeDataType restricts SimpleDataType to specify the allowable data
-    types for a simple code.
+    """
+    SimpleCodeDataType restricts SimpleDataType to specify the allowable
+    data types for a simple code.
 
     The possible values are simply Alpha, AlphaNumeric, or Numeric.
 

@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class TypeDateOptions2:
-    """Specify a date using different combinations of Day/Month/Year.
+    """
+    Specify a date using different combinations of Day/Month/Year.
 
     All are optional attributes, although at least one is required.
     """

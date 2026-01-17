@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class DataKeySetType:
     """
-    DataKeySetType defines a collection of full or partial data keys (dimension
-    values).
+    DataKeySetType defines a collection of full or partial data keys
+    (dimension values).
 
     :ivar key: Key contains a set of dimension values which identify a
         full set of data.

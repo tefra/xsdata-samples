@@ -12,10 +12,11 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ElectricCharging:
-    """Additional information for the equipment 'electricChargingStation'.
+    """
+    Additional information for the equipment 'electricChargingStation'.
 
-    This component refers to the number of charging stations specified
-    in the attribute 'numberOfEquipmentOrServiceFacilities'.
+    This component refers to the number of charging stations specified in
+    the attribute 'numberOfEquipmentOrServiceFacilities'.
 
     :ivar charging_station_usage_type: Usage type of the electric
         charging station(s).

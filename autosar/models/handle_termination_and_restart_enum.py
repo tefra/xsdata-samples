@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HandleTerminationAndRestartEnum:
     """
-    Controls the behavior of an AtomicSwComponentType with respect to stop and
-    restart.
+    Controls the behavior of an AtomicSwComponentType with respect to stop
+    and restart.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

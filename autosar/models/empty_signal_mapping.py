@@ -9,13 +9,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EmptySignalMapping:
-    """If no actual data is configured for a client server communication the
+    """
+    If no actual data is configured for a client server communication the
     element EmptySignalMapping shall be used.
 
     An EmptySignalMapping shall only reference a SystemSignal that is
-    referenced by an ISignal with length equal to zero. In this case
-    there shall be an "update-bit" configured. The EmptySignal can be
-    mapped to the response group or to request group.
+    referenced by an ISignal with length equal to zero. In this case there
+    shall be an "update-bit" configured. The EmptySignal can be mapped to
+    the response group or to request group.
 
     :ivar system_signal_ref: Reference to a SystemSignal with
         "signalLength" = 0 and an UpdateBit.

@@ -18,9 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SocketConnectionBundle:
     """
-    This elements groups SocketConnections, i.e. specifies socket connections
-    belonging to the bundle and describes properties which are common for all
-    socket connections in the bundle.
+    This elements groups SocketConnections, i.e. specifies socket
+    connections belonging to the bundle and describes properties which are
+    common for all socket connections in the bundle.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class WireTypeDef:
     """
-    Definition of a single wire type defintion that can relate to multiple views.
+    Definition of a single wire type defintion that can relate to multiple
+    views.
 
     :ivar type_name: The name of the logic type. Examples could be
         std_logic, std_ulogic, std_logic_vector, sc_logic, ...

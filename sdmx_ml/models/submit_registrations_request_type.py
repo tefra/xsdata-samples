@@ -8,8 +8,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 @dataclass(frozen=True)
 class SubmitRegistrationsRequestType:
     """
-    SubmitRegistrationsRequestType defines the payload of a request message used to
-    submit addtions, updates, or deletions of data/metadata set registrations.
+    SubmitRegistrationsRequestType defines the payload of a request message
+    used to submit addtions, updates, or deletions of data/metadata set
+    registrations.
 
     :ivar registration_request: RegistrationRequest provides the details
         of a requested registration and the action to take on it. A

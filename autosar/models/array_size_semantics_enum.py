@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ArraySizeSemanticsEnum:
     """
-    This type controls how the information about the number of elements in an
-    ApplicationArrayDataType is to be interpreted.
+    This type controls how the information about the number of elements in
+    an ApplicationArrayDataType is to be interpreted.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

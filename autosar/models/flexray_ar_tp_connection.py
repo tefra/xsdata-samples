@@ -14,8 +14,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlexrayArTpConnection:
-    """A connection within a channel identifies the sender and the receiver of this
-    particular communication.
+    """
+    A connection within a channel identifies the sender and the receiver of
+    this particular communication.
 
     The FlexRay Autosar Tp module routes a Pdu through this connection.
 

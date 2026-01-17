@@ -8,12 +8,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class OrganisationUnitSchemeType(OrganisationSchemeType):
-    """OrganisationUnitSchemeType defines a type of organisation scheme which
+    """
+    OrganisationUnitSchemeType defines a type of organisation scheme which
     simply defines organisations and there parent child relationships.
 
-    Organisations in this scheme are assigned no particular role, and
-    may in fact exist within the other type of organisation schemes as
-    well.
+    Organisations in this scheme are assigned no particular role, and may
+    in fact exist within the other type of organisation schemes as well.
     """
 
     choice_2: Any = field(

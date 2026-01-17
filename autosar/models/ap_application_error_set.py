@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ApApplicationErrorSet:
-    """This meta-class acts as a reference target that represents an entire
+    """
+    This meta-class acts as a reference target that represents an entire
     collection of APApplicationErrors.
 
     This takes the burden from ClientServerOperations that reference a

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 @dataclass(frozen=True)
 class GenericMetadataStructureType(MetadataStructureTypeAbstract):
     """
-    GenericMetadataStructureType defines the structural information for a generic
-    metadata message.
+    GenericMetadataStructureType defines the structural information for a
+    generic metadata message.
     """
 
     namespace: Any = field(

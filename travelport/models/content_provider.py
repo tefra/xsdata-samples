@@ -15,9 +15,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class ContentProvider:
     """
-    A content provider uniquely identified with its provider code and supplier
-    code.If a given provider provides content for multiple suppliers, multiple
-    elements will be returned for that provider.
+    A content provider uniquely identified with its provider code and
+    supplier code.If a given provider provides content for multiple
+    suppliers, multiple elements will be returned for that provider.
 
     Parameters
     ----------

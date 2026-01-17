@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompuScales:
     """
-    This meta-class represents the ability to stepwise express a computation
-    method.
+    This meta-class represents the ability to stepwise express a
+    computation method.
 
     :ivar compu_scales: This represents one scale within the compu
         method. Note that it contains a Variationpoint in order to

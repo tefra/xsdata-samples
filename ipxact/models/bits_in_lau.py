@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class BitsInLau(UnsignedPositiveLongintExpression):
-    """The number of bits in the least addressable unit.
+    """
+    The number of bits in the least addressable unit.
 
     The default is byte addressable (8 bits).
     """

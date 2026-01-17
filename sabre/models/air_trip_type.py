@@ -6,7 +6,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
 class AirTripType(Enum):
-    """Identifies the trip type - one way, return, circle trip, open jaw."""
+    """
+    Identifies the trip type - one way, return, circle trip, open jaw.
+    """
 
     ONE_WAY = "OneWay"
     RETURN = "Return"

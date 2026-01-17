@@ -11,24 +11,24 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class MetadataAttributeType(MetadataAttributeBaseType):
-    """MetadataAttributeType describes the structure of a metadata attribute.
+    """
+    MetadataAttributeType describes the structure of a metadata attribute.
 
     The metadata attribute takes its semantic, and in some cases it
-    representation, from its concept identity. A metadata attribute may
-    be coded (via the local representation), uncoded (via the text
-    format), or take no value. In addition to this value, the metadata
-    attribute may also specify subordinate metadata attributes. If a
-    metadata attribute only serves the purpose of containing subordinate
-    metadata attributes, then the isPresentational attribute should be
-    used. Otherwise, it is assumed to also take a value. If the metadata
-    attribute does take a value, and a representation is not defined, it
-    will be inherited from the concept it takes its semantic from. The
-    optional id on the metadata attribute uniquely identifies it within
-    the metadata structured definition. If this id is not supplied, its
-    value is assumed to be that of the concept referenced from the
-    concept identity. Note that a metadata attribute (as identified by
-    the id attribute) definition  must be unique across the entire
-    metadata structure definition.
+    representation, from its concept identity. A metadata attribute may be
+    coded (via the local representation), uncoded (via the text format), or
+    take no value. In addition to this value, the metadata attribute may
+    also specify subordinate metadata attributes. If a metadata attribute
+    only serves the purpose of containing subordinate metadata attributes,
+    then the isPresentational attribute should be used. Otherwise, it is
+    assumed to also take a value. If the metadata attribute does take a
+    value, and a representation is not defined, it will be inherited from
+    the concept it takes its semantic from. The optional id on the metadata
+    attribute uniquely identifies it within the metadata structured
+    definition. If this id is not supplied, its value is assumed to be that
+    of the concept referenced from the concept identity. Note that a
+    metadata attribute (as identified by the id attribute) definition must
+    be unique across the entire metadata structure definition.
 
     :ivar metadata_attribute:
     :ivar min_occurs: The minOccurs attribute indicates the minimum
@@ -82,9 +82,9 @@ class MetadataAttributeType(MetadataAttributeBaseType):
 @dataclass(frozen=True)
 class MetadataAttribute(MetadataAttributeType):
     """
-    MetadataAttribute defines the a metadata attribute, which is the value of an
-    attribute, such as the instance of a coded or uncoded attribute in a metadata
-    structure definition.
+    MetadataAttribute defines the a metadata attribute, which is the value
+    of an attribute, such as the instance of a coded or uncoded attribute
+    in a metadata structure definition.
     """
 
     class Meta:

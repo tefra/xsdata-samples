@@ -16,7 +16,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 @dataclass
 class VehicleLocationReq(BaseReq1):
     """
-    Used to request a list of vendors for a location (airport or city code).
+    Used to request a list of vendors for a location (airport or city
+    code).
 
     Parameters
     ----------

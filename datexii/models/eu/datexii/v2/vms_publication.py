@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsPublication(PayloadPublication):
     """
-    A publication containing the current status and settings of one or more VMS
-    units, each unit controlling one or more individual variable message signs.
+    A publication containing the current status and settings of one or more
+    VMS units, each unit controlling one or more individual variable
+    message signs.
     """
 
     header_information: Optional[HeaderInformation] = field(

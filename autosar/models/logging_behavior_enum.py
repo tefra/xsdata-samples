@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class LoggingBehaviorEnum:
     """
-    This enumeration provides options for controlling of whether an Executable uses
-    logging.
+    This enumeration provides options for controlling of whether an
+    Executable uses logging.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

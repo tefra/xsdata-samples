@@ -13,8 +13,8 @@ __NAMESPACE__ = (
 @dataclass
 class BaseSystemTraceabilityType(BaseHeaderType):
     """
-    <description xmlns="">The base type for the source and destination system
-    information in the header.</description>
+    <description xmlns="">The base type for the source and destination
+    system information in the header.</description>.
 
     :ivar country_code: <description xmlns="">The ISO3166-2 country
         code.</description>

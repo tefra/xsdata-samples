@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileRetrieveTemplateReq(BaseReq5):
-    """Request to retrieve a profile template.
+    """
+    Request to retrieve a profile template.
 
     If version exists, the response will not return the template unless
     there is a mismatch.

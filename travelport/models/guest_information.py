@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 @dataclass
 class GuestInformation:
     """
-    The information like number of rooms ,number of adults,children to be provided
-    while booking the  hotel.
+    The information like number of rooms ,number of adults,children to be
+    provided while booking the hotel.
 
     Parameters
     ----------

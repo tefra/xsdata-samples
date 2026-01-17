@@ -8,6 +8,7 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class OrganisationSchemeMapType(ItemSchemeMapType):
     """
-    OrganisationSchemeMapType defines the structure of a map which identifies
-    relationships between organisations in different organisation schemes.
+    OrganisationSchemeMapType defines the structure of a map which
+    identifies relationships between organisations in different
+    organisation schemes.
     """

@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class FromVtlMappingType:
     """
-    FromVtlMappingType defines the mapping method and filter used when mapping from
-    VTL to SDMX.
+    FromVtlMappingType defines the mapping method and filter used when
+    mapping from VTL to SDMX.
 
     :ivar from_vtl_super_space: Identfies a super space of the mapped
         dataflow that the mapping applies to. This is a collection of

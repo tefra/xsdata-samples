@@ -20,13 +20,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Documentation:
-    """This meta-class represents the ability to handle a so called standalone
+    """
+    This meta-class represents the ability to handle a so called standalone
     documentation.
 
-    Standalone means, that such a documentation is not embedded in
-    another ARElement or identifiable object.  The standalone
-    documentation is an entity of its own which denotes its context by
-    reference to other objects and instances.
+    Standalone means, that such a documentation is not embedded in another
+    ARElement or identifiable object. The standalone documentation is an
+    entity of its own which denotes its context by reference to other
+    objects and instances.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

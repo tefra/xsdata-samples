@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 @dataclass
 class TravelComplianceData1:
     """
-    Travel Compliance and Preferred Supplier information of the traveler specific
-    to a segment.
+    Travel Compliance and Preferred Supplier information of the traveler
+    specific to a segment.
 
     Parameters
     ----------

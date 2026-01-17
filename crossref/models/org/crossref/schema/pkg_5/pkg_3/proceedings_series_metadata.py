@@ -34,8 +34,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ProceedingsSeriesMetadata:
     """
-    Container for all information that applies to a specific conference proceeding
-    that is part of a series.
+    Container for all information that applies to a specific conference
+    proceeding that is part of a series.
     """
 
     class Meta:

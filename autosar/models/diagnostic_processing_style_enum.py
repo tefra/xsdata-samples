@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticProcessingStyleEnum:
     """
-    This meta-class represents the ability to define the processing style of
-    diagnostic requests.
+    This meta-class represents the ability to define the processing style
+    of diagnostic requests.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

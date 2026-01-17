@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NPdu:
-    """This is a Pdu of the Transport Layer.
+    """
+    This is a Pdu of the Transport Layer.
 
     The main purpose of the TP Layer is to segment and reassemble IPdus.
 

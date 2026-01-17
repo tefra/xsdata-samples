@@ -42,8 +42,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ConsumedServiceInstance:
     """
-    Service instances that are consumed by the ECU that is connected via the
-    ApplicationEndpoint to a CommunicationConnector.
+    Service instances that are consumed by the ECU that is connected via
+    the ApplicationEndpoint to a CommunicationConnector.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

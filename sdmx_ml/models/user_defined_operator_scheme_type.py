@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class UserDefinedOperatorSchemeType(UserDefinedOperatorSchemeBaseType):
     """
-    UserDefinedOperatorSchemeType defines a collection of user defined operators
-    that are used in transformations.
+    UserDefinedOperatorSchemeType defines a collection of user defined
+    operators that are used in transformations.
 
     :ivar vtl_mapping_scheme: References a VTL mapping scheme which
         defines aliases for given SDMX artefacts that are used in the

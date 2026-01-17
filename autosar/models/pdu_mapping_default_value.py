@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PduMappingDefaultValue:
     """
-    Default Value which will be distributed if no I-Pdu has been received since
-    last sending.
+    Default Value which will be distributed if no I-Pdu has been received
+    since last sending.
 
     :ivar default_value_elements: The default value consists of a number
         of elements. Each default value element is represented by the

@@ -5,8 +5,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 class BasicComponentDataType(Enum):
     """
-    BasicComponentDataType provides an enumerated list of the types of characters
-    allowed in the textType attribute for all non-target object components.
+    BasicComponentDataType provides an enumerated list of the types of
+    characters allowed in the textType attribute for all non-target object
+    components.
 
     :cvar STRING: A string datatype corresponding to W3C XML Schema's
         xs:string datatype.

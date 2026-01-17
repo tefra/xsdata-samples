@@ -8,8 +8,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class InputOutputType(AnnotableType):
-    """InputOutputType describes the structure of an input or output to a process
-    step.
+    """
+    InputOutputType describes the structure of an input or output to a
+    process step.
 
     It provides a reference to the object that is the input or output.
 

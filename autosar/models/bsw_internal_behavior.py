@@ -65,11 +65,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswInternalBehavior:
-    """Specifies the behavior of a BSW module or a BSW cluster w.r.t.
+    """
+    Specifies the behavior of a BSW module or a BSW cluster w.r.t. the code
+    entities visible by the BSW Scheduler.
 
-    the code entities visible by the BSW Scheduler. It is possible to
-    have several different BswInternalBehaviors referring to the same
-    BswModuleDescription.
+    It is possible to have several different BswInternalBehaviors referring
+    to the same BswModuleDescription.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

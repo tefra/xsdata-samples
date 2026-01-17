@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 @dataclass
 class HotelAlternateProperties:
     """
-    Alternate Properties returned by some Vendors if the requested property is not
-    available.
+    Alternate Properties returned by some Vendors if the requested property
+    is not available.
     """
 
     class Meta:

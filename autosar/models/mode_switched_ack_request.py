@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModeSwitchedAckRequest:
     """
-    Requests acknowledgements that a mode switch has been proceeded successfully.
+    Requests acknowledgements that a mode switch has been proceeded
+    successfully.
 
     :ivar timeout: Number of seconds before an error is reported or in
         case of allowed redundancy, the value is sent again.

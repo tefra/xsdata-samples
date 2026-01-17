@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompuGenericMath:
     """
-    This meta-class represents the ability to specify a generic formula expression.
+    This meta-class represents the ability to specify a generic formula
+    expression.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

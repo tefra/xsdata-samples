@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class AckScheduleChangeRsp(BaseRsp1):
     """
-    Return the updated air portion of the Universal Record when accepting the
-    Schedule Change.
+    Return the updated air portion of the Universal Record when accepting
+    the Schedule Change.
     """
 
     class Meta:

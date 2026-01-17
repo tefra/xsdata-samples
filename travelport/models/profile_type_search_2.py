@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class ProfileTypeSearch2:
     """
-    Specifies which type of profile to be searched on and includes modifiers for
-    each type.
+    Specifies which type of profile to be searched on and includes
+    modifiers for each type.
     """
 
     class Meta:

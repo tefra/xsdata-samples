@@ -36,8 +36,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ApplicationEndpoint:
-    """An application endpoint is the endpoint on an Ecu in terms of application
-    addressing (e.g. socket).
+    """
+    An application endpoint is the endpoint on an Ecu in terms of
+    application addressing (e.g. socket).
 
     The application endpoint represents e.g. the listen socket in
     client-server-based communication.

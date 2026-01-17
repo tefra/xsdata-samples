@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class HotelCommission:
-    """Indicates the commission during Hotel reservation.
+    """
+    Indicates the commission during Hotel reservation.
 
     Provider supoorted 1P.
     """

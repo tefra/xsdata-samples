@@ -24,9 +24,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEventToSecurityEventMapping:
     """
-    This meta-class represents the ability to map a security event that is defined
-    in the context of the Security Extract to a diagnostic event defined on the
-    context of the DiagnosticExtract.
+    This meta-class represents the ability to map a security event that is
+    defined in the context of the Security Extract to a diagnostic event
+    defined on the context of the DiagnosticExtract.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

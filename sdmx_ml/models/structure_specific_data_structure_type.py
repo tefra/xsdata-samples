@@ -11,16 +11,17 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class StructureSpecificDataStructureType(DataStructureTypeAbstract):
-    """StructureSpecificDataStructureType defines the structural information for a
-    structured data set.
+    """
+    StructureSpecificDataStructureType defines the structural information
+    for a structured data set.
 
-    In addition to referencing the data structure or dataflow which
-    defines the structure of the data, the namespace for the data
-    structure specific schema as well as which dimension is used at the
-    observation level must be provided. It is also necessary to state
-    whether the format uses explicit measures, although this is
-    technically only applicable is the dimension at the observation
-    level is the measure dimension or the flat data format is used.
+    In addition to referencing the data structure or dataflow which defines
+    the structure of the data, the namespace for the data structure
+    specific schema as well as which dimension is used at the observation
+    level must be provided. It is also necessary to state whether the
+    format uses explicit measures, although this is technically only
+    applicable is the dimension at the observation level is the measure
+    dimension or the flat data format is used.
     """
 
     namespace: Optional[str] = field(

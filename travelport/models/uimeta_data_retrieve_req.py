@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class UimetaDataRetrieveReq(BaseReq2):
     """
-    Service for Request to retrieve the settings by user in Profile Settings.
+    Service for Request to retrieve the settings by user in Profile
+    Settings.
 
     Parameters
     ----------

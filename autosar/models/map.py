@@ -8,10 +8,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Map:
-    """Image maps enable authors to specify regions of an image or object and
-    assign a specific action to each region (e.g., retrieve a document, run a
-    program, etc.) When the region is activated by the user, the action is
-    executed.
+    """
+    Image maps enable authors to specify regions of an image or object and
+    assign a specific action to each region (e.g., retrieve a document, run
+    a program, etc.) When the region is activated by the user, the action
+    is executed.
 
     The class follows the html approach and is intended to support
     interactive documents.

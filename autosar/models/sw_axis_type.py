@@ -19,13 +19,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwAxisType:
-    """This meta-class represents a specific axis calculation strategy.
+    """
+    This meta-class represents a specific axis calculation strategy.
 
-    No formal specification is given, due to the fact that it is
-    possible to use arbitrary algorithms for calculating axis-points.
-    Instead, the algorithm is described verbally but the parameters are
-    specified formally with respect to their names and constraints. As a
-    result, SwAxisType mainly reserves appropriate keywords.
+    No formal specification is given, due to the fact that it is possible
+    to use arbitrary algorithms for calculating axis-points. Instead, the
+    algorithm is described verbally but the parameters are specified
+    formally with respect to their names and constraints. As a result,
+    SwAxisType mainly reserves appropriate keywords.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

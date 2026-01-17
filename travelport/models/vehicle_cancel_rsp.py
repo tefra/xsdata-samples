@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 @dataclass
 class VehicleCancelRsp(BaseRsp1):
-    """Response to a VehicleCancelReq.
+    """
+    Response to a VehicleCancelReq.
 
     PNR returned reflects the requested modifications.
     """

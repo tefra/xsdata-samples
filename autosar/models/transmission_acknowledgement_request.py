@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TransmissionAcknowledgementRequest:
-    """Requests transmission acknowledgement that data has been sent successfully.
+    """
+    Requests transmission acknowledgement that data has been sent
+    successfully.
 
     Success/failure is reported via a SendPoint of a RunnableEntity.
 

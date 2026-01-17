@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
 class ValidatingCarrierPreferLevelType(Enum):
-    """Used to specify a preference level for ValidatingCarrier.
+    """
+    Used to specify a preference level for ValidatingCarrier.
 
     For adding new enums see PreferLevelType.
     """

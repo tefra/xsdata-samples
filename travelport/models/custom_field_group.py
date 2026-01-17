@@ -10,9 +10,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class CustomFieldGroup:
     """
-    Defines the structure of a new field group, which can be based on existing
-    fields and groups (referred to by Id) and/or new fields and groups (referred to
-    by FieldGroupRef or FieldRef and defined in FieldList or FieldGroupList).
+    Defines the structure of a new field group, which can be based on
+    existing fields and groups (referred to by Id) and/or new fields and
+    groups (referred to by FieldGroupRef or FieldRef and defined in
+    FieldList or FieldGroupList).
 
     Parameters
     ----------

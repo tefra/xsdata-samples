@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwcBswSynchronizedTrigger:
     """
-    Synchronizes a Trigger provided by a component via a port with a Trigger
-    provided by a BSW module or cluster.
+    Synchronizes a Trigger provided by a component via a port with a
+    Trigger provided by a BSW module or cluster.
 
     :ivar bsw_trigger_ref: The BSW Trigger.
     :ivar swc_trigger_iref: The SWC Trigger provided by a particular

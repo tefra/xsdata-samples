@@ -15,17 +15,18 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class StructureMapType(StructureMapBaseType):
-    """StructureMapType defines the structure for mapping components of one
+    """
+    StructureMapType defines the structure for mapping components of one
     structure to components of another structure.
 
-    A structure may be referenced directly meaning the map applies
-    wherever the structure is used, or it may be a reference via a
-    structure usage meaning the map only applies within the context of
-    that usage. Using the related structures, one can make
-    extrapolations between maps. For example, if key families, A, B, and
-    C, are all grouped in a related structures container, then a map
-    from data structure A to C and a map from data structure B to C
-    could be used to infer a relation between data structure A to C.
+    A structure may be referenced directly meaning the map applies wherever
+    the structure is used, or it may be a reference via a structure usage
+    meaning the map only applies within the context of that usage. Using
+    the related structures, one can make extrapolations between maps. For
+    example, if key families, A, B, and C, are all grouped in a related
+    structures container, then a map from data structure A to C and a map
+    from data structure B to C could be used to infer a relation between
+    data structure A to C.
 
     :ivar source: Source provides a reference to a structure (data or
         metadata) or a structure usage (dataflow or metadataflow) from

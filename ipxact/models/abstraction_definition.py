@@ -28,7 +28,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class AbstractionDefinition:
     """
-    Define the ports and other information of a particular abstraction of the bus.
+    Define the ports and other information of a particular abstraction of
+    the bus.
 
     :ivar vendor: Name of the vendor who supplies this file.
     :ivar library: Name of the logical library this element belongs to.

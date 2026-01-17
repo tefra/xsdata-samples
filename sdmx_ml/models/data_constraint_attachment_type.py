@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class DataConstraintAttachmentType:
     """
-    DataConstraintAttachmentType restricts the base ConstraintAttachmentType to
-    only allow artefacts related to data.
+    DataConstraintAttachmentType restricts the base
+    ConstraintAttachmentType to only allow artefacts related to data.
     """
 
     data_provider_or_simple_data_source_or_data_structure: tuple[

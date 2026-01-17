@@ -8,8 +8,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class RequestReferenceDataItem:
     """
-    Limits the responses to the requested subcategories for a specific Reference
-    Data Type, Currently supported only for @TypeCode="HotelAmenities".
+    Limits the responses to the requested subcategories for a specific
+    Reference Data Type, Currently supported only for
+    @TypeCode="HotelAmenities".
 
     Parameters
     ----------

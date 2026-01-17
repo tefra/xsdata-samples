@@ -10,9 +10,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class Emdcommission:
-    """Commission information to be used for EMD issuance.
+    """
+    Commission information to be used for EMD issuance.
 
-    Supported providers are 1V/1G/1P
+    Supported providers are 1V/1G/1P.
 
     Parameters
     ----------

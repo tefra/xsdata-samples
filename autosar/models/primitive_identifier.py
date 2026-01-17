@@ -6,11 +6,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PrimitiveIdentifier:
-    """This meta-class has the ability to contain a string.
+    """
+    This meta-class has the ability to contain a string.
 
     Please note that this meta-class has only been introduced to fix an
-    issue with the generation of attributes on primitives in context
-    with [TR_APRXML_00024].
+    issue with the generation of attributes on primitives in context with
+    [TR_APRXML_00024].
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

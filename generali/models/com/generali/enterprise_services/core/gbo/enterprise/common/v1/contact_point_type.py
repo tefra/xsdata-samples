@@ -21,10 +21,11 @@ __NAMESPACE__ = (
 
 @dataclass
 class ContactPointType(BaseSimpleComponentType):
-    """<description xmlns="">A type defining a contact point.
+    """
+    <description xmlns="">A type defining a contact point.
 
     This is the address at which someone or something may be
-    contacted.</description>
+    contacted.</description>.
 
     :ivar email: <description xmlns="">The contact point is an Email
         Address.</description>

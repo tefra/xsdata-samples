@@ -10,7 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DefaultValueApplicationStrategyEnum:
-    """Enumeration that describes how to handle AUTOSAR defined default values.
+    """
+    Enumeration that describes how to handle AUTOSAR defined default
+    values.
 
     If the strategy requires application of the AUTOSAR defined default
     value, then the value shall be added before further validation or

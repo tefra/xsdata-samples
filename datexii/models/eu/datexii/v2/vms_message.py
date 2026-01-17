@@ -22,11 +22,13 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class VmsMessage:
-    """A message displayed on a VMS which may comprise one or more sequentially
-    displayed text pages and/or pictograms with supplementary details.
+    """
+    A message displayed on a VMS which may comprise one or more
+    sequentially displayed text pages and/or pictograms with supplementary
+    details.
 
-    When in a sequence of displayed messages sequencing of text pages
-    and pictograms within a message are prohibited.
+    When in a sequence of displayed messages sequencing of text pages and
+    pictograms within a message are prohibited.
 
     :ivar associated_management_or_diversion_plan: The identification of
         the traffic management plan or diversion plan with which the

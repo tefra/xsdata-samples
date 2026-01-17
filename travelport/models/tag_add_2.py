@@ -9,9 +9,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class TagAdd2:
-    """Add a tag to the specified element of the profile.
+    """
+    Add a tag to the specified element of the profile.
 
-    There are two methods to add tag to profile data - One is through this TagAdd element and another is through TagRef element.
+    There are two methods to add tag to profile data - One is through this
+    TagAdd element and another is through TagRef element.
 
     Parameters
     ----------

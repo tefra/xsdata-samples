@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcuInstanceProps:
     """
-    This element describes additional properties of the EcuInstance that may vary
-    in different Variants of the Ecu.
+    This element describes additional properties of the EcuInstance that
+    may vary in different Variants of the Ecu.
 
     :ivar diagnostic_address: An ECU specific ID for responses of
         diagnostic routines.

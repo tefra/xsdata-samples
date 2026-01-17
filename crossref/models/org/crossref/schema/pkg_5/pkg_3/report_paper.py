@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ReportPaper:
     """
-    Report-paper is the top level element for deposit of metadata about one or more
-    reports or working papers.
+    report-paper is the top level element for deposit of metadata about one
+    or more reports or working papers.
     """
 
     class Meta:

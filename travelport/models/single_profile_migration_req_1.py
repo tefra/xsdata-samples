@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class SingleProfileMigrationReq1(BaseReq2):
     """
-    Request to initiate the migration process of a single Account or Traveler
-    profile from host to uProfile.
+    Request to initiate the migration process of a single Account or
+    Traveler profile from host to uProfile.
 
     Parameters
     ----------

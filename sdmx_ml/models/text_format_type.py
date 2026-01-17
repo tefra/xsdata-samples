@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class TextFormatType:
     """
-    TextFormatType defines the information for describing a full range of text
-    formats and may place restrictions on the values of the other attributes,
-    referred to as "facets".
+    TextFormatType defines the information for describing a full range of
+    text formats and may place restrictions on the values of the other
+    attributes, referred to as "facets".
 
     :ivar sentinel_value: SentinelValue defines a value that has a
         special meaning within the text format representation of a

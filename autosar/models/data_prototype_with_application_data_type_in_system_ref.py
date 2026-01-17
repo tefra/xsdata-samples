@@ -12,9 +12,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataPrototypeWithApplicationDataTypeInSystemRef:
     """
-    This class represents a DataPrototype that is typed by an ApplicationDataType
-    and may be aggregated within a composite application data type (record or
-    array).
+    This class represents a DataPrototype that is typed by an
+    ApplicationDataType and may be aggregated within a composite
+    application data type (record or array).
 
     :ivar tag_id: This attribute represents the ability to specify a
         tag-id for the serialization of a specific DataPrototype in the

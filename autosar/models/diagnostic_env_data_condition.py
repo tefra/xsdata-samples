@@ -30,9 +30,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticEnvDataCondition:
-    """A DiagnosticEnvDataCondition is an atomic condition that compares the
-    current value of the referenced DiagnosticDataElement with a constant value
-    defined by the ValueSpecification.
+    """
+    A DiagnosticEnvDataCondition is an atomic condition that compares the
+    current value of the referenced DiagnosticDataElement with a constant
+    value defined by the ValueSpecification.
 
     All compareTypes are supported.
 

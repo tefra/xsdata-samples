@@ -9,11 +9,11 @@ from travelport.models.profile_child_search_req_hierarchy_type_1 import (
 from travelport.models.profile_search_modifiers_1 import (
     ProfileSearchModifiers1,
 )
-from travelport.models.provisioning_code_profile_type_4 import (
-    ProvisioningCodeProfileType4,
+from travelport.models.provisioning_code_profile_type_1 import (
+    ProvisioningCodeProfileType1,
 )
-from travelport.models.unique_profile_id_profile_type_4 import (
-    UniqueProfileIdProfileType4,
+from travelport.models.unique_profile_id_profile_type_1 import (
+    UniqueProfileIdProfileType1,
 )
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class ProfileChildSearchReq1(BaseReq2):
     """
-    Request to allow a user to retrieve the immediate children of a given profile.
+    Request to allow a user to retrieve the immediate children of a given
+    profile.
 
     Parameters
     ----------
@@ -135,7 +136,7 @@ class ProfileChildSearchReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType4 = field(
+        profile_type: None | ProvisioningCodeProfileType1 = field(
             default=None,
             metadata={
                 "name": "ProfileType",
@@ -168,7 +169,7 @@ class ProfileChildSearchReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType4 = field(
+        profile_type: None | UniqueProfileIdProfileType1 = field(
             default=None,
             metadata={
                 "name": "ProfileType",

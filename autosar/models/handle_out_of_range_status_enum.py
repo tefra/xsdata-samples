@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HandleOutOfRangeStatusEnum:
     """
-    This enumeration defines how the RTE handles values that are out of range.
+    This enumeration defines how the RTE handles values that are out of
+    range.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -19,9 +19,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ExternalTriggeringPointIdent:
     """
-    This meta-class has been created to introduce the ability to become referenced
-    into the meta-class ExternalTriggeringPoint without breaking backwards
-    compatibility.
+    This meta-class has been created to introduce the ability to become
+    referenced into the meta-class ExternalTriggeringPoint without breaking
+    backwards compatibility.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class FareRuleLookup:
     """
-    Parameters to use for a fare rule lookup that is not associated with an Air
-    Reservation Locator Code.
+    Parameters to use for a fare rule lookup that is not associated with an
+    Air Reservation Locator Code.
     """
 
     class Meta:

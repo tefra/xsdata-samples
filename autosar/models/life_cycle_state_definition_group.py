@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class LifeCycleStateDefinitionGroup:
     """
-    This meta class represents the ability to define the states and properties of
-    one particular life cycle.
+    This meta class represents the ability to define the states and
+    properties of one particular life cycle.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

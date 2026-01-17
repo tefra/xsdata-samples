@@ -8,11 +8,13 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class SlicesType:
-    """Each slice specifies the HDL path for part of the parent IP-XACT object.
+    """
+    Each slice specifies the HDL path for part of the parent IP-XACT
+    object.
 
-    The slices must be concatenated to calculate the entire path. If
-    there is only one slice, it is assumed to be the path for the entire
-    IP-XACT object.
+    The slices must be concatenated to calculate the entire path. If there
+    is only one slice, it is assumed to be the path for the entire IP-XACT
+    object.
 
     :ivar slice: The HDL path for a slice of the IP-XACT object.
     :ivar id:

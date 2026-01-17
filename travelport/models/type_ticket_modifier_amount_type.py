@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class TypeTicketModifierAmountType:
     """
-    Ticketing Modifier used to alter a fare amount before or during the ticketing
-    operation.
+    Ticketing Modifier used to alter a fare amount before or during the
+    ticketing operation.
 
     Parameters
     ----------

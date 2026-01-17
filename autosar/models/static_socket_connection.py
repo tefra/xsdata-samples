@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class StaticSocketConnection:
     """
-    Definition of static SocketConnection between the Socket that is defined by the
-    aggregating SocketAddress and the remoteAddress.
+    Definition of static SocketConnection between the Socket that is
+    defined by the aggregating SocketAddress and the remoteAddress.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -15,7 +15,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class PassengerTypeQuantityType(TravelerCountType):
-    """Specifies a PTC (Passenger Type Code) and the associated number of PTC's - for use in specifying passenger lists.
+    """
+    Specifies a PTC (Passenger Type Code) and the associated number of
+    PTC's - for use in specifying passenger lists.
 
     Attributes:
         tpa_extensions: Additional elements and attributes to be
@@ -154,8 +156,8 @@ class PassengerTypeQuantityType(TravelerCountType):
         @dataclass
         class VoluntaryChanges:
             """
-            Specifies charges and/or penalties associated with making ticket changes after
-            purchase.
+            Specifies charges and/or penalties associated with making
+            ticket changes after purchase.
 
             Attributes:
                 penalty: Specifies penalty charges as either a currency

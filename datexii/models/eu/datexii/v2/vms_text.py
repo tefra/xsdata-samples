@@ -11,8 +11,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class VmsText:
-    """A page of text (comprising one or more ordered lines) that are displayed
-    simultaneously on the VMS.
+    """
+    A page of text (comprising one or more ordered lines) that are
+    displayed simultaneously on the VMS.
 
     Where more than one page is defined these are sequentially displayed
     according to their "pageNumber".

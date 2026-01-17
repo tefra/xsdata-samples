@@ -15,15 +15,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ImplementationDataTypeElementInPortInterfaceRef:
-    """This meta-class represents the ability to refer to the internal structure of
-    an AutosarDataPrototype which is typed by an ImplementationDatatype in the
-    context of a PortInterface.
+    """
+    This meta-class represents the ability to refer to the internal
+    structure of an AutosarDataPrototype which is typed by an
+    ImplementationDatatype in the context of a PortInterface.
 
-    In other words, this meta-class shall not be used to model a
-    reference to the AutosarDataPrototype as a target itself, even if
-    the AutosarDataPrototype is typed by an ImplementationDataType and
-    even if that ImplementationDataType represents a composite data
-    type.
+    In other words, this meta-class shall not be used to model a reference
+    to the AutosarDataPrototype as a target itself, even if the
+    AutosarDataPrototype is typed by an ImplementationDataType and even if
+    that ImplementationDataType represents a composite data type.
 
     :ivar tag_id: This attribute represents the ability to specify a
         tag-id for the serialization of a specific DataPrototype in the

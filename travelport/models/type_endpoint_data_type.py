@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 class TypeEndpointDataType(Enum):
     """
-    Specify the Data type for an Endpoint (ex, Boolean, Integer, String, etc)
+    Specify the Data type for an Endpoint (ex, Boolean, Integer, String,
+    etc).
     """
 
     STRING = "String"

@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class ProfileModifyCmd2:
     """
-    Wrapper for a set of modification commands to be applied to this profile.
+    Wrapper for a set of modification commands to be applied to this
+    profile.
 
     Parameters
     ----------

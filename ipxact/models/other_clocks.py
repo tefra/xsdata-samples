@@ -7,11 +7,12 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class OtherClocks:
-    """List of clocks associated with the component that are not associated with
-    ports.
+    """
+    List of clocks associated with the component that are not associated
+    with ports.
 
-    Set the clockSource attribute on the clockDriver to indicate the
-    source of a clock not associated with a particular component port.
+    Set the clockSource attribute on the clockDriver to indicate the source
+    of a clock not associated with a particular component port.
     """
 
     class Meta:

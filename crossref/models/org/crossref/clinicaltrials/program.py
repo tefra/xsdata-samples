@@ -9,13 +9,14 @@ __NAMESPACE__ = "http://www.crossref.org/clinicaltrials.xsd"
 
 @dataclass
 class Program:
-    """Accommodates deposit of linked clincal trials metadata.
+    """
+    Accommodates deposit of linked clincal trials metadata.
 
     The clinical-trial-number value will be a string that must match a
-    specific pattern appropriate for a given clinical trial registry.
-    The registry is identified in the required attribute 'registry' and
-    must be the DOI of a recognized registry (see
-    http://dx.doi.org/10.18810/registries)
+    specific pattern appropriate for a given clinical trial registry. The
+    registry is identified in the required attribute 'registry' and must be
+    the DOI of a recognized registry (see
+    http://dx.doi.org/10.18810/registries).
     """
 
     class Meta:

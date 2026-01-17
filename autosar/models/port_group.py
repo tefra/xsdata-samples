@@ -22,14 +22,20 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PortGroup:
-    """Group of ports which share a common functionality
-    @RESTRICT_TO_STANDARD:CP:AP!
-    , e.g. need specific network resources. This information shall be available on the VFB level in order to delegate it properly via compositions. When propagated into the ECU extract, this information is used as input for the configuration of Services like the Communication Manager.
-    @END_RESTRICT_TO_STANDARD!
-    @RESTRICT_TO_STANDARD:FO!
-    .
-    @END_RESTRICT_TO_STANDARD!
-    A PortGroup is defined locally in a component (which can be a composition) and refers to the "outer" ports belonging to the group as well as to the "inner" groups which propagate  this group into the components which are part of a composition. A PortGroup within an atomic SWC cannot be linked to inner groups.
+    """
+    Group of ports which share a common functionality
+    @RESTRICT_TO_STANDARD:CP:AP! , e.g. need specific network resources.
+
+    This information shall be available on the VFB level in order to
+    delegate it properly via compositions. When propagated into the ECU
+    extract, this information is used as input for the configuration of
+    Services like the Communication Manager. @END_RESTRICT_TO_STANDARD!
+    @RESTRICT_TO_STANDARD:FO! . @END_RESTRICT_TO_STANDARD! A PortGroup is
+    defined locally in a component (which can be a composition) and refers
+    to the "outer" ports belonging to the group as well as to the "inner"
+    groups which propagate this group into the components which are part of
+    a composition. A PortGroup within an atomic SWC cannot be linked to
+    inner groups.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

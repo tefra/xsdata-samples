@@ -8,11 +8,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class PayloadStructureType:
-    """PayloadStructureType is an abstract base type used to define the structural
-    information for data or metadata sets.
+    """
+    PayloadStructureType is an abstract base type used to define the
+    structural information for data or metadata sets.
 
-    A reference to the structure is provided (either explicitly or
-    through a reference to a structure usage).
+    A reference to the structure is provided (either explicitly or through
+    a reference to a structure usage).
 
     :ivar provision_agreement_or_structure_usage_or_structure:
     :ivar structure_id: The structureID attribute uniquely identifies

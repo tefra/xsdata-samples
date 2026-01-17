@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SomeipTpConnection:
-    """A connection identifies the sender and the receiver of this particular
+    """
+    A connection identifies the sender and the receiver of this particular
     communication.
 
     The SOME/IP TP module routes a Pdu through this connection.

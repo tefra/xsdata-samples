@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 @dataclass
 class MemoryRemapType:
     """
-    Map of address space blocks on a target bus interface in a specific remap
-    state.
+    Map of address space blocks on a target bus interface in a specific
+    remap state.
 
     :ivar name: Unique name
     :ivar display_name:

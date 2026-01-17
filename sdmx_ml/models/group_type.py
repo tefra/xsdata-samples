@@ -8,10 +8,16 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class GroupType(GroupBaseType):
-    """GroupType describes the structure of a group descriptor in a data structure
-    definition.
+    """
+    GroupType describes the structure of a group descriptor in a data
+    structure definition.
 
-    A group may consist of a of partial key, or collection of distinct cube regions or key sets to which attributes may be attached. The purpose of a group is to specify attributes values which have the same value based on some common dimensionality. All groups declared in the data structure must be unique - that is, you may not have duplicate partial keys. All groups must be given unique identifiers.
+    A group may consist of a of partial key, or collection of distinct cube
+    regions or key sets to which attributes may be attached. The purpose of
+    a group is to specify attributes values which have the same value based
+    on some common dimensionality. All groups declared in the data
+    structure must be unique - that is, you may not have duplicate partial
+    keys. All groups must be given unique identifiers.
     """
 
     group_dimension: tuple[GroupDimension, ...] = field(

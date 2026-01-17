@@ -9,7 +9,8 @@ __NAMESPACE__ = "urn:vpro:media:2009"
 
 @dataclass
 class Group(GroupType):
-    """A groups collects a number of programs and/or other groups.
+    """
+    A groups collects a number of programs and/or other groups.
 
     Examples: season, series, playlist and album.
     """

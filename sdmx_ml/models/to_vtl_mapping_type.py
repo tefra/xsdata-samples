@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class ToVtlMappingType:
     """
-    ToVtlMappingType defines the mapping method and filter used when mapping from
-    SDMX to VTL.
+    ToVtlMappingType defines the mapping method and filter used when
+    mapping from SDMX to VTL.
 
     :ivar to_vtl_sub_space: Identfies a sub space of the mapped dataflow
         that the mapping applies to. This is a collection of references

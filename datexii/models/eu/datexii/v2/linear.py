@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Linear(NetworkLocation):
     """
-    A linear section along a single road with optional directionality defined
-    between two points on the same road.
+    A linear section along a single road with optional directionality
+    defined between two points on the same road.
     """
 
     tpeg_linear_location: Optional[TpegLinearLocation] = field(

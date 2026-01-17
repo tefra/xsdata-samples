@@ -8,10 +8,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DefaultValueElement:
-    """The default value consists of a number of elements.
+    """
+    The default value consists of a number of elements.
 
-    Each element is one byte long and the number of elements is
-    specified by SduLength.
+    Each element is one byte long and the number of elements is specified
+    by SduLength.
 
     :ivar element_byte_value: The integer value of a freely defined data
         byte.

@@ -4,7 +4,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class LABELSecurityLevelEnum(Enum):
-    """Security level defined by the LABEL project http://truckparkinglabel.eu.
+    """
+    Security level defined by the LABEL project
+    http://truckparkinglabel.eu.
 
     :cvar NONE: None.
     :cvar SECURITY_LEVEL1: Providing the basics.

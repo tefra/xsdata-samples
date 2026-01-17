@@ -12,9 +12,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class ElectronicMiscDocument:
-    """Electronic miscellaneous document.
+    """
+    Electronic miscellaneous document.
 
-    Supported providers are 1G/1V/1P
+    Supported providers are 1G/1V/1P.
 
     Parameters
     ----------

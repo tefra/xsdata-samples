@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 @dataclass
 class CustomFieldUpdate(TypeEditableCustomField2):
     """
-    Modify the agency-defined attributes of a custom field already associated with
-    the template.
+    Modify the agency-defined attributes of a custom field already
+    associated with the template.
     """
 
     class Meta:

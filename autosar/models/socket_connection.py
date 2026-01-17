@@ -34,8 +34,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SocketConnection:
     """
-    The SoAd serves as a (De)Multiplexer between different PDU sources and the
-    TCP/IP stack.
+    The SoAd serves as a (De)Multiplexer between different PDU sources and
+    the TCP/IP stack.
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one

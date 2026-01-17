@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwComponentPrototypeAssignment:
     """
-    This meta-class is only required to allow for the variant modeling of an
-    instanceRef.
+    This meta-class is only required to allow for the variant modeling of
+    an instanceRef.
 
     :ivar sw_component_iref: hierarchical tree(s) of Software Components
         belonging to this CP Software Cluster. This reference is used to

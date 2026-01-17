@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class PromoCode:
     """
-    A container to specify Promotional code with Provider code and Supplier code.
+    A container to specify Promotional code with Provider code and Supplier
+    code.
 
     Parameters
     ----------

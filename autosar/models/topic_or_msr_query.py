@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TopicOrMsrQuery:
     """
-    This class provides the alternative of a Topic with an MsrQuery which delivers
-    a topic.
+    This class provides the alternative of a Topic with an MsrQuery which
+    delivers a topic.
 
     :ivar topic_1: This is used to create particcular topics within a
         chapter. A topic is similar to a subchapter, but cannot be

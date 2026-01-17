@@ -5,7 +5,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class SpaceKeyType:
-    """SpaceKey defines the structure of a super- or sub- space for a SDMX
+    """
+    SpaceKey defines the structure of a super- or sub- space for a SDMX
     Dataflow.
 
     It is a collection of references to the dimensions that make up the

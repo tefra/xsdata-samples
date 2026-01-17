@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 class StandardToVtlMappingMethodType(Enum):
     """
-    A simple type enumerating the standard mapping methods when converting from
-    data structures from SDMX to VLT.
+    A simple type enumerating the standard mapping methods when converting
+    from data structures from SDMX to VLT.
 
     :cvar BASIC: The default mapping method. See Section 6 SDMX
         Standards ("SDMX Technical Notes"), 10.3.3.1 ("Basic Mapping").

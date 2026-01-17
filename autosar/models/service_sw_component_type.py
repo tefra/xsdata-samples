@@ -32,7 +32,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ServiceSwComponentType:
-    """ServiceSwComponentType is used for configuring services for a given ECU.
+    """
+    ServiceSwComponentType is used for configuring services for a given
+    ECU.
 
     Instances of this class are only to be created in ECU Configuration
     phase for the specific purpose of the service configuration.

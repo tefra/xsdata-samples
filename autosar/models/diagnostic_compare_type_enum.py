@@ -10,7 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticCompareTypeEnum:
-    """Enumeration for the type of a comparison of values usually expressed by the following operators: ==, !=, &lt;, &lt;=, &gt;, &gt;=
+    """
+    Enumeration for the type of a comparison of values usually expressed by
+    the following operators: ==, !=, &lt;, &lt;=, &gt;, &gt;=.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

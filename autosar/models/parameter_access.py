@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ParameterAccess:
     """
-    The presence of a ParameterAccess implies that a RunnableEntity needs access to
-    a ParameterDataPrototype.
+    The presence of a ParameterAccess implies that a RunnableEntity needs
+    access to a ParameterDataPrototype.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

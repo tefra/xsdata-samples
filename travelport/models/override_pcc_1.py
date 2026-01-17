@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class OverridePcc1:
-    """Used to emulate to another PCC or SID.
+    """
+    Used to emulate to another PCC or SID.
 
     Providers: 1G, 1V, 1P.
 

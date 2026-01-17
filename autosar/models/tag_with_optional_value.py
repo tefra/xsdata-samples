@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TagWithOptionalValue:
-    """A tagged value is a combination of a tag (key) and a value that gives
+    """
+    A tagged value is a combination of a tag (key) and a value that gives
     supplementary information that is attached to a model element.
 
     Please note that keys without a value are allowed.

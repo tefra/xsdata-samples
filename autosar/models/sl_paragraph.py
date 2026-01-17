@@ -20,10 +20,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SlParagraph:
-    """This is the text for a paragraph in one particular language.
+    """
+    This is the text for a paragraph in one particular language.
 
-    The language is defined by the context. The attribute l is there
-    only for backwards compatibility and shall be ignored.
+    The language is defined by the context. The attribute l is there only
+    for backwards compatibility and shall be ignored.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

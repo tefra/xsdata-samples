@@ -28,8 +28,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SynchronousServerCallPoint:
     """
-    This means that the RunnableEntity is supposed to perform a  blocking wait for
-    a response from the server.
+    This means that the RunnableEntity is supposed to perform a blocking
+    wait for a response from the server.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

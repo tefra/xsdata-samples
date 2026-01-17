@@ -31,12 +31,12 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Body:
-    """Container for the main body of a DOI record submission.
+    """
+    Container for the main body of a DOI record submission.
 
-    While it is possible to include records for multiple journals,
-    books, conferences, or other types of content in a single
-    submission, it is not possible to mix content types within a single
-    DOI submission.
+    While it is possible to include records for multiple journals, books,
+    conferences, or other types of content in a single submission, it is
+    not possible to mix content types within a single DOI submission.
     """
 
     class Meta:

@@ -32,14 +32,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SecuredIPdu:
-    """If useAsCryptographicPdu is not set or set to false this IPdu contains the
-    payload of an Authentic IPdu supplemented by additional Authentication
-    Information (Freshness Counter and an Authenticator).
+    """
+    If useAsCryptographicPdu is not set or set to false this IPdu contains
+    the payload of an Authentic IPdu supplemented by additional
+    Authentication Information (Freshness Counter and an Authenticator).
 
     If useAsCryptographicPdu is set to true this IPdu contains the
-    Authenticator for a payload that is transported in a separate
-    message. The separate Authentic IPdu is described by the Pdu that is
-    referenced with the payload reference from this SecuredIPdu.
+    Authenticator for a payload that is transported in a separate message.
+    The separate Authentic IPdu is described by the Pdu that is referenced
+    with the payload reference from this SecuredIPdu.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

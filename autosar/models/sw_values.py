@@ -12,16 +12,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwValues:
-    """This meta-class represents a list of values.
+    """
+    This meta-class represents a list of values.
 
     These values can either be the input values of a curve (abscissa
     values) or the associated values (ordinate values). In case of
     multidimensional structures, the values are ordered such that the
-    lowest index runs the fastest. In particular for maps and cuboids
-    etc. the resulting long value list can be subsectioned using
-    ValueGroup. But the processing needs to be done as if vg is not
-    there. Note that numerical values and textual values should not be
-    mixed.
+    lowest index runs the fastest. In particular for maps and cuboids etc.
+    the resulting long value list can be subsectioned using ValueGroup. But
+    the processing needs to be done as if vg is not there. Note that
+    numerical values and textual values should not be mixed.
 
     :ivar vtf: Thias aggregation represents the ability to provide a
         value that is either numerical or text which existence is

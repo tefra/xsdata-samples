@@ -16,8 +16,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class AlertCMethod4Linear(AlertCLinear):
-    """A linear section along a road between two points, Primary and Secondary,
-    which are pre-defined ALERT-C locations plus offset distance.
+    """
+    A linear section along a road between two points, Primary and
+    Secondary, which are pre-defined ALERT-C locations plus offset
+    distance.
 
     Direction is FROM the Secondary point TO the Primary point, i.e. the
     Primary point is downstream of the Secondary point.

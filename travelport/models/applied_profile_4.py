@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 @dataclass
 class AppliedProfile4:
     """
-    A simple container to specify the profiles that were applied to a reservation.
+    A simple container to specify the profiles that were applied to a
+    reservation.
 
     Parameters
     ----------

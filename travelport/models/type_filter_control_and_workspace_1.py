@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 class TypeFilterControlAndWorkspace1(Enum):
     """
-    Allow the filtering of Workspace and Control or specify no filtering at all.
+    Allow the filtering of Workspace and Control or specify no filtering at
+    all.
     """
 
     WORKSPACE_ONLY = "WorkspaceOnly"

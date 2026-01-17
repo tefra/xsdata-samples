@@ -10,11 +10,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RptSupportData:
-    """Root element for rapid prototyping support data related to one
+    """
+    Root element for rapid prototyping support data related to one
     Implementation artifact on an ECU, in particular the RTE.
 
-    The rapid prototyping support data may reference to elements
-    provided for McSupportData.
+    The rapid prototyping support data may reference to elements provided
+    for McSupportData.
 
     :ivar execution_contexts: Defines an environment for the execution
         of ExecutableEntites.

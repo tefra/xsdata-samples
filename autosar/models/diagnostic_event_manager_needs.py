@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEventManagerNeeds:
     """
-    Specifies the general needs on the configuration of the  Diagnostic Event
-    Manager (Dem) which are not related to a particular item.
+    Specifies the general needs on the configuration of the Diagnostic
+    Event Manager (Dem) which are not related to a particular item.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

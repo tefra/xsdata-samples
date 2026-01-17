@@ -6,9 +6,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
 class TypeEmailFormat2(Enum):
-    """Specifies the email format.
+    """
+    Specifies the email format. (ie.
 
-    (ie. HTML, Text, PDF, etc.)
+    HTML, Text, PDF, etc.).
     """
 
     HTML = "HTML"

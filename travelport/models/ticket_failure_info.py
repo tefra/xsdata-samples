@@ -10,11 +10,12 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class TicketFailureInfo:
-    """Will be optionally returned as part of AirTicketingRsp if one or all ticket
-    requests fail.
+    """
+    Will be optionally returned as part of AirTicketingRsp if one or all
+    ticket requests fail.
 
-    Atrributes are faiilure code, failure message, and passenger
-    reference key. Passenger name is a child element.
+    Atrributes are faiilure code, failure message, and passenger reference
+    key. Passenger name is a child element.
 
     Parameters
     ----------

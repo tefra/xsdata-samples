@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BinaryManifestItemDefinition:
     """
-    This meta-class provides the ability to define the handle definition or an
-    auxiliary field of a binary manifest resource.
+    This meta-class provides the ability to define the handle definition or
+    an auxiliary field of a binary manifest resource.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

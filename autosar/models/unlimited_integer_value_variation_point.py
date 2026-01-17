@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class UnlimitedIntegerValueVariationPoint:
-    """This class represents an attribute value variation point for unlimited
+    """
+    This class represents an attribute value variation point for unlimited
     Integer attributes.
 
     Note that this class might be used in the extended meta-model only.

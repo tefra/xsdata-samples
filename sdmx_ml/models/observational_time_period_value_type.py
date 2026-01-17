@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 @dataclass(frozen=True)
 class ObservationalTimePeriodValueType(ValueType):
     """
-    ObservationalTimePeriodValueType is a refinement of SimpleValueType limiting
-    the content to be an observational time period.
+    ObservationalTimePeriodValueType is a refinement of SimpleValueType
+    limiting the content to be an observational time period.
     """
 
     content: Any = field(

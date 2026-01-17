@@ -6,9 +6,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
 class TypeEmailFormat1(Enum):
-    """Specifies the email format.
+    """
+    Specifies the email format. (ie.
 
-    (ie. HTML, Text, PDF, etc.)
+    HTML, Text, PDF, etc.).
     """
 
     HTML = "HTML"

@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class HierInterfaceType:
-    """A representation of an exported interface.
+    """
+    A representation of an exported interface.
 
     The busRef indicates the name of the interface in the containing
     component.

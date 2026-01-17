@@ -29,7 +29,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinScheduleTable:
-    """The master task (in the master node) transmits frame headers based on a
+    """
+    The master task (in the master node) transmits frame headers based on a
     schedule table.
 
     The schedule table specifies the identifiers for each header and the

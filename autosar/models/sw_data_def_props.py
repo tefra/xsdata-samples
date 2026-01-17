@@ -62,16 +62,29 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwDataDefProps:
-    """This class is a collection of properties relevant for data objects under various aspects. One could consider this class as a "pattern of inheritance by aggregation". The properties can be applied to all objects of all classes in which SwDataDefProps is aggregated.
-    @RESTRICT_TO_STANDARD:CP:AP!
-    Note that not all of the attributes or associated elements are useful all of the time. Hence, the process definition (e.g. expressed with an OCL or a Document Control Instance MSR-DCI) has the task of implementing limitations.
-    SwDataDefProps covers various aspects:
-    * Structure of the data element for calibration use cases: is it a single value, a curve, or a map, but also the recordLayouts which specify how such elements are mapped/converted to the DataTypes in the programming language (or in AUTOSAR). This is mainly expressed by properties like swRecordLayout and swCalprmAxisSet
-    * Implementation aspects, mainly expressed by swImplPolicy, swVariableAccessImplPolicy, swAddrMethod, swPointerTagetProps, baseType, implementationDataType and additionalNativeTypeQualifier
-    * Access policy for the MCD system, mainly expressed by swCalibrationAccess
-    * Semantics of the data element, mainly expressed by compuMethod and/or unit, dataConstr, invalidValue
-    * Code generation policy provided by swRecordLayout
-    @END_RESTRICT_TO_STANDARD!
+    """
+    This class is a collection of properties relevant for data objects
+    under various aspects.
+
+    One could consider this class as a "pattern of inheritance by
+    aggregation". The properties can be applied to all objects of all
+    classes in which SwDataDefProps is aggregated.
+    @RESTRICT_TO_STANDARD:CP:AP! Note that not all of the attributes or
+    associated elements are useful all of the time. Hence, the process
+    definition (e.g. expressed with an OCL or a Document Control Instance
+    MSR-DCI) has the task of implementing limitations. SwDataDefProps
+    covers various aspects: * Structure of the data element for calibration
+    use cases: is it a single value, a curve, or a map, but also the
+    recordLayouts which specify how such elements are mapped/converted to
+    the DataTypes in the programming language (or in AUTOSAR). This is
+    mainly expressed by properties like swRecordLayout and swCalprmAxisSet
+    * Implementation aspects, mainly expressed by swImplPolicy,
+    swVariableAccessImplPolicy, swAddrMethod, swPointerTagetProps,
+    baseType, implementationDataType and additionalNativeTypeQualifier *
+    Access policy for the MCD system, mainly expressed by
+    swCalibrationAccess * Semantics of the data element, mainly expressed
+    by compuMethod and/or unit, dataConstr, invalidValue * Code generation
+    policy provided by swRecordLayout @END_RESTRICT_TO_STANDARD!
 
     :ivar sw_data_def_props_variants: This element was
         generated/modified due to an atpVariation stereotype.
@@ -132,14 +145,14 @@ class SwDataDefProps:
 
 @dataclass
 class SwPointerTargetProps:
-    """This element defines, that the data object (which is specified by the
-    aggregating element) contains a reference to another data object or to a
-    function in the CPU code.
+    """
+    This element defines, that the data object (which is specified by the
+    aggregating element) contains a reference to another data object or to
+    a function in the CPU code.
 
-    This corresponds to a pointer in the C-language. The attributes of
-    this element describe the category and the detailed properties of
-    the target which is either a data description or a function
-    signature.
+    This corresponds to a pointer in the C-language. The attributes of this
+    element describe the category and the detailed properties of the target
+    which is either a data description or a function signature.
 
     :ivar target_category: This specifies the category of the target: *
         In case of a data pointer, it shall specify the category of the

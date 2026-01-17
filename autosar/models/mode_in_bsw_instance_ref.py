@@ -14,8 +14,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModeInBswInstanceRef:
     """
-    Instance reference to be capable of referencing a specific ModeDeclaration of a
-    ModeDeclarationGroupPrototype utilized in a BSW module.
+    Instance reference to be capable of referencing a specific
+    ModeDeclaration of a ModeDeclarationGroupPrototype utilized in a BSW
+    module.
 
     :ivar context_bsw_implementation_ref: Specifies the BSW
         implementation that manifests the context.

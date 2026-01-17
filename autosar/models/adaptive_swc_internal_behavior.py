@@ -19,12 +19,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AdaptiveSwcInternalBehavior:
-    """This meta-class represents the ability to define an internal behavior of an
-    AtomicSwComponentType used on the AUTOSAR adaptive platform.
+    """
+    This meta-class represents the ability to define an internal behavior
+    of an AtomicSwComponentType used on the AUTOSAR adaptive platform.
 
-    Please note that the model of internal behavior in this case, in
-    stark contrast to the situation of the AUTOSAR classic platform, is
-    very minimal.
+    Please note that the model of internal behavior in this case, in stark
+    contrast to the situation of the AUTOSAR classic platform, is very
+    minimal.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

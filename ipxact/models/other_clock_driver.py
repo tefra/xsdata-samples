@@ -8,11 +8,11 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class OtherClockDriver(ClockDriverType):
-    """Describes a clock not directly associated with an input port.
+    """
+    Describes a clock not directly associated with an input port.
 
-    The clockSource attribute can be used on these clocks to indicate
-    the actual clock source (e.g. an output port of a clock generator
-    cell).
+    The clockSource attribute can be used on these clocks to indicate the
+    actual clock source (e.g. an output port of a clock generator cell).
 
     :ivar clock_name: Indicates the name of the clock.
     :ivar clock_source: Indicates the name of the actual clock source

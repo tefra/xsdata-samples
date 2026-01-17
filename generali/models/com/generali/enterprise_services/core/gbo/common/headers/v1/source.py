@@ -12,8 +12,8 @@ __NAMESPACE__ = (
 @dataclass
 class Source(SourceType):
     """
-    <description xmlns="">The specification of the source country, locale, system
-    of the message.</description>
+    <description xmlns="">The specification of the source country, locale,
+    system of the message.</description>.
     """
 
     class Meta:

@@ -17,9 +17,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RptExecutionContext:
-    """Defines an environment for the execution of ExecutableEntites which is qualified by
-    * OSTask
-    * communication buffer usage
+    """
+    Defines an environment for the execution of ExecutableEntites which is
+    qualified by * OSTask * communication buffer usage.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

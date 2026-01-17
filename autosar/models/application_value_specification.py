@@ -11,11 +11,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ApplicationValueSpecification:
-    """This meta-class represents values for DataPrototypes typed by
+    """
+    This meta-class represents values for DataPrototypes typed by
     ApplicationDataTypes (this includes in particular compound primitives).
 
-    For further details refer to ASAM CDF 2.0. This meta-class
-    corresponds to some extent with SW-INSTANCE in ASAM CDF 2.0.
+    For further details refer to ASAM CDF 2.0. This meta-class corresponds
+    to some extent with SW-INSTANCE in ASAM CDF 2.0.
 
     :ivar short_label: This can be used to identify particular value
         specifications for human readers, for example elements of a

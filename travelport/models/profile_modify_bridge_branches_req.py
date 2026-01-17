@@ -10,10 +10,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ProfileModifyBridgeBranchesReq(BaseReq5):
-    """Request to add or delete an Agent's Bridge Branch Assignments.
+    """
+    Request to add or delete an Agent's Bridge Branch Assignments.
 
-    The Default branch cannot be modified.  That functionality will only
-    be used in the Profile Create and Modify services.
+    The Default branch cannot be modified. That functionality will only be
+    used in the Profile Create and Modify services.
 
     Parameters
     ----------

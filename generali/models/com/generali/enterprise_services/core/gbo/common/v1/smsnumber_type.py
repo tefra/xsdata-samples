@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 class SmsnumberType:
     """
     <description xmlns=""> <description>The definition for an SMS
-    number.</description> </description>
+    number.</description> </description>.
 
     :ivar full_number_text: <description xmlns=""> <description>The full
         SMS number.</description> </description>

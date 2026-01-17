@@ -8,10 +8,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TdHeaderIdRange:
-    """Specifies a range of PDU header identifiers.
+    """
+    Specifies a range of PDU header identifiers.
 
-    This range is specified by a minimum and maximum header identifier;
-    and the maximum header identifier shall be greater than or equal the
+    This range is specified by a minimum and maximum header identifier; and
+    the maximum header identifier shall be greater than or equal the
     minimum header identifier.
 
     :ivar max_header_id: Specifies the maximum PDU header identifier, in

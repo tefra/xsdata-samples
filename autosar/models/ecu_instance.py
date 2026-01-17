@@ -55,10 +55,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcuInstance:
-    """ECUInstances are used to define the ECUs used in the topology.
+    """
+    ECUInstances are used to define the ECUs used in the topology.
 
-    The type of the ECU is defined by a reference to an ECU specified
-    with the ECU resource description.
+    The type of the ECU is defined by a reference to an ECU specified with
+    the ECU resource description.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

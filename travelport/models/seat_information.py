@@ -7,9 +7,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class SeatInformation:
-    """Additional information about seats.
+    """
+    Additional information about seats.
 
-    Providers: 1G, 1V, 1P,ACH
+    Providers: 1G, 1V, 1P,ACH.
 
     Parameters
     ----------

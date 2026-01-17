@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PositiveIntegerValueVariationPoint:
-    """This class represents an attribute value variation point for positive
+    """
+    This class represents an attribute value variation point for positive
     Integer attributes.
 
     Note that this class might be used in the extended meta-model only.

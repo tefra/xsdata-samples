@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ModeSwitchPoint:
-    """A ModeSwitchPoint is required by a RunnableEntity owned a Mode Manager.
+    """
+    A ModeSwitchPoint is required by a RunnableEntity owned a Mode Manager.
 
     Its semantics implies the ability to initiate a mode switch.
 

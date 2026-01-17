@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class History:
     """
-    <div> <h3>History: Document History</h3> </div>
+    <div> <h3>History: Document History</h3> </div>.
     """
 
     class Meta:

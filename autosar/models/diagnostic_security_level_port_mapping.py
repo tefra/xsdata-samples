@@ -27,8 +27,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticSecurityLevelPortMapping:
     """
-    Defines to which SWC service ports with DiagnosticsCommunicationSecurityNeeds
-    the DiagnosticSecurityLevel is mapped.
+    Defines to which SWC service ports with
+    DiagnosticsCommunicationSecurityNeeds the DiagnosticSecurityLevel is
+    mapped.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

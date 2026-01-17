@@ -20,7 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Code:
-    """A generic code descriptor.
+    """
+    A generic code descriptor.
 
     The type of the code (source or object) is defined via the category
     attribute of the associated engineering object.

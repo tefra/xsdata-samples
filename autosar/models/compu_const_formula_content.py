@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CompuConstFormulaContent:
-    """This meta-class represents the fact that the constant value of the
+    """
+    This meta-class represents the fact that the constant value of the
     computation method is represented by a variation point.
 
     This difference is due to compatibility with ASAM HDO.

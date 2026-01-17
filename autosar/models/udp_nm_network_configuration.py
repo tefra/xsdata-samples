@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UdpNmNetworkConfiguration:
     """
-    This meta-class defines the attributes for the configuration of a UDP port and
-    UDP multicast IP address of the Nm communication on a VLAN.
+    This meta-class defines the attributes for the configuration of a UDP
+    port and UDP multicast IP address of the Nm communication on a VLAN.
 
     :ivar ipv_4_multicast_ip_address: Multicast IPv4 Address to which
         the message will be transmitted.

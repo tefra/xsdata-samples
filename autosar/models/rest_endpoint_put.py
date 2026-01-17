@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RestEndpointPut:
     """
-    This meta-class represents the ability to model a REST endpoint with PUT
-    semantics.
+    This meta-class represents the ability to model a REST endpoint with
+    PUT semantics.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

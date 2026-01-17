@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 @dataclass
 class UimetaDataModifyReq(BaseReq2):
     """
-    Service for Request to modify the entry in action by Admin in Admin login view
-    in Profile Settings.
+    Service for Request to modify the entry in action by Admin in Admin
+    login view in Profile Settings.
 
     Parameters
     ----------

@@ -8,9 +8,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 @dataclass
 class QueueNextModifiers:
     """
-    Can only be used when modifying an Universal Record in Queue mode.If not
-    specified along with ReturnRecord as false then current PNR in queue context
-    will be removed.
+    Can only be used when modifying an Universal Record in Queue mode.If
+    not specified along with ReturnRecord as false then current PNR in
+    queue context will be removed.
 
     Parameters
     ----------

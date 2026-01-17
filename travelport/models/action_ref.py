@@ -10,9 +10,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class ActionRef(TypeActionReference):
-    """Application of an action to a field.
+    """
+    Application of an action to a field.
 
-    Refers to Actions retrieved in ProfileRetrieveAction service
+    Refers to Actions retrieved in ProfileRetrieveAction service.
     """
 
     class Meta:

@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class BookingConfirmation:
-    """Hotel Booking Confirmation Number for hotel segment.
+    """
+    Hotel Booking Confirmation Number for hotel segment.
 
     Supported Providers:1P.
     """

@@ -53,7 +53,7 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class TransSubtitle:
     """
-    <div> <h3>Translated Subtitle</h3> </div>
+    <div> <h3>Translated Subtitle</h3> </div>.
     """
 
     class Meta:

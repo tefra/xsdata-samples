@@ -51,8 +51,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class BookMetadata:
     """
-    A container for all title-level metadata for a single book that is not part of
-    a series or set.
+    A container for all title-level metadata for a single book that is not
+    part of a series or set.
     """
 
     class Meta:

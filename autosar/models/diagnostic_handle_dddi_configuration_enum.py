@@ -11,8 +11,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticHandleDddiConfigurationEnum:
     """
-    This meta-class represents the options for controlling how the configuration of
-    the DynamicallyDefineDataIdentifiers is done in the given context.
+    This meta-class represents the options for controlling how the
+    configuration of the DynamicallyDefineDataIdentifiers is done in the
+    given context.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

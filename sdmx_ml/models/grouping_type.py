@@ -12,10 +12,11 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class GroupingType:
-    """GroupType is an abstract base type for specific structure groupings.
+    """
+    GroupType is an abstract base type for specific structure groupings.
 
-    It contains a collection of component lists. Concrete instances of
-    this should restrict to specific concrete component lists.
+    It contains a collection of component lists. Concrete instances of this
+    should restrict to specific concrete component lists.
     """
 
     choice: tuple[

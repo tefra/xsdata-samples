@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 class GetProgramGbmrequestType(BaseGbmtype):
     """
     <description xmlns="">The definition of the message used to retrieve an
-    agreement</description>
+    agreement</description>.
 
     :ivar app_data: A component of the GBM that allows application
         specific or pre-processing information to be added.

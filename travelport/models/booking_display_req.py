@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 @dataclass
 class BookingDisplayReq(BookingBaseReq):
     """
-    Retrieves the current contents of data in session , or PNR if it is specified.
+    Retrieves the current contents of data in session , or PNR if it is
+    specified.
 
     Parameters
     ----------

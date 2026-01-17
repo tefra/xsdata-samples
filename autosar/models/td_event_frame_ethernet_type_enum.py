@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TdEventFrameEthernetTypeEnum:
     """
-    This is used to describe the specific event type of a TDEventFrameEthernet.
+    This is used to describe the specific event type of a
+    TDEventFrameEthernet.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

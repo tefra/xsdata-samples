@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class ReferenceDataRetrieveReq(BaseReq1):
     """
-    Request to retrieve code, name and description for  a specific reference data
-    type.
+    Request to retrieve code, name and description for a specific reference
+    data type.
 
     Parameters
     ----------

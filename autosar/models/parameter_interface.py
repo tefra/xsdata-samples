@@ -27,8 +27,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ParameterInterface:
     """
-    A parameter interface declares a number of parameter and characteristic values
-    to be exchanged between parameter components and software components.
+    A parameter interface declares a number of parameter and characteristic
+    values to be exchanged between parameter components and software
+    components.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

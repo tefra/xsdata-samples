@@ -11,10 +11,11 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 @dataclass
 class VehiclePickupDateLocation:
-    """Used to update PickupDateTime and location of an existing Vehicle Booking.
+    """
+    Used to update PickupDateTime and location of an existing Vehicle
+    Booking. 1g/1v only supports modification of PickupDateTime.
 
-    1g/1v only supports modification of PickupDateTime. PickupDateTime
-    cannot be deleted.
+    PickupDateTime cannot be deleted.
 
     Parameters
     ----------

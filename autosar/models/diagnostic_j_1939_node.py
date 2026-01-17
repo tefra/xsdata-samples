@@ -21,8 +21,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticJ1939Node:
     """
-    This meta-class represents the diagnostic configuration of a J1939 Nm node,
-    which in turn represents a "virtual Ecu" on the J1939 communication bus.
+    This meta-class represents the diagnostic configuration of a J1939 Nm
+    node, which in turn represents a "virtual Ecu" on the J1939
+    communication bus.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

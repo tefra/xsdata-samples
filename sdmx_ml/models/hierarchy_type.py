@@ -10,11 +10,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class HierarchyType(HierarchyBaseType):
-    """HierarchyType describes the structure of a hierarchical codelist.
+    """
+    HierarchyType describes the structure of a hierarchical codelist.
 
-    A hierarchical code list is defined as an organised collection of
-    codes that may participate in many parent/child relationships with
-    other codes in the list.
+    A hierarchical code list is defined as an organised collection of codes
+    that may participate in many parent/child relationships with other
+    codes in the list.
 
     :ivar level: In a formally leveled hierarchy, Level describes a
         group of codes which are characterised by homogeneous coding,

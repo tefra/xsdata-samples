@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticWwhObdDtcClassEnum:
     """
-    This meta-class represents the ability to model severity classes of an WWH-OBD
-    DTC.
+    This meta-class represents the ability to model severity classes of an
+    WWH-OBD DTC.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

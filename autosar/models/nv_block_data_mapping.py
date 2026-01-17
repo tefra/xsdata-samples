@@ -10,13 +10,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NvBlockDataMapping:
-    """Defines the mapping between the VariableDataPrototypes in the
-    NvBlockComponents ports and the VariableDataPrototypes of the RAM Block.
+    """
+    Defines the mapping between the VariableDataPrototypes in the
+    NvBlockComponents ports and the VariableDataPrototypes of the RAM
+    Block.
 
     The data types of the referenced VariableDataPrototypes in the ports
     and the referenced sub-element (inside a CompositeDataType) of the
-    VariableDataPrototype representing the RAM Block shall be
-    compatible.
+    VariableDataPrototype representing the RAM Block shall be compatible.
 
     :ivar bitfield_text_table_mask_nv_block_descriptor: This attribute
         identifies the applicable bit mask on the side of the Nv Block.

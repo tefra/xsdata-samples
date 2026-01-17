@@ -23,7 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CpSoftwareClusterToResourceMapping:
-    """This meta class maps a service resource to CP Software Clusters.
+    """
+    This meta class maps a service resource to CP Software Clusters.
 
     By this mapping it's specified whether the Software Cluster has to
     provide or to require the resource.

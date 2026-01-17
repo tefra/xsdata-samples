@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class BaseSimpleComponentType(BaseComponentType):
     """
-    <description xmlns="">A simple component that is not identified, it contains
-    fields for a name, description and type.</description>
+    <description xmlns="">A simple component that is not identified, it
+    contains fields for a name, description and type.</description>.
 
     :ivar name_text: <description xmlns="">The name of the
         characteristic.</description>

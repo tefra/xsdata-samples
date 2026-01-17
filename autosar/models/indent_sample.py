@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class IndentSample:
-    """This represents the ability to specify indentation of a labeled list by
+    """
+    This represents the ability to specify indentation of a labeled list by
     providing a sample content.
 
     This content can be measured by the rendering system in order to

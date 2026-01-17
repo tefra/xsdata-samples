@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class GlobalTimeCouplingPortProps:
     """
-    Defines properties for the usage of the CouplingPort in the scope of Global
-    Time Sync.
+    Defines properties for the usage of the CouplingPort in the scope of
+    Global Time Sync.
 
     :ivar propagation_delay: If cyclic propagation delay measurement is
         enabled, this parameter represents the default value of the

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class ErrorType(FreeTextType):
     """
-    Standard way to indicate that an error occurred during the processing of an OTA
-    message.
+    Standard way to indicate that an error occurred during the processing
+    of an OTA message.
 
     Attributes:
         type_value: The Error element MUST contain the Type attribute

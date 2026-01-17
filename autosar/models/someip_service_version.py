@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SomeipServiceVersion:
     """
-    This meta-class represents the ability to describe a version of a SOME/IP
-    Service.
+    This meta-class represents the ability to describe a version of a
+    SOME/IP Service.
 
     :ivar major_version: Major Version of the ServiceInterface.
     :ivar minor_version: Minor Version of the ServiceInterface.

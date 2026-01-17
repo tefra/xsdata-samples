@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 @dataclass
 class OverridePcc4:
-    """Used for Host Emulation - If used agent will emulate to this PCC in host and execute the request emulated into this PCC.
+    """
+    Used for Host Emulation - If used agent will emulate to this PCC in
+    host and execute the request emulated into this PCC.
 
     Parameters
     ----------

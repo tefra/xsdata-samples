@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 @dataclass
 class CustomerId2(TypeRemark2):
-    """A provider reservation field used to store customer information.
+    """
+    A provider reservation field used to store customer information.
 
     It may be used to identify reservations which will/will not be
     available for access.

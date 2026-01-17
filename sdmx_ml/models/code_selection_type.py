@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 @dataclass(frozen=True)
 class CodeSelectionType:
     """
-    CodeSelectionType defines the structure for code selection to be used as
-    inclusive or exclusive extensions.
+    CodeSelectionType defines the structure for code selection to be used
+    as inclusive or exclusive extensions.
 
     :ivar member_value: An explicit or wildcard selection of a code(s)
         from the codelist selected for inclusion/exclusion. If a

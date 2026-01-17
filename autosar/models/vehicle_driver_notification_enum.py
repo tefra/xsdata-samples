@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class VehicleDriverNotificationEnum:
     """
-    This meta-class provides available options for vehicle driver notification.
+    This meta-class provides available options for vehicle driver
+    notification.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

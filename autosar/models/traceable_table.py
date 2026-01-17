@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TraceableTable:
     """
-    This meta-class represents the ability to denote a traceable table item such as
-    requirements etc..
+    This meta-class represents the ability to denote a traceable table item
+    such as requirements etc..
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

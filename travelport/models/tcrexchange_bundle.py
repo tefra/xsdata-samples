@@ -14,8 +14,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class TcrexchangeBundle:
     """
-    Bundle exchange, pricing, and penalty information for one ticketless carrier
-    reservation Used in AirExchangeReq request and AirExchangeQuoteRsp response.
+    Bundle exchange, pricing, and penalty information for one ticketless
+    carrier reservation Used in AirExchangeReq request and
+    AirExchangeQuoteRsp response.
 
     Parameters
     ----------

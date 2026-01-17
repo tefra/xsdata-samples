@@ -5,13 +5,14 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class InstitutionPlace:
-    """The primary city location of the institution.
+    """
+    The primary city location of the institution. institution_place gives
+    the primary city location of the institution.
 
-    institution_place gives the primary city location of the
-    institution. When the location is a major city (e.g. New York,
-    Amsterdam), no qualifying country or U.S. state need be given. If
-    the city is not a major city, the appropriate country and/or state
-    or province should be added.
+    When the location is a major city (e.g. New York, Amsterdam), no
+    qualifying country or U.S. state need be given. If the city is not a
+    major city, the appropriate country and/or state or province should be
+    added.
     """
 
     class Meta:

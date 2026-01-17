@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Referent:
     """
-    A referent on a linear object that has a known location such as a node, a
-    reference marker (e.g. a markerpost), an intersection etc.
+    A referent on a linear object that has a known location such as a node,
+    a reference marker (e.g. a markerpost), an intersection etc.
 
     :ivar referent_identifier: The identifier of the referent, unique on
         the specified linear element (i.e. road or part of).

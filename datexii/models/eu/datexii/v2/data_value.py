@@ -12,10 +12,11 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class DataValue:
-    """A data value of something that can be measured or calculated.
+    """
+    A data value of something that can be measured or calculated.
 
-    Any provided meta-data values specified in the attributes override
-    any specified generic characteristics such as defined for a specific
+    Any provided meta-data values specified in the attributes override any
+    specified generic characteristics such as defined for a specific
     measurement in the MeasurementSiteTable.
 
     :ivar data_error: Indication of whether the value is deemed to be

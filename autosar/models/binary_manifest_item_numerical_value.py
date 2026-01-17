@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BinaryManifestItemNumericalValue:
     """
-    This meta-class has the ability to provide a numerical value for a binary
-    manifest item.
+    This meta-class has the ability to provide a numerical value for a
+    binary manifest item.
 
     :ivar value: This attribute specifies the actual numerical value to
         be used in the binary manifest handle.

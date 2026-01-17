@@ -19,7 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PossibleErrorReaction:
     """
-    Describes a possible error reaction code for the transient fault handler.
+    Describes a possible error reaction code for the transient fault
+    handler.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

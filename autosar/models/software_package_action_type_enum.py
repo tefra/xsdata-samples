@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SoftwarePackageActionTypeEnum:
     """
-    This enumeration provides a choice of possible actions for the handling of a
-    software package.
+    This enumeration provides a choice of possible actions for the handling
+    of a software package.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

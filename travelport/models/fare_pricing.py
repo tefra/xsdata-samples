@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class FarePricing:
-    """Container for Fare Pricing Information.
+    """
+    Container for Fare Pricing Information.
 
     One per PTC type.
 

@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NumericalValueSpecification:
-    """A numerical  ValueSpecification which is intended to be assigned to a
+    """
+    A numerical ValueSpecification which is intended to be assigned to a
     Primitive data element.
 
     Note that the numerical value is a variant, it can be computed by a

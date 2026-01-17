@@ -6,11 +6,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AlignmentType:
-    """This primitive represents the alignment of objects within a memory section.
+    """
+    This primitive represents the alignment of objects within a memory
+    section.
 
     The value is in number of bits or UNKNOWN (deprecated), 8 , 16, 32
-    UNSPECIFIED, BOOLEAN, or PTR. Typical values for numbers are 8, 16,
-    32.
+    UNSPECIFIED, BOOLEAN, or PTR. Typical values for numbers are 8, 16, 32.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 @dataclass
 class AgentAction2:
     """
-    Depending on context, this will represent information about which agent perform
-    different actions.
+    Depending on context, this will represent information about which agent
+    perform different actions.
 
     Parameters
     ----------

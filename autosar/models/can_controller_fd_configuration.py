@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CanControllerFdConfiguration:
     """
-    Bit timing related configuration of a CAN controller for payload and CRC of a
-    CAN FD frame.
+    Bit timing related configuration of a CAN controller for payload and
+    CRC of a CAN FD frame.
 
     :ivar padding_value: Specifies the value which is used to pad unused
         data in CAN FD frames which are bigger than 8 byte if the length

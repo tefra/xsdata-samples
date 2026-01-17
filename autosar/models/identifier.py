@@ -6,13 +6,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Identifier:
-    """An Identifier is a string with a number of constraints on its appearance,
-    satisfying the requirements typical programming languages define for their
-    Identifiers.
+    """
+    An Identifier is a string with a number of constraints on its
+    appearance, satisfying the requirements typical programming languages
+    define for their Identifiers.
 
-    This datatype represents a string, that can be used as a
-    c-Identifier. It shall start with a letter, may consist of letters,
-    digits and underscores.
+    This datatype represents a string, that can be used as a c-Identifier.
+    It shall start with a letter, may consist of letters, digits and
+    underscores.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

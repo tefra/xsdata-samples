@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FlexrayTpPduPool:
     """
-    FlexrayTpPduPool is a set of N-PDUs which are defined for FrTp sending or
-    receiving purpose.
+    FlexrayTpPduPool is a set of N-PDUs which are defined for FrTp sending
+    or receiving purpose.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

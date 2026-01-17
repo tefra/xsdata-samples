@@ -21,7 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LParagraph:
-    """This is the text for a paragraph in one particular language.
+    """
+    This is the text for a paragraph in one particular language.
 
     The language is denoted in the attribute l.
 

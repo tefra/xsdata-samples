@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CouplingPortRoleEnum:
     """
-    Defines the role a CouplingPort takes in the context of a CouplingElement.
+    Defines the role a CouplingPort takes in the context of a
+    CouplingElement.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -5,10 +5,11 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class ConferenceSponsor:
-    """The sponsoring organization(s) of a conference.
+    """
+    The sponsoring organization(s) of a conference.
 
-    Multiple sponsors may be given if a conference is hosted by more
-    than one organization.
+    Multiple sponsors may be given if a conference is hosted by more than
+    one organization.
     """
 
     class Meta:

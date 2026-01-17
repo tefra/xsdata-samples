@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 @dataclass
 class VehicleKeywordReq(BaseSearchReq1):
     """
-    Used to request a list of keywords or specific keyword information for a car
-    vendor.
+    Used to request a list of keywords or specific keyword information for
+    a car vendor.
 
     Parameters
     ----------

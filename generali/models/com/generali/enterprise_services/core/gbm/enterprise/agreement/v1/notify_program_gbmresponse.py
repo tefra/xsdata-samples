@@ -12,8 +12,8 @@ __NAMESPACE__ = (
 @dataclass
 class NotifyProgramGbmresponse(NotifyProgramGbmresponseType):
     """
-    <description xmlns="">The definition of the response message that supports
-    retrieve of a program</description>
+    <description xmlns="">The definition of the response message that
+    supports retrieve of a program</description>.
     """
 
     class Meta:

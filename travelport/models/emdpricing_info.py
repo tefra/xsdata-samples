@@ -9,9 +9,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 @dataclass
 class EmdpricingInfo:
-    """Fare related information for these electronic miscellaneous documents.
+    """
+    Fare related information for these electronic miscellaneous documents.
 
-    Supported providers are 1G/1V/1P
+    Supported providers are 1G/1V/1P.
     """
 
     class Meta:

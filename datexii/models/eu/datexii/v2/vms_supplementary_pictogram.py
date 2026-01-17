@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsSupplementaryPictogram:
     """
-    An additional pictogram that is displayed in the panel which is supplemental to
-    the associated pictogram display.
+    An additional pictogram that is displayed in the panel which is
+    supplemental to the associated pictogram display.
 
     :ivar supplementary_pictogram_description: Description of the
         supplementary displayed pictogram.

@@ -10,12 +10,14 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class ProvisionAgreementType(ProvisionAgreementBaseType):
-    """ProvisionAgreementType describes the structure of a provision agreement.
+    """
+    ProvisionAgreementType describes the structure of a provision
+    agreement.
 
     A provision agreement defines an agreement for a data provider to
     report data against a dataflow. Attributes which describe how the
-    registry must behave when data or metadata is registered against
-    this provision agreement are supplied.
+    registry must behave when data or metadata is registered against this
+    provision agreement are supplied.
 
     :ivar dataflow: Dataflow provides a reference to a pre-existing
         dataflow in the registry. The reference is provided via a URN

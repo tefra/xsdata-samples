@@ -26,14 +26,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LatencyTimingConstraint:
-    """This constraint type restricts the time duration between the occurrence of
-    the stimulus and the occurrence of the corresponding response of that chain.
+    """
+    This constraint type restricts the time duration between the occurrence
+    of the stimulus and the occurrence of the corresponding response of
+    that chain.
 
     Two latency constraint types are of interest for automotive systems.
-    These are the age of a certain response and the reaction to a
-    certain stimulus. In contrast to OffsetTimingConstraint, a causal
-    dependency between the stimulus and response event of the associated
-    event chain is required.
+    These are the age of a certain response and the reaction to a certain
+    stimulus. In contrast to OffsetTimingConstraint, a causal dependency
+    between the stimulus and response event of the associated event chain
+    is required.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

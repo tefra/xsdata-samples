@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ScaleConstr:
     """
-    This meta-class represents the ability to specify constraints as a list of
-    intervals (called scales).
+    This meta-class represents the ability to specify constraints as a list
+    of intervals (called scales).
 
     :ivar short_label: This element specifies a short name for the
         scaleConstr. This can for example be used to create more

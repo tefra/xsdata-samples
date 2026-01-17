@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class TravelerRefNumberType:
     """
-    A reference place holder used as a pointer to link back to the traveler.
+    A reference place holder used as a pointer to link back to the
+    traveler.
 
     Attributes:
         rph: Reference place holder.

@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingStandardsAndSecurity:
     """
-    Security measures and standards or standard-like categorization for a parking
-    site.
+    Security measures and standards or standard-like categorization for a
+    parking site.
 
     :ivar label_security_level: Formal assessment for the security level
         defined by the LABEL project  http://truckparkinglabel.eu.

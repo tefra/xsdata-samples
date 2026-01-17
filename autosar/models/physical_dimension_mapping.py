@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PhysicalDimensionMapping:
     """
-    This class represents a specific mapping between two PhysicalDimensions.
+    This class represents a specific mapping between two
+    PhysicalDimensions.
 
     :ivar first_physical_dimension_ref: This represents the first
         PhysicalDimension of the enclosing PhysicalDimensionMapping.

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TcpProps:
     """
-    This meta-class specifies the configuration options for TCP (Transmission
-    Control Protocol).
+    This meta-class specifies the configuration options for TCP
+    (Transmission Control Protocol).
 
     :ivar tcp_congestion_avoidance_enabled: Enables (TRUE) or disables
         (FALSE) support of TCP congestion avoidance algorithm according

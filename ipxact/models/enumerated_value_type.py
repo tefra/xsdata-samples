@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class EnumeratedValueType:
-    """Enumerates specific values that can be assigned to the bit field.
+    """
+    Enumerates specific values that can be assigned to the bit field.
 
     The name of this enumerated value. This may be used as a token in
     generating code.

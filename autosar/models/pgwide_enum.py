@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PgwideEnum:
     """
-    This enumerator specifies, if the table shall be rendered across the entire
-    page, even if it is placed in side-head layouts.
+    This enumerator specifies, if the table shall be rendered across the
+    entire page, even if it is placed in side-head layouts.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class RatesAndDates:
-    """Contains the rates that apply over a date range, all with the same status.
+    """
+    Contains the rates that apply over a date range, all with the same
+    status.
 
     May represent multiple rooms.
     """

@@ -13,7 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class SpecialDay:
-    """Specification of a special day, for example schoolDay, electionDay, ...
+    """
+    Specification of a special day, for example schoolDay, electionDay, ...
 
     Gives also the possibility to define a public holiday (country
     specific).

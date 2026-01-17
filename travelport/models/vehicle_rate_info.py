@@ -7,12 +7,13 @@ __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 @dataclass
 class VehicleRateInfo:
-    """Container for adding and modifying Vehicle Rate related information.
+    """
+    Container for adding and modifying Vehicle Rate related information.
 
-    For Modify operation :
-    If a value is passed in any of the attributes they will be updated,
-    If an empty string is passed then the attributed's value will be deleted,
-    If the attribute is not passed no action will be taken.
+    For Modify operation : If a value is passed in any of the attributes
+    they will be updated, If an empty string is passed then the
+    attributed's value will be deleted, If the attribute is not passed no
+    action will be taken.
 
     Parameters
     ----------

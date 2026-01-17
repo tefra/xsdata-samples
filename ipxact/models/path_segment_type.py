@@ -10,7 +10,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class PathSegmentType(UnresolvedStringExpression):
-    """Identifies one level of hierarchy in the view specifed by viewNameRef.
+    """
+    Identifies one level of hierarchy in the view specifed by viewNameRef.
 
     This is a simple name and optionally some indices into a multi
     dimensional element.

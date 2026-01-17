@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class HotelRetrieveReq(BaseReq1):
-    """Retrieve request for a hotel booking.
+    """
+    Retrieve request for a hotel booking.
 
     Given a provider code and a provider locator code.
     """

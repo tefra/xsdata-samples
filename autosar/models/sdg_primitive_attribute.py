@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgPrimitiveAttribute:
-    """Describes primitive special data attributes without variation.
+    """
+    Describes primitive special data attributes without variation.
 
     This class accepts a special data "sd" attribute.
 

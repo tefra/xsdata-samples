@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass
 class RuleInfoType:
-    """Contains summary fare rule information as well as detailed Rule Information
-    for Fare Basis Codes.
+    """
+    Contains summary fare rule information as well as detailed Rule
+    Information for Fare Basis Codes.
 
     Information may be actual rules data or the results returned from a
     rules-based inquiry.

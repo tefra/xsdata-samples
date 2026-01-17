@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 @dataclass
 class HotelUpsellSearchResult:
     """
-    Hotel upsell search criteria result having matching offer and qualifies.
+    Hotel upsell search criteria result having matching offer and
+    qualifies.
     """
 
     class Meta:

@@ -6,11 +6,12 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 @dataclass
 class ComplexTiedValueExpression:
-    """An unsigned bit vector expression that resolves to the value set {0, 1, ...}
-    or or the string values 'open' or 'default'.
+    """
+    An unsigned bit vector expression that resolves to the value set {0, 1,
+    ...} or or the string values 'open' or 'default'.
 
-    It is derived from simpleUnsignedBitVectorExpression and it supports
-    an expression value.
+    It is derived from simpleUnsignedBitVectorExpression and it supports an
+    expression value.
 
     :ivar value:
     :ivar other_attributes:

@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 @dataclass
 class FixedFieldUpdate:
-    """Update the agency-defined attributes for a fixed field.
+    """
+    Update the agency-defined attributes for a fixed field.
 
     To remove a value, omit the attribute entirely.
 

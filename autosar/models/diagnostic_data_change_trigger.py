@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticDataChangeTrigger:
     """
-    This represents the ability to define a trigger based on the change of a given
-    DiagnosticDataIdentifier.
+    This represents the ability to define a trigger based on the change of
+    a given DiagnosticDataIdentifier.
 
     :ivar initial_event_status: This represents the initial status of
         the enclosing DiagnosticResponseOnEventTrigger.

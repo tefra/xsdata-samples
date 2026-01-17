@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegIlcPointDescriptor(TpegPointDescriptor):
     """
-    A descriptor for describing a junction by defining the intersecting roads.
+    A descriptor for describing a junction by defining the intersecting
+    roads.
 
     :ivar tpeg_ilc_point_descriptor_type: The nature of the descriptor
         used to define the location under consideration (derived from

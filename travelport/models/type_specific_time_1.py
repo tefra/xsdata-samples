@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 @dataclass
 class TypeSpecificTime1:
-    """Specify exact times.
+    """
+    Specify exact times.
 
     System will automatically convert to a range according to agency
     configuration.

@@ -14,7 +14,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 @dataclass
 class AirMerchandisingOfferAvailabilityRsp(BaseRsp1):
     """
-    Contains the merchandising offerings for the given passenger and itinerary.
+    Contains the merchandising offerings for the given passenger and
+    itinerary.
 
     Parameters
     ----------

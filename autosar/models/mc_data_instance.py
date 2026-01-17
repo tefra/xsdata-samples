@@ -33,14 +33,25 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McDataInstance:
-    """Describes the specific properties of one data instance in order to support
-    measurement and/or calibration of this data instance.
+    """
+    Describes the specific properties of one data instance in order to
+    support measurement and/or calibration of this data instance.
 
-    The most important attributes are:
-    * Its shortName is copied from the ECU Flat map (if applicable) and will be used as identifier and for display by the MC system.
-    * The category is copied from the corresponding data type (ApplicationDataType if defined, otherwise ImplementationDataType) as far as applicable.
-    * The symbol is the one used in the programming language. It will be used to find out the actual memory address by the final generation tool with the help of linker generated information.
-    It is assumed that in the M1 model this part and all the aggregated and referred elements (with the exception of the Flat Map and the references from ImplementationElementInParameterInstanceRef and McAccessDetails) are completely generated from "upstream" information. This means, that even if an element like e.g. a CompuMethod is only used via reference here, it will be copied into the M1 artifact which holds the complete McSupportData for a given Implementation.
+    The most important attributes are: * Its shortName is copied from the
+    ECU Flat map (if applicable) and will be used as identifier and for
+    display by the MC system. * The category is copied from the
+    corresponding data type (ApplicationDataType if defined, otherwise
+    ImplementationDataType) as far as applicable. * The symbol is the one
+    used in the programming language. It will be used to find out the
+    actual memory address by the final generation tool with the help of
+    linker generated information. It is assumed that in the M1 model this
+    part and all the aggregated and referred elements (with the exception
+    of the Flat Map and the references from
+    ImplementationElementInParameterInstanceRef and McAccessDetails) are
+    completely generated from "upstream" information. This means, that even
+    if an element like e.g. a CompuMethod is only used via reference here,
+    it will be copied into the M1 artifact which holds the complete
+    McSupportData for a given Implementation.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

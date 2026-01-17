@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UserDefinedCommunicationController:
     """
-    This element allows the modeling of arbitrary Communication Controllers.
+    This element allows the modeling of arbitrary Communication
+    Controllers.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

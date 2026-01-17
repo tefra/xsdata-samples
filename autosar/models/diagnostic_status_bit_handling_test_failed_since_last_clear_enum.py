@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum:
     """
-    Aging and displacement has no impact on the "TestFailedSinceLastClear" status
-    bits.
+    Aging and displacement has no impact on the "TestFailedSinceLastClear"
+    status bits.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

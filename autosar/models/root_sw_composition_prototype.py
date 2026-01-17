@@ -26,17 +26,29 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RootSwCompositionPrototype:
-    """The RootSwCompositionPrototype represents the top-level-composition of software components within a given System.
-    @RESTRICT_TO_STANDARD:CP:AP!
-    According to the use case of the System, this may for example be a more or less complete VFB description, the software of a System Extract or the software of a flat ECU Extract with only atomic SWCs.
-    @RESTRICT_TO_STANDARD:FO!
-    This may for example be a more or less complete VFB++ description.
-    @END_RESTRICT_TO_STANDARD!
-    Therefore the RootSwComposition will only occasionally contain all atomic software components that are used in a complete VFB System. The OEM is primarily interested in the required functionality and the interfaces defining the integration of the Software Component into the System. The internal structure of such a component contains often substantial intellectual property of a supplier. Therefore a top-level software composition will often contain empty compositions which represent subsystems.
-    @RESTRICT_TO_STANDARD:CP:AP!
-    The contained SwComponentPrototypes are fully specified by their SwComponentTypes (including PortPrototypes, PortInterfaces, VariableDataPrototypes, SwcInternalBehavior etc.), and their ports are interconnected using SwConnectorPrototypes.
-    @RESTRICT_TO_STANDARD:FO!
-    The contained SwComponentPrototypes are fully specified by their SwComponentTypes (including PortPrototypes, PortInterfaces, VariableDataPrototypes, etc.).
+    """
+    The RootSwCompositionPrototype represents the top-level-composition of
+    software components within a given System. @RESTRICT_TO_STANDARD:CP:AP!
+
+    According to the use case of the System, this may for example be a more
+    or less complete VFB description, the software of a System Extract or
+    the software of a flat ECU Extract with only atomic SWCs.
+    @RESTRICT_TO_STANDARD:FO! This may for example be a more or less
+    complete VFB++ description. @END_RESTRICT_TO_STANDARD! Therefore the
+    RootSwComposition will only occasionally contain all atomic software
+    components that are used in a complete VFB System. The OEM is primarily
+    interested in the required functionality and the interfaces defining
+    the integration of the Software Component into the System. The internal
+    structure of such a component contains often substantial intellectual
+    property of a supplier. Therefore a top-level software composition will
+    often contain empty compositions which represent subsystems.
+    @RESTRICT_TO_STANDARD:CP:AP! The contained SwComponentPrototypes are
+    fully specified by their SwComponentTypes (including PortPrototypes,
+    PortInterfaces, VariableDataPrototypes, SwcInternalBehavior etc.), and
+    their ports are interconnected using SwConnectorPrototypes.
+    @RESTRICT_TO_STANDARD:FO! The contained SwComponentPrototypes are fully
+    specified by their SwComponentTypes (including PortPrototypes,
+    PortInterfaces, VariableDataPrototypes, etc.).
     @END_RESTRICT_TO_STANDARD!
 
     :ivar short_name: This specifies an identifying shortName for the

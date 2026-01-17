@@ -12,8 +12,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 @dataclass
 class HotelMediaLinksReq(BaseReq1):
-    """Retrieves all image links from the Galileo Web Services Image Viewer eBL for
-    up to 20 properties.
+    """
+    Retrieves all image links from the Galileo Web Services Image Viewer
+    eBL for up to 20 properties.
 
     Only the attributes of the HotelProperty are used in this request.
 

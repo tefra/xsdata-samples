@@ -23,12 +23,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ApplicationPartitionToEcuPartitionMapping:
-    """Maps ApplicationPartitions to EcuPartitions.
+    """
+    Maps ApplicationPartitions to EcuPartitions.
 
-    With this mapping an OEM has the option to predefine an allocation
-    of Software Components to EcuPartitions in the System Design phase.
-    The final and complete assignment is described in the OS
-    Configuration.
+    With this mapping an OEM has the option to predefine an allocation of
+    Software Components to EcuPartitions in the System Design phase. The
+    final and complete assignment is described in the OS Configuration.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

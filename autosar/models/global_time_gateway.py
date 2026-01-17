@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class GlobalTimeGateway:
     """
-    This represents the ability to define a time gateway for establishing a global
-    time domain over several communication clusters.
+    This represents the ability to define a time gateway for establishing a
+    global time domain over several communication clusters.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

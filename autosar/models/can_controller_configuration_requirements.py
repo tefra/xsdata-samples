@@ -13,11 +13,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CanControllerConfigurationRequirements:
-    """This element allows the specification of ranges for the CAN Bit Timing
+    """
+    This element allows the specification of ranges for the CAN Bit Timing
     configuration parameters.
 
-    These ranges are taken as requirements and have to be respected by
-    the ECU developer.
+    These ranges are taken as requirements and have to be respected by the
+    ECU developer.
 
     :ivar can_controller_fd_attributes: Bit timing related configuration
         of a CAN controller for payload and CRC of a CanFD frame. If

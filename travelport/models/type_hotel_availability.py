@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 class TypeHotelAvailability(Enum):
     """
-    Availability status of hotel Hotel is Available NotAvailable Available, but not
-    for the rates requested On request Unknown.
+    Availability status of hotel Hotel is Available NotAvailable Available,
+    but not for the rates requested On request Unknown.
     """
 
     AVAILABLE = "Available"

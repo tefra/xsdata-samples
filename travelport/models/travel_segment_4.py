@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 @dataclass
 class TravelSegment4(Segment4):
     """
-    Generic segment used to provide travel information that was not processed by
-    the system.
+    Generic segment used to provide travel information that was not
+    processed by the system.
 
     Parameters
     ----------

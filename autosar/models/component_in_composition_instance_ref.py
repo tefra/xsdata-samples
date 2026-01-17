@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ComponentInCompositionInstanceRef:
     """
-    The ComponentInCompositionInstanceRef points to a concrete SwComponentPrototype
-    within a CompositionSwComponentType.
+    The ComponentInCompositionInstanceRef points to a concrete
+    SwComponentPrototype within a CompositionSwComponentType.
 
     :ivar context_component_ref: The context for the scope of this
         timing event.

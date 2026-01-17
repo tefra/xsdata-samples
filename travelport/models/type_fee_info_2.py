@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 @dataclass
 class TypeFeeInfo2:
     """
-    A generic type of fee for those charges which are incurred by the passenger,
-    but not necessarily shown on tickets.
+    A generic type of fee for those charges which are incurred by the
+    passenger, but not necessarily shown on tickets.
 
     Parameters
     ----------

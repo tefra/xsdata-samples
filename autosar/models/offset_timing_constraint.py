@@ -25,15 +25,17 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class OffsetTimingConstraint:
-    """Bounds the time offset between the occurrence of two timing events, without
-    requiring a direct functional dependency between the source and the target.
+    """
+    Bounds the time offset between the occurrence of two timing events,
+    without requiring a direct functional dependency between the source and
+    the target.
 
-    If the target event occurs, it is expected to occur earliest with
-    the minimum, and latest with the maximum offset relatively after the
-    occurrence of the source event. Note: not every source event
-    occurrence shall be followed by a target event occurrence. In
-    contrast to LatencyTimingConstraint, there shall not necessarily be
-    a causal dependency between the source and target event.
+    If the target event occurs, it is expected to occur earliest with the
+    minimum, and latest with the maximum offset relatively after the
+    occurrence of the source event. Note: not every source event occurrence
+    shall be followed by a target event occurrence. In contrast to
+    LatencyTimingConstraint, there shall not necessarily be a causal
+    dependency between the source and target event.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

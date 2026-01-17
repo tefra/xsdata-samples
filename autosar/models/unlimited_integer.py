@@ -6,12 +6,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class UnlimitedInteger:
-    """An instance of UnlimitedInteger is an element in the set of integer numbers
-    ( ..., -2, -1, 0, 1, 2, ...).
+    """
+    An instance of UnlimitedInteger is an element in the set of integer
+    numbers ( ..., -2, -1, 0, 1, 2, ...).
 
-    The range is limited by constraint 2534. The value can be expressed
-    in decimal, octal, hexadecimal and binary representation. Negative
-    numbers can only be expressed in decimal notation.
+    The range is limited by constraint 2534. The value can be expressed in
+    decimal, octal, hexadecimal and binary representation. Negative numbers
+    can only be expressed in decimal notation.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

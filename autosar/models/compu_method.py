@@ -26,11 +26,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CompuMethod:
-    """This meta-class represents the ability to express the relationship between a
-    physical value and the mathematical representation.
+    """
+    This meta-class represents the ability to express the relationship
+    between a physical value and the mathematical representation.
 
-    Note that this is still independent of the technical implementation
-    in data types. It only specifies the formula how the internal value
+    Note that this is still independent of the technical implementation in
+    data types. It only specifies the formula how the internal value
     corresponds to its physical pendant.
 
     :ivar short_name: This specifies an identifying shortName for the

@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 class TypeFaresIndicator(Enum):
     """
-    Defines the type of fares to return (Only public fares, Only private fares,
-    Only agency private fares, Only airline private fares or all fares)
+    Defines the type of fares to return (Only public fares, Only private
+    fares, Only agency private fares, Only airline private fares or all
+    fares).
 
     Properties
     ----------

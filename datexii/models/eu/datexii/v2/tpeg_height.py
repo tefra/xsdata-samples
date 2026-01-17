@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegHeight:
     """
-    Height information which provides additional discrimination for the applicable
-    area.
+    Height information which provides additional discrimination for the
+    applicable area.
 
     :ivar height: A measurement of height in metres
     :ivar height_type: A descriptive identification of relative height

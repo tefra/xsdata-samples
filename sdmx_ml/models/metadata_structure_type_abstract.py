@@ -9,11 +9,12 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 @dataclass(frozen=True)
 class MetadataStructureTypeAbstract(PayloadStructureType):
-    """MetadataStructureType is an abstract base type the forms the basis of the
-    structural information for any metadata message.
+    """
+    MetadataStructureType is an abstract base type the forms the basis of
+    the structural information for any metadata message.
 
-    A reference to the metadata structure definition or a metadataflow
-    must be provided. This can be used to determine the structure of the
+    A reference to the metadata structure definition or a metadataflow must
+    be provided. This can be used to determine the structure of the
     message.
     """
 

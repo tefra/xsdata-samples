@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 class TimeDataType(Enum):
     """
-    TimeDataType restricts SimpleDataType to specify the allowable data types for
-    representing a time value.
+    TimeDataType restricts SimpleDataType to specify the allowable data
+    types for representing a time value.
 
     :cvar OBSERVATIONAL_TIME_PERIOD: Observational time periods are the
         superset of all time periods in SDMX. It is the union of the

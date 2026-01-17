@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingStatusValidity:
-    """To be used only for historical or forecasted data.
+    """
+    To be used only for historical or forecasted data.
 
     Choose between an explicit point of time, an offset or all points of
     time within a specified period.

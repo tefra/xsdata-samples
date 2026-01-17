@@ -6,7 +6,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Tt:
-    """This meta-class represents the ability to express specific technical terms.
+    """
+    This meta-class represents the ability to express specific technical
+    terms.
 
     The kind of term is denoted in the attribute "type".
 

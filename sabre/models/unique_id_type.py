@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class UniqueIdType:
     """
-    An identifier used to uniquely reference an object in a system (e.g. an airline
-    reservation reference, customer profile reference, booking confirmation number,
-    or a reference to a previous availability quote).
+    An identifier used to uniquely reference an object in a system (e.g. an
+    airline reservation reference, customer profile reference, booking
+    confirmation number, or a reference to a previous availability quote).
 
     Attributes:
         company_name: Identifies the company that is associated with the

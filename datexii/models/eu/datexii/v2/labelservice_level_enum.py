@@ -4,7 +4,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class LABELServiceLevelEnum(Enum):
-    """Service level defined by the LABEL project http://truckparkinglabel.eu.
+    """
+    Service level defined by the LABEL project http://truckparkinglabel.eu.
 
     :cvar NONE: None.
     :cvar SERVICE_LEVEL1: Providing the basics.

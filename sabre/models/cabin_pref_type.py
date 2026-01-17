@@ -11,7 +11,8 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 @dataclass
 class CabinPrefType:
     """
-    Indicates preferences for choice of airline cabin for a given travel situation.
+    Indicates preferences for choice of airline cabin for a given travel
+    situation.
 
     Attributes:
         prefer_level:

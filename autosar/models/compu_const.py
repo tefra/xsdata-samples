@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompuConst:
     """
-    This meta-class represents the fact that the value of a computation method
-    scale is constant.
+    This meta-class represents the fact that the value of a computation
+    method scale is constant.
 
     :ivar vf: Value calculated via a system constant. This element is
         included in every case where parameters should be generated from

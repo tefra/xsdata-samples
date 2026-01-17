@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class LifeCycleInfo:
     """
-    LifeCycleInfo describes the life cycle state of an element together with
-    additional information like what to use instead.
+    LifeCycleInfo describes the life cycle state of an element together
+    with additional information like what to use instead.
 
     :ivar lc_object_ref: Element(s) have the life cycle as described in
         lcState.

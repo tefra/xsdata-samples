@@ -21,9 +21,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticMasterToSlaveEventMapping:
     """
-    This meta-class provides the ability to map a master diagnostic event with a
-    slave diagnostic event such that reporting of the master event with a given
-    value also reports the slave event with the same value.
+    This meta-class provides the ability to map a master diagnostic event
+    with a slave diagnostic event such that reporting of the master event
+    with a given value also reports the slave event with the same value.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

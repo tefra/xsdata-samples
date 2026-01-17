@@ -15,7 +15,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 @dataclass
 class TransactionType5:
-    """Configuration for products by type.
+    """
+    Configuration for products by type.
 
     Inheritable.
 

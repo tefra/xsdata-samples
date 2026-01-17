@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Tbody:
-    """This meta-class represents a part within a table group.
+    """
+    This meta-class represents a part within a table group.
 
     Such a part can be the table head, the table body or the table foot.
 

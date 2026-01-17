@@ -4,7 +4,8 @@ __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
 class ParameterTypeResolve(Enum):
-    """Determines how a parameter is resolved.
+    """
+    Determines how a parameter is resolved.
 
     User means the value must be obtained from the user. Generated means
     the value will be provided by a generator.

@@ -24,8 +24,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Gateway:
     """
-    A gateway is an ECU that is connected to two or more clusters (channels, but
-    not redundant), and performs a frame, Pdu or signal mapping between them.
+    A gateway is an ECU that is connected to two or more clusters
+    (channels, but not redundant), and performs a frame, Pdu or signal
+    mapping between them.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

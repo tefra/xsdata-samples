@@ -25,9 +25,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SignalBasedEventElementToISignalTriggeringMapping:
     """
-    This meta-class defines the mapping of a ServiceInterface event or an element
-    that is defined inside of the event in case that the datatype is composite to
-    an ISignalTriggering.
+    This meta-class defines the mapping of a ServiceInterface event or an
+    element that is defined inside of the event in case that the datatype
+    is composite to an ISignalTriggering.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IPduPort:
     """
-    Connectors reception or send port on the referenced channel referenced by a
-    PduTriggering.
+    Connectors reception or send port on the referenced channel referenced
+    by a PduTriggering.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

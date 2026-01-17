@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ApplicationRecordDataType:
     """
-    An application data type which can be decomposed into prototypes of other
-    application data types.
+    An application data type which can be decomposed into prototypes of
+    other application data types.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

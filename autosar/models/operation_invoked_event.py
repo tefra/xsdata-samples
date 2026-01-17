@@ -28,8 +28,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class OperationInvokedEvent:
     """
-    The OperationInvokedEvent references the ClientServerOperation invoked by the
-    client.
+    The OperationInvokedEvent references the ClientServerOperation invoked
+    by the client.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

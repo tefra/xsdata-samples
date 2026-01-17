@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class ParkingSpacePhysicsEnum(Enum):
     """
-    Specifies drive through and open air properties for the parking space or the
-    group of parking spaces.
+    Specifies drive through and open air properties for the parking space
+    or the group of parking spaces.
 
     :cvar DRIVE_THROUGH: Entering as well as leaving the parking space
         can be done straight in the direction of parking.

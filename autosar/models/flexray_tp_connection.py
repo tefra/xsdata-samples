@@ -18,16 +18,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlexrayTpConnection:
-    """A connection identifies the sender and the receiver of this particular
+    """
+    A connection identifies the sender and the receiver of this particular
     communication.
 
-    The FlexRayTp module routes a Pdu through this connection. In a
-    System Description the references to the PduPools are mandatory. In
-    an ECU Extract these references can be optional: On unicast
-    connections these references are always mandatory. On multicast the
-    txPduPool is mandatory on the sender side. The rxPduPool is
-    mandatory on the receiver side. On Gateway ECUs both references are
-    mandatory.
+    The FlexRayTp module routes a Pdu through this connection. In a System
+    Description the references to the PduPools are mandatory. In an ECU
+    Extract these references can be optional: On unicast connections these
+    references are always mandatory. On multicast the txPduPool is
+    mandatory on the sender side. The rxPduPool is mandatory on the
+    receiver side. On Gateway ECUs both references are mandatory.
 
     :ivar ident: This adds the ability to become referrable to
         TpConnection.

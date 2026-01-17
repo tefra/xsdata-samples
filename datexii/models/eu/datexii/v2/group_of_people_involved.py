@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class GroupOfPeopleInvolved:
     """
-    Group of people involved in the event having common characteristics and/or
-    status.
+    Group of people involved in the event having common characteristics
+    and/or status.
 
     :ivar number_of_people: The number of people of this group that are
         involved.

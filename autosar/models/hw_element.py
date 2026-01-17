@@ -25,8 +25,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class HwElement:
-    """This represents the ability to describe Hardware Elements on an instance
-    level.
+    """
+    This represents the ability to describe Hardware Elements on an
+    instance level.
 
     The particular types of hardware are distinguished by the category.
     This category determines the applicable attributes. The possible

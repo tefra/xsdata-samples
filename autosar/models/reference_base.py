@@ -12,10 +12,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ReferenceBase:
-    """This meta-class establishes a basis for relative references.
+    """
+    This meta-class establishes a basis for relative references.
 
-    Reference bases are identified by the shortLabel which shall be
-    unique in the current package.
+    Reference bases are identified by the shortLabel which shall be unique
+    in the current package.
 
     :ivar short_label: This is the name of the reference base. By this
         name, particular references can denote the applicable base.
